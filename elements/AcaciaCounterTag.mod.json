@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AcaciaCounter"
+      },
+      {
+        "value": "CUSTOM:AcaciaCounterCorner"
+      },
+      {
+        "value": "CUSTOM:AcaciaSink"
+      },
+      {
+        "value": "CUSTOM:AcaciaOven"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "acacia_counter_tag",
+    "namespace": "forge"
+  }
+}

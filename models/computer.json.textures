@@ -1,0 +1,32 @@
+{
+  "mappings": {
+    "minecraft": {
+      "map": {
+        "1": "anvil_flat",
+        "3": "computer_minecraft_animation"
+      },
+      "name": "minecraft"
+    },
+    "default": {
+      "map": {
+        "1": "anvil_flat",
+        "3": "black_wool"
+      },
+      "name": "default"
+    },
+    "cod": {
+      "map": {
+        "1": "anvil_flat",
+        "3": "computer_cod"
+      },
+      "name": "cod"
+    },
+    "statik": {
+      "map": {
+        "1": "anvil_flat",
+        "3": "computer_static"
+      },
+      "name": "statik"
+    }
+  }
+}

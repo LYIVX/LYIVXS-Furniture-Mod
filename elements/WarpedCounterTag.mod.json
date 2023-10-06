@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:WarpedCounter"
+      },
+      {
+        "value": "CUSTOM:WarpedCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_counter_tag",
+    "namespace": "forge"
+  }
+}

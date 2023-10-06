@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/table_end",
+  "textures": {
+    "all": "ls_furniture:blocks/oak_gold_end",
+    "particle": "ls_furniture:blocks/oak_gold_end",
+    "1": "ls_furniture:blocks/oak_log",
+    "2": "ls_furniture:blocks/oakgoldconnectedtexture"
+  },
+  "render_type": "cutout"
+}

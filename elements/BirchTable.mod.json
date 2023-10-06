@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BirchTableEnd"
+      },
+      {
+        "value": "CUSTOM:BirchTableCross"
+      },
+      {
+        "value": "CUSTOM:BirchTableJunction"
+      },
+      {
+        "value": "CUSTOM:BirchTableCorner"
+      },
+      {
+        "value": "CUSTOM:BirchTableNone"
+      },
+      {
+        "value": "CUSTOM:BirchTableStraight"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_table",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [
+      {
+        "value": "CUSTOM:ComputerMinecraft"
+      },
+      {
+        "value": "CUSTOM:ComputerOn"
+      },
+      {
+        "value": "CUSTOM:ComputerOff"
+      }
+    ],
+    "blocks": [
+      {
+        "value": "CUSTOM:ComputerOff"
+      },
+      {
+        "value": "CUSTOM:ComputerOn"
+      },
+      {
+        "value": "CUSTOM:ComputerMinecraft"
+      },
+      {
+        "value": "CUSTOM:ComputerCOD"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "computers",
+    "namespace": "forge"
+  }
+}

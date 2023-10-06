@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ls_furniture:block/tv_stand_off"
+    },
+    "facing=east": {
+      "model": "ls_furniture:block/tv_stand_off",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ls_furniture:block/tv_stand_off",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ls_furniture:block/tv_stand_off",
+      "y": 270
+    }
+  }
+}

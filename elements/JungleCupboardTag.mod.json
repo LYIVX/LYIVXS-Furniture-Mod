@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:JungleCupboardVent"
+      },
+      {
+        "value": "CUSTOM:JungleCupboardVentOn"
+      },
+      {
+        "value": "CUSTOM:JungleCupboard"
+      },
+      {
+        "value": "CUSTOM:JungleCupboardCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_cupboard_tag",
+    "namespace": "forge"
+  }
+}

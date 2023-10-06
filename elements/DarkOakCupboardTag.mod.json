@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakCupboard"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboardVent"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_cupboard_tag",
+    "namespace": "forge"
+  }
+}

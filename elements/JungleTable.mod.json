@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:JungleTableEnd"
+      },
+      {
+        "value": "CUSTOM:JungleTableCross"
+      },
+      {
+        "value": "CUSTOM:JungleTableJunction"
+      },
+      {
+        "value": "CUSTOM:JungleTableCorner"
+      },
+      {
+        "value": "CUSTOM:JungleTableNone"
+      },
+      {
+        "value": "CUSTOM:JungleTableStraight"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_table",
+    "namespace": "forge"
+  }
+}

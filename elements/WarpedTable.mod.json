@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:WarpedTableNone"
+      },
+      {
+        "value": "CUSTOM:WarpedTableStraight"
+      },
+      {
+        "value": "CUSTOM:WarpedTableCorner"
+      },
+      {
+        "value": "CUSTOM:WarpedTableJunction"
+      },
+      {
+        "value": "CUSTOM:WarpedTableCross"
+      },
+      {
+        "value": "CUSTOM:WarpedTableEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_table",
+    "namespace": "forge"
+  }
+}

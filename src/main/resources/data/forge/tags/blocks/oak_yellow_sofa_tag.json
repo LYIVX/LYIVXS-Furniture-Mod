@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:oak_yellow_right_end",
+    "ls_furniture:oak_yellow_outer",
+    "ls_furniture:oak_yellow_corner",
+    "ls_furniture:oak_yellow_left_end",
+    "ls_furniture:oak_yellow_straight",
+    "ls_furniture:oak_yellow_sofa"
+  ]
+}

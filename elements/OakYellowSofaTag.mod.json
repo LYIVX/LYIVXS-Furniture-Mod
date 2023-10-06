@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakYellowRightEnd"
+      },
+      {
+        "value": "CUSTOM:OakYellowLeftEnd"
+      },
+      {
+        "value": "CUSTOM:OakYellowStraight"
+      },
+      {
+        "value": "CUSTOM:OakYellowCorner"
+      },
+      {
+        "value": "CUSTOM:OakYellowOuter"
+      },
+      {
+        "value": "CUSTOM:OakYellowSofa"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_yellow_sofa_tag",
+    "namespace": "forge"
+  }
+}

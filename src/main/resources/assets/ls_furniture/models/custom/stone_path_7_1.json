@@ -1,0 +1,751 @@
+{
+  "credit": "Made with Blockbench",
+  "elements": [
+    {
+      "name": "stone_7_1_0",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        1,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            0,
+            0,
+            1
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            10,
+            0,
+            11,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0,
+            10,
+            11,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            11,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            0,
+            11,
+            11,
+            0
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_1",
+      "from": [
+        12,
+        0,
+        0
+      ],
+      "to": [
+        15,
+        1,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            0,
+            12,
+            1
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            0,
+            15,
+            3
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12,
+            2,
+            15,
+            3
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12,
+            0,
+            13,
+            3
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12,
+            0,
+            15,
+            3
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12,
+            3,
+            15,
+            0
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_2",
+      "from": [
+        12,
+        0,
+        4
+      ],
+      "to": [
+        15,
+        1,
+        7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            4,
+            12,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            4,
+            15,
+            7
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12,
+            6,
+            15,
+            7
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12,
+            4,
+            13,
+            7
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12,
+            4,
+            15,
+            7
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12,
+            7,
+            15,
+            4
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_3",
+      "from": [
+        12,
+        0,
+        8
+      ],
+      "to": [
+        15,
+        1,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            8,
+            12,
+            9
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            8,
+            15,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12,
+            10,
+            15,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12,
+            8,
+            13,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12,
+            8,
+            15,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12,
+            11,
+            15,
+            8
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_4",
+      "from": [
+        0,
+        0,
+        12
+      ],
+      "to": [
+        3,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            12,
+            0,
+            13
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            2,
+            12,
+            3,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0,
+            14,
+            3,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            12,
+            1,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            0,
+            12,
+            3,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            0,
+            15,
+            3,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_5",
+      "from": [
+        4,
+        0,
+        12
+      ],
+      "to": [
+        7,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7,
+            12,
+            4,
+            13
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            6,
+            12,
+            7,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            14,
+            7,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            4,
+            12,
+            5,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            4,
+            12,
+            7,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            4,
+            15,
+            7,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_6",
+      "from": [
+        8,
+        0,
+        12
+      ],
+      "to": [
+        11,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            12,
+            8,
+            13
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            10,
+            12,
+            11,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            8,
+            14,
+            11,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            8,
+            12,
+            9,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8,
+            12,
+            11,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8,
+            15,
+            11,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "stone_7_1_7",
+      "from": [
+        12,
+        0,
+        12
+      ],
+      "to": [
+        15,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            12,
+            12,
+            13
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            12,
+            15,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12,
+            14,
+            15,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12,
+            12,
+            13,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12,
+            12,
+            15,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12,
+            15,
+            15,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        4.5
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        4.5
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        4.5,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        4.5,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        4,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        14.25,
+        0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        -3
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "stone_path_3",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "children": []
+    },
+    {
+      "name": "stone_path_4",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "children": []
+    },
+    {
+      "name": "stone_path_6",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "children": []
+    },
+    {
+      "name": "stone_7_1",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "children": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ]
+}

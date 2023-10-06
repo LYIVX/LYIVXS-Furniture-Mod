@@ -1,0 +1,96 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakWardrobe1"
+      },
+      {
+        "value": "CUSTOM:OakWardrobe2"
+      },
+      {
+        "value": "CUSTOM:OakWardrobe0"
+      },
+      {
+        "value": "CUSTOM:Darkoakwardrobe2"
+      },
+      {
+        "value": "CUSTOM:Darkoakwardrobe1"
+      },
+      {
+        "value": "CUSTOM:Darkoakwardrobe0"
+      },
+      {
+        "value": "CUSTOM:SpruceWardrobe2"
+      },
+      {
+        "value": "CUSTOM:SpruceWardrobe1"
+      },
+      {
+        "value": "CUSTOM:Sprucewardrobe"
+      },
+      {
+        "value": "CUSTOM:AcaciaWardrobe"
+      },
+      {
+        "value": "CUSTOM:AcaciaWardrobe1"
+      },
+      {
+        "value": "CUSTOM:AcaciaWardrobe2"
+      },
+      {
+        "value": "CUSTOM:BirchWardrobe"
+      },
+      {
+        "value": "CUSTOM:BirchWardrobe1"
+      },
+      {
+        "value": "CUSTOM:BirchWardrobe2"
+      },
+      {
+        "value": "CUSTOM:JungleWardrobe"
+      },
+      {
+        "value": "CUSTOM:JungleWardrobe1"
+      },
+      {
+        "value": "CUSTOM:JungleWardrobe2"
+      },
+      {
+        "value": "CUSTOM:MangroveWardrobe"
+      },
+      {
+        "value": "CUSTOM:MangroveWardrobe1"
+      },
+      {
+        "value": "CUSTOM:MangroveWardrobe2"
+      },
+      {
+        "value": "CUSTOM:CrimsonWardrobe"
+      },
+      {
+        "value": "CUSTOM:CrimsonWardrobe1"
+      },
+      {
+        "value": "CUSTOM:CrimsonWardrobe2"
+      },
+      {
+        "value": "CUSTOM:WarpedWardrobe"
+      },
+      {
+        "value": "CUSTOM:WarpedWardrobe1"
+      },
+      {
+        "value": "CUSTOM:WarpedWardrobe2"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "wardrobe",
+    "namespace": "forge"
+  }
+}

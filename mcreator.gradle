@@ -1,0 +1,149 @@
+repositories {
+	maven {
+		url = "https://api.modrinth.com/maven"
+	}
+}
+	dependencies {
+		implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.0.6-forge-mc1.19.2")
+}
+
+repositories {
+maven {
+  url = "https://maven.theillusivec4.top/"
+  }
+}
+
+dependencies {
+  runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0")
+  compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0:api")
+}
+
+repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:jade-324717:4096513")
+   runtimeOnly fg.deobf("curse.maven:jade-324717:4096513")
+}
+
+minecraft {
+  runs {
+      client {
+          property 'mixin.env.remapRefMap', 'true'
+          property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+      }
+  }
+}
+repositories {
+  maven {
+    url = "https://maven.blamejared.com"
+  }
+}
+
+dependencies {
+  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77:api")
+  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77")
+}
+
+repositories {
+  maven {
+      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+  }
+}
+
+dependencies {
+  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
+}
+
+minecraft {
+  runs {
+   client {    
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+       }
+        server {
+         property 'mixin.env.remapRefMap', 'true'
+         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+       }
+      }
+     }
+
+repositories {
+ maven {
+     url = 'https://maven.kosmx.dev/'
+ }
+}
+
+ dependencies {
+   implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2")
+ }
+
+def extraModsDir = 'extra-mods-1.19.2'
+task addnewfoldersmods(type: DefaultTask){
+  ant.mkdir(dir: 'extra-mods-1.19.2/');
+}
+repositories {
+  flatDir {
+  name "extra-mods" 
+  dir file(extraModsDir)
+  }
+}
+
+dependencies 
+{
+  for (extraModJar in fileTree(dir: extraModsDir, include: '*.jar')) {
+  def basename = extraModJar.name.substring(0, extraModJar.name.length() - ".jar".length()) 
+  def versionSep = basename.lastIndexOf('-') 
+  assert versionSep != -1 
+  def artifactId = basename.substring(0, versionSep) 
+  def version = basename.substring(versionSep + 1)
+  runtimeOnly fg.deobf("extra-mods:$artifactId:$version")}
+}
+minecraft {
+ mappings channel: 'official', version: '1.19.2'
+  accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+ runs {
+  client {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
+  }
+  server {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
+        }
+      }
+         }
+
+repositories {
+  maven {
+    url = "https://modmaven.dev"
+  }
+}
+
+dependencies {
+  compileOnly(fg.deobf("mezz.jei:jei-1.19.2-common-api:11.4.0.290"))
+  compileOnly(fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.4.0.290"))
+  runtimeOnly(fg.deobf("mezz.jei:jei-1.19.2-forge:11.4.0.290"))
+}
+

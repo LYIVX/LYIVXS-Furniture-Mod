@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:JungleWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:warped_cupboard_vent_on",
+    "ls_furniture:warped_cupboard_corner",
+    "ls_furniture:warped_cupboard_vent",
+    "ls_furniture:warped_cupboard"
+  ]
+}

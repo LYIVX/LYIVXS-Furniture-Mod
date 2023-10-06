@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:WarpedWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

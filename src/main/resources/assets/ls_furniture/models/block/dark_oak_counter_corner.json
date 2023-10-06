@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/counter_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/dark_oak_planks",
+    "particle": "ls_furniture:blocks/dark_oak_planks",
+    "0": "ls_furniture:blocks/dark_oak_planks",
+    "1": "ls_furniture:blocks/stripped_dark_oak"
+  },
+  "render_type": "cutout_mipped"
+}

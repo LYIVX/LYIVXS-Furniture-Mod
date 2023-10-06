@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakBlindsTop"
+      },
+      {
+        "value": "CUSTOM:DarkOakBlindsBottom"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_blinds",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CrimsonCounter"
+      },
+      {
+        "value": "CUSTOM:CrimsonCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_counter_tag",
+    "namespace": "forge"
+  }
+}

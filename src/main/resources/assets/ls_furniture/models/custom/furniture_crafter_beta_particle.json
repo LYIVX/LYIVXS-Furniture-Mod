@@ -1,0 +1,6 @@
+{
+  "parent": "ls_furniture:displaysettings/furniture_crafter.item",
+  "textures": {
+    "particle": "ls_furniture:blocks/furniture_crafter"
+  }
+}

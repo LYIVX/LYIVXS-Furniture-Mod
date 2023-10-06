@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:TableStraight"
+      },
+      {
+        "value": "CUSTOM:TableNone"
+      },
+      {
+        "value": "CUSTOM:TableEnd"
+      },
+      {
+        "value": "CUSTOM:TableCross"
+      },
+      {
+        "value": "CUSTOM:TableJunction"
+      },
+      {
+        "value": "CUSTOM:TableCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "custom_table",
+    "namespace": "forge"
+  }
+}

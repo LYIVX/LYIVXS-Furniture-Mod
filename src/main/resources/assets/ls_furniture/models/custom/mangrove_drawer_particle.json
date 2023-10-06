@@ -1,0 +1,6 @@
+{
+  "parent": "ls_furniture:displaysettings/bed_side_draw.item",
+  "textures": {
+    "particle": "ls_furniture:blocks/mangrove_drawer"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:oak_sink",
+    "ls_furniture:dark_oak_sink",
+    "ls_furniture:spruce_sink",
+    "ls_furniture:acacia_sink",
+    "ls_furniture:birch_sink",
+    "ls_furniture:jungle_sink",
+    "ls_furniture:mangrove_sink",
+    "ls_furniture:crimson_sink",
+    "ls_furniture:warped_sink",
+    "ls_furniture:oak_oven",
+    "ls_furniture:dark_oak_oven",
+    "ls_furniture:spruce_oven",
+    "ls_furniture:acacia_oven",
+    "ls_furniture:birch_oven",
+    "ls_furniture:jungle_oven",
+    "ls_furniture:mangrove_oven",
+    "ls_furniture:warped_oven",
+    "ls_furniture:crimson_oven",
+    "ls_furniture:fridge_freezer_block",
+    "ls_furniture:microwave",
+    "ls_furniture:kettle",
+    "ls_furniture:toaster",
+    "ls_furniture:fridge_freezer_block_1",
+    "ls_furniture:fridge_freezer_block_2"
+  ]
+}

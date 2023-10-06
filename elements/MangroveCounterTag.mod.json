@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MangroveCounter"
+      },
+      {
+        "value": "CUSTOM:MangroveCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_counter_tag",
+    "namespace": "forge"
+  }
+}

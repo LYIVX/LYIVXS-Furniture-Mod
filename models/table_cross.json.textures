@@ -1,0 +1,76 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "stripped_oak"
+      },
+      "name": "default"
+    },
+    "oak_gold": {
+      "map": {
+        "1": "oakgoldconnectedtexture"
+      },
+      "name": "oak_gold"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "stripped_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "oak_iron": {
+      "map": {
+        "1": "oak_iron_cross"
+      },
+      "name": "oak_iron"
+    },
+    "iron_glass": {
+      "map": {
+        "1": "iron_cross"
+      },
+      "name": "iron_glass"
+    },
+    "spruce": {
+      "map": {
+        "1": "stripped_spruce"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "stripped_acacia"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "1": "strippedbirch"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "1": "stripped_jungle"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "stripped_mangrove"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "1": "stripped_crimson"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "stripped_warped"
+      },
+      "name": "warped"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [
+      {
+        "value": "CUSTOM:ComputerMinecraft"
+      },
+      {
+        "value": "CUSTOM:ComputerOn"
+      },
+      {
+        "value": "CUSTOM:ComputerOff"
+      }
+    ],
+    "blocks": [
+      {
+        "value": "CUSTOM:TVStandOff"
+      },
+      {
+        "value": "CUSTOM:TVStandOn"
+      },
+      {
+        "value": "CUSTOM:TVStandMinecraft"
+      },
+      {
+        "value": "CUSTOM:TVStandCod"
+      },
+      {
+        "value": "CUSTOM:TVWallOff"
+      },
+      {
+        "value": "CUSTOM:TVWallOn"
+      },
+      {
+        "value": "CUSTOM:TVWallMinecraft"
+      },
+      {
+        "value": "CUSTOM:TVWallCod"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "t_vs",
+    "namespace": "forge"
+  }
+}

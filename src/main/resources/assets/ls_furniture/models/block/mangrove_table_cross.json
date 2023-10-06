@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_cross",
+  "textures": {
+    "all": "ls_furniture:blocks/mangrove_planks",
+    "particle": "ls_furniture:blocks/mangrove_planks",
+    "1": "ls_furniture:blocks/stripped_mangrove"
+  },
+  "render_type": "cutout"
+}

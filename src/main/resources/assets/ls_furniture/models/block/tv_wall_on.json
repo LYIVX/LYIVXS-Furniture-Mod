@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/tv-wall",
+  "textures": {
+    "all": "ls_furniture:blocks/computer_static",
+    "particle": "ls_furniture:blocks/computer_static",
+    "1": "ls_furniture:blocks/anvil_flat",
+    "3": "ls_furniture:blocks/computer_static"
+  },
+  "render_type": "cutout_mipped"
+}

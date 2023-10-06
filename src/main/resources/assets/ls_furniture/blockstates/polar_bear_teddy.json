@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ls_furniture:block/polar_bear_teddy"
+    },
+    "facing=east": {
+      "model": "ls_furniture:block/polar_bear_teddy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ls_furniture:block/polar_bear_teddy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ls_furniture:block/polar_bear_teddy",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/polar_bear_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/polarbear",
+    "particle": "ls_furniture:blocks/white_wool",
+    "0": "ls_furniture:blocks/polarbear"
+  },
+  "render_type": "cutout_mipped"
+}

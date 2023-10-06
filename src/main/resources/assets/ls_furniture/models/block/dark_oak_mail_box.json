@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:custom/mail_box",
+  "textures": {
+    "all": "ls_furniture:blocks/dark_oak_planks",
+    "particle": "ls_furniture:blocks/dark_oak_planks",
+    "0": "ls_furniture:blocks/dark_oak_log",
+    "1": "ls_furniture:blocks/stripped_dark_oak",
+    "2": "ls_furniture:blocks/dark_oak_planks",
+    "3": "ls_furniture:blocks/black_wool"
+  },
+  "render_type": "cutout_mipped"
+}

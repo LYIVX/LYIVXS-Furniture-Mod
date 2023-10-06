@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MangroveWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

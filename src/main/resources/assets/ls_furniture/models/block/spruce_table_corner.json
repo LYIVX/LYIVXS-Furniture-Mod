@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/table_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/spruce_planks",
+    "particle": "ls_furniture:blocks/spruce_planks",
+    "1": "ls_furniture:blocks/spruce_log",
+    "2": "ls_furniture:blocks/stripped_spruce"
+  },
+  "render_type": "cutout"
+}

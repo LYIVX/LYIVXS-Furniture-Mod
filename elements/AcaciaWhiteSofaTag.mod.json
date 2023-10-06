@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AcaciaWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteStaright"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "acacia_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

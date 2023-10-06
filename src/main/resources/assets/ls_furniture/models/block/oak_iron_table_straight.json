@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_straight",
+  "textures": {
+    "all": "ls_furniture:blocks/oak_iron_straight",
+    "particle": "ls_furniture:blocks/oak_iron_straight",
+    "1": "ls_furniture:blocks/oak_iron_straight"
+  },
+  "render_type": "cutout"
+}

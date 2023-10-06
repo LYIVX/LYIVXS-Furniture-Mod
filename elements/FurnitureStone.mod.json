@@ -1,0 +1,1032 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 276,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 88,
+          "y": 53
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 106,
+          "y": 53
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 88,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 106,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 97,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 304,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 322,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 304,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 322,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 313,
+          "y": 89
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect1",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 141,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect2",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 174,
+          "y": 8
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty",
+          "text": {
+            "fixedValue": "Wood"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 79,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty1",
+          "text": {
+            "fixedValue": "Stone"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 112,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty2",
+          "text": {
+            "fixedValue": "Metal"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 145,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty3",
+          "text": {
+            "fixedValue": "Teddys"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 178,
+          "y": 12
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_furniture",
+          "text": {
+            "fixedValue": "Stone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 90,
+          "y": 43
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 10,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 137,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 11,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 154,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 12,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 171,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 13,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 188,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 14,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 205,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 15,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 222,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 16,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 239,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 17,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 256,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 18,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 273,
+          "y": 46
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 19,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 137,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 20,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 154,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 21,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 171,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 22,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 188,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 23,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 205,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 24,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 222,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 25,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 239,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 26,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 256,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 27,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 273,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 28,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 137,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 29,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 154,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 30,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 171,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 31,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 188,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 32,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 205,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 33,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 222,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 34,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 239,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 35,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 256,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 36,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 273,
+          "y": 82
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 37,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 137,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 38,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 154,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 39,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 171,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 40,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 188,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 41,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 205,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 42,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 222,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 43,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 239,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 44,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 256,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 45,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 273,
+          "y": 100
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 46,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 97,
+          "y": 125
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "triangle_arrow_down.png",
+          "use1Xscale": false,
+          "x": 98,
+          "y": 108
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "triangle_arrow_down.png",
+          "use1Xscale": false,
+          "x": 314,
+          "y": 108
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 47,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 313,
+          "y": 125
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect_left_edge",
+          "image": "tab_deselect_left_edge.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 75,
+          "y": 8
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_select.png",
+          "use1Xscale": false,
+          "x": 108,
+          "y": 6
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_oak_wood",
+          "image": "oak_wood.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 80,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "stone.png",
+          "use1Xscale": false,
+          "x": 113,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_iron_ingot",
+          "image": "iron_ingot.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 145,
+          "y": 12
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_recipe",
+          "text": {
+            "fixedValue": "Recipe"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 306,
+          "y": 43
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_toddys",
+          "image": "toddys.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 178,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_question_mark",
+          "image": "question_mark.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenExplainerMenu"
+          },
+          "x": 98,
+          "y": 147
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_recipe_explainer",
+          "text": {
+            "fixedValue": "Recipe Explainer"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 94,
+          "y": 144
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenPathsMenu"
+          },
+          "x": 207,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_path",
+          "image": "path.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenPathsMenu"
+          },
+          "x": 211,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paths",
+          "text": {
+            "fixedValue": "Paths"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 211,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "furniture_crafter_brown_background.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "x": 90,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "x": 108,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ingot_1.png",
+          "use1Xscale": false,
+          "x": 89,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dye.png",
+          "use1Xscale": false,
+          "x": 107,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tool.png",
+          "use1Xscale": false,
+          "x": 98,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect_left_edge1",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenDecorationsMenu"
+          },
+          "x": 240,
+          "y": 8
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_decorations",
+          "text": {
+            "fixedValue": "Decorations"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 244,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_computer",
+          "image": "computer.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenDecorationsMenu"
+          },
+          "x": 244,
+          "y": 12
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_request",
+          "text": "Request",
+          "onClick": {
+            "name": "RequestFeatures"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 137,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_request_features_for_stone_tab_o",
+          "text": {
+            "fixedValue": "Request Features For Stone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_stone_tab_on_curse_forge",
+          "text": {
+            "fixedValue": "Tab On Curse Forge"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 57
+        }
+      }
+    ],
+    "onTick": {
+      "name": "FurnitureStoneGUIIsOpened"
+    },
+    "onClosed": {
+      "name": "FurnitureCrafterBetaPro3"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 12,
+      "oy": 11,
+      "snapOnGrid": false
+    }
+  }
+}

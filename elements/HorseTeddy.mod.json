@@ -1,0 +1,244 @@
+{
+  "_fv": 47,
+  "_type": "block",
+  "definition": {
+    "texture": "horse_black",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "horse_teddy:default",
+    "rotationMode": 1,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "black_wool",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "CUTOUT_MIPPED",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 6.0,
+        "my": 4.4,
+        "mz": 2.85,
+        "Mx": 10.0,
+        "My": 8.4,
+        "Mz": 11.65,
+        "subtract": false
+      },
+      {
+        "mx": 7.4,
+        "my": 2.4,
+        "mz": 10.85,
+        "Mx": 8.6,
+        "My": 8.0,
+        "Mz": 12.45,
+        "subtract": false
+      },
+      {
+        "mx": 8.4,
+        "my": 0.0,
+        "mz": 10.05,
+        "Mx": 10.0,
+        "My": 4.4,
+        "Mz": 11.65,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 10.05,
+        "Mx": 7.6,
+        "My": 4.4,
+        "Mz": 11.65,
+        "subtract": false
+      },
+      {
+        "mx": 8.4,
+        "my": 0.0,
+        "mz": 2.85,
+        "Mx": 10.0,
+        "My": 4.4,
+        "Mz": 4.45,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 2.85,
+        "Mx": 7.6,
+        "My": 4.4,
+        "Mz": 4.45,
+        "subtract": false
+      },
+      {
+        "mx": 6.8,
+        "my": 10.8,
+        "mz": 2.75,
+        "Mx": 9.2,
+        "My": 12.8,
+        "Mz": 5.55,
+        "subtract": false
+      },
+      {
+        "mx": 7.2,
+        "my": 10.8,
+        "mz": 0.75,
+        "Mx": 8.8,
+        "My": 12.8,
+        "Mz": 2.75,
+        "subtract": false
+      },
+      {
+        "mx": 8.4,
+        "my": 12.6,
+        "mz": 5.146,
+        "Mx": 9.2,
+        "My": 13.8,
+        "Mz": 5.546,
+        "subtract": false
+      },
+      {
+        "mx": 6.8,
+        "my": 12.6,
+        "mz": 5.146,
+        "Mx": 7.6,
+        "My": 13.8,
+        "Mz": 5.546,
+        "subtract": false
+      },
+      {
+        "mx": 7.2,
+        "my": 6.4,
+        "mz": 2.75,
+        "Mx": 8.8,
+        "My": 11.2,
+        "Mz": 5.55,
+        "subtract": false
+      },
+      {
+        "mx": 7.6,
+        "my": 6.4,
+        "mz": 5.55,
+        "Mx": 8.4,
+        "My": 12.8,
+        "Mz": 6.35,
+        "subtract": false
+      }
+    ],
+    "name": "Horse Teddy",
+    "specialInfo": [],
+    "hardness": 0.8,
+    "resistance": 0.8,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTab": {
+      "value": "CUSTOM:TAB"
+    },
+    "destroyTool": "hoe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "CLOTH"
+    },
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "CLOTH"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "isBonemealable": false,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "HorseTeddyOnBlockRightClicked"
+    },
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

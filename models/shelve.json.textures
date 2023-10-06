@@ -1,0 +1,67 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "stripped_oak",
+        "2": "oak_log"
+      },
+      "name": "default"
+    },
+    "darkoak": {
+      "map": {
+        "1": "stripped_dark_oak",
+        "2": "dark_oak_log"
+      },
+      "name": "darkoak"
+    },
+    "spruce": {
+      "map": {
+        "1": "stripped_spruce",
+        "2": "spruce_log"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "stripped_acacia",
+        "2": "acacia_log"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "1": "strippedbirch",
+        "2": "birch_log"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "1": "stripped_jungle",
+        "2": "jungle_log"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "stripped_mangrove",
+        "2": "mangrove_log"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "1": "stripped_crimson",
+        "2": "crimson_stem_animation"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "stripped_warped",
+        "2": "warped_stem_animation"
+      },
+      "name": "warped"
+    }
+  }
+}

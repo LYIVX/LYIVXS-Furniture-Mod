@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MangroveTableNone"
+      },
+      {
+        "value": "CUSTOM:MangroveTableStraight"
+      },
+      {
+        "value": "CUSTOM:MangroveTableCorner"
+      },
+      {
+        "value": "CUSTOM:MangroveTableJunction"
+      },
+      {
+        "value": "CUSTOM:MangroveTableCross"
+      },
+      {
+        "value": "CUSTOM:MangroveTableEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_table",
+    "namespace": "forge"
+  }
+}

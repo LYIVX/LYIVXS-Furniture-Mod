@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_10",
+  "textures": {
+    "all": "ls_furniture:blocks/stone_path_10_andesite",
+    "particle": "ls_furniture:blocks/stone_path_10_andesite",
+    "0": "ls_furniture:blocks/stone_path_10_andesite"
+  },
+  "render_type": "cutout_mipped"
+}

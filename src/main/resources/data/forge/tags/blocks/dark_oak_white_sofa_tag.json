@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:dark_oak_white_right_end",
+    "ls_furniture:dark_oak_white_left_end",
+    "ls_furniture:dark_oak_white_corner",
+    "ls_furniture:dark_oak_white_sofa",
+    "ls_furniture:dark_oak_white_straight"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SpruceCounter"
+      },
+      {
+        "value": "CUSTOM:SpruceCounterCorner"
+      },
+      {
+        "value": "CUSTOM:SpruceSink"
+      },
+      {
+        "value": "CUSTOM:SpruceOven"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_counter_tag",
+    "namespace": "forge"
+  }
+}

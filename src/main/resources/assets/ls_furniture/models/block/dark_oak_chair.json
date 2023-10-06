@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:custom/chair",
+  "textures": {
+    "all": "ls_furniture:blocks/dark_oak_planks",
+    "particle": "ls_furniture:blocks/dark_oak_planks",
+    "1": "ls_furniture:blocks/dark_oak_log",
+    "2": "ls_furniture:blocks/stripped_dark_oak",
+    "3": "ls_furniture:blocks/invisible"
+  },
+  "render_type": "cutout_mipped"
+}

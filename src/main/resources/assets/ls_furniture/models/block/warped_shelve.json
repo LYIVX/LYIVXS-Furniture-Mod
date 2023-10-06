@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/shelve",
+  "textures": {
+    "all": "ls_furniture:blocks/warped_planks",
+    "particle": "ls_furniture:blocks/warped_planks",
+    "1": "ls_furniture:blocks/stripped_warped",
+    "2": "ls_furniture:blocks/warped_stem_animation"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_cross",
+  "textures": {
+    "all": "ls_furniture:blocks/iron_cross",
+    "particle": "ls_furniture:blocks/iron_cross",
+    "1": "ls_furniture:blocks/iron_cross"
+  },
+  "render_type": "cutout_mipped"
+}

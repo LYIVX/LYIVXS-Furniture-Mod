@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AcaciaTableEnd"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableCross"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableJunction"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableCorner"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableNone"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableStraight"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "acacia_table",
+    "namespace": "forge"
+  }
+}

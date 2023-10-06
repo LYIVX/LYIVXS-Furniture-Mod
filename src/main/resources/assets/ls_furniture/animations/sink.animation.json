@@ -1,0 +1,97 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"0": {
+			"animation_length": 1.16667,
+			"bones": {
+				"water_still": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.1667": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"1": {
+			"animation_length": 2.5,
+			"bones": {
+				"water_flow": {
+					"position": {
+						"0.0": {
+							"vector": [0, 6, 0]
+						},
+						"0.5": {
+							"vector": [0, 7.2, 0],
+							"easing": "linear"
+						},
+						"1.25": {
+							"vector": [0, 6.6, 0]
+						},
+						"1.75": {
+							"vector": [0, 3, 0]
+						},
+						"1.7917": {
+							"vector": [0, -1, 0]
+						},
+						"2.5": {
+							"vector": [0, -1, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 0, 1]
+						},
+						"0.5": {
+							"vector": [1, 1.2, 1]
+						},
+						"1.25": {
+							"vector": [1, 0.6, 1]
+						},
+						"1.75": {
+							"vector": [1, 0, 1]
+						}
+					}
+				},
+				"water_still": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						},
+						"1.25": {
+							"vector": [0, 4, 0]
+						},
+						"1.75": {
+							"vector": [0, 4, 0]
+						},
+						"2.25": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"2": {
+			"animation_length": 0.5,
+			"bones": {
+				"water_still": {
+					"position": {
+						"0.0": {
+							"vector": [0, 4, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/shelve",
+  "textures": {
+    "all": "ls_furniture:blocks/spruce_planks",
+    "particle": "ls_furniture:blocks/spruce_planks",
+    "1": "ls_furniture:blocks/stripped_spruce",
+    "2": "ls_furniture:blocks/spruce_log"
+  },
+  "render_type": "cutout_mipped"
+}

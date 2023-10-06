@@ -1,0 +1,220 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "oak_planks",
+        "7": "stripped_oak"
+      },
+      "name": "default"
+    },
+    "oak_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "oak_planks",
+        "7": "stripped_oak"
+      },
+      "name": "oak_on"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "dark_oak_planks",
+        "7": "stripped_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "dark_oak_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "dark_oak_planks",
+        "7": "stripped_dark_oak"
+      },
+      "name": "dark_oak_on"
+    },
+    "spruce_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "spruce_planks",
+        "7": "stripped_spruce"
+      },
+      "name": "spruce_on"
+    },
+    "spruce": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "spruce_planks",
+        "7": "stripped_spruce"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "acacia_planks",
+        "7": "stripped_acacia"
+      },
+      "name": "acacia"
+    },
+    "acacia_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "acacia_planks",
+        "7": "stripped_acacia"
+      },
+      "name": "acacia_on"
+    },
+    "birch": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "birch_planks",
+        "7": "strippedbirch"
+      },
+      "name": "birch"
+    },
+    "birch_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "birch_planks",
+        "7": "strippedbirch"
+      },
+      "name": "birch_on"
+    },
+    "jungle": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "jungle_planks",
+        "7": "stripped_jungle"
+      },
+      "name": "jungle"
+    },
+    "jungle_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "jungle_planks",
+        "7": "stripped_jungle"
+      },
+      "name": "jungle_on"
+    },
+    "mangrove": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "mangrove_planks",
+        "7": "stripped_mangrove"
+      },
+      "name": "mangrove"
+    },
+    "mangrove_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "mangrove_planks",
+        "7": "stripped_mangrove"
+      },
+      "name": "mangrove_on"
+    },
+    "crimson": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "crimson_planks",
+        "7": "stripped_crimson"
+      },
+      "name": "crimson"
+    },
+    "crimson_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "crimson_planks",
+        "7": "stripped_crimson"
+      },
+      "name": "crimson_on"
+    },
+    "warped": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool",
+        "6": "warped_planks",
+        "7": "stripped_warped"
+      },
+      "name": "warped"
+    },
+    "warped_on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool",
+        "6": "warped_planks",
+        "7": "stripped_warped"
+      },
+      "name": "warped_on"
+    }
+  }
+}

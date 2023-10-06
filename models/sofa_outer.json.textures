@@ -1,0 +1,242 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "oak_planks",
+        "1": "white_wool"
+      },
+      "name": "default"
+    },
+    "oak_black": {
+      "map": {
+        "0": "oak_planks",
+        "1": "black_wool"
+      },
+      "name": "oak_black"
+    },
+    "oak_cyan": {
+      "map": {
+        "0": "oak_planks",
+        "1": "cyan_wool"
+      },
+      "name": "oak_cyan"
+    },
+    "oak_gray": {
+      "map": {
+        "0": "oak_planks",
+        "1": "gray_wool"
+      },
+      "name": "oak_gray"
+    },
+    "oak_blue": {
+      "map": {
+        "0": "oak_planks",
+        "1": "blue_wool"
+      },
+      "name": "oak_blue"
+    },
+    "oak_brown": {
+      "map": {
+        "0": "oak_planks",
+        "1": "brown_wool"
+      },
+      "name": "oak_brown"
+    },
+    "oak_green": {
+      "map": {
+        "0": "oak_planks",
+        "1": "green_wool"
+      },
+      "name": "oak_green"
+    },
+    "oak_light_blue": {
+      "map": {
+        "0": "oak_planks",
+        "1": "light_blue_wool"
+      },
+      "name": "oak_light_blue"
+    },
+    "oak_light_gray": {
+      "map": {
+        "0": "oak_planks",
+        "1": "light_gray_wool"
+      },
+      "name": "oak_light_gray"
+    },
+    "oak_lime": {
+      "map": {
+        "0": "oak_planks",
+        "1": "lime_wool"
+      },
+      "name": "oak_lime"
+    },
+    "oak_magenta": {
+      "map": {
+        "0": "oak_planks",
+        "1": "magenta_wool"
+      },
+      "name": "oak_magenta"
+    },
+    "oak_orange": {
+      "map": {
+        "0": "oak_planks",
+        "1": "orange_wool"
+      },
+      "name": "oak_orange"
+    },
+    "oak_pink": {
+      "map": {
+        "0": "oak_planks",
+        "1": "pink_wool"
+      },
+      "name": "oak_pink"
+    },
+    "oak_purple": {
+      "map": {
+        "0": "oak_planks",
+        "1": "purple_wool"
+      },
+      "name": "oak_purple"
+    },
+    "oak_red": {
+      "map": {
+        "0": "oak_planks",
+        "1": "red_wool"
+      },
+      "name": "oak_red"
+    },
+    "oak_yellow": {
+      "map": {
+        "0": "oak_planks",
+        "1": "yellow_wool"
+      },
+      "name": "oak_yellow"
+    },
+    "dark_oak_white": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "white_wool"
+      },
+      "name": "dark_oak_white"
+    },
+    "dark_oak_black": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "black_wool"
+      },
+      "name": "dark_oak_black"
+    },
+    "dark_oak_blue": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "blue_wool"
+      },
+      "name": "dark_oak_blue"
+    },
+    "dark_oak_brown": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "brown_wool"
+      },
+      "name": "dark_oak_brown"
+    },
+    "dark_oak_cyan": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "cyan_wool"
+      },
+      "name": "dark_oak_cyan"
+    },
+    "dark_oak_gray": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "gray_wool"
+      },
+      "name": "dark_oak_gray"
+    },
+    "dark_oak_green": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "green_wool"
+      },
+      "name": "dark_oak_green"
+    },
+    "dark_oak_light_blue": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "light_blue_wool"
+      },
+      "name": "dark_oak_light_blue"
+    },
+    "dark_oak_light_gray": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "light_gray_wool"
+      },
+      "name": "dark_oak_light_gray"
+    },
+    "dark_oak_lime": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "lime_wool"
+      },
+      "name": "dark_oak_lime"
+    },
+    "dark_oak_magenta": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "magenta_wool"
+      },
+      "name": "dark_oak_magenta"
+    },
+    "dark_oak_orange": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "orange_wool"
+      },
+      "name": "dark_oak_orange"
+    },
+    "dark_oak_pink": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "pink_wool"
+      },
+      "name": "dark_oak_pink"
+    },
+    "dark_oak_purple": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "purple_wool"
+      },
+      "name": "dark_oak_purple"
+    },
+    "dark_oak_red": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "red_wool"
+      },
+      "name": "dark_oak_red"
+    },
+    "dark_oak_yellow": {
+      "map": {
+        "0": "dark_oak_planks",
+        "1": "yellow_wool"
+      },
+      "name": "dark_oak_yellow"
+    },
+    "spruce_white": {
+      "map": {
+        "0": "spruce_planks",
+        "1": "white_wool"
+      },
+      "name": "spruce_white"
+    },
+    "acacia_white": {
+      "map": {
+        "0": "acacia_planks",
+        "1": "white_wool"
+      },
+      "name": "acacia_white"
+    }
+  }
+}

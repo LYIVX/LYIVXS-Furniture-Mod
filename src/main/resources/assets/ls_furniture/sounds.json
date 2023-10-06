@@ -1,0 +1,11 @@
+{
+  "microwave": {
+    "subtitle": "subtitles.microwave",
+    "sounds": [
+      {
+        "name": "ls_furniture:microwave",
+        "stream": false
+      }
+    ]
+  }
+}

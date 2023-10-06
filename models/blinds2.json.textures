@@ -1,0 +1,67 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "oak_planks",
+        "2": "white_concrete"
+      },
+      "name": "default"
+    },
+    "darkoak": {
+      "map": {
+        "1": "dark_oak_planks",
+        "2": "white_concrete"
+      },
+      "name": "darkoak"
+    },
+    "spruce": {
+      "map": {
+        "1": "spruce_planks",
+        "2": "white_concrete"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "acacia_planks",
+        "2": "white_concrete"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "1": "birch_planks",
+        "2": "white_concrete"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "1": "jungle_planks",
+        "2": "white_concrete"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "mangrove_planks",
+        "2": "white_concrete"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "1": "crimson_planks",
+        "2": "white_concrete"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "warped_planks",
+        "2": "white_concrete"
+      },
+      "name": "warped"
+    }
+  }
+}

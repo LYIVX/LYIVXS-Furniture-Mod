@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_straight",
+  "textures": {
+    "all": "ls_furniture:blocks/jungle_planks",
+    "particle": "ls_furniture:blocks/jungle_planks",
+    "1": "ls_furniture:blocks/stripped_jungle"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CrimsonCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:CrimsonCupboard"
+      },
+      {
+        "value": "CUSTOM:CrimsonCupboardVent"
+      },
+      {
+        "value": "CUSTOM:CrimsonCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_cupboard_tag",
+    "namespace": "forge"
+  }
+}

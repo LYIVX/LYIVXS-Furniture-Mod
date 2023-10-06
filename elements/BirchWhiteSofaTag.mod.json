@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BirchWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteStaright"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

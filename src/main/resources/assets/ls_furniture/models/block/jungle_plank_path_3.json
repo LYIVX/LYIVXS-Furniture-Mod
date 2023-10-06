@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_5",
+  "textures": {
+    "all": "ls_furniture:blocks/jungle_planks",
+    "particle": "ls_furniture:blocks/jungle_planks",
+    "0": "ls_furniture:blocks/jungle_planks"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,15 @@
+{
+  "parent": "ls_furniture:custom/cupboard_vent",
+  "textures": {
+    "all": "ls_furniture:blocks/jungle_planks",
+    "particle": "ls_furniture:blocks/jungle_planks",
+    "1": "ls_furniture:blocks/anvil_flat",
+    "2": "ls_furniture:blocks/glowstone",
+    "3": "ls_furniture:blocks/black_wool",
+    "4": "ls_furniture:blocks/green_wool",
+    "5": "ls_furniture:blocks/red_wool",
+    "6": "ls_furniture:blocks/jungle_planks",
+    "7": "ls_furniture:blocks/stripped_jungle"
+  },
+  "render_type": "solid"
+}

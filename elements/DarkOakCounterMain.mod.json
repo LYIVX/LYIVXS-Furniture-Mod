@@ -1,0 +1,7 @@
+{
+  "_fv": 47,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"call_procedure\"><field name=\"procedure\">DarkOakCounterPro</field><comment pinned=\"false\" h=\"39\" w=\"119\">Post Script (n)</comment><next><block type=\"call_procedure\"><field name=\"procedure\">DarkOakCounterCornerPro</field><comment pinned=\"false\" h=\"38\" w=\"126\">Corner Script (l)</comment></block></next></block></next></block></xml>"
+  }
+}

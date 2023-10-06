@@ -1,0 +1,63 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.WOOL#0"
+      },
+      {
+        "value": "Blocks.WOOL#1"
+      },
+      {
+        "value": "Blocks.WOOL#2"
+      },
+      {
+        "value": "Blocks.WOOL#3"
+      },
+      {
+        "value": "Blocks.WOOL#4"
+      },
+      {
+        "value": "Blocks.WOOL#5"
+      },
+      {
+        "value": "Blocks.WOOL#6"
+      },
+      {
+        "value": "Blocks.WOOL#7"
+      },
+      {
+        "value": "Blocks.WOOL#8"
+      },
+      {
+        "value": "Blocks.WOOL#9"
+      },
+      {
+        "value": "Blocks.WOOL#10"
+      },
+      {
+        "value": "Blocks.WOOL#11"
+      },
+      {
+        "value": "Blocks.WOOL#12"
+      },
+      {
+        "value": "Blocks.WOOL#13"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#15"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "wool",
+    "namespace": "forge"
+  }
+}

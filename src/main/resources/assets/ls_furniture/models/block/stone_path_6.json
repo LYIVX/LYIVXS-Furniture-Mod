@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_6",
+  "textures": {
+    "all": "ls_furniture:blocks/stone_path_6",
+    "particle": "ls_furniture:blocks/stone_path_6",
+    "0": "ls_furniture:blocks/stone_path_6"
+  },
+  "render_type": "cutout_mipped"
+}

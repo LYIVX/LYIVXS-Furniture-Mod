@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:OakWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:OakWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:OakWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:OakWhiteCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

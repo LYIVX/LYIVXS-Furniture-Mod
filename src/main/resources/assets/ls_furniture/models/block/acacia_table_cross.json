@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_cross",
+  "textures": {
+    "all": "ls_furniture:blocks/acacia_planks",
+    "particle": "ls_furniture:blocks/acacia_planks",
+    "1": "ls_furniture:blocks/stripped_acacia"
+  },
+  "render_type": "cutout"
+}

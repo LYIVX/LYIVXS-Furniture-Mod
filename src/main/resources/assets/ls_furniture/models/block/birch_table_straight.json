@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_straight",
+  "textures": {
+    "all": "ls_furniture:blocks/birch_planks",
+    "particle": "ls_furniture:blocks/birch_planks",
+    "1": "ls_furniture:blocks/strippedbirch"
+  },
+  "render_type": "cutout"
+}

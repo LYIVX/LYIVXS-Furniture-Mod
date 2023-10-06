@@ -1,0 +1,15 @@
+{
+  "parent": "ls_furniture:custom/cupboard_vent",
+  "textures": {
+    "all": "ls_furniture:blocks/mangrove_planks",
+    "particle": "ls_furniture:blocks/mangrove_planks",
+    "1": "ls_furniture:blocks/anvil_flat",
+    "2": "ls_furniture:blocks/anvil_flat",
+    "3": "ls_furniture:blocks/black_wool",
+    "4": "ls_furniture:blocks/green_wool",
+    "5": "ls_furniture:blocks/red_wool",
+    "6": "ls_furniture:blocks/mangrove_planks",
+    "7": "ls_furniture:blocks/stripped_mangrove"
+  },
+  "render_type": "solid"
+}

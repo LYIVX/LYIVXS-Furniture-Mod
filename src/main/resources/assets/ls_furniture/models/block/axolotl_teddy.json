@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/axolotl",
+  "textures": {
+    "all": "ls_furniture:blocks/axolotl",
+    "particle": "ls_furniture:blocks/pink_wool",
+    "2": "ls_furniture:blocks/axolotl"
+  },
+  "render_type": "cutout_mipped"
+}

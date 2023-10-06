@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cobblestone_path_1"
+      },
+      "name": "default"
+    }
+  }
+}

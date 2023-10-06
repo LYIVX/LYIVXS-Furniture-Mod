@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CrimsonWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

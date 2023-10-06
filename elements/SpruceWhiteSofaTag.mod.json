@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SpruceWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteRightEnd"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

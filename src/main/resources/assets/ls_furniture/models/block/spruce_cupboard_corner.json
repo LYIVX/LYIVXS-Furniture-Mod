@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/cupboard_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/spruce_planks",
+    "particle": "ls_furniture:blocks/spruce_planks",
+    "0": "ls_furniture:blocks/spruce_planks",
+    "1": "ls_furniture:blocks/stripped_spruce"
+  },
+  "render_type": "cutout_mipped"
+}

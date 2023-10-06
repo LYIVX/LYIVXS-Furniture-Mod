@@ -1,0 +1,226 @@
+{
+  "_fv": 47,
+  "_type": "block",
+  "definition": {
+    "texture": "polarbear",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "polar_bear_teddy:default",
+    "rotationMode": 1,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "white_wool",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "CUTOUT_MIPPED",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 9.45468,
+        "my": 0.0,
+        "mz": 5.74214,
+        "Mx": 13.45468,
+        "My": 1.6,
+        "Mz": 8.14214,
+        "subtract": false
+      },
+      {
+        "mx": 2.34532,
+        "my": 0.0,
+        "mz": 5.74214,
+        "Mx": 6.34532,
+        "My": 1.6,
+        "Mz": 8.14214,
+        "subtract": false
+      },
+      {
+        "mx": 11.59783,
+        "my": 0.0,
+        "mz": 9.66083,
+        "Mx": 15.59783,
+        "My": 1.6,
+        "Mz": 12.86083,
+        "subtract": false
+      },
+      {
+        "mx": 0.20217,
+        "my": 0.0,
+        "mz": 9.66083,
+        "Mx": 4.20217,
+        "My": 1.6,
+        "Mz": 12.86083,
+        "subtract": false
+      },
+      {
+        "mx": 5.1,
+        "my": 0.0,
+        "mz": 9.15442,
+        "Mx": 10.7,
+        "My": 4.4,
+        "Mz": 14.75442,
+        "subtract": false
+      },
+      {
+        "mx": 5.5,
+        "my": 0.0,
+        "mz": 4.35442,
+        "Mx": 10.3,
+        "My": 4.0,
+        "Mz": 9.15442,
+        "subtract": false
+      },
+      {
+        "mx": 6.5,
+        "my": 0.8,
+        "mz": 1.55442,
+        "Mx": 9.3,
+        "My": 3.6,
+        "Mz": 4.35442,
+        "subtract": false
+      },
+      {
+        "mx": 6.9,
+        "my": 0.8,
+        "mz": 0.35442,
+        "Mx": 8.9,
+        "My": 2.0,
+        "Mz": 1.55442,
+        "subtract": false
+      },
+      {
+        "mx": 6.1,
+        "my": 3.2,
+        "mz": 2.35442,
+        "Mx": 6.9,
+        "My": 4.0,
+        "Mz": 2.75442,
+        "subtract": false
+      },
+      {
+        "mx": 8.9,
+        "my": 3.2,
+        "mz": 2.35442,
+        "Mx": 9.7,
+        "My": 4.0,
+        "Mz": 2.75442,
+        "subtract": false
+      }
+    ],
+    "name": "Polar Bear Teddy",
+    "specialInfo": [],
+    "hardness": 0.8,
+    "resistance": 0.8,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTab": {
+      "value": "CUSTOM:TAB"
+    },
+    "destroyTool": "hoe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "CLOTH"
+    },
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "CLOTH"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "isBonemealable": false,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "PolarBearTeddyOnBlockRightClicked"
+    },
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

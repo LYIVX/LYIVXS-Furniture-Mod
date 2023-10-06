@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/table_cross",
+  "textures": {
+    "all": "ls_furniture:blocks/dark_oak_planks",
+    "particle": "ls_furniture:blocks/dark_oak_planks",
+    "1": "ls_furniture:blocks/stripped_dark_oak"
+  },
+  "render_type": "cutout"
+}

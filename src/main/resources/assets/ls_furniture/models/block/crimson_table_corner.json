@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/table_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/crimson_planks",
+    "particle": "ls_furniture:blocks/crimson_planks",
+    "1": "ls_furniture:blocks/crimson_stem_animation",
+    "2": "ls_furniture:blocks/stripped_crimson"
+  },
+  "render_type": "cutout"
+}

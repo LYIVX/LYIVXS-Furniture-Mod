@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakCupboard"
+      },
+      {
+        "value": "CUSTOM:OakCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:OakCupboardVent"
+      },
+      {
+        "value": "CUSTOM:OakCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_cupboard_tag",
+    "namespace": "forge"
+  }
+}

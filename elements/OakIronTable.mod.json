@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakIronTableCorner"
+      },
+      {
+        "value": "CUSTOM:OakIronTableJunction"
+      },
+      {
+        "value": "CUSTOM:OakIronTableCross"
+      },
+      {
+        "value": "CUSTOM:OakIronTableEnd"
+      },
+      {
+        "value": "CUSTOM:OakIronTableStraight"
+      },
+      {
+        "value": "CUSTOM:OakIronTableNone"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_iron_table",
+    "namespace": "forge"
+  }
+}

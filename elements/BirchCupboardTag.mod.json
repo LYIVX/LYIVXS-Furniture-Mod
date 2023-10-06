@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BirchCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:BirchCupboard"
+      },
+      {
+        "value": "CUSTOM:BirchCupboardVent"
+      },
+      {
+        "value": "CUSTOM:BirchCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_cupboard_tag",
+    "namespace": "forge"
+  }
+}

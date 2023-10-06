@@ -1,0 +1,397 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 63,
+    "height": 84,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_horizontal_right_deselect1",
+          "image": "tab_horizontal_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenPathsMenu"
+          },
+          "x": 244,
+          "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "recipe_explainer_grid.png",
+          "use1Xscale": false,
+          "x": 179,
+          "y": 66
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "x": 193,
+          "y": 86
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "x": 220,
+          "y": 86
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ingot_1.png",
+          "use1Xscale": false,
+          "x": 192,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dye.png",
+          "use1Xscale": false,
+          "x": 219,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tool.png",
+          "use1Xscale": false,
+          "x": 206,
+          "y": 138
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_horizontal_left_deselect",
+          "image": "tab_horizontal_left_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 153,
+          "y": 78
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect_left_edge",
+          "image": "tab_deselect_left_edge.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 182,
+          "y": 49
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_horizontal_right_deselect",
+          "image": "tab_horizontal_right_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 242,
+          "y": 78
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect_right_edge",
+          "image": "tab_deselect_right_edge.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 213,
+          "y": 49
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_oak_wood",
+          "image": "oak_wood.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 157,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_toddys",
+          "image": "toddys.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 246,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_iron_ingot",
+          "image": "iron_ingot.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 217,
+          "y": 53
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_stone",
+          "image": "stone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenStoneMenu"
+          },
+          "x": 187,
+          "y": 53
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_wood",
+          "text": {
+            "fixedValue": "Wood"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 157,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stone",
+          "text": {
+            "fixedValue": "Stone"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 186,
+          "y": 53
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_metal",
+          "text": {
+            "fixedValue": "Metal"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 217,
+          "y": 53
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teddys",
+          "text": {
+            "fixedValue": "Teddys"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 246,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_primary",
+          "text": {
+            "fixedValue": "Primary"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 188,
+          "y": 81
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_secondary",
+          "text": {
+            "fixedValue": "Secondary"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 215,
+          "y": 81
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_additional",
+          "text": {
+            "fixedValue": "Additional"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 188,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_dye",
+          "text": {
+            "fixedValue": "Dye"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 215,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_tool",
+          "text": {
+            "fixedValue": "Tool"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 133
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_path",
+          "image": "path.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenPathsMenu"
+          },
+          "x": 246,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "question_mark.png",
+          "use1Xscale": false,
+          "x": 225,
+          "y": 137
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_clicking_the_recipe_button_will",
+          "text": {
+            "fixedValue": "Clicking The Recipe Button Will Craft The Item/Block If The Ingreidents Are Present"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 222,
+          "y": 133
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paths",
+          "text": {
+            "fixedValue": "Paths"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 246,
+          "y": 113
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_horizontal_left_plain_desele",
+          "image": "tab_horizontal_left_plain_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenDecorationsMenu"
+          },
+          "x": 151,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_decorations",
+          "text": {
+            "fixedValue": "Decorations"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 157,
+          "y": 113
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_computer",
+          "image": "computer.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenDecorationsMenu"
+          },
+          "x": 157,
+          "y": 113
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

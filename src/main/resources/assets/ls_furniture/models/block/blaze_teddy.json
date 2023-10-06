@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/blaze_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/blaze",
+    "particle": "ls_furniture:blocks/yellow_wool",
+    "0": "ls_furniture:blocks/blaze"
+  },
+  "render_type": "cutout_mipped"
+}

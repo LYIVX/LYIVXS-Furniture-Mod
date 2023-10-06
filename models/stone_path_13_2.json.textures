@@ -1,0 +1,40 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "stone_path_13_2"
+      },
+      "name": "default"
+    },
+    "blackstone": {
+      "map": {
+        "0": "stone_path_13_2_blackstone"
+      },
+      "name": "blackstone"
+    },
+    "deepslate": {
+      "map": {
+        "0": "stone_path_13_2_deepslate"
+      },
+      "name": "deepslate"
+    },
+    "andesite": {
+      "map": {
+        "0": "stone_path_13_2_andesite"
+      },
+      "name": "andesite"
+    },
+    "diorite": {
+      "map": {
+        "0": "stone_path_13_2_diorite"
+      },
+      "name": "diorite"
+    },
+    "granite": {
+      "map": {
+        "0": "stone_path_13_2_granite"
+      },
+      "name": "granite"
+    }
+  }
+}

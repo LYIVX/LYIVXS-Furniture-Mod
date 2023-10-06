@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:dark_oak_cupboard_corner",
+    "ls_furniture:dark_oak_cupboard_vent",
+    "ls_furniture:dark_oak_cupboard_vent_on",
+    "ls_furniture:dark_oak_cupboard"
+  ]
+}

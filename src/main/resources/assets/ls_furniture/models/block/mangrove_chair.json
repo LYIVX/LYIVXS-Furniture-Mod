@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:custom/chair",
+  "textures": {
+    "all": "ls_furniture:blocks/mangrove_planks",
+    "particle": "ls_furniture:blocks/mangrove_planks",
+    "1": "ls_furniture:blocks/mangrove_log",
+    "2": "ls_furniture:blocks/stripped_mangrove",
+    "3": "ls_furniture:blocks/invisible"
+  },
+  "render_type": "cutout_mipped"
+}

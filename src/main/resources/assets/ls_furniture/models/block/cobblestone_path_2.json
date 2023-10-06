@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/cobblestone_path_2",
+  "textures": {
+    "all": "ls_furniture:blocks/cobblestone_path_2",
+    "particle": "ls_furniture:blocks/cobblestone_path_2",
+    "1": "ls_furniture:blocks/cobblestone_path_2"
+  },
+  "render_type": "cutout_mipped"
+}

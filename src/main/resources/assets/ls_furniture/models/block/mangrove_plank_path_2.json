@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_1",
+  "textures": {
+    "all": "ls_furniture:blocks/mangrove_planks",
+    "particle": "ls_furniture:blocks/mangrove_planks",
+    "0": "ls_furniture:blocks/mangrove_planks"
+  },
+  "render_type": "cutout_mipped"
+}

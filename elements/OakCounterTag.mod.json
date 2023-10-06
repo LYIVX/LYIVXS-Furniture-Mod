@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:OakCounter"
+      },
+      {
+        "value": "CUSTOM:OakCounterCorner"
+      },
+      {
+        "value": "CUSTOM:OakSink"
+      },
+      {
+        "value": "CUSTOM:OakOven"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_counter_tag",
+    "namespace": "forge"
+  }
+}

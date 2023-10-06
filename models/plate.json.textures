@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "apple": {
+      "map": {
+        "2": "white_concrete",
+        "missing": "apple_item"
+      },
+      "name": "apple"
+    },
+    "default": {
+      "map": {
+        "2": "white_concrete",
+        "missing": "invisible"
+      },
+      "name": "default"
+    }
+  }
+}

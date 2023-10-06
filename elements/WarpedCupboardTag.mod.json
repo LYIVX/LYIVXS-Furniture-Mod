@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:WarpedCupboard"
+      },
+      {
+        "value": "CUSTOM:WarpedCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:WarpedCupboardVent"
+      },
+      {
+        "value": "CUSTOM:WarpedCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_cupboard_tag",
+    "namespace": "forge"
+  }
+}

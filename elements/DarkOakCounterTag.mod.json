@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakCounter"
+      },
+      {
+        "value": "CUSTOM:DarkOakCounterCorner"
+      },
+      {
+        "value": "CUSTOM:DarkOakSink"
+      },
+      {
+        "value": "CUSTOM:DarkOakOven"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_counter_tag",
+    "namespace": "forge"
+  }
+}

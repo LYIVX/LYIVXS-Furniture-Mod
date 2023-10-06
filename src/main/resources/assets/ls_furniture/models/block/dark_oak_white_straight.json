@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/sofa_straight",
+  "textures": {
+    "all": "ls_furniture:blocks/white_wool",
+    "particle": "ls_furniture:blocks/white_wool",
+    "0": "ls_furniture:blocks/dark_oak_planks",
+    "1": "ls_furniture:blocks/white_wool"
+  },
+  "render_type": "cutout_mipped"
+}

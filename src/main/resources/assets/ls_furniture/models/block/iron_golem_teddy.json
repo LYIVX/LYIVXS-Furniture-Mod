@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/iron_golem_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/iron_golem",
+    "particle": "ls_furniture:blocks/white_wool",
+    "0": "ls_furniture:blocks/iron_golem"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "anvil_flat",
+        "3": "black_wool",
+        "4": "green_wool",
+        "5": "red_wool"
+      },
+      "name": "default"
+    },
+    "on": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "glowstone",
+        "3": "white_wool",
+        "4": "lime_wool",
+        "5": "red_wool"
+      },
+      "name": "on"
+    }
+  }
+}

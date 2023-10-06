@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CrimsonTableStraight"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableNone"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableEnd"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableCross"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableJunction"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_table",
+    "namespace": "forge"
+  }
+}

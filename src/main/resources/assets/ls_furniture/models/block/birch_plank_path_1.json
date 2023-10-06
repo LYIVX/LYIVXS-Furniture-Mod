@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/planks_1",
+  "textures": {
+    "all": "ls_furniture:blocks/birch_planks",
+    "particle": "ls_furniture:blocks/birch_planks",
+    "0": "ls_furniture:blocks/birch_planks"
+  },
+  "render_type": "cutout_mipped"
+}

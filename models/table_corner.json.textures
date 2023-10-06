@@ -1,0 +1,102 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "oak_log",
+        "2": "stripped_oak"
+      },
+      "name": "default"
+    },
+    "oak_gold": {
+      "map": {
+        "1": "oak_log",
+        "2": "oakgoldconnectedtexture"
+      },
+      "name": "oak_gold"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "stripped_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "oak_iron": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_iron_corner"
+      },
+      "name": "oak_iron"
+    },
+    "oak_copper": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_copper_cross"
+      },
+      "name": "oak_copper"
+    },
+    "oak_netherite": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_netherite_corner"
+      },
+      "name": "oak_netherite"
+    },
+    "iron_glass": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "iron_corner"
+      },
+      "name": "iron_glass"
+    },
+    "spruce": {
+      "map": {
+        "1": "spruce_log",
+        "2": "stripped_spruce"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "acacia_log",
+        "2": "stripped_acacia"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "1": "birch_log",
+        "2": "strippedbirch"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "1": "jungle_log",
+        "2": "stripped_jungle"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "mangrove_log",
+        "2": "stripped_mangrove"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "1": "crimson_stem_animation",
+        "2": "stripped_crimson"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "stripped_warped"
+      },
+      "name": "warped"
+    }
+  }
+}

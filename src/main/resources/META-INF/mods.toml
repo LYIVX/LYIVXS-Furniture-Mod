@@ -1,0 +1,72 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="ls_furniture"
+version="0.2.5"
+displayName="LYIVX's Furniture"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://legacy.curseforge.com/minecraft/mc-mods/lyivxs-furniture"
+logoFile="logo.png"
+authors="LYIVX, MCreator"
+description="Furniture Mod"
+
+[[dependencies.ls_furniture]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+[[dependencies.ls_furniture]]
+    modId="fusion"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="curios_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="jade"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="patchouli"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="JEI"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+

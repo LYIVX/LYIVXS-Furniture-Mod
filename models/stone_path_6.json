@@ -1,0 +1,110 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "ls_furniture:blocks/stone_path_6",
+		"particle": "ls_furniture:blocks/stone_path_6"
+	},
+	"elements": [
+		{
+			"name": "stone_path_6_0",
+			"from": [0, 0, 0],
+			"to": [15, 1, 7],
+			"faces": {
+				"north": {"uv": [15, 0, 0, 1], "texture": "#0"},
+				"east": {"uv": [14, 0, 15, 7], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 6, 15, 7], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 7], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 0, 15, 7], "texture": "#0"},
+				"down": {"uv": [0, 7, 15, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stone_path_6_1",
+			"from": [0, 0, 8],
+			"to": [7, 1, 15],
+			"faces": {
+				"north": {"uv": [7, 8, 0, 9], "texture": "#0"},
+				"east": {"uv": [6, 8, 7, 15], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 14, 7, 15], "texture": "#0"},
+				"west": {"uv": [0, 8, 1, 15], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 8, 7, 15], "texture": "#0"},
+				"down": {"uv": [0, 15, 7, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "stone_path_6_2",
+			"from": [8, 0, 8],
+			"to": [16, 1, 15],
+			"faces": {
+				"north": {"uv": [16, 8, 8, 9], "texture": "#0"},
+				"east": {"uv": [15, 8, 16, 15], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [8, 14, 16, 15], "texture": "#0"},
+				"west": {"uv": [8, 8, 9, 15], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [8, 8, 16, 15], "texture": "#0"},
+				"down": {"uv": [8, 15, 16, 8], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 4.5],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 4.5],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 4.5, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"translation": [0, 4.5, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 4, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 14.25, 0]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -3],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "stone_path_3",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"children": []
+		},
+		{
+			"name": "stone_path_4",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"children": []
+		},
+		{
+			"name": "stone_path_6",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"children": [0, 1, 2]
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/table_none",
+  "textures": {
+    "all": "ls_furniture:blocks/iron_none",
+    "particle": "ls_furniture:blocks/iron_none",
+    "1": "ls_furniture:blocks/anvil_flat",
+    "2": "ls_furniture:blocks/iron_none"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:JungleCounter"
+      },
+      {
+        "value": "CUSTOM:JungleCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_counter_tag",
+    "namespace": "forge"
+  }
+}

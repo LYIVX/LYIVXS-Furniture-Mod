@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteSofa"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_white_sofa_tag",
+    "namespace": "forge"
+  }
+}

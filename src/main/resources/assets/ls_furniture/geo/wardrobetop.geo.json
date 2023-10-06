@@ -1,0 +1,49 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wardrobetop",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "1",
+					"pivot": [-7, 24.75, -8],
+					"cubes": [
+						{"origin": [-7, -2, -8], "size": [7, 13, 1], "uv": [0, 17]},
+						{"origin": [-1.5, 5.5, -9], "size": [1, 1, 1], "uv": [12, 14]},
+						{"origin": [-7, 11, -8], "size": [7, 4, 1], "uv": [48, 22]}
+					]
+				},
+				{
+					"name": "2",
+					"pivot": [7, 24.75, -8],
+					"cubes": [
+						{"origin": [0, -2, -8], "size": [7, 13, 1], "uv": [0, 0]},
+						{"origin": [1.5, 5.5, -9], "size": [1, 1, 1], "uv": [0, 14]},
+						{"origin": [0, 11, -8], "size": [7, 4, 1], "uv": [48, 17]}
+					]
+				},
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [-7, 11, 7], "size": [14, 4, 1], "uv": [18, 50]},
+						{"origin": [-7, -2, 7], "size": [14, 13, 1], "uv": [82, 14]},
+						{"origin": [-8, 11, -8], "size": [1, 4, 16], "uv": [77, 34]},
+						{"origin": [7, 11, -8], "size": [1, 4, 16], "uv": [64, 14]},
+						{"origin": [7, -2, -8], "size": [1, 13, 16], "uv": [18, 63]},
+						{"origin": [-8, -2, -8], "size": [1, 13, 16], "uv": [42, 48]},
+						{"origin": [-8, -3, -8], "size": [16, 1, 16], "uv": [0, 17]},
+						{"origin": [-8, 15, -8], "size": [16, 1, 16], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

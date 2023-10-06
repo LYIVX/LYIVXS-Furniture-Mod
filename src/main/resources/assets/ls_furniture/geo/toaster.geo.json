@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.toaster",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "toaster",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [-5, 0, 0], "size": [10, 2, 6], "uv": [0, 0]},
+						{"origin": [4, 2, 0], "size": [1, 4, 5], "uv": [0, 23]},
+						{"origin": [-5, 2, 1], "size": [1, 4, 5], "uv": [20, 8]},
+						{"origin": [-5, 2, 0], "size": [9, 4, 1], "uv": [0, 13]},
+						{"origin": [-4, 2, 2], "size": [8, 4, 1], "uv": [18, 18]},
+						{"origin": [-4, 2, 5], "size": [9, 4, 1], "uv": [0, 8]},
+						{"origin": [-4, 2, 3], "size": [8, 4, 1], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "levers",
+					"parent": "toaster",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [5, 4, 3.5], "size": [1, 1, 2], "uv": [0, 0]},
+						{"origin": [5, 4, 0.5], "size": [1, 1, 2], "uv": [0, 3]}
+					]
+				},
+				{
+					"name": "toast",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [-3, 3, 1], "size": [6, 4, 1], "uv": [7, 23]},
+						{"origin": [-3, 3, 4], "size": [6, 4, 1], "uv": [21, 23]}
+					]
+				}
+			]
+		}
+	]
+}

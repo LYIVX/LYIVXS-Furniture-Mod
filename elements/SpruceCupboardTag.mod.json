@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SpruceCupboard"
+      },
+      {
+        "value": "CUSTOM:SpruceCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:SpruceCupboardVent"
+      },
+      {
+        "value": "CUSTOM:SpruceCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_cupboard_tag",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "stone_path_4"
+      },
+      "name": "default"
+    },
+    "blackstone": {
+      "map": {
+        "0": "stone_path_4_blackstone"
+      },
+      "name": "blackstone"
+    },
+    "deepslate": {
+      "map": {
+        "0": "stone_path_4_deepslate"
+      },
+      "name": "deepslate"
+    },
+    "andesite": {
+      "map": {
+        "0": "stone_path_4_andesite"
+      },
+      "name": "andesite"
+    },
+    "diorite": {
+      "map": {
+        "0": "stone_path_4_diorite"
+      },
+      "name": "diorite"
+    },
+    "granite": {
+      "map": {
+        "0": "stone_path_4_granite"
+      },
+      "name": "granite"
+    },
+    "oak": {
+      "map": {
+        "0": "oak_planks"
+      },
+      "name": "oak"
+    },
+    "dark_oak": {
+      "map": {
+        "0": "dark_oak_planks"
+      },
+      "name": "dark_oak"
+    },
+    "spruce": {
+      "map": {
+        "0": "spruce_planks"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "0": "acacia_planks"
+      },
+      "name": "acacia"
+    },
+    "bamboo": {
+      "map": {
+        "0": "bamboo_planks"
+      },
+      "name": "bamboo"
+    },
+    "birch": {
+      "map": {
+        "0": "birch_planks"
+      },
+      "name": "birch"
+    },
+    "cherry": {
+      "map": {
+        "0": "cherry_planks"
+      },
+      "name": "cherry"
+    },
+    "crimson": {
+      "map": {
+        "0": "crimson_planks"
+      },
+      "name": "crimson"
+    },
+    "jungle": {
+      "map": {
+        "0": "jungle_planks"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "0": "mangrove_planks"
+      },
+      "name": "mangrove"
+    },
+    "warped": {
+      "map": {
+        "0": "warped_planks"
+      },
+      "name": "warped"
+    }
+  }
+}

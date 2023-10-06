@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:custom/chair",
+  "textures": {
+    "all": "ls_furniture:blocks/warped_planks",
+    "particle": "ls_furniture:blocks/warped_planks",
+    "1": "ls_furniture:blocks/warped_stem_animation",
+    "2": "ls_furniture:blocks/stripped_warped",
+    "3": "ls_furniture:blocks/invisible"
+  },
+  "render_type": "cutout_mipped"
+}

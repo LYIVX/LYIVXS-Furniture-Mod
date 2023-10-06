@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BirchCounter"
+      },
+      {
+        "value": "CUSTOM:BirchCounterCorner"
+      },
+      {
+        "value": "CUSTOM:BirchSink"
+      },
+      {
+        "value": "CUSTOM:BirchOven"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_counter_tag",
+    "namespace": "forge"
+  }
+}

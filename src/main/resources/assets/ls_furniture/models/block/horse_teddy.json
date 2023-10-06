@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/horse_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/horse_black",
+    "particle": "ls_furniture:blocks/black_wool",
+    "0": "ls_furniture:blocks/horse_black"
+  },
+  "render_type": "cutout_mipped"
+}

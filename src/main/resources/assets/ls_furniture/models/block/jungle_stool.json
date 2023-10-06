@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:custom/stool",
+  "textures": {
+    "all": "ls_furniture:blocks/jungle_planks",
+    "particle": "ls_furniture:blocks/jungle_planks",
+    "0": "ls_furniture:blocks/jungle_log",
+    "1": "ls_furniture:blocks/stripped_jungle",
+    "2": "ls_furniture:blocks/invisible"
+  },
+  "render_type": "cutout_mipped"
+}

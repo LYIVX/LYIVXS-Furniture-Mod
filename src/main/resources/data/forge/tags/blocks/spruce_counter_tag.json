@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:spruce_counter",
+    "ls_furniture:spruce_oven",
+    "ls_furniture:spruce_counter_corner",
+    "ls_furniture:spruce_sink"
+  ]
+}

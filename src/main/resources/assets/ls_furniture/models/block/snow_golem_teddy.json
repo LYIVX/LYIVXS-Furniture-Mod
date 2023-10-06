@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/snow_golem_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/snow_golem",
+    "particle": "ls_furniture:blocks/white_wool",
+    "0": "ls_furniture:blocks/snow_golem"
+  },
+  "render_type": "cutout_mipped"
+}

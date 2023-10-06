@@ -1,0 +1,6 @@
+{
+  "parent": "ls_furniture:displaysettings/counter.item",
+  "textures": {
+    "particle": "ls_furniture:blocks/birch_counter"
+  }
+}

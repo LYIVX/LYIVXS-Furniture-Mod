@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:crimson_table_corner",
+    "ls_furniture:crimson_table_junction",
+    "ls_furniture:crimson_table_none",
+    "ls_furniture:crimson_table_end",
+    "ls_furniture:crimson_table_cross",
+    "ls_furniture:crimson_table_straight"
+  ]
+}

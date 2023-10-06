@@ -1,0 +1,76 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "oak_log",
+        "2": "stripped_oak",
+        "3": "invisible"
+      },
+      "name": "default"
+    },
+    "birch": {
+      "map": {
+        "1": "birch_log",
+        "2": "strippedbirch",
+        "3": "invisible"
+      },
+      "name": "birch"
+    },
+    "acacia": {
+      "map": {
+        "1": "acacia_log",
+        "2": "stripped_acacia",
+        "3": "invisible"
+      },
+      "name": "acacia"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "stripped_dark_oak",
+        "3": "invisible"
+      },
+      "name": "dark_oak"
+    },
+    "jungle": {
+      "map": {
+        "1": "jungle_log",
+        "2": "stripped_jungle",
+        "3": "invisible"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "mangrove_log",
+        "2": "stripped_mangrove",
+        "3": "invisible"
+      },
+      "name": "mangrove"
+    },
+    "spruce": {
+      "map": {
+        "1": "spruce_log",
+        "2": "stripped_spruce",
+        "3": "invisible"
+      },
+      "name": "spruce"
+    },
+    "crimson": {
+      "map": {
+        "1": "crimson_stem_animation",
+        "2": "stripped_mangrove",
+        "3": "invisible"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "stripped_warped",
+        "3": "invisible"
+      },
+      "name": "warped"
+    }
+  }
+}

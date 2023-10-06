@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakTableStraight"
+      },
+      {
+        "value": "CUSTOM:DarkOakTableCorner"
+      },
+      {
+        "value": "CUSTOM:DarkOakTableJunction"
+      },
+      {
+        "value": "CUSTOM:DarkOakTableCross"
+      },
+      {
+        "value": "CUSTOM:DarkOakTableEnd"
+      },
+      {
+        "value": "CUSTOM:DarkOakTableNone"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_table",
+    "namespace": "forge"
+  }
+}

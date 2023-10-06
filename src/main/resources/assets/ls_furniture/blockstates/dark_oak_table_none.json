@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ls_furniture:block/dark_oak_table_none"
+    },
+    "facing=east": {
+      "model": "ls_furniture:block/dark_oak_table_none",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ls_furniture:block/dark_oak_table_none",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ls_furniture:block/dark_oak_table_none",
+      "y": 270
+    }
+  }
+}

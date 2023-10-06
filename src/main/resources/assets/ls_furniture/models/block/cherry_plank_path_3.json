@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_5",
+  "textures": {
+    "all": "ls_furniture:blocks/cherry_planks",
+    "particle": "ls_furniture:blocks/cherry_planks",
+    "0": "ls_furniture:blocks/cherry_planks"
+  },
+  "render_type": "cutout_mipped"
+}

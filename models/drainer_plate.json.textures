@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "anvil",
+        "2": "iron_block"
+      },
+      "name": "default"
+    }
+  }
+}

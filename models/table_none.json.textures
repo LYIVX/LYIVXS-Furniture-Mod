@@ -1,0 +1,298 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "oak_log",
+        "2": "stripped_oak"
+      },
+      "name": "default"
+    },
+    "oak_gold": {
+      "map": {
+        "1": "oak_log",
+        "2": "oakgoldconnectedtexture"
+      },
+      "name": "oak_gold"
+    },
+    "oak_iron": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_iron_none"
+      },
+      "name": "oak_iron"
+    },
+    "oak_copper": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_copper_none"
+      },
+      "name": "oak_copper"
+    },
+    "oak_netherite": {
+      "map": {
+        "1": "oak_log",
+        "2": "oak_netherite_none"
+      },
+      "name": "oak_netherite"
+    },
+    "dark_oak_iron": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "dark_oak_iron_none"
+      },
+      "name": "dark_oak_iron"
+    },
+    "dark_oak_copper": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "dark_oak_copper_none"
+      },
+      "name": "dark_oak_copper"
+    },
+    "dark_oak_gold": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "dark_oak_gold_none"
+      },
+      "name": "dark_oak_gold"
+    },
+    "dark_oak_netherite": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "dark_oak_netherite_none"
+      },
+      "name": "dark_oak_netherite"
+    },
+    "spruce_iron": {
+      "map": {
+        "1": "spruce_log",
+        "2": "spruce_iron_none"
+      },
+      "name": "spruce_iron"
+    },
+    "spruce_copper": {
+      "map": {
+        "1": "spruce_log",
+        "2": "spruce_copper_none"
+      },
+      "name": "spruce_copper"
+    },
+    "spruce_gold": {
+      "map": {
+        "1": "spruce_log",
+        "2": "spruce_gold_none"
+      },
+      "name": "spruce_gold"
+    },
+    "spruce_netherite": {
+      "map": {
+        "1": "spruce_log",
+        "2": "spruce_netherite_none"
+      },
+      "name": "spruce_netherite"
+    },
+    "acacia_iron": {
+      "map": {
+        "1": "acacia_log",
+        "2": "acacia_iron_none"
+      },
+      "name": "acacia_iron"
+    },
+    "acacia_copper": {
+      "map": {
+        "1": "acacia_log",
+        "2": "acacia_copper_none"
+      },
+      "name": "acacia_copper"
+    },
+    "acacia_gold": {
+      "map": {
+        "1": "acacia_log",
+        "2": "acacia_gold_none"
+      },
+      "name": "acacia_gold"
+    },
+    "acacia_netherite": {
+      "map": {
+        "1": "acacia_log",
+        "2": "acacia_netherite_none"
+      },
+      "name": "acacia_netherite"
+    },
+    "birch_iron": {
+      "map": {
+        "1": "birch_log",
+        "2": "birch_iron_none"
+      },
+      "name": "birch_iron"
+    },
+    "birch_copper": {
+      "map": {
+        "1": "birch_log",
+        "2": "birch_copper_none"
+      },
+      "name": "birch_copper"
+    },
+    "birch_gold": {
+      "map": {
+        "1": "birch_log",
+        "2": "birch_gold_none"
+      },
+      "name": "birch_gold"
+    },
+    "birch_netherite": {
+      "map": {
+        "1": "birch_log",
+        "2": "birch_netherite_none"
+      },
+      "name": "birch_netherite"
+    },
+    "jungle_iron": {
+      "map": {
+        "1": "jungle_log",
+        "2": "jungle_iron_none"
+      },
+      "name": "jungle_iron"
+    },
+    "jungle_copper": {
+      "map": {
+        "1": "jungle_log",
+        "2": "jungle_copper_none"
+      },
+      "name": "jungle_copper"
+    },
+    "jungle_gold": {
+      "map": {
+        "1": "jungle_log",
+        "2": "jungle_gold_none"
+      },
+      "name": "jungle_gold"
+    },
+    "jungle_netherite": {
+      "map": {
+        "1": "jungle_log",
+        "2": "jungle_netherite_none"
+      },
+      "name": "jungle_netherite"
+    },
+    "mangrove_iron": {
+      "map": {
+        "1": "cherry_log",
+        "2": "mangrove_iron_none"
+      },
+      "name": "mangrove_iron"
+    },
+    "mangrove_copper": {
+      "map": {
+        "1": "cherry_log",
+        "2": "mangrove_copper_none"
+      },
+      "name": "mangrove_copper"
+    },
+    "mangrove_gold": {
+      "map": {
+        "1": "cherry_log",
+        "2": "mangrove_gold_none"
+      },
+      "name": "mangrove_gold"
+    },
+    "mangrove_netherite": {
+      "map": {
+        "1": "cherry_log",
+        "2": "mangrove_netherite_none"
+      },
+      "name": "mangrove_netherite"
+    },
+    "warped_iron": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "warped_iron_none"
+      },
+      "name": "warped_iron"
+    },
+    "warped_copper": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "warped_copper_none"
+      },
+      "name": "warped_copper"
+    },
+    "warped_gold": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "warped_gold_none"
+      },
+      "name": "warped_gold"
+    },
+    "warped_netehrite": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "warped_netherite_none"
+      },
+      "name": "warped_netehrite"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "stripped_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "iron_glass": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "iron_none"
+      },
+      "name": "iron_glass"
+    },
+    "spruce": {
+      "map": {
+        "1": "spruce_log",
+        "2": "stripped_spruce"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "1": "acacia_log",
+        "2": "stripped_acacia"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "1": "birch_log",
+        "2": "strippedbirch"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "1": "jungle_log",
+        "2": "stripped_jungle"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "1": "mangrove_log",
+        "2": "stripped_mangrove"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "1": "crimson_stem_animation",
+        "2": "stripped_crimson"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "stripped_warped"
+      },
+      "name": "warped"
+    }
+  }
+}

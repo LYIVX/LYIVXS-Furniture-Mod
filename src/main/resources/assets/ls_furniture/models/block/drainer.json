@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/drainer",
+  "textures": {
+    "all": "ls_furniture:blocks/anvil",
+    "particle": "ls_furniture:blocks/anvil",
+    "3": "ls_furniture:blocks/anvil"
+  },
+  "render_type": "cutout_mipped"
+}

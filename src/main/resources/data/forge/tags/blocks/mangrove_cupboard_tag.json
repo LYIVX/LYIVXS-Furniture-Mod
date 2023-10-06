@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:mangrove_cupboard",
+    "ls_furniture:mangrove_cupboard_vent",
+    "ls_furniture:mangrove_cupboard_corner",
+    "ls_furniture:mangrove_cupboard_vent_on"
+  ]
+}

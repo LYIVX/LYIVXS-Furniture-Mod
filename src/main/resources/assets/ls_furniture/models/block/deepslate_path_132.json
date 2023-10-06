@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/stone_path_13_2",
+  "textures": {
+    "all": "ls_furniture:blocks/stone_path_13_2_deepslate",
+    "particle": "ls_furniture:blocks/stone_path_13_2_deepslate",
+    "0": "ls_furniture:blocks/stone_path_13_2_deepslate"
+  },
+  "render_type": "cutout_mipped"
+}

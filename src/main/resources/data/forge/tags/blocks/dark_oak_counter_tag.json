@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:dark_oak_oven",
+    "ls_furniture:dark_oak_counter_corner",
+    "ls_furniture:dark_oak_counter",
+    "ls_furniture:dark_oak_sink"
+  ]
+}

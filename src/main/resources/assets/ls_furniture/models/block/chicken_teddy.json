@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/chicken_teddy",
+  "textures": {
+    "all": "ls_furniture:blocks/chicken",
+    "particle": "ls_furniture:blocks/white_wool",
+    "0": "ls_furniture:blocks/chicken"
+  },
+  "render_type": "cutout_mipped"
+}

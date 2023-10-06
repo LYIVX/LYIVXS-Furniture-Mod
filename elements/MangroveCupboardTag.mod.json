@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MangroveCupboardCorner"
+      },
+      {
+        "value": "CUSTOM:MangroveCupboard"
+      },
+      {
+        "value": "CUSTOM:MangroveCupboardVent"
+      },
+      {
+        "value": "CUSTOM:MangroveCupboardVentOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_cupboard_tag",
+    "namespace": "forge"
+  }
+}
