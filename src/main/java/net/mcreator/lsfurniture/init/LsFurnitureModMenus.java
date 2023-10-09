@@ -19,9 +19,6 @@ import net.mcreator.lsfurniture.world.inventory.OvenMenu;
 import net.mcreator.lsfurniture.world.inventory.MailBoxMenu;
 import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
 import net.mcreator.lsfurniture.world.inventory.FurnitureTeddysMenu;
-import net.mcreator.lsfurniture.world.inventory.FurnitureStoneMenu;
-import net.mcreator.lsfurniture.world.inventory.FurnitureRecipesMenu;
-import net.mcreator.lsfurniture.world.inventory.FurniturePathsMenu;
 import net.mcreator.lsfurniture.world.inventory.FurnitureMetalMenu;
 import net.mcreator.lsfurniture.world.inventory.FurnitureDecorationsMenu;
 import net.mcreator.lsfurniture.world.inventory.FurnitureChiselMenu;
@@ -37,9 +34,7 @@ public class LsFurnitureModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, LsFurnitureMod.MODID);
 	public static final RegistryObject<MenuType<DeskMenu>> DESK = REGISTRY.register("desk", () -> IForgeMenuType.create(DeskMenu::new));
 	public static final RegistryObject<MenuType<FurnitureWoodMenu>> FURNITURE_WOOD = REGISTRY.register("furniture_wood", () -> IForgeMenuType.create(FurnitureWoodMenu::new));
-	public static final RegistryObject<MenuType<FurnitureStoneMenu>> FURNITURE_STONE = REGISTRY.register("furniture_stone", () -> IForgeMenuType.create(FurnitureStoneMenu::new));
 	public static final RegistryObject<MenuType<FurnitureMetalMenu>> FURNITURE_METAL = REGISTRY.register("furniture_metal", () -> IForgeMenuType.create(FurnitureMetalMenu::new));
-	public static final RegistryObject<MenuType<FurnitureRecipesMenu>> FURNITURE_RECIPES = REGISTRY.register("furniture_recipes", () -> IForgeMenuType.create(FurnitureRecipesMenu::new));
 	public static final RegistryObject<MenuType<DrawerMenu>> DRAWER = REGISTRY.register("drawer", () -> IForgeMenuType.create(DrawerMenu::new));
 	public static final RegistryObject<MenuType<ShelveMenu>> SHELVE = REGISTRY.register("shelve", () -> IForgeMenuType.create(ShelveMenu::new));
 	public static final RegistryObject<MenuType<CounterMenu>> COUNTER = REGISTRY.register("counter", () -> IForgeMenuType.create(CounterMenu::new));
@@ -52,7 +47,6 @@ public class LsFurnitureModMenus {
 	public static final RegistryObject<MenuType<MailBoxMenu>> MAIL_BOX = REGISTRY.register("mail_box", () -> IForgeMenuType.create(MailBoxMenu::new));
 	public static final RegistryObject<MenuType<CupboardMenu>> CUPBOARD = REGISTRY.register("cupboard", () -> IForgeMenuType.create(CupboardMenu::new));
 	public static final RegistryObject<MenuType<RecipeExplainerMenu>> RECIPE_EXPLAINER = REGISTRY.register("recipe_explainer", () -> IForgeMenuType.create(RecipeExplainerMenu::new));
-	public static final RegistryObject<MenuType<FurniturePathsMenu>> FURNITURE_PATHS = REGISTRY.register("furniture_paths", () -> IForgeMenuType.create(FurniturePathsMenu::new));
 	public static final RegistryObject<MenuType<FurnitureDecorationsMenu>> FURNITURE_DECORATIONS = REGISTRY.register("furniture_decorations", () -> IForgeMenuType.create(FurnitureDecorationsMenu::new));
 	public static final RegistryObject<MenuType<FurnitureChiselMenu>> FURNITURE_CHISEL = REGISTRY.register("furniture_chisel", () -> IForgeMenuType.create(FurnitureChiselMenu::new));
 }

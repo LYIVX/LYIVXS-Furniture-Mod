@@ -187,8 +187,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_TABLE_NONE = block(LsFurnitureModBlocks.MANGROVE_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> CRIMSON_TABLE_NONE = block(LsFurnitureModBlocks.CRIMSON_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> WARPED_TABLE_NONE = block(LsFurnitureModBlocks.WARPED_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_IRON_TABLE_NONE = block(LsFurnitureModBlocks.OAK_IRON_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_NONE = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> IRON_NONE = block(LsFurnitureModBlocks.IRON_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> OAK_WARDROBE_0 = REGISTRY.register(LsFurnitureModBlocks.OAK_WARDROBE_0.getId().getPath(),
 			() -> new OakWardrobe0DisplayItem(LsFurnitureModBlocks.OAK_WARDROBE_0.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
@@ -522,11 +520,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> TABLE_JUNCTION = block(LsFurnitureModBlocks.TABLE_JUNCTION, null);
 	public static final RegistryObject<Item> TABLE_CROSS = block(LsFurnitureModBlocks.TABLE_CROSS, null);
 	public static final RegistryObject<Item> TABLE_END = block(LsFurnitureModBlocks.TABLE_END, null);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_STRAIGHT = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_STRAIGHT, null);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_CORNER = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_CORNER, null);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_JUNCTION = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_JUNCTION, null);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_CROSS = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_CROSS, null);
-	public static final RegistryObject<Item> OAK_GOLD_TABLE_END = block(LsFurnitureModBlocks.OAK_GOLD_TABLE_END, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_STRAIGHT = block(LsFurnitureModBlocks.DARK_OAK_TABLE_STRAIGHT, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_CORNER = block(LsFurnitureModBlocks.DARK_OAK_TABLE_CORNER, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_JUNCTION = block(LsFurnitureModBlocks.DARK_OAK_TABLE_JUNCTION, null);
@@ -547,11 +540,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> APPLE_PLATE = block(LsFurnitureModBlocks.APPLE_PLATE, null);
 	public static final RegistryObject<Item> ANY_PLANKS = block(LsFurnitureModBlocks.ANY_PLANKS, null);
 	public static final RegistryObject<Item> ANY_INGOT = REGISTRY.register("any_ingot", () -> new AnyIngotItem());
-	public static final RegistryObject<Item> OAK_IRON_TABLE_CORNER = block(LsFurnitureModBlocks.OAK_IRON_TABLE_CORNER, null);
-	public static final RegistryObject<Item> OAK_IRON_TABLE_JUNCTION = block(LsFurnitureModBlocks.OAK_IRON_TABLE_JUNCTION, null);
-	public static final RegistryObject<Item> OAK_IRON_TABLE_CROSS = block(LsFurnitureModBlocks.OAK_IRON_TABLE_CROSS, null);
-	public static final RegistryObject<Item> OAK_IRON_TABLE_END = block(LsFurnitureModBlocks.OAK_IRON_TABLE_END, null);
-	public static final RegistryObject<Item> OAK_IRON_TABLE_STRAIGHT = block(LsFurnitureModBlocks.OAK_IRON_TABLE_STRAIGHT, null);
 	public static final RegistryObject<Item> COMPUTER_ON = block(LsFurnitureModBlocks.COMPUTER_ON, null);
 	public static final RegistryObject<Item> COMPUTER_MINECRAFT = block(LsFurnitureModBlocks.COMPUTER_MINECRAFT, null);
 	public static final RegistryObject<Item> COMPUTER_COD = block(LsFurnitureModBlocks.COMPUTER_COD, null);
@@ -713,7 +701,7 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_TOP_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_TOP_CLOSED, null);
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_BOTTOM_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_BOTTOM_CLOSED, null);
 	public static final RegistryObject<Item> CHISEL = REGISTRY.register("chisel", () -> new ChiselItem());
-	public static final RegistryObject<Item> TEST = block(LsFurnitureModBlocks.TEST, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_PLANK_PATH_8 = block(LsFurnitureModBlocks.OAK_PLANK_PATH_8, LsFurnitureModTabs.TAB_TAB);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

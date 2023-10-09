@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakCupboard"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboard"
+      },
+      {
+        "value": "CUSTOM:AcaciaCupboard"
+      },
+      {
+        "value": "CUSTOM:SpruceCupboard"
+      },
+      {
+        "value": "CUSTOM:BirchCupboard"
+      },
+      {
+        "value": "CUSTOM:JungleCupboard"
+      },
+      {
+        "value": "CUSTOM:MangroveCupboard"
+      },
+      {
+        "value": "CUSTOM:CrimsonCupboard"
+      },
+      {
+        "value": "CUSTOM:WarpedCupboard"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "cupboards",
+    "namespace": "forge"
+  }
+}

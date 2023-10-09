@@ -28,12 +28,6 @@ description="Furniture Mod"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
-    modId="curios_api"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
     modId="jade"
     mandatory=false
     versionRange="[0,)"
@@ -64,7 +58,7 @@ description="Furniture Mod"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
-    modId="JEI"
+    modId="jei"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

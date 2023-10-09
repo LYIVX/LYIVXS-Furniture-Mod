@@ -35,6 +35,12 @@
         "0": "stone_path_8_granite"
       },
       "name": "granite"
+    },
+    "oak": {
+      "map": {
+        "0": "oak_planks"
+      },
+      "name": "oak"
     }
   }
 }

@@ -1,0 +1,75 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DioritePath1"
+      },
+      {
+        "value": "CUSTOM:DioritePath2"
+      },
+      {
+        "value": "CUSTOM:DioritePath3"
+      },
+      {
+        "value": "CUSTOM:DioritePath4"
+      },
+      {
+        "value": "CUSTOM:DioritePath5"
+      },
+      {
+        "value": "CUSTOM:DioritePath6"
+      },
+      {
+        "value": "CUSTOM:DioritePath71"
+      },
+      {
+        "value": "CUSTOM:DioritePath72"
+      },
+      {
+        "value": "CUSTOM:DioritePath73"
+      },
+      {
+        "value": "CUSTOM:DioritePath74"
+      },
+      {
+        "value": "CUSTOM:DioritePath75"
+      },
+      {
+        "value": "CUSTOM:DioritePath8"
+      },
+      {
+        "value": "CUSTOM:DioritePath91"
+      },
+      {
+        "value": "CUSTOM:DioritePath92"
+      },
+      {
+        "value": "CUSTOM:DioritePath10"
+      },
+      {
+        "value": "CUSTOM:DioritePath11"
+      },
+      {
+        "value": "CUSTOM:DioritePath12"
+      },
+      {
+        "value": "CUSTOM:DioritePath131"
+      },
+      {
+        "value": "CUSTOM:DioritePath132"
+      },
+      {
+        "value": "CUSTOM:DioritePath133"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "diorite_paths",
+    "namespace": "forge"
+  }
+}

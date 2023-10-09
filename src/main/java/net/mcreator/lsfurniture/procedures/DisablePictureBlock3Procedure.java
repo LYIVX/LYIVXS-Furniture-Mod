@@ -1,27 +1,24 @@
 package net.mcreator.lsfurniture.procedures;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
-import java.util.function.Supplier;
-import java.util.Map;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class DisablePictureBlock3Procedure {
-	public static boolean execute(Entity entity) {
-		if (entity == null)
-			return false;
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		if (0 < new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-					if (stack != null)
-						return stack.getCount();
-				}
-				return 0;
+			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+				return _retval.get();
 			}
-		}.getAmount(0)) {
+		}.getAmount(world, new BlockPos(x, y, z), 1)) {
 			return false;
 		}
 		return true;

@@ -1,9 +1,0 @@
-{
-  "parent": "ls_furniture:custom/table_junction",
-  "textures": {
-    "all": "ls_furniture:blocks/oak_gold_junction",
-    "particle": "ls_furniture:blocks/oak_gold_junction",
-    "1": "ls_furniture:blocks/oakgoldconnectedtexture"
-  },
-  "render_type": "cutout"
-}

@@ -7,17 +7,14 @@ repositories {
 		implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.0.6-forge-mc1.19.2")
 }
 
-repositories {
-maven {
-  url = "https://maven.theillusivec4.top/"
-  }
+minecraft {
+    runs {
+        client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+    }
 }
-
-dependencies {
-  runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0")
-  compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0:api")
-}
-
 repositories {
     maven {
         url "https://www.cursemaven.com"
@@ -137,13 +134,20 @@ minecraft {
 
 repositories {
   maven {
+    // location of the maven that hosts JEI files
+    name = "Progwml6 maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }    
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
     url = "https://modmaven.dev"
-  }
+  }   
 }
 
 dependencies {
-  compileOnly(fg.deobf("mezz.jei:jei-1.19.2-common-api:11.4.0.290"))
-  compileOnly(fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.4.0.290"))
-  runtimeOnly(fg.deobf("mezz.jei:jei-1.19.2-forge:11.4.0.290"))
+  compileOnly fg.deobf("mezz.jei:jei-1.19.2-common-api:11.4.0.286")
+  compileOnly fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.4.0.286")
+  runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.4.0.286")
 }
 

@@ -1,0 +1,75 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:AndesitePath1"
+      },
+      {
+        "value": "CUSTOM:AndesitePath2"
+      },
+      {
+        "value": "CUSTOM:AndesitePath3"
+      },
+      {
+        "value": "CUSTOM:AndesitePath4"
+      },
+      {
+        "value": "CUSTOM:AndesitePath5"
+      },
+      {
+        "value": "CUSTOM:AndesitePath71"
+      },
+      {
+        "value": "CUSTOM:AndesitePath72"
+      },
+      {
+        "value": "CUSTOM:AndesitePath73"
+      },
+      {
+        "value": "CUSTOM:AndesitePath74"
+      },
+      {
+        "value": "CUSTOM:AndesitePath75"
+      },
+      {
+        "value": "CUSTOM:AndesitePath8"
+      },
+      {
+        "value": "CUSTOM:AndesitePath91"
+      },
+      {
+        "value": "CUSTOM:AndesitePath92"
+      },
+      {
+        "value": "CUSTOM:AndesitePath10"
+      },
+      {
+        "value": "CUSTOM:AndesitePath11"
+      },
+      {
+        "value": "CUSTOM:AndesitePath12"
+      },
+      {
+        "value": "CUSTOM:AndesitePath131"
+      },
+      {
+        "value": "CUSTOM:AndesitePath132"
+      },
+      {
+        "value": "CUSTOM:AndesitePath133"
+      },
+      {
+        "value": "CUSTOM:AndesitePath6"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "andesite_paths",
+    "namespace": "forge"
+  }
+}

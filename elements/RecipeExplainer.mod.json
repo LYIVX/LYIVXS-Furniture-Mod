@@ -11,19 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_horizontal_right_deselect1",
-          "image": "tab_horizontal_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenPathsMenu"
-          },
-          "x": 244,
-          "y": 109
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "recipe_explainer_grid.png",
@@ -80,32 +67,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_tab_horizontal_left_deselect",
-          "image": "tab_horizontal_left_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenWoodMenu"
-          },
-          "x": 153,
-          "y": 78
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect_left_edge",
-          "image": "tab_deselect_left_edge.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenWoodMenu"
-          },
-          "x": 182,
-          "y": 49
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_tab_horizontal_right_deselect",
           "image": "tab_horizontal_right_deselect.png",
           "hoveredImage": "",
@@ -127,19 +88,6 @@
           },
           "x": 213,
           "y": 49
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_oak_wood",
-          "image": "oak_wood.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenWoodMenu"
-          },
-          "x": 157,
-          "y": 82
         }
       },
       {
@@ -169,37 +117,11 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_stone",
-          "image": "stone.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenStoneMenu"
-          },
-          "x": 187,
-          "y": 53
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_wood",
           "text": {
             "fixedValue": "Wood"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 157,
-          "y": 82
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_stone",
-          "text": {
-            "fixedValue": "Stone"
           },
           "width": 24,
           "height": 24,
@@ -299,19 +221,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_path",
-          "image": "path.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenPathsMenu"
-          },
-          "x": 246,
-          "y": 113
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "question_mark.png",
@@ -334,19 +243,6 @@
         }
       },
       {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_paths",
-          "text": {
-            "fixedValue": "Paths"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 246,
-          "y": 113
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_tab_horizontal_left_plain_desele",
@@ -356,7 +252,7 @@
             "name": "OpenDecorationsMenu"
           },
           "x": 151,
-          "y": 109
+          "y": 78
         }
       },
       {
@@ -369,7 +265,7 @@
           "width": 24,
           "height": 24,
           "x": 157,
-          "y": 113
+          "y": 82
         }
       },
       {
@@ -381,8 +277,34 @@
           "onClick": {
             "name": "OpenDecorationsMenu"
           },
-          "x": 157,
-          "y": 113
+          "x": 158,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect",
+          "image": "tab_deselect_left_edge.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 182,
+          "y": 49
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_oak_wood",
+          "image": "oak_wood.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 187,
+          "y": 53
         }
       }
     ],

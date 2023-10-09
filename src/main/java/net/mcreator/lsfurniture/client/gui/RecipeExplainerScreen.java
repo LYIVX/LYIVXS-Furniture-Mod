@@ -23,18 +23,14 @@ public class RecipeExplainerScreen extends AbstractContainerScreen<RecipeExplain
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	ImageButton imagebutton_tab_horizontal_right_deselect1;
-	ImageButton imagebutton_tab_horizontal_left_deselect;
-	ImageButton imagebutton_tab_deselect_left_edge;
 	ImageButton imagebutton_tab_horizontal_right_deselect;
 	ImageButton imagebutton_tab_deselect_right_edge;
-	ImageButton imagebutton_oak_wood;
 	ImageButton imagebutton_toddys;
 	ImageButton imagebutton_iron_ingot;
-	ImageButton imagebutton_stone;
-	ImageButton imagebutton_path;
 	ImageButton imagebutton_tab_horizontal_left_plain_desele;
 	ImageButton imagebutton_computer;
+	ImageButton imagebutton_tab_deselect;
+	ImageButton imagebutton_oak_wood;
 
 	public RecipeExplainerScreen(RecipeExplainerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,10 +50,8 @@ public class RecipeExplainerScreen extends AbstractContainerScreen<RecipeExplain
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + -25 && mouseX < leftPos + -1 && mouseY > topPos + 4 && mouseY < topPos + 28)
-			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_wood"), mouseX, mouseY);
 		if (mouseX > leftPos + 4 && mouseX < leftPos + 28 && mouseY > topPos + -25 && mouseY < topPos + -1)
-			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_stone"), mouseX, mouseY);
+			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_wood"), mouseX, mouseY);
 		if (mouseX > leftPos + 35 && mouseX < leftPos + 59 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_metal"), mouseX, mouseY);
 		if (mouseX > leftPos + 64 && mouseX < leftPos + 88 && mouseY > topPos + 4 && mouseY < topPos + 28)
@@ -74,9 +68,7 @@ public class RecipeExplainerScreen extends AbstractContainerScreen<RecipeExplain
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_tool"), mouseX, mouseY);
 		if (mouseX > leftPos + 40 && mouseX < leftPos + 64 && mouseY > topPos + 55 && mouseY < topPos + 79)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_clicking_the_recipe_button_will"), mouseX, mouseY);
-		if (mouseX > leftPos + 64 && mouseX < leftPos + 88 && mouseY > topPos + 35 && mouseY < topPos + 59)
-			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_paths"), mouseX, mouseY);
-		if (mouseX > leftPos + -25 && mouseX < leftPos + -1 && mouseY > topPos + 35 && mouseY < topPos + 59)
+		if (mouseX > leftPos + -25 && mouseX < leftPos + -1 && mouseY > topPos + 4 && mouseY < topPos + 28)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.recipe_explainer.tooltip_decorations"), mouseX, mouseY);
 	}
 
@@ -140,102 +132,69 @@ public class RecipeExplainerScreen extends AbstractContainerScreen<RecipeExplain
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_tab_horizontal_right_deselect1 = new ImageButton(this.leftPos + 62, this.topPos + 31, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_right_deselect1.png"), 32, 64, e -> {
+		imagebutton_tab_horizontal_right_deselect = new ImageButton(this.leftPos + 60, this.topPos + 0, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_right_deselect.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(0, x, y, z));
 				RecipeExplainerButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_tab_horizontal_right_deselect1", imagebutton_tab_horizontal_right_deselect1);
-		this.addRenderableWidget(imagebutton_tab_horizontal_right_deselect1);
-		imagebutton_tab_horizontal_left_deselect = new ImageButton(this.leftPos + -29, this.topPos + 0, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_left_deselect.png"), 32, 64, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(1, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_tab_horizontal_left_deselect", imagebutton_tab_horizontal_left_deselect);
-		this.addRenderableWidget(imagebutton_tab_horizontal_left_deselect);
-		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(2, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_tab_deselect_left_edge", imagebutton_tab_deselect_left_edge);
-		this.addRenderableWidget(imagebutton_tab_deselect_left_edge);
-		imagebutton_tab_horizontal_right_deselect = new ImageButton(this.leftPos + 60, this.topPos + 0, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_right_deselect.png"), 32, 64, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(3, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_tab_horizontal_right_deselect", imagebutton_tab_horizontal_right_deselect);
 		this.addRenderableWidget(imagebutton_tab_horizontal_right_deselect);
 		imagebutton_tab_deselect_right_edge = new ImageButton(this.leftPos + 31, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_right_edge.png"), 32, 64, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(4, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(1, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_tab_deselect_right_edge", imagebutton_tab_deselect_right_edge);
 		this.addRenderableWidget(imagebutton_tab_deselect_right_edge);
-		imagebutton_oak_wood = new ImageButton(this.leftPos + -25, this.topPos + 4, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(5, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 5, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_oak_wood", imagebutton_oak_wood);
-		this.addRenderableWidget(imagebutton_oak_wood);
 		imagebutton_toddys = new ImageButton(this.leftPos + 64, this.topPos + 4, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_toddys.png"), 24, 48, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(6, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 6, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(2, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_toddys", imagebutton_toddys);
 		this.addRenderableWidget(imagebutton_toddys);
 		imagebutton_iron_ingot = new ImageButton(this.leftPos + 35, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(7, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 7, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(3, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_iron_ingot", imagebutton_iron_ingot);
 		this.addRenderableWidget(imagebutton_iron_ingot);
-		imagebutton_stone = new ImageButton(this.leftPos + 5, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_stone.png"), 24, 48, e -> {
+		imagebutton_tab_horizontal_left_plain_desele = new ImageButton(this.leftPos + -31, this.topPos + 0, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_left_plain_desele.png"), 32, 64, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(8, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 8, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(4, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_stone", imagebutton_stone);
-		this.addRenderableWidget(imagebutton_stone);
-		imagebutton_path = new ImageButton(this.leftPos + 64, this.topPos + 35, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_path.png"), 24, 48, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(9, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 9, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_path", imagebutton_path);
-		this.addRenderableWidget(imagebutton_path);
-		imagebutton_tab_horizontal_left_plain_desele = new ImageButton(this.leftPos + -31, this.topPos + 31, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_horizontal_left_plain_desele.png"), 32, 64,
-				e -> {
-					if (true) {
-						LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(10, x, y, z));
-						RecipeExplainerButtonMessage.handleButtonAction(entity, 10, x, y, z);
-					}
-				});
 		guistate.put("button:imagebutton_tab_horizontal_left_plain_desele", imagebutton_tab_horizontal_left_plain_desele);
 		this.addRenderableWidget(imagebutton_tab_horizontal_left_plain_desele);
-		imagebutton_computer = new ImageButton(this.leftPos + -25, this.topPos + 35, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_computer.png"), 24, 48, e -> {
+		imagebutton_computer = new ImageButton(this.leftPos + -24, this.topPos + 4, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_computer.png"), 24, 48, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(11, x, y, z));
-				RecipeExplainerButtonMessage.handleButtonAction(entity, 11, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(5, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_computer", imagebutton_computer);
 		this.addRenderableWidget(imagebutton_computer);
+		imagebutton_tab_deselect = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect.png"), 32, 64, e -> {
+			if (true) {
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(6, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_tab_deselect", imagebutton_tab_deselect);
+		this.addRenderableWidget(imagebutton_tab_deselect);
+		imagebutton_oak_wood = new ImageButton(this.leftPos + 5, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
+			if (true) {
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new RecipeExplainerButtonMessage(7, x, y, z));
+				RecipeExplainerButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_oak_wood", imagebutton_oak_wood);
+		this.addRenderableWidget(imagebutton_oak_wood);
 	}
 }

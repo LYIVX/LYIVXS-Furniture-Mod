@@ -3201,22 +3201,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -3804,384 +3788,6 @@
         ]
       },
       "path": "~/Tables/Oak"
-    },
-    {
-      "name": "OakGoldTableStraight",
-      "type": "block",
-      "sortid": 399,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_straight",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_straight.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_straight.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableStraightBlock.java",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableStraightBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_straight.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableStraightProcedure",
-      "type": "procedure",
-      "sortid": 400,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_straight_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableStraightProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableCorner",
-      "type": "block",
-      "sortid": 401,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_corner",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableCornerBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_corner.json",
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_corner.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_corner.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableCornerBlock.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableCornerProcedure",
-      "type": "procedure",
-      "sortid": 402,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_corner_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableCornerProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableJunction",
-      "type": "block",
-      "sortid": 403,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_junction",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableJunctionBlock.java",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_junction.json",
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_junction.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_junction.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableJunctionBlockEntity.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableJunctionProcedure",
-      "type": "procedure",
-      "sortid": 404,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_junction_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableJunctionProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableCross",
-      "type": "block",
-      "sortid": 405,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_cross",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_cross.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_cross.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_cross.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableCrossBlockEntity.java",
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableCrossBlock.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableCrossProcedure",
-      "type": "procedure",
-      "sortid": 406,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_cross_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableCrossProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableEnd",
-      "type": "block",
-      "sortid": 407,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_end",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableEndBlock.java",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_end.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableEndBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_end.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_end.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableEndProcedure",
-      "type": "procedure",
-      "sortid": 408,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_end_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableEndProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableNone",
-      "type": "block",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_none",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/OakGoldTableNoneBlock.java",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakGoldTableNoneBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/item/oak_gold_table_none.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_gold_table_none.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_gold_table_none.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableNoneProcedure",
-      "type": "procedure",
-      "sortid": 409,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_none_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableNoneProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableBlockAdded",
-      "type": "procedure",
-      "sortid": 410,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_block_added",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableBlockAddedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTableMainProcedure",
-      "type": "procedure",
-      "sortid": 411,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_main_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableMainProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
-    },
-    {
-      "name": "OakGoldTable",
-      "type": "tag",
-      "sortid": 412,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/blocks/oak_gold_table.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Gold Table"
     },
     {
       "name": "OakPlankPath2",
@@ -5870,22 +5476,6 @@
       "path": "~/Furniture Crafter/Wood"
     },
     {
-      "name": "FurnitureStone",
-      "type": "gui",
-      "sortid": 455,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_stone",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/client/gui/FurnitureStoneScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/network/FurnitureStoneButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/FurnitureStoneMenu.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Stone"
-    },
-    {
       "name": "FurnitureMetal",
       "type": "gui",
       "sortid": 456,
@@ -5938,42 +5528,6 @@
       "path": "~/Furniture Crafter/Wood"
     },
     {
-      "name": "OpenStoneMenu",
-      "type": "procedure",
-      "sortid": 458,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_stone_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenStoneMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Stone"
-    },
-    {
       "name": "OpenMetalMenu",
       "type": "procedure",
       "sortid": 459,
@@ -6008,22 +5562,6 @@
         ]
       },
       "path": "~/Furniture Crafter/Metal"
-    },
-    {
-      "name": "FurnitureRecipes",
-      "type": "gui",
-      "sortid": 460,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_recipes",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/client/gui/FurnitureRecipesScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/FurnitureRecipesMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/network/FurnitureRecipesButtonMessage.java"
-        ]
-      },
-      "path": "~/Furniture Crafter"
     },
     {
       "name": "FurnitureCrafterBeta",
@@ -6067,26 +5605,6 @@
         ]
       },
       "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "FurnitureStoneGUIIsOpened",
-      "type": "procedure",
-      "sortid": 462,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_stone_gui_is_opened",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/FurnitureStoneGUIIsOpenedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Stone"
     },
     {
       "name": "FurnitureMetalGUIIsOpened",
@@ -7510,22 +7028,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7546,22 +7048,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7582,22 +7068,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7618,22 +7088,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7654,22 +7108,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7690,22 +7128,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7726,22 +7148,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7762,22 +7168,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7798,22 +7188,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7866,460 +7240,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Tables/Oak"
-    },
-    {
-      "name": "OakGoldTableRecipe",
-      "type": "procedure",
-      "sortid": 514,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_gold_table_recipe",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakGoldTableRecipeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak"
-    },
-    {
-      "name": "OakIronTableCorner",
-      "type": "block",
-      "sortid": 515,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_corner",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_corner.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_corner.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_corner.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableCornerBlockEntity.java",
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableCornerBlock.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTableJunction",
-      "type": "block",
-      "sortid": 516,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_junction",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_junction.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableJunctionBlock.java",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_junction.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableJunctionBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_junction.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTableCross",
-      "type": "block",
-      "sortid": 517,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_cross",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_cross.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableCrossBlock.java",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_cross.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_cross.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableCrossBlockEntity.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTableEnd",
-      "type": "block",
-      "sortid": 518,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_end",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableEndBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_end.json",
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_end.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_end.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableEndBlock.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTableStraight",
-      "type": "block",
-      "sortid": 519,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_straight",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableStraightBlock.java",
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_straight.json",
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_straight.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableStraightBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_straight.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTableNone",
-      "type": "block",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table_none",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ls_furniture/blockstates/oak_iron_table_none.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/OakIronTableNoneBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/item/oak_iron_table_none.json",
-          "src/main/resources/assets/ls_furniture/models/block/oak_iron_table_none.json",
-          "src/main/java/net/mcreator/lsfurniture/block/OakIronTableNoneBlock.java"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronTable",
-      "type": "tag",
-      "sortid": 520,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_table",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/blocks/oak_iron_table.json"
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakIronBlockAdded",
-      "type": "procedure",
-      "sortid": 521,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oak_iron_block_added",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakIronBlockAddedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableMainPro",
-      "type": "procedure",
-      "sortid": 522,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_main_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableMainProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableNonePro",
-      "type": "procedure",
-      "sortid": 523,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_none_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableNoneProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableEndPro",
-      "type": "procedure",
-      "sortid": 524,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_end_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableEndProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableStraightPro",
-      "type": "procedure",
-      "sortid": 525,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_straight_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableStraightProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableCornerPro",
-      "type": "procedure",
-      "sortid": 526,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_corner_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableCornerProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableJunctionPro",
-      "type": "procedure",
-      "sortid": 527,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_junction_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableJunctionProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "OakirontableCrossPro",
-      "type": "procedure",
-      "sortid": 528,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontable_cross_pro",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontableCrossProProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
-    },
-    {
-      "name": "Oakirontablerecipe",
-      "type": "procedure",
-      "sortid": 529,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oakirontablerecipe",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OakirontablerecipeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Tables/Oak/Oak Iron Table"
     },
     {
       "name": "DisableOutput",
@@ -8357,22 +7281,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8416,22 +7324,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8475,22 +7367,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8534,22 +7410,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8593,22 +7453,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8652,22 +7496,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8711,22 +7539,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8770,22 +7582,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8829,46 +7625,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chests/Desk/Oak"
-    },
-    {
-      "name": "FurnitureCrafterBetaPro4",
-      "type": "procedure",
-      "sortid": 540,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_crafter_beta_pro_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/FurnitureCrafterBetaPro4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter"
     },
     {
       "name": "DarkOakDrawer",
@@ -9069,22 +7829,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9105,22 +7849,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9141,22 +7869,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9177,22 +7889,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9213,22 +7909,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9249,22 +7929,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9285,22 +7949,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9321,22 +7969,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9357,22 +7989,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9537,22 +8153,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9573,22 +8173,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9609,22 +8193,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9645,22 +8213,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9681,22 +8233,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9717,22 +8253,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9753,22 +8273,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9789,22 +8293,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -9825,22 +8313,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -12369,22 +10841,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17665,22 +16121,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17701,22 +16141,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17737,22 +16161,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17773,22 +16181,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17809,22 +16201,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17845,22 +16221,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17881,22 +16241,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17917,22 +16261,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -17953,206 +16281,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chairs/Stool"
-    },
-    {
-      "name": "WoodButton0",
-      "type": "procedure",
-      "sortid": 802,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_0",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton1",
-      "type": "procedure",
-      "sortid": 803,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton2",
-      "type": "procedure",
-      "sortid": 804,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton3",
-      "type": "procedure",
-      "sortid": 805,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton4",
-      "type": "procedure",
-      "sortid": 806,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "DarkOakWardrobeRecipe",
@@ -18169,22 +16301,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18205,22 +16321,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18241,22 +16341,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18277,22 +16361,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18313,22 +16381,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18349,22 +16401,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18385,22 +16421,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18421,134 +16441,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chests/Wardrobe/Warped"
-    },
-    {
-      "name": "WoodButton5",
-      "type": "procedure",
-      "sortid": 815,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton6",
-      "type": "procedure",
-      "sortid": 816,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton7",
-      "type": "procedure",
-      "sortid": 817,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "OakCounterRecipe",
@@ -18565,22 +16461,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18601,22 +16481,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18637,22 +16501,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18673,22 +16521,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18709,22 +16541,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18745,22 +16561,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18781,22 +16581,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18817,22 +16601,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18853,62 +16621,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chests/Counter/Warped"
-    },
-    {
-      "name": "WoodButton8",
-      "type": "procedure",
-      "sortid": 827,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_8",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton8Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "OakSinkRecipe",
@@ -18925,22 +16641,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18961,22 +16661,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18997,22 +16681,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19033,22 +16701,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19069,22 +16721,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19105,22 +16741,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19141,22 +16761,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19177,22 +16781,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19213,62 +16801,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Random/Sink/Warped"
-    },
-    {
-      "name": "WoodButton9",
-      "type": "procedure",
-      "sortid": 837,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_9",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton9Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "OakCupboardRecipe",
@@ -19285,22 +16821,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19321,22 +16841,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19357,22 +16861,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19393,22 +16881,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19429,22 +16901,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19465,22 +16921,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19501,22 +16941,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19537,22 +16961,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19573,62 +16981,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chests/Cupboard/Warped"
-    },
-    {
-      "name": "WoodButton10",
-      "type": "procedure",
-      "sortid": 847,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_10",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton10Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "OakCupboardVentRecipe",
@@ -19645,22 +17001,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19681,22 +17021,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19717,22 +17041,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19753,22 +17061,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19789,22 +17081,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19825,22 +17101,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19861,22 +17121,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19897,22 +17141,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -19933,98 +17161,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Chests/Cupboard/Warped"
-    },
-    {
-      "name": "WoodButton11",
-      "type": "procedure",
-      "sortid": 857,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_11",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton11Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "WoodButton12",
-      "type": "procedure",
-      "sortid": 858,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_button_12",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodButton12Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "OakMailBoxRecipe",
@@ -20041,22 +17181,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20077,22 +17201,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20113,22 +17221,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20149,22 +17241,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20185,22 +17261,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20221,22 +17281,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20257,22 +17301,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20293,22 +17321,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -20329,22 +17341,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -22068,114 +19064,6 @@
       "path": "~/Random/Create/Oak"
     },
     {
-      "name": "FurniturePaths",
-      "type": "gui",
-      "sortid": 923,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_paths",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/FurniturePathsMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/client/gui/FurniturePathsScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/network/FurniturePathsButtonMessage.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "OpenPathsMenu",
-      "type": "procedure",
-      "sortid": 924,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_paths_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenPathsMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "FurniturePathsGUIIsOpened",
-      "type": "procedure",
-      "sortid": 925,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_paths_gui_is_opened",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/FurniturePathsGUIIsOpenedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton0",
-      "type": "procedure",
-      "sortid": 926,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_0",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
       "name": "AnyStone",
       "type": "block",
       "sortid": 927,
@@ -22208,690 +19096,6 @@
         ]
       },
       "path": "~/Any Blocks - Items"
-    },
-    {
-      "name": "PathButton1",
-      "type": "procedure",
-      "sortid": 929,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton2",
-      "type": "procedure",
-      "sortid": 930,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton3",
-      "type": "procedure",
-      "sortid": 931,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton4",
-      "type": "procedure",
-      "sortid": 932,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton5",
-      "type": "procedure",
-      "sortid": 933,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton6",
-      "type": "procedure",
-      "sortid": 934,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton7",
-      "type": "procedure",
-      "sortid": 935,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton8",
-      "type": "procedure",
-      "sortid": 936,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_8",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton8Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton9",
-      "type": "procedure",
-      "sortid": 937,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_9",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton9Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton10",
-      "type": "procedure",
-      "sortid": 938,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_10",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton10Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton11",
-      "type": "procedure",
-      "sortid": 939,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_11",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton11Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton12",
-      "type": "procedure",
-      "sortid": 940,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_12",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton12Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton13",
-      "type": "procedure",
-      "sortid": 941,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_13",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton13Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton14",
-      "type": "procedure",
-      "sortid": 942,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_14",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton14Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton15",
-      "type": "procedure",
-      "sortid": 943,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_15",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton15Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton16",
-      "type": "procedure",
-      "sortid": 944,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_16",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton16Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton17",
-      "type": "procedure",
-      "sortid": 945,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_17",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton17Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton18",
-      "type": "procedure",
-      "sortid": 946,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_18",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton18Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
-    },
-    {
-      "name": "PathButton19",
-      "type": "procedure",
-      "sortid": 947,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_button_19",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathButton19Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Paths"
     },
     {
       "name": "PathRecipe1",
@@ -28566,22 +24770,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28602,22 +24790,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28638,22 +24810,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28674,22 +24830,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28710,22 +24850,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28746,22 +24870,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28782,22 +24890,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -28818,22 +24910,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -29642,26 +25718,6 @@
       "path": "~/Random/Computers"
     },
     {
-      "name": "RequestFeatures",
-      "type": "procedure",
-      "sortid": 1199,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "request_features",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/RequestFeaturesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Stone"
-    },
-    {
       "name": "OvenCalc",
       "type": "procedure",
       "sortid": 1200,
@@ -30142,22 +26198,6 @@
       "path": "~/Blinds/Oak"
     },
     {
-      "name": "FurnitureChisel",
-      "type": "gui",
-      "sortid": 1218,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_chisel",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/client/gui/FurnitureChiselScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/network/FurnitureChiselSlotMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/FurnitureChiselMenu.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
       "name": "ChiselPro4",
       "type": "procedure",
       "sortid": 1219,
@@ -30192,6 +26232,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -30212,6 +26268,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -30232,6 +26304,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -30247,8 +26335,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ls_furniture/models/item/chisel.json",
-          "src/main/java/net/mcreator/lsfurniture/item/ChiselItem.java",
-          "src/main/java/net/mcreator/lsfurniture/item/inventory/ChiselInventoryCapability.java"
+          "src/main/java/net/mcreator/lsfurniture/item/ChiselItem.java"
         ]
       },
       "path": "~/Furniture Crafter/Chisel"
@@ -30281,8 +26368,20 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -30300,6 +26399,55 @@
         ],
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "OakPlankPath8",
+      "type": "block",
+      "sortid": 1239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oak_plank_path_8",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/oak_plank_path_8.json",
+          "src/main/java/net/mcreator/lsfurniture/block/OakPlankPath8Block.java",
+          "src/main/resources/assets/ls_furniture/models/item/oak_plank_path_8.json",
+          "src/main/resources/assets/ls_furniture/blockstates/oak_plank_path_8.json"
+        ]
+      },
+      "path": "~/Paths/Oak"
+    },
+    {
+      "name": "SetBlackStonePaths",
+      "type": "procedure",
+      "sortid": 1240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_black_stone_paths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SetBlackStonePathsProcedure.java"
+        ],
+        "dependencies": [
+          {
             "name": "entity",
             "type": "entity"
           }
@@ -30308,20 +26456,673 @@
       "path": "~/Furniture Crafter/Chisel"
     },
     {
-      "name": "Test",
-      "type": "block",
-      "sortid": 1239,
+      "name": "SetDeepslatePaths",
+      "type": "procedure",
+      "sortid": 1241,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "test",
+      "registry_name": "set_deepslate_paths",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ls_furniture/blockstates/test.json",
-          "src/main/java/net/mcreator/lsfurniture/block/TestBlock.java",
-          "src/main/resources/assets/ls_furniture/models/block/test.json",
-          "src/main/resources/assets/ls_furniture/models/item/test.json"
+          "src/main/java/net/mcreator/lsfurniture/procedures/SetDeepslatePathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
-      }
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "SetAndesitePaths",
+      "type": "procedure",
+      "sortid": 1242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_andesite_paths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SetAndesitePathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "SetDioritePaths",
+      "type": "procedure",
+      "sortid": 1243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_diorite_paths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SetDioritePathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "SetGranitePaths",
+      "type": "procedure",
+      "sortid": 1244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_granite_paths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SetGranitePathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "BlackstonePaths",
+      "type": "tag",
+      "sortid": 1245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blackstone_paths",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/blackstone_paths.json"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "DeepslatePaths",
+      "type": "tag",
+      "sortid": 1246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_paths",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/deepslate_paths.json"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "AndesitePaths",
+      "type": "tag",
+      "sortid": 1247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "andesite_paths",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/andesite_paths.json"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "DioritePaths",
+      "type": "tag",
+      "sortid": 1248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diorite_paths",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/diorite_paths.json"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "GranitePaths",
+      "type": "tag",
+      "sortid": 1249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "granite_paths",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/granite_paths.json"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "FurnitureChisel",
+      "type": "gui",
+      "sortid": 1250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furniture_chisel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/network/FurnitureChiselButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/FurnitureChiselScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/network/FurnitureChiselSlotMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/FurnitureChiselMenu.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "OpenChiselMenu",
+      "type": "procedure",
+      "sortid": 1251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_chisel_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenChiselMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "WoodPro1",
+      "type": "procedure",
+      "sortid": 1252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_pro_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/WoodPro1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "SofaRecipeCaller",
+      "type": "procedure",
+      "sortid": 1253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sofa_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SofaRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chairs/Sofas"
+    },
+    {
+      "name": "ChairRecipeCaller",
+      "type": "procedure",
+      "sortid": 1254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chair_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/ChairRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chairs/Chair"
+    },
+    {
+      "name": "StoolRecipeCaller",
+      "type": "procedure",
+      "sortid": 1255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stool_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/StoolRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chairs/Stool"
+    },
+    {
+      "name": "TableRecipeCaller",
+      "type": "procedure",
+      "sortid": 1256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "table_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/TableRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Tables"
+    },
+    {
+      "name": "WardrobeRecipeCaller",
+      "type": "procedure",
+      "sortid": 1257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wardrobe_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/WardrobeRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Wardrobe"
+    },
+    {
+      "name": "DeskRecipeCaller",
+      "type": "procedure",
+      "sortid": 1258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desk_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/DeskRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Desk"
+    },
+    {
+      "name": "DrawerRecipeCaller",
+      "type": "procedure",
+      "sortid": 1259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drawer_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/DrawerRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Drawer"
+    },
+    {
+      "name": "CounterRecipeCaller",
+      "type": "procedure",
+      "sortid": 1260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CounterRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Counter"
+    },
+    {
+      "name": "SinkRecipeCaller",
+      "type": "procedure",
+      "sortid": 1261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sink_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SinkRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Random/Sink"
+    },
+    {
+      "name": "CupboardRecipeCaller",
+      "type": "procedure",
+      "sortid": 1262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cupboard_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CupboardRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Cupboard"
+    },
+    {
+      "name": "CupboardVentRecipeCaller",
+      "type": "procedure",
+      "sortid": 1263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cupboard_vent_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CupboardVentRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Cupboard"
+    },
+    {
+      "name": "ShelveRecipeCaller",
+      "type": "procedure",
+      "sortid": 1264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shelve_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/ShelveRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Chests/Shelve"
+    },
+    {
+      "name": "MailboxRecipeCaller",
+      "type": "procedure",
+      "sortid": 1265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mailbox_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/MailboxRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Random/MailBox"
+    },
+    {
+      "name": "Cupboards",
+      "type": "tag",
+      "sortid": 1266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cupboards",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/cupboards.json"
+        ]
+      },
+      "path": "~/Chests/Cupboard"
     }
   ],
   "variable_elements": [
@@ -30364,38 +27165,36 @@
       "block.ls_furniture.darkoak_desk": "Dark Oak Desk",
       "gui.ls_furniture.furniture_chisel.tooltip_paths": "Paths",
       "gui.ls_furniture.furniture_metal.tooltip_recipe_explainer": "Recipe Explainer",
-      "gui.ls_furniture.furniture_stone.label_recipe": "Recipe",
       "block.ls_furniture.spruce_table_none": "Spruce Table",
       "block.ls_furniture.blackstone_path_131": "Blackstone Path",
       "item.ls_furniture.hammer": "Hammer",
       "block.ls_furniture.oak_blinds_bottom": "Oak Blinds",
       "block.ls_furniture.diorite_path_91": "Diorite Path",
       "block.ls_furniture.blackstone_path_133": "Blackstone Path",
-      "gui.ls_furniture.freezer.label_fridge": "Freezer",
-      "block.ls_furniture.blackstone_path_132": "Blackstone Path",
-      "block.ls_furniture.diorite_path_92": "Diorite Path",
       "block.ls_furniture.oak_yellow_straight": "Oak Yellow Sofa",
+      "block.ls_furniture.diorite_path_92": "Diorite Path",
+      "block.ls_furniture.blackstone_path_132": "Blackstone Path",
+      "gui.ls_furniture.freezer.label_fridge": "Freezer",
       "block.ls_furniture.dark_oak_blinds_top_closed": "Dark Oak Blinds",
       "block.ls_furniture.stone_path_133": "Stone Path",
       "block.ls_furniture.mangrove_cupboard_corner": "Mangrove Cupboard",
-      "gui.ls_furniture.furniture_paths.label_furniture": "Paths",
       "block.ls_furniture.spruce_cupboard": "Spruce Cupboard",
       "block.ls_furniture.stone_path_132": "Stone Path",
       "block.ls_furniture.stone_path_131": "Stone Path",
       "gui.ls_furniture.furniture_wood.tooltip_empty1": "Stone",
-      "block.ls_furniture.crimson_oven": "Crimson Oven",
       "block.ls_furniture.oak_wardrobe_0": "Oak Wardrobe",
-      "block.ls_furniture.oak_wardrobe_1": "Oak Wardrobe",
+      "block.ls_furniture.crimson_oven": "Crimson Oven",
       "block.ls_furniture.dark_oak_green_sofa": "Dark Oak Green Sofa",
+      "block.ls_furniture.oak_wardrobe_1": "Oak Wardrobe",
       "gui.ls_furniture.furniture_wood.tooltip_empty3": "Teddys",
       "gui.ls_furniture.furniture_wood.tooltip_empty2": "Metal",
-      "block.ls_furniture.andesite_path_74": "Andesite Path",
       "block.ls_furniture.oak_wardrobe_2": "Oak Wardrobe",
+      "block.ls_furniture.andesite_path_74": "Andesite Path",
       "block.ls_furniture.bat_teddy": "Bat Teddy",
       "block.ls_furniture.andesite_path_75": "Andesite Path",
-      "block.ls_furniture.birch_table_corner": "Birch Table",
-      "gui.ls_furniture.oven.label_oven": "Oven",
       "block.ls_furniture.acacia_table_corner": "Acacia Table",
+      "gui.ls_furniture.oven.label_oven": "Oven",
+      "block.ls_furniture.birch_table_corner": "Birch Table",
       "block.ls_furniture.tv_wall_on": "TV",
       "block.ls_furniture.granite_path_71": "Granite Path",
       "block.ls_furniture.granite_path_72": "Granite Path",
@@ -30403,14 +27202,14 @@
       "block.ls_furniture.granite_path_73": "Granite Path",
       "block.ls_furniture.granite_path_74": "Granite Path",
       "block.ls_furniture.diorite_path_8": "Diorite Path",
-      "block.ls_furniture.diorite_path_3": "Diorite Path",
       "block.ls_furniture.andesite_path_72": "Andesite Path",
+      "block.ls_furniture.diorite_path_3": "Diorite Path",
       "block.ls_furniture.diorite_path_2": "Diorite Path",
       "block.ls_furniture.andesite_path_73": "Andesite Path",
       "block.ls_furniture.acacia_shelve": "Acacia Shelve",
       "block.ls_furniture.diorite_path_5": "Diorite Path",
-      "block.ls_furniture.diorite_path_4": "Diorite Path",
       "block.ls_furniture.andesite_path_71": "Andesite Path",
+      "block.ls_furniture.diorite_path_4": "Diorite Path",
       "block.ls_furniture.oak_lime_sofa": "Oak Lime Sofa",
       "gui.ls_furniture.recipe_explainer.tooltip_clicking_the_recipe_button_will": "Clicking The Recipe Button Will Craft The Item/Block If The Ingreidents Are Present",
       "block.ls_furniture.diorite_path_1": "Diorite Path",
@@ -30418,13 +27217,8 @@
       "block.ls_furniture.iron_cross": "Iron Glass Table",
       "block.ls_furniture.granite_path_75": "Granite Path",
       "block.ls_furniture.jungle_table_corner": "Jungle Table",
-      "gui.ls_furniture.furniture_paths.tooltip_empty3": "Teddys",
-      "block.ls_furniture.oak_iron_table_end": "Table",
-      "gui.ls_furniture.furniture_paths.tooltip_empty2": "Metal",
       "block.ls_furniture.spruce_white_sofa": "Spruce White Sofa",
-      "gui.ls_furniture.furniture_paths.tooltip_empty1": "Stone",
       "item.ls_furniture.shear": "Shears",
-      "block.ls_furniture.oak_iron_table_cross": "Table",
       "block.ls_furniture.dark_oak_blue_sofa": "Dark Oak Blue Sofa",
       "gui.ls_furniture.furniture_wood.label_furniture": "Wood",
       "block.ls_furniture.iron_corner": "Iron Glass Table",
@@ -30451,7 +27245,6 @@
       "block.ls_furniture.acacia_wardrobe_2": "Acacia Wardrobe",
       "block.ls_furniture.granite_path_4": "Granite Path",
       "block.ls_furniture.granite_path_5": "Granite Path",
-      "block.ls_furniture.oak_gold_table_junction": "Oak Gold Table",
       "block.ls_furniture.granite_path_6": "Granite Path",
       "block.ls_furniture.snow_golem_teddy": "Snow Golem Teddy",
       "block.ls_furniture.granite_path_8": "Granite Path",
@@ -30464,20 +27257,16 @@
       "block.ls_furniture.iron_junction": "Iron Glass Table",
       "block.ls_furniture.oak_white_straight": "Oak White Sofa",
       "block.ls_furniture.dark_oak_blinds_bottom": "Dark Oak Blinds",
-      "gui.ls_furniture.furniture_recipes.tooltip_empty1": "Stone",
       "block.ls_furniture.dark_oak_light_gray_sofa": "Dark Oak Light Gray Sofa",
       "block.ls_furniture.acacia_desk": "Acacia Desk",
       "block.ls_furniture.birch_desk": "Birch Desk",
-      "gui.ls_furniture.furniture_recipes.tooltip_empty3": "",
       "block.ls_furniture.dark_oak_white_straight": "Dark Oak White Sofa",
       "block.ls_furniture.acacia_table_straight": "Acacia Table",
       "block.ls_furniture.acacia_sink": "Acacia Sink",
-      "gui.ls_furniture.furniture_recipes.tooltip_empty2": "Metal",
       "block.ls_furniture.birch_sink": "Birch Sink",
       "block.ls_furniture.dark_oak_orange_sofa": "Dark Oak Orange Sofa",
       "entity.ls_furniture.stool": "Stool",
       "gui.ls_furniture.recipe_explainer.tooltip_paths": "Paths",
-      "gui.ls_furniture.furniture_stone.label_stone_tab_on_curse_forge": "Tab On Curse Forge",
       "block.ls_furniture.oak_yellow_right_end": "Oak Yellow Sofa",
       "block.ls_furniture.jungle_stool": "Jungle Stool",
       "block.ls_furniture.mangrove_cupboard": "Mangrove Cupboard",
@@ -30493,8 +27282,6 @@
       "gui.ls_furniture.fridge.label_inventory": "Inventory",
       "block.ls_furniture.birch_plank_path_2": "Birch Plank Path",
       "block.ls_furniture.dark_oak_purple_sofa": "Dark Oak Purple Sofa",
-      "block.ls_furniture.oak_iron_table_corner": "Table",
-      "gui.ls_furniture.furniture_paths.tooltip_decorations": "Decorations",
       "block.ls_furniture.oak_magenta_sofa": "Oak Magenta Sofa",
       "block.ls_furniture.birch_plank_path_3": "Birch Plank Path",
       "gui.ls_furniture.furniture_chisel.tooltip_decorations": "Decorations",
@@ -30522,6 +27309,7 @@
       "block.ls_furniture.acacia_plank_path_2": "Acacia Plank Path",
       "block.ls_furniture.birch_white_sofa": "Birch White Sofa",
       "block.ls_furniture.oak_brown_sofa": "Oak Brown Sofa",
+      "block.ls_furniture.oak_plank_path_8": "Oak Plank Path ",
       "gui.ls_furniture.furniture_metal.tooltip_empty": "Wood",
       "block.ls_furniture.dark_oak_light_blue_sofa": "Dark Oak Light Blue Sofa",
       "block.ls_furniture.jungle_white_right_end": "Jungle White Sofa",
@@ -30535,7 +27323,6 @@
       "gui.ls_furniture.recipe_explainer.tooltip_secondary": "Secondary",
       "block.ls_furniture.stone_path_71": "Stone Path",
       "block.ls_furniture.warped_wardrobe": "Warped Wardrobe",
-      "block.ls_furniture.oak_gold_table_end": "Oak Gold Table",
       "block.ls_furniture.stone_path_75": "Stone Path",
       "block.ls_furniture.stone_path_74": "Stone Path",
       "block.ls_furniture.bamboo_plank_path_3": "Bamboo Plank Path",
@@ -30551,14 +27338,8 @@
       "block.ls_furniture.dark_oak_mail_box": "Dark Oak Mail Box",
       "block.ls_furniture.computer_minecraft": "Computer",
       "gui.ls_furniture.recipe_explainer.label_primary": "Primary",
-      "gui.ls_furniture.furniture_chisel.ConnectedTextures": "",
-      "block.ls_furniture.test": "Test",
-      "gui.ls_furniture.furniture_recipes.tooltip_empty": "Wood",
-      "block.ls_furniture.oak_iron_table_none": "Table",
       "block.ls_furniture.dark_oak_plank_path_3": "Dark Oak Plank Path",
-      "gui.ls_furniture.furniture_chisel.label_textures": "Textures",
       "block.ls_furniture.dark_oak_plank_path_2": "Dark Oak Plank Path",
-      "gui.ls_furniture.furniture_stone.label_furniture": "Stone",
       "block.ls_furniture.table_cross": "Table Cross",
       "block.ls_furniture.dark_oak_sink": "Dark Oak Sink",
       "block.ls_furniture.cherry_plank_path_3": "Cherry Plank Path",
@@ -30582,12 +27363,10 @@
       "gui.ls_furniture.wardrobe_drawers.label_fridge": "Wardrobe",
       "block.ls_furniture.acacia_white_sofa": "Acacia White Sofa",
       "gui.ls_furniture.furniture_decorations.tooltip_empty": "Wood",
-      "gui.ls_furniture.furniture_paths.tooltip_recipe_explainer": "Recipe Explainer",
       "block.ls_furniture.mangrove_wardrobe": "Mangrove Wardrobe",
       "block.ls_furniture.warped_counter": "Warped Counter",
       "block.ls_furniture.dark_oak_cyan_sofa": "Dark Oak Cyan Sofa",
       "block.ls_furniture.birch_white_staright": "Birch White Sofa",
-      "gui.ls_furniture.furniture_stone.label_request_features_for_stone_tab_o": "Request Features For Stone",
       "block.ls_furniture.oak_red_sofa": "Oak Red Sofa",
       "block.ls_furniture.dranier_1_plate": "Drainer",
       "block.ls_furniture.crimson_table_junction": "Crimson Table",
@@ -30606,9 +27385,7 @@
       "block.ls_furniture.andesite_path_2": "Andesite Path",
       "gui.ls_furniture.furniture_decorations.label_furniture": "Decoration",
       "block.ls_furniture.jungle_table_cross": "Jungle Table",
-      "gui.ls_furniture.furniture_paths.tooltip_empty": "Wood",
       "block.ls_furniture.crimson_plank_path_3": "Crimson Plank Path",
-      "block.ls_furniture.oak_gold_table_cross": "Oak Gold Table",
       "block.ls_furniture.warped_white_corner": "Warped White Sofa",
       "block.ls_furniture.crimson_plank_path_2": "Crimson Plank Path",
       "block.ls_furniture.dark_oak_table_none": "Dark Oak Table",
@@ -30644,6 +27421,7 @@
       "block.ls_furniture.jungle_chair": "Jungle Chair",
       "block.ls_furniture.dark_oak_drawer": "Dark Oak Drawer",
       "block.ls_furniture.oak_create": "Oak Create",
+      "gui.ls_furniture.furniture_wood.tooltip_chisel": "Chisel",
       "block.ls_furniture.spruce_sink": "Spruce Sink",
       "gui.ls_furniture.cupboard.label_cupboard": "Cupboard",
       "block.ls_furniture.oak_cupboard_vent_on": "Oak Cupboard Vent",
@@ -30678,13 +27456,8 @@
       "gui.ls_furniture.recipe_explainer.label_additional": "Additional",
       "gui.ls_furniture.recipe_explainer.tooltip_tool": "Tool",
       "block.ls_furniture.birch_stool": "Birch Stool",
-      "gui.ls_furniture.furniture_stone.tooltip_empty1": "Stone",
-      "gui.ls_furniture.furniture_stone.tooltip_empty3": "Teddys",
-      "gui.ls_furniture.furniture_stone.tooltip_empty2": "Metal",
-      "block.ls_furniture.oak_iron_table_junction": "Table",
       "block.ls_furniture.spruce_cupboard_vent_on": "Spruce Cupboard Vent",
       "block.ls_furniture.oak_blinds_top": "Oak Blinds",
-      "gui.ls_furniture.furniture_chisel.label_chisel": "Chisel",
       "gui.ls_furniture.oven.label_inventory": "Inventory",
       "block.ls_furniture.warped_sink": "Warped Sink",
       "block.ls_furniture.andesite_path_10": "Andesite Path",
@@ -30704,7 +27477,6 @@
       "item.ls_furniture.saw": "Saw",
       "block.ls_furniture.dark_oak_black_sofa": "Dark Oak Black Sofa",
       "block.ls_furniture.crimson_table_end": "Crimson Table",
-      "gui.ls_furniture.furniture_stone.button_request": "Request",
       "block.ls_furniture.mangrove_plank_path_3": "Mangrove Plank Path",
       "block.ls_furniture.mangrove_plank_path_2": "Mangrove Plank Path",
       "block.ls_furniture.mangrove_table_cross": "Mangrove Table",
@@ -30715,8 +27487,6 @@
       "gui.ls_furniture.furniture_chisel.tooltip_empty1": "Stone",
       "block.ls_furniture.birch_table_straight": "Birch Table",
       "gui.ls_furniture.furniture_chisel.tooltip_empty2": "Metal",
-      "block.ls_furniture.oak_gold_table_none": "Oak Gold Table ",
-      "gui.ls_furniture.furniture_paths.tooltip_paths": "Paths",
       "block.ls_furniture.mangrove_desk": "Mangrove Desk",
       "block.ls_furniture.dark_oak_table_corner": "Dark Oak Table",
       "block.ls_furniture.mangrove_sink": "Mangrove Sink",
@@ -30743,13 +27513,10 @@
       "block.ls_furniture.warped_mail_box": "Warped Mail Box",
       "gui.ls_furniture.recipe_explainer.label_secondary": "Secondary",
       "block.ls_furniture.crimson_white_left_end": "Crimson White Sofa",
-      "gui.ls_furniture.furniture_chisel.label_connected": "Connected",
       "block.ls_furniture.mangrove_stool": "Mangrove Stool",
-      "block.ls_furniture.oak_iron_table_straight": "Table",
       "block.ls_furniture.oak_blue_sofa": "Oak Blue Sofa",
       "block.ls_furniture.oak_white_corner": "Oak White Sofa",
       "block.ls_furniture.dark_oak_lime_sofa": "Dark Oak Lime Sofa",
-      "gui.ls_furniture.furniture_stone.tooltip_empty": "Wood",
       "block.ls_furniture.table_junction": "Table Junction",
       "gui.ls_furniture.furniture_chisel.tooltip_recipe_explainer": "Recipe Explainer",
       "block.ls_furniture.birch_cupboard_vent_on": "Birch Cupboard Vent",
@@ -30826,9 +27593,7 @@
       "gui.ls_furniture.recipe_explainer.tooltip_stone": "Stone",
       "block.ls_furniture.jungle_table_straight": "Jungle Table",
       "block.ls_furniture.mangrove_cupboard_vent_on": "Mangrove Cupboard Vent",
-      "block.ls_furniture.oak_gold_table_straight": "Oak Gold Table",
       "block.ls_furniture.dark_oak_cupboard_vent_on": "Dark Oak Cupboard Vent",
-      "gui.ls_furniture.furniture_recipes.label_furniture": "Stone",
       "block.ls_furniture.dark_oak_yellow_sofa": "Dark Oak Yellow Sofa",
       "gui.ls_furniture.furniture_decorations.tooltip_decorations": "Decorations",
       "block.ls_furniture.oak_cyan_sofa": "Oak Cyan Sofa",
@@ -30876,14 +27641,13 @@
       "block.ls_furniture.warped_chair": "Warped Chair",
       "block.ls_furniture.crimson_table_cross": "Crimson Table",
       "block.ls_furniture.jungle_cupboard_vent": "Jungle Cupboard Vent",
-      "gui.ls_furniture.furniture_stone.tooltip_paths": "Paths",
       "gui.ls_furniture.furniture_wood.tooltip_output": "Output",
       "block.ls_furniture.iron_golem_teddy": "Iron Golem Teddy",
       "block.ls_furniture.acacia_wardrobe": "Acacia Wardrobe",
       "block.ls_furniture.birch_table_junction": "Birch Table",
       "block.ls_furniture.tv_stand_cod": "TV",
       "block.ls_furniture.dark_oak_oven": "Dark Oak Oven",
-      "gui.ls_furniture.furniture_chisel.label_furniture": "Wood",
+      "gui.ls_furniture.furniture_chisel.label_furniture": "Chisel",
       "block.ls_furniture.deepslate_path_6": "Deepslate Path",
       "gui.ls_furniture.wardrobe_drawers.label_inventory": "Inventory",
       "block.ls_furniture.deepslate_path_5": "Deepslate Path",
@@ -30902,7 +27666,6 @@
       "block.ls_furniture.mangrove_white_sofa": "Mangrove White Sofa",
       "block.ls_furniture.crimson_table_none": "Crimson Table",
       "block.ls_furniture.acacia_chair": "Acacia Chair",
-      "gui.ls_furniture.furniture_stone.tooltip_decorations": "Decorations",
       "block.ls_furniture.jungle_drawer": "Jungle Drawer",
       "block.ls_furniture.drawer": "Drawer",
       "block.ls_furniture.drainer_plate": "Drainer",
@@ -30932,7 +27695,6 @@
       "block.ls_furniture.fridge_freezer_block_1": "Fridge Freezer",
       "block.ls_furniture.fridge_freezer_block_2": "Fridge Freezer",
       "block.ls_furniture.mangrove_counter_corner": "Mangrove Counter",
-      "gui.ls_furniture.furniture_stone.tooltip_recipe_explainer": "Recipe Explainer",
       "block.ls_furniture.oven_vent": "Oven Vent",
       "block.ls_furniture.granite_path_10": "Granite Path",
       "block.ls_furniture.granite_path_11": "Granite Path",
@@ -30950,7 +27712,6 @@
       "block.ls_furniture.birch_white_right_end": "Birch White Sofa",
       "block.ls_furniture.deepslate_path_131": "Deepslate Path",
       "block.ls_furniture.deepslate_path_132": "Deepslate Path",
-      "block.ls_furniture.oak_gold_table_corner": "Oak Gold Table",
       "block.ls_furniture.deepslate_path_133": "Deepslate Path",
       "gui.ls_furniture.furniture_teddys.label_furniture": "Teddys",
       "block.ls_furniture.diorite_path_131": "Diorite Path",
@@ -30959,7 +27720,6 @@
       "block.ls_furniture.computer_on": "Computer",
       "block.ls_furniture.diorite_path_132": "Diorite Path",
       "block.ls_furniture.mangrove_table_junction": "Mangrove Table",
-      "gui.ls_furniture.furniture_paths.label_recipe": "Recipe",
       "block.ls_furniture.deepslate_path_2": "Deepslate Path",
       "block.ls_furniture.deepslate_path_1": "Deepslate Path",
       "block.ls_furniture.warped_table_junction": "Warped Table",
@@ -30983,6 +27743,7 @@
       "block.ls_furniture.mangrove_drawer": "Mangrove Drawer",
       "block.ls_furniture.warped_table_straight": "Warped Table",
       "block.ls_furniture.oak_green_sofa": "Oak Green Sofa",
+      "gui.ls_furniture.furniture_chisel.tooltip_chisel": "Chisel",
       "block.ls_furniture.deepslate_path_12": "Deepslate Path",
       "block.ls_furniture.deepslate_path_11": "Deepslate Path",
       "block.ls_furniture.deepslate_path_10": "Deepslate Path",
@@ -31219,19 +27980,11 @@
             "children": []
           },
           {
-            "name": "Stone",
-            "children": []
-          },
-          {
             "name": "Metal",
             "children": []
           },
           {
             "name": "Teddys",
-            "children": []
-          },
-          {
-            "name": "Paths",
             "children": []
           },
           {
@@ -31652,13 +28405,12 @@
     "dependants": [],
     "mcreatorDependencies": [
       "fusion",
-      "curios_api",
       "jade",
       "patchouli",
       "geckolib",
       "playeranimator",
       "allmods",
-      "JEI"
+      "jei"
     ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",

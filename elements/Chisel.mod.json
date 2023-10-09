@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
-    "guiBoundTo": "FurnitureChisel",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 37,
     "inventoryStackSize": 64,
     "isFood": false,

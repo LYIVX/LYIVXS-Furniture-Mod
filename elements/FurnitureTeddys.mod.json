@@ -163,26 +163,13 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_tab_deselect1",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenStoneMenu"
-          },
-          "x": 108,
-          "y": 8
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_tab_deselect2",
           "image": "tab_deselect.png",
           "hoveredImage": "",
           "onClick": {
             "name": "OpenMetalMenu"
           },
-          "x": 141,
+          "x": 108,
           "y": 8
         }
       },
@@ -202,26 +189,13 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_empty1",
-          "text": {
-            "fixedValue": "Stone"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 112,
-          "y": 12
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
           "name": "tooltip_empty2",
           "text": {
             "fixedValue": "Metal"
           },
           "width": 24,
           "height": 24,
-          "x": 145,
+          "x": 112,
           "y": 12
         }
       },
@@ -234,7 +208,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 178,
+          "x": 145,
           "y": 12
         }
       },
@@ -897,7 +871,7 @@
         "data": {
           "image": "tab_select.png",
           "use1Xscale": false,
-          "x": 174,
+          "x": 141,
           "y": 6
         }
       },
@@ -911,28 +885,6 @@
             "name": "OpenWoodMenu"
           },
           "x": 80,
-          "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_stone",
-          "image": "stone.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenStoneMenu"
-          },
-          "x": 113,
-          "y": 12
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "iron_ingot.png",
-          "use1Xscale": false,
-          "x": 145,
           "y": 12
         }
       },
@@ -956,7 +908,7 @@
         "data": {
           "image": "toddys.png",
           "use1Xscale": false,
-          "x": 178,
+          "x": 145,
           "y": 12
         }
       },
@@ -969,7 +921,7 @@
           "onClick": {
             "name": "OpenMetalMenu"
           },
-          "x": 145,
+          "x": 112,
           "y": 12
         }
       },
@@ -1010,45 +962,6 @@
           },
           "x": 171,
           "y": 64
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenPathsMenu"
-          },
-          "x": 207,
-          "y": 8
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_path",
-          "image": "path.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenPathsMenu"
-          },
-          "x": 211,
-          "y": 12
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_paths",
-          "text": {
-            "fixedValue": "Paths"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 211,
-          "y": 12
         }
       },
       {
@@ -1105,7 +1018,7 @@
           "onClick": {
             "name": "OpenDecorationsMenu"
           },
-          "x": 240,
+          "x": 174,
           "y": 8
         }
       },
@@ -1118,7 +1031,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 244,
+          "x": 178,
           "y": 12
         }
       },
@@ -1131,7 +1044,7 @@
           "onClick": {
             "name": "OpenDecorationsMenu"
           },
-          "x": 244,
+          "x": 179,
           "y": 12
         }
       }

@@ -19,9 +19,6 @@ import net.mcreator.lsfurniture.client.gui.OvenScreen;
 import net.mcreator.lsfurniture.client.gui.MailBoxScreen;
 import net.mcreator.lsfurniture.client.gui.FurnitureWoodScreen;
 import net.mcreator.lsfurniture.client.gui.FurnitureTeddysScreen;
-import net.mcreator.lsfurniture.client.gui.FurnitureStoneScreen;
-import net.mcreator.lsfurniture.client.gui.FurnitureRecipesScreen;
-import net.mcreator.lsfurniture.client.gui.FurniturePathsScreen;
 import net.mcreator.lsfurniture.client.gui.FurnitureMetalScreen;
 import net.mcreator.lsfurniture.client.gui.FurnitureDecorationsScreen;
 import net.mcreator.lsfurniture.client.gui.FurnitureChiselScreen;
@@ -39,9 +36,7 @@ public class LsFurnitureModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(LsFurnitureModMenus.DESK.get(), DeskScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.FURNITURE_WOOD.get(), FurnitureWoodScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.FURNITURE_STONE.get(), FurnitureStoneScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.FURNITURE_METAL.get(), FurnitureMetalScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.FURNITURE_RECIPES.get(), FurnitureRecipesScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.DRAWER.get(), DrawerScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.SHELVE.get(), ShelveScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.COUNTER.get(), CounterScreen::new);
@@ -54,7 +49,6 @@ public class LsFurnitureModScreens {
 			MenuScreens.register(LsFurnitureModMenus.MAIL_BOX.get(), MailBoxScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.CUPBOARD.get(), CupboardScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.RECIPE_EXPLAINER.get(), RecipeExplainerScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.FURNITURE_PATHS.get(), FurniturePathsScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.FURNITURE_DECORATIONS.get(), FurnitureDecorationsScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.FURNITURE_CHISEL.get(), FurnitureChiselScreen::new);
 		});

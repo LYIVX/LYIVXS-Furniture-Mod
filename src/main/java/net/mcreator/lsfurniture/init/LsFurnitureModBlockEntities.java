@@ -59,18 +59,6 @@ import net.mcreator.lsfurniture.block.entity.OakSinkTileEntity;
 import net.mcreator.lsfurniture.block.entity.OakShelveBlockEntity;
 import net.mcreator.lsfurniture.block.entity.OakOvenTileEntity;
 import net.mcreator.lsfurniture.block.entity.OakMailBoxBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableStraightBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableNoneBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableJunctionBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableEndBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableCrossBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakIronTableCornerBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableStraightBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableNoneBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableJunctionBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableEndBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableCrossBlockEntity;
-import net.mcreator.lsfurniture.block.entity.OakGoldTableCornerBlockEntity;
 import net.mcreator.lsfurniture.block.entity.OakDrawerTileEntity;
 import net.mcreator.lsfurniture.block.entity.OakDeskTileEntity;
 import net.mcreator.lsfurniture.block.entity.OakCupboardTileEntity;
@@ -206,8 +194,6 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> MANGROVE_TABLE_NONE = register("mangrove_table_none", LsFurnitureModBlocks.MANGROVE_TABLE_NONE, MangroveTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CRIMSON_TABLE_NONE = register("crimson_table_none", LsFurnitureModBlocks.CRIMSON_TABLE_NONE, CrimsonTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_TABLE_NONE = register("warped_table_none", LsFurnitureModBlocks.WARPED_TABLE_NONE, WarpedTableNoneBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_NONE = register("oak_iron_table_none", LsFurnitureModBlocks.OAK_IRON_TABLE_NONE, OakIronTableNoneBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_NONE = register("oak_gold_table_none", LsFurnitureModBlocks.OAK_GOLD_TABLE_NONE, OakGoldTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> IRON_NONE = register("iron_none", LsFurnitureModBlocks.IRON_NONE, IronNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<OakWardrobe0TileEntity>> OAK_WARDROBE_0 = REGISTRY.register("oak_wardrobe_0",
 			() -> BlockEntityType.Builder.of(OakWardrobe0TileEntity::new, LsFurnitureModBlocks.OAK_WARDROBE_0.get()).build(null));
@@ -327,11 +313,6 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> TABLE_JUNCTION = register("table_junction", LsFurnitureModBlocks.TABLE_JUNCTION, TableJunctionBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TABLE_CROSS = register("table_cross", LsFurnitureModBlocks.TABLE_CROSS, TableCrossBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TABLE_END = register("table_end", LsFurnitureModBlocks.TABLE_END, TableEndBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_STRAIGHT = register("oak_gold_table_straight", LsFurnitureModBlocks.OAK_GOLD_TABLE_STRAIGHT, OakGoldTableStraightBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_CORNER = register("oak_gold_table_corner", LsFurnitureModBlocks.OAK_GOLD_TABLE_CORNER, OakGoldTableCornerBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_JUNCTION = register("oak_gold_table_junction", LsFurnitureModBlocks.OAK_GOLD_TABLE_JUNCTION, OakGoldTableJunctionBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_CROSS = register("oak_gold_table_cross", LsFurnitureModBlocks.OAK_GOLD_TABLE_CROSS, OakGoldTableCrossBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_GOLD_TABLE_END = register("oak_gold_table_end", LsFurnitureModBlocks.OAK_GOLD_TABLE_END, OakGoldTableEndBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_TABLE_STRAIGHT = register("dark_oak_table_straight", LsFurnitureModBlocks.DARK_OAK_TABLE_STRAIGHT, DarkOakTableStraightBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_TABLE_CORNER = register("dark_oak_table_corner", LsFurnitureModBlocks.DARK_OAK_TABLE_CORNER, DarkOakTableCornerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_TABLE_JUNCTION = register("dark_oak_table_junction", LsFurnitureModBlocks.DARK_OAK_TABLE_JUNCTION, DarkOakTableJunctionBlockEntity::new);
@@ -341,11 +322,6 @@ public class LsFurnitureModBlockEntities {
 			() -> BlockEntityType.Builder.of(FridgeFreezerBlock1TileEntity::new, LsFurnitureModBlocks.FRIDGE_FREEZER_BLOCK_1.get()).build(null));
 	public static final RegistryObject<BlockEntityType<FridgeFreezerBlock2TileEntity>> FRIDGE_FREEZER_BLOCK_2 = REGISTRY.register("fridge_freezer_block_2",
 			() -> BlockEntityType.Builder.of(FridgeFreezerBlock2TileEntity::new, LsFurnitureModBlocks.FRIDGE_FREEZER_BLOCK_2.get()).build(null));
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_CORNER = register("oak_iron_table_corner", LsFurnitureModBlocks.OAK_IRON_TABLE_CORNER, OakIronTableCornerBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_JUNCTION = register("oak_iron_table_junction", LsFurnitureModBlocks.OAK_IRON_TABLE_JUNCTION, OakIronTableJunctionBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_CROSS = register("oak_iron_table_cross", LsFurnitureModBlocks.OAK_IRON_TABLE_CROSS, OakIronTableCrossBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_END = register("oak_iron_table_end", LsFurnitureModBlocks.OAK_IRON_TABLE_END, OakIronTableEndBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> OAK_IRON_TABLE_STRAIGHT = register("oak_iron_table_straight", LsFurnitureModBlocks.OAK_IRON_TABLE_STRAIGHT, OakIronTableStraightBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<OakWardrobe1TileEntity>> OAK_WARDROBE_1 = REGISTRY.register("oak_wardrobe_1",
 			() -> BlockEntityType.Builder.of(OakWardrobe1TileEntity::new, LsFurnitureModBlocks.OAK_WARDROBE_1.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakWardrobe2TileEntity>> OAK_WARDROBE_2 = REGISTRY.register("oak_wardrobe_2",

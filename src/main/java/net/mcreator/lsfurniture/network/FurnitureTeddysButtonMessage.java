@@ -25,8 +25,6 @@ import net.mcreator.lsfurniture.procedures.TeddyButton11Procedure;
 import net.mcreator.lsfurniture.procedures.TeddyButton10Procedure;
 import net.mcreator.lsfurniture.procedures.TeddyButton0Procedure;
 import net.mcreator.lsfurniture.procedures.OpenWoodMenuProcedure;
-import net.mcreator.lsfurniture.procedures.OpenStoneMenuProcedure;
-import net.mcreator.lsfurniture.procedures.OpenPathsMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenMetalMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenExplainerMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenDecorationsMenuProcedure;
@@ -81,55 +79,55 @@ public class FurnitureTeddysButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			OpenStoneMenuProcedure.execute(world, x, y, z, entity);
+			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
+			TeddyButton0Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			TeddyButton0Procedure.execute(x, y, z, entity);
+			TeddyButton1Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			TeddyButton1Procedure.execute(x, y, z, entity);
+			TeddyButton2Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			TeddyButton2Procedure.execute(x, y, z, entity);
+			TeddyButton3Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			TeddyButton3Procedure.execute(x, y, z, entity);
+			TeddyButton4Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 6) {
 
-			TeddyButton4Procedure.execute(x, y, z, entity);
+			TeddyButton5Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 7) {
 
-			TeddyButton5Procedure.execute(x, y, z, entity);
+			TeddyButton6Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 8) {
 
-			TeddyButton6Procedure.execute(x, y, z, entity);
+			TeddyButton7Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 9) {
 
-			TeddyButton7Procedure.execute(x, y, z, entity);
+			TeddyButton8Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 10) {
 
-			TeddyButton8Procedure.execute(x, y, z, entity);
+			TeddyButton9Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 11) {
 
-			TeddyButton9Procedure.execute(x, y, z, entity);
+			TeddyButton10Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 12) {
 
-			TeddyButton10Procedure.execute(x, y, z, entity);
+			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 13) {
 
@@ -137,37 +135,21 @@ public class FurnitureTeddysButtonMessage {
 		}
 		if (buttonID == 14) {
 
-			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
+			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 15) {
 
-			OpenStoneMenuProcedure.execute(world, x, y, z, entity);
+			OpenExplainerMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 16) {
 
-			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
+			TeddyButton11Procedure.execute(x, y, z, entity);
 		}
 		if (buttonID == 17) {
 
-			OpenExplainerMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 18) {
-
-			TeddyButton11Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 19) {
-
-			OpenPathsMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 20) {
-
-			OpenPathsMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 21) {
-
 			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 22) {
+		if (buttonID == 18) {
 
 			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
 		}

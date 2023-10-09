@@ -12,7 +12,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
-import net.mcreator.lsfurniture.procedures.FurnitureCrafterBetaPro4Procedure;
 import net.mcreator.lsfurniture.procedures.FurnitureCrafterBetaPro2Procedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
@@ -71,27 +70,147 @@ public class FurnitureWoodSlotMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (slot == 0 && changeType == 1) {
+		if (slot == 5 && changeType == 1) {
 
-			FurnitureCrafterBetaPro4Procedure.execute(entity);
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 1 && changeType == 1) {
+		if (slot == 6 && changeType == 1) {
 
-			FurnitureCrafterBetaPro4Procedure.execute(entity);
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 2 && changeType == 1) {
+		if (slot == 7 && changeType == 1) {
 
-			FurnitureCrafterBetaPro4Procedure.execute(entity);
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 3 && changeType == 1) {
+		if (slot == 8 && changeType == 1) {
 
-			FurnitureCrafterBetaPro4Procedure.execute(entity);
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 4 && changeType == 1) {
+		if (slot == 9 && changeType == 1) {
 
-			FurnitureCrafterBetaPro4Procedure.execute(entity);
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 46 && changeType == 1) {
+		if (slot == 10 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 11 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 12 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 13 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 14 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 15 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 16 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 17 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 18 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 19 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 20 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 21 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 22 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 23 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 24 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 25 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 26 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 27 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 28 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 29 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 30 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 31 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 32 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 33 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 34 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 35 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 36 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 37 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 38 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 39 && changeType == 1) {
+
+			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 40 && changeType == 1) {
 
 			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
