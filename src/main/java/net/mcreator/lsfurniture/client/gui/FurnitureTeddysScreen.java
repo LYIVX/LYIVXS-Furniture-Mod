@@ -56,9 +56,9 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_teddys.tooltip_empty"), mouseX, mouseY);
-		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_teddys.tooltip_empty2"), mouseX, mouseY);
 		if (mouseX > leftPos + 69 && mouseX < leftPos + 93 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_teddys.tooltip_empty3"), mouseX, mouseY);
@@ -82,30 +82,33 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 			this.blit(ms, this.leftPos + 7, this.topPos + 35, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 27, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/additional.png"));
+			this.blit(ms, this.leftPos + 26, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 8, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			this.blit(ms, this.leftPos + 7, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureDyeProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/dye.png"));
 			this.blit(ms, this.leftPos + 26, this.topPos + 35, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureToolProcedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tool.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/shears_slot.png"));
 			this.blit(ms, this.leftPos + 26, this.topPos + 54, 0, 0, 16, 16, 16, 16);
 		}
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/furniture_crafter_brown_background.png"));
 		this.blit(ms, this.leftPos + 48, this.topPos + 7, 0, 0, 155, 74, 155, 74);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_select.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_select_cut.png"));
 		this.blit(ms, this.leftPos + 65, this.topPos + -31, 0, 0, 32, 34, 32, 34);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/toddys.png"));
 		this.blit(ms, this.leftPos + 69, this.topPos + -25, 0, 0, 24, 24, 24, 24);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_large.png"));
+		this.blit(ms, this.leftPos + 0, this.topPos + -6, 0, 0, 68, 12, 68, 12);
 
 		RenderSystem.disableBlend();
 	}
@@ -126,7 +129,7 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_teddys.label_furniture"), 8, 5, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_teddys.label_furniture"), 5, -2, -12829636);
 	}
 
 	@Override
@@ -179,7 +182,7 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 		});
 		guistate.put("button:imagebutton_chisel", imagebutton_chisel);
 		this.addRenderableWidget(imagebutton_chisel);
-		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
+		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureTeddysButtonMessage(5, x, y, z));
 				FurnitureTeddysButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -187,7 +190,7 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 		});
 		guistate.put("button:imagebutton_tab_deselect_left_edge", imagebutton_tab_deselect_left_edge);
 		this.addRenderableWidget(imagebutton_tab_deselect_left_edge);
-		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
+		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureTeddysButtonMessage(6, x, y, z));
 				FurnitureTeddysButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -195,7 +198,7 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 		});
 		guistate.put("button:imagebutton_oak_wood", imagebutton_oak_wood);
 		this.addRenderableWidget(imagebutton_oak_wood);
-		imagebutton_tab_deselect1 = new ImageButton(this.leftPos + 32, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect1.png"), 32, 64, e -> {
+		imagebutton_tab_deselect1 = new ImageButton(this.leftPos + 32, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect1.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureTeddysButtonMessage(7, x, y, z));
 				FurnitureTeddysButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -203,7 +206,7 @@ public class FurnitureTeddysScreen extends AbstractContainerScreen<FurnitureTedd
 		});
 		guistate.put("button:imagebutton_tab_deselect1", imagebutton_tab_deselect1);
 		this.addRenderableWidget(imagebutton_tab_deselect1);
-		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
+		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureTeddysButtonMessage(8, x, y, z));
 				FurnitureTeddysButtonMessage.handleButtonAction(entity, 8, x, y, z);

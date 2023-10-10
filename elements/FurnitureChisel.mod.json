@@ -58,7 +58,7 @@
           "width": 24,
           "height": 24,
           "x": 111,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -71,7 +71,7 @@
           "width": 24,
           "height": 24,
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -98,8 +98,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 116,
-          "y": 42
+          "x": 113,
+          "y": 35
         }
       },
       {
@@ -110,8 +110,8 @@
           "displayCondition": {
             "name": "DisablePictureBlock1"
           },
-          "x": 126,
-          "y": 54
+          "x": 125,
+          "y": 53
         }
       },
       {
@@ -781,7 +781,7 @@
             "name": "OpenWoodMenu"
           },
           "x": 107,
-          "y": 8
+          "y": 2
         }
       },
       {
@@ -794,7 +794,7 @@
             "name": "OpenWoodMenu"
           },
           "x": 112,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -807,7 +807,7 @@
             "name": "OpenMetalMenu"
           },
           "x": 140,
-          "y": 8
+          "y": 2
         }
       },
       {
@@ -820,14 +820,14 @@
             "name": "OpenMetalMenu"
           },
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_tab_deselect2",
-          "image": "tab_deselect.png",
+          "image": "tab_deslect_cut.png",
           "hoveredImage": "",
           "onClick": {
             "name": "OpenTeddysMenu"
@@ -847,6 +847,15 @@
           },
           "x": 177,
           "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_large.png",
+          "use1Xscale": false,
+          "x": 107,
+          "y": 31
         }
       }
     ],

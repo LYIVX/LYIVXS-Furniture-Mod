@@ -7158,27 +7158,6 @@
       "path": "~/Tables/Oak"
     },
     {
-      "name": "DisableOutput",
-      "type": "procedure",
-      "sortid": 530,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "disable_output",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/DisableOutputProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter"
-    },
-    {
       "name": "OakDeskRecipe",
       "type": "procedure",
       "sortid": 531,
@@ -27145,7 +27124,7 @@
   "workspaceSettings": {
     "modid": "ls_furniture",
     "modName": "LYIVX\u0027s Furniture",
-    "version": "0.2.5",
+    "version": "0.3.0",
     "description": "Furniture Mod",
     "author": "LYIVX, MCreator",
     "websiteURL": "https://legacy.curseforge.com/minecraft/mc-mods/lyivxs-furniture",

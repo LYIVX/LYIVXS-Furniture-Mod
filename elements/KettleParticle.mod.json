@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "particle",
   "definition": {
-    "texture": "big_smoke_9.png",
+    "texture": "kettle_particle.png",
     "animate": false,
     "frameDuration": 1,
     "width": 0.2,

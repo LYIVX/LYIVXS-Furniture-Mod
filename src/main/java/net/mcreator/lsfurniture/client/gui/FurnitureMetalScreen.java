@@ -56,9 +56,9 @@ public class FurnitureMetalScreen extends AbstractContainerScreen<FurnitureMetal
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_metal.tooltip_empty"), mouseX, mouseY);
-		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_metal.tooltip_empty2"), mouseX, mouseY);
 		if (mouseX > leftPos + 69 && mouseX < leftPos + 93 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_metal.tooltip_empty3"), mouseX, mouseY);
@@ -82,30 +82,33 @@ public class FurnitureMetalScreen extends AbstractContainerScreen<FurnitureMetal
 			this.blit(ms, this.leftPos + 7, this.topPos + 35, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 27, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/additional.png"));
+			this.blit(ms, this.leftPos + 26, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 8, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			this.blit(ms, this.leftPos + 7, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureDyeProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/dye.png"));
 			this.blit(ms, this.leftPos + 26, this.topPos + 35, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureToolProcedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tool.png"));
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/hammer_slot.png"));
 			this.blit(ms, this.leftPos + 26, this.topPos + 54, 0, 0, 16, 16, 16, 16);
 		}
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/furniture_crafter_brown_background.png"));
 		this.blit(ms, this.leftPos + 48, this.topPos + 7, 0, 0, 155, 74, 155, 74);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_large.png"));
+		this.blit(ms, this.leftPos + 0, this.topPos + -6, 0, 0, 68, 12, 68, 12);
+
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_select.png"));
-		this.blit(ms, this.leftPos + 32, this.topPos + -31, 0, 0, 32, 34, 32, 34);
+		this.blit(ms, this.leftPos + 32, this.topPos + -37, 0, 0, 32, 34, 32, 34);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/iron_ingot.png"));
-		this.blit(ms, this.leftPos + 36, this.topPos + -25, 0, 0, 24, 24, 24, 24);
+		this.blit(ms, this.leftPos + 36, this.topPos + -31, 0, 0, 24, 24, 24, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -126,7 +129,7 @@ public class FurnitureMetalScreen extends AbstractContainerScreen<FurnitureMetal
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_metal.label_furniture"), 8, 5, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_metal.label_furniture"), 5, -2, -12829636);
 	}
 
 	@Override
@@ -195,7 +198,7 @@ public class FurnitureMetalScreen extends AbstractContainerScreen<FurnitureMetal
 		});
 		guistate.put("button:imagebutton_chisel", imagebutton_chisel);
 		this.addRenderableWidget(imagebutton_chisel);
-		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
+		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureMetalButtonMessage(7, x, y, z));
 				FurnitureMetalButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -203,7 +206,7 @@ public class FurnitureMetalScreen extends AbstractContainerScreen<FurnitureMetal
 		});
 		guistate.put("button:imagebutton_tab_deselect_left_edge", imagebutton_tab_deselect_left_edge);
 		this.addRenderableWidget(imagebutton_tab_deselect_left_edge);
-		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
+		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureMetalButtonMessage(8, x, y, z));
 				FurnitureMetalButtonMessage.handleButtonAction(entity, 8, x, y, z);

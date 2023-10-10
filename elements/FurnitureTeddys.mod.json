@@ -115,7 +115,7 @@
           "width": 24,
           "height": 24,
           "x": 111,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -128,7 +128,7 @@
           "width": 24,
           "height": 24,
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -155,8 +155,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 116,
-          "y": 42
+          "x": 113,
+          "y": 35
         }
       },
       {
@@ -174,13 +174,13 @@
       {
         "type": "image",
         "data": {
-          "image": "block.png",
+          "image": "additional.png",
           "use1Xscale": false,
           "displayCondition": {
             "name": "DisablePictureBlock2"
           },
-          "x": 135,
-          "y": 54
+          "x": 134,
+          "y": 53
         }
       },
       {
@@ -191,8 +191,8 @@
           "displayCondition": {
             "name": "DisablePictureBlock1"
           },
-          "x": 116,
-          "y": 54
+          "x": 115,
+          "y": 53
         }
       },
       {
@@ -210,7 +210,7 @@
       {
         "type": "image",
         "data": {
-          "image": "tool.png",
+          "image": "shears_slot.png",
           "use1Xscale": false,
           "displayCondition": {
             "name": "DisablePictureTool"
@@ -882,7 +882,7 @@
             "name": "OpenWoodMenu"
           },
           "x": 107,
-          "y": 8
+          "y": 2
         }
       },
       {
@@ -895,7 +895,7 @@
             "name": "OpenWoodMenu"
           },
           "x": 112,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -908,7 +908,7 @@
             "name": "OpenMetalMenu"
           },
           "x": 140,
-          "y": 8
+          "y": 2
         }
       },
       {
@@ -921,13 +921,13 @@
             "name": "OpenMetalMenu"
           },
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "tab_select.png",
+          "image": "tab_select_cut.png",
           "use1Xscale": false,
           "x": 173,
           "y": 6
@@ -940,6 +940,15 @@
           "use1Xscale": false,
           "x": 177,
           "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_large.png",
+          "use1Xscale": false,
+          "x": 107,
+          "y": 31
         }
       }
     ],

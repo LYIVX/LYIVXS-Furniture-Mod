@@ -11,15 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "tab_select_left_edge.png",
-          "use1Xscale": false,
-          "x": 107,
-          "y": 6
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -124,14 +115,14 @@
             "name": "OpenMetalMenu"
           },
           "x": 140,
-          "y": 8
+          "y": 2
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_tab_deselect2",
-          "image": "tab_deselect.png",
+          "image": "tab_deslect_cut.png",
           "hoveredImage": "",
           "onClick": {
             "name": "OpenTeddysMenu"
@@ -150,7 +141,7 @@
           "width": 24,
           "height": 24,
           "x": 111,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -163,7 +154,7 @@
           "width": 24,
           "height": 24,
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -190,17 +181,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 116,
-          "y": 42
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "oak_wood.png",
-          "use1Xscale": false,
-          "x": 112,
-          "y": 12
+          "x": 113,
+          "y": 35
         }
       },
       {
@@ -213,7 +195,7 @@
             "name": "OpenMetalMenu"
           },
           "x": 144,
-          "y": 12
+          "y": 6
         }
       },
       {
@@ -244,13 +226,13 @@
       {
         "type": "image",
         "data": {
-          "image": "block.png",
+          "image": "additional.png",
           "use1Xscale": false,
           "displayCondition": {
             "name": "DisablePictureBlock2"
           },
-          "x": 135,
-          "y": 54
+          "x": 134,
+          "y": 53
         }
       },
       {
@@ -261,8 +243,8 @@
           "displayCondition": {
             "name": "DisablePictureBlock1"
           },
-          "x": 116,
-          "y": 54
+          "x": 115,
+          "y": 53
         }
       },
       {
@@ -940,6 +922,33 @@
           "use1Xscale": false,
           "x": 156,
           "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_large.png",
+          "use1Xscale": false,
+          "x": 107,
+          "y": 31
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_select_left_edge.png",
+          "use1Xscale": false,
+          "x": 107,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oak_wood.png",
+          "use1Xscale": false,
+          "x": 112,
+          "y": 6
         }
       }
     ],

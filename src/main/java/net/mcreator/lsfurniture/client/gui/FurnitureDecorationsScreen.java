@@ -56,9 +56,9 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_decorations.tooltip_empty"), mouseX, mouseY);
-		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_decorations.tooltip_empty2"), mouseX, mouseY);
 		if (mouseX > leftPos + 69 && mouseX < leftPos + 93 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_decorations.tooltip_empty3"), mouseX, mouseY);
@@ -77,17 +77,21 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_large.png"));
+		this.blit(ms, this.leftPos + 0, this.topPos + -6, 0, 0, 68, 12, 68, 12);
+
 		if (DisablePictureAdditionalProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/ingot_1.png"));
 			this.blit(ms, this.leftPos + 7, this.topPos + 35, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock2Procedure.execute(world, x, y, z)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 27, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/additional.png"));
+			this.blit(ms, this.leftPos + 26, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureBlock1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 8, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			this.blit(ms, this.leftPos + 7, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureDyeProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/dye.png"));
@@ -126,7 +130,7 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_decorations.label_furniture"), 2, 5, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_decorations.label_furniture"), 5, -2, -12829636);
 	}
 
 	@Override
@@ -163,7 +167,7 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		});
 		guistate.put("button:imagebutton_chisel", imagebutton_chisel);
 		this.addRenderableWidget(imagebutton_chisel);
-		imagebutton_tab_deselect1 = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect1.png"), 32, 64, e -> {
+		imagebutton_tab_deselect1 = new ImageButton(this.leftPos + 0, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect1.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureDecorationsButtonMessage(3, x, y, z));
 				FurnitureDecorationsButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -171,7 +175,7 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		});
 		guistate.put("button:imagebutton_tab_deselect1", imagebutton_tab_deselect1);
 		this.addRenderableWidget(imagebutton_tab_deselect1);
-		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
+		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureDecorationsButtonMessage(4, x, y, z));
 				FurnitureDecorationsButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -179,7 +183,7 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		});
 		guistate.put("button:imagebutton_oak_wood", imagebutton_oak_wood);
 		this.addRenderableWidget(imagebutton_oak_wood);
-		imagebutton_tab_deselect2 = new ImageButton(this.leftPos + 32, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect2.png"), 32, 64, e -> {
+		imagebutton_tab_deselect2 = new ImageButton(this.leftPos + 32, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect2.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureDecorationsButtonMessage(5, x, y, z));
 				FurnitureDecorationsButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -187,7 +191,7 @@ public class FurnitureDecorationsScreen extends AbstractContainerScreen<Furnitur
 		});
 		guistate.put("button:imagebutton_tab_deselect2", imagebutton_tab_deselect2);
 		this.addRenderableWidget(imagebutton_tab_deselect2);
-		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
+		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureDecorationsButtonMessage(6, x, y, z));
 				FurnitureDecorationsButtonMessage.handleButtonAction(entity, 6, x, y, z);

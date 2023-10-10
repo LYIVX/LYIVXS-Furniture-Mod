@@ -53,9 +53,9 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 3 && mouseX < leftPos + 27 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_chisel.tooltip_empty"), mouseX, mouseY);
-		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -25 && mouseY < topPos + -1)
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + -31 && mouseY < topPos + -7)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_chisel.tooltip_empty2"), mouseX, mouseY);
 		if (mouseX > leftPos + 69 && mouseX < leftPos + 93 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.furniture_chisel.tooltip_empty3"), mouseX, mouseY);
@@ -76,7 +76,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (DisablePictureBlock1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
-			this.blit(ms, this.leftPos + 18, this.topPos + 17, 0, 0, 14, 14, 14, 14);
+			this.blit(ms, this.leftPos + 17, this.topPos + 16, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisablePictureToolProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/chisel_slot.png"));
@@ -91,6 +91,9 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/chisel.png"));
 		this.blit(ms, this.leftPos + 135, this.topPos + -25, 0, 0, 24, 24, 24, 24);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_large.png"));
+		this.blit(ms, this.leftPos + 0, this.topPos + -6, 0, 0, 68, 12, 68, 12);
 
 		RenderSystem.disableBlend();
 	}
@@ -111,7 +114,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_chisel.label_furniture"), 8, 5, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.furniture_chisel.label_furniture"), 5, -2, -12829636);
 	}
 
 	@Override
@@ -148,7 +151,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		});
 		guistate.put("button:imagebutton_computer", imagebutton_computer);
 		this.addRenderableWidget(imagebutton_computer);
-		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
+		imagebutton_tab_deselect_left_edge = new ImageButton(this.leftPos + 0, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_left_edge.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureChiselButtonMessage(3, x, y, z));
 				FurnitureChiselButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -156,7 +159,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		});
 		guistate.put("button:imagebutton_tab_deselect_left_edge", imagebutton_tab_deselect_left_edge);
 		this.addRenderableWidget(imagebutton_tab_deselect_left_edge);
-		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
+		imagebutton_oak_wood = new ImageButton(this.leftPos + 4, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_oak_wood.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureChiselButtonMessage(4, x, y, z));
 				FurnitureChiselButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -164,7 +167,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		});
 		guistate.put("button:imagebutton_oak_wood", imagebutton_oak_wood);
 		this.addRenderableWidget(imagebutton_oak_wood);
-		imagebutton_tab_deselect = new ImageButton(this.leftPos + 32, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect.png"), 32, 64, e -> {
+		imagebutton_tab_deselect = new ImageButton(this.leftPos + 32, this.topPos + -35, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureChiselButtonMessage(5, x, y, z));
 				FurnitureChiselButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -172,7 +175,7 @@ public class FurnitureChiselScreen extends AbstractContainerScreen<FurnitureChis
 		});
 		guistate.put("button:imagebutton_tab_deselect", imagebutton_tab_deselect);
 		this.addRenderableWidget(imagebutton_tab_deselect);
-		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
+		imagebutton_iron_ingot = new ImageButton(this.leftPos + 36, this.topPos + -31, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_iron_ingot.png"), 24, 48, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureChiselButtonMessage(6, x, y, z));
 				FurnitureChiselButtonMessage.handleButtonAction(entity, 6, x, y, z);
