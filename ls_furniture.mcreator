@@ -18286,726 +18286,6 @@
       "path": "~/Any Blocks - Items"
     },
     {
-      "name": "PathRecipe1",
-      "type": "procedure",
-      "sortid": 948,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe2",
-      "type": "procedure",
-      "sortid": 949,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe3",
-      "type": "procedure",
-      "sortid": 950,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe4",
-      "type": "procedure",
-      "sortid": 951,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe5",
-      "type": "procedure",
-      "sortid": 952,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe6",
-      "type": "procedure",
-      "sortid": 953,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe7",
-      "type": "procedure",
-      "sortid": 954,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe8",
-      "type": "procedure",
-      "sortid": 955,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_8",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe8Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe9",
-      "type": "procedure",
-      "sortid": 956,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_9",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe9Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe10",
-      "type": "procedure",
-      "sortid": 957,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_10",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe10Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe11",
-      "type": "procedure",
-      "sortid": 958,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_11",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe11Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe12",
-      "type": "procedure",
-      "sortid": 959,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_12",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe12Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe13",
-      "type": "procedure",
-      "sortid": 960,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_13",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe13Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe14",
-      "type": "procedure",
-      "sortid": 961,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_14",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe14Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe15",
-      "type": "procedure",
-      "sortid": 962,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_15",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe15Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe16",
-      "type": "procedure",
-      "sortid": 963,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_16",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe16Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe17",
-      "type": "procedure",
-      "sortid": 964,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_17",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe17Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe18",
-      "type": "procedure",
-      "sortid": 965,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_18",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe18Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe19",
-      "type": "procedure",
-      "sortid": 966,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_19",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe19Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
-      "name": "PathRecipe20",
-      "type": "procedure",
-      "sortid": 967,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "path_recipe_20",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipe20Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Paths"
-    },
-    {
       "name": "ComputerRecipe",
       "type": "procedure",
       "sortid": 969,
@@ -25318,38 +24598,6 @@
       "path": "~/Furniture Crafter/Chisel"
     },
     {
-      "name": "ChiselPro1",
-      "type": "procedure",
-      "sortid": 1222,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_pro_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
       "name": "Chisel",
       "type": "item",
       "sortid": 1226,
@@ -26377,6 +25625,254 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "ChiselPro1",
+      "type": "procedure",
+      "sortid": 1285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chisel_pro_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Chisel"
+    },
+    {
+      "name": "PathRecipeCaller",
+      "type": "procedure",
+      "sortid": 1286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "path_recipe_caller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/PathRecipeCallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "OakPathRecipe",
+      "type": "procedure",
+      "sortid": 1287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oak_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OakPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "DarkOakPathRecipe",
+      "type": "procedure",
+      "sortid": 1288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dark_oak_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/DarkOakPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "SprucePathRecipe",
+      "type": "procedure",
+      "sortid": 1289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spruce_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/SprucePathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "AcaciaPathRecipe",
+      "type": "procedure",
+      "sortid": 1290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/AcaciaPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "BirchPathRecipe",
+      "type": "procedure",
+      "sortid": 1291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "birch_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/BirchPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "JunglePathRecipe",
+      "type": "procedure",
+      "sortid": 1292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jungle_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/JunglePathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "MangrovePathRecipe",
+      "type": "procedure",
+      "sortid": 1293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mangrove_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/MangrovePathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "CrimsonPathRecipe",
+      "type": "procedure",
+      "sortid": 1294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CrimsonPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "WarpedPathRecipe",
+      "type": "procedure",
+      "sortid": 1295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_path_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/WarpedPathRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
     }
   ],
   "variable_elements": [

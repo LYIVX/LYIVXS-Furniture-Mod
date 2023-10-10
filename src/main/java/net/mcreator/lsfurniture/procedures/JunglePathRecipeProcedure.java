@@ -12,10 +12,11 @@ import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 import java.util.function.Supplier;
 import java.util.Map;
 
-public class CobblestonePathRecipeProcedure {
+public class JunglePathRecipeProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		double Slot0Number = 0;
 		if (new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -26,7 +27,7 @@ public class CobblestonePathRecipeProcedure {
 				return 0;
 			}
 		}.getAmount(0) >= 1
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLESTONE.asItem()
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Blocks.JUNGLE_PLANKS.asItem()
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -39,19 +40,19 @@ public class CobblestonePathRecipeProcedure {
 				}.getAmount(1) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.CHISEL.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_1.get());
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.JUNGLE_PLANK_PATH_1.get());
 				_setstack.setCount(4);
 				((Slot) _slots.get(2)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_2.get());
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.JUNGLE_PLANK_PATH_2.get());
 				_setstack.setCount(4);
 				((Slot) _slots.get(3)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_3.get());
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.JUNGLE_PLANK_PATH_3.get());
 				_setstack.setCount(4);
 				((Slot) _slots.get(4)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

@@ -771,7 +771,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			ChiselPro1Procedure.execute(world, x, y, z);
+			ChiselPro1Procedure.execute(world, x, y, z, entity);
 		}
 	}
 }
