@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 276,
+    "width": 212,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -17,15 +17,16 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 0,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 88,
-          "y": 53
+          "x": 114,
+          "y": 52
         }
       },
       {
@@ -35,15 +36,16 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 1,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 106,
-          "y": 53
+          "x": 133,
+          "y": 52
         }
       },
       {
@@ -53,14 +55,15 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementMetal"
           },
           "id": 2,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 88,
+          "x": 114,
           "y": 71
         }
       },
@@ -71,14 +74,15 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementDye"
           },
           "id": 3,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 106,
+          "x": 133,
           "y": 71
         }
       },
@@ -89,101 +93,16 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementTool"
           },
           "id": 4,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 97,
-          "y": 89
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 5,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 304,
-          "y": 53
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 6,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 322,
-          "y": 53
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 7,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 304,
-          "y": 71
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 8,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 322,
-          "y": 71
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 9,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 313,
-          "y": 89
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect1",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenMetalMenu"
-          },
-          "x": 108,
-          "y": 8
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect2",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenTeddysMenu"
-          },
-          "x": 141,
-          "y": 8
+          "x": 133,
+          "y": 90
         }
       },
       {
@@ -195,7 +114,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 79,
+          "x": 111,
           "y": 12
         }
       },
@@ -208,7 +127,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 112,
+          "x": 144,
           "y": 12
         }
       },
@@ -221,7 +140,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 145,
+          "x": 177,
           "y": 12
         }
       },
@@ -230,14 +149,227 @@
         "data": {
           "name": "label_furniture",
           "text": {
-            "fixedValue": "Decoration"
+            "fixedValue": "Decorations"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 80,
-          "y": 43
+          "x": 110,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ingot_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureAdditional"
+          },
+          "x": 115,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureBlock2"
+          },
+          "x": 135,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureBlock1"
+          },
+          "x": 116,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dye.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureDye"
+          },
+          "x": 134,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tool.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureTool"
+          },
+          "x": 134,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_question_mark",
+          "image": "book_brown.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GiveGuideBook"
+          },
+          "x": 115,
+          "y": 91
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_recipe_explainer",
+          "text": {
+            "fixedValue": "Recipe Explainer"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 109,
+          "y": 89
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_decorations",
+          "text": {
+            "fixedValue": "Decorations"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 210,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenChiselMenu"
+          },
+          "x": 239,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_chisel",
+          "image": "chisel.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenChiselMenu"
+          },
+          "x": 243,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_chisel",
+          "text": {
+            "fixedValue": "Chisel"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 243,
+          "y": 12
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 156,
+          "y": 45
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 173,
+          "y": 45
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 190,
+          "y": 45
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 207,
+          "y": 45
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 224,
+          "y": 45
         }
       },
       {
@@ -245,11 +377,14 @@
         "data": {
           "id": 10,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 137,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 241,
+          "y": 45
         }
       },
       {
@@ -257,11 +392,14 @@
         "data": {
           "id": 11,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 154,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 258,
+          "y": 45
         }
       },
       {
@@ -269,11 +407,14 @@
         "data": {
           "id": 12,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 171,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 275,
+          "y": 45
         }
       },
       {
@@ -281,11 +422,14 @@
         "data": {
           "id": 13,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 188,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 292,
+          "y": 45
         }
       },
       {
@@ -293,11 +437,14 @@
         "data": {
           "id": 14,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 205,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 156,
+          "y": 63
         }
       },
       {
@@ -305,11 +452,14 @@
         "data": {
           "id": 15,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 222,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 173,
+          "y": 63
         }
       },
       {
@@ -317,11 +467,14 @@
         "data": {
           "id": 16,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 239,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 190,
+          "y": 63
         }
       },
       {
@@ -329,11 +482,14 @@
         "data": {
           "id": 17,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 256,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 207,
+          "y": 63
         }
       },
       {
@@ -341,11 +497,14 @@
         "data": {
           "id": 18,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 273,
-          "y": 46
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 224,
+          "y": 63
         }
       },
       {
@@ -353,11 +512,14 @@
         "data": {
           "id": 19,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 137,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 241,
+          "y": 63
         }
       },
       {
@@ -365,11 +527,14 @@
         "data": {
           "id": 20,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 154,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 258,
+          "y": 63
         }
       },
       {
@@ -377,11 +542,14 @@
         "data": {
           "id": 21,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 171,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 275,
+          "y": 63
         }
       },
       {
@@ -389,11 +557,14 @@
         "data": {
           "id": 22,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 188,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 292,
+          "y": 63
         }
       },
       {
@@ -401,11 +572,14 @@
         "data": {
           "id": 23,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 205,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 156,
+          "y": 81
         }
       },
       {
@@ -413,11 +587,14 @@
         "data": {
           "id": 24,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 222,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 173,
+          "y": 81
         }
       },
       {
@@ -425,11 +602,14 @@
         "data": {
           "id": 25,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 239,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 190,
+          "y": 81
         }
       },
       {
@@ -437,11 +617,14 @@
         "data": {
           "id": 26,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 256,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 207,
+          "y": 81
         }
       },
       {
@@ -449,11 +632,14 @@
         "data": {
           "id": 27,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 273,
-          "y": 64
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 224,
+          "y": 81
         }
       },
       {
@@ -461,11 +647,14 @@
         "data": {
           "id": 28,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 137,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 241,
+          "y": 81
         }
       },
       {
@@ -473,11 +662,14 @@
         "data": {
           "id": 29,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 154,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 258,
+          "y": 81
         }
       },
       {
@@ -485,11 +677,14 @@
         "data": {
           "id": 30,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 171,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 275,
+          "y": 81
         }
       },
       {
@@ -497,11 +692,14 @@
         "data": {
           "id": 31,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 188,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 292,
+          "y": 81
         }
       },
       {
@@ -509,11 +707,14 @@
         "data": {
           "id": 32,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 205,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 156,
+          "y": 99
         }
       },
       {
@@ -521,11 +722,14 @@
         "data": {
           "id": 33,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 222,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 173,
+          "y": 99
         }
       },
       {
@@ -533,11 +737,14 @@
         "data": {
           "id": 34,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 239,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 190,
+          "y": 99
         }
       },
       {
@@ -545,11 +752,14 @@
         "data": {
           "id": 35,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 256,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 207,
+          "y": 99
         }
       },
       {
@@ -557,11 +767,14 @@
         "data": {
           "id": 36,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 273,
-          "y": 82
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 224,
+          "y": 99
         }
       },
       {
@@ -569,11 +782,14 @@
         "data": {
           "id": 37,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 137,
-          "y": 100
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 241,
+          "y": 99
         }
       },
       {
@@ -581,11 +797,14 @@
         "data": {
           "id": 38,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 154,
-          "y": 100
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 258,
+          "y": 99
         }
       },
       {
@@ -593,11 +812,14 @@
         "data": {
           "id": 39,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 171,
-          "y": 100
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
+          },
+          "x": 275,
+          "y": 99
         }
       },
       {
@@ -605,125 +827,53 @@
         "data": {
           "id": 40,
           "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 188,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 41,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 205,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 42,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 222,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 43,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 239,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 44,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 256,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 45,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 273,
-          "y": 100
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 46,
-          "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
-          "x": 97,
-          "y": 125
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "triangle_arrow_down.png",
-          "use1Xscale": false,
-          "x": 98,
-          "y": 108
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "triangle_arrow_down.png",
-          "use1Xscale": false,
-          "x": 314,
-          "y": 108
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 47,
-          "disablePickup": {
-            "fixedValue": true
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "FurnitureCrafterBetaPro2"
           },
-          "dropItemsWhenNotBound": false,
-          "x": 313,
-          "y": 125
+          "x": 292,
+          "y": 99
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "furniture_crafter_brown_background.png",
+          "use1Xscale": false,
+          "x": 156,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_select.png",
+          "use1Xscale": false,
+          "x": 206,
+          "y": 6
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "computer.png",
+          "use1Xscale": false,
+          "x": 211,
+          "y": 12
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_tab_deselect_left_edge",
+          "name": "imagebutton_tab_deselect1",
           "image": "tab_deselect_left_edge.png",
           "hoveredImage": "",
           "onClick": {
             "name": "OpenWoodMenu"
           },
-          "x": 75,
+          "x": 107,
           "y": 8
         }
       },
@@ -736,8 +886,21 @@
           "onClick": {
             "name": "OpenWoodMenu"
           },
-          "x": 80,
+          "x": 112,
           "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect2",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 140,
+          "y": 8
         }
       },
       {
@@ -749,23 +912,21 @@
           "onClick": {
             "name": "OpenMetalMenu"
           },
-          "x": 112,
+          "x": 144,
           "y": 12
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_recipe",
-          "text": {
-            "fixedValue": "Recipe"
+          "name": "imagebutton_tab_deselect3",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 306,
-          "y": 43
+          "x": 173,
+          "y": 8
         }
       },
       {
@@ -777,150 +938,13 @@
           "onClick": {
             "name": "OpenTeddysMenu"
           },
-          "x": 145,
-          "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_question_mark",
-          "image": "question_mark.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenExplainerMenu"
-          },
-          "x": 98,
-          "y": 147
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_recipe_explainer",
-          "text": {
-            "fixedValue": "Recipe Explainer"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 94,
-          "y": 144
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "furniture_crafter_brown_background.png",
-          "use1Xscale": false,
-          "x": 136,
-          "y": 45
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "block.png",
-          "use1Xscale": false,
-          "x": 90,
-          "y": 55
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "block.png",
-          "use1Xscale": false,
-          "x": 108,
-          "y": 55
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "ingot_1.png",
-          "use1Xscale": false,
-          "x": 89,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "dye.png",
-          "use1Xscale": false,
-          "x": 107,
-          "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tool.png",
-          "use1Xscale": false,
-          "x": 98,
-          "y": 90
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab_select.png",
-          "use1Xscale": false,
-          "x": 174,
-          "y": 6
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_furniture_crafter_button_default",
-          "image": "furniture_crafter_button_default.png",
-          "hoveredImage": "furniture_crafter_button_highlighted.png",
-          "onClick": {
-            "name": "DecorationsButton0"
-          },
-          "x": 137,
-          "y": 46
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_furniture_crafter_button_default1",
-          "image": "furniture_crafter_button_default.png",
-          "hoveredImage": "furniture_crafter_button_highlighted.png",
-          "onClick": {
-            "name": "DecorationsButton1"
-          },
-          "x": 154,
-          "y": 46
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "computer.png",
-          "use1Xscale": false,
-          "x": 179,
-          "y": 12
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_decorations",
-          "text": {
-            "fixedValue": "Decorations"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 178,
+          "x": 177,
           "y": 12
         }
       }
     ],
     "onTick": {
-      "name": "FurnitureDecorationsGUIIsOPened"
+      "name": "DecorationsPro1"
     },
     "onClosed": {
       "name": "FurnitureCrafterBetaPro3"
@@ -928,8 +952,8 @@
     "gridSettings": {
       "sx": 18,
       "sy": 18,
-      "ox": 12,
-      "oy": 11,
+      "ox": 11,
+      "oy": 15,
       "snapOnGrid": false
     }
   }

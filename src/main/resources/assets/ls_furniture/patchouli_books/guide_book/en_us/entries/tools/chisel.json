@@ -1,0 +1,21 @@
+{
+    "name": "Chisel",
+    "icon": "ls_furniture:chisel",
+    "category": "ls_furniture:tools",
+	"sortnum": 1,
+    "pages": [
+		{
+			"type": "patchouli:crafting",
+			"recipe": "ls_furniture:chisel_recipe"
+		},
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:tools/saw", 
+				"ls_furniture:tools/chisel", 
+				"ls_furniture:tools/hammer", 
+				"ls_furniture:tools/shear", 
+			]
+		}
+    ]
+}

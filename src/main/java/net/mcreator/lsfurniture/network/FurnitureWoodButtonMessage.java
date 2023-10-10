@@ -14,9 +14,9 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
 import net.mcreator.lsfurniture.procedures.OpenTeddysMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenMetalMenuProcedure;
-import net.mcreator.lsfurniture.procedures.OpenExplainerMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenDecorationsMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenChiselMenuProcedure;
+import net.mcreator.lsfurniture.procedures.GiveGuideBookProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -84,7 +84,7 @@ public class FurnitureWoodButtonMessage {
 		}
 		if (buttonID == 4) {
 
-			OpenExplainerMenuProcedure.execute(world, x, y, z, entity);
+			GiveGuideBookProcedure.execute(world, x, y, z);
 		}
 		if (buttonID == 5) {
 

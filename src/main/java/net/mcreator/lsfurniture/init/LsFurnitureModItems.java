@@ -13,12 +13,21 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.lsfurniture.item.WarpedBarkItem;
+import net.mcreator.lsfurniture.item.SpruceBarkItem;
 import net.mcreator.lsfurniture.item.ShearItem;
 import net.mcreator.lsfurniture.item.SawItem;
+import net.mcreator.lsfurniture.item.OakBarkItem;
+import net.mcreator.lsfurniture.item.MangroveBarkItem;
+import net.mcreator.lsfurniture.item.JungleBarkItem;
 import net.mcreator.lsfurniture.item.HammerItem;
+import net.mcreator.lsfurniture.item.DarkOakBrakItem;
+import net.mcreator.lsfurniture.item.CrimsonBarkItem;
 import net.mcreator.lsfurniture.item.ChiselItem;
+import net.mcreator.lsfurniture.item.BirchBarkItem;
 import net.mcreator.lsfurniture.item.AnyIngotItem;
 import net.mcreator.lsfurniture.item.AnyDyeItem;
+import net.mcreator.lsfurniture.item.AcaciaBarkItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobeDisplayItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobe1DisplayItem;
@@ -702,6 +711,15 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_BOTTOM_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_BOTTOM_CLOSED, null);
 	public static final RegistryObject<Item> CHISEL = REGISTRY.register("chisel", () -> new ChiselItem());
 	public static final RegistryObject<Item> OAK_PLANK_PATH_8 = block(LsFurnitureModBlocks.OAK_PLANK_PATH_8, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_BARK = REGISTRY.register("oak_bark", () -> new OakBarkItem());
+	public static final RegistryObject<Item> DARK_OAK_BRAK = REGISTRY.register("dark_oak_brak", () -> new DarkOakBrakItem());
+	public static final RegistryObject<Item> SPRUCE_BARK = REGISTRY.register("spruce_bark", () -> new SpruceBarkItem());
+	public static final RegistryObject<Item> ACACIA_BARK = REGISTRY.register("acacia_bark", () -> new AcaciaBarkItem());
+	public static final RegistryObject<Item> BIRCH_BARK = REGISTRY.register("birch_bark", () -> new BirchBarkItem());
+	public static final RegistryObject<Item> JUNGLE_BARK = REGISTRY.register("jungle_bark", () -> new JungleBarkItem());
+	public static final RegistryObject<Item> MANGROVE_BARK = REGISTRY.register("mangrove_bark", () -> new MangroveBarkItem());
+	public static final RegistryObject<Item> CRIMSON_BARK = REGISTRY.register("crimson_bark", () -> new CrimsonBarkItem());
+	public static final RegistryObject<Item> WARPED_BARK = REGISTRY.register("warped_bark", () -> new WarpedBarkItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

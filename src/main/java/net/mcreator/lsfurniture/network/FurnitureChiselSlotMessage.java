@@ -70,6 +70,38 @@ public class FurnitureChiselSlotMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (slot == 2 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 3 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 4 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 5 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 6 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 7 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 8 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
+		if (slot == 9 && changeType == 1) {
+
+			ChiselPro2Procedure.execute(world, x, y, z, entity);
+		}
 		if (slot == 10 && changeType == 1) {
 
 			ChiselPro2Procedure.execute(world, x, y, z, entity);
@@ -178,39 +210,7 @@ public class FurnitureChiselSlotMessage {
 
 			ChiselPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 37 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 2 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 3 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 4 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 5 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 6 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 7 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 8 && changeType == 1) {
-
-			ChiselPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 9 && changeType == 1) {
+		if (slot == 38 && changeType == 1) {
 
 			ChiselPro2Procedure.execute(world, x, y, z, entity);
 		}

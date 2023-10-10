@@ -1,0 +1,36 @@
+{
+    "name": "Drainer",
+    "icon": "ls_furniture:drainer",
+    "category": "ls_furniture:metal_tab",
+	"sortnum": 3,
+    "pages": [
+        {
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_ingot",
+			"input1": "minecraft:iron_ingot",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:drainer",
+			
+			"text": ""
+        },
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:metal_tab/fridge",
+				"ls_furniture:metal_tab/oven",
+				"ls_furniture:metal_tab/vent",
+				"ls_furniture:metal_tab/drainer",
+				"ls_furniture:metal_tab/rack",
+				"ls_furniture:metal_tab/microwave",
+				"ls_furniture:metal_tab/kettle",
+				"ls_furniture:metal_tab/toaster"
+			]
+		}
+    ]
+}

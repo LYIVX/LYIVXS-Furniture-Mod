@@ -293,13 +293,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_question_mark",
-          "image": "question_mark.png",
+          "image": "book_brown.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "OpenExplainerMenu"
+            "name": "GiveGuideBook"
           },
           "x": 115,
-          "y": 90
+          "y": 91
         }
       },
       {

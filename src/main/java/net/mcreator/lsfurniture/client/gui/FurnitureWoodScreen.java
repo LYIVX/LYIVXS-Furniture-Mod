@@ -172,7 +172,7 @@ public class FurnitureWoodScreen extends AbstractContainerScreen<FurnitureWoodMe
 		});
 		guistate.put("button:imagebutton_toddys", imagebutton_toddys);
 		this.addRenderableWidget(imagebutton_toddys);
-		imagebutton_question_mark = new ImageButton(this.leftPos + 7, this.topPos + 53, 16, 18, 0, 0, 18, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_question_mark.png"), 16, 36, e -> {
+		imagebutton_question_mark = new ImageButton(this.leftPos + 7, this.topPos + 54, 16, 16, 0, 0, 16, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_question_mark.png"), 16, 32, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureWoodButtonMessage(4, x, y, z));
 				FurnitureWoodButtonMessage.handleButtonAction(entity, 4, x, y, z);

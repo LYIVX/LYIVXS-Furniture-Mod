@@ -1,0 +1,21 @@
+{
+    "name": "SHammer",
+    "icon": "ls_furniture:hammer",
+    "category": "ls_furniture:tools",
+	"sortnum": 2,
+    "pages": [
+		{
+			"type": "patchouli:crafting",
+			"recipe": "ls_furniture:hammer_recipe"
+		},
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:tools/saw", 
+				"ls_furniture:tools/chisel", 
+				"ls_furniture:tools/hammer", 
+				"ls_furniture:tools/shear", 
+			]
+		}
+    ]
+}

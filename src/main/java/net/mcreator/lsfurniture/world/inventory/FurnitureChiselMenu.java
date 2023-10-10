@@ -22,6 +22,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.lsfurniture.procedures.DisablePlacementToolProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementProcedure;
 import net.mcreator.lsfurniture.procedures.ChiselPro3Procedure;
 import net.mcreator.lsfurniture.procedures.ChiselPro1Procedure;
 import net.mcreator.lsfurniture.network.FurnitureChiselSlotMessage;
@@ -50,7 +52,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 		super(LsFurnitureModMenus.FURNITURE_CHISEL.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
-		this.internal = new ItemStackHandler(38);
+		this.internal = new ItemStackHandler(39);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -85,405 +87,23 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 11, 20) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 17, 16) {
 			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 11, 40) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 17, 35) {
 			private final int slot = 1;
-		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 173, 9) {
-			private final int slot = 10;
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(10, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementToolProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 37, 27) {
-			private final int slot = 11;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(11, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 54, 27) {
-			private final int slot = 12;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(12, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 71, 27) {
-			private final int slot = 13;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(13, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 88, 27) {
-			private final int slot = 14;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(14, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 105, 27) {
-			private final int slot = 15;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(15, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 122, 27) {
-			private final int slot = 16;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(16, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 139, 27) {
-			private final int slot = 17;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(17, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 156, 27) {
-			private final int slot = 18;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(18, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 173, 27) {
-			private final int slot = 19;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(19, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 37, 45) {
-			private final int slot = 20;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(20, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 54, 45) {
-			private final int slot = 21;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(21, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 71, 45) {
-			private final int slot = 22;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(22, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 88, 45) {
-			private final int slot = 23;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(23, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 105, 45) {
-			private final int slot = 24;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(24, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 122, 45) {
-			private final int slot = 25;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(25, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 139, 45) {
-			private final int slot = 26;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(26, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 156, 45) {
-			private final int slot = 27;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(27, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 173, 45) {
-			private final int slot = 28;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(28, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 37, 63) {
-			private final int slot = 29;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(29, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 54, 63) {
-			private final int slot = 30;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(30, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 71, 63) {
-			private final int slot = 31;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(31, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 88, 63) {
-			private final int slot = 32;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(32, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 105, 63) {
-			private final int slot = 33;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(33, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 122, 63) {
-			private final int slot = 34;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(34, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 139, 63) {
-			private final int slot = 35;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(35, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 156, 63) {
-			private final int slot = 36;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(36, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 173, 63) {
-			private final int slot = 37;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(37, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 37, 9) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 49, 9) {
 			private final int slot = 2;
 
 			@Override
@@ -497,7 +117,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 54, 9) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 66, 9) {
 			private final int slot = 3;
 
 			@Override
@@ -511,7 +131,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 71, 9) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 83, 9) {
 			private final int slot = 4;
 
 			@Override
@@ -525,7 +145,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 88, 9) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 100, 9) {
 			private final int slot = 5;
 
 			@Override
@@ -539,7 +159,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 105, 9) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 117, 9) {
 			private final int slot = 6;
 
 			@Override
@@ -553,7 +173,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 122, 9) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 134, 9) {
 			private final int slot = 7;
 
 			@Override
@@ -567,7 +187,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 139, 9) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 9) {
 			private final int slot = 8;
 
 			@Override
@@ -581,7 +201,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 156, 9) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 168, 9) {
 			private final int slot = 9;
 
 			@Override
@@ -595,11 +215,403 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 185, 9) {
+			private final int slot = 10;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(10, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 49, 27) {
+			private final int slot = 11;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(11, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 66, 27) {
+			private final int slot = 12;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(12, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 83, 27) {
+			private final int slot = 13;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(13, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 100, 27) {
+			private final int slot = 14;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(14, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 117, 27) {
+			private final int slot = 15;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(15, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 134, 27) {
+			private final int slot = 16;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(16, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 27) {
+			private final int slot = 17;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(17, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 168, 27) {
+			private final int slot = 18;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(18, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 185, 27) {
+			private final int slot = 19;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(19, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 49, 45) {
+			private final int slot = 20;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(20, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 66, 45) {
+			private final int slot = 21;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(21, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 83, 45) {
+			private final int slot = 22;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(22, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 100, 45) {
+			private final int slot = 23;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(23, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 117, 45) {
+			private final int slot = 24;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(24, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 134, 45) {
+			private final int slot = 25;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(25, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 151, 45) {
+			private final int slot = 26;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(26, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 168, 45) {
+			private final int slot = 27;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(27, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 185, 45) {
+			private final int slot = 28;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(28, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 49, 63) {
+			private final int slot = 29;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(29, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 66, 63) {
+			private final int slot = 30;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(30, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 83, 63) {
+			private final int slot = 31;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(31, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 100, 63) {
+			private final int slot = 32;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(32, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 117, 63) {
+			private final int slot = 33;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(33, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 134, 63) {
+			private final int slot = 34;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(34, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 151, 63) {
+			private final int slot = 35;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(35, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 168, 63) {
+			private final int slot = 36;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(36, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
+		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 185, 63) {
+			private final int slot = 38;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(38, 1, 0);
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
+		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 12 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 18 + 8 + sj * 18, 0 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 12 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 18 + 8 + si * 18, 0 + 142));
 	}
 
 	@Override
@@ -730,118 +742,10 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
-					if (j == 10)
-						continue;
-					if (j == 11)
-						continue;
-					if (j == 12)
-						continue;
-					if (j == 13)
-						continue;
-					if (j == 14)
-						continue;
-					if (j == 15)
-						continue;
-					if (j == 16)
-						continue;
-					if (j == 17)
-						continue;
-					if (j == 18)
-						continue;
-					if (j == 19)
-						continue;
-					if (j == 20)
-						continue;
-					if (j == 21)
-						continue;
-					if (j == 22)
-						continue;
-					if (j == 23)
-						continue;
-					if (j == 24)
-						continue;
-					if (j == 25)
-						continue;
-					if (j == 26)
-						continue;
-					if (j == 27)
-						continue;
-					if (j == 28)
-						continue;
-					if (j == 29)
-						continue;
-					if (j == 30)
-						continue;
-					if (j == 31)
-						continue;
-					if (j == 32)
-						continue;
-					if (j == 33)
-						continue;
-					if (j == 34)
-						continue;
-					if (j == 35)
-						continue;
-					if (j == 36)
-						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
-					if (i == 10)
-						continue;
-					if (i == 11)
-						continue;
-					if (i == 12)
-						continue;
-					if (i == 13)
-						continue;
-					if (i == 14)
-						continue;
-					if (i == 15)
-						continue;
-					if (i == 16)
-						continue;
-					if (i == 17)
-						continue;
-					if (i == 18)
-						continue;
-					if (i == 19)
-						continue;
-					if (i == 20)
-						continue;
-					if (i == 21)
-						continue;
-					if (i == 22)
-						continue;
-					if (i == 23)
-						continue;
-					if (i == 24)
-						continue;
-					if (i == 25)
-						continue;
-					if (i == 26)
-						continue;
-					if (i == 27)
-						continue;
-					if (i == 28)
-						continue;
-					if (i == 29)
-						continue;
-					if (i == 30)
-						continue;
-					if (i == 31)
-						continue;
-					if (i == 32)
-						continue;
-					if (i == 33)
-						continue;
-					if (i == 34)
-						continue;
-					if (i == 35)
-						continue;
-					if (i == 36)
-						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}
@@ -867,7 +771,7 @@ public class FurnitureChiselMenu extends AbstractContainerMenu implements Suppli
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			ChiselPro1Procedure.execute(world, x, y, z, entity);
+			ChiselPro1Procedure.execute(world, x, y, z);
 		}
 	}
 }

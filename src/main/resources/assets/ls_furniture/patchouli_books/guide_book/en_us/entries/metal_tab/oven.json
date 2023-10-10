@@ -1,0 +1,156 @@
+{
+    "name": "Oven",
+    "icon": "ls_furniture:oak_oven",
+    "category": "ls_furniture:metal_tab",
+	"sortnum": 1,
+    "pages": [
+        {
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "lminecraft:oak_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:oak_oven",
+			
+			"text": ""
+        },
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:metal_tab/fridge",
+				"ls_furniture:metal_tab/oven",
+				"ls_furniture:metal_tab/vent",
+				"ls_furniture:metal_tab/drainer",
+				"ls_furniture:metal_tab/rack",
+				"ls_furniture:metal_tab/microwave",
+				"ls_furniture:metal_tab/kettle",
+				"ls_furniture:metal_tab/toaster"
+			]
+		},
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:dark_oak_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:dark_oak_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:spruce_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:spruce_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:acacia_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:acacia_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:birch_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:birch_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:jungle_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:jungle_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:mangrove_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:mangrove_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:crimson_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:crimson_oven",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Metal Tab",
+			
+			"input0": "minecraft:iron_block",
+			"input1": "minecraft:warped_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:hammer",
+			
+			"output1": "ls_furniture:warped_oven",
+			
+			"text": ""
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "name": "Cupboard Vent",
+    "icon": "ls_furniture:oak_cupboard_vent",
+    "category": "ls_furniture:wood_tab",
+	"sortnum": 10,
+    "pages": [
+        {
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:oak_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:oak_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:wood_tab/sofa",
+				"ls_furniture:wood_tab/chair",
+				"ls_furniture:wood_tab/stool",
+				"ls_furniture:wood_tab/table",
+				"ls_furniture:wood_tab/wardrobe",
+				"ls_furniture:wood_tab/desk",
+				"ls_furniture:wood_tab/drawer",
+				"ls_furniture:wood_tab/counter",
+				"ls_furniture:wood_tab/sink",
+				"ls_furniture:wood_tab/cupboard",
+				"ls_furniture:wood_tab/cupboard_vent",
+				"ls_furniture:wood_tab/shelve"
+			]
+		},
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:wood_tab/mailbox"
+			]
+		},
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:dark_oak_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:dark_oak_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:spruce_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:spruce_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:acacia_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:acacia_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:birch_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:birch_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:jungle_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:jungle_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:mangrove_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:mangrove_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:crimson_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:crimson_cupboard_vent",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "ls_furniture:warped_cupboard",
+			"input1": "ls_furniture:oven_vent",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:warped_cupboard_vent",
+			
+			"text": ""
+        }
+    ]
+}

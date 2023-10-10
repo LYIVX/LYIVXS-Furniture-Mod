@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 200,
+    "width": 212,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -17,7 +17,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 0,
           "disablePickup": {
@@ -25,33 +26,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 124,
-          "y": 56
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect1",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenMetalMenu"
-          },
-          "x": 146,
-          "y": 8
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect2",
-          "image": "tab_deselect.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenTeddysMenu"
-          },
-          "x": 179,
-          "y": 8
+          "y": 52
         }
       },
       {
@@ -61,7 +36,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementTool"
           },
           "id": 1,
           "disablePickup": {
@@ -69,7 +45,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 124,
-          "y": 76
+          "y": 71
         }
       },
       {
@@ -81,7 +57,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 117,
+          "x": 111,
           "y": 12
         }
       },
@@ -94,7 +70,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 150,
+          "x": 144,
           "y": 12
         }
       },
@@ -107,7 +83,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 183,
+          "x": 177,
           "y": 12
         }
       },
@@ -122,493 +98,45 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 120,
-          "y": 44
+          "x": 116,
+          "y": 42
         }
       },
       {
-        "type": "outputslot",
+        "type": "image",
         "data": {
-          "id": 10,
-          "disablePickup": {
-            "fixedValue": false
+          "image": "block.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureBlock1"
           },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 286,
-          "y": 45
+          "x": 126,
+          "y": 54
         }
       },
       {
-        "type": "outputslot",
+        "type": "image",
         "data": {
-          "id": 11,
-          "disablePickup": {
-            "fixedValue": false
+          "image": "chisel_slot.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisablePictureTool"
           },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 150,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 12,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 167,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 13,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 184,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 14,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 201,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 15,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 218,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 16,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 235,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 17,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 252,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 18,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 269,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 19,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 286,
-          "y": 63
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 20,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 150,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 21,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 167,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 22,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 184,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 23,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 201,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 24,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 218,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 25,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 235,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 26,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 252,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 27,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 269,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 28,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 286,
-          "y": 81
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 29,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 150,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 30,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 167,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 31,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 184,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 32,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 201,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 33,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 218,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 34,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 235,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 35,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 252,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 36,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 269,
-          "y": 99
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 37,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "ChiselPro2"
-          },
-          "x": 286,
-          "y": 99
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_tab_deselect_left_edge",
-          "image": "tab_deselect_left_edge.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenWoodMenu"
-          },
-          "x": 113,
-          "y": 8
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_oak_wood",
-          "image": "oak_wood.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenWoodMenu"
-          },
-          "x": 118,
-          "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_iron_ingot",
-          "image": "iron_ingot.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenMetalMenu"
-          },
-          "x": 150,
-          "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_toddys",
-          "image": "toddys.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "OpenTeddysMenu"
-          },
-          "x": 183,
-          "y": 12
+          "x": 125,
+          "y": 72
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_question_mark",
-          "image": "question_mark.png",
+          "image": "book_brown.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "OpenExplainerMenu"
+            "name": "GiveGuideBook"
           },
           "x": 125,
-          "y": 98
+          "y": 93
         }
       },
       {
@@ -621,37 +149,7 @@
           "width": 24,
           "height": 24,
           "x": 121,
-          "y": 95
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "block.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "DisablePictureBlock1"
-          },
-          "x": 126,
-          "y": 58
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab_select.png",
-          "use1Xscale": false,
-          "x": 245,
-          "y": 6
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "computer.png",
-          "use1Xscale": false,
-          "x": 224,
-          "y": 10
+          "y": 89
         }
       },
       {
@@ -663,7 +161,20 @@
           },
           "width": 24,
           "height": 24,
-          "x": 216,
+          "x": 210,
+          "y": 12
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_chisel",
+          "text": {
+            "fixedValue": "Chisel"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 243,
           "y": 12
         }
       },
@@ -678,7 +189,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 150,
+          "x": 156,
           "y": 45
         }
       },
@@ -693,7 +204,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 167,
+          "x": 173,
           "y": 45
         }
       },
@@ -708,7 +219,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 184,
+          "x": 190,
           "y": 45
         }
       },
@@ -723,7 +234,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 201,
+          "x": 207,
           "y": 45
         }
       },
@@ -738,7 +249,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 218,
+          "x": 224,
           "y": 45
         }
       },
@@ -753,7 +264,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 235,
+          "x": 241,
           "y": 45
         }
       },
@@ -768,7 +279,7 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 252,
+          "x": 258,
           "y": 45
         }
       },
@@ -783,20 +294,428 @@
           "onTakenFromSlot": {
             "name": "ChiselPro2"
           },
-          "x": 269,
+          "x": 275,
           "y": 45
         }
       },
       {
-        "type": "image",
+        "type": "outputslot",
         "data": {
-          "image": "tool.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "DisablePictureBlock3"
+          "id": 10,
+          "disablePickup": {
+            "fixedValue": false
           },
-          "x": 74,
-          "y": 74
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 292,
+          "y": 45
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 11,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 156,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 12,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 173,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 13,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 190,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 14,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 207,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 15,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 224,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 16,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 241,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 17,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 258,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 18,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 275,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 19,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 292,
+          "y": 63
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 20,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 156,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 21,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 173,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 22,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 190,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 23,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 207,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 24,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 224,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 25,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 241,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 26,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 258,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 27,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 275,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 28,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 292,
+          "y": 81
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 29,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 156,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 30,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 173,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 31,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 190,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 32,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 207,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 33,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 224,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 34,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 241,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 35,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 258,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 36,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 275,
+          "y": 99
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 38,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ChiselPro2"
+          },
+          "x": 292,
+          "y": 99
         }
       },
       {
@@ -804,20 +723,20 @@
         "data": {
           "image": "furniture_crafter_brown_background.png",
           "use1Xscale": false,
-          "x": 150,
+          "x": 156,
           "y": 44
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_tab_deselect",
+          "name": "imagebutton_tab_deselect1",
           "image": "tab_deselect.png",
           "hoveredImage": "",
           "onClick": {
             "name": "OpenDecorationsMenu"
           },
-          "x": 212,
+          "x": 206,
           "y": 8
         }
       },
@@ -830,8 +749,17 @@
           "onClick": {
             "name": "OpenDecorationsMenu"
           },
-          "x": 217,
+          "x": 211,
           "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_select.png",
+          "use1Xscale": false,
+          "x": 239,
+          "y": 6
         }
       },
       {
@@ -839,20 +767,85 @@
         "data": {
           "image": "chisel.png",
           "use1Xscale": false,
-          "x": 249,
+          "x": 243,
           "y": 12
         }
       },
       {
-        "type": "tooltip",
+        "type": "imagebutton",
         "data": {
-          "name": "tooltip_chisel",
-          "text": {
-            "fixedValue": "Chisel"
+          "name": "imagebutton_tab_deselect_left_edge",
+          "image": "tab_deselect_left_edge.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
           },
-          "width": 24,
-          "height": 24,
-          "x": 249,
+          "x": 107,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_oak_wood",
+          "image": "oak_wood.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenWoodMenu"
+          },
+          "x": 112,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 140,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_iron_ingot",
+          "image": "iron_ingot.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenMetalMenu"
+          },
+          "x": 144,
+          "y": 12
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_deselect2",
+          "image": "tab_deselect.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 173,
+          "y": 8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_toddys",
+          "image": "toddys.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTeddysMenu"
+          },
+          "x": 177,
           "y": 12
         }
       }
@@ -866,8 +859,8 @@
     "gridSettings": {
       "sx": 18,
       "sy": 18,
-      "ox": 12,
-      "oy": 11,
+      "ox": 11,
+      "oy": 15,
       "snapOnGrid": false
     }
   }

@@ -6,7 +6,6 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
@@ -16,9 +15,7 @@ import net.mcreator.lsfurniture.init.LsFurnitureModItems;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class ChiselPro1Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		String tag = "";
 		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -37,7 +34,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetStonePathsProcedure.execute(world, x, y, z);
 		} else if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -55,7 +51,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetBlackStonePathsProcedure.execute(entity);
 		} else if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -73,7 +68,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetDeepslatePathsProcedure.execute(entity);
 		} else if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -91,7 +85,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetAndesitePathsProcedure.execute(entity);
 		} else if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -109,7 +102,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetDioritePathsProcedure.execute(entity);
 		} else if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -127,7 +119,6 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModItems.CHISEL.get()) {
-			SetGranitePathsProcedure.execute(entity);
 		} else {
 			{
 				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));

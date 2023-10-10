@@ -22,9 +22,15 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.procedures.FurnitureTeddyGUIIsOpenedProcedure;
+import net.mcreator.lsfurniture.procedures.TeddysPro1Procedure;
 import net.mcreator.lsfurniture.procedures.FurnitureCrafterBetaPro3Procedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementToolProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementMetalProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementDyeProcedure;
+import net.mcreator.lsfurniture.network.FurnitureTeddysSlotMessage;
 import net.mcreator.lsfurniture.init.LsFurnitureModMenus;
+import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -48,7 +54,7 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 		super(LsFurnitureModMenus.FURNITURE_TEDDYS.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
-		this.internal = new ItemStackHandler(48);
+		this.internal = new ItemStackHandler(41);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -83,27 +89,53 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 13, 17) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 16) {
 			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 31, 17) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 26, 16) {
 			private final int slot = 1;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 13, 35) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 7, 35) {
 			private final int slot = 2;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementMetalProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 31, 35) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 26, 35) {
 			private final int slot = 3;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementDyeProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 22, 53) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 26, 54) {
 			private final int slot = 4;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementToolProcedure.execute(itemstack);
+			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 229, 17) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 49, 9) {
 			private final int slot = 5;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(5, 1, 0);
 			}
 
 			@Override
@@ -111,12 +143,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 247, 17) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 66, 9) {
 			private final int slot = 6;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(6, 1, 0);
 			}
 
 			@Override
@@ -124,12 +157,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 229, 35) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 83, 9) {
 			private final int slot = 7;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(7, 1, 0);
 			}
 
 			@Override
@@ -137,12 +171,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 247, 35) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 100, 9) {
 			private final int slot = 8;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(8, 1, 0);
 			}
 
 			@Override
@@ -150,12 +185,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 238, 53) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 117, 9) {
 			private final int slot = 9;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(9, 1, 0);
 			}
 
 			@Override
@@ -163,12 +199,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 62, 10) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 134, 9) {
 			private final int slot = 10;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(10, 1, 0);
 			}
 
 			@Override
@@ -176,12 +213,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 79, 10) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 151, 9) {
 			private final int slot = 11;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(11, 1, 0);
 			}
 
 			@Override
@@ -189,12 +227,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 96, 10) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 168, 9) {
 			private final int slot = 12;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(12, 1, 0);
 			}
 
 			@Override
@@ -202,12 +241,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 113, 10) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 185, 9) {
 			private final int slot = 13;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(13, 1, 0);
 			}
 
 			@Override
@@ -215,12 +255,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 130, 10) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 49, 27) {
 			private final int slot = 14;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(14, 1, 0);
 			}
 
 			@Override
@@ -228,12 +269,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 147, 10) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 66, 27) {
 			private final int slot = 15;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(15, 1, 0);
 			}
 
 			@Override
@@ -241,12 +283,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 164, 10) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 83, 27) {
 			private final int slot = 16;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(16, 1, 0);
 			}
 
 			@Override
@@ -254,12 +297,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 181, 10) {
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 100, 27) {
 			private final int slot = 17;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(17, 1, 0);
 			}
 
 			@Override
@@ -267,12 +311,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 198, 10) {
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 117, 27) {
 			private final int slot = 18;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(18, 1, 0);
 			}
 
 			@Override
@@ -280,12 +325,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 62, 28) {
+		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 134, 27) {
 			private final int slot = 19;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(19, 1, 0);
 			}
 
 			@Override
@@ -293,12 +339,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 79, 28) {
+		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 151, 27) {
 			private final int slot = 20;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(20, 1, 0);
 			}
 
 			@Override
@@ -306,12 +353,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 96, 28) {
+		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 168, 27) {
 			private final int slot = 21;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(21, 1, 0);
 			}
 
 			@Override
@@ -319,12 +367,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 113, 28) {
+		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 185, 27) {
 			private final int slot = 22;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(22, 1, 0);
 			}
 
 			@Override
@@ -332,12 +381,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 130, 28) {
+		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 49, 45) {
 			private final int slot = 23;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(23, 1, 0);
 			}
 
 			@Override
@@ -345,12 +395,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 147, 28) {
+		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 66, 45) {
 			private final int slot = 24;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(24, 1, 0);
 			}
 
 			@Override
@@ -358,12 +409,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 164, 28) {
+		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 83, 45) {
 			private final int slot = 25;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(25, 1, 0);
 			}
 
 			@Override
@@ -371,12 +423,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 181, 28) {
+		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 100, 45) {
 			private final int slot = 26;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(26, 1, 0);
 			}
 
 			@Override
@@ -384,12 +437,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 198, 28) {
+		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 117, 45) {
 			private final int slot = 27;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(27, 1, 0);
 			}
 
 			@Override
@@ -397,12 +451,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 62, 46) {
+		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 134, 45) {
 			private final int slot = 28;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(28, 1, 0);
 			}
 
 			@Override
@@ -410,12 +465,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 79, 46) {
+		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 151, 45) {
 			private final int slot = 29;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(29, 1, 0);
 			}
 
 			@Override
@@ -423,12 +479,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 96, 46) {
+		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 168, 45) {
 			private final int slot = 30;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(30, 1, 0);
 			}
 
 			@Override
@@ -436,12 +493,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 113, 46) {
+		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 185, 45) {
 			private final int slot = 31;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(31, 1, 0);
 			}
 
 			@Override
@@ -449,12 +507,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 130, 46) {
+		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 49, 63) {
 			private final int slot = 32;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(32, 1, 0);
 			}
 
 			@Override
@@ -462,12 +521,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 147, 46) {
+		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 66, 63) {
 			private final int slot = 33;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(33, 1, 0);
 			}
 
 			@Override
@@ -475,12 +535,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 164, 46) {
+		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 83, 63) {
 			private final int slot = 34;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(34, 1, 0);
 			}
 
 			@Override
@@ -488,12 +549,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 181, 46) {
+		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 100, 63) {
 			private final int slot = 35;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(35, 1, 0);
 			}
 
 			@Override
@@ -501,12 +563,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 198, 46) {
+		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 117, 63) {
 			private final int slot = 36;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(36, 1, 0);
 			}
 
 			@Override
@@ -514,12 +577,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 62, 64) {
+		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 134, 63) {
 			private final int slot = 37;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(37, 1, 0);
 			}
 
 			@Override
@@ -527,12 +591,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 79, 64) {
+		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 151, 63) {
 			private final int slot = 38;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(38, 1, 0);
 			}
 
 			@Override
@@ -540,12 +605,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(39, this.addSlot(new SlotItemHandler(internal, 39, 96, 64) {
+		this.customSlots.put(39, this.addSlot(new SlotItemHandler(internal, 39, 168, 63) {
 			private final int slot = 39;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(39, 1, 0);
 			}
 
 			@Override
@@ -553,98 +619,13 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 				return false;
 			}
 		}));
-		this.customSlots.put(40, this.addSlot(new SlotItemHandler(internal, 40, 113, 64) {
+		this.customSlots.put(40, this.addSlot(new SlotItemHandler(internal, 40, 185, 63) {
 			private final int slot = 40;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(41, this.addSlot(new SlotItemHandler(internal, 41, 130, 64) {
-			private final int slot = 41;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(42, this.addSlot(new SlotItemHandler(internal, 42, 147, 64) {
-			private final int slot = 42;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(43, this.addSlot(new SlotItemHandler(internal, 43, 164, 64) {
-			private final int slot = 43;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(44, this.addSlot(new SlotItemHandler(internal, 44, 181, 64) {
-			private final int slot = 44;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(45, this.addSlot(new SlotItemHandler(internal, 45, 198, 64) {
-			private final int slot = 45;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(46, this.addSlot(new SlotItemHandler(internal, 46, 22, 89) {
-			private final int slot = 46;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(47, this.addSlot(new SlotItemHandler(internal, 47, 238, 89) {
-			private final int slot = 47;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(40, 1, 0);
 			}
 
 			@Override
@@ -654,9 +635,9 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 50 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 18 + 8 + sj * 18, 0 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 50 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 18 + 8 + si * 18, 0 + 142));
 	}
 
 	@Override
@@ -679,16 +660,16 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 48) {
-				if (!this.moveItemStackTo(itemstack1, 48, this.slots.size(), true))
+			if (index < 41) {
+				if (!this.moveItemStackTo(itemstack1, 41, this.slots.size(), true))
 					return ItemStack.EMPTY;
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 48, false)) {
-				if (index < 48 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 48 + 27, this.slots.size(), true))
+			} else if (!this.moveItemStackTo(itemstack1, 0, 41, false)) {
+				if (index < 41 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 41 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 48, 48 + 27, false))
+					if (!this.moveItemStackTo(itemstack1, 41, 41 + 27, false))
 						return ItemStack.EMPTY;
 				}
 				return ItemStack.EMPTY;
@@ -787,165 +768,20 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
-					if (j == 10)
-						continue;
-					if (j == 11)
-						continue;
-					if (j == 12)
-						continue;
-					if (j == 13)
-						continue;
-					if (j == 14)
-						continue;
-					if (j == 15)
-						continue;
-					if (j == 16)
-						continue;
-					if (j == 17)
-						continue;
-					if (j == 18)
-						continue;
-					if (j == 19)
-						continue;
-					if (j == 20)
-						continue;
-					if (j == 21)
-						continue;
-					if (j == 22)
-						continue;
-					if (j == 23)
-						continue;
-					if (j == 24)
-						continue;
-					if (j == 25)
-						continue;
-					if (j == 26)
-						continue;
-					if (j == 27)
-						continue;
-					if (j == 28)
-						continue;
-					if (j == 29)
-						continue;
-					if (j == 30)
-						continue;
-					if (j == 31)
-						continue;
-					if (j == 32)
-						continue;
-					if (j == 33)
-						continue;
-					if (j == 34)
-						continue;
-					if (j == 35)
-						continue;
-					if (j == 36)
-						continue;
-					if (j == 37)
-						continue;
-					if (j == 38)
-						continue;
-					if (j == 39)
-						continue;
-					if (j == 40)
-						continue;
-					if (j == 41)
-						continue;
-					if (j == 42)
-						continue;
-					if (j == 43)
-						continue;
-					if (j == 44)
-						continue;
-					if (j == 45)
-						continue;
-					if (j == 46)
-						continue;
-					if (j == 47)
-						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
-					if (i == 10)
-						continue;
-					if (i == 11)
-						continue;
-					if (i == 12)
-						continue;
-					if (i == 13)
-						continue;
-					if (i == 14)
-						continue;
-					if (i == 15)
-						continue;
-					if (i == 16)
-						continue;
-					if (i == 17)
-						continue;
-					if (i == 18)
-						continue;
-					if (i == 19)
-						continue;
-					if (i == 20)
-						continue;
-					if (i == 21)
-						continue;
-					if (i == 22)
-						continue;
-					if (i == 23)
-						continue;
-					if (i == 24)
-						continue;
-					if (i == 25)
-						continue;
-					if (i == 26)
-						continue;
-					if (i == 27)
-						continue;
-					if (i == 28)
-						continue;
-					if (i == 29)
-						continue;
-					if (i == 30)
-						continue;
-					if (i == 31)
-						continue;
-					if (i == 32)
-						continue;
-					if (i == 33)
-						continue;
-					if (i == 34)
-						continue;
-					if (i == 35)
-						continue;
-					if (i == 36)
-						continue;
-					if (i == 37)
-						continue;
-					if (i == 38)
-						continue;
-					if (i == 39)
-						continue;
-					if (i == 40)
-						continue;
-					if (i == 41)
-						continue;
-					if (i == 42)
-						continue;
-					if (i == 43)
-						continue;
-					if (i == 44)
-						continue;
-					if (i == 45)
-						continue;
-					if (i == 46)
-						continue;
-					if (i == 47)
-						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}
+		}
+	}
+
+	private void slotChanged(int slotid, int ctype, int meta) {
+		if (this.world != null && this.world.isClientSide()) {
+			LsFurnitureMod.PACKET_HANDLER.sendToServer(new FurnitureTeddysSlotMessage(slotid, x, y, z, ctype, meta));
+			FurnitureTeddysSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 
@@ -961,7 +797,7 @@ public class FurnitureTeddysMenu extends AbstractContainerMenu implements Suppli
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			FurnitureTeddyGUIIsOpenedProcedure.execute(entity);
+			TeddysPro1Procedure.execute(world, x, y, z, entity);
 		}
 	}
 }

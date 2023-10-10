@@ -1,0 +1,166 @@
+{
+    "name": "Wardrobe",
+    "icon": "ls_furniture:oak_wardrobe_0",
+    "category": "ls_furniture:wood_tab",
+	"sortnum": 4,
+    "pages": [
+        {
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:oak_planks",
+			"input1": "minecraft:oak_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:oak_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:wood_tab/sofa",
+				"ls_furniture:wood_tab/chair",
+				"ls_furniture:wood_tab/stool",
+				"ls_furniture:wood_tab/table",
+				"ls_furniture:wood_tab/wardrobe",
+				"ls_furniture:wood_tab/desk",
+				"ls_furniture:wood_tab/drawer",
+				"ls_furniture:wood_tab/counter",
+				"ls_furniture:wood_tab/sink",
+				"ls_furniture:wood_tab/cupboard",
+				"ls_furniture:wood_tab/cupboard_vent",
+				"ls_furniture:wood_tab/shelve"
+			]
+		},
+		{
+			"type": "patchouli:relations",
+			"entries": [
+				"ls_furniture:wood_tab/mailbox"
+			]
+		},
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:dark_oak_planks",
+			"input1": "minecraft:dark_oak_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:dark_oak_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:spruce_planks",
+			"input1": "minecraft:spruce_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:spruce_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:acacia_planks",
+			"input1": "minecraft:acacia_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:acacia_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:birch_planks",
+			"input1": "minecraft:birch_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:birch_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:jungle_planks",
+			"input1": "minecraft:jungle_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:jungle_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:mangrove_planks",
+			"input1": "minecraft:mangrove_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:mangrove_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:crimson_planks",
+			"input1": "minecraft:crimson_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:crimson_wardrobe_0",
+			
+			"text": ""
+        },
+		{
+            "type": "ls_furniture:furniture_crafter",
+			
+			"title": "Wood Tab",
+			
+			"input0": "minecraft:warped_planks",
+			"input1": "minecraft:warped_planks",
+			"input2": "minecraft:air",
+			"input3": "minecraft:air",
+			"input4": "ls_furniture:saw",
+			
+			"output1": "ls_furniture:warped_wardrobe_0",
+			
+			"text": ""
+        }
+    ]
+}

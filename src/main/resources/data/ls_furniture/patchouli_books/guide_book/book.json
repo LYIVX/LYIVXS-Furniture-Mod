@@ -1,8 +1,10 @@
 {
-    "name": "Arbituary Things Guide",
-    "landing_text": "Arbituary Things",
-    "version": 1,
-    "creative_tab": "a_t:arbituary_things",
+    "name": "LYIVX'S Furniture",
+    "landing_text": "LYIVX'S Furniture",
+    "creative_tab": "ls_furniture:tab",
     "use_resource_pack": true,
-	"text_overflow_mode": "resize"
+	"text_overflow_mode": "resize",
+	"use_blocky_font": true,
+	"subtitle": "Crafting Guide",
+	"show_progress": false
 }

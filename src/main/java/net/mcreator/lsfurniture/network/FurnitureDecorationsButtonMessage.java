@@ -15,9 +15,8 @@ import net.mcreator.lsfurniture.world.inventory.FurnitureDecorationsMenu;
 import net.mcreator.lsfurniture.procedures.OpenWoodMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenTeddysMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenMetalMenuProcedure;
-import net.mcreator.lsfurniture.procedures.OpenExplainerMenuProcedure;
-import net.mcreator.lsfurniture.procedures.DecorationsButton1Procedure;
-import net.mcreator.lsfurniture.procedures.DecorationsButton0Procedure;
+import net.mcreator.lsfurniture.procedures.OpenChiselMenuProcedure;
+import net.mcreator.lsfurniture.procedures.GiveGuideBookProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -69,15 +68,15 @@ public class FurnitureDecorationsButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
+			GiveGuideBookProcedure.execute(world, x, y, z);
 		}
 		if (buttonID == 1) {
 
-			OpenTeddysMenuProcedure.execute(world, x, y, z, entity);
+			OpenChiselMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
+			OpenChiselMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
@@ -85,23 +84,23 @@ public class FurnitureDecorationsButtonMessage {
 		}
 		if (buttonID == 4) {
 
-			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
+			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			OpenTeddysMenuProcedure.execute(world, x, y, z, entity);
+			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 6) {
 
-			OpenExplainerMenuProcedure.execute(world, x, y, z, entity);
+			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 7) {
 
-			DecorationsButton0Procedure.execute(world, x, y, z, entity);
+			OpenTeddysMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 8) {
 
-			DecorationsButton1Procedure.execute(world, x, y, z, entity);
+			OpenTeddysMenuProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

@@ -12,22 +12,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.lsfurniture.world.inventory.FurnitureTeddysMenu;
-import net.mcreator.lsfurniture.procedures.TeddyButton9Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton8Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton7Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton6Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton5Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton4Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton3Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton2Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton1Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton11Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton10Procedure;
-import net.mcreator.lsfurniture.procedures.TeddyButton0Procedure;
 import net.mcreator.lsfurniture.procedures.OpenWoodMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenMetalMenuProcedure;
-import net.mcreator.lsfurniture.procedures.OpenExplainerMenuProcedure;
 import net.mcreator.lsfurniture.procedures.OpenDecorationsMenuProcedure;
+import net.mcreator.lsfurniture.procedures.OpenChiselMenuProcedure;
+import net.mcreator.lsfurniture.procedures.GiveGuideBookProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -79,79 +68,39 @@ public class FurnitureTeddysButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
+			GiveGuideBookProcedure.execute(world, x, y, z);
 		}
 		if (buttonID == 1) {
 
-			TeddyButton0Procedure.execute(x, y, z, entity);
+			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			TeddyButton1Procedure.execute(x, y, z, entity);
+			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			TeddyButton2Procedure.execute(x, y, z, entity);
+			OpenChiselMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			TeddyButton3Procedure.execute(x, y, z, entity);
+			OpenChiselMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			TeddyButton4Procedure.execute(x, y, z, entity);
+			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 6) {
 
-			TeddyButton5Procedure.execute(x, y, z, entity);
+			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 7) {
 
-			TeddyButton6Procedure.execute(x, y, z, entity);
+			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 8) {
 
-			TeddyButton7Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 9) {
-
-			TeddyButton8Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 10) {
-
-			TeddyButton9Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 11) {
-
-			TeddyButton10Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 12) {
-
-			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 13) {
-
-			OpenWoodMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 14) {
-
 			OpenMetalMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 15) {
-
-			OpenExplainerMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 16) {
-
-			TeddyButton11Procedure.execute(x, y, z, entity);
-		}
-		if (buttonID == 17) {
-
-			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 18) {
-
-			OpenDecorationsMenuProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
