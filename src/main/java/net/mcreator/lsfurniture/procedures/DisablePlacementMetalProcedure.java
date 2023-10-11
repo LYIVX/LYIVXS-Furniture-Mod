@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class DisablePlacementMetalProcedure {
 	public static boolean execute(ItemStack itemstack) {
-		if (itemstack.is(ItemTags.create(new ResourceLocation("forge:metal")))) {
+		if (itemstack.is(ItemTags.create(new ResourceLocation("forge:ingots"))) || itemstack.is(ItemTags.create(new ResourceLocation("forge:dusts"))) || itemstack.is(ItemTags.create(new ResourceLocation("ls_furniture:bark")))) {
 			return false;
 		}
 		return true;

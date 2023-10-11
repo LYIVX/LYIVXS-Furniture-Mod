@@ -8,27 +8,6 @@ repositories {
 }
 
 minecraft {
-    runs {
-        client {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-        }
-    }
-}
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:jade-324717:4096513")
-   runtimeOnly fg.deobf("curse.maven:jade-324717:4096513")
-}
-
-minecraft {
   runs {
       client {
           property 'mixin.env.remapRefMap', 'true'
@@ -131,23 +110,4 @@ minecraft {
         }
       }
          }
-
-repositories {
-  maven {
-    // location of the maven that hosts JEI files
-    name = "Progwml6 maven"
-    url = "https://dvs1.progwml6.com/files/maven/"
-  }    
-  maven {
-    // location of a maven mirror for JEI files, as a fallback
-    name = "ModMaven"
-    url = "https://modmaven.dev"
-  }   
-}
-
-dependencies {
-  compileOnly fg.deobf("mezz.jei:jei-1.19.2-common-api:11.4.0.286")
-  compileOnly fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.4.0.286")
-  runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.4.0.286")
-}
 

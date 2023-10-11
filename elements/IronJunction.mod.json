@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "table_junction:iron_glass",
+    "customModelName": "table_junction_glass:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,

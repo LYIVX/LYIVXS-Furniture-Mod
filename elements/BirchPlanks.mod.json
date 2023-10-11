@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#2"
+      },
+      {
+        "value": "CUSTOM:BirchBricks1"
+      },
+      {
+        "value": "CUSTOM:BirchBricks1Non"
+      },
+      {
+        "value": "CUSTOM:BirchHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_planks",
+    "namespace": "mod"
+  }
+}

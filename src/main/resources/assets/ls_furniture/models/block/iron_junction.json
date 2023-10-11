@@ -1,9 +1,9 @@
 {
-  "parent": "ls_furniture:custom/table_junction",
+  "parent": "ls_furniture:custom/table_junction_glass",
   "textures": {
     "all": "ls_furniture:blocks/iron_junction",
     "particle": "ls_furniture:blocks/iron_junction",
-    "1": "ls_furniture:blocks/iron_junction"
+    "2": "ls_furniture:blocks/iron_junction"
   },
   "render_type": "cutout_mipped"
 }

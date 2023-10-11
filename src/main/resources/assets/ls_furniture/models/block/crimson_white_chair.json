@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:custom/chair",
+  "textures": {
+    "all": "ls_furniture:blocks/crimson_planks",
+    "particle": "ls_furniture:blocks/crimson_planks",
+    "1": "ls_furniture:blocks/crimson_stem_animation",
+    "2": "ls_furniture:blocks/stripped_crimson",
+    "3": "ls_furniture:blocks/white_wool"
+  },
+  "render_type": "cutout_mipped"
+}

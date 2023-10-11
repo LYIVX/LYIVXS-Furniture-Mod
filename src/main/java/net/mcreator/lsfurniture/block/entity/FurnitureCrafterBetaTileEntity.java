@@ -33,7 +33,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
+import net.mcreator.lsfurniture.world.inventory.WoodGUIMenu;
 import net.mcreator.lsfurniture.init.LsFurnitureModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -44,7 +44,7 @@ import io.netty.buffer.Unpooled;
 
 public class FurnitureCrafterBetaTileEntity extends RandomizableContainerBlockEntity implements IAnimatable, WorldlyContainer {
 	public AnimationFactory factory = GeckoLibUtil.createFactory(this);
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(51, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(34, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public FurnitureCrafterBetaTileEntity(BlockPos pos, BlockState state) {
@@ -135,7 +135,7 @@ public class FurnitureCrafterBetaTileEntity extends RandomizableContainerBlockEn
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new FurnitureWoodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return new WoodGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override
@@ -155,98 +155,6 @@ public class FurnitureCrafterBetaTileEntity extends RandomizableContainerBlockEn
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 5)
-			return false;
-		if (index == 6)
-			return false;
-		if (index == 7)
-			return false;
-		if (index == 8)
-			return false;
-		if (index == 9)
-			return false;
-		if (index == 10)
-			return false;
-		if (index == 11)
-			return false;
-		if (index == 12)
-			return false;
-		if (index == 13)
-			return false;
-		if (index == 14)
-			return false;
-		if (index == 15)
-			return false;
-		if (index == 16)
-			return false;
-		if (index == 17)
-			return false;
-		if (index == 18)
-			return false;
-		if (index == 19)
-			return false;
-		if (index == 20)
-			return false;
-		if (index == 21)
-			return false;
-		if (index == 22)
-			return false;
-		if (index == 23)
-			return false;
-		if (index == 24)
-			return false;
-		if (index == 25)
-			return false;
-		if (index == 26)
-			return false;
-		if (index == 27)
-			return false;
-		if (index == 28)
-			return false;
-		if (index == 29)
-			return false;
-		if (index == 30)
-			return false;
-		if (index == 31)
-			return false;
-		if (index == 32)
-			return false;
-		if (index == 33)
-			return false;
-		if (index == 34)
-			return false;
-		if (index == 35)
-			return false;
-		if (index == 36)
-			return false;
-		if (index == 37)
-			return false;
-		if (index == 38)
-			return false;
-		if (index == 39)
-			return false;
-		if (index == 40)
-			return false;
-		if (index == 41)
-			return false;
-		if (index == 42)
-			return false;
-		if (index == 43)
-			return false;
-		if (index == 44)
-			return false;
-		if (index == 45)
-			return false;
-		if (index == 46)
-			return false;
-		if (index == 47)
-			return false;
-		if (index == 48)
-			return false;
-		if (index == 49)
-			return false;
-		if (index == 50)
-			return false;
 		return true;
 	}
 
@@ -262,16 +170,6 @@ public class FurnitureCrafterBetaTileEntity extends RandomizableContainerBlockEn
 
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
-		if (index == 0)
-			return false;
-		if (index == 1)
-			return false;
-		if (index == 2)
-			return false;
-		if (index == 3)
-			return false;
-		if (index == 4)
-			return false;
 		return true;
 	}
 

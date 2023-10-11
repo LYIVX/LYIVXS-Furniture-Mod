@@ -9,6 +9,12 @@
       },
       {
         "value": "CUSTOM:Saw"
+      },
+      {
+        "value": "CUSTOM:Hammer"
+      },
+      {
+        "value": "CUSTOM:Shear"
       }
     ],
     "blocks": [],

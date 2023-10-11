@@ -123,5 +123,58 @@ public class ChiselPro3Procedure {
 				}
 			}
 		}
+		if (((new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount() >= 1) {
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = ((new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos(x, y, z), 2)).copy());
+				_setstack.setCount(((new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						BlockEntity _ent = world.getBlockEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+						return _retval.get();
+					}
+				}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount());
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 2;
+					final int _amount = ((new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable) {
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
+							_stk.shrink(_amount);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
+						}
+					});
+				}
+			}
+		}
 	}
 }

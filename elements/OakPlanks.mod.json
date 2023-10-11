@@ -1,0 +1,135 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#0"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedOakSmallBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakBigBricks"
+      },
+      {
+        "value": "CUSTOM:FramedOakBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:FramedOakHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:FramedOakVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakWavey"
+      },
+      {
+        "value": "CUSTOM:FramedOakWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakMosaic"
+      },
+      {
+        "value": "CUSTOM:FramedOakMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakDiagonal"
+      },
+      {
+        "value": "CUSTOM:FramedOakDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakDunes"
+      },
+      {
+        "value": "CUSTOM:FramedOakDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakCheckered"
+      },
+      {
+        "value": "CUSTOM:FramedOakCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakChecked"
+      },
+      {
+        "value": "CUSTOM:FramedOakChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakSwirl"
+      },
+      {
+        "value": "CUSTOM:FramedOakSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakPlus"
+      },
+      {
+        "value": "CUSTOM:FramedOakPlus"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakSlash"
+      },
+      {
+        "value": "CUSTOM:FramedOakSlash"
+      },
+      {
+        "value": "CUSTOM:OakBigBricks"
+      },
+      {
+        "value": "CUSTOM:OakSmallBricks"
+      },
+      {
+        "value": "CUSTOM:OakHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:OakVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:OakWavey"
+      },
+      {
+        "value": "CUSTOM:OakMosaic"
+      },
+      {
+        "value": "CUSTOM:OakDiagonal"
+      },
+      {
+        "value": "CUSTOM:OakDunes"
+      },
+      {
+        "value": "CUSTOM:OakCheckered"
+      },
+      {
+        "value": "CUSTOM:OakChecked"
+      },
+      {
+        "value": "CUSTOM:OakSwirl"
+      },
+      {
+        "value": "CUSTOM:OakPlus"
+      },
+      {
+        "value": "CUSTOM:OakSlash"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_planks",
+    "namespace": "mod"
+  }
+}

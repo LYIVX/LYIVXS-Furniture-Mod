@@ -8,9 +8,13 @@ public class DisablePlacementProcedure {
 	public static boolean execute(ItemStack itemstack) {
 		if (itemstack.is(ItemTags.create(new ResourceLocation("forge:tool")))) {
 			return true;
-		} else if (itemstack.is(ItemTags.create(new ResourceLocation("forge:metal")))) {
+		} else if (itemstack.is(ItemTags.create(new ResourceLocation("forge:ingots")))) {
 			return true;
-		} else if (itemstack.is(ItemTags.create(new ResourceLocation("forge:dye")))) {
+		} else if (itemstack.is(ItemTags.create(new ResourceLocation("forge:dyes")))) {
+			return true;
+		} else if (itemstack.is(ItemTags.create(new ResourceLocation("ls_furniture:bark")))) {
+			return true;
+		} else if (itemstack.is(ItemTags.create(new ResourceLocation("forge:dusts")))) {
 			return true;
 		}
 		return false;

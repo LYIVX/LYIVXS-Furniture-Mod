@@ -44,7 +44,7 @@ public class MangroveDeskRecipeProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.MANGROVE_DESK.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(8)).set(_setstack);
+				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

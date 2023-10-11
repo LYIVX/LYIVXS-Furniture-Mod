@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureChiselMenu;
+import net.mcreator.lsfurniture.world.inventory.ChiselGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -27,12 +27,12 @@ public class OpenChiselMenuProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("FurnitureChisel");
+						return Component.literal("ChiselGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FurnitureChiselMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new ChiselGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

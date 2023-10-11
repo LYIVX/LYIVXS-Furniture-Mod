@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakBark"
+      },
+      {
+        "value": "CUSTOM:DarkOakBrak"
+      },
+      {
+        "value": "CUSTOM:SpruceBark"
+      },
+      {
+        "value": "CUSTOM:AcaciaBark"
+      },
+      {
+        "value": "CUSTOM:BirchBark"
+      },
+      {
+        "value": "CUSTOM:JungleBark"
+      },
+      {
+        "value": "CUSTOM:MangroveBark"
+      },
+      {
+        "value": "CUSTOM:CrimsonBark"
+      },
+      {
+        "value": "CUSTOM:WarpedBark"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "bark",
+    "namespace": "mod"
+  }
+}

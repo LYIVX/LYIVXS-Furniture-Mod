@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#5"
+      },
+      {
+        "value": "CUSTOM:DarkOakBricks1"
+      },
+      {
+        "value": "CUSTOM:DarkOakBricks1Non"
+      },
+      {
+        "value": "CUSTOM:DarkOakHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "darkoak_planks",
+    "namespace": "forge"
+  }
+}

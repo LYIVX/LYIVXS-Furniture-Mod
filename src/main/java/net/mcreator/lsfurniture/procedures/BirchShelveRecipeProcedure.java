@@ -36,9 +36,9 @@ public class BirchShelveRecipeProcedure {
 						}
 						return 0;
 					}
-				}.getAmount(1) >= 1
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.BIRCH_BARK.get()
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
+				}.getAmount(2) >= 1
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.BIRCH_BARK.get()
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
 					public int getAmount(int sltid) {
@@ -54,7 +54,7 @@ public class BirchShelveRecipeProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.BIRCH_SHELVE.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(12)).set(_setstack);
+				((Slot) _slots.get(9)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.MANGROVE_PLANKS"
+      },
+      {
+        "value": "CUSTOM:MangroveBricks1"
+      },
+      {
+        "value": "CUSTOM:MangroveBricks1Non"
+      },
+      {
+        "value": "CUSTOM:MangroveHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_planks",
+    "namespace": "mod"
+  }
+}

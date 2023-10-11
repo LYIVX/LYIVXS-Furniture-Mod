@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureMetalMenu;
+import net.mcreator.lsfurniture.world.inventory.MetalGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -27,12 +27,12 @@ public class OpenMetalMenuProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("FurnitureMetal");
+						return Component.literal("MetalGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FurnitureMetalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new MetalGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

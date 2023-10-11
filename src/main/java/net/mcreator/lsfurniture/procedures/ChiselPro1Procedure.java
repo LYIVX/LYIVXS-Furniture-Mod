@@ -19,14 +19,16 @@ import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 import java.util.function.Supplier;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
+import java.util.HashMap;
 
 public class ChiselPro1Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
+		if (entity == null || guistate == null)
 			return;
 		String tag = "";
 		double SlotNumber = 0;
-		SlotNumber = 2;
+		BarkIngotDustAnimationProcedure.execute(entity);
+		SlotNumber = 5;
 		if (!((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -228,7 +230,7 @@ public class ChiselPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem())) {
-			for (int index0 = 0; index0 < 35; index0++) {
+			for (int index0 = 0; index0 < 28; index0++) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					((Slot) _slots.get((int) SlotNumber)).remove(64);
 					_player.containerMenu.broadcastChanges();
@@ -237,5 +239,6 @@ public class ChiselPro1Procedure {
 			}
 		}
 		PathRecipeCallerProcedure.execute(x, y, z, entity);
+		OakPlanksRecipeProcedure.execute(entity, guistate);
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "parent": "ls_furniture:custom/table_end",
+  "parent": "ls_furniture:custom/table_end_glass",
   "textures": {
     "all": "ls_furniture:blocks/iron_end",
     "particle": "ls_furniture:blocks/iron_end",

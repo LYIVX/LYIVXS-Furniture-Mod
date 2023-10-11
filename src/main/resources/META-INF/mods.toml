@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="ls_furniture"
-version="0.3.0"
+version="0.3.1"
 displayName="LYIVX's Furniture"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://legacy.curseforge.com/minecraft/mc-mods/lyivxs-furniture"
@@ -20,15 +20,21 @@ description="Furniture Mod"
     side="BOTH"
 
 
-
 [[dependencies.ls_furniture]]
-    modId="fusion"
-    mandatory=false
+    modId="patchouli"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
-    modId="jade"
+    modId="geckolib3"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ls_furniture]]
+    modId="fusion"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
@@ -53,12 +59,6 @@ description="Furniture Mod"
     side="BOTH"
 [[dependencies.ls_furniture]]
     modId="allmods"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="jei"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

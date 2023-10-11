@@ -34,7 +34,21 @@ public class ChiselPro2Procedure {
 			}
 		}
 		{
-			ItemStack _ist = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY);
+			BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+			if (_ent != null) {
+				final int _slotid = 2;
+				final int _amount = 1;
+				_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+					if (capability instanceof IItemHandlerModifiable) {
+						ItemStack _stk = capability.getStackInSlot(_slotid).copy();
+						_stk.shrink(_amount);
+						((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
+					}
+				});
+			}
+		}
+		{
+			ItemStack _ist = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY);
 			if (_ist.hurt(1, RandomSource.create(), null)) {
 				_ist.shrink(1);
 				_ist.setDamageValue(0);

@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.CRIMSON_PLANKS"
+      },
+      {
+        "value": "CUSTOM:CrimsonBricks1"
+      },
+      {
+        "value": "CUSTOM:CrimsonBricks1Non"
+      },
+      {
+        "value": "CUSTOM:CrimsonHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_planks",
+    "namespace": "mod"
+  }
+}

@@ -26,6 +26,7 @@ public class MetalPro1Procedure {
 			return;
 		String tag = "";
 		double SlotNumber = 0;
+		BarkIngotDustAnimationProcedure.execute(entity);
 		SlotNumber = 5;
 		if (!((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -228,7 +229,7 @@ public class MetalPro1Procedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem())) {
-			for (int index0 = 0; index0 < 35; index0++) {
+			for (int index0 = 0; index0 < 23; index0++) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					((Slot) _slots.get((int) SlotNumber)).remove(1);
 					_player.containerMenu.broadcastChanges();

@@ -160,6 +160,7 @@ import net.mcreator.lsfurniture.block.entity.BirchDrawerTileEntity;
 import net.mcreator.lsfurniture.block.entity.BirchDeskTileEntity;
 import net.mcreator.lsfurniture.block.entity.BirchCupboardTileEntity;
 import net.mcreator.lsfurniture.block.entity.BirchCounterTileEntity;
+import net.mcreator.lsfurniture.block.entity.AcaciaWhiteChairBlockEntity;
 import net.mcreator.lsfurniture.block.entity.AcaciaWardrobeTileEntity;
 import net.mcreator.lsfurniture.block.entity.AcaciaWardrobe2TileEntity;
 import net.mcreator.lsfurniture.block.entity.AcaciaWardrobe1TileEntity;
@@ -185,28 +186,29 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<FurnitureCrafterBetaTileEntity>> FURNITURE_CRAFTER_BETA = REGISTRY.register("furniture_crafter_beta",
 			() -> BlockEntityType.Builder.of(FurnitureCrafterBetaTileEntity::new, LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> ACACIA_CHAIR = register("acacia_chair", LsFurnitureModBlocks.ACACIA_CHAIR, AcaciaChairBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ACACIA_WHITE_CHAIR = register("acacia_white_chair", LsFurnitureModBlocks.ACACIA_WHITE_CHAIR, AcaciaWhiteChairBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TABLE_NONE = register("table_none", LsFurnitureModBlocks.TABLE_NONE, TableNoneBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_TABLE_NONE = register("dark_oak_table_none", LsFurnitureModBlocks.DARK_OAK_TABLE_NONE, DarkOakTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> SPRUCE_TABLE_NONE = register("spruce_table_none", LsFurnitureModBlocks.SPRUCE_TABLE_NONE, SpruceTableNoneBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> ACACIA_TABLE_NONE = register("acacia_table_none", LsFurnitureModBlocks.ACACIA_TABLE_NONE, AcaciaTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BIRCH_TABLE_NONE = register("birch_table_none", LsFurnitureModBlocks.BIRCH_TABLE_NONE, BirchTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> JUNGLE_TABLE_NONE = register("jungle_table_none", LsFurnitureModBlocks.JUNGLE_TABLE_NONE, JungleTableNoneBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ACACIA_TABLE_NONE = register("acacia_table_none", LsFurnitureModBlocks.ACACIA_TABLE_NONE, AcaciaTableNoneBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_TABLE_NONE = register("dark_oak_table_none", LsFurnitureModBlocks.DARK_OAK_TABLE_NONE, DarkOakTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> MANGROVE_TABLE_NONE = register("mangrove_table_none", LsFurnitureModBlocks.MANGROVE_TABLE_NONE, MangroveTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CRIMSON_TABLE_NONE = register("crimson_table_none", LsFurnitureModBlocks.CRIMSON_TABLE_NONE, CrimsonTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_TABLE_NONE = register("warped_table_none", LsFurnitureModBlocks.WARPED_TABLE_NONE, WarpedTableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> IRON_NONE = register("iron_none", LsFurnitureModBlocks.IRON_NONE, IronNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<OakWardrobe0TileEntity>> OAK_WARDROBE_0 = REGISTRY.register("oak_wardrobe_0",
 			() -> BlockEntityType.Builder.of(OakWardrobe0TileEntity::new, LsFurnitureModBlocks.OAK_WARDROBE_0.get()).build(null));
-	public static final RegistryObject<BlockEntityType<Darkoakwardrobe0TileEntity>> DARKOAKWARDROBE_0 = REGISTRY.register("darkoakwardrobe_0",
-			() -> BlockEntityType.Builder.of(Darkoakwardrobe0TileEntity::new, LsFurnitureModBlocks.DARKOAKWARDROBE_0.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SprucewardrobeTileEntity>> SPRUCEWARDROBE = REGISTRY.register("sprucewardrobe",
 			() -> BlockEntityType.Builder.of(SprucewardrobeTileEntity::new, LsFurnitureModBlocks.SPRUCEWARDROBE.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaWardrobeTileEntity>> ACACIA_WARDROBE = REGISTRY.register("acacia_wardrobe",
-			() -> BlockEntityType.Builder.of(AcaciaWardrobeTileEntity::new, LsFurnitureModBlocks.ACACIA_WARDROBE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchWardrobeTileEntity>> BIRCH_WARDROBE = REGISTRY.register("birch_wardrobe",
 			() -> BlockEntityType.Builder.of(BirchWardrobeTileEntity::new, LsFurnitureModBlocks.BIRCH_WARDROBE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleWardrobeTileEntity>> JUNGLE_WARDROBE = REGISTRY.register("jungle_wardrobe",
 			() -> BlockEntityType.Builder.of(JungleWardrobeTileEntity::new, LsFurnitureModBlocks.JUNGLE_WARDROBE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaWardrobeTileEntity>> ACACIA_WARDROBE = REGISTRY.register("acacia_wardrobe",
+			() -> BlockEntityType.Builder.of(AcaciaWardrobeTileEntity::new, LsFurnitureModBlocks.ACACIA_WARDROBE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<Darkoakwardrobe0TileEntity>> DARKOAKWARDROBE_0 = REGISTRY.register("darkoakwardrobe_0",
+			() -> BlockEntityType.Builder.of(Darkoakwardrobe0TileEntity::new, LsFurnitureModBlocks.DARKOAKWARDROBE_0.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveWardrobeTileEntity>> MANGROVE_WARDROBE = REGISTRY.register("mangrove_wardrobe",
 			() -> BlockEntityType.Builder.of(MangroveWardrobeTileEntity::new, LsFurnitureModBlocks.MANGROVE_WARDROBE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonWardrobeTileEntity>> CRIMSON_WARDROBE = REGISTRY.register("crimson_wardrobe",
@@ -214,36 +216,36 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<WarpedWardrobeTileEntity>> WARPED_WARDROBE = REGISTRY.register("warped_wardrobe",
 			() -> BlockEntityType.Builder.of(WarpedWardrobeTileEntity::new, LsFurnitureModBlocks.WARPED_WARDROBE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakDeskTileEntity>> OAK_DESK = REGISTRY.register("oak_desk", () -> BlockEntityType.Builder.of(OakDeskTileEntity::new, LsFurnitureModBlocks.OAK_DESK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkoakDeskTileEntity>> DARKOAK_DESK = REGISTRY.register("darkoak_desk", () -> BlockEntityType.Builder.of(DarkoakDeskTileEntity::new, LsFurnitureModBlocks.DARKOAK_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceDeskTileEntity>> SPRUCE_DESK = REGISTRY.register("spruce_desk", () -> BlockEntityType.Builder.of(SpruceDeskTileEntity::new, LsFurnitureModBlocks.SPRUCE_DESK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaDeskTileEntity>> ACACIA_DESK = REGISTRY.register("acacia_desk", () -> BlockEntityType.Builder.of(AcaciaDeskTileEntity::new, LsFurnitureModBlocks.ACACIA_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchDeskTileEntity>> BIRCH_DESK = REGISTRY.register("birch_desk", () -> BlockEntityType.Builder.of(BirchDeskTileEntity::new, LsFurnitureModBlocks.BIRCH_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleDeskTileEntity>> JUNGLE_DESK = REGISTRY.register("jungle_desk", () -> BlockEntityType.Builder.of(JungleDeskTileEntity::new, LsFurnitureModBlocks.JUNGLE_DESK.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaDeskTileEntity>> ACACIA_DESK = REGISTRY.register("acacia_desk", () -> BlockEntityType.Builder.of(AcaciaDeskTileEntity::new, LsFurnitureModBlocks.ACACIA_DESK.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkoakDeskTileEntity>> DARKOAK_DESK = REGISTRY.register("darkoak_desk", () -> BlockEntityType.Builder.of(DarkoakDeskTileEntity::new, LsFurnitureModBlocks.DARKOAK_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveDeskTileEntity>> MANGROVE_DESK = REGISTRY.register("mangrove_desk", () -> BlockEntityType.Builder.of(MangroveDeskTileEntity::new, LsFurnitureModBlocks.MANGROVE_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonDeskTileEntity>> CRIMSON_DESK = REGISTRY.register("crimson_desk", () -> BlockEntityType.Builder.of(CrimsonDeskTileEntity::new, LsFurnitureModBlocks.CRIMSON_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WarpedDeskTileEntity>> WARPED_DESK = REGISTRY.register("warped_desk", () -> BlockEntityType.Builder.of(WarpedDeskTileEntity::new, LsFurnitureModBlocks.WARPED_DESK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakDrawerTileEntity>> OAK_DRAWER = REGISTRY.register("oak_drawer", () -> BlockEntityType.Builder.of(OakDrawerTileEntity::new, LsFurnitureModBlocks.OAK_DRAWER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkOakDrawerTileEntity>> DARK_OAK_DRAWER = REGISTRY.register("dark_oak_drawer",
-			() -> BlockEntityType.Builder.of(DarkOakDrawerTileEntity::new, LsFurnitureModBlocks.DARK_OAK_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceDrawerTileEntity>> SPRUCE_DRAWER = REGISTRY.register("spruce_drawer", () -> BlockEntityType.Builder.of(SpruceDrawerTileEntity::new, LsFurnitureModBlocks.SPRUCE_DRAWER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaDrawerTileEntity>> ACACIA_DRAWER = REGISTRY.register("acacia_drawer", () -> BlockEntityType.Builder.of(AcaciaDrawerTileEntity::new, LsFurnitureModBlocks.ACACIA_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchDrawerTileEntity>> BIRCH_DRAWER = REGISTRY.register("birch_drawer", () -> BlockEntityType.Builder.of(BirchDrawerTileEntity::new, LsFurnitureModBlocks.BIRCH_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleDrawerTileEntity>> JUNGLE_DRAWER = REGISTRY.register("jungle_drawer", () -> BlockEntityType.Builder.of(JungleDrawerTileEntity::new, LsFurnitureModBlocks.JUNGLE_DRAWER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaDrawerTileEntity>> ACACIA_DRAWER = REGISTRY.register("acacia_drawer", () -> BlockEntityType.Builder.of(AcaciaDrawerTileEntity::new, LsFurnitureModBlocks.ACACIA_DRAWER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkOakDrawerTileEntity>> DARK_OAK_DRAWER = REGISTRY.register("dark_oak_drawer",
+			() -> BlockEntityType.Builder.of(DarkOakDrawerTileEntity::new, LsFurnitureModBlocks.DARK_OAK_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveDrawerTileEntity>> MANGROVE_DRAWER = REGISTRY.register("mangrove_drawer",
 			() -> BlockEntityType.Builder.of(MangroveDrawerTileEntity::new, LsFurnitureModBlocks.MANGROVE_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonDrawerTileEntity>> CRIMSON_DRAWER = REGISTRY.register("crimson_drawer",
 			() -> BlockEntityType.Builder.of(CrimsonDrawerTileEntity::new, LsFurnitureModBlocks.CRIMSON_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WarpedDrawerTileEntity>> WARPED_DRAWER = REGISTRY.register("warped_drawer", () -> BlockEntityType.Builder.of(WarpedDrawerTileEntity::new, LsFurnitureModBlocks.WARPED_DRAWER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakCounterTileEntity>> OAK_COUNTER = REGISTRY.register("oak_counter", () -> BlockEntityType.Builder.of(OakCounterTileEntity::new, LsFurnitureModBlocks.OAK_COUNTER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkOakCounterTileEntity>> DARK_OAK_COUNTER = REGISTRY.register("dark_oak_counter",
-			() -> BlockEntityType.Builder.of(DarkOakCounterTileEntity::new, LsFurnitureModBlocks.DARK_OAK_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceCounterTileEntity>> SPRUCE_COUNTER = REGISTRY.register("spruce_counter",
 			() -> BlockEntityType.Builder.of(SpruceCounterTileEntity::new, LsFurnitureModBlocks.SPRUCE_COUNTER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaCounterTileEntity>> ACACIA_COUNTER = REGISTRY.register("acacia_counter",
-			() -> BlockEntityType.Builder.of(AcaciaCounterTileEntity::new, LsFurnitureModBlocks.ACACIA_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchCounterTileEntity>> BIRCH_COUNTER = REGISTRY.register("birch_counter", () -> BlockEntityType.Builder.of(BirchCounterTileEntity::new, LsFurnitureModBlocks.BIRCH_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleCounterTileEntity>> JUNGLE_COUNTER = REGISTRY.register("jungle_counter",
 			() -> BlockEntityType.Builder.of(JungleCounterTileEntity::new, LsFurnitureModBlocks.JUNGLE_COUNTER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaCounterTileEntity>> ACACIA_COUNTER = REGISTRY.register("acacia_counter",
+			() -> BlockEntityType.Builder.of(AcaciaCounterTileEntity::new, LsFurnitureModBlocks.ACACIA_COUNTER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkOakCounterTileEntity>> DARK_OAK_COUNTER = REGISTRY.register("dark_oak_counter",
+			() -> BlockEntityType.Builder.of(DarkOakCounterTileEntity::new, LsFurnitureModBlocks.DARK_OAK_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveCounterTileEntity>> MANGROVE_COUNTER = REGISTRY.register("mangrove_counter",
 			() -> BlockEntityType.Builder.of(MangroveCounterTileEntity::new, LsFurnitureModBlocks.MANGROVE_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonCounterTileEntity>> CRIMSON_COUNTER = REGISTRY.register("crimson_counter",
@@ -251,34 +253,34 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<WarpedCounterTileEntity>> WARPED_COUNTER = REGISTRY.register("warped_counter",
 			() -> BlockEntityType.Builder.of(WarpedCounterTileEntity::new, LsFurnitureModBlocks.WARPED_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakSinkTileEntity>> OAK_SINK = REGISTRY.register("oak_sink", () -> BlockEntityType.Builder.of(OakSinkTileEntity::new, LsFurnitureModBlocks.OAK_SINK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkOakSinkTileEntity>> DARK_OAK_SINK = REGISTRY.register("dark_oak_sink", () -> BlockEntityType.Builder.of(DarkOakSinkTileEntity::new, LsFurnitureModBlocks.DARK_OAK_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceSinkTileEntity>> SPRUCE_SINK = REGISTRY.register("spruce_sink", () -> BlockEntityType.Builder.of(SpruceSinkTileEntity::new, LsFurnitureModBlocks.SPRUCE_SINK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaSinkTileEntity>> ACACIA_SINK = REGISTRY.register("acacia_sink", () -> BlockEntityType.Builder.of(AcaciaSinkTileEntity::new, LsFurnitureModBlocks.ACACIA_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchSinkTileEntity>> BIRCH_SINK = REGISTRY.register("birch_sink", () -> BlockEntityType.Builder.of(BirchSinkTileEntity::new, LsFurnitureModBlocks.BIRCH_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleSinkTileEntity>> JUNGLE_SINK = REGISTRY.register("jungle_sink", () -> BlockEntityType.Builder.of(JungleSinkTileEntity::new, LsFurnitureModBlocks.JUNGLE_SINK.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaSinkTileEntity>> ACACIA_SINK = REGISTRY.register("acacia_sink", () -> BlockEntityType.Builder.of(AcaciaSinkTileEntity::new, LsFurnitureModBlocks.ACACIA_SINK.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkOakSinkTileEntity>> DARK_OAK_SINK = REGISTRY.register("dark_oak_sink", () -> BlockEntityType.Builder.of(DarkOakSinkTileEntity::new, LsFurnitureModBlocks.DARK_OAK_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveSinkTileEntity>> MANGROVE_SINK = REGISTRY.register("mangrove_sink", () -> BlockEntityType.Builder.of(MangroveSinkTileEntity::new, LsFurnitureModBlocks.MANGROVE_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonSinkTileEntity>> CRIMSON_SINK = REGISTRY.register("crimson_sink", () -> BlockEntityType.Builder.of(CrimsonSinkTileEntity::new, LsFurnitureModBlocks.CRIMSON_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WarpedSinkTileEntity>> WARPED_SINK = REGISTRY.register("warped_sink", () -> BlockEntityType.Builder.of(WarpedSinkTileEntity::new, LsFurnitureModBlocks.WARPED_SINK.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakOvenTileEntity>> OAK_OVEN = REGISTRY.register("oak_oven", () -> BlockEntityType.Builder.of(OakOvenTileEntity::new, LsFurnitureModBlocks.OAK_OVEN.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkOakOvenTileEntity>> DARK_OAK_OVEN = REGISTRY.register("dark_oak_oven", () -> BlockEntityType.Builder.of(DarkOakOvenTileEntity::new, LsFurnitureModBlocks.DARK_OAK_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceOvenTileEntity>> SPRUCE_OVEN = REGISTRY.register("spruce_oven", () -> BlockEntityType.Builder.of(SpruceOvenTileEntity::new, LsFurnitureModBlocks.SPRUCE_OVEN.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaOvenTileEntity>> ACACIA_OVEN = REGISTRY.register("acacia_oven", () -> BlockEntityType.Builder.of(AcaciaOvenTileEntity::new, LsFurnitureModBlocks.ACACIA_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchOvenTileEntity>> BIRCH_OVEN = REGISTRY.register("birch_oven", () -> BlockEntityType.Builder.of(BirchOvenTileEntity::new, LsFurnitureModBlocks.BIRCH_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleOvenTileEntity>> JUNGLE_OVEN = REGISTRY.register("jungle_oven", () -> BlockEntityType.Builder.of(JungleOvenTileEntity::new, LsFurnitureModBlocks.JUNGLE_OVEN.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaOvenTileEntity>> ACACIA_OVEN = REGISTRY.register("acacia_oven", () -> BlockEntityType.Builder.of(AcaciaOvenTileEntity::new, LsFurnitureModBlocks.ACACIA_OVEN.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkOakOvenTileEntity>> DARK_OAK_OVEN = REGISTRY.register("dark_oak_oven", () -> BlockEntityType.Builder.of(DarkOakOvenTileEntity::new, LsFurnitureModBlocks.DARK_OAK_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveOvenTileEntity>> MANGROVE_OVEN = REGISTRY.register("mangrove_oven", () -> BlockEntityType.Builder.of(MangroveOvenTileEntity::new, LsFurnitureModBlocks.MANGROVE_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WarpedOvenTileEntity>> WARPED_OVEN = REGISTRY.register("warped_oven", () -> BlockEntityType.Builder.of(WarpedOvenTileEntity::new, LsFurnitureModBlocks.WARPED_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonOvenTileEntity>> CRIMSON_OVEN = REGISTRY.register("crimson_oven", () -> BlockEntityType.Builder.of(CrimsonOvenTileEntity::new, LsFurnitureModBlocks.CRIMSON_OVEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<OakCupboardTileEntity>> OAK_CUPBOARD = REGISTRY.register("oak_cupboard", () -> BlockEntityType.Builder.of(OakCupboardTileEntity::new, LsFurnitureModBlocks.OAK_CUPBOARD.get()).build(null));
-	public static final RegistryObject<BlockEntityType<DarkOakCupboardTileEntity>> DARK_OAK_CUPBOARD = REGISTRY.register("dark_oak_cupboard",
-			() -> BlockEntityType.Builder.of(DarkOakCupboardTileEntity::new, LsFurnitureModBlocks.DARK_OAK_CUPBOARD.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaCupboardTileEntity>> ACACIA_CUPBOARD = REGISTRY.register("acacia_cupboard",
-			() -> BlockEntityType.Builder.of(AcaciaCupboardTileEntity::new, LsFurnitureModBlocks.ACACIA_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SpruceCupboardTileEntity>> SPRUCE_CUPBOARD = REGISTRY.register("spruce_cupboard",
 			() -> BlockEntityType.Builder.of(SpruceCupboardTileEntity::new, LsFurnitureModBlocks.SPRUCE_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BirchCupboardTileEntity>> BIRCH_CUPBOARD = REGISTRY.register("birch_cupboard",
 			() -> BlockEntityType.Builder.of(BirchCupboardTileEntity::new, LsFurnitureModBlocks.BIRCH_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleCupboardTileEntity>> JUNGLE_CUPBOARD = REGISTRY.register("jungle_cupboard",
 			() -> BlockEntityType.Builder.of(JungleCupboardTileEntity::new, LsFurnitureModBlocks.JUNGLE_CUPBOARD.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AcaciaCupboardTileEntity>> ACACIA_CUPBOARD = REGISTRY.register("acacia_cupboard",
+			() -> BlockEntityType.Builder.of(AcaciaCupboardTileEntity::new, LsFurnitureModBlocks.ACACIA_CUPBOARD.get()).build(null));
+	public static final RegistryObject<BlockEntityType<DarkOakCupboardTileEntity>> DARK_OAK_CUPBOARD = REGISTRY.register("dark_oak_cupboard",
+			() -> BlockEntityType.Builder.of(DarkOakCupboardTileEntity::new, LsFurnitureModBlocks.DARK_OAK_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveCupboardTileEntity>> MANGROVE_CUPBOARD = REGISTRY.register("mangrove_cupboard",
 			() -> BlockEntityType.Builder.of(MangroveCupboardTileEntity::new, LsFurnitureModBlocks.MANGROVE_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CrimsonCupboardTileEntity>> CRIMSON_CUPBOARD = REGISTRY.register("crimson_cupboard",
@@ -286,20 +288,20 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<WarpedCupboardTileEntity>> WARPED_CUPBOARD = REGISTRY.register("warped_cupboard",
 			() -> BlockEntityType.Builder.of(WarpedCupboardTileEntity::new, LsFurnitureModBlocks.WARPED_CUPBOARD.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> OAK_SHELVE = register("oak_shelve", LsFurnitureModBlocks.OAK_SHELVE, OakShelveBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_SHELVE = register("dark_oak_shelve", LsFurnitureModBlocks.DARK_OAK_SHELVE, DarkOakShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> SPRUCE_SHELVE = register("spruce_shelve", LsFurnitureModBlocks.SPRUCE_SHELVE, SpruceShelveBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> ACACIA_SHELVE = register("acacia_shelve", LsFurnitureModBlocks.ACACIA_SHELVE, AcaciaShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BIRCH_SHELVE = register("birch_shelve", LsFurnitureModBlocks.BIRCH_SHELVE, BirchShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> JUNGLE_SHELVE = register("jungle_shelve", LsFurnitureModBlocks.JUNGLE_SHELVE, JungleShelveBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ACACIA_SHELVE = register("acacia_shelve", LsFurnitureModBlocks.ACACIA_SHELVE, AcaciaShelveBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_SHELVE = register("dark_oak_shelve", LsFurnitureModBlocks.DARK_OAK_SHELVE, DarkOakShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> MANGROVE_SHELVE = register("mangrove_shelve", LsFurnitureModBlocks.MANGROVE_SHELVE, MangroveShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CRIMSON_SHELVE = register("crimson_shelve", LsFurnitureModBlocks.CRIMSON_SHELVE, CrimsonShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_SHELVE = register("warped_shelve", LsFurnitureModBlocks.WARPED_SHELVE, WarpedShelveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> OAK_MAIL_BOX = register("oak_mail_box", LsFurnitureModBlocks.OAK_MAIL_BOX, OakMailBoxBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_MAIL_BOX = register("dark_oak_mail_box", LsFurnitureModBlocks.DARK_OAK_MAIL_BOX, DarkOakMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> SPRUCE_MAIL_BOX = register("spruce_mail_box", LsFurnitureModBlocks.SPRUCE_MAIL_BOX, SpruceMailBoxBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> ACACIA_MAIL_BOX = register("acacia_mail_box", LsFurnitureModBlocks.ACACIA_MAIL_BOX, AcaciaMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BIRCH_MAIL_BOX = register("birch_mail_box", LsFurnitureModBlocks.BIRCH_MAIL_BOX, BirchMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> JUNGLE_MAIL_BOX = register("jungle_mail_box", LsFurnitureModBlocks.JUNGLE_MAIL_BOX, JungleMailBoxBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ACACIA_MAIL_BOX = register("acacia_mail_box", LsFurnitureModBlocks.ACACIA_MAIL_BOX, AcaciaMailBoxBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> DARK_OAK_MAIL_BOX = register("dark_oak_mail_box", LsFurnitureModBlocks.DARK_OAK_MAIL_BOX, DarkOakMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> MANGROVE_MAIL_BOX = register("mangrove_mail_box", LsFurnitureModBlocks.MANGROVE_MAIL_BOX, MangroveMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CRIMSON_MAIL_BOX = register("crimson_mail_box", LsFurnitureModBlocks.CRIMSON_MAIL_BOX, CrimsonMailBoxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_MAIL_BOX = register("warped_mail_box", LsFurnitureModBlocks.WARPED_MAIL_BOX, WarpedMailBoxBlockEntity::new);

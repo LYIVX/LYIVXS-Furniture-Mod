@@ -36,7 +36,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
+import net.mcreator.lsfurniture.world.inventory.WoodGUIMenu;
 import net.mcreator.lsfurniture.init.LsFurnitureModBlockEntities;
 import net.mcreator.lsfurniture.block.entity.FurnitureCrafterBetaTileEntity;
 
@@ -115,7 +115,7 @@ public class FurnitureCrafterBetaBlock extends BaseEntityBlock implements Entity
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new FurnitureWoodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+					return new WoodGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
 				}
 			}, pos);
 		}

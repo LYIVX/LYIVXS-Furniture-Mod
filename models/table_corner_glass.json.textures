@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "anvil_flat",
+        "2": "iron_corner"
+      },
+      "name": "default"
+    }
+  }
+}

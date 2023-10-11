@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#1"
+      },
+      {
+        "value": "CUSTOM:SpruceBricks1"
+      },
+      {
+        "value": "CUSTOM:SpruceBricks1Non"
+      },
+      {
+        "value": "CUSTOM:SpruceHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_planks",
+    "namespace": "forge"
+  }
+}

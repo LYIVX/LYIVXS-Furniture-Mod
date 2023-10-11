@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ls_furniture:block/framed_oak_horizontal_stripes"
+    },
+    "facing=east": {
+      "model": "ls_furniture:block/framed_oak_horizontal_stripes",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ls_furniture:block/framed_oak_horizontal_stripes",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ls_furniture:block/framed_oak_horizontal_stripes",
+      "y": 270
+    }
+  }
+}

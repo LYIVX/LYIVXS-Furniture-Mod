@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureWoodMenu;
+import net.mcreator.lsfurniture.world.inventory.WoodGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -27,12 +27,12 @@ public class OpenWoodMenuProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("FurnitureWood");
+						return Component.literal("WoodGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FurnitureWoodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new WoodGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

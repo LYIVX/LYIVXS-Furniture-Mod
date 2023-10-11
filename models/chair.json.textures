@@ -48,14 +48,6 @@
       },
       "name": "mangrove"
     },
-    "spruce": {
-      "map": {
-        "1": "spruce_log",
-        "2": "stripped_spruce",
-        "3": "invisible"
-      },
-      "name": "spruce"
-    },
     "crimson": {
       "map": {
         "1": "crimson_stem_animation",
@@ -71,6 +63,78 @@
         "3": "invisible"
       },
       "name": "warped"
+    },
+    "oak_white": {
+      "map": {
+        "1": "oak_log",
+        "2": "stripped_oak",
+        "3": "white_wool"
+      },
+      "name": "oak_white"
+    },
+    "dark_oak_white": {
+      "map": {
+        "1": "dark_oak_log",
+        "2": "stripped_dark_oak",
+        "3": "white_wool"
+      },
+      "name": "dark_oak_white"
+    },
+    "spruce_white": {
+      "map": {
+        "1": "spruce_log",
+        "2": "stripped_spruce",
+        "3": "white_wool"
+      },
+      "name": "spruce_white"
+    },
+    "acacia_white": {
+      "map": {
+        "1": "acacia_log",
+        "2": "stripped_acacia",
+        "3": "white_wool"
+      },
+      "name": "acacia_white"
+    },
+    "birch_white": {
+      "map": {
+        "1": "birch_log",
+        "2": "strippedbirch",
+        "3": "white_wool"
+      },
+      "name": "birch_white"
+    },
+    "jungle_white": {
+      "map": {
+        "1": "jungle_log",
+        "2": "stripped_jungle",
+        "3": "white_wool"
+      },
+      "name": "jungle_white"
+    },
+    "mangrove_white": {
+      "map": {
+        "1": "mangrove_log",
+        "2": "stripped_acacia",
+        "3": "white_wool"
+      },
+      "name": "mangrove_white"
+    },
+    "crimson_white": {
+      "map": {
+        "1": "crimson_stem_animation",
+        "2": "stripped_crimson",
+        "3": "white_wool"
+      },
+      "name": "crimson_white"
+    },
+    "warped_white": {
+      "map": {
+        "1": "warped_stem_animation",
+        "2": "stripped_warped",
+        "3": "white_wool"
+      },
+      "name": "warped_white"
     }
   }
 }

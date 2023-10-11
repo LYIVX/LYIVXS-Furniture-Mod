@@ -284,7 +284,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 			}
 		}
 		slot_number = 5;
-		for (int index0 = 0; index0 < 35; index0++) {
+		for (int index0 = 0; index0 < 23; index0++) {
 			if (((new Object() {
 				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);

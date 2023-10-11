@@ -1,5 +1,5 @@
 {
-  "parent": "ls_furniture:custom/table_corner",
+  "parent": "ls_furniture:custom/table_corner_glass",
   "textures": {
     "all": "ls_furniture:blocks/iron_corner",
     "particle": "ls_furniture:blocks/iron_corner",

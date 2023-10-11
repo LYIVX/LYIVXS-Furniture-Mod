@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.WARPED_PLANKS"
+      },
+      {
+        "value": "CUSTOM:WarpedBricks1"
+      },
+      {
+        "value": "CUSTOM:WarpedBricks1Non"
+      },
+      {
+        "value": "CUSTOM:WarpedHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_planks",
+    "namespace": "mod"
+  }
+}

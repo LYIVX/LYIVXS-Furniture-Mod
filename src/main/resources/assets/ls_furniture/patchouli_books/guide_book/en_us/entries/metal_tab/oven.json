@@ -10,7 +10,7 @@
 			"title": "Metal Tab",
 			
 			"input0": "minecraft:iron_block",
-			"input1": "lminecraft:oak_planks",
+			"input1": "minecraft:oak_planks",
 			"input2": "minecraft:air",
 			"input3": "minecraft:air",
 			"input4": "ls_furniture:hammer",

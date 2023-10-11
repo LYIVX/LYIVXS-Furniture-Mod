@@ -15,5 +15,14 @@ public class ChairRecipeCallerProcedure {
 		MangroveChairRecipeProcedure.execute(entity);
 		CrimsonChairRecipeProcedure.execute(entity);
 		WarpedChairRecipeProcedure.execute(entity);
+		OakWhiteChairRecipeProcedure.execute(entity);
+		DarOakWhiteChairRecipeProcedure.execute(entity);
+		SpruceWhiteChairRecipeProcedure.execute(entity);
+		AcaciaWhiteChairRecipeProcedure.execute(entity);
+		BirchWhiteChairRecipeProcedure.execute(entity);
+		JungleWhiteChairRecipeProcedure.execute(entity);
+		MangroveWhiteChairRecipeProcedure.execute(entity);
+		CrimsonWhiteChairRecipeProcedure.execute(entity);
+		WarpedWhiteChairRecipeProcedure.execute(entity);
 	}
 }

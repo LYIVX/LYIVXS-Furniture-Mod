@@ -44,7 +44,7 @@ public class CrimsonDrawerRecipeProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.CRIMSON_DRAWER.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(9)).set(_setstack);
+				((Slot) _slots.get(6)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

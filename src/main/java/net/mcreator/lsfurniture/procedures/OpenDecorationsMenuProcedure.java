@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureDecorationsMenu;
+import net.mcreator.lsfurniture.world.inventory.DecorationsGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -27,12 +27,12 @@ public class OpenDecorationsMenuProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("FurnitureDecorations");
+						return Component.literal("DecorationsGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FurnitureDecorationsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new DecorationsGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

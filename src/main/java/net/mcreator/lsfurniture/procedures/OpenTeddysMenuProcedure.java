@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.lsfurniture.world.inventory.FurnitureTeddysMenu;
+import net.mcreator.lsfurniture.world.inventory.TeddysGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -27,12 +27,12 @@ public class OpenTeddysMenuProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("FurnitureTeddys");
+						return Component.literal("TeddysGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FurnitureTeddysMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new TeddysGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "iron_junction"
+      },
+      "name": "default"
+    }
+  }
+}

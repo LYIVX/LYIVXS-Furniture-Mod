@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.PLANKS#3"
+      },
+      {
+        "value": "CUSTOM:JungleBricks1"
+      },
+      {
+        "value": "CUSTOM:JungleBricks1Non"
+      },
+      {
+        "value": "CUSTOM:JungleHorizontalStrips"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_planks",
+    "namespace": "mod"
+  }
+}
