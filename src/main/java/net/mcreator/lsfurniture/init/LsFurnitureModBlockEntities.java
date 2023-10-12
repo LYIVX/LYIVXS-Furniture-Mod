@@ -185,7 +185,6 @@ public class LsFurnitureModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, LsFurnitureMod.MODID);
 	public static final RegistryObject<BlockEntityType<FurnitureCrafterBetaTileEntity>> FURNITURE_CRAFTER_BETA = REGISTRY.register("furniture_crafter_beta",
 			() -> BlockEntityType.Builder.of(FurnitureCrafterBetaTileEntity::new, LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.get()).build(null));
-	public static final RegistryObject<BlockEntityType<?>> ACACIA_CHAIR = register("acacia_chair", LsFurnitureModBlocks.ACACIA_CHAIR, AcaciaChairBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ACACIA_WHITE_CHAIR = register("acacia_white_chair", LsFurnitureModBlocks.ACACIA_WHITE_CHAIR, AcaciaWhiteChairBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TABLE_NONE = register("table_none", LsFurnitureModBlocks.TABLE_NONE, TableNoneBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> SPRUCE_TABLE_NONE = register("spruce_table_none", LsFurnitureModBlocks.SPRUCE_TABLE_NONE, SpruceTableNoneBlockEntity::new);
@@ -242,8 +241,6 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<BirchCounterTileEntity>> BIRCH_COUNTER = REGISTRY.register("birch_counter", () -> BlockEntityType.Builder.of(BirchCounterTileEntity::new, LsFurnitureModBlocks.BIRCH_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<JungleCounterTileEntity>> JUNGLE_COUNTER = REGISTRY.register("jungle_counter",
 			() -> BlockEntityType.Builder.of(JungleCounterTileEntity::new, LsFurnitureModBlocks.JUNGLE_COUNTER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<AcaciaCounterTileEntity>> ACACIA_COUNTER = REGISTRY.register("acacia_counter",
-			() -> BlockEntityType.Builder.of(AcaciaCounterTileEntity::new, LsFurnitureModBlocks.ACACIA_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<DarkOakCounterTileEntity>> DARK_OAK_COUNTER = REGISTRY.register("dark_oak_counter",
 			() -> BlockEntityType.Builder.of(DarkOakCounterTileEntity::new, LsFurnitureModBlocks.DARK_OAK_COUNTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MangroveCounterTileEntity>> MANGROVE_COUNTER = REGISTRY.register("mangrove_counter",
@@ -400,6 +397,9 @@ public class LsFurnitureModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> WARPED_TABLE_JUNCTION = register("warped_table_junction", LsFurnitureModBlocks.WARPED_TABLE_JUNCTION, WarpedTableJunctionBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_TABLE_CROSS = register("warped_table_cross", LsFurnitureModBlocks.WARPED_TABLE_CROSS, WarpedTableCrossBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WARPED_TABLE_END = register("warped_table_end", LsFurnitureModBlocks.WARPED_TABLE_END, WarpedTableEndBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ACACIA_CHAIR = register("acacia_chair", LsFurnitureModBlocks.ACACIA_CHAIR, AcaciaChairBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<AcaciaCounterTileEntity>> ACACIA_COUNTER = REGISTRY.register("acacia_counter",
+			() -> BlockEntityType.Builder.of(AcaciaCounterTileEntity::new, LsFurnitureModBlocks.ACACIA_COUNTER.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

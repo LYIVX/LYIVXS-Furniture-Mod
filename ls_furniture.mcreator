@@ -4185,24 +4185,6 @@
       "path": "~/Chairs/Chair"
     },
     {
-      "name": "AcaciaChair",
-      "type": "block",
-      "sortid": 68,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acacia_chair",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/AcaciaChairBlock.java",
-          "src/main/resources/assets/ls_furniture/blockstates/acacia_chair.json",
-          "src/main/resources/assets/ls_furniture/models/item/acacia_chair.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/AcaciaChairBlockEntity.java",
-          "src/main/resources/assets/ls_furniture/models/block/acacia_chair.json"
-        ]
-      },
-      "path": "~/Chairs/Chair"
-    },
-    {
       "name": "BirchChair",
       "type": "block",
       "sortid": 64,
@@ -5421,78 +5403,6 @@
       "path": "~/Chests/Desk/Oak"
     },
     {
-      "name": "OpenWoodMenu",
-      "type": "procedure",
-      "sortid": 495,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_wood_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenWoodMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "OpenMetalMenu",
-      "type": "procedure",
-      "sortid": 496,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_metal_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenMetalMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Metal"
-    },
-    {
       "name": "FurnitureCrafterBeta",
       "type": "animatedblock",
       "sortid": 1,
@@ -5514,26 +5424,6 @@
         ]
       },
       "path": "~/Furniture Crafter"
-    },
-    {
-      "name": "FurnitureWoodGUIIsOpened",
-      "type": "procedure",
-      "sortid": 497,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "furniture_wood_gui_is_opened",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/FurnitureWoodGUIIsOpenedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "AnyWool",
@@ -6423,42 +6313,6 @@
         ]
       },
       "path": "~/Furniture Crafter"
-    },
-    {
-      "name": "OpenTeddysMenu",
-      "type": "procedure",
-      "sortid": 521,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_teddys_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenTeddysMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Teddys"
     },
     {
       "name": "HorseTeddy",
@@ -8159,29 +8013,6 @@
         ]
       },
       "path": "~/Chests/Counter/Spruce"
-    },
-    {
-      "name": "AcaciaCounter",
-      "type": "animatedblock",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acacia_counter",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/block/renderer/AcaciaCounterTileRenderer.java",
-          "src/main/resources/assets/ls_furniture/models/item/acacia_counter.json",
-          "src/main/java/net/mcreator/lsfurniture/block/entity/AcaciaCounterTileEntity.java",
-          "src/main/resources/assets/ls_furniture/blockstates/acacia_counter.json",
-          "src/main/java/net/mcreator/lsfurniture/block/model/AcaciaCounterBlockModel.java",
-          "src/main/java/net/mcreator/lsfurniture/block/AcaciaCounterBlock.java",
-          "src/main/java/net/mcreator/lsfurniture/block/model/AcaciaCounterDisplayModel.java",
-          "src/main/java/net/mcreator/lsfurniture/block/renderer/AcaciaCounterDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/lsfurniture/block/display/AcaciaCounterDisplayItem.java",
-          "src/main/resources/assets/ls_furniture/models/custom/acacia_counter_particle.json"
-        ]
-      },
-      "path": "~/Chests/Counter/Acacia"
     },
     {
       "name": "BirchCounter",
@@ -23541,42 +23372,6 @@
       "path": "~/Blinds/Oak"
     },
     {
-      "name": "OpenDecorationsMenu",
-      "type": "procedure",
-      "sortid": 1111,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_decorations_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenDecorationsMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Decorations"
-    },
-    {
       "name": "TVStandOff",
       "type": "block",
       "sortid": 18,
@@ -24343,98 +24138,6 @@
       "path": "~/Blinds/Oak"
     },
     {
-      "name": "ChiselPro4",
-      "type": "procedure",
-      "sortid": 1142,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_pro_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
-      "name": "ChiselPro3",
-      "type": "procedure",
-      "sortid": 1143,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_pro_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
-      "name": "ChiselPro2",
-      "type": "procedure",
-      "sortid": 1144,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_pro_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
       "name": "Chisel",
       "type": "item",
       "sortid": 3,
@@ -24582,78 +24285,6 @@
         ]
       },
       "path": "~/Tags"
-    },
-    {
-      "name": "OpenChiselMenu",
-      "type": "procedure",
-      "sortid": 1152,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_chisel_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/OpenChiselMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
-      "name": "WoodPro1",
-      "type": "procedure",
-      "sortid": 1153,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_pro_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/WoodPro1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
     },
     {
       "name": "SofaRecipeCaller",
@@ -25086,78 +24717,6 @@
       "path": "~/Chests/Cupboard"
     },
     {
-      "name": "MetalPro1",
-      "type": "procedure",
-      "sortid": 1168,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "metal_pro_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/MetalPro1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Metal"
-    },
-    {
-      "name": "TeddysPro1",
-      "type": "procedure",
-      "sortid": 1169,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "teddys_pro_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/TeddysPro1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Teddys"
-    },
-    {
       "name": "DecorationsPro1",
       "type": "procedure",
       "sortid": 1170,
@@ -25191,7 +24750,7 @@
           }
         ]
       },
-      "path": "~/Furniture Crafter/Decorations"
+      "path": "~/Furniture Crafter"
     },
     {
       "name": "GiveGuideBook",
@@ -25395,46 +24954,6 @@
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "ChiselPro1",
-      "type": "procedure",
-      "sortid": 1173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_pro_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/procedures/ChiselPro1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
     },
     {
       "name": "PathRecipeCaller",
@@ -25997,91 +25516,6 @@
       "path": "~/Chairs/Chair"
     },
     {
-      "name": "WoodGUI",
-      "type": "gui",
-      "sortid": 1194,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/client/gui/WoodGUIScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/network/WoodGUISlotMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/network/WoodGUIButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/WoodGUIMenu.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Wood"
-    },
-    {
-      "name": "MetalGUI",
-      "type": "gui",
-      "sortid": 1195,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "metal_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/MetalGUIMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/network/MetalGUIButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/network/MetalGUISlotMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/client/gui/MetalGUIScreen.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Metal"
-    },
-    {
-      "name": "DecorationsGUI",
-      "type": "gui",
-      "sortid": 1196,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "decorations_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/network/DecorationsGUIButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/DecorationsGUIMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/client/gui/DecorationsGUIScreen.java",
-          "src/main/java/net/mcreator/lsfurniture/network/DecorationsGUISlotMessage.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Decorations"
-    },
-    {
-      "name": "TeddysGUI",
-      "type": "gui",
-      "sortid": 1197,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "teddys_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/network/TeddysGUISlotMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/TeddysGUIMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/network/TeddysGUIButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/client/gui/TeddysGUIScreen.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Teddys"
-    },
-    {
-      "name": "ChiselGUI",
-      "type": "gui",
-      "sortid": 1198,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chisel_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/lsfurniture/network/ChiselGUIButtonMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/network/ChiselGUISlotMessage.java",
-          "src/main/java/net/mcreator/lsfurniture/world/inventory/ChiselGUIMenu.java",
-          "src/main/java/net/mcreator/lsfurniture/client/gui/ChiselGUIScreen.java"
-        ]
-      },
-      "path": "~/Furniture Crafter/Chisel"
-    },
-    {
       "name": "BarkIngotDustAnimation",
       "type": "procedure",
       "sortid": 1199,
@@ -26467,7 +25901,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Furniture Crafter/Chisel"
+      "path": "~/Furniture Crafter"
     },
     {
       "name": "OakPlanks",
@@ -27333,6 +26767,712 @@
         ]
       },
       "path": "~/Blocks/Connected/Oak"
+    },
+    {
+      "name": "AcaciaChair",
+      "type": "block",
+      "sortid": 1224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_chair",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/AcaciaChairBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/acacia_chair.json",
+          "src/main/resources/assets/ls_furniture/models/item/acacia_chair.json",
+          "src/main/java/net/mcreator/lsfurniture/block/entity/AcaciaChairBlockEntity.java",
+          "src/main/resources/assets/ls_furniture/models/block/acacia_chair.json"
+        ]
+      },
+      "path": "~/Chairs"
+    },
+    {
+      "name": "AcaciaCounter",
+      "type": "animatedblock",
+      "sortid": 1225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_counter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/renderer/AcaciaCounterTileRenderer.java",
+          "src/main/resources/assets/ls_furniture/models/item/acacia_counter.json",
+          "src/main/java/net/mcreator/lsfurniture/block/entity/AcaciaCounterTileEntity.java",
+          "src/main/resources/assets/ls_furniture/blockstates/acacia_counter.json",
+          "src/main/java/net/mcreator/lsfurniture/block/model/AcaciaCounterBlockModel.java",
+          "src/main/java/net/mcreator/lsfurniture/block/AcaciaCounterBlock.java",
+          "src/main/java/net/mcreator/lsfurniture/block/model/AcaciaCounterDisplayModel.java",
+          "src/main/java/net/mcreator/lsfurniture/block/renderer/AcaciaCounterDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/lsfurniture/block/display/AcaciaCounterDisplayItem.java",
+          "src/main/resources/assets/ls_furniture/models/custom/acacia_counter_particle.json"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "CarpentryGUI",
+      "type": "gui",
+      "sortid": 1226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carpentry_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/client/gui/CarpentryGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/network/CarpentryGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/CarpentryGUIMenu.java",
+          "src/main/java/net/mcreator/lsfurniture/network/CarpentryGUISlotMessage.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenCarpentryGUI",
+      "type": "procedure",
+      "sortid": 1227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_carpentry_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenCarpentryGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenMasonryGUI",
+      "type": "procedure",
+      "sortid": 1228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_masonry_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenMasonryGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenMetalurgyGUI",
+      "type": "procedure",
+      "sortid": 1229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_metalurgy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenMetalurgyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenWeaveryGUI",
+      "type": "procedure",
+      "sortid": 1230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_weavery_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenWeaveryGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenEngineeringGUI",
+      "type": "procedure",
+      "sortid": 1231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_engineering_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenEngineeringGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenGlassblowerGUI",
+      "type": "procedure",
+      "sortid": 1232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_glassblower_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenGlassblowerGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "OpenBotanistGUI",
+      "type": "procedure",
+      "sortid": 1233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_botanist_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OpenBotanistGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "MasonryGUI",
+      "type": "gui",
+      "sortid": 1234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masonry_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/MasonryGUIMenu.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/MasonryGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/network/MasonryGUISlotMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/network/MasonryGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "MetalurgyGUI",
+      "type": "gui",
+      "sortid": 1235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalurgy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/network/MetalurgyGUISlotMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/network/MetalurgyGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/MetalurgyGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/MetalurgyGUIMenu.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "WeaveryGUI",
+      "type": "gui",
+      "sortid": 1236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weavery_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/WeaveryGUIMenu.java",
+          "src/main/java/net/mcreator/lsfurniture/network/WeaveryGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/WeaveryGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/network/WeaveryGUISlotMessage.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "EngineeringGUI",
+      "type": "gui",
+      "sortid": 1237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineering_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/EngineeringGUIMenu.java",
+          "src/main/java/net/mcreator/lsfurniture/network/EngineeringGUISlotMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/network/EngineeringGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/EngineeringGUIScreen.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "GlassblowerGUI",
+      "type": "gui",
+      "sortid": 1238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glassblower_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/client/gui/GlassblowerGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/network/GlassblowerGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/network/GlassblowerGUISlotMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/GlassblowerGUIMenu.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "BotanistGUI",
+      "type": "gui",
+      "sortid": 1239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botanist_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/network/BotanistGUIButtonMessage.java",
+          "src/main/java/net/mcreator/lsfurniture/client/gui/BotanistGUIScreen.java",
+          "src/main/java/net/mcreator/lsfurniture/world/inventory/BotanistGUIMenu.java",
+          "src/main/java/net/mcreator/lsfurniture/network/BotanistGUISlotMessage.java"
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "CarpentryPro",
+      "type": "procedure",
+      "sortid": 1240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carpentry_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CarpentryProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "MasonryPro",
+      "type": "procedure",
+      "sortid": 1241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masonry_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/MasonryProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "MetalurgyPro",
+      "type": "procedure",
+      "sortid": 1242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalurgy_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/MetalurgyProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "WeaveryPro",
+      "type": "procedure",
+      "sortid": 1243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weavery_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/WeaveryProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "EngineeringPro",
+      "type": "procedure",
+      "sortid": 1244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "engineering_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/EngineeringProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "GlassblowerPro",
+      "type": "procedure",
+      "sortid": 1245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glassblower_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/GlassblowerProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "BotanistPro",
+      "type": "procedure",
+      "sortid": 1246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botanist_pro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/BotanistProProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Furniture Crafter/Wood"
+    },
+    {
+      "name": "ConnectingOakGlass",
+      "type": "block",
+      "sortid": 1247,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "connecting_oak_glass",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass.json",
+          "src/main/java/net/mcreator/lsfurniture/block/ConnectingOakGlassBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_glass.json",
+          "src/main/resources/assets/ls_furniture/models/item/connecting_oak_glass.json"
+        ]
+      },
+      "path": "~/Blocks/Connected/Oak"
+    },
+    {
+      "name": "ConnectingOakGlassPane",
+      "type": "block",
+      "sortid": 1248,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "connecting_oak_glass_pane",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass_pane_post.json",
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass_pane_side.json",
+          "src/main/resources/assets/ls_furniture/models/item/connecting_oak_glass_pane.json",
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass_pane_side_alt.json",
+          "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_glass_pane.json",
+          "src/main/java/net/mcreator/lsfurniture/block/ConnectingOakGlassPaneBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass_pane_noside_alt.json",
+          "src/main/resources/assets/ls_furniture/models/block/connecting_oak_glass_pane_noside.json"
+        ]
+      },
+      "path": "~/Blocks/Connected/Oak"
     }
   ],
   "variable_elements": [
@@ -27368,13 +27508,16 @@
   "language_map": {
     "en_us": {
       "block.ls_furniture.andesite_path_91": "Andesite Path",
-      "block.ls_furniture.crimson_white_right_end": "Crimson White Sofa",
+      "gui.ls_furniture.engineering_gui.Connected": "",
+      "gui.ls_furniture.engineering_gui.tooltip_masonry": "Masonry",
       "block.ls_furniture.andesite_path_92": "Andesite Path",
+      "block.ls_furniture.crimson_white_right_end": "Crimson White Sofa",
       "block.ls_furniture.crimson_white_straight": "Crimson White Sofa",
       "block.ls_furniture.fridge_freezer_block": "Fridge Freezer",
       "block.ls_furniture.darkoak_desk": "Dark Oak Desk",
       "gui.ls_furniture.furniture_chisel.tooltip_paths": "Paths",
       "block.ls_furniture.framed_oak_swirl": "Oak Planks",
+      "gui.ls_furniture.carpentry_gui.label_carpentry": "Carpentry",
       "block.ls_furniture.spruce_table_none": "Spruce Table",
       "block.ls_furniture.connecting_oak_small_bricks": "Oak Planks",
       "block.ls_furniture.blackstone_path_131": "Blackstone Path",
@@ -27394,15 +27537,14 @@
       "block.ls_furniture.stone_path_132": "Stone Path",
       "block.ls_furniture.stone_path_131": "Stone Path",
       "gui.ls_furniture.furniture_wood.tooltip_empty1": "Stone",
-      "gui.ls_furniture.wood_gui.tooltip_decorations": "Decorations",
-      "block.ls_furniture.crimson_oven": "Crimson Oven",
       "block.ls_furniture.oak_wardrobe_0": "Oak Wardrobe",
-      "block.ls_furniture.oak_wardrobe_1": "Oak Wardrobe",
+      "block.ls_furniture.crimson_oven": "Crimson Oven",
       "block.ls_furniture.dark_oak_green_sofa": "Dark Oak Green Sofa",
-      "block.ls_furniture.andesite_path_74": "Andesite Path",
+      "block.ls_furniture.oak_wardrobe_1": "Oak Wardrobe",
       "block.ls_furniture.oak_wardrobe_2": "Oak Wardrobe",
-      "block.ls_furniture.andesite_path_75": "Andesite Path",
+      "block.ls_furniture.andesite_path_74": "Andesite Path",
       "block.ls_furniture.bat_teddy": "Bat Teddy",
+      "block.ls_furniture.andesite_path_75": "Andesite Path",
       "block.ls_furniture.birch_table_corner": "Birch Table",
       "gui.ls_furniture.oven.label_oven": "Oven",
       "block.ls_furniture.acacia_table_corner": "Acacia Table",
@@ -27435,25 +27577,26 @@
       "block.ls_furniture.iron_corner": "Iron Glass Table",
       "block.ls_furniture.spruce_cupboard_vent": "Spruce Cupboard Vent",
       "block.ls_furniture.warped_stool": "Warped Stool",
+      "gui.ls_furniture.metalurgy_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.dark_oak_table_cross": "Dark Oak Table",
       "block.ls_furniture.tv_wall_minecraft": "TV",
       "block.ls_furniture.acacia_mail_box": "Acacia Mail Box",
       "block.ls_furniture.warped_table_none": "Warped Table",
       "block.ls_furniture.spruce_shelve": "Spruce Shelve",
-      "gui.ls_furniture.teddys_gui.tooltip_metal": "Metal",
+      "gui.ls_furniture.botanist_gui.tooltip_connected_textures": "Connected Textures",
+      "gui.ls_furniture.engineering_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.birch_white_chair": "Birch White Chair",
-      "gui.ls_furniture.chisel_gui.tooltip_teddys": "Teddys",
       "block.ls_furniture.toaster": "Toaster",
       "block.ls_furniture.oak_orange_sofa": "Oak Orange Sofa",
       "block.ls_furniture.spruce_white_straight": "Spruce White Sofa",
       "gui.ls_furniture.furniture_wood.tooltip_paths": "Paths",
+      "gui.ls_furniture.metalurgy_gui.Connected": "",
       "block.ls_furniture.crimson_chair": "Crimson Chair",
       "block.ls_furniture.acacia_counter_corner": "Acacia Counter",
       "block.ls_furniture.warped_cupboard": "Warped Cupboard",
       "block.ls_furniture.connecting_dark_oak_big_bricks": "Dark Oak Planks",
-      "gui.ls_furniture.chisel_gui.Connected": "",
       "block.ls_furniture.framed_oak_diagonal": "Oak Planks",
-      "gui.ls_furniture.teddys_gui.tooltip_decorations": "Decorations",
+      "gui.ls_furniture.weavery_gui.label_carpentry": "Weavery",
       "block.ls_furniture.crimson_white_chair": "Crimson White Chair",
       "block.ls_furniture.acacia_wardrobe_1": "Acacia Wardrobe",
       "block.ls_furniture.granite_path_2": "Granite Path",
@@ -27461,9 +27604,9 @@
       "block.ls_furniture.crimson_counter": "Crimson Counter",
       "block.ls_furniture.acacia_wardrobe_2": "Acacia Wardrobe",
       "block.ls_furniture.granite_path_4": "Granite Path",
-      "gui.ls_furniture.teddys_gui.tooltip_wood": "Wood",
       "block.ls_furniture.granite_path_5": "Granite Path",
       "block.ls_furniture.granite_path_6": "Granite Path",
+      "gui.ls_furniture.glassblower_gui.tooltip_weavery": "Weavery",
       "block.ls_furniture.snow_golem_teddy": "Snow Golem Teddy",
       "block.ls_furniture.granite_path_8": "Granite Path",
       "block.ls_furniture.granite_path_91": "Granite Path",
@@ -27472,9 +27615,9 @@
       "block.ls_furniture.dark_oak_stool": "Dark Oak Stool",
       "block.ls_furniture.acacia_white_chair": "Acacia White Chair",
       "block.ls_furniture.birch_cupboard_vent": "Birch Cupboard Vent",
-      "gui.ls_furniture.chisel_gui.label_wood": "Chisel",
       "block.ls_furniture.granite_path_1": "Granite Path",
       "block.ls_furniture.iron_junction": "Iron Glass Table",
+      "gui.ls_furniture.metalurgy_gui.label_carpentry": "Metalurgy",
       "block.ls_furniture.dark_oak_blinds_bottom": "Dark Oak Blinds",
       "block.ls_furniture.oak_white_straight": "Oak White Sofa",
       "block.ls_furniture.dark_oak_light_gray_sofa": "Dark Oak Light Gray Sofa",
@@ -27484,7 +27627,6 @@
       "block.ls_furniture.acacia_table_straight": "Acacia Table",
       "block.ls_furniture.acacia_sink": "Acacia Sink",
       "block.ls_furniture.birch_sink": "Birch Sink",
-      "gui.ls_furniture.chisel_gui.tooltip_metal": "Metal",
       "block.ls_furniture.dark_oak_orange_sofa": "Dark Oak Orange Sofa",
       "entity.ls_furniture.stool": "Stool",
       "gui.ls_furniture.recipe_explainer.tooltip_paths": "Paths",
@@ -27498,6 +27640,7 @@
       "block.ls_furniture.stone_path_91": "Stone Path",
       "block.ls_furniture.jungle_white_straight": "Jungle White Sofa",
       "gui.ls_furniture.recipe_explainer.label_dye": "Dye",
+      "gui.ls_furniture.weavery_gui.tooltip_weavery": "Weavery",
       "block.ls_furniture.drainer": "Drainer",
       "block.ls_furniture.acacia_table_junction": "Acacia Table",
       "block.ls_furniture.birch_plank_path_1": "Birch Plank Path",
@@ -27514,12 +27657,13 @@
       "block.ls_furniture.blackstone_path_1": "Blackstone Path",
       "block.ls_furniture.blackstone_path_2": "Blackstone Path",
       "block.ls_furniture.blackstone_path_3": "Blackstone Path",
+      "gui.ls_furniture.engineering_gui.tooltip_metalurgy": "Metalurgy",
       "gui.ls_furniture.counter.label_counter": "Counter",
       "block.ls_furniture.warped_drawer": "Warped Drawer",
-      "gui.ls_furniture.decorations_gui.tooltip_chisel": "Chisel",
       "gui.ls_furniture.furniture_wood.label_recipe": "Recipe",
       "block.ls_furniture.chicken_teddy": "Chicken Teddy",
       "block.ls_furniture.acacia_cupboard_vent_on": "Acacia Cupboard Vent",
+      "gui.ls_furniture.weavery_gui.Connected": "",
       "block.ls_furniture.acacia_plank_path_3": "Acacia Plank Path",
       "block.ls_furniture.diorite_path_73": "Diorite Path",
       "block.ls_furniture.birch_wardrobe": "Birch Wardrobe",
@@ -27533,7 +27677,6 @@
       "block.ls_furniture.birch_white_sofa": "Birch White Sofa",
       "block.ls_furniture.oak_brown_sofa": "Oak Brown Sofa",
       "block.ls_furniture.oak_plank_path_8": "Oak Plank Path ",
-      "gui.ls_furniture.metal_gui.tooltip_decorations": "Decorations",
       "block.ls_furniture.dark_oak_light_blue_sofa": "Dark Oak Light Blue Sofa",
       "block.ls_furniture.jungle_white_right_end": "Jungle White Sofa",
       "block.ls_furniture.spruce_table_junction": "Spruce Table",
@@ -27544,6 +27687,7 @@
       "block.ls_furniture.any_wool": "Any Wool",
       "block.ls_furniture.stone_path_71": "Stone Path",
       "block.ls_furniture.warped_wardrobe": "Warped Wardrobe",
+      "gui.ls_furniture.masonry_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.stone_path_75": "Stone Path",
       "block.ls_furniture.stone_path_74": "Stone Path",
       "block.ls_furniture.bamboo_plank_path_3": "Bamboo Plank Path",
@@ -27567,7 +27711,9 @@
       "block.ls_furniture.dark_oak_sink": "Dark Oak Sink",
       "block.ls_furniture.cherry_plank_path_3": "Cherry Plank Path",
       "block.ls_furniture.cherry_plank_path_2": "Cherry Plank Path",
+      "gui.ls_furniture.carpentry_gui.Connected": "",
       "block.ls_furniture.mangrove_white_chair": "Mangrove Chair",
+      "item_group.ls_furniture.tab_2": "LYIVX\u0027s Chisel",
       "block.ls_furniture.blackstone_path_4": "Blackstone Path",
       "block.ls_furniture.blackstone_path_5": "Blackstone Path",
       "block.ls_furniture.blackstone_path_6": "Blackstone Path",
@@ -27581,13 +27727,13 @@
       "block.ls_furniture.diorite_path_10": "Diorite Path",
       "block.ls_furniture.oak_white_left_end": "Oak White Sofa",
       "gui.ls_furniture.furniture_metal.tooltip_paths": "Paths",
-      "gui.ls_furniture.decorations_gui.tooltip_wood": "Wood",
       "block.ls_furniture.acacia_drawer": "Acacia Drawer",
       "gui.ls_furniture.wardrobe_drawers.label_fridge": "Wardrobe",
       "block.ls_furniture.acacia_white_sofa": "Acacia White Sofa",
       "block.ls_furniture.mangrove_wardrobe": "Mangrove Wardrobe",
       "block.ls_furniture.warped_counter": "Warped Counter",
       "block.ls_furniture.dark_oak_cyan_sofa": "Dark Oak Cyan Sofa",
+      "gui.ls_furniture.weavery_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.birch_white_staright": "Birch White Sofa",
       "block.ls_furniture.oak_wavey": "Oak Planks",
       "block.ls_furniture.oak_red_sofa": "Oak Red Sofa",
@@ -27595,6 +27741,7 @@
       "block.ls_furniture.dranier_1_plate": "Drainer",
       "block.ls_furniture.crimson_table_junction": "Crimson Table",
       "gui.ls_furniture.oven.label_proc_oven_fuel_remaining": "Uses Left:",
+      "gui.ls_furniture.metalurgy_gui.tooltip_masonry": "Masonry",
       "block.ls_furniture.spruce_desk": "Spruce Desk",
       "block.ls_furniture.birch_wardrobe_1": "Birch Wardrobe",
       "block.ls_furniture.birch_wardrobe_2": "Birch Wardrobe",
@@ -27604,8 +27751,10 @@
       "item.ls_furniture.any_dye": "Any Dye",
       "block.ls_furniture.andesite_path_1": "Andesite Path",
       "block.ls_furniture.andesite_path_2": "Andesite Path",
+      "gui.ls_furniture.weavery_gui.tooltip_metalurgy": "Metalurgy",
       "block.ls_furniture.spruce_white_chair": "Spruce White Chair",
       "block.ls_furniture.jungle_table_cross": "Jungle Table",
+      "gui.ls_furniture.weavery_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.crimson_plank_path_3": "Crimson Plank Path",
       "block.ls_furniture.warped_white_corner": "Warped White Sofa",
       "block.ls_furniture.crimson_plank_path_2": "Crimson Plank Path",
@@ -27614,15 +27763,18 @@
       "block.ls_furniture.acacia_white_right_end": "Acacia White Sofa",
       "block.ls_furniture.andesite_path_8": "Andesite Path",
       "block.ls_furniture.oak_shelve": "Oak Shelve",
+      "gui.ls_furniture.carpentry_gui.tooltip_metalurgy": "Metalurgy",
       "block.ls_furniture.andesite_path_3": "Andesite Path",
       "gui.ls_furniture.shelve.label_shelve": "Shelve",
       "block.ls_furniture.andesite_path_4": "Andesite Path",
       "block.ls_furniture.crimson_plank_path_1": "Crimson Plank Path",
       "block.ls_furniture.andesite_path_5": "Andesite Path",
       "block.ls_furniture.dark_oak_cupboard_vent": "Dark Oak Cupboard Vent",
+      "gui.ls_furniture.metalurgy_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.andesite_path_6": "Andesite Path",
       "block.ls_furniture.crimson_cupboard": "Crimson Cupboard",
       "block.ls_furniture.acacia_table_cross": "Acacia Table",
+      "gui.ls_furniture.carpentry_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.jungle_desk": "Jungle Desk",
       "block.ls_furniture.mangrove_white_corner": "Mangrove White Sofa",
       "block.ls_furniture.crepper_teddy": "Creeper Teddy",
@@ -27633,17 +27785,18 @@
       "block.ls_furniture.crimson_wardrobe_2": "Crimson Wardrobe",
       "block.ls_furniture.jungle_white_corner": "Jungle White Sofa",
       "block.ls_furniture.jungle_white_sofa": "Jungle White Sofa",
+      "gui.ls_furniture.engineering_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.andesite_path_131": "Andesite Path",
       "block.ls_furniture.andesite_path_132": "Andesite Path",
       "block.ls_furniture.mangrove_white_straight": "Straight White Sofa",
       "block.ls_furniture.andesite_path_133": "Andesite Path",
       "block.ls_furniture.jungle_sink": "Jungle Sink",
       "item.ls_furniture.acacia_bark": "Acacia Bark",
-      "gui.ls_furniture.chisel_gui.tooltip_decorations": "Decorations",
       "block.ls_furniture.spruce_white_corner": "Spruce White Sofa",
       "block.ls_furniture.oak_counter_corner": "Oak Counter",
       "block.ls_furniture.jungle_chair": "Jungle Chair",
       "block.ls_furniture.dark_oak_drawer": "Dark Oak Drawer",
+      "gui.ls_furniture.carpentry_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.oak_create": "Oak Create",
       "block.ls_furniture.spruce_sink": "Spruce Sink",
       "gui.ls_furniture.cupboard.label_cupboard": "Cupboard",
@@ -27660,7 +27813,9 @@
       "block.ls_furniture.stone_path_10": "Stone Path",
       "block.ls_furniture.computer_cod": "Computer",
       "block.ls_furniture.kettle": "Kettle",
+      "gui.ls_furniture.masonry_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.framed_oak_big_bricks": "Oak Planks",
+      "gui.ls_furniture.weavery_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.framed_oak_dunes": "Oak Planks",
       "block.ls_furniture.oak_white_sofa": "Oak White Sofa",
       "block.ls_furniture.table_straight": "Table Straight",
@@ -27668,11 +27823,12 @@
       "block.ls_furniture.oak_cupboard_vent": "Oak Cupboard Vent",
       "block.ls_furniture.tv_wall_off": "TV",
       "block.ls_furniture.any_stone_plank": "Any Stone / Plank",
+      "gui.ls_furniture.botanist_gui.Connected": "",
       "entity.ls_furniture.seat": "Sofa",
       "block.ls_furniture.crimson_stool": "Crimson Stool",
       "block.ls_furniture.furniture_crafter_beta": "Furniture Crafter Beta",
       "gui.ls_furniture.mail_box.label_inventory": "Inventory",
-      "gui.ls_furniture.metal_gui.tooltip_teddys": "Teddys",
+      "gui.ls_furniture.glassblower_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.oak_yellow_corner": "Oak Yellow Sofa",
       "block.ls_furniture.tv_wall_cod": "TV",
       "block.ls_furniture.jungle_wardrobe_1": "Jungle Wardrobe",
@@ -27682,10 +27838,8 @@
       "gui.ls_furniture.recipe_explainer.label_additional": "Additional",
       "block.ls_furniture.oak_white_chair": "Oak White Chair",
       "block.ls_furniture.birch_stool": "Birch Stool",
-      "gui.ls_furniture.decorations_gui.tooltip_metal": "Metal",
       "block.ls_furniture.oak_checkered": "Oak Planks",
       "block.ls_furniture.spruce_cupboard_vent_on": "Spruce Cupboard Vent",
-      "gui.ls_furniture.chisel_gui.label_textures": "Textures",
       "block.ls_furniture.oak_blinds_top": "Oak Blinds",
       "block.ls_furniture.framed_oak_horizontal_stripes": "Oak Planks",
       "gui.ls_furniture.oven.label_inventory": "Inventory",
@@ -27706,6 +27860,7 @@
       "block.ls_furniture.oak_chair": "Oak Chair",
       "block.ls_furniture.spruce_chair": "Spruce Chair",
       "block.ls_furniture.jungle_shelve": "Jungle Shelve",
+      "gui.ls_furniture.masonry_gui.tooltip_engineering": "Engineering",
       "item.ls_furniture.saw": "Saw",
       "block.ls_furniture.dark_oak_black_sofa": "Dark Oak Black Sofa",
       "block.ls_furniture.crimson_table_end": "Crimson Table",
@@ -27723,28 +27878,28 @@
       "block.ls_furniture.crimson_table_straight": "Crimson Table",
       "block.ls_furniture.spruce_table_straight": "Spruce Table",
       "block.ls_furniture.tv_stand_minecraft": "TV",
+      "gui.ls_furniture.engineering_gui.tooltip_weavery": "Weavery",
       "block.ls_furniture.oak_blinds_bottom_closed": "Oak Blinds",
       "block.ls_furniture.horse_teddy": "Horse Teddy",
       "block.ls_furniture.spruce_counter_corner": "Spruce Counter",
       "block.ls_furniture.axolotl_teddy": "Axolotl Teddy",
       "block.ls_furniture.crimson_shelve": "Crimson Shelve",
-      "gui.ls_furniture.teddys_gui.tooltip_teddys": "Teddys",
       "block.ls_furniture.crimson_counter_corner": "Crimson Counter",
       "block.ls_furniture.blackstone_path_10": "Blackstone Path",
-      "gui.ls_furniture.chisel_gui.tooltip_wood": "Wood",
       "block.ls_furniture.connecting_oak_checked": "Oak Planks",
       "block.ls_furniture.blackstone_path_12": "Blackstone Path",
       "block.ls_furniture.darkoakwardrobe_2": "Spruce Wardrobe",
-      "gui.ls_furniture.decorations_gui.label_wood": "Decorations",
       "block.ls_furniture.blackstone_path_11": "Blackstone Path",
       "entity.ls_furniture.sofa": "Seat",
       "block.ls_furniture.darkoakwardrobe_1": "Dark Oak Wardrobe",
       "block.ls_furniture.darkoakwardrobe_0": "Dark Oak Wardrobe",
       "block.ls_furniture.framed_oak_mosaic": "Oak Planks",
+      "gui.ls_furniture.masonry_gui.label_carpentry": "Masonry",
       "block.ls_furniture.sprucewardrobe": "Spurce Wardrobe",
       "block.ls_furniture.warped_mail_box": "Warped Mail Box",
       "gui.ls_furniture.recipe_explainer.label_secondary": "Secondary",
       "block.ls_furniture.crimson_white_left_end": "Crimson White Sofa",
+      "gui.ls_furniture.metalurgy_gui.tooltip_connected_textures": "Connected Textures",
       "gui.ls_furniture.wood_gui.tooltip_teddys": "Teddys",
       "block.ls_furniture.warped_white_chair": "Warped White Chair",
       "block.ls_furniture.mangrove_stool": "Mangrove Stool",
@@ -27753,14 +27908,18 @@
       "block.ls_furniture.oak_big_bricks": "Oak Planks",
       "block.ls_furniture.oak_blue_sofa": "Oak Blue Sofa",
       "block.ls_furniture.connecting_oak_mosaic": "Oak Planks",
+      "block.ls_furniture.connecting_oak_glass": "Oak Glass",
       "block.ls_furniture.connecting_oak_diagonal": "Oak Planks",
       "block.ls_furniture.oak_white_corner": "Oak White Sofa",
+      "gui.ls_furniture.metalurgy_gui.tooltip_metalurgy": "Metalurgy",
       "block.ls_furniture.dark_oak_lime_sofa": "Dark Oak Lime Sofa",
       "block.ls_furniture.connecting_oak_dunes": "Oak Planks",
       "block.ls_furniture.oak_horizontal_stripes": "Oak Planks",
       "block.ls_furniture.table_junction": "Table Junction",
       "block.ls_furniture.birch_cupboard_vent_on": "Birch Cupboard Vent",
       "gui.ls_furniture.furniture_decorations.tooltip_empty1": "Stone",
+      "gui.ls_furniture.glassblower_gui.tooltip_masonry": "Botanist",
+      "gui.ls_furniture.masonry_gui.Connected": "",
       "block.ls_furniture.jungle_counter_corner": "Jungle Counter",
       "block.ls_furniture.spruce_white_right_end": "Spruce White Sofa",
       "block.ls_furniture.acacia_white_corner": "Acacia White Sofa",
@@ -27776,13 +27935,13 @@
       "block.ls_furniture.mangrove_table_end": " Mangrove Table",
       "block.ls_furniture.jungle_wardrobe": "Jungle Wardrobe",
       "block.ls_furniture.warped_white_right_end": "Warped White Sofa",
+      "gui.ls_furniture.carpentry_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.dark_oak_counter_corner": "Dark Oak Counter",
       "block.ls_furniture.birch_white_left_end": "Birch White Sofa",
       "block.ls_furniture.mangrove_shelve": "Mangrove Shelve",
       "block.ls_furniture.oak_cupboard_corner": "Oak Cupboard",
       "block.ls_furniture.warped_plank_path_2": "Warped Plank Path",
       "gui.ls_furniture.cupboard.label_inventory": "Inventory",
-      "gui.ls_furniture.teddys_gui.tooltip_chisel": "Chisel",
       "block.ls_furniture.warped_plank_path_3": "Warped Plank Path",
       "block.ls_furniture.warped_plank_path_1": "Warped Plank Path",
       "gui.ls_furniture.freezer.label_inventory": "Inventory",
@@ -27799,17 +27958,17 @@
       "gui.ls_furniture.furniture_teddys.tooltip_empty1": "Stone",
       "block.ls_furniture.acacia_stool": "Acacia Stool",
       "block.ls_furniture.oak_apple_create": "Oak Apple Create",
-      "gui.ls_furniture.wood_gui.tooltip_metal": "Metal",
       "block.ls_furniture.oak_pink_sofa": "Oak Pink Sofa",
       "block.ls_furniture.enderman_teddy": "Enderman Teddy",
       "item.ls_furniture.warped_bark": "Warped Bark",
-      "gui.ls_furniture.chisel_gui.label_connected": "Connected",
       "block.ls_furniture.jungle_table_junction": "Jungle Table",
       "block.ls_furniture.dark_oak_white_chair": "Dark Oak White Chair",
       "itemGroup.tabtab_2": "LYIVX\u0027s Chisel",
+      "gui.ls_furniture.botanist_gui.label_carpentry": "Botanist",
       "block.ls_furniture.crimson_drawer": "Crimson Drawer",
       "block.ls_furniture.spruce_table_cross": "Spruce Table",
       "block.ls_furniture.spruce_counter": "Spruce Counter",
+      "gui.ls_furniture.glassblower_gui.label_carpentry": "GlassBlower",
       "block.ls_furniture.connecting_oak_vertical_stripes": "Oak Planks",
       "block.ls_furniture.deepslate_path_92": "Deepslate Path",
       "block.ls_furniture.dark_oak_counter": "Dark Oak Counter",
@@ -27819,7 +27978,9 @@
       "block.ls_furniture.oak_sink": "Oak Sink",
       "block.ls_furniture.dark_oak_white_left_end": "Dark Oak White Sofa",
       "block.ls_furniture.oak_small_bricks": "Oak Planks",
+      "gui.ls_furniture.masonry_gui.tooltip_metalurgy": "Metalurgy",
       "gui.ls_furniture.wood_gui.tooltip_chisel": "Chisel",
+      "gui.ls_furniture.metalurgy_gui.tooltip_weavery": "Weavery",
       "block.ls_furniture.table_corner": "Table Corner",
       "block.ls_furniture.slime_teddy": "Slime Teddy",
       "block.ls_furniture.iron_end": "Iron Glass Table",
@@ -27829,6 +27990,7 @@
       "block.ls_furniture.spruce_table_corner": "Spruce Table",
       "gui.ls_furniture.oven.label_empty": "",
       "block.ls_furniture.birch_mail_box": "Birch Mail Box",
+      "gui.ls_furniture.weavery_gui.tooltip_masonry": "Masonry",
       "item.ls_furniture.birch_bark": "Birch Bark",
       "block.ls_furniture.chair": "Chair",
       "block.ls_furniture.iron_none": "Iron Glass Table",
@@ -27840,10 +28002,12 @@
       "gui.ls_furniture.recipe_explainer.tooltip_stone": "Stone",
       "block.ls_furniture.jungle_table_straight": "Jungle Table",
       "block.ls_furniture.oak_swirl": "Oak Planks",
+      "gui.ls_furniture.engineering_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.mangrove_cupboard_vent_on": "Mangrove Cupboard Vent",
       "item.ls_furniture.spruce_bark": "Spruce Bark",
       "block.ls_furniture.dark_oak_cupboard_vent_on": "Dark Oak Cupboard Vent",
       "block.ls_furniture.dark_oak_yellow_sofa": "Dark Oak Yellow Sofa",
+      "gui.ls_furniture.botanist_gui.tooltip_carpentry": "GlassBlower",
       "block.ls_furniture.oak_cyan_sofa": "Oak Cyan Sofa",
       "block.ls_furniture.oak_yellow_sofa": "Oak Yellow Sofa",
       "block.ls_furniture.warped_wardrobe_1": "Warped Wardrobe",
@@ -27858,7 +28022,7 @@
       "block.ls_furniture.oak_oven": "Oak Oven",
       "block.ls_furniture.mangrove_wardrobe_2": "Mangrove Wardrobe",
       "block.ls_furniture.oak_gray_sofa": "Oak Gray Sofa",
-      "gui.ls_furniture.metal_gui.tooltip_metal": "Metal",
+      "gui.ls_furniture.masonry_gui.tooltip_masonry": "Masonry",
       "block.ls_furniture.jungle_plank_path_2": "Jungle Plank Path",
       "block.ls_furniture.dark_oak_blinds_bottom_closed": "Dark Oak Blinds",
       "block.ls_furniture.jungle_plank_path_3": "Jungle Plank Path",
@@ -27871,7 +28035,6 @@
       "block.ls_furniture.birch_table_end": "Birch Table",
       "block.ls_furniture.deepslate_path_73": "Deepslate Path",
       "block.ls_furniture.deepslate_path_72": "Deepslate Path",
-      "gui.ls_furniture.metal_gui.tooltip_wood": "Wood",
       "block.ls_furniture.framed_oak_wavey": "Oak Planks",
       "block.ls_furniture.crimson_cupboard_corner": "Crimson Cupboard",
       "block.ls_furniture.dark_oak_blinds_top": "Dark Oak Blinds",
@@ -27886,13 +28049,13 @@
       "block.ls_furniture.oak_desk": "Oak Desk",
       "block.ls_furniture.acacia_table_none": "Acacia Table",
       "block.ls_furniture.dark_oak_shelve": "Dark Oak Shelve",
-      "gui.ls_furniture.chisel_gui.tooltip_chisel": "Chisel",
       "block.ls_furniture.warped_chair": "Warped Chair",
       "block.ls_furniture.crimson_table_cross": "Crimson Table",
       "block.ls_furniture.framed_oak_small_bricks": "Oak Planks",
       "block.ls_furniture.jungle_cupboard_vent": "Jungle Cupboard Vent",
       "gui.ls_furniture.furniture_wood.tooltip_output": "Output",
       "block.ls_furniture.iron_golem_teddy": "Iron Golem Teddy",
+      "gui.ls_furniture.glassblower_gui.tooltip_metalurgy": "Metalurgy",
       "block.ls_furniture.acacia_wardrobe": "Acacia Wardrobe",
       "block.ls_furniture.birch_table_junction": "Birch Table",
       "block.ls_furniture.tv_stand_cod": "TV",
@@ -27903,13 +28066,12 @@
       "block.ls_furniture.oak_mail_box": "Oak Mail Box",
       "block.ls_furniture.birch_table_cross": "Birch Table",
       "block.ls_furniture.deepslate_path_8": "Deepslate Path",
+      "gui.ls_furniture.glassblower_gui.Connected": "",
       "block.ls_furniture.birch_chair": "Birch Chair",
       "block.ls_furniture.dark_oak_red_sofa": "Dark Oak Red Sofa",
       "block.ls_furniture.warped_shelve": "Warped Shelve",
       "block.ls_furniture.rack": "Plate Rack",
-      "gui.ls_furniture.wood_gui.tooltip_wood": "Wood",
-      "gui.ls_furniture.metal_gui.tooltip_chisel": "Chisel",
-      "gui.ls_furniture.decorations_gui.tooltip_decorations": "Decorations",
+      "gui.ls_furniture.carpentry_gui.tooltip_weavery": "Weavery",
       "gui.ls_furniture.fridge.label_fridge": "Fridge",
       "block.ls_furniture.jungle_mail_box": "Jungle Mail Box",
       "block.ls_furniture.dark_oak_chair": "Dark Oak Chair",
@@ -27918,7 +28080,6 @@
       "block.ls_furniture.mangrove_white_sofa": "Mangrove White Sofa",
       "block.ls_furniture.crimson_table_none": "Crimson Table",
       "block.ls_furniture.acacia_chair": "Acacia Chair",
-      "gui.ls_furniture.teddys_gui.label_wood": "Teddys",
       "block.ls_furniture.jungle_drawer": "Jungle Drawer",
       "block.ls_furniture.drawer": "Drawer",
       "block.ls_furniture.drainer_plate": "Drainer",
@@ -27930,6 +28091,7 @@
       "block.ls_furniture.spruce_oven": "Spruce Oven",
       "gui.ls_furniture.wardrobe_cupboard.label_fridge": "Wardrobe",
       "block.ls_furniture.jungle_oven": "Jungle Oven",
+      "gui.ls_furniture.glassblower_gui.tooltip_carpentry": "GlassBlower",
       "block.ls_furniture.darkoak_plank_path_1": "Dark Oak Plank Path",
       "gui.ls_furniture.desk.label_desk": "Desk",
       "block.ls_furniture.oak_cupboard": "Oak Cupboard",
@@ -27940,6 +28102,7 @@
       "block.ls_furniture.blackstone_path_73": "Blackstone Path",
       "block.ls_furniture.warped_counter_corner": "Warped Counter",
       "block.ls_furniture.blackstone_path_75": "Blackstone Path",
+      "gui.ls_furniture.masonry_gui.tooltip_weavery": "Weavery",
       "block.ls_furniture.birch_table_none": "Birch Table",
       "block.ls_furniture.dark_oak_pink_sofa": "Dark Oak Pink Sofa",
       "block.ls_furniture.microwave": "Microwave",
@@ -27951,20 +28114,20 @@
       "block.ls_furniture.granite_path_10": "Granite Path",
       "block.ls_furniture.granite_path_11": "Granite Path",
       "block.ls_furniture.granite_path_12": "Granite Path",
-      "gui.ls_furniture.wood_gui.label_wood": "Wood",
       "block.ls_furniture.birch_cupboard_corner": "Birch Cupboard",
       "block.ls_furniture.dark_oak_cupboard_corner": "Dark Oak Cupboard",
-      "gui.ls_furniture.metal_gui.label_wood": "Metal",
       "block.ls_furniture.mangrove_counter": "Mangrove Counter",
       "gui.ls_furniture.wardrobe_cupboard.label_inventory": "Inventory",
       "item.ls_furniture.chisel": "Chisel",
       "block.ls_furniture.oak_light_blue_sofa": "Oak Light Blue Sofa",
       "gui.ls_furniture.recipe_explainer.label_tool": "Tool",
+      "gui.ls_furniture.botanist_gui.tooltip_masonry": "Botanist",
       "block.ls_furniture.mangrove_table_straight": "Mangrove Table",
       "block.ls_furniture.table_end": "Table End",
       "block.ls_furniture.birch_white_right_end": "Birch White Sofa",
       "block.ls_furniture.deepslate_path_131": "Deepslate Path",
       "block.ls_furniture.deepslate_path_132": "Deepslate Path",
+      "gui.ls_furniture.glassblower_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.connecting_oak_horizontal_stripes": "Oak Planks",
       "block.ls_furniture.deepslate_path_133": "Deepslate Path",
       "block.ls_furniture.diorite_path_131": "Diorite Path",
@@ -27994,6 +28157,7 @@
       "block.ls_furniture.polar_bear_teddy": "Polar Bear Teddy",
       "block.ls_furniture.plate": "Plate",
       "block.ls_furniture.any_stone": "Any Stone",
+      "gui.ls_furniture.carpentry_gui.tooltip_masonry": "Masonry",
       "block.ls_furniture.oak_plus": "Oak Planks",
       "block.ls_furniture.mangrove_white_left_end": "Mangrove White Sofa",
       "block.ls_furniture.mangrove_drawer": "Mangrove Drawer",
@@ -28012,6 +28176,7 @@
       "block.ls_furniture.oak_checked": "Oak Planks",
       "block.ls_furniture.mangrove_oven": "Mangrove Oven",
       "block.ls_furniture.crimson_white_corner": "Crimson White Sofa",
+      "gui.ls_furniture.engineering_gui.label_carpentry": "Engineering",
       "block.ls_furniture.spruce_drawer": "Spruce Drawer",
       "block.ls_furniture.stone_path_4": "Stone Path",
       "block.ls_furniture.stone_path_3": "Stone Path",
@@ -28021,8 +28186,8 @@
       "block.ls_furniture.oak_light_gray_sofa": "Oak Light Gray Sofa",
       "block.ls_furniture.warped_white_sofa": "Warped White Sofa",
       "block.ls_furniture.oak_diagonal": "Oak Planks",
+      "block.ls_furniture.connecting_oak_glass_pane": "Oak Glass",
       "block.ls_furniture.mangrove_white_right_end": "Mangrove White Sofa",
-      "gui.ls_furniture.decorations_gui.tooltip_teddys": "Teddys",
       "block.ls_furniture.framed_oak_checkered": "Oak Planks",
       "block.ls_furniture.spruce_plank_path_2": "Spruce Plank Path",
       "block.ls_furniture.spruce_plank_path_1": "Spruce Plank Path"
@@ -28235,22 +28400,6 @@
         "children": [
           {
             "name": "Wood",
-            "children": []
-          },
-          {
-            "name": "Metal",
-            "children": []
-          },
-          {
-            "name": "Teddys",
-            "children": []
-          },
-          {
-            "name": "Decorations",
-            "children": []
-          },
-          {
-            "name": "Chisel",
             "children": []
           }
         ]
@@ -28686,7 +28835,6 @@
       "fusion",
       "patchouli",
       "geckolib",
-      "playeranimator",
       "allmods"
     ],
     "currentGenerator": "forge-1.19.2",

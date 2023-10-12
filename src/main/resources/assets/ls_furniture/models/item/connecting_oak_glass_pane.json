@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+   "type": "fusion:connecting",
+   "connections": [
+   {
+     "type": "fusion:is_same_block"
+   }
+  ],
+  "loader": "fusion:model",
+  "textures": {
+    "layer0": "ls_furniture:blocks/connecting_oak_glass"
+  },
+  "render_type": "cutout"
+}

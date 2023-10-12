@@ -431,6 +431,8 @@ import net.mcreator.lsfurniture.block.ConnectingOakSlashBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakPlusBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakMosaicBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakHorizontalStripesBlock;
+import net.mcreator.lsfurniture.block.ConnectingOakGlassPaneBlock;
+import net.mcreator.lsfurniture.block.ConnectingOakGlassBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakDunesBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakDiagonalBlock;
 import net.mcreator.lsfurniture.block.ConnectingOakCheckeredBlock;
@@ -621,7 +623,6 @@ public class LsFurnitureModBlocks {
 	public static final RegistryObject<Block> BIRCH_WHITE_CHAIR = REGISTRY.register("birch_white_chair", () -> new BirchWhiteChairBlock());
 	public static final RegistryObject<Block> JUNGLE_CHAIR = REGISTRY.register("jungle_chair", () -> new JungleChairBlock());
 	public static final RegistryObject<Block> JUNGLE_WHITE_CHAIR = REGISTRY.register("jungle_white_chair", () -> new JungleWhiteChairBlock());
-	public static final RegistryObject<Block> ACACIA_CHAIR = REGISTRY.register("acacia_chair", () -> new AcaciaChairBlock());
 	public static final RegistryObject<Block> ACACIA_WHITE_CHAIR = REGISTRY.register("acacia_white_chair", () -> new AcaciaWhiteChairBlock());
 	public static final RegistryObject<Block> DARK_OAK_CHAIR = REGISTRY.register("dark_oak_chair", () -> new DarkOakChairBlock());
 	public static final RegistryObject<Block> DARK_OAK_WHITE_CHAIR = REGISTRY.register("dark_oak_white_chair", () -> new DarkOakWhiteChairBlock());
@@ -681,7 +682,6 @@ public class LsFurnitureModBlocks {
 	public static final RegistryObject<Block> SPRUCE_COUNTER = REGISTRY.register("spruce_counter", () -> new SpruceCounterBlock());
 	public static final RegistryObject<Block> BIRCH_COUNTER = REGISTRY.register("birch_counter", () -> new BirchCounterBlock());
 	public static final RegistryObject<Block> JUNGLE_COUNTER = REGISTRY.register("jungle_counter", () -> new JungleCounterBlock());
-	public static final RegistryObject<Block> ACACIA_COUNTER = REGISTRY.register("acacia_counter", () -> new AcaciaCounterBlock());
 	public static final RegistryObject<Block> DARK_OAK_COUNTER = REGISTRY.register("dark_oak_counter", () -> new DarkOakCounterBlock());
 	public static final RegistryObject<Block> MANGROVE_COUNTER = REGISTRY.register("mangrove_counter", () -> new MangroveCounterBlock());
 	public static final RegistryObject<Block> CRIMSON_COUNTER = REGISTRY.register("crimson_counter", () -> new CrimsonCounterBlock());
@@ -1122,4 +1122,8 @@ public class LsFurnitureModBlocks {
 	public static final RegistryObject<Block> DARK_OAK_BLINDS_TOP_CLOSED = REGISTRY.register("dark_oak_blinds_top_closed", () -> new DarkOakBlindsTopClosedBlock());
 	public static final RegistryObject<Block> DARK_OAK_BLINDS_BOTTOM_CLOSED = REGISTRY.register("dark_oak_blinds_bottom_closed", () -> new DarkOakBlindsBottomClosedBlock());
 	public static final RegistryObject<Block> CONNECTING_DARK_OAK_BIG_BRICKS = REGISTRY.register("connecting_dark_oak_big_bricks", () -> new ConnectingDarkOakBigBricksBlock());
+	public static final RegistryObject<Block> ACACIA_CHAIR = REGISTRY.register("acacia_chair", () -> new AcaciaChairBlock());
+	public static final RegistryObject<Block> ACACIA_COUNTER = REGISTRY.register("acacia_counter", () -> new AcaciaCounterBlock());
+	public static final RegistryObject<Block> CONNECTING_OAK_GLASS = REGISTRY.register("connecting_oak_glass", () -> new ConnectingOakGlassBlock());
+	public static final RegistryObject<Block> CONNECTING_OAK_GLASS_PANE = REGISTRY.register("connecting_oak_glass_pane", () -> new ConnectingOakGlassPaneBlock());
 }

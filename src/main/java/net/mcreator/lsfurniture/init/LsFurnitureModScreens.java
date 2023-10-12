@@ -11,22 +11,24 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
-import net.mcreator.lsfurniture.client.gui.WoodGUIScreen;
+import net.mcreator.lsfurniture.client.gui.WeaveryGUIScreen;
 import net.mcreator.lsfurniture.client.gui.WardrobeDrawersScreen;
 import net.mcreator.lsfurniture.client.gui.WardrobeCupboardScreen;
-import net.mcreator.lsfurniture.client.gui.TeddysGUIScreen;
 import net.mcreator.lsfurniture.client.gui.ShelveScreen;
 import net.mcreator.lsfurniture.client.gui.OvenScreen;
-import net.mcreator.lsfurniture.client.gui.MetalGUIScreen;
+import net.mcreator.lsfurniture.client.gui.MetalurgyGUIScreen;
+import net.mcreator.lsfurniture.client.gui.MasonryGUIScreen;
 import net.mcreator.lsfurniture.client.gui.MailBoxScreen;
+import net.mcreator.lsfurniture.client.gui.GlassblowerGUIScreen;
 import net.mcreator.lsfurniture.client.gui.FridgeScreen;
 import net.mcreator.lsfurniture.client.gui.FreezerScreen;
+import net.mcreator.lsfurniture.client.gui.EngineeringGUIScreen;
 import net.mcreator.lsfurniture.client.gui.DrawerScreen;
 import net.mcreator.lsfurniture.client.gui.DeskScreen;
-import net.mcreator.lsfurniture.client.gui.DecorationsGUIScreen;
 import net.mcreator.lsfurniture.client.gui.CupboardScreen;
 import net.mcreator.lsfurniture.client.gui.CounterScreen;
-import net.mcreator.lsfurniture.client.gui.ChiselGUIScreen;
+import net.mcreator.lsfurniture.client.gui.CarpentryGUIScreen;
+import net.mcreator.lsfurniture.client.gui.BotanistGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class LsFurnitureModScreens {
@@ -44,11 +46,13 @@ public class LsFurnitureModScreens {
 			MenuScreens.register(LsFurnitureModMenus.WARDROBE_CUPBOARD.get(), WardrobeCupboardScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.MAIL_BOX.get(), MailBoxScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.CUPBOARD.get(), CupboardScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.WOOD_GUI.get(), WoodGUIScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.METAL_GUI.get(), MetalGUIScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.DECORATIONS_GUI.get(), DecorationsGUIScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.TEDDYS_GUI.get(), TeddysGUIScreen::new);
-			MenuScreens.register(LsFurnitureModMenus.CHISEL_GUI.get(), ChiselGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.CARPENTRY_GUI.get(), CarpentryGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.MASONRY_GUI.get(), MasonryGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.METALURGY_GUI.get(), MetalurgyGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.WEAVERY_GUI.get(), WeaveryGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.ENGINEERING_GUI.get(), EngineeringGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.GLASSBLOWER_GUI.get(), GlassblowerGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.BOTANIST_GUI.get(), BotanistGUIScreen::new);
 		});
 	}
 }

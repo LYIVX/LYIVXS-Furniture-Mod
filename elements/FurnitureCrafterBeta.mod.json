@@ -107,7 +107,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "WoodGUI",
+    "guiBoundTo": "CarpentryGUI",
     "openGUIOnRightClick": true,
     "inventorySize": 34,
     "inventoryStackSize": 64,

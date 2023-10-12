@@ -134,7 +134,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.SPRUCE_COUNTER.get(), SpruceCounterTileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.BIRCH_COUNTER.get(), BirchCounterTileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.JUNGLE_COUNTER.get(), JungleCounterTileRenderer::new);
-		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.ACACIA_COUNTER.get(), AcaciaCounterTileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.DARK_OAK_COUNTER.get(), DarkOakCounterTileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.MANGROVE_COUNTER.get(), MangroveCounterTileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.CRIMSON_COUNTER.get(), CrimsonCounterTileRenderer::new);
@@ -190,5 +189,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.CRIMSON_WARDROBE_2.get(), CrimsonWardrobe2TileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.WARPED_WARDROBE_1.get(), WarpedWardrobe1TileRenderer::new);
 		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.WARPED_WARDROBE_2.get(), WarpedWardrobe2TileRenderer::new);
+		event.registerBlockEntityRenderer(LsFurnitureModBlockEntities.ACACIA_COUNTER.get(), AcaciaCounterTileRenderer::new);
 	}
 }

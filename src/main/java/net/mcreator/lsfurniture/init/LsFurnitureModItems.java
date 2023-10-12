@@ -189,7 +189,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> BIRCH_WHITE_CHAIR = block(LsFurnitureModBlocks.BIRCH_WHITE_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> JUNGLE_CHAIR = block(LsFurnitureModBlocks.JUNGLE_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> JUNGLE_WHITE_CHAIR = block(LsFurnitureModBlocks.JUNGLE_WHITE_CHAIR, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_CHAIR = block(LsFurnitureModBlocks.ACACIA_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> ACACIA_WHITE_CHAIR = block(LsFurnitureModBlocks.ACACIA_WHITE_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> DARK_OAK_CHAIR = block(LsFurnitureModBlocks.DARK_OAK_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> DARK_OAK_WHITE_CHAIR = block(LsFurnitureModBlocks.DARK_OAK_WHITE_CHAIR, LsFurnitureModTabs.TAB_TAB);
@@ -279,8 +278,6 @@ public class LsFurnitureModItems {
 			() -> new BirchCounterDisplayItem(LsFurnitureModBlocks.BIRCH_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> JUNGLE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.JUNGLE_COUNTER.getId().getPath(),
 			() -> new JungleCounterDisplayItem(LsFurnitureModBlocks.JUNGLE_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> ACACIA_COUNTER = REGISTRY.register(LsFurnitureModBlocks.ACACIA_COUNTER.getId().getPath(),
-			() -> new AcaciaCounterDisplayItem(LsFurnitureModBlocks.ACACIA_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> DARK_OAK_COUNTER = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_COUNTER.getId().getPath(),
 			() -> new DarkOakCounterDisplayItem(LsFurnitureModBlocks.DARK_OAK_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> MANGROVE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_COUNTER.getId().getPath(),
@@ -771,6 +768,11 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_TOP_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_TOP_CLOSED, null);
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_BOTTOM_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_BOTTOM_CLOSED, null);
 	public static final RegistryObject<Item> CONNECTING_DARK_OAK_BIG_BRICKS = block(LsFurnitureModBlocks.CONNECTING_DARK_OAK_BIG_BRICKS, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_CHAIR = block(LsFurnitureModBlocks.ACACIA_CHAIR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> ACACIA_COUNTER = REGISTRY.register(LsFurnitureModBlocks.ACACIA_COUNTER.getId().getPath(),
+			() -> new AcaciaCounterDisplayItem(LsFurnitureModBlocks.ACACIA_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> CONNECTING_OAK_GLASS = block(LsFurnitureModBlocks.CONNECTING_OAK_GLASS, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> CONNECTING_OAK_GLASS_PANE = block(LsFurnitureModBlocks.CONNECTING_OAK_GLASS_PANE, LsFurnitureModTabs.TAB_TAB_2);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

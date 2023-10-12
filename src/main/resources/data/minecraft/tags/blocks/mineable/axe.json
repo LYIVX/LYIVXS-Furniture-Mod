@@ -32,7 +32,6 @@
     "ls_furniture:spruce_counter",
     "ls_furniture:birch_counter",
     "ls_furniture:jungle_counter",
-    "ls_furniture:acacia_counter",
     "ls_furniture:dark_oak_counter",
     "ls_furniture:mangrove_counter",
     "ls_furniture:crimson_counter",
@@ -63,6 +62,7 @@
     "ls_furniture:crimson_wardrobe_1",
     "ls_furniture:crimson_wardrobe_2",
     "ls_furniture:warped_wardrobe_1",
-    "ls_furniture:warped_wardrobe_2"
+    "ls_furniture:warped_wardrobe_2",
+    "ls_furniture:acacia_counter"
   ]
 }

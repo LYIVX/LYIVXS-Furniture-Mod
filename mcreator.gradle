@@ -36,29 +36,6 @@ dependencies {
   implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
 }
 
-minecraft {
-  runs {
-   client {    
-      property 'mixin.env.remapRefMap', 'true'
-      property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-        server {
-         property 'mixin.env.remapRefMap', 'true'
-         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-      }
-     }
-
-repositories {
- maven {
-     url = 'https://maven.kosmx.dev/'
- }
-}
-
- dependencies {
-   implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2")
- }
-
 def extraModsDir = 'extra-mods-1.19.2'
 task addnewfoldersmods(type: DefaultTask){
   ant.mkdir(dir: 'extra-mods-1.19.2/');
