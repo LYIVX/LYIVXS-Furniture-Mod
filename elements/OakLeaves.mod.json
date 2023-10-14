@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakLeavesPoppy"
+      },
+      {
+        "value": "CUSTOM:OakLeavesDandilion"
+      },
+      {
+        "value": "CUSTOM:OakLeavesBlueOrchid"
+      },
+      {
+        "value": "CUSTOM:OakLeavesSemiFrosted"
+      },
+      {
+        "value": "CUSTOM:OakLeavesFrosted"
+      },
+      {
+        "value": "Blocks.LEAVES#0"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_leaves",
+    "namespace": "forge"
+  }
+}

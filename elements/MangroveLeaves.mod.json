@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.MANGROVE_LEAVES"
+      },
+      {
+        "value": "CUSTOM:MangroveLeavesPoppy"
+      },
+      {
+        "value": "CUSTOM:MangroveLeavesDandilion"
+      },
+      {
+        "value": "CUSTOM:MangroveLeavesBlueOrchid"
+      },
+      {
+        "value": "CUSTOM:MangroveLeavesSemiFrosted"
+      },
+      {
+        "value": "CUSTOM:MangroveLeavesFrosted"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_leaves",
+    "namespace": "mod"
+  }
+}

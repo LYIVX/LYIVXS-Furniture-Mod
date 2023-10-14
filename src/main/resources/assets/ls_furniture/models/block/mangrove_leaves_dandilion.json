@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ls_furniture:blocks/mangrove_leaves_dandilion",
+    "particle": "ls_furniture:blocks/mangrove_leaves_dandilion"
+  },
+  "render_type": "cutout_mipped"
+}

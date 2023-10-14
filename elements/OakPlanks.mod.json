@@ -74,12 +74,6 @@
         "value": "CUSTOM:FramedOakSwirl"
       },
       {
-        "value": "CUSTOM:ConnectingOakPlus"
-      },
-      {
-        "value": "CUSTOM:FramedOakPlus"
-      },
-      {
         "value": "CUSTOM:ConnectingOakSlash"
       },
       {
@@ -119,10 +113,19 @@
         "value": "CUSTOM:OakSwirl"
       },
       {
-        "value": "CUSTOM:OakPlus"
+        "value": "CUSTOM:OakSlash"
       },
       {
-        "value": "CUSTOM:OakSlash"
+        "value": "CUSTOM:FramedOakPlain"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakPlain"
+      },
+      {
+        "value": "CUSTOM:FramedOakStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakStripped"
       }
     ],
     "blocks": [],

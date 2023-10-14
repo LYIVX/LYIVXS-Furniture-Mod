@@ -36,24 +36,24 @@ public class CobblestonePathRecipeProcedure {
 						}
 						return 0;
 					}
-				}.getAmount(1) >= 1
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.CHISEL.get()) {
+				}.getAmount(4) >= 1
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.CHISEL.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_1.get());
 				_setstack.setCount(4);
-				((Slot) _slots.get(2)).set(_setstack);
+				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_2.get());
 				_setstack.setCount(4);
-				((Slot) _slots.get(3)).set(_setstack);
+				((Slot) _slots.get(6)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COBBLESTONE_PATH_3.get());
 				_setstack.setCount(4);
-				((Slot) _slots.get(4)).set(_setstack);
+				((Slot) _slots.get(7)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

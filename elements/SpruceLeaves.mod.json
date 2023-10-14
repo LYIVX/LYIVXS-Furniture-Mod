@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SpruceLeavesPoppy"
+      },
+      {
+        "value": "CUSTOM:SpruceLeavesDandilion"
+      },
+      {
+        "value": "CUSTOM:SpruceLeavesBlueOrchid"
+      },
+      {
+        "value": "CUSTOM:SpruceLeavesSemiFrosted"
+      },
+      {
+        "value": "CUSTOM:SpruceLeavesFrosted"
+      },
+      {
+        "value": "Blocks.LEAVES#1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_leaves",
+    "namespace": "mod"
+  }
+}

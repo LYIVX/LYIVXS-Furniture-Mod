@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "ls_furniture:blocks/dark_oak_leaves",
+    "top": "ls_furniture:blocks/oak_leaves_frosted_top",
+    "side": "ls_furniture:blocks/dark_oak_leaves_frosted_side",
+    "overlay": "ls_furniture:blocks/dark_oak_leaves_frosted_side",
+    "particle": "ls_furniture:blocks/dark_oak_leaves"
+  },
+  "render_type": "cutout_mipped"
+}

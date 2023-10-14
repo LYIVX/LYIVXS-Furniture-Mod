@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ls_furniture:blocks/connecting_mangrove_small_bricks",
+    "particle": "ls_furniture:blocks/connecting_mangrove_small_bricks"
+  },
+  "render_type": "solid"
+}

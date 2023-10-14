@@ -1,6 +1,6 @@
 {
-  "type": "fusion:connecting",
   "parent": "block/cube_all",
+  "type": "fusion:connecting",
    "connections": [
    {
      "type": "fusion:is_same_block"

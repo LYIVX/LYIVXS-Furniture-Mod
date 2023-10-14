@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.LEAVES2#0"
+      },
+      {
+        "value": "CUSTOM:AcaciaLeavesPoppy"
+      },
+      {
+        "value": "CUSTOM:AcaciaLeavesDandilion"
+      },
+      {
+        "value": "CUSTOM:AcaciaLeavesBlueOrchid"
+      },
+      {
+        "value": "CUSTOM:AcaciaLeavesSemiFrosted"
+      },
+      {
+        "value": "CUSTOM:AcaciaLeavesFrosted"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "acacia_leaves",
+    "namespace": "mod"
+  }
+}

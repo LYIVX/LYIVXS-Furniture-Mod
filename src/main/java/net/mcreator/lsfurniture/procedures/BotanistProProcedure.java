@@ -237,5 +237,6 @@ public class BotanistProProcedure {
 				SlotNumber = SlotNumber + 1;
 			}
 		}
+		LeavesRecipeCallerProcedure.execute(x, y, z, entity);
 	}
 }

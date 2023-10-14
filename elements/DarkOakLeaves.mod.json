@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DarkOakLeavesPoppy"
+      },
+      {
+        "value": "CUSTOM:DarkOakLeavesDandilion"
+      },
+      {
+        "value": "CUSTOM:DarkOakLeavesBlueOrchid"
+      },
+      {
+        "value": "CUSTOM:DarkOakLeavesSemiFrosted"
+      },
+      {
+        "value": "CUSTOM:DarkOakLeavesFrosted"
+      },
+      {
+        "value": "Blocks.LEAVES2#1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_leaves",
+    "namespace": "mod"
+  }
+}

@@ -62,7 +62,7 @@ public class TVsRecipesProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.TV_STAND_OFF.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				((Slot) _slots.get(6)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

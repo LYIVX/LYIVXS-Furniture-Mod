@@ -237,5 +237,18 @@ public class MetalurgyProProcedure {
 				SlotNumber = SlotNumber + 1;
 			}
 		}
+		OakOvenRecipeProcedure.execute(entity);
+		DarkOakOvenRecipeProcedure.execute(entity);
+		SpruceOvenRecipeProcedure.execute(entity);
+		AcaciaOvenRecipeProcedure.execute(entity);
+		BirchOvenRecipeProcedure.execute(entity);
+		JungleOvenRecipeProcedure.execute(entity);
+		MangroveOvenRecipeProcedure.execute(entity);
+		CrimsonOvenRecipeProcedure.execute(entity);
+		WarpedOvenRecipeProcedure.execute(entity);
+		FridgeFreezerRecipeProcedure.execute(entity);
+		OvenVentRecipeProcedure.execute(entity);
+		DrainerRecipeProcedure.execute(entity);
+		RackRecipeProcedure.execute(entity);
 	}
 }

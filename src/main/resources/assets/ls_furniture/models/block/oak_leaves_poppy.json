@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ls_furniture:blocks/oak_leaves_poppys",
+    "particle": "ls_furniture:blocks/oak_leaves_poppys"
+  },
+  "render_type": "cutout_mipped"
+}

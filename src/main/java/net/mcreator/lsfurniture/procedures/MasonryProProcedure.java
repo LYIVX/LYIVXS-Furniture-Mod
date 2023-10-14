@@ -237,5 +237,6 @@ public class MasonryProProcedure {
 				SlotNumber = SlotNumber + 1;
 			}
 		}
+		PathRecipeCallerProcedure.execute(x, y, z, entity);
 	}
 }

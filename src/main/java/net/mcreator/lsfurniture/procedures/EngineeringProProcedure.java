@@ -237,5 +237,10 @@ public class EngineeringProProcedure {
 				SlotNumber = SlotNumber + 1;
 			}
 		}
+		ComputerRecipeProcedure.execute(entity);
+		TVsRecipesProcedure.execute(entity);
+		KettleRecipeProcedure.execute(entity);
+		MicrowaveRecipeProcedure.execute(entity);
+		ToasterRecipeProcedure.execute(entity);
 	}
 }

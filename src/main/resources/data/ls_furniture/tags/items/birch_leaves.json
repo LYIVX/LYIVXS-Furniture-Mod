@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:birch_leaves_dandilion",
+    "ls_furniture:birch_leaves_poppy",
+    "ls_furniture:birch_leaves_semi_frosted",
+    "minecraft:birch_leaves",
+    "ls_furniture:birch_leaves_blue_orchid",
+    "ls_furniture:birch_leaves_frosted"
+  ]
+}

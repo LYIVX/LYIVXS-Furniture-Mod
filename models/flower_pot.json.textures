@@ -1,0 +1,85 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "log": "oak_log",
+        "flowerpot": "flower_pot",
+        "leave": "oak_leaves",
+        "dirt": "dirt"
+      },
+      "name": "default"
+    },
+    "dark_oak": {
+      "map": {
+        "log": "dark_oak_log",
+        "flowerpot": "flower_pot",
+        "leave": "dark_oak_leaves",
+        "dirt": "dirt"
+      },
+      "name": "dark_oak"
+    },
+    "spruce": {
+      "map": {
+        "log": "spruce_log",
+        "flowerpot": "flower_pot",
+        "leave": "spruce_leaves",
+        "dirt": "dirt"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "log": "acacia_log",
+        "flowerpot": "flower_pot",
+        "leave": "acacia_leaves",
+        "dirt": "dirt"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "log": "birch_log",
+        "flowerpot": "flower_pot",
+        "leave": "birch_leaves",
+        "dirt": "dirt"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "log": "jungle_log",
+        "flowerpot": "flower_pot",
+        "leave": "jungle_leaves",
+        "dirt": "dirt"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "log": "mangrove_log",
+        "flowerpot": "flower_pot",
+        "leave": "mangrove_leaves",
+        "dirt": "dirt"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "log": "crimson_stem_animation",
+        "flowerpot": "flower_pot",
+        "leave": "nether_wart_block",
+        "dirt": "dirt"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "log": "warped_stem_animation",
+        "flowerpot": "flower_pot",
+        "leave": "warped_wart_block",
+        "dirt": "dirt"
+      },
+      "name": "warped"
+    }
+  }
+}

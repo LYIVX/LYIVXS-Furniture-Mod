@@ -237,5 +237,17 @@ public class WeaveryProProcedure {
 				SlotNumber = SlotNumber + 1;
 			}
 		}
+		BatTeddyRecipeProcedure.execute(entity);
+		BlazeTeddyRecipeProcedure.execute(entity);
+		ChickenTeddyRecipeProcedure.execute(entity);
+		CreeperTeddyRecipeProcedure.execute(entity);
+		EndermanTeddyRecipeProcedure.execute(entity);
+		GhastTeddyRecipeProcedure.execute(entity);
+		IronGolemTeddyRecipeProcedure.execute(entity);
+		PolarBearTeddyRecipeProcedure.execute(entity);
+		SlimeTeddyRecipeProcedure.execute(entity);
+		SnowGolemTeddyRecipeProcedure.execute(entity);
+		HorseTeddyRecipeProcedure.execute(entity);
+		AxolotlTeddyRecipeProcedure.execute(entity);
 	}
 }

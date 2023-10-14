@@ -82,17 +82,8 @@ public class CreeperTeddyRecipeProcedure {
 								.getItem() == LsFurnitureModItems.SHEAR.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.CREPPER_TEDDY.get());
-				_setstack.setCount((int) (new Object() {
-					public int getAmount(int sltid) {
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-							if (stack != null)
-								return stack.getCount();
-						}
-						return 0;
-					}
-				}.getAmount(46) + 1));
-				((Slot) _slots.get(46)).set(_setstack);
+				_setstack.setCount(1);
+				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

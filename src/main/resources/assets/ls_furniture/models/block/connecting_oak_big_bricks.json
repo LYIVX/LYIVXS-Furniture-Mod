@@ -1,13 +1,9 @@
 {
-  "type": "fusion:connecting",
   "parent": "block/cube_all",
+  "type": "fusion:connecting",
    "connections": [
    {
      "type": "fusion:is_same_block"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_dark_oak_big_bricks"
    }
   ],
   "loader": "fusion:model",

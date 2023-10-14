@@ -1,0 +1,51 @@
+{
+  "parent": "block/cube_all",
+  "type": "fusion:connecting",
+   "connections": [
+   {
+     "type": "fusion:is_same_block"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_oak_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_dark_oak_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_spruce_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_acacia_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_birch_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_jungle_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_mangrove_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_crimson_stripped"
+   },
+   {
+     "type": "fusion:match_block",
+     "block": "ls_furniture:connecting_warped_stripped"
+   }
+  ],
+  "loader": "fusion:model",
+  "textures": {
+    "all": "ls_furniture:blocks/connecting_warped_stripped",
+    "particle": "ls_furniture:blocks/connecting_warped_stripped"
+  },
+  "render_type": "solid"
+}

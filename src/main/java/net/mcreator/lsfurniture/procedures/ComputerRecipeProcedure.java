@@ -62,7 +62,7 @@ public class ComputerRecipeProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.COMPUTER_OFF.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(2)).set(_setstack);
+				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:custom/flower_pot",
+  "textures": {
+    "all": "ls_furniture:blocks/flower_pot",
+    "particle": "ls_furniture:blocks/flower_pot",
+    "log": "ls_furniture:blocks/jungle_log",
+    "flowerpot": "ls_furniture:blocks/flower_pot",
+    "leave": "ls_furniture:blocks/jungle_leaves",
+    "dirt": "ls_furniture:blocks/dirt"
+  },
+  "render_type": "cutout_mipped"
+}

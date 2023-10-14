@@ -1,6 +1,7 @@
 package net.mcreator.lsfurniture.procedures;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
@@ -67,7 +68,7 @@ public class SnowGolemTeddyRecipeProcedure {
 								return 0;
 							}
 						}.getAmount(3) >= 1
-						&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.WHITE_WOOL.asItem()
+						&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Items.WHITE_DYE
 						&& new Object() {
 							public int getAmount(int sltid) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -81,17 +82,8 @@ public class SnowGolemTeddyRecipeProcedure {
 								.getItem() == LsFurnitureModItems.SHEAR.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.SNOW_GOLEM_TEDDY.get());
-				_setstack.setCount((int) (new Object() {
-					public int getAmount(int sltid) {
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-							if (stack != null)
-								return stack.getCount();
-						}
-						return 0;
-					}
-				}.getAmount(46) + 1));
-				((Slot) _slots.get(46)).set(_setstack);
+				_setstack.setCount(1);
+				((Slot) _slots.get(8)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

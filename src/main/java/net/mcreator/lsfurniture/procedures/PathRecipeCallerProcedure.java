@@ -13,14 +13,5 @@ public class PathRecipeCallerProcedure {
 		AndesitePathRecipeProcedure.execute(entity);
 		DioritePathRecipeProcedure.execute(entity);
 		GranitPathRecipeProcedure.execute(entity);
-		OakPathRecipeProcedure.execute(entity);
-		DarkOakPathRecipeProcedure.execute(entity);
-		SprucePathRecipeProcedure.execute(entity);
-		AcaciaPathRecipeProcedure.execute(entity);
-		BirchPathRecipeProcedure.execute(entity);
-		JunglePathRecipeProcedure.execute(entity);
-		MangrovePathRecipeProcedure.execute(entity);
-		CrimsonPathRecipeProcedure.execute(entity);
-		WarpedPathRecipeProcedure.execute(entity);
 	}
 }

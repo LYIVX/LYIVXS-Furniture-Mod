@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_oak_glass",
-    "textureTop": "",
+    "textureTop": "oak_planks",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -34,7 +34,7 @@
         "subtract": false
       }
     ],
-    "name": "Oak Glass",
+    "name": "Oak Glass Pane",
     "specialInfo": [],
     "hardness": 0.8,
     "resistance": 1.3,

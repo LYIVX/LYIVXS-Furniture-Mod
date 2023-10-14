@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ls_furniture:blocks/non_oak_plus",
-    "particle": "ls_furniture:blocks/non_oak_plus"
-  },
-  "render_type": "solid"
-}
