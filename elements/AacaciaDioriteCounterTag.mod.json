@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AacaciaDioriteCounter"
+      },
+      {
+        "value": "CUSTOM:AacaciaDioriteCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "aacacia_diorite_counter_tag",
+    "namespace": "forge"
+  }
+}

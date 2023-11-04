@@ -3,5 +3,5 @@
   "textures": {
     "pane": "ls_furniture:blocks/connecting_mangrove_glass"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

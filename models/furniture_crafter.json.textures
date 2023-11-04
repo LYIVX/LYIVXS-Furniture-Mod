@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "CraftingTableSide": "crafting_table_side",
+        "Hammer": "hammer",
+        "Wrench": "wrench",
+        "OakPlanks": "planks_oak",
+        "AnvilFlat": "anvil_flat",
+        "CraftingTableTop": "crafting_table_top",
+        "Saw": "saw",
+        "Shears": "shears",
+        "Chisel": "chisel",
+        "StoneCutterSaw": "stonecutter_saw"
+      },
+      "name": "default"
+    }
+  }
+}

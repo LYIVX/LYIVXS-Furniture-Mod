@@ -1,48 +1,5 @@
 {
   "parent": "block/cube_all",
-  "type": "fusion:connecting",
-   "connections": [
-   {
-     "type": "fusion:is_same_block"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_oak_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_dark_oak_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_spruce_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_acacia_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_birch_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_jungle_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_mangrove_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_crimson_plain"
-   },
-   {
-     "type": "fusion:match_block",
-     "block": "ls_furniture:connecting_warped_plain"
-   }
-  ],
-  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:blocks/connecting_warped_plain",
     "particle": "ls_furniture:blocks/connecting_warped_plain"

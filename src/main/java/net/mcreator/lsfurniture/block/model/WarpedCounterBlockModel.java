@@ -19,6 +19,6 @@ public class WarpedCounterBlockModel extends AnimatedGeoModel<WarpedCounterTileE
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_warped.png");
 	}
 }

@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/leaf_plant",
+  "textures": {
+    "all": "ls_furniture:blocks/plant_mangrove",
+    "particle": "ls_furniture:blocks/plant_mangrove",
+    "log": "ls_furniture:blocks/log_mangrove",
+    "leave": "ls_furniture:blocks/leaves_mangrove"
+  },
+  "render_type": "cutout"
+}

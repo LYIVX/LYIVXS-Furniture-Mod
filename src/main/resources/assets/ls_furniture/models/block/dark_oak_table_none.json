@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_none",
   "textures": {
-    "all": "ls_furniture:blocks/dark_oak_planks",
-    "particle": "ls_furniture:blocks/dark_oak_planks",
-    "1": "ls_furniture:blocks/dark_oak_log",
-    "2": "ls_furniture:blocks/stripped_dark_oak"
+    "all": "ls_furniture:blocks/table_none_dark_oak",
+    "particle": "ls_furniture:blocks/table_none_dark_oak",
+    "1": "ls_furniture:blocks/log_dark_oak",
+    "2": "ls_furniture:blocks/table_none_dark_oak"
   },
   "render_type": "cutout"
 }

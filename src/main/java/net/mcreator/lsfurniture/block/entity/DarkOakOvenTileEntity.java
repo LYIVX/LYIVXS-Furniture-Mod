@@ -140,7 +140,7 @@ public class DarkOakOvenTileEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Dark Oak Oven");
+		return Component.literal("Oven (Dark Oak)");
 	}
 
 	@Override

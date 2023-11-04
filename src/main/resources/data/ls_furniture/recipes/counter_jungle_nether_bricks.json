@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:jungle_planks"
+    },
+    {
+      "item": "minecraft:nether_bricks"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:jungle_nether_bricks_counter"
+  }
+}

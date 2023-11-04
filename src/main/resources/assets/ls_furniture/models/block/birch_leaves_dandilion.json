@@ -1,8 +1,15 @@
 {
-  "parent": "block/cube_all",
+  "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/birch_leaves_dandilion",
-    "particle": "ls_furniture:blocks/birch_leaves_dandilion"
+    "all": "ls_furniture:blocks/dandilion",
+    "particle": "ls_furniture:blocks/dandilion",
+    "east": "ls_furniture:blocks/dandilion",
+    "south": "ls_furniture:blocks/dandilion",
+    "north": "ls_furniture:blocks/dandilion",
+    "west": "ls_furniture:blocks/dandilion",
+    "up": "ls_furniture:blocks/dandilion",
+    "tint": "ls_furniture:blocks/leaves_birch",
+    "down": "ls_furniture:blocks/dandilion"
   },
   "render_type": "cutout_mipped"
 }

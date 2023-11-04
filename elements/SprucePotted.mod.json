@@ -16,8 +16,8 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Spruce foliage",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -118,9 +118,6 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onDestroyedByPlayer": {
-      "name": "PottedBlockDestroyedByPlayer"
-    },
-    "onDestroyedByExplosion": {
       "name": "PottedBlockDestroyedByPlayer"
     },
     "spawnWorldTypes": [],

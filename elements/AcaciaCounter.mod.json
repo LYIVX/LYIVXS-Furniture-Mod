@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "acacia_counter",
+    "texture": "counter_acacia",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -50,7 +50,7 @@
         "subtract": false
       }
     ],
-    "name": "Acacia Counter",
+    "name": "Counter (Acacia)",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
@@ -176,6 +176,12 @@
       "name": "AcaciaCounterBlockAdded"
     },
     "onTickUpdate": {
+      "name": "AcaciaCounterBlockAdded"
+    },
+    "onDestroyedByPlayer": {
+      "name": "AcaciaCounterBlockAdded"
+    },
+    "onDestroyedByExplosion": {
       "name": "AcaciaCounterBlockAdded"
     },
     "spawnWorldTypes": [],

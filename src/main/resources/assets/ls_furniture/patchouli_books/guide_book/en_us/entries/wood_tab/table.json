@@ -15,7 +15,7 @@
 			"input3": "minecraft:air",
 			"input4": "ls_furniture:saw",
 			
-			"output1": "ls_furniture:table_none",
+			"output1": "ls_furniture:oak_table_none",
 			
 			"text": ""
         },

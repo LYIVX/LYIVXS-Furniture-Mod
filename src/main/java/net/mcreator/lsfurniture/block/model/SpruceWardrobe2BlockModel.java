@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.entity.SpruceWardrobe2TileEntity;
 public class SpruceWardrobe2BlockModel extends AnimatedGeoModel<SpruceWardrobe2TileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(SpruceWardrobe2TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobetop.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(SpruceWardrobe2TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobetop.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_top.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceWardrobe2TileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_spruce.png");
 	}
 }

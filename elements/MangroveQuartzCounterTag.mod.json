@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MangroveQuartzCounter"
+      },
+      {
+        "value": "CUSTOM:MangroveQuartzCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mangrove_quartz_counter_tag",
+    "namespace": "forge"
+  }
+}

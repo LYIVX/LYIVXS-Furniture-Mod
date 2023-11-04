@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diorite",
+    "minecraft:end_stone",
+    "minecraft:blackstone",
+    "minecraft:nether_bricks",
+    "minecraft:granite",
+    "minecraft:andesite",
+    "minecraft:prismarine",
+    "minecraft:calcite",
+    "minecraft:deepslate",
+    "minecraft:netherrack",
+    "minecraft:bricks",
+    "minecraft:basalt",
+    "minecraft:dripstone_block",
+    "ls_furniture:any_stone"
+  ]
+}

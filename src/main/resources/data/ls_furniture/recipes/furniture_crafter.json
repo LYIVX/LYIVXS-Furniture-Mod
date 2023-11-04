@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ls_furniture:saw"
+    },
+    {
+      "item": "ls_furniture:hammer"
+    },
+    {
+      "item": "minecraft:crafting_table"
+    },
+    {
+      "item": "ls_furniture:wrench"
+    },
+    {
+      "item": "ls_furniture:wrench"
+    },
+    {
+      "item": "ls_furniture:chisel"
+    }
+  ],
+  "result": {
+    "item": "ls_furniture:furniture_crafter",
+    "count": 1
+  }
+}

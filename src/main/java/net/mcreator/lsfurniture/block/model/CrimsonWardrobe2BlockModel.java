@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.entity.CrimsonWardrobe2TileEntity;
 public class CrimsonWardrobe2BlockModel extends AnimatedGeoModel<CrimsonWardrobe2TileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonWardrobe2TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobetop.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(CrimsonWardrobe2TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobetop.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_top.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonWardrobe2TileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_crimson.png");
 	}
 }

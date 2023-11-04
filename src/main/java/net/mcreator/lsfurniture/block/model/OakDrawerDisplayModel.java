@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.OakDrawerDisplayItem;
 public class OakDrawerDisplayModel extends AnimatedGeoModel<OakDrawerDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(OakDrawerDisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/bed_side_draw.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(OakDrawerDisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/bed_side_draw.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/drawer.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(OakDrawerDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oak_drawer.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_oak.png");
 	}
 }

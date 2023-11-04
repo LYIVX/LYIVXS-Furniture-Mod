@@ -2,8 +2,8 @@
   "parent": "ls_furniture:custom/plate_rack",
   "textures": {
     "all": "ls_furniture:blocks/anvil",
-    "particle": "ls_furniture:blocks/anvil",
+    "particle": "ls_furniture:blocks/iron_block",
     "2": "ls_furniture:blocks/iron_block"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

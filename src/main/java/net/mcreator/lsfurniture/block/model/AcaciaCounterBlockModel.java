@@ -19,6 +19,6 @@ public class AcaciaCounterBlockModel extends AnimatedGeoModel<AcaciaCounterTileE
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_acacia.png");
 	}
 }

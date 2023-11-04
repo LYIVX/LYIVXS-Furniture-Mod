@@ -8,13 +8,22 @@
         "value": "Blocks.MANGROVE_PLANKS"
       },
       {
-        "value": "CUSTOM:MangroveBricks1"
+        "value": "CUSTOM:ConnectingMangrovePlain"
       },
       {
-        "value": "CUSTOM:MangroveBricks1Non"
+        "value": "CUSTOM:FramedMangrovePlain"
       },
       {
-        "value": "CUSTOM:MangroveHorizontalStrips"
+        "value": "CUSTOM:ConnectingMangroveStripped"
+      },
+      {
+        "value": "CUSTOM:FramedMangroveStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedMangroveSmallBricks"
       }
     ],
     "blocks": [],

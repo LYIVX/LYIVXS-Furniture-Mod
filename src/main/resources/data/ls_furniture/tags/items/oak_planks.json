@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+  	"minecraft:oak_planks",
     "ls_furniture:connecting_oak_vertical_stripes",
     "ls_furniture:connecting_oak_slash",
     "ls_furniture:connecting_oak_stripped",
@@ -33,7 +34,6 @@
     "ls_furniture:framed_oak_big_bricks",
     "ls_furniture:framed_oak_diagonal",
     "ls_furniture:oak_swirl",
-    "minecraft:oak_planks",
     "ls_furniture:framed_oak_vertical_stripes",
     "ls_furniture:oak_slash",
     "ls_furniture:framed_oak_swirl",

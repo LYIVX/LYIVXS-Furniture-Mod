@@ -1,14 +1,14 @@
 {
   "parent": "ls_furniture:custom/cupboard_vent",
   "textures": {
-    "all": "ls_furniture:blocks/acacia_planks",
-    "particle": "ls_furniture:blocks/acacia_planks",
+    "all": "ls_furniture:blocks/planks_acacia",
+    "particle": "ls_furniture:blocks/planks_acacia",
     "1": "ls_furniture:blocks/anvil_flat",
     "2": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/black_wool",
-    "4": "ls_furniture:blocks/green_wool",
-    "5": "ls_furniture:blocks/red_wool",
-    "6": "ls_furniture:blocks/acacia_planks",
+    "3": "ls_furniture:blocks/wool_black",
+    "4": "ls_furniture:blocks/wool_green",
+    "5": "ls_furniture:blocks/wool_red",
+    "6": "ls_furniture:blocks/stripped_acacia",
     "7": "ls_furniture:blocks/stripped_acacia"
   },
   "render_type": "solid"

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:oak_log_bundle",
+    "minecraft:oak_log",
+    "ls_furniture:oak_log_reinforced"
+  ]
+}

@@ -140,7 +140,7 @@ public class BirchOvenTileEntity extends RandomizableContainerBlockEntity implem
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Birch Oven");
+		return Component.literal("Oven (Birch)");
 	}
 
 	@Override

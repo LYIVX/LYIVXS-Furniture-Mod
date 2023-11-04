@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.CrimsonDrawerDisplayItem;
 public class CrimsonDrawerDisplayModel extends AnimatedGeoModel<CrimsonDrawerDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonDrawerDisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/bed_side_draw.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(CrimsonDrawerDisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/bed_side_draw.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/drawer.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonDrawerDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_drawer.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_crimson.png");
 	}
 }

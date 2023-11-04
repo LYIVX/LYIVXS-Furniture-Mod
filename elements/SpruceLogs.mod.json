@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SpruceLogBundle"
+      },
+      {
+        "value": "CUSTOM:SpruceLogReinforced"
+      },
+      {
+        "value": "Blocks.LOG#1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_logs",
+    "namespace": "mod"
+  }
+}

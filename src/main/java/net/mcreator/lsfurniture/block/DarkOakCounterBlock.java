@@ -162,7 +162,7 @@ public class DarkOakCounterBlock extends BaseEntityBlock implements EntityBlock 
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Dark Oak Counter");
+					return Component.literal("Counter (Dark Oak)");
 				}
 
 				@Override

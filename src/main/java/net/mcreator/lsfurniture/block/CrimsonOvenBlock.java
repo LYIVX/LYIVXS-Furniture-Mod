@@ -154,7 +154,7 @@ public class CrimsonOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Crimson Oven");
+					return Component.literal("Oven (Crimson)");
 				}
 
 				@Override

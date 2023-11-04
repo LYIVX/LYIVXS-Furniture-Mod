@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:spruce_log_reinforced",
+    "ls_furniture:spruce_log_bundle",
+    "minecraft:spruce_log"
+  ]
+}

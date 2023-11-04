@@ -42,7 +42,7 @@ public class DarkOakDeskRecipeProcedure {
 				}.getAmount(4) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.SAW.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.DARKOAK_DESK.get());
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.DARK_OAK_DESK.get());
 				_setstack.setCount(1);
 				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

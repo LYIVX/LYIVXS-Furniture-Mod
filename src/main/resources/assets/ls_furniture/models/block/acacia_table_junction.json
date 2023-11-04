@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_junction",
   "textures": {
-    "all": "ls_furniture:blocks/acacia_planks",
-    "particle": "ls_furniture:blocks/acacia_planks",
-    "1": "ls_furniture:blocks/stripped_acacia"
+    "all": "ls_furniture:blocks/table_junction_acacia",
+    "particle": "ls_furniture:blocks/table_junction_acacia",
+    "1": "ls_furniture:blocks/table_junction_acacia"
   },
   "render_type": "cutout"
 }

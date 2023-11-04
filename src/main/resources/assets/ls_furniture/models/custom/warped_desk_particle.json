@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/desk.item",
   "textures": {
-    "particle": "ls_furniture:blocks/warped_desk"
+    "particle": "ls_furniture:blocks/planks_warped"
   }
 }

@@ -28,6 +28,7 @@ import net.mcreator.lsfurniture.client.gui.DeskScreen;
 import net.mcreator.lsfurniture.client.gui.CupboardScreen;
 import net.mcreator.lsfurniture.client.gui.CounterScreen;
 import net.mcreator.lsfurniture.client.gui.CarpentryGUIScreen;
+import net.mcreator.lsfurniture.client.gui.Carpentry2GUIScreen;
 import net.mcreator.lsfurniture.client.gui.BotanistGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -53,6 +54,7 @@ public class LsFurnitureModScreens {
 			MenuScreens.register(LsFurnitureModMenus.ENGINEERING_GUI.get(), EngineeringGUIScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.GLASSBLOWER_GUI.get(), GlassblowerGUIScreen::new);
 			MenuScreens.register(LsFurnitureModMenus.BOTANIST_GUI.get(), BotanistGUIScreen::new);
+			MenuScreens.register(LsFurnitureModMenus.CARPENTRY_2_GUI.get(), Carpentry2GUIScreen::new);
 		});
 	}
 }

@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BirchGraniteCounterCorner"
+      },
+      {
+        "value": "CUSTOM:BirchGraniteCounter"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_granite_counter_tag",
+    "namespace": "forge"
+  }
+}

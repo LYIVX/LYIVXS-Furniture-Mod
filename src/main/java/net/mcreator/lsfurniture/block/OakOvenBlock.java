@@ -160,7 +160,7 @@ public class OakOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Oak Oven");
+					return Component.literal("Oven (Oak)");
 				}
 
 				@Override

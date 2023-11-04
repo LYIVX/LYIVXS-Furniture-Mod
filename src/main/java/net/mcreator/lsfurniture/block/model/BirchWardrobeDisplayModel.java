@@ -19,6 +19,6 @@ public class BirchWardrobeDisplayModel extends AnimatedGeoModel<BirchWardrobeDis
 
 	@Override
 	public ResourceLocation getTextureResource(BirchWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_birch.png");
 	}
 }

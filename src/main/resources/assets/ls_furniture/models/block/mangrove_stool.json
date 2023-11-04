@@ -1,11 +1,11 @@
 {
   "parent": "ls_furniture:custom/stool",
   "textures": {
-    "all": "ls_furniture:blocks/mangrove_planks",
-    "particle": "ls_furniture:blocks/mangrove_planks",
-    "0": "ls_furniture:blocks/mangrove_log",
-    "1": "ls_furniture:blocks/stripped_mangrove",
-    "2": "ls_furniture:blocks/invisible"
+    "all": "ls_furniture:blocks/planks_mangrove",
+    "particle": "ls_furniture:blocks/planks_mangrove",
+    "Log": "ls_furniture:blocks/log_mangrove",
+    "Stripped": "ls_furniture:blocks/stripped_mangrove",
+    "Wool": "ls_furniture:blocks/invisible"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "cutout"
 }

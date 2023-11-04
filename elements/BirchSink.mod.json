@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "birch_sink",
+    "texture": "sink_birch",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,27 +14,18 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_birch",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {
         "mx": 0.0,
         "my": 0.0,
         "mz": 1.0,
-        "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
-        "subtract": false
-      },
-      {
-        "mx": 0.0,
-        "my": 14.0,
-        "mz": 0.0,
         "Mx": 16.0,
         "My": 16.0,
         "Mz": 16.0,
@@ -50,43 +41,16 @@
         "subtract": false
       },
       {
-        "mx": 1.0,
-        "my": 16.0,
-        "mz": 2.0,
-        "Mx": 15.0,
-        "My": 17.0,
-        "Mz": 14.0,
-        "subtract": false
-      },
-      {
-        "mx": 3.0,
-        "my": 13.0,
-        "mz": 4.0,
-        "Mx": 13.0,
-        "My": 17.0,
-        "Mz": 12.0,
-        "subtract": true
-      },
-      {
-        "mx": 7.0,
-        "my": 17.0,
-        "mz": 12.0,
-        "Mx": 9.0,
-        "My": 20.0,
-        "Mz": 14.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": 20.0,
-        "mz": 9.0,
-        "Mx": 9.0,
-        "My": 22.0,
-        "Mz": 14.0,
+        "mx": 0.0,
+        "my": 14.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Birch Sink",
+    "name": "Sink (Birch)",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
@@ -95,13 +59,13 @@
     "creativeTab": {
       "value": "CUSTOM:TAB"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": true,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
@@ -109,7 +73,7 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -128,39 +92,39 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 2.0,
+    "animationCount": 3.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
-    "isCustomSoundType": true,
+    "isCustomSoundType": false,
     "soundOnStep": {
       "value": "WOOD"
     },
     "breakSound": {
-      "value": "block.wood.break"
+      "value": ""
     },
     "fallSound": {
-      "value": "block.wood.fall"
+      "value": ""
     },
     "hitSound": {
-      "value": "block.wood.hit"
+      "value": ""
     },
     "placeSound": {
-      "value": "block.wood.place"
+      "value": ""
     },
     "stepSound": {
-      "value": "block.metal.step"
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:KettleParticle"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -174,11 +138,14 @@
     "energyCapacity": 400000,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
-    "isFluidTank": false,
-    "fluidCapacity": 8000,
+    "isFluidTank": true,
+    "fluidCapacity": 1,
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "SinkOnBlockRightClicked"
+    },
+    "onTickUpdate": {
+      "name": "SinkUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
@@ -193,6 +160,6 @@
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "sink.geo.json",
-    "displaySettings": "bed_side_draw.item.json"
+    "displaySettings": "sink.item.json"
   }
 }

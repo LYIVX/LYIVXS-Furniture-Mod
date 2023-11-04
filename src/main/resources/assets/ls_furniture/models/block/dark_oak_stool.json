@@ -1,11 +1,11 @@
 {
   "parent": "ls_furniture:custom/stool",
   "textures": {
-    "all": "ls_furniture:blocks/dark_oak_planks",
-    "particle": "ls_furniture:blocks/dark_oak_planks",
-    "0": "ls_furniture:blocks/dark_oak_log",
-    "1": "ls_furniture:blocks/stripped_dark_oak",
-    "2": "ls_furniture:blocks/invisible"
+    "all": "ls_furniture:blocks/planks_dark_oak",
+    "particle": "ls_furniture:blocks/planks_dark_oak",
+    "Log": "ls_furniture:blocks/log_dark_oak",
+    "Stripped": "ls_furniture:blocks/stripped_dark_oak",
+    "Wool": "ls_furniture:blocks/invisible"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "cutout"
 }

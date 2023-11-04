@@ -2,66 +2,129 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oak_planks",
-        "1": "stripped_oak"
+        "Counter Top": "stripped_oak",
+        "Stripped": "stripped_oak"
       },
       "name": "default"
     },
-    "birch": {
-      "map": {
-        "0": "birch_planks",
-        "1": "strippedbirch"
-      },
-      "name": "birch"
-    },
-    "acacia": {
-      "map": {
-        "0": "acacia_planks",
-        "1": "stripped_acacia"
-      },
-      "name": "acacia"
-    },
     "dark_oak": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "stripped_dark_oak"
+        "Counter Top": "stripped_dark_oak",
+        "Stripped": "stripped_dark_oak"
       },
       "name": "dark_oak"
     },
-    "jungle": {
-      "map": {
-        "0": "jungle_planks",
-        "1": "stripped_jungle"
-      },
-      "name": "jungle"
-    },
     "spruce": {
       "map": {
-        "0": "spruce_planks",
-        "1": "stripped_spruce"
+        "Counter Top": "stripped_spruce",
+        "Stripped": "stripped_spruce"
       },
       "name": "spruce"
     },
+    "acacia": {
+      "map": {
+        "Counter Top": "stripped_acacia",
+        "Stripped": "stripped_acacia"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "Counter Top": "stripped_birch",
+        "Stripped": "stripped_birch"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "Counter Top": "stripped_jungle",
+        "Stripped": "stripped_jungle"
+      },
+      "name": "jungle"
+    },
     "mangrove": {
       "map": {
-        "0": "mangrove_planks",
-        "1": "stripped_mangrove"
+        "Counter Top": "stripped_mangrove",
+        "Stripped": "stripped_mangrove"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "0": "crimson_planks",
-        "1": "dtripped_crimson"
+        "Counter Top": "stripped_crimson",
+        "Stripped": "stripped_crimson"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "0": "warped_planks",
-        "1": "stripped_warped"
+        "Counter Top": "stripped_warped",
+        "Stripped": "stripped_warped"
       },
       "name": "warped"
+    },
+    "oak_bricks": {
+      "map": {
+        "Counter Top": "bricks",
+        "Stripped": "stripped_oak"
+      },
+      "name": "oak_bricks"
+    },
+    "dark_oak_deepslate": {
+      "map": {
+        "Counter Top": "deepslate_tiles",
+        "Stripped": "stripped_dark_oak"
+      },
+      "name": "dark_oak_deepslate"
+    },
+    "spruce_andesite": {
+      "map": {
+        "Counter Top": "polished_andesite",
+        "Stripped": "stripped_spruce"
+      },
+      "name": "spruce_andesite"
+    },
+    "acacia_diorite": {
+      "map": {
+        "Counter Top": "polished_diorite",
+        "Stripped": "stripped_acacia"
+      },
+      "name": "acacia_diorite"
+    },
+    "birch_granite": {
+      "map": {
+        "Counter Top": "polished_granite",
+        "Stripped": "stripped_birch"
+      },
+      "name": "birch_granite"
+    },
+    "jungle_nether_bricks": {
+      "map": {
+        "Counter Top": "nether_bricks",
+        "Stripped": "stripped_jungle"
+      },
+      "name": "jungle_nether_bricks"
+    },
+    "mangrove_quartz": {
+      "map": {
+        "Counter Top": "quartz_block_top",
+        "Stripped": "stripped_mangrove"
+      },
+      "name": "mangrove_quartz"
+    },
+    "crimson_nether_wart": {
+      "map": {
+        "Counter Top": "nether_wart_block",
+        "Stripped": "stripped_crimson"
+      },
+      "name": "crimson_nether_wart"
+    },
+    "warped_warped_wart": {
+      "map": {
+        "Counter Top": "warped_wart_block",
+        "Stripped": "stripped_warped"
+      },
+      "name": "warped_warped_wart"
     }
   }
 }

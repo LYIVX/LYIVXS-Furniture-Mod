@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:dark_oak_log_bundle",
+    "ls_furniture:dark_oak_log_reinforced",
+    "minecraft:dark_oak_log"
+  ]
+}

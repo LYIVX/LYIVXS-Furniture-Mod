@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:dark_oak_planks"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:dark_oak_drawer"
+  }
+}

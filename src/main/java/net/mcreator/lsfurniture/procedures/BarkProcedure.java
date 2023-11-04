@@ -49,7 +49,7 @@ public class BarkProcedure {
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DARK_OAK_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(LsFurnitureModItems.DARK_OAK_BRAK.get());
+						ItemStack _setstack = new ItemStack(LsFurnitureModItems.DARK_OAK_BARK.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

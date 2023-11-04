@@ -2,22 +2,22 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "birch_leaves",
+    "texture": "leaves_birch_frosted_side",
     "textureTop": "birch_leaves_frosted_top",
     "textureLeft": "birch_leaves_frosted_side",
     "textureFront": "birch_leaves_frosted_side",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 14,
-    "customModelName": "Grass block",
+    "renderType": 2,
+    "customModelName": "block:birchsemifrosted",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Birch foliage",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:TAB"
+      "value": "CUSTOM:TAB2"
     },
     "destroyTool": "hoe",
     "customDrop": {

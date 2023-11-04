@@ -2,22 +2,22 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "dark_oak_leaves",
+    "texture": "leaves_oak_frosted_side",
     "textureTop": "oak_leaves_frosted_top",
     "textureLeft": "dark_oak_leaves_frosted_side",
     "textureFront": "dark_oak_leaves_frosted_side",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 14,
-    "customModelName": "Grass block",
+    "renderType": 2,
+    "customModelName": "block:oaksemifrosted",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Foliage",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:TAB"
+      "value": "CUSTOM:TAB2"
     },
     "destroyTool": "hoe",
     "customDrop": {

@@ -1,6 +1,10 @@
 
 package net.mcreator.lsfurniture.block;
 
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -15,18 +19,19 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.BiomeColors;
 
 import net.mcreator.lsfurniture.procedures.PottedBlockDestroyedByPlayerProcedure;
+import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -87,7 +92,7 @@ public class OakPottedBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(Blocks.OAK_LEAVES));
+		return Collections.singletonList(new ItemStack(LsFurnitureModBlocks.OAK_PLANT.get()));
 	}
 
 	@Override
@@ -97,9 +102,17 @@ public class OakPottedBlock extends Block {
 		return retval;
 	}
 
-	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
-		super.wasExploded(world, pos, e);
-		PottedBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	@OnlyIn(Dist.CLIENT)
+	public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
+		event.getBlockColors().register((bs, world, pos, index) -> {
+			return world != null && pos != null ? BiomeColors.getAverageFoliageColor(world, pos) : FoliageColor.getDefaultColor();
+		}, LsFurnitureModBlocks.OAK_POTTED.get());
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
+		event.getItemColors().register((stack, index) -> {
+			return FoliageColor.getDefaultColor();
+		}, LsFurnitureModBlocks.OAK_POTTED.get());
 	}
 }

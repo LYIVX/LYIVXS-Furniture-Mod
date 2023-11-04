@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/kettle.item",
   "textures": {
-    "particle": "ls_furniture:blocks/kettle"
+    "particle": "ls_furniture:blocks/iron_block"
   }
 }

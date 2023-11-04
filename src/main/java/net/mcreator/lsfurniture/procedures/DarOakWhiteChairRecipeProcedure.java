@@ -51,7 +51,7 @@ public class DarOakWhiteChairRecipeProcedure {
 						return 0;
 					}
 				}.getAmount(2) >= 1
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.DARK_OAK_BRAK
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.DARK_OAK_BARK
 						.get()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -85,7 +85,7 @@ public class DarOakWhiteChairRecipeProcedure {
 								return 0;
 							}
 						}.getAmount(1) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
-								.is(ItemTags.create(new ResourceLocation("forge:wool")))
+								.is(ItemTags.create(new ResourceLocation("minecraft:wool")))
 						&& new Object() {
 							public int getAmount(int sltid) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -96,7 +96,7 @@ public class DarOakWhiteChairRecipeProcedure {
 								return 0;
 							}
 						}.getAmount(2) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
-								.getItem() == LsFurnitureModItems.DARK_OAK_BRAK.get()
+								.getItem() == LsFurnitureModItems.DARK_OAK_BARK.get()
 						&& new Object() {
 							public int getAmount(int sltid) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

@@ -19,6 +19,6 @@ public class AcaciaDeskDisplayModel extends AnimatedGeoModel<AcaciaDeskDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_acacia.png");
 	}
 }

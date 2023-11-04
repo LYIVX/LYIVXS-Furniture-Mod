@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/desk.item",
   "textures": {
-    "particle": "ls_furniture:blocks/spruce_desk"
+    "particle": "ls_furniture:blocks/planks_spruce"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "parent": "ls_furniture:custom/fire_place",
+  "textures": {
+    "all": "ls_furniture:blocks/bricks",
+    "particle": "ls_furniture:blocks/bricks",
+    "Stone Bricks": "ls_furniture:blocks/stone_bricks",
+    "Bricks": "ls_furniture:blocks/bricks",
+    "Fire": "ls_furniture:blocks/fire_0",
+    "coal": "ls_furniture:blocks/coal_block",
+    "Black": "ls_furniture:blocks/black_concrete",
+    "Iron Bars": "ls_furniture:blocks/iron_bars"
+  },
+  "render_type": "cutout_mipped"
+}

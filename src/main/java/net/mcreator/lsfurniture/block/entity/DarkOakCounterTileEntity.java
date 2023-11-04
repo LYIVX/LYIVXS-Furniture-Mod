@@ -140,7 +140,7 @@ public class DarkOakCounterTileEntity extends RandomizableContainerBlockEntity i
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Dark Oak Counter");
+		return Component.literal("Counter (Dark Oak)");
 	}
 
 	@Override

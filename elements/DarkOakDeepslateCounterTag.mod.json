@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkOakDeepslateCounter"
+      },
+      {
+        "value": "CUSTOM:DarkOakDeepslateCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_deepslate_counter_tag",
+    "namespace": "forge"
+  }
+}

@@ -140,7 +140,7 @@ public class SpruceOvenTileEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Spruce Oven");
+		return Component.literal("Oven (Spruce)");
 	}
 
 	@Override

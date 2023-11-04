@@ -19,6 +19,6 @@ public class BirchCounterDisplayModel extends AnimatedGeoModel<BirchCounterDispl
 
 	@Override
 	public ResourceLocation getTextureResource(BirchCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_birch.png");
 	}
 }

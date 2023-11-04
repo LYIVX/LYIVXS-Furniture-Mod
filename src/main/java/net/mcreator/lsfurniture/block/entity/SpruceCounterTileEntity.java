@@ -140,7 +140,7 @@ public class SpruceCounterTileEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Spruce Counter");
+		return Component.literal("Counter (Spruce)");
 	}
 
 	@Override

@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Water Still": "",
+        "Planks": "",
+        "Water Flow": "",
+        "Anvil": "",
+        "Stripped": ""
+      },
+      "name": "default"
+    }
+  }
+}

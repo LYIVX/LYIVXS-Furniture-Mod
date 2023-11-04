@@ -2,73 +2,73 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oak_log",
-        "1": "stripped_oak",
-        "2": "invisible"
+        "Log": "log_oak",
+        "Stripped": "stripped_oak",
+        "Wool": "invisible"
       },
       "name": "default"
     },
     "dark_oak": {
       "map": {
-        "0": "dark_oak_log",
-        "1": "stripped_dark_oak",
-        "2": "invisible"
+        "Log": "log_dark_oak",
+        "Stripped": "stripped_dark_oak",
+        "Wool": "invisible"
       },
       "name": "dark_oak"
     },
     "spruce": {
       "map": {
-        "0": "spruce_log",
-        "1": "stripped_spruce",
-        "2": "invisible"
+        "Log": "log_spruce",
+        "Stripped": "stripped_spruce",
+        "Wool": "invisible"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "0": "acacia_log",
-        "1": "stripped_acacia",
-        "2": "invisible"
+        "Log": "log_acacia",
+        "Stripped": "stripped_acacia",
+        "Wool": "invisible"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "0": "birch_log",
-        "1": "strippedbirch",
-        "2": "invisible"
+        "Log": "log_birch",
+        "Stripped": "stripped_birch",
+        "Wool": "invisible"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "0": "jungle_log",
-        "1": "stripped_jungle",
-        "2": "invisible"
+        "Log": "log_jungle",
+        "Stripped": "stripped_jungle",
+        "Wool": "invisible"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "0": "mangrove_log",
-        "1": "stripped_mangrove",
-        "2": "invisible"
+        "Log": "log_mangrove",
+        "Stripped": "stripped_mangrove",
+        "Wool": "invisible"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "0": "crimson_stem_animation",
-        "1": "stripped_crimson",
-        "2": "invisible"
+        "Log": "stem_crimson_animation",
+        "Stripped": "stripped_crimson",
+        "Wool": "invisible"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "0": "warped_stem_animation",
-        "1": "stripped_warped",
-        "2": "invisible"
+        "Log": "stem_warped_animation",
+        "Stripped": "stripped_warped",
+        "Wool": "invisible"
       },
       "name": "warped"
     }

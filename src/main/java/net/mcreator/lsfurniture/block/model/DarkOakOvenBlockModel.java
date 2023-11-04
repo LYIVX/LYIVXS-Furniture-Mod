@@ -19,6 +19,6 @@ public class DarkOakOvenBlockModel extends AnimatedGeoModel<DarkOakOvenTileEntit
 
 	@Override
 	public ResourceLocation getTextureResource(DarkOakOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/dark_oak_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_dark_oak.png");
 	}
 }

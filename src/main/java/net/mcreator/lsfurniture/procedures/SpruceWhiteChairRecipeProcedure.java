@@ -85,7 +85,7 @@ public class SpruceWhiteChairRecipeProcedure {
 								return 0;
 							}
 						}.getAmount(1) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
-								.is(ItemTags.create(new ResourceLocation("forge:wool")))
+								.is(ItemTags.create(new ResourceLocation("minecraft:wool")))
 						&& new Object() {
 							public int getAmount(int sltid) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

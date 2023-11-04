@@ -3,8 +3,8 @@
   "textures": {
     "all": "ls_furniture:blocks/yellow_wool",
     "particle": "ls_furniture:blocks/yellow_wool",
-    "0": "ls_furniture:blocks/oak_planks",
-    "1": "ls_furniture:blocks/yellow_wool"
+    "Planks": "ls_furniture:blocks/planks_oak",
+    "Wool": "ls_furniture:blocks/yellow_wool"
   },
   "render_type": "cutout_mipped"
 }

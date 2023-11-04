@@ -140,7 +140,7 @@ public class BirchCounterTileEntity extends RandomizableContainerBlockEntity imp
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Birch Counter");
+		return Component.literal("Counter (Birch)");
 	}
 
 	@Override

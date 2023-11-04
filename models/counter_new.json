@@ -1,0 +1,138 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "ls_furniture:blocks/stripped_oak",
+		"Stripped": "ls_furniture:blocks/stripped_oak",
+		"Bricks": "ls_furniture:blocks/bricks",
+		"Shadow / Handle": "ls_furniture:blocks/shadow_door"
+	},
+	"elements": [
+		{
+			"from": [0, 14, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 4], "texture": "#Bricks"},
+				"east": {"uv": [0, 2, 16, 4], "texture": "#Bricks"},
+				"south": {"uv": [0, 2, 16, 4], "texture": "#Bricks"},
+				"west": {"uv": [0, 2, 16, 4], "texture": "#Bricks"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#Bricks"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#Bricks"}
+			}
+		},
+		{
+			"from": [0, 16, 15],
+			"to": [16, 18, 16],
+			"faces": {
+				"north": {"uv": [16, 0, 0, 2], "texture": "#Bricks"},
+				"east": {"uv": [0, 0, 1, 2], "texture": "#Bricks"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#Bricks"},
+				"west": {"uv": [0, 0, 1, 2], "texture": "#Bricks"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#Bricks"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#Bricks"}
+			}
+		},
+		{
+			"from": [0, 0, 1],
+			"to": [16, 14, 16],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 16], "texture": "#Stripped"},
+				"east": {"uv": [0, 2, 15, 16], "texture": "#Stripped"},
+				"south": {"uv": [0, 2, 16, 16], "texture": "#Stripped"},
+				"west": {"uv": [1, 2, 16, 16], "texture": "#Stripped"},
+				"up": {"uv": [0, 0, 12, 2], "texture": "#Stripped"},
+				"down": {"uv": [0, 0, 16, 15], "texture": "#Stripped"}
+			}
+		},
+		{
+			"from": [0, 0, 0.99],
+			"to": [16, 14, 0.99],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 16], "texture": "#Shadow / Handle"},
+				"east": {"uv": [0, 2, 15, 16], "texture": "#Shadow / Handle"},
+				"south": {"uv": [0, 2, 16, 16], "texture": "#Shadow / Handle"},
+				"west": {"uv": [1, 2, 16, 16], "texture": "#Shadow / Handle"},
+				"up": {"uv": [0, 0, 12, 2], "texture": "#Shadow / Handle"},
+				"down": {"uv": [0, 0, 16, 15], "texture": "#Shadow / Handle"}
+			}
+		},
+		{
+			"from": [4, 6, 0.96],
+			"to": [7, 8, 2.96],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 2], "texture": "#Shadow / Handle"},
+				"east": {"uv": [24, 32, 32, 112], "texture": "#Shadow / Handle"},
+				"south": {"uv": [32, 32, 56, 112], "texture": "#Shadow / Handle"},
+				"west": {"uv": [24, 32, 32, 112], "texture": "#Shadow / Handle"},
+				"up": {"uv": [32, 32, 56, 48], "texture": "#Shadow / Handle"},
+				"down": {"uv": [40, 112, 52, 112], "texture": "#Shadow / Handle"}
+			}
+		},
+		{
+			"from": [9, 6, 0.96],
+			"to": [12, 8, 0.96],
+			"faces": {
+				"north": {"uv": [3, 0, 0, 2], "texture": "#Shadow / Handle"},
+				"east": {"uv": [24, 32, 32, 112], "texture": "#Shadow / Handle"},
+				"south": {"uv": [32, 32, 56, 112], "texture": "#Shadow / Handle"},
+				"west": {"uv": [24, 32, 32, 112], "texture": "#Shadow / Handle"},
+				"up": {"uv": [32, 32, 56, 48], "texture": "#Shadow / Handle"},
+				"down": {"uv": [40, 112, 52, 112], "texture": "#Shadow / Handle"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, -0.5, 0],
+			"scale": [0.625, 0.56, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"children": [0, 1, 2, 3]
+		},
+		{
+			"name": "right",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"children": [4]
+		},
+		{
+			"name": "left",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"children": [5]
+		}
+	]
+}

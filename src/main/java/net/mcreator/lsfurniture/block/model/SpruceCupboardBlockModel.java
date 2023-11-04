@@ -19,6 +19,6 @@ public class SpruceCupboardBlockModel extends AnimatedGeoModel<SpruceCupboardTil
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceCupboardTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_spruce.png");
 	}
 }

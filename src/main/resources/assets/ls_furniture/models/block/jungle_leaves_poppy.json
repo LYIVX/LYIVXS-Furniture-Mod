@@ -1,8 +1,15 @@
 {
-  "parent": "block/cube_all",
+  "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/jungle_leaves_poppy",
-    "particle": "ls_furniture:blocks/jungle_leaves_poppy"
+    "all": "ls_furniture:blocks/poppy",
+    "particle": "ls_furniture:blocks/poppy",
+    "east": "ls_furniture:blocks/poppy",
+    "south": "ls_furniture:blocks/poppy",
+    "north": "ls_furniture:blocks/poppy",
+    "west": "ls_furniture:blocks/poppy",
+    "up": "ls_furniture:blocks/poppy",
+    "tint": "ls_furniture:blocks/leaves_jungle",
+    "down": "ls_furniture:blocks/poppy"
   },
   "render_type": "cutout_mipped"
 }

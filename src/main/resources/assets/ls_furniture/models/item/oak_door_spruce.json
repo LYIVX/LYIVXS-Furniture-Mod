@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ls_furniture:items/oak_door_spruce"
+  },
+  "render_type": "translucent"
+}

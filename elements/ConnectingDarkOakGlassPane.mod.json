@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_dark_oak_glass",
-    "textureTop": "dark_oak_planks",
+    "textureTop": "planks_dark_oak",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -21,7 +21,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {

@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:metallurgy",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:dark_oak_planks"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:hammer"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:dark_oak_oven"
+  }
+}

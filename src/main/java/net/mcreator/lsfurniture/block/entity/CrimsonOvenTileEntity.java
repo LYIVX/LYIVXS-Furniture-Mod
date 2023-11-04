@@ -140,7 +140,7 @@ public class CrimsonOvenTileEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Crimson Oven");
+		return Component.literal("Oven (Crimson)");
 	}
 
 	@Override

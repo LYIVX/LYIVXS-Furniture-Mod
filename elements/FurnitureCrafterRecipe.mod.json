@@ -1,0 +1,48 @@
+{
+  "_fv": 47,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Saw"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Hammer"
+      },
+      {
+        "value": "Blocks.CRAFTING_TABLE"
+      },
+      {
+        "value": "CUSTOM:Wrench"
+      },
+      {
+        "value": "CUSTOM:Wrench"
+      },
+      {
+        "value": "CUSTOM:Chisel"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:FurnitureCrafter"
+    },
+    "name": "furniture_crafter",
+    "namespace": "mod"
+  }
+}

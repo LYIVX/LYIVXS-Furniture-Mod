@@ -140,7 +140,7 @@ public class MangroveCounterTileEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Mangrove Counter");
+		return Component.literal("Counter (Mangrove)");
 	}
 
 	@Override

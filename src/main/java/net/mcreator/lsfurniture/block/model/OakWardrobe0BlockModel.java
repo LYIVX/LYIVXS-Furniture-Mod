@@ -19,6 +19,6 @@ public class OakWardrobe0BlockModel extends AnimatedGeoModel<OakWardrobe0TileEnt
 
 	@Override
 	public ResourceLocation getTextureResource(OakWardrobe0TileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oak_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_oak.png");
 	}
 }

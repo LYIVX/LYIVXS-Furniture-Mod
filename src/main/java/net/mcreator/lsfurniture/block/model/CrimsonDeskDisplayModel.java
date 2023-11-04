@@ -19,6 +19,6 @@ public class CrimsonDeskDisplayModel extends AnimatedGeoModel<CrimsonDeskDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_crimson.png");
 	}
 }

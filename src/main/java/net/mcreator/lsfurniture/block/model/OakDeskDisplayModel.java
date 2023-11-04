@@ -19,6 +19,6 @@ public class OakDeskDisplayModel extends AnimatedGeoModel<OakDeskDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(OakDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oak_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_oak.png");
 	}
 }

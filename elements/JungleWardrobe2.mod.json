@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "jungle_wardrobe",
+    "texture": "wardrobe_jungle",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,12 +14,12 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_jungle",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -144,7 +144,7 @@
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
-    "normal": "wardrobetop.geo.json",
+    "normal": "wardrobe_top.geo.json",
     "displaySettings": "wardrobepart.item.json"
   }
 }

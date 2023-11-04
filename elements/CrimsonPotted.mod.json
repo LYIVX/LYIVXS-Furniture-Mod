@@ -120,9 +120,6 @@
     "onDestroyedByPlayer": {
       "name": "PottedBlockDestroyedByPlayer"
     },
-    "onDestroyedByExplosion": {
-      "name": "PottedBlockDestroyedByPlayer"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

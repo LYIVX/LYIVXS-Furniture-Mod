@@ -8,13 +8,22 @@
         "value": "Blocks.CRIMSON_PLANKS"
       },
       {
-        "value": "CUSTOM:CrimsonBricks1"
+        "value": "CUSTOM:ConnectingCrimsonPlain"
       },
       {
-        "value": "CUSTOM:CrimsonBricks1Non"
+        "value": "CUSTOM:FramedCrimsonPlain"
       },
       {
-        "value": "CUSTOM:CrimsonHorizontalStrips"
+        "value": "CUSTOM:ConnectingCrimsonStripped"
+      },
+      {
+        "value": "CUSTOM:FramedCrimsonStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedCrimsonSmallBricks"
       }
     ],
     "blocks": [],

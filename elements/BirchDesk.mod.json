@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "birch_desk",
+    "texture": "desk_birch",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,12 +14,12 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_birch",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -109,7 +109,7 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,

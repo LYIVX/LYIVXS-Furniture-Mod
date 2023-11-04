@@ -19,6 +19,6 @@ public class SpruceCounterDisplayModel extends AnimatedGeoModel<SpruceCounterDis
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_spruce.png");
 	}
 }

@@ -19,6 +19,6 @@ public class DarkOakCounterDisplayModel extends AnimatedGeoModel<DarkOakCounterD
 
 	@Override
 	public ResourceLocation getTextureResource(DarkOakCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/dark_oak_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_dark_oak.png");
 	}
 }

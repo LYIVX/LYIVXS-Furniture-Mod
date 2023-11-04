@@ -19,6 +19,6 @@ public class JungleCounterDisplayModel extends AnimatedGeoModel<JungleCounterDis
 
 	@Override
 	public ResourceLocation getTextureResource(JungleCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_jungle.png");
 	}
 }

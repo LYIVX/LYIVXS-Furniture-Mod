@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "minecraft:crimson_planks"
+    "ls_furniture:connecting_crimson_small_bricks",
+    "ls_furniture:connecting_crimson_stripped",
+    "minecraft:crimson_planks",
+    "ls_furniture:framed_crimson_plain",
+    "ls_furniture:framed_crimson_stripped",
+    "ls_furniture:framed_crimson_small_bricks",
+    "ls_furniture:connecting_crimson_plain"
   ]
 }

@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.WarpedWardrobe2DisplayItem;
 public class WarpedWardrobe2DisplayModel extends AnimatedGeoModel<WarpedWardrobe2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(WarpedWardrobe2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobetop.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(WarpedWardrobe2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobetop.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_top.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedWardrobe2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_warped.png");
 	}
 }

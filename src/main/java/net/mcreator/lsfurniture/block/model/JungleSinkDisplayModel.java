@@ -19,6 +19,6 @@ public class JungleSinkDisplayModel extends AnimatedGeoModel<JungleSinkDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(JungleSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_jungle.png");
 	}
 }

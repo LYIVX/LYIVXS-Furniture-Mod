@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_spruce_glass",
-    "textureTop": "spruce_planks",
+    "textureTop": "planks_spruce",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -21,7 +21,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {

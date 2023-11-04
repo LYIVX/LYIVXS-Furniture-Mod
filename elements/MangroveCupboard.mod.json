@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "mangrove_cupboard",
+    "texture": "cupboard_mangrove",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,12 +14,12 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_mangrove",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {

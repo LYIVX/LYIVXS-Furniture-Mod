@@ -19,6 +19,6 @@ public class SprucewardrobeBlockModel extends AnimatedGeoModel<SprucewardrobeTil
 
 	@Override
 	public ResourceLocation getTextureResource(SprucewardrobeTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_spruce.png");
 	}
 }

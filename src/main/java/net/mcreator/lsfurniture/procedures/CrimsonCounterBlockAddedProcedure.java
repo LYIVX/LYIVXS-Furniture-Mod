@@ -10,19 +10,19 @@ public class CrimsonCounterBlockAddedProcedure {
 		String groupTag = "";
 		groupTag = "forge" + ":" + "crimson_counter_tag";
 		if ((world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
-			CrimsonCounterCornerProProcedure.execute(world, x, y, (z - 1));
+			CrimsonCounterMainProcedure.execute(world, x, y, (z - 1));
 		}
 		if ((world.getBlockState(new BlockPos(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
-			CrimsonCounterCornerProProcedure.execute(world, (x + 1), y, z);
+			CrimsonCounterMainProcedure.execute(world, (x + 1), y, z);
 		}
 		if ((world.getBlockState(new BlockPos(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
-			CrimsonCounterCornerProProcedure.execute(world, x, y, (z + 1));
+			CrimsonCounterMainProcedure.execute(world, x, y, (z + 1));
 		}
 		if ((world.getBlockState(new BlockPos(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
-			CrimsonCounterCornerProProcedure.execute(world, (x - 1), y, z);
+			CrimsonCounterMainProcedure.execute(world, (x - 1), y, z);
 		}
 		if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
-			CrimsonCounterCornerProProcedure.execute(world, x, y, z);
+			CrimsonCounterMainProcedure.execute(world, x, y, z);
 		}
 	}
 }

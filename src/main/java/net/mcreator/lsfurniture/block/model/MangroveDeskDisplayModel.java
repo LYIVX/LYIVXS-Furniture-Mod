@@ -19,6 +19,6 @@ public class MangroveDeskDisplayModel extends AnimatedGeoModel<MangroveDeskDispl
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_mangrove.png");
 	}
 }

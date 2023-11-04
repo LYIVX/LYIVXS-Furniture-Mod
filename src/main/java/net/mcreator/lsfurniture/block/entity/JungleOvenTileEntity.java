@@ -140,7 +140,7 @@ public class JungleOvenTileEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Jungle Oven");
+		return Component.literal("Oven (Jungle)");
 	}
 
 	@Override

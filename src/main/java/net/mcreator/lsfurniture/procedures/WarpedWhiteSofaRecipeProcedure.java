@@ -74,7 +74,7 @@ public class WarpedWhiteSofaRecipeProcedure {
 							}
 						}.getAmount(1) >= 1
 						&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
-								.is(ItemTags.create(new ResourceLocation("forge:wool")))
+								.is(ItemTags.create(new ResourceLocation("minecraft:wool")))
 						&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 						&& new Object() {
 							public int getAmount(int sltid) {

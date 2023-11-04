@@ -1,0 +1,18 @@
+{
+  "parent": "ls_furniture:custom/furniture_crafter",
+  "textures": {
+    "all": "ls_furniture:blocks/crafting_table_side",
+    "particle": "ls_furniture:blocks/crafting_table_side",
+    "CraftingTableSide": "ls_furniture:blocks/crafting_table_side",
+    "Hammer": "ls_furniture:blocks/hammer",
+    "Wrench": "ls_furniture:blocks/wrench",
+    "OakPlanks": "ls_furniture:blocks/planks_oak",
+    "AnvilFlat": "ls_furniture:blocks/anvil_flat",
+    "CraftingTableTop": "ls_furniture:blocks/crafting_table_top",
+    "Saw": "ls_furniture:blocks/saw",
+    "Shears": "ls_furniture:blocks/shears",
+    "Chisel": "ls_furniture:blocks/chisel",
+    "StoneCutterSaw": "ls_furniture:blocks/stonecutter_saw"
+  },
+  "render_type": "solid"
+}

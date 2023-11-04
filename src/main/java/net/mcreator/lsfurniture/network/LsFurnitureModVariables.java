@@ -15,9 +15,14 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.saveddata.SavedData;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -33,6 +38,7 @@ import java.util.function.Supplier;
 public class LsFurnitureModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
+		LsFurnitureMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
 		LsFurnitureMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
@@ -66,11 +72,139 @@ public class LsFurnitureModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.Furniture_Crafter_Wood_Button_1 = original.Furniture_Crafter_Wood_Button_1;
-			clone.Furniture_Crafter_Wood_Button_2 = original.Furniture_Crafter_Wood_Button_2;
-			clone.Furniture_Crafter_Wood_Button_3 = original.Furniture_Crafter_Wood_Button_3;
+			clone.Furniture_Crafter_Menu = original.Furniture_Crafter_Menu;
+			clone.checked = original.checked;
 			if (!event.isWasDeath()) {
 			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+			if (!event.getEntity().level.isClientSide()) {
+				SavedData mapdata = MapVariables.get(event.getEntity().level);
+				SavedData worlddata = WorldVariables.get(event.getEntity().level);
+				if (mapdata != null)
+					LsFurnitureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
+				if (worlddata != null)
+					LsFurnitureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+			if (!event.getEntity().level.isClientSide()) {
+				SavedData worlddata = WorldVariables.get(event.getEntity().level);
+				if (worlddata != null)
+					LsFurnitureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+	}
+
+	public static class WorldVariables extends SavedData {
+		public static final String DATA_NAME = "ls_furniture_worldvars";
+
+		public static WorldVariables load(CompoundTag tag) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level level && !level.isClientSide())
+				LsFurnitureMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+		}
+
+		static WorldVariables clientSide = new WorldVariables();
+
+		public static WorldVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevel level) {
+				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class MapVariables extends SavedData {
+		public static final String DATA_NAME = "ls_furniture_mapvars";
+		public boolean patchouli_given = false;
+
+		public static MapVariables load(CompoundTag tag) {
+			MapVariables data = new MapVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+			patchouli_given = nbt.getBoolean("patchouli_given");
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			nbt.putBoolean("patchouli_given", patchouli_given);
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level && !world.isClientSide())
+				LsFurnitureMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
+		}
+
+		static MapVariables clientSide = new MapVariables();
+
+		public static MapVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevelAccessor serverLevelAcc) {
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class SavedDataSyncMessage {
+		public int type;
+		public SavedData data;
+
+		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
+			this.type = buffer.readInt();
+			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
+			if (this.data instanceof MapVariables _mapvars)
+				_mapvars.read(buffer.readNbt());
+			else if (this.data instanceof WorldVariables _worldvars)
+				_worldvars.read(buffer.readNbt());
+		}
+
+		public SavedDataSyncMessage(int type, SavedData data) {
+			this.type = type;
+			this.data = data;
+		}
+
+		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
+			buffer.writeInt(message.type);
+			buffer.writeNbt(message.data.save(new CompoundTag()));
+		}
+
+		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+			NetworkEvent.Context context = contextSupplier.get();
+			context.enqueueWork(() -> {
+				if (!context.getDirection().getReceptionSide().isServer()) {
+					if (message.type == 0)
+						MapVariables.clientSide = (MapVariables) message.data;
+					else
+						WorldVariables.clientSide = (WorldVariables) message.data;
+				}
+			});
+			context.setPacketHandled(true);
 		}
 	}
 
@@ -105,9 +239,8 @@ public class LsFurnitureModVariables {
 	}
 
 	public static class PlayerVariables {
-		public boolean Furniture_Crafter_Wood_Button_1 = false;
-		public boolean Furniture_Crafter_Wood_Button_2 = false;
-		public boolean Furniture_Crafter_Wood_Button_3 = false;
+		public String Furniture_Crafter_Menu = "\"Carpentry\"";
+		public boolean checked = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -116,17 +249,15 @@ public class LsFurnitureModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("Furniture_Crafter_Wood_Button_1", Furniture_Crafter_Wood_Button_1);
-			nbt.putBoolean("Furniture_Crafter_Wood_Button_2", Furniture_Crafter_Wood_Button_2);
-			nbt.putBoolean("Furniture_Crafter_Wood_Button_3", Furniture_Crafter_Wood_Button_3);
+			nbt.putString("Furniture_Crafter_Menu", Furniture_Crafter_Menu);
+			nbt.putBoolean("checked", checked);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			Furniture_Crafter_Wood_Button_1 = nbt.getBoolean("Furniture_Crafter_Wood_Button_1");
-			Furniture_Crafter_Wood_Button_2 = nbt.getBoolean("Furniture_Crafter_Wood_Button_2");
-			Furniture_Crafter_Wood_Button_3 = nbt.getBoolean("Furniture_Crafter_Wood_Button_3");
+			Furniture_Crafter_Menu = nbt.getString("Furniture_Crafter_Menu");
+			checked = nbt.getBoolean("checked");
 		}
 	}
 
@@ -151,9 +282,8 @@ public class LsFurnitureModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.Furniture_Crafter_Wood_Button_1 = message.data.Furniture_Crafter_Wood_Button_1;
-					variables.Furniture_Crafter_Wood_Button_2 = message.data.Furniture_Crafter_Wood_Button_2;
-					variables.Furniture_Crafter_Wood_Button_3 = message.data.Furniture_Crafter_Wood_Button_3;
+					variables.Furniture_Crafter_Menu = message.data.Furniture_Crafter_Menu;
+					variables.checked = message.data.checked;
 				}
 			});
 			context.setPacketHandled(true);

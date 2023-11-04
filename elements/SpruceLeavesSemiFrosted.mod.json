@@ -2,22 +2,22 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "spruce_leaves",
+    "texture": "leaves_spruce_frosted_side",
     "textureTop": "spruce_leaves_frosted_top",
     "textureLeft": "spruce_leaves_frosted_side",
     "textureFront": "spruce_leaves_frosted_side",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 14,
-    "customModelName": "Grass block",
+    "renderType": 2,
+    "customModelName": "block:sprucesemifrosted",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Spruce foliage",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:TAB"
+      "value": "CUSTOM:TAB2"
     },
     "destroyTool": "hoe",
     "customDrop": {

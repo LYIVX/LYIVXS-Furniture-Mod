@@ -52,7 +52,7 @@ public class OakTableRecipeProcedure {
 				}.getAmount(4) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.SAW.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.TABLE_NONE.get());
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.OAK_TABLE_NONE.get());
 				_setstack.setCount(1);
 				((Slot) _slots.get(7)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

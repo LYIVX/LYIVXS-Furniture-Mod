@@ -19,6 +19,6 @@ public class SpruceOvenDisplayModel extends AnimatedGeoModel<SpruceOvenDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceOvenDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_spruce.png");
 	}
 }

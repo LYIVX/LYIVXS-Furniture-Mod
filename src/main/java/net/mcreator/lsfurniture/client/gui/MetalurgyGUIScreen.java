@@ -42,8 +42,6 @@ public class MetalurgyGUIScreen extends AbstractContainerScreen<MetalurgyGUIMenu
 	ImageButton imagebutton_stone;
 	ImageButton imagebutton_iron_ingot;
 	ImageButton imagebutton_wool;
-	ImageButton imagebutton_button;
-	ImageButton imagebutton_book_brown;
 	ImageButton imagebutton_arrow_left;
 	ImageButton imagebutton_arrow_right;
 	ImageButton imagebutton_comparitor;
@@ -76,7 +74,7 @@ public class MetalurgyGUIScreen extends AbstractContainerScreen<MetalurgyGUIMenu
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.metalurgy_gui.tooltip_weavery"), mouseX, mouseY);
 		if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + -25 && mouseY < topPos + -1)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.metalurgy_gui.tooltip_engineering"), mouseX, mouseY);
-		if (mouseX > leftPos + -25 && mouseX < leftPos + -1 && mouseY > topPos + -2 && mouseY < topPos + 22)
+		if (mouseX > leftPos + 4 && mouseX < leftPos + 28 && mouseY > topPos + 44 && mouseY < topPos + 68)
 			this.renderTooltip(ms, Component.translatable("gui.ls_furniture.metalurgy_gui.tooltip_connected_textures"), mouseX, mouseY);
 	}
 
@@ -93,9 +91,6 @@ public class MetalurgyGUIScreen extends AbstractContainerScreen<MetalurgyGUIMenu
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/furniture_crafter_brown_background_chisel.png"));
 		this.blit(ms, this.leftPos + 53, this.topPos + 7, 0, 0, 127, 72, 127, 72);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_horizontal_left_plain_deselect.png"));
-		this.blit(ms, this.leftPos + -31, this.topPos + -6, 0, 0, 32, 32, 32, 32);
 
 		if (DisablePictureBlock1Procedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/block.png"));
@@ -229,47 +224,31 @@ public class MetalurgyGUIScreen extends AbstractContainerScreen<MetalurgyGUIMenu
 		});
 		guistate.put("button:imagebutton_wool", imagebutton_wool);
 		this.addRenderableWidget(imagebutton_wool);
-		imagebutton_button = new ImageButton(this.leftPos + 6, this.topPos + 46, 20, 20, 0, 0, 20, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_button.png"), 20, 40, e -> {
+		imagebutton_arrow_left = new ImageButton(this.leftPos + -15, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(9, x, y, z));
 				MetalurgyGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_button", imagebutton_button);
-		this.addRenderableWidget(imagebutton_button);
-		imagebutton_book_brown = new ImageButton(this.leftPos + 8, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_book_brown.png"), 16, 32, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(10, x, y, z));
-				MetalurgyGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
-			}
-		});
-		guistate.put("button:imagebutton_book_brown", imagebutton_book_brown);
-		this.addRenderableWidget(imagebutton_book_brown);
-		imagebutton_arrow_left = new ImageButton(this.leftPos + -15, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
-			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(11, x, y, z));
-				MetalurgyGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_arrow_left", imagebutton_arrow_left);
 		this.addRenderableWidget(imagebutton_arrow_left);
 		imagebutton_arrow_right = new ImageButton(this.leftPos + 193, this.topPos + -22, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_right.png"), 11, 34, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(12, x, y, z));
-				MetalurgyGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(10, x, y, z));
+				MetalurgyGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_arrow_right", imagebutton_arrow_right);
 		this.addRenderableWidget(imagebutton_arrow_right);
 		imagebutton_comparitor = new ImageButton(this.leftPos + 160, this.topPos + -25, 24, 24, 0, 0, 24, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_comparitor.png"), 24, 48, e -> {
 			if (true) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(13, x, y, z));
-				MetalurgyGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
+				LsFurnitureMod.PACKET_HANDLER.sendToServer(new MetalurgyGUIButtonMessage(11, x, y, z));
+				MetalurgyGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_comparitor", imagebutton_comparitor);
 		this.addRenderableWidget(imagebutton_comparitor);
-		Connected = new Checkbox(this.leftPos + -23, this.topPos + 0, 20, 20, Component.translatable("gui.ls_furniture.metalurgy_gui.Connected"),
+		Connected = new Checkbox(this.leftPos + 6, this.topPos + 46, 20, 20, Component.translatable("gui.ls_furniture.metalurgy_gui.Connected"),
 
 				CheckedProcedure.execute());
 		guistate.put("checkbox:Connected", Connected);

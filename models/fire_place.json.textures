@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Stone Bricks": "stone_bricks",
+        "Bricks": "bricks",
+        "Fire": "fire_0",
+        "coal": "coal_block",
+        "Black": "black_concrete",
+        "Iron Bars": "iron_bars"
+      },
+      "name": "default"
+    },
+    "off": {
+      "map": {
+        "Stone Bricks": "stone_bricks",
+        "Bricks": "bricks",
+        "Fire": "invisible",
+        "coal": "coal_block",
+        "Black": "black_concrete",
+        "Iron Bars": "iron_bars"
+      },
+      "name": "off"
+    }
+  }
+}

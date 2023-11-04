@@ -19,6 +19,6 @@ public class OakSinkDisplayModel extends AnimatedGeoModel<OakSinkDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(OakSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oak_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_oak.png");
 	}
 }

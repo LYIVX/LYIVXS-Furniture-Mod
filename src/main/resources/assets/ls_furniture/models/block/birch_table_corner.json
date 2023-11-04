@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner",
   "textures": {
-    "all": "ls_furniture:blocks/birch_planks",
-    "particle": "ls_furniture:blocks/birch_planks",
-    "1": "ls_furniture:blocks/birch_log",
-    "2": "ls_furniture:blocks/strippedbirch"
+    "all": "ls_furniture:blocks/table_corner_birch",
+    "particle": "ls_furniture:blocks/table_corner_birch",
+    "1": "ls_furniture:blocks/log_birch",
+    "2": "ls_furniture:blocks/table_corner_birch"
   },
   "render_type": "cutout"
 }

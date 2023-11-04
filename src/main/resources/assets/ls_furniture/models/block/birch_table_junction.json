@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_junction",
   "textures": {
-    "all": "ls_furniture:blocks/birch_planks",
-    "particle": "ls_furniture:blocks/birch_planks",
-    "1": "ls_furniture:blocks/strippedbirch"
+    "all": "ls_furniture:blocks/table_junction_birch",
+    "particle": "ls_furniture:blocks/table_junction_birch",
+    "1": "ls_furniture:blocks/table_junction_birch"
   },
   "render_type": "cutout"
 }

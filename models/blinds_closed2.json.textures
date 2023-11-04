@@ -2,63 +2,63 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "oak_planks",
+        "1": "planks_oak",
         "2": "white_concrete"
       },
       "name": "default"
     },
     "darkoak": {
       "map": {
-        "1": "dark_oak_planks",
+        "1": "planks_dark_oak",
         "2": "white_concrete"
       },
       "name": "darkoak"
     },
     "spruce": {
       "map": {
-        "1": "spruce_planks",
+        "1": "planks_spruce",
         "2": "white_concrete"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "1": "acacia_planks",
+        "1": "planks_acacia",
         "2": "white_concrete"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "1": "birch_planks",
+        "1": "planks_birch",
         "2": "white_concrete"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "1": "jungle_planks",
+        "1": "planks_jungle",
         "2": "white_concrete"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "1": "mangrove_planks",
+        "1": "planks_mangrove",
         "2": "white_concrete"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "1": "crimson_planks",
+        "1": "planks_crimson",
         "2": "white_concrete"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "1": "warped_planks",
+        "1": "planks_warped",
         "2": "white_concrete"
       },
       "name": "warped"

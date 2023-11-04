@@ -19,6 +19,6 @@ public class JungleDeskBlockModel extends AnimatedGeoModel<JungleDeskTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(JungleDeskTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_jungle.png");
 	}
 }

@@ -19,6 +19,6 @@ public class WarpedWardrobeDisplayModel extends AnimatedGeoModel<WarpedWardrobeD
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_warped.png");
 	}
 }

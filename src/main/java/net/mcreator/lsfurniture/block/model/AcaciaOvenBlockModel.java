@@ -19,6 +19,6 @@ public class AcaciaOvenBlockModel extends AnimatedGeoModel<AcaciaOvenTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_acacia.png");
 	}
 }

@@ -19,6 +19,6 @@ public class WarpedOvenBlockModel extends AnimatedGeoModel<WarpedOvenTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_warped.png");
 	}
 }

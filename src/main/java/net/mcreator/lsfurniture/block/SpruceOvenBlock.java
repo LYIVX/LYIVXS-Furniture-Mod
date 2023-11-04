@@ -154,7 +154,7 @@ public class SpruceOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Spruce Oven");
+					return Component.literal("Oven (Spruce)");
 				}
 
 				@Override

@@ -5,22 +5,22 @@
     "type": "Items",
     "items": [
       {
+        "value": "Blocks.LEAVES#0"
+      },
+      {
+        "value": "CUSTOM:OakLeavesBlueOrchid"
+      },
+      {
         "value": "CUSTOM:OakLeavesPoppy"
       },
       {
         "value": "CUSTOM:OakLeavesDandilion"
       },
       {
-        "value": "CUSTOM:OakLeavesBlueOrchid"
-      },
-      {
         "value": "CUSTOM:OakLeavesSemiFrosted"
       },
       {
         "value": "CUSTOM:OakLeavesFrosted"
-      },
-      {
-        "value": "Blocks.LEAVES#0"
       }
     ],
     "blocks": [],
@@ -28,6 +28,6 @@
     "entities": [],
     "biomes": [],
     "name": "oak_leaves",
-    "namespace": "forge"
+    "namespace": "mod"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SpruceAndesiteCounter"
+      },
+      {
+        "value": "CUSTOM:SpruceAndesiteCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "spruce_andesite_counter_tag",
+    "namespace": "forge"
+  }
+}

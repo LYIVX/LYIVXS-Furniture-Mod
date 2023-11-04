@@ -19,6 +19,6 @@ public class BirchDeskBlockModel extends AnimatedGeoModel<BirchDeskTileEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(BirchDeskTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_birch.png");
 	}
 }

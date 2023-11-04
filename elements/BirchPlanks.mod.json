@@ -8,13 +8,22 @@
         "value": "Blocks.PLANKS#2"
       },
       {
-        "value": "CUSTOM:BirchBricks1"
+        "value": "CUSTOM:ConnectingBirchPlain"
       },
       {
-        "value": "CUSTOM:BirchBricks1Non"
+        "value": "CUSTOM:FramedBirchPlain"
       },
       {
-        "value": "CUSTOM:BirchHorizontalStrips"
+        "value": "CUSTOM:ConnectingBirchStripped"
+      },
+      {
+        "value": "CUSTOM:FramedBirchStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedBirchSmallBricks"
       }
     ],
     "blocks": [],

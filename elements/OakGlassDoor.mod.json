@@ -1,0 +1,36 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakGlassDoor2"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor3"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor4"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor5"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor6"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor7"
+      },
+      {
+        "value": "CUSTOM:OakGlassDoor1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_glass_door",
+    "namespace": "mod"
+  }
+}

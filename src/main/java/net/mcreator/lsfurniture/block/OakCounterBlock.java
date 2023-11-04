@@ -162,7 +162,7 @@ public class OakCounterBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Oak Counter");
+					return Component.literal("Counter (Oak)");
 				}
 
 				@Override

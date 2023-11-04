@@ -8,13 +8,22 @@
         "value": "Blocks.WARPED_PLANKS"
       },
       {
-        "value": "CUSTOM:WarpedBricks1"
+        "value": "CUSTOM:ConnectingWarpedPlain"
       },
       {
-        "value": "CUSTOM:WarpedBricks1Non"
+        "value": "CUSTOM:FramedWarpedPlain"
       },
       {
-        "value": "CUSTOM:WarpedHorizontalStrips"
+        "value": "CUSTOM:ConnectingWarpedStripped"
+      },
+      {
+        "value": "CUSTOM:FramedWarpedStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedWarpedSmallBricks"
       }
     ],
     "blocks": [],

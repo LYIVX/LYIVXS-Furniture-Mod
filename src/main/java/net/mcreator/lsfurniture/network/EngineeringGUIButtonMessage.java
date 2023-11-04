@@ -18,7 +18,6 @@ import net.mcreator.lsfurniture.procedures.OpenMasonryGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenGlassblowerGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenEngineeringGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenCarpentryGUIProcedure;
-import net.mcreator.lsfurniture.procedures.GiveGuideBookProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -102,25 +101,17 @@ public class EngineeringGUIButtonMessage {
 		}
 		if (buttonID == 8) {
 
-			GiveGuideBookProcedure.execute(world, x, y, z);
+			OpenEngineeringGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 9) {
 
-			GiveGuideBookProcedure.execute(world, x, y, z);
+			OpenGlassblowerGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 10) {
 
-			OpenEngineeringGUIProcedure.execute(world, x, y, z, entity);
+			OpenGlassblowerGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 11) {
-
-			OpenGlassblowerGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 12) {
-
-			OpenGlassblowerGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 13) {
 
 			OpenEngineeringGUIProcedure.execute(world, x, y, z, entity);
 		}

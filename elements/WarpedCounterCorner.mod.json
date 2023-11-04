@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "warped_planks",
+    "texture": "planks_warped",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -69,7 +69,7 @@
         "subtract": false
       }
     ],
-    "name": "Warped Counter",
+    "name": "Counter (Warped)",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
@@ -157,6 +157,12 @@
       "name": "WarpedCounterBlockAdded"
     },
     "onTickUpdate": {
+      "name": "WarpedCounterBlockAdded"
+    },
+    "onDestroyedByPlayer": {
+      "name": "WarpedCounterBlockAdded"
+    },
+    "onDestroyedByExplosion": {
       "name": "WarpedCounterBlockAdded"
     },
     "spawnWorldTypes": [],

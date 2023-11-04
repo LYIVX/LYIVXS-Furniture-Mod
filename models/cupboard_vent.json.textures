@@ -4,10 +4,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "oak_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_oak",
         "7": "stripped_oak"
       },
       "name": "default"
@@ -16,10 +16,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "oak_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_oak",
         "7": "stripped_oak"
       },
       "name": "oak_on"
@@ -28,10 +28,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "dark_oak_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_dark_oak",
         "7": "stripped_dark_oak"
       },
       "name": "dark_oak"
@@ -40,10 +40,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "dark_oak_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_dark_oak",
         "7": "stripped_dark_oak"
       },
       "name": "dark_oak_on"
@@ -52,10 +52,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "spruce_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_spruce",
         "7": "stripped_spruce"
       },
       "name": "spruce_on"
@@ -64,10 +64,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "spruce_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_spruce",
         "7": "stripped_spruce"
       },
       "name": "spruce"
@@ -76,10 +76,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "acacia_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_acacia",
         "7": "stripped_acacia"
       },
       "name": "acacia"
@@ -88,10 +88,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "acacia_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_acacia",
         "7": "stripped_acacia"
       },
       "name": "acacia_on"
@@ -100,11 +100,11 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "birch_planks",
-        "7": "strippedbirch"
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_birch",
+        "7": "stripped_birch"
       },
       "name": "birch"
     },
@@ -112,11 +112,11 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "birch_planks",
-        "7": "strippedbirch"
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_birch",
+        "7": "stripped_birch"
       },
       "name": "birch_on"
     },
@@ -124,10 +124,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "jungle_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_jungle",
         "7": "stripped_jungle"
       },
       "name": "jungle"
@@ -136,10 +136,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "jungle_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_jungle",
         "7": "stripped_jungle"
       },
       "name": "jungle_on"
@@ -148,10 +148,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "mangrove_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_mangrove",
         "7": "stripped_mangrove"
       },
       "name": "mangrove"
@@ -160,10 +160,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "mangrove_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_mangrove",
         "7": "stripped_mangrove"
       },
       "name": "mangrove_on"
@@ -172,10 +172,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "crimson_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_crimson",
         "7": "stripped_crimson"
       },
       "name": "crimson"
@@ -184,10 +184,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "crimson_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_crimson",
         "7": "stripped_crimson"
       },
       "name": "crimson_on"
@@ -196,10 +196,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool",
-        "6": "warped_planks",
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red",
+        "6": "stripped_warped",
         "7": "stripped_warped"
       },
       "name": "warped"
@@ -208,10 +208,10 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool",
-        "6": "warped_planks",
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red",
+        "6": "stripped_warped",
         "7": "stripped_warped"
       },
       "name": "warped_on"

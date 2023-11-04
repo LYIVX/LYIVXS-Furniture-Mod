@@ -19,6 +19,6 @@ public class BirchCupboardBlockModel extends AnimatedGeoModel<BirchCupboardTileE
 
 	@Override
 	public ResourceLocation getTextureResource(BirchCupboardTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_birch.png");
 	}
 }

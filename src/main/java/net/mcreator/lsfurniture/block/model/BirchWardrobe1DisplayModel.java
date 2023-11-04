@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.BirchWardrobe1DisplayItem;
 public class BirchWardrobe1DisplayModel extends AnimatedGeoModel<BirchWardrobe1DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(BirchWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobe_buttom.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_bottom.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(BirchWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobe_buttom.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_bottom.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(BirchWardrobe1DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_birch.png");
 	}
 }

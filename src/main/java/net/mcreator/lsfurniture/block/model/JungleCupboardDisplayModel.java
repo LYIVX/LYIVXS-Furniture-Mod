@@ -19,6 +19,6 @@ public class JungleCupboardDisplayModel extends AnimatedGeoModel<JungleCupboardD
 
 	@Override
 	public ResourceLocation getTextureResource(JungleCupboardDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_jungle.png");
 	}
 }

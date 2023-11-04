@@ -19,6 +19,6 @@ public class OakCounterBlockModel extends AnimatedGeoModel<OakCounterTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(OakCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter-oak.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_oak.png");
 	}
 }

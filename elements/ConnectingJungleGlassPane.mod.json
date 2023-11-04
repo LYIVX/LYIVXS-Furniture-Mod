@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_jungle_glass",
-    "textureTop": "jungle_planks",
+    "textureTop": "planks_jungle",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -21,7 +21,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {

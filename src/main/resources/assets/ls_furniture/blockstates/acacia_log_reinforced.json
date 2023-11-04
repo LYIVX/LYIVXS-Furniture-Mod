@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ls_furniture:block/acacia_log_reinforced",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ls_furniture:block/acacia_log_reinforced"
+    },
+    "axis=z": {
+      "model": "ls_furniture:block/acacia_log_reinforced",
+      "x": 90
+    }
+  }
+}

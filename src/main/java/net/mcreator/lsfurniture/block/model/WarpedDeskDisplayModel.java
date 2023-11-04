@@ -19,6 +19,6 @@ public class WarpedDeskDisplayModel extends AnimatedGeoModel<WarpedDeskDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_warped.png");
 	}
 }

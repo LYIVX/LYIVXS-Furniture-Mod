@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_end",
   "textures": {
-    "all": "ls_furniture:blocks/jungle_planks",
-    "particle": "ls_furniture:blocks/jungle_planks",
-    "1": "ls_furniture:blocks/jungle_log",
-    "2": "ls_furniture:blocks/stripped_jungle"
+    "all": "ls_furniture:blocks/table_end_jungle",
+    "particle": "ls_furniture:blocks/table_end_jungle",
+    "1": "ls_furniture:blocks/log_jungle",
+    "2": "ls_furniture:blocks/table_end_jungle"
   },
   "render_type": "cutout"
 }

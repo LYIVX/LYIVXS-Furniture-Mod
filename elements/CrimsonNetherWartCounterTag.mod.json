@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CrimsonNetherWartCounter"
+      },
+      {
+        "value": "CUSTOM:CrimsonNetherWartCounterCorner"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_nether_wart_counter_tag",
+    "namespace": "forge"
+  }
+}

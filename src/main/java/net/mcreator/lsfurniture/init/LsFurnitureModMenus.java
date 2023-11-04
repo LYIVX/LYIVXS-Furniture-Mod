@@ -28,6 +28,7 @@ import net.mcreator.lsfurniture.world.inventory.DeskMenu;
 import net.mcreator.lsfurniture.world.inventory.CupboardMenu;
 import net.mcreator.lsfurniture.world.inventory.CounterMenu;
 import net.mcreator.lsfurniture.world.inventory.CarpentryGUIMenu;
+import net.mcreator.lsfurniture.world.inventory.Carpentry2GUIMenu;
 import net.mcreator.lsfurniture.world.inventory.BotanistGUIMenu;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
@@ -51,4 +52,5 @@ public class LsFurnitureModMenus {
 	public static final RegistryObject<MenuType<EngineeringGUIMenu>> ENGINEERING_GUI = REGISTRY.register("engineering_gui", () -> IForgeMenuType.create(EngineeringGUIMenu::new));
 	public static final RegistryObject<MenuType<GlassblowerGUIMenu>> GLASSBLOWER_GUI = REGISTRY.register("glassblower_gui", () -> IForgeMenuType.create(GlassblowerGUIMenu::new));
 	public static final RegistryObject<MenuType<BotanistGUIMenu>> BOTANIST_GUI = REGISTRY.register("botanist_gui", () -> IForgeMenuType.create(BotanistGUIMenu::new));
+	public static final RegistryObject<MenuType<Carpentry2GUIMenu>> CARPENTRY_2_GUI = REGISTRY.register("carpentry_2_gui", () -> IForgeMenuType.create(Carpentry2GUIMenu::new));
 }

@@ -140,7 +140,7 @@ public class WarpedCounterTileEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Warped Counter");
+		return Component.literal("Counter (Warped)");
 	}
 
 	@Override

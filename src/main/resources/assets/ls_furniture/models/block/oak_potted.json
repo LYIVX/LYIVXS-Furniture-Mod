@@ -3,9 +3,9 @@
   "textures": {
     "all": "ls_furniture:blocks/flower_pot",
     "particle": "ls_furniture:blocks/flower_pot",
-    "log": "ls_furniture:blocks/oak_log",
+    "log": "ls_furniture:blocks/log_oak",
     "flowerpot": "ls_furniture:blocks/flower_pot",
-    "leave": "ls_furniture:blocks/oak_leaves",
+    "leave": "ls_furniture:blocks/leaves_oak",
     "dirt": "ls_furniture:blocks/dirt"
   },
   "render_type": "cutout_mipped"

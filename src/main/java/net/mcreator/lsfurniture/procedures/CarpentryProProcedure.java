@@ -252,5 +252,6 @@ public class CarpentryProProcedure {
 		ShelveRecipeCallerProcedure.execute(x, y, z, entity);
 		MailboxRecipeCallerProcedure.execute(x, y, z, entity);
 		OakPlanksRecipeProcedure.execute(entity, guistate);
+		LogRecipeCallerProcedure.execute(x, y, z, entity);
 	}
 }

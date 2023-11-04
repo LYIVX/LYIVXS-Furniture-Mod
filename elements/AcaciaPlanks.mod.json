@@ -8,13 +8,22 @@
         "value": "Blocks.PLANKS#4"
       },
       {
-        "value": "CUSTOM:AcaciaBricks1"
+        "value": "CUSTOM:ConnectingAcaciaPlain"
       },
       {
-        "value": "CUSTOM:AcaciaBricks1Non"
+        "value": "CUSTOM:FramedAcaciaPlain"
       },
       {
-        "value": "CUSTOM:AcaciaHorizontalStrips"
+        "value": "CUSTOM:ConnectingAcaciaStripped"
+      },
+      {
+        "value": "CUSTOM:FramedAcaciaStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedAcaciaSmallBricks"
       }
     ],
     "blocks": [],

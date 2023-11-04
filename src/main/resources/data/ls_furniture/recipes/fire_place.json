@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:masonry",
+  "ingredients": [
+    {
+      "item": "minecraft:bricks"
+    },
+    {
+      "item": "minecraft:iron_bars"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:hammer"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:fire_place_off"
+  }
+}

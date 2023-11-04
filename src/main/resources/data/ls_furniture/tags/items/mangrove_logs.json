@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:mangrove_log_bundle",
+    "ls_furniture:mangrove_log_reinforced",
+    "minecraft:mangrove_log"
+  ]
+}

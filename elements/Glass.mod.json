@@ -1,0 +1,21 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:ConnectingDarkOakGlass"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakGlassCross"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "glass",
+    "namespace": "forge"
+  }
+}

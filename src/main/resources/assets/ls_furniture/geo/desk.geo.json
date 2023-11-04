@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.desk",
+				"identifier": "geometry.Desk",
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 5,
@@ -15,11 +15,11 @@
 					"name": "bone",
 					"pivot": [0, 0, 0],
 					"cubes": [
-						{"origin": [-7, 11, -6], "size": [14, 1, 12], "uv": [0, 0]},
+						{"origin": [-7, 11, -6], "size": [14, 1, 12], "uv": [0, 13]},
 						{"origin": [7, 0, -6], "size": [1, 16, 13], "uv": [28, 26]},
 						{"origin": [-8, 0, -6], "size": [1, 16, 13], "uv": [0, 26]},
 						{"origin": [-7, 0, 6], "size": [14, 16, 1], "uv": [52, 0]},
-						{"origin": [-7, 12, -6], "size": [14, 1, 1], "uv": [40, 17]}
+						{"origin": [-7, 12, -6], "size": [14, 1, 1], "uv": [40, 19]}
 					]
 				},
 				{
@@ -27,8 +27,8 @@
 					"parent": "bone",
 					"pivot": [0, 16, 6],
 					"cubes": [
-						{"origin": [-7, 14, -6], "size": [14, 1, 12], "uv": [0, 13]},
-						{"origin": [-7, 13, -6], "size": [14, 1, 1], "uv": [40, 19]}
+						{"origin": [-7, 14, -6], "size": [14, 1, 12], "uv": [0, 0]},
+						{"origin": [-7, 13, -6], "size": [14, 1, 1], "uv": [40, 17]}
 					]
 				}
 			]

@@ -19,6 +19,6 @@ public class SpruceSinkDisplayModel extends AnimatedGeoModel<SpruceSinkDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_spruce.png");
 	}
 }

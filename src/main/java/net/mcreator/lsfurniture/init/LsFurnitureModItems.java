@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
@@ -22,13 +23,16 @@ import net.mcreator.lsfurniture.item.OakBarkItem;
 import net.mcreator.lsfurniture.item.MangroveBarkItem;
 import net.mcreator.lsfurniture.item.JungleBarkItem;
 import net.mcreator.lsfurniture.item.HammerItem;
-import net.mcreator.lsfurniture.item.DarkOakBrakItem;
+import net.mcreator.lsfurniture.item.DarkOakBarkItem;
 import net.mcreator.lsfurniture.item.CrimsonBarkItem;
 import net.mcreator.lsfurniture.item.ChiselItem;
 import net.mcreator.lsfurniture.item.BirchBarkItem;
 import net.mcreator.lsfurniture.item.AnyIngotItem;
 import net.mcreator.lsfurniture.item.AnyDyeItem;
 import net.mcreator.lsfurniture.item.AcaciaBarkItem;
+import net.mcreator.lsfurniture.block.display.WarpedWartOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.WarpedWarpedWartSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.WarpedWarpedWartCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobeDisplayItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.WarpedWardrobe1DisplayItem;
@@ -48,6 +52,9 @@ import net.mcreator.lsfurniture.block.display.SpruceDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.SpruceDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.SpruceCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.SpruceCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.SpruceAndesiteSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.SpruceAndesiteCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.QuartzOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.OakWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.OakWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.OakWardrobe0DisplayItem;
@@ -57,11 +64,17 @@ import net.mcreator.lsfurniture.block.display.OakDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.OakDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.OakCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.OakCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.OakBricksSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.OakBricksCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.NetherWartOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.NetherBricksOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.MicrowaveDisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveWardrobeDisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.MangroveQuartzSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.MangroveQuartzCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.MangroveDeskDisplayItem;
@@ -73,21 +86,27 @@ import net.mcreator.lsfurniture.block.display.JungleWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleSinkDisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.JungleNetherBricksSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.JungleNetherBricksCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.JungleCounterDisplayItem;
-import net.mcreator.lsfurniture.block.display.FurnitureCrafterBetaDisplayItem;
+import net.mcreator.lsfurniture.block.display.GraniteOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.FridgeFreezerBlockDisplayItem;
 import net.mcreator.lsfurniture.block.display.FridgeFreezerBlock2DisplayItem;
 import net.mcreator.lsfurniture.block.display.FridgeFreezerBlock1DisplayItem;
+import net.mcreator.lsfurniture.block.display.DioriteOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.DeepslateOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.Darkoakwardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.Darkoakwardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.Darkoakwardrobe0DisplayItem;
-import net.mcreator.lsfurniture.block.display.DarkoakDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.DarkOakSinkDisplayItem;
 import net.mcreator.lsfurniture.block.display.DarkOakOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.DarkOakDrawerDisplayItem;
+import net.mcreator.lsfurniture.block.display.DarkOakDeskDisplayItem;
+import net.mcreator.lsfurniture.block.display.DarkOakDeepslateSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.DarkOakDeepslateCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.DarkOakCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.DarkOakCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonWardrobeDisplayItem;
@@ -95,25 +114,33 @@ import net.mcreator.lsfurniture.block.display.CrimsonWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonSinkDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.CrimsonNetherWartSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.CrimsonNetherWartCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.CrimsonCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.BricksOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchWardrobeDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchSinkDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchOvenDisplayItem;
+import net.mcreator.lsfurniture.block.display.BirchGraniteSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.BirchGraniteCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchDrawerDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.BirchCounterDisplayItem;
+import net.mcreator.lsfurniture.block.display.AndesiteOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaWardrobeDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaWardrobe2DisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaWardrobe1DisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaSinkDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaOvenDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaDrawerDisplayItem;
+import net.mcreator.lsfurniture.block.display.AcaciaDioriteSinkDisplayItem;
+import net.mcreator.lsfurniture.block.display.AcaciaDioriteCounterDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaDeskDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaCupboardDisplayItem;
 import net.mcreator.lsfurniture.block.display.AcaciaCounterDisplayItem;
@@ -121,8 +148,6 @@ import net.mcreator.lsfurniture.LsFurnitureMod;
 
 public class LsFurnitureModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, LsFurnitureMod.MODID);
-	public static final RegistryObject<Item> FURNITURE_CRAFTER_BETA = REGISTRY.register(LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.getId().getPath(),
-			() -> new FurnitureCrafterBetaDisplayItem(LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> SAW = REGISTRY.register("saw", () -> new SawItem());
 	public static final RegistryObject<Item> CHISEL = REGISTRY.register("chisel", () -> new ChiselItem());
 	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
@@ -133,15 +158,11 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> BIRCH_BARK = REGISTRY.register("birch_bark", () -> new BirchBarkItem());
 	public static final RegistryObject<Item> JUNGLE_BARK = REGISTRY.register("jungle_bark", () -> new JungleBarkItem());
 	public static final RegistryObject<Item> ACACIA_BARK = REGISTRY.register("acacia_bark", () -> new AcaciaBarkItem());
-	public static final RegistryObject<Item> DARK_OAK_BRAK = REGISTRY.register("dark_oak_brak", () -> new DarkOakBrakItem());
 	public static final RegistryObject<Item> MANGROVE_BARK = REGISTRY.register("mangrove_bark", () -> new MangroveBarkItem());
 	public static final RegistryObject<Item> CRIMSON_BARK = REGISTRY.register("crimson_bark", () -> new CrimsonBarkItem());
 	public static final RegistryObject<Item> WARPED_BARK = REGISTRY.register("warped_bark", () -> new WarpedBarkItem());
-	public static final RegistryObject<Item> PLATE = block(LsFurnitureModBlocks.PLATE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> COMPUTER_OFF = block(LsFurnitureModBlocks.COMPUTER_OFF, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> TV_STAND_OFF = block(LsFurnitureModBlocks.TV_STAND_OFF, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_APPLE_CREATE = block(LsFurnitureModBlocks.OAK_APPLE_CREATE, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_CREATE = block(LsFurnitureModBlocks.OAK_CREATE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> OAK_WHITE_SOFA = block(LsFurnitureModBlocks.OAK_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> SPRUCE_WHITE_SOFA = block(LsFurnitureModBlocks.SPRUCE_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> BIRCH_WHITE_SOFA = block(LsFurnitureModBlocks.BIRCH_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
@@ -151,36 +172,36 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_WHITE_SOFA = block(LsFurnitureModBlocks.MANGROVE_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> CRIMSON_WHITE_SOFA = block(LsFurnitureModBlocks.CRIMSON_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> WARPED_WHITE_SOFA = block(LsFurnitureModBlocks.WARPED_WHITE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_BLACK_SOFA = block(LsFurnitureModBlocks.OAK_BLACK_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_BLUE_SOFA = block(LsFurnitureModBlocks.OAK_BLUE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_BROWN_SOFA = block(LsFurnitureModBlocks.OAK_BROWN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_CYAN_SOFA = block(LsFurnitureModBlocks.OAK_CYAN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_GRAY_SOFA = block(LsFurnitureModBlocks.OAK_GRAY_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_GREEN_SOFA = block(LsFurnitureModBlocks.OAK_GREEN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LIGHT_BLUE_SOFA = block(LsFurnitureModBlocks.OAK_LIGHT_BLUE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LIGHT_GRAY_SOFA = block(LsFurnitureModBlocks.OAK_LIGHT_GRAY_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LIME_SOFA = block(LsFurnitureModBlocks.OAK_LIME_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_MAGENTA_SOFA = block(LsFurnitureModBlocks.OAK_MAGENTA_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_ORANGE_SOFA = block(LsFurnitureModBlocks.OAK_ORANGE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_PINK_SOFA = block(LsFurnitureModBlocks.OAK_PINK_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_PURPLE_SOFA = block(LsFurnitureModBlocks.OAK_PURPLE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_RED_SOFA = block(LsFurnitureModBlocks.OAK_RED_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_YELLOW_SOFA = block(LsFurnitureModBlocks.OAK_YELLOW_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_BLACK_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BLACK_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_BLUE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BLUE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_BROWN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BROWN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_CYAN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_CYAN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_GRAY_SOFA = block(LsFurnitureModBlocks.DARK_OAK_GRAY_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_GREEN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_GREEN_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LIGHT_BLUE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIGHT_BLUE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LIGHT_GRAY_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIGHT_GRAY_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LIME_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIME_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_MAGENTA_SOFA = block(LsFurnitureModBlocks.DARK_OAK_MAGENTA_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_ORANGE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_ORANGE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_PINK_SOFA = block(LsFurnitureModBlocks.DARK_OAK_PINK_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_PURPLE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_PURPLE_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_RED_SOFA = block(LsFurnitureModBlocks.DARK_OAK_RED_SOFA, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_YELLOW_SOFA = block(LsFurnitureModBlocks.DARK_OAK_YELLOW_SOFA, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_BLACK_SOFA = block(LsFurnitureModBlocks.OAK_BLACK_SOFA, null);
+	public static final RegistryObject<Item> OAK_BLUE_SOFA = block(LsFurnitureModBlocks.OAK_BLUE_SOFA, null);
+	public static final RegistryObject<Item> OAK_BROWN_SOFA = block(LsFurnitureModBlocks.OAK_BROWN_SOFA, null);
+	public static final RegistryObject<Item> OAK_CYAN_SOFA = block(LsFurnitureModBlocks.OAK_CYAN_SOFA, null);
+	public static final RegistryObject<Item> OAK_GRAY_SOFA = block(LsFurnitureModBlocks.OAK_GRAY_SOFA, null);
+	public static final RegistryObject<Item> OAK_GREEN_SOFA = block(LsFurnitureModBlocks.OAK_GREEN_SOFA, null);
+	public static final RegistryObject<Item> OAK_LIGHT_BLUE_SOFA = block(LsFurnitureModBlocks.OAK_LIGHT_BLUE_SOFA, null);
+	public static final RegistryObject<Item> OAK_LIGHT_GRAY_SOFA = block(LsFurnitureModBlocks.OAK_LIGHT_GRAY_SOFA, null);
+	public static final RegistryObject<Item> OAK_LIME_SOFA = block(LsFurnitureModBlocks.OAK_LIME_SOFA, null);
+	public static final RegistryObject<Item> OAK_MAGENTA_SOFA = block(LsFurnitureModBlocks.OAK_MAGENTA_SOFA, null);
+	public static final RegistryObject<Item> OAK_ORANGE_SOFA = block(LsFurnitureModBlocks.OAK_ORANGE_SOFA, null);
+	public static final RegistryObject<Item> OAK_PINK_SOFA = block(LsFurnitureModBlocks.OAK_PINK_SOFA, null);
+	public static final RegistryObject<Item> OAK_PURPLE_SOFA = block(LsFurnitureModBlocks.OAK_PURPLE_SOFA, null);
+	public static final RegistryObject<Item> OAK_RED_SOFA = block(LsFurnitureModBlocks.OAK_RED_SOFA, null);
+	public static final RegistryObject<Item> OAK_YELLOW_SOFA = block(LsFurnitureModBlocks.OAK_YELLOW_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_BLACK_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BLACK_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_BLUE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BLUE_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_BROWN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_BROWN_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_CYAN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_CYAN_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_GRAY_SOFA = block(LsFurnitureModBlocks.DARK_OAK_GRAY_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_GREEN_SOFA = block(LsFurnitureModBlocks.DARK_OAK_GREEN_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_LIGHT_BLUE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIGHT_BLUE_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_LIGHT_GRAY_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIGHT_GRAY_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_LIME_SOFA = block(LsFurnitureModBlocks.DARK_OAK_LIME_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_MAGENTA_SOFA = block(LsFurnitureModBlocks.DARK_OAK_MAGENTA_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_ORANGE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_ORANGE_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_PINK_SOFA = block(LsFurnitureModBlocks.DARK_OAK_PINK_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_PURPLE_SOFA = block(LsFurnitureModBlocks.DARK_OAK_PURPLE_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_RED_SOFA = block(LsFurnitureModBlocks.DARK_OAK_RED_SOFA, null);
+	public static final RegistryObject<Item> DARK_OAK_YELLOW_SOFA = block(LsFurnitureModBlocks.DARK_OAK_YELLOW_SOFA, null);
 	public static final RegistryObject<Item> OAK_CHAIR = block(LsFurnitureModBlocks.OAK_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> OAK_WHITE_CHAIR = block(LsFurnitureModBlocks.OAK_WHITE_CHAIR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> SPRUCE_CHAIR = block(LsFurnitureModBlocks.SPRUCE_CHAIR, LsFurnitureModTabs.TAB_TAB);
@@ -207,7 +228,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_STOOL = block(LsFurnitureModBlocks.MANGROVE_STOOL, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> CRIMSON_STOOL = block(LsFurnitureModBlocks.CRIMSON_STOOL, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> WARPED_STOOL = block(LsFurnitureModBlocks.WARPED_STOOL, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> TABLE_NONE = block(LsFurnitureModBlocks.TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> SPRUCE_TABLE_NONE = block(LsFurnitureModBlocks.SPRUCE_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> BIRCH_TABLE_NONE = block(LsFurnitureModBlocks.BIRCH_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> JUNGLE_TABLE_NONE = block(LsFurnitureModBlocks.JUNGLE_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
@@ -244,8 +264,6 @@ public class LsFurnitureModItems {
 			() -> new JungleDeskDisplayItem(LsFurnitureModBlocks.JUNGLE_DESK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> ACACIA_DESK = REGISTRY.register(LsFurnitureModBlocks.ACACIA_DESK.getId().getPath(),
 			() -> new AcaciaDeskDisplayItem(LsFurnitureModBlocks.ACACIA_DESK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> DARKOAK_DESK = REGISTRY.register(LsFurnitureModBlocks.DARKOAK_DESK.getId().getPath(),
-			() -> new DarkoakDeskDisplayItem(LsFurnitureModBlocks.DARKOAK_DESK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> MANGROVE_DESK = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_DESK.getId().getPath(),
 			() -> new MangroveDeskDisplayItem(LsFurnitureModBlocks.MANGROVE_DESK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> CRIMSON_DESK = REGISTRY.register(LsFurnitureModBlocks.CRIMSON_DESK.getId().getPath(),
@@ -286,23 +304,6 @@ public class LsFurnitureModItems {
 			() -> new CrimsonCounterDisplayItem(LsFurnitureModBlocks.CRIMSON_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> WARPED_COUNTER = REGISTRY.register(LsFurnitureModBlocks.WARPED_COUNTER.getId().getPath(),
 			() -> new WarpedCounterDisplayItem(LsFurnitureModBlocks.WARPED_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> OAK_SINK = REGISTRY.register(LsFurnitureModBlocks.OAK_SINK.getId().getPath(), () -> new OakSinkDisplayItem(LsFurnitureModBlocks.OAK_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> SPRUCE_SINK = REGISTRY.register(LsFurnitureModBlocks.SPRUCE_SINK.getId().getPath(),
-			() -> new SpruceSinkDisplayItem(LsFurnitureModBlocks.SPRUCE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> BIRCH_SINK = REGISTRY.register(LsFurnitureModBlocks.BIRCH_SINK.getId().getPath(),
-			() -> new BirchSinkDisplayItem(LsFurnitureModBlocks.BIRCH_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> JUNGLE_SINK = REGISTRY.register(LsFurnitureModBlocks.JUNGLE_SINK.getId().getPath(),
-			() -> new JungleSinkDisplayItem(LsFurnitureModBlocks.JUNGLE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> ACACIA_SINK = REGISTRY.register(LsFurnitureModBlocks.ACACIA_SINK.getId().getPath(),
-			() -> new AcaciaSinkDisplayItem(LsFurnitureModBlocks.ACACIA_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> DARK_OAK_SINK = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_SINK.getId().getPath(),
-			() -> new DarkOakSinkDisplayItem(LsFurnitureModBlocks.DARK_OAK_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> MANGROVE_SINK = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_SINK.getId().getPath(),
-			() -> new MangroveSinkDisplayItem(LsFurnitureModBlocks.MANGROVE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> CRIMSON_SINK = REGISTRY.register(LsFurnitureModBlocks.CRIMSON_SINK.getId().getPath(),
-			() -> new CrimsonSinkDisplayItem(LsFurnitureModBlocks.CRIMSON_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
-	public static final RegistryObject<Item> WARPED_SINK = REGISTRY.register(LsFurnitureModBlocks.WARPED_SINK.getId().getPath(),
-			() -> new WarpedSinkDisplayItem(LsFurnitureModBlocks.WARPED_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> OAK_OVEN = REGISTRY.register(LsFurnitureModBlocks.OAK_OVEN.getId().getPath(), () -> new OakOvenDisplayItem(LsFurnitureModBlocks.OAK_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> SPRUCE_OVEN = REGISTRY.register(LsFurnitureModBlocks.SPRUCE_OVEN.getId().getPath(),
 			() -> new SpruceOvenDisplayItem(LsFurnitureModBlocks.SPRUCE_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
@@ -580,11 +581,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> OAK_SLASH = block(LsFurnitureModBlocks.OAK_SLASH, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CONNECTING_OAK_SLASH = block(LsFurnitureModBlocks.CONNECTING_OAK_SLASH, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> FRAMED_OAK_SLASH = block(LsFurnitureModBlocks.FRAMED_OAK_SLASH, LsFurnitureModTabs.TAB_TAB_2);
-	public static final RegistryObject<Item> TABLE_STRAIGHT = block(LsFurnitureModBlocks.TABLE_STRAIGHT, null);
-	public static final RegistryObject<Item> TABLE_CORNER = block(LsFurnitureModBlocks.TABLE_CORNER, null);
-	public static final RegistryObject<Item> TABLE_JUNCTION = block(LsFurnitureModBlocks.TABLE_JUNCTION, null);
-	public static final RegistryObject<Item> TABLE_CROSS = block(LsFurnitureModBlocks.TABLE_CROSS, null);
-	public static final RegistryObject<Item> TABLE_END = block(LsFurnitureModBlocks.TABLE_END, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_STRAIGHT = block(LsFurnitureModBlocks.DARK_OAK_TABLE_STRAIGHT, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_CORNER = block(LsFurnitureModBlocks.DARK_OAK_TABLE_CORNER, null);
 	public static final RegistryObject<Item> DARK_OAK_TABLE_JUNCTION = block(LsFurnitureModBlocks.DARK_OAK_TABLE_JUNCTION, null);
@@ -602,15 +598,14 @@ public class LsFurnitureModItems {
 			() -> new FridgeFreezerBlock1DisplayItem(LsFurnitureModBlocks.FRIDGE_FREEZER_BLOCK_1.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> FRIDGE_FREEZER_BLOCK_2 = REGISTRY.register(LsFurnitureModBlocks.FRIDGE_FREEZER_BLOCK_2.getId().getPath(),
 			() -> new FridgeFreezerBlock2DisplayItem(LsFurnitureModBlocks.FRIDGE_FREEZER_BLOCK_2.get(), new Item.Properties().tab(null)));
-	public static final RegistryObject<Item> APPLE_PLATE = block(LsFurnitureModBlocks.APPLE_PLATE, null);
 	public static final RegistryObject<Item> ANY_PLANKS = block(LsFurnitureModBlocks.ANY_PLANKS, null);
 	public static final RegistryObject<Item> ANY_INGOT = REGISTRY.register("any_ingot", () -> new AnyIngotItem());
 	public static final RegistryObject<Item> COMPUTER_ON = block(LsFurnitureModBlocks.COMPUTER_ON, null);
 	public static final RegistryObject<Item> COMPUTER_MINECRAFT = block(LsFurnitureModBlocks.COMPUTER_MINECRAFT, null);
 	public static final RegistryObject<Item> COMPUTER_COD = block(LsFurnitureModBlocks.COMPUTER_COD, null);
-	public static final RegistryObject<Item> DRAINER_PLATE = block(LsFurnitureModBlocks.DRAINER_PLATE, null);
+	public static final RegistryObject<Item> DRAINER_PLATE = block(LsFurnitureModBlocks.DRAINER_PLATE, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> DRANIER_1_PLATE = block(LsFurnitureModBlocks.DRANIER_1_PLATE, null);
-	public static final RegistryObject<Item> DRAINER_2_PLATES = block(LsFurnitureModBlocks.DRAINER_2_PLATES, null);
+	public static final RegistryObject<Item> DRAINER_2_PLATES = block(LsFurnitureModBlocks.DRAINER_2_PLATES, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> OAK_WARDROBE_1 = REGISTRY.register(LsFurnitureModBlocks.OAK_WARDROBE_1.getId().getPath(), () -> new OakWardrobe1DisplayItem(LsFurnitureModBlocks.OAK_WARDROBE_1.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> OAK_WARDROBE_2 = REGISTRY.register(LsFurnitureModBlocks.OAK_WARDROBE_2.getId().getPath(), () -> new OakWardrobe2DisplayItem(LsFurnitureModBlocks.OAK_WARDROBE_2.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> DARKOAKWARDROBE_1 = REGISTRY.register(LsFurnitureModBlocks.DARKOAKWARDROBE_1.getId().getPath(),
@@ -765,8 +760,6 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_TOP_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_TOP_CLOSED, null);
 	public static final RegistryObject<Item> DARK_OAK_BLINDS_BOTTOM_CLOSED = block(LsFurnitureModBlocks.DARK_OAK_BLINDS_BOTTOM_CLOSED, null);
 	public static final RegistryObject<Item> ACACIA_CHAIR = block(LsFurnitureModBlocks.ACACIA_CHAIR, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_COUNTER = REGISTRY.register(LsFurnitureModBlocks.ACACIA_COUNTER.getId().getPath(),
-			() -> new AcaciaCounterDisplayItem(LsFurnitureModBlocks.ACACIA_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
 	public static final RegistryObject<Item> CONNECTING_OAK_GLASS = block(LsFurnitureModBlocks.CONNECTING_OAK_GLASS, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CONNECTING_DARK_OAK_GLASS = block(LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CONNECTING_SPRUCE_GLASS = block(LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS, LsFurnitureModTabs.TAB_TAB_2);
@@ -848,41 +841,41 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> FRAMED_CRIMSON_SMALL_BRICKS = block(LsFurnitureModBlocks.FRAMED_CRIMSON_SMALL_BRICKS, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CONNECTING_WARPED_SMALL_BRICKS = block(LsFurnitureModBlocks.CONNECTING_WARPED_SMALL_BRICKS, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> FRAMED_WARPED_SMALL_BRICKS = block(LsFurnitureModBlocks.FRAMED_WARPED_SMALL_BRICKS, LsFurnitureModTabs.TAB_TAB_2);
-	public static final RegistryObject<Item> OAK_LEAVES_POPPY = block(LsFurnitureModBlocks.OAK_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LEAVES_DANDILION = block(LsFurnitureModBlocks.OAK_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.OAK_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LEAVES_POPPY = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LEAVES_DANDILION = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> SPRUCE_LEAVES_POPPY = block(LsFurnitureModBlocks.SPRUCE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> SPRUCE_LEAVES_DANDILION = block(LsFurnitureModBlocks.SPRUCE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> SPRUCE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.SPRUCE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_LEAVES_POPPY = block(LsFurnitureModBlocks.ACACIA_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_LEAVES_DANDILION = block(LsFurnitureModBlocks.ACACIA_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.ACACIA_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> BIRCH_LEAVES_POPPY = block(LsFurnitureModBlocks.BIRCH_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> BIRCH_LEAVES_DANDILION = block(LsFurnitureModBlocks.BIRCH_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> BIRCH_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.BIRCH_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> JUNGLE_LEAVES_POPPY = block(LsFurnitureModBlocks.JUNGLE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> JUNGLE_LEAVES_DANDILION = block(LsFurnitureModBlocks.JUNGLE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> JUNGLE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.JUNGLE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> MANGROVE_LEAVES_POPPY = block(LsFurnitureModBlocks.MANGROVE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> MANGROVE_LEAVES_DANDILION = block(LsFurnitureModBlocks.MANGROVE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> MANGROVE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.MANGROVE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.OAK_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> OAK_LEAVES_FROSTED = block(LsFurnitureModBlocks.OAK_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> DARK_OAK_LEAVES_FROSTED = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> SPRUCE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.SPRUCE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> SPRUCE_LEAVES_FROSTED = block(LsFurnitureModBlocks.SPRUCE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.ACACIA_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> ACACIA_LEAVES_FROSTED = block(LsFurnitureModBlocks.ACACIA_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> BIRCH_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.BIRCH_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> BIRCH_LEAVES_FROSTED = block(LsFurnitureModBlocks.BIRCH_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> JUNGLE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.JUNGLE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> JUNGLE_LEAVES_FROSTED = block(LsFurnitureModBlocks.JUNGLE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> MANGROVE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.MANGROVE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB);
-	public static final RegistryObject<Item> MANGROVE_LEAVES_FROSTED = block(LsFurnitureModBlocks.MANGROVE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_LEAVES_POPPY = block(LsFurnitureModBlocks.OAK_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LEAVES_DANDILION = block(LsFurnitureModBlocks.OAK_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.OAK_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LEAVES_POPPY = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LEAVES_DANDILION = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LEAVES_POPPY = block(LsFurnitureModBlocks.SPRUCE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LEAVES_DANDILION = block(LsFurnitureModBlocks.SPRUCE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.SPRUCE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LEAVES_POPPY = block(LsFurnitureModBlocks.ACACIA_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LEAVES_DANDILION = block(LsFurnitureModBlocks.ACACIA_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.ACACIA_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LEAVES_POPPY = block(LsFurnitureModBlocks.BIRCH_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LEAVES_DANDILION = block(LsFurnitureModBlocks.BIRCH_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.BIRCH_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LEAVES_POPPY = block(LsFurnitureModBlocks.JUNGLE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LEAVES_DANDILION = block(LsFurnitureModBlocks.JUNGLE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.JUNGLE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LEAVES_POPPY = block(LsFurnitureModBlocks.MANGROVE_LEAVES_POPPY, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LEAVES_DANDILION = block(LsFurnitureModBlocks.MANGROVE_LEAVES_DANDILION, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LEAVES_BLUE_ORCHID = block(LsFurnitureModBlocks.MANGROVE_LEAVES_BLUE_ORCHID, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.OAK_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LEAVES_FROSTED = block(LsFurnitureModBlocks.OAK_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LEAVES_FROSTED = block(LsFurnitureModBlocks.DARK_OAK_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.SPRUCE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LEAVES_FROSTED = block(LsFurnitureModBlocks.SPRUCE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.ACACIA_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LEAVES_FROSTED = block(LsFurnitureModBlocks.ACACIA_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.BIRCH_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LEAVES_FROSTED = block(LsFurnitureModBlocks.BIRCH_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.JUNGLE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LEAVES_FROSTED = block(LsFurnitureModBlocks.JUNGLE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LEAVES_SEMI_FROSTED = block(LsFurnitureModBlocks.MANGROVE_LEAVES_SEMI_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LEAVES_FROSTED = block(LsFurnitureModBlocks.MANGROVE_LEAVES_FROSTED, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> OAK_POTTED = block(LsFurnitureModBlocks.OAK_POTTED, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> DARK_OAK_POTTED = block(LsFurnitureModBlocks.DARK_OAK_POTTED, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> SPRUCE_POTTED = block(LsFurnitureModBlocks.SPRUCE_POTTED, LsFurnitureModTabs.TAB_TAB);
@@ -892,8 +885,156 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_POTTED = block(LsFurnitureModBlocks.MANGROVE_POTTED, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> CRIMSON_POTTED = block(LsFurnitureModBlocks.CRIMSON_POTTED, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> WARPED_POTTED = block(LsFurnitureModBlocks.WARPED_POTTED, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_PLANT = block(LsFurnitureModBlocks.OAK_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> DARK_OAK_PLANT = block(LsFurnitureModBlocks.DARK_OAK_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> SPRUCE_PLANT = block(LsFurnitureModBlocks.SPRUCE_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> ACACIA_PLANT = block(LsFurnitureModBlocks.ACACIA_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> BIRCH_PLANT = block(LsFurnitureModBlocks.BIRCH_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> JUNGLE_PLANT = block(LsFurnitureModBlocks.JUNGLE_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> MANGROVE_PLANT = block(LsFurnitureModBlocks.MANGROVE_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> CRIMSON_PLANT = block(LsFurnitureModBlocks.CRIMSON_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> WARPED_PLANT = block(LsFurnitureModBlocks.WARPED_PLANT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_LOG_BUNDLE = block(LsFurnitureModBlocks.OAK_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LOG_BUNDLE = block(LsFurnitureModBlocks.DARK_OAK_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LOG_BUNDLE = block(LsFurnitureModBlocks.SPRUCE_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LOG_BUNDLE = block(LsFurnitureModBlocks.ACACIA_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LOG_BUNDLE = block(LsFurnitureModBlocks.BIRCH_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LOG_BUNDLE = block(LsFurnitureModBlocks.JUNGLE_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LOG_BUNDLE = block(LsFurnitureModBlocks.MANGROVE_LOG_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LOG_REINFORCED = block(LsFurnitureModBlocks.OAK_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LOG_REINFORCED = block(LsFurnitureModBlocks.DARK_OAK_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LOG_REINFORCED = block(LsFurnitureModBlocks.SPRUCE_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LOG_REINFORCED = block(LsFurnitureModBlocks.ACACIA_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LOG_REINFORCED = block(LsFurnitureModBlocks.BIRCH_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LOG_REINFORCED = block(LsFurnitureModBlocks.JUNGLE_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LOG_REINFORCED = block(LsFurnitureModBlocks.MANGROVE_LOG_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_2 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_2, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_3 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_3, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_4 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_4, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_5 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_5, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_6 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_6, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_7 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_7, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_ACACIA = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_ACACIA, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_BIRCH = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_BIRCH, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_DARK_OAK = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_DARK_OAK, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_JUNGLE = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_JUNGLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_MANGROVE = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_MANGROVE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_SPRUCE = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_SPRUCE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_SINK = REGISTRY.register(LsFurnitureModBlocks.OAK_SINK.getId().getPath(), () -> new OakSinkDisplayItem(LsFurnitureModBlocks.OAK_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> DARK_OAK_SINK = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_SINK.getId().getPath(),
+			() -> new DarkOakSinkDisplayItem(LsFurnitureModBlocks.DARK_OAK_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> SPRUCE_SINK = REGISTRY.register(LsFurnitureModBlocks.SPRUCE_SINK.getId().getPath(),
+			() -> new SpruceSinkDisplayItem(LsFurnitureModBlocks.SPRUCE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> ACACIA_SINK = REGISTRY.register(LsFurnitureModBlocks.ACACIA_SINK.getId().getPath(),
+			() -> new AcaciaSinkDisplayItem(LsFurnitureModBlocks.ACACIA_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> BIRCH_SINK = REGISTRY.register(LsFurnitureModBlocks.BIRCH_SINK.getId().getPath(),
+			() -> new BirchSinkDisplayItem(LsFurnitureModBlocks.BIRCH_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> JUNGLE_SINK = REGISTRY.register(LsFurnitureModBlocks.JUNGLE_SINK.getId().getPath(),
+			() -> new JungleSinkDisplayItem(LsFurnitureModBlocks.JUNGLE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> MANGROVE_SINK = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_SINK.getId().getPath(),
+			() -> new MangroveSinkDisplayItem(LsFurnitureModBlocks.MANGROVE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> CRIMSON_SINK = REGISTRY.register(LsFurnitureModBlocks.CRIMSON_SINK.getId().getPath(),
+			() -> new CrimsonSinkDisplayItem(LsFurnitureModBlocks.CRIMSON_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> WARPED_SINK = REGISTRY.register(LsFurnitureModBlocks.WARPED_SINK.getId().getPath(),
+			() -> new WarpedSinkDisplayItem(LsFurnitureModBlocks.WARPED_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> OAK_DOOR_WARPED = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_WARPED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_DOOR_CRIMSON = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_CRIMSON, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> FIRE_PLACE = block(LsFurnitureModBlocks.FIRE_PLACE, null);
+	public static final RegistryObject<Item> FIRE_PLACE_OFF = block(LsFurnitureModBlocks.FIRE_PLACE_OFF, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> DEEPSLATE_OVEN = REGISTRY.register(LsFurnitureModBlocks.DEEPSLATE_OVEN.getId().getPath(),
+			() -> new DeepslateOvenDisplayItem(LsFurnitureModBlocks.DEEPSLATE_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> ANDESITE_OVEN = REGISTRY.register(LsFurnitureModBlocks.ANDESITE_OVEN.getId().getPath(),
+			() -> new AndesiteOvenDisplayItem(LsFurnitureModBlocks.ANDESITE_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> DIORITE_OVEN = REGISTRY.register(LsFurnitureModBlocks.DIORITE_OVEN.getId().getPath(),
+			() -> new DioriteOvenDisplayItem(LsFurnitureModBlocks.DIORITE_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> GRANITE_OVEN = REGISTRY.register(LsFurnitureModBlocks.GRANITE_OVEN.getId().getPath(),
+			() -> new GraniteOvenDisplayItem(LsFurnitureModBlocks.GRANITE_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> NETHER_BRICKS_OVEN = REGISTRY.register(LsFurnitureModBlocks.NETHER_BRICKS_OVEN.getId().getPath(),
+			() -> new NetherBricksOvenDisplayItem(LsFurnitureModBlocks.NETHER_BRICKS_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> QUARTZ_OVEN = REGISTRY.register(LsFurnitureModBlocks.QUARTZ_OVEN.getId().getPath(),
+			() -> new QuartzOvenDisplayItem(LsFurnitureModBlocks.QUARTZ_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> NETHER_WART_OVEN = REGISTRY.register(LsFurnitureModBlocks.NETHER_WART_OVEN.getId().getPath(),
+			() -> new NetherWartOvenDisplayItem(LsFurnitureModBlocks.NETHER_WART_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> WARPED_WART_OVEN = REGISTRY.register(LsFurnitureModBlocks.WARPED_WART_OVEN.getId().getPath(),
+			() -> new WarpedWartOvenDisplayItem(LsFurnitureModBlocks.WARPED_WART_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> BRICKS_OVEN = REGISTRY.register(LsFurnitureModBlocks.BRICKS_OVEN.getId().getPath(),
+			() -> new BricksOvenDisplayItem(LsFurnitureModBlocks.BRICKS_OVEN.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> OAK_BRICKS_COUNTER = REGISTRY.register(LsFurnitureModBlocks.OAK_BRICKS_COUNTER.getId().getPath(),
+			() -> new OakBricksCounterDisplayItem(LsFurnitureModBlocks.OAK_BRICKS_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> OAK_BRICKS_COUNTER_CORNER = block(LsFurnitureModBlocks.OAK_BRICKS_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> DARK_OAK_DEEPSLATE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_DEEPSLATE_COUNTER.getId().getPath(),
+			() -> new DarkOakDeepslateCounterDisplayItem(LsFurnitureModBlocks.DARK_OAK_DEEPSLATE_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> DARK_OAK_DEEPSLATE_COUNTER_CORNER = block(LsFurnitureModBlocks.DARK_OAK_DEEPSLATE_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> SPRUCE_ANDESITE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.SPRUCE_ANDESITE_COUNTER.getId().getPath(),
+			() -> new SpruceAndesiteCounterDisplayItem(LsFurnitureModBlocks.SPRUCE_ANDESITE_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> SPRUCE_ANDESITE_COUNTER_CORNER = block(LsFurnitureModBlocks.SPRUCE_ANDESITE_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> BIRCH_GRANITE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.BIRCH_GRANITE_COUNTER.getId().getPath(),
+			() -> new BirchGraniteCounterDisplayItem(LsFurnitureModBlocks.BIRCH_GRANITE_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> BIRCH_GRANITE_COUNTER_CORNER = block(LsFurnitureModBlocks.BIRCH_GRANITE_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> JUNGLE_NETHER_BRICKS_COUNTER = REGISTRY.register(LsFurnitureModBlocks.JUNGLE_NETHER_BRICKS_COUNTER.getId().getPath(),
+			() -> new JungleNetherBricksCounterDisplayItem(LsFurnitureModBlocks.JUNGLE_NETHER_BRICKS_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> JUNGLE_NETHER_BRICKS_COUNTER_CORNER = block(LsFurnitureModBlocks.JUNGLE_NETHER_BRICKS_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> MANGROVE_QUARTZ_COUNTER = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_QUARTZ_COUNTER.getId().getPath(),
+			() -> new MangroveQuartzCounterDisplayItem(LsFurnitureModBlocks.MANGROVE_QUARTZ_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> MANGROVE_QUARTZ_COUNTER_CORNER = block(LsFurnitureModBlocks.MANGROVE_QUARTZ_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> CRIMSON_NETHER_WART_COUNTER = REGISTRY.register(LsFurnitureModBlocks.CRIMSON_NETHER_WART_COUNTER.getId().getPath(),
+			() -> new CrimsonNetherWartCounterDisplayItem(LsFurnitureModBlocks.CRIMSON_NETHER_WART_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> CRIMSON_NETHER_WART_COUNTER_CORNER = block(LsFurnitureModBlocks.CRIMSON_NETHER_WART_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> WARPED_WARPED_WART_COUNTER = REGISTRY.register(LsFurnitureModBlocks.WARPED_WARPED_WART_COUNTER.getId().getPath(),
+			() -> new WarpedWarpedWartCounterDisplayItem(LsFurnitureModBlocks.WARPED_WARPED_WART_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> WARPED_WARPED_WART_COUNTER_CORNER = block(LsFurnitureModBlocks.WARPED_WARPED_WART_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> OAK_BRICKS_SINK = REGISTRY.register(LsFurnitureModBlocks.OAK_BRICKS_SINK.getId().getPath(),
+			() -> new OakBricksSinkDisplayItem(LsFurnitureModBlocks.OAK_BRICKS_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> DARK_OAK_DEEPSLATE_SINK = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_DEEPSLATE_SINK.getId().getPath(),
+			() -> new DarkOakDeepslateSinkDisplayItem(LsFurnitureModBlocks.DARK_OAK_DEEPSLATE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> SPRUCE_ANDESITE_SINK = REGISTRY.register(LsFurnitureModBlocks.SPRUCE_ANDESITE_SINK.getId().getPath(),
+			() -> new SpruceAndesiteSinkDisplayItem(LsFurnitureModBlocks.SPRUCE_ANDESITE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> ACACIA_DIORITE_SINK = REGISTRY.register(LsFurnitureModBlocks.ACACIA_DIORITE_SINK.getId().getPath(),
+			() -> new AcaciaDioriteSinkDisplayItem(LsFurnitureModBlocks.ACACIA_DIORITE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> BIRCH_GRANITE_SINK = REGISTRY.register(LsFurnitureModBlocks.BIRCH_GRANITE_SINK.getId().getPath(),
+			() -> new BirchGraniteSinkDisplayItem(LsFurnitureModBlocks.BIRCH_GRANITE_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> JUNGLE_NETHER_BRICKS_SINK = REGISTRY.register(LsFurnitureModBlocks.JUNGLE_NETHER_BRICKS_SINK.getId().getPath(),
+			() -> new JungleNetherBricksSinkDisplayItem(LsFurnitureModBlocks.JUNGLE_NETHER_BRICKS_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> MANGROVE_QUARTZ_SINK = REGISTRY.register(LsFurnitureModBlocks.MANGROVE_QUARTZ_SINK.getId().getPath(),
+			() -> new MangroveQuartzSinkDisplayItem(LsFurnitureModBlocks.MANGROVE_QUARTZ_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> CRIMSON_NETHER_WART_SINK = REGISTRY.register(LsFurnitureModBlocks.CRIMSON_NETHER_WART_SINK.getId().getPath(),
+			() -> new CrimsonNetherWartSinkDisplayItem(LsFurnitureModBlocks.CRIMSON_NETHER_WART_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> WARPED_WARPED_WART_SINK = REGISTRY.register(LsFurnitureModBlocks.WARPED_WARPED_WART_SINK.getId().getPath(),
+			() -> new WarpedWarpedWartSinkDisplayItem(LsFurnitureModBlocks.WARPED_WARPED_WART_SINK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> ACACIA_DIORITE_COUNTER_CORNER = block(LsFurnitureModBlocks.ACACIA_DIORITE_COUNTER_CORNER, null);
+	public static final RegistryObject<Item> ACACIA_DIORITE_COUNTER = REGISTRY.register(LsFurnitureModBlocks.ACACIA_DIORITE_COUNTER.getId().getPath(),
+			() -> new AcaciaDioriteCounterDisplayItem(LsFurnitureModBlocks.ACACIA_DIORITE_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> ACACIA_COUNTER = REGISTRY.register(LsFurnitureModBlocks.ACACIA_COUNTER.getId().getPath(),
+			() -> new AcaciaCounterDisplayItem(LsFurnitureModBlocks.ACACIA_COUNTER.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> OAK_TABLE_STRAIGHT = block(LsFurnitureModBlocks.OAK_TABLE_STRAIGHT, null);
+	public static final RegistryObject<Item> OAK_TABLE_CORNER = block(LsFurnitureModBlocks.OAK_TABLE_CORNER, null);
+	public static final RegistryObject<Item> OAK_TABLE_JUNCTION = block(LsFurnitureModBlocks.OAK_TABLE_JUNCTION, null);
+	public static final RegistryObject<Item> OAK_TABLE_CROSS = block(LsFurnitureModBlocks.OAK_TABLE_CROSS, null);
+	public static final RegistryObject<Item> OAK_TABLE_END = block(LsFurnitureModBlocks.OAK_TABLE_END, null);
+	public static final RegistryObject<Item> OAK_TABLE_NONE = block(LsFurnitureModBlocks.OAK_TABLE_NONE, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> DARK_OAK_BARK = REGISTRY.register("dark_oak_bark", () -> new DarkOakBarkItem());
+	public static final RegistryObject<Item> DARK_OAK_DESK = REGISTRY.register(LsFurnitureModBlocks.DARK_OAK_DESK.getId().getPath(),
+			() -> new DarkOakDeskDisplayItem(LsFurnitureModBlocks.DARK_OAK_DESK.get(), new Item.Properties().tab(LsFurnitureModTabs.TAB_TAB)));
+	public static final RegistryObject<Item> FURNITURE_CRAFTER = block(LsFurnitureModBlocks.FURNITURE_CRAFTER, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_DOOR_1 = doubleBlock(LsFurnitureModBlocks.OAK_DOOR_1, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_GLASS_DOOR_1 = doubleBlock(LsFurnitureModBlocks.OAK_GLASS_DOOR_1, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> PLATE = block(LsFurnitureModBlocks.PLATE, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OAK_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.OAK_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> BOOK_SHELF_DOOR = doubleBlock(LsFurnitureModBlocks.BOOK_SHELF_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> DARK_OAK_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.DARK_OAK_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> SPRUCE_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.SPRUCE_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> ACACIA_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.ACACIA_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> BIRCH_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.BIRCH_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> JUNGLE_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.JUNGLE_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> MANGROVE_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.MANGROVE_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> CRIMSON_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.CRIMSON_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> WARPED_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.WARPED_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	}
+
+	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block, CreativeModeTab tab) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties().tab(tab)));
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Shadow / Handle": "shadow_door",
+        "Bricks": "bricks",
+        "Stripped": "stripped_oak"
+      },
+      "name": "default"
+    }
+  }
+}

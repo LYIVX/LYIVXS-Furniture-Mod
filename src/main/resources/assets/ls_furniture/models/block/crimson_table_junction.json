@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_junction",
   "textures": {
-    "all": "ls_furniture:blocks/crimson_planks",
-    "particle": "ls_furniture:blocks/crimson_planks",
-    "1": "ls_furniture:blocks/stripped_crimson"
+    "all": "ls_furniture:blocks/table_junction_crimson",
+    "particle": "ls_furniture:blocks/table_junction_crimson",
+    "1": "ls_furniture:blocks/table_junction_crimson"
   },
   "render_type": "cutout"
 }

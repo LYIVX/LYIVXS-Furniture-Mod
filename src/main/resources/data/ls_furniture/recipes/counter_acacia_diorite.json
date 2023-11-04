@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:acacia_planks"
+    },
+    {
+      "item": "minecraft:polished_diorite"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:acacia_diorite_counter"
+  }
+}

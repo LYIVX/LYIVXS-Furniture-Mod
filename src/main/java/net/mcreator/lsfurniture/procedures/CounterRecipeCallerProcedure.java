@@ -15,5 +15,14 @@ public class CounterRecipeCallerProcedure {
 		MangroveCounterRecipeProcedure.execute(entity);
 		CrimsonCounterRecipeProcedure.execute(entity);
 		WarpedCounterRecipeProcedure.execute(entity);
+		OakBricksCounterRecipeProcedure.execute(entity);
+		DarkOakDeepslateCounterRecipeProcedure.execute(entity);
+		SpruceAndesiteCounterRecipeProcedure.execute(entity);
+		AacaciaDioriteCounterRecipeProcedure.execute(entity);
+		BirchGraniteCounterRecipeProcedure.execute(entity);
+		JungleNetherBricksCounterRecipeProcedure.execute(entity);
+		MangroveQuartzCounterRecipeProcedure.execute(entity);
+		CrimsonNetherWartCounterRecipeProcedure.execute(entity);
+		WarpedWarpedWartCounterRecipeProcedure.execute(entity);
 	}
 }

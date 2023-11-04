@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "warped_planks",
+    "texture": "planks_warped",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -60,24 +60,6 @@
         "subtract": false
       },
       {
-        "mx": 11.0,
-        "my": 8.0,
-        "mz": 11.0,
-        "Mx": 13.0,
-        "My": 20.0,
-        "Mz": 13.0,
-        "subtract": false
-      },
-      {
-        "mx": 3.0,
-        "my": 8.0,
-        "mz": 11.0,
-        "Mx": 5.0,
-        "My": 20.0,
-        "Mz": 13.0,
-        "subtract": false
-      },
-      {
         "mx": 3.0,
         "my": 7.0,
         "mz": 3.0,
@@ -87,48 +69,12 @@
         "subtract": false
       },
       {
-        "mx": 5.0,
-        "my": 14.5,
-        "mz": 11.5,
-        "Mx": 11.0,
-        "My": 15.5,
-        "Mz": 12.5,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 16.5,
-        "mz": 11.5,
-        "Mx": 11.0,
-        "My": 17.5,
-        "Mz": 12.5,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 18.5,
-        "mz": 11.5,
-        "Mx": 11.0,
-        "My": 19.5,
-        "Mz": 12.5,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 12.5,
-        "mz": 11.5,
-        "Mx": 11.0,
-        "My": 13.5,
-        "Mz": 12.5,
-        "subtract": false
-      },
-      {
-        "mx": 5.0,
-        "my": 10.5,
-        "mz": 11.5,
-        "Mx": 11.0,
-        "My": 11.5,
-        "Mz": 12.5,
+        "mx": 11.0,
+        "my": 8.0,
+        "mz": 11.0,
+        "Mx": 13.0,
+        "My": 20.0,
+        "Mz": 13.0,
         "subtract": false
       },
       {
@@ -136,8 +82,17 @@
         "my": 8.5,
         "mz": 11.5,
         "Mx": 11.0,
-        "My": 9.5,
+        "My": 19.5,
         "Mz": 12.5,
+        "subtract": false
+      },
+      {
+        "mx": 3.0,
+        "my": 8.0,
+        "mz": 11.0,
+        "Mx": 5.0,
+        "My": 20.0,
+        "Mz": 13.0,
         "subtract": false
       }
     ],

@@ -2,82 +2,82 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oak_log",
+        "0": "log_oak",
         "1": "stripped_oak",
-        "2": "oak_planks",
-        "3": "black_wool"
+        "2": "log_oak",
+        "3": "wool_black"
       },
       "name": "default"
     },
     "dark_oak": {
       "map": {
-        "0": "dark_oak_log",
+        "0": "log_dark_oak",
         "1": "stripped_dark_oak",
-        "2": "dark_oak_planks",
-        "3": "black_wool"
+        "2": "log_dark_oak",
+        "3": "wool_black"
       },
       "name": "dark_oak"
     },
     "spruce": {
       "map": {
-        "0": "spruce_log",
+        "0": "log_spruce",
         "1": "stripped_spruce",
-        "2": "spruce_planks",
-        "3": "black_wool"
+        "2": "log_spruce",
+        "3": "wool_black"
       },
       "name": "spruce"
     },
     "birch": {
       "map": {
-        "0": "birch_log",
-        "1": "strippedbirch",
-        "2": "birch_planks",
-        "3": "black_wool"
+        "0": "log_birch",
+        "1": "stripped_birch",
+        "2": "log_birch",
+        "3": "wool_black"
       },
       "name": "birch"
     },
     "acacia": {
       "map": {
-        "0": "acacia_log",
+        "0": "log_acacia",
         "1": "stripped_acacia",
-        "2": "acacia_planks",
-        "3": "black_wool"
+        "2": "log_acacia",
+        "3": "wool_black"
       },
       "name": "acacia"
     },
     "jungle": {
       "map": {
-        "0": "jungle_log",
+        "0": "log_jungle",
         "1": "stripped_jungle",
-        "2": "jungle_planks",
-        "3": "black_wool"
+        "2": "log_jungle",
+        "3": "wool_black"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "0": "mangrove_log",
+        "0": "log_mangrove",
         "1": "stripped_mangrove",
-        "2": "mangrove_planks",
-        "3": "black_wool"
+        "2": "log_mangrove",
+        "3": "wool_black"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "0": "crimson_stem_animation",
+        "0": "stem_crimson_animation",
         "1": "stripped_crimson",
-        "2": "crimson_planks",
-        "3": "black_wool"
+        "2": "stem_crimson_animation",
+        "3": "wool_black"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "0": "warped_stem_animation",
+        "0": "stem_warped_animation",
         "1": "stripped_warped",
-        "2": "warped_planks",
-        "3": "black_wool"
+        "2": "stem_warped_animation",
+        "3": "wool_black"
       },
       "name": "warped"
     }

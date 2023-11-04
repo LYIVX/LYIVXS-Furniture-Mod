@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DarkOakLogBundle"
+      },
+      {
+        "value": "CUSTOM:DarkOakLogReinforced"
+      },
+      {
+        "value": "Blocks.LOG2#1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_logs",
+    "namespace": "mod"
+  }
+}

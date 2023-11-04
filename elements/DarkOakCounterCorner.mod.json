@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "dark_oak_planks",
+    "texture": "planks_dark_oak",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -69,7 +69,7 @@
         "subtract": false
       }
     ],
-    "name": "Dark Oak Counter",
+    "name": "Counter (Dark Oak)",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,

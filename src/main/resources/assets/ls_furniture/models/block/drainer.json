@@ -5,5 +5,5 @@
     "particle": "ls_furniture:blocks/anvil",
     "3": "ls_furniture:blocks/anvil"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

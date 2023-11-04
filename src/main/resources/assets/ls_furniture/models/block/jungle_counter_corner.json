@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/counter_corner",
   "textures": {
-    "all": "ls_furniture:blocks/jungle_planks",
-    "particle": "ls_furniture:blocks/jungle_planks",
-    "0": "ls_furniture:blocks/jungle_planks",
-    "1": "ls_furniture:blocks/stripped_jungle"
+    "all": "ls_furniture:blocks/planks_jungle",
+    "particle": "ls_furniture:blocks/planks_jungle",
+    "Counter Top": "ls_furniture:blocks/stripped_jungle",
+    "Stripped": "ls_furniture:blocks/stripped_jungle"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

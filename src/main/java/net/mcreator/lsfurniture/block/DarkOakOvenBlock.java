@@ -154,7 +154,7 @@ public class DarkOakOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Dark Oak Oven");
+					return Component.literal("Oven (Dark Oak)");
 				}
 
 				@Override

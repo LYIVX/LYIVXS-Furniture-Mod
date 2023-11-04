@@ -1,11 +1,15 @@
 {
-  "parent": "block/grass_block",
+  "parent": "ls_furniture:custom/block",
   "textures": {
-    "bottom": "ls_furniture:blocks/spruce_leaves",
-    "top": "ls_furniture:blocks/spruce_leaves_frosted_top",
-    "side": "ls_furniture:blocks/spruce_leaves_frosted_side",
-    "overlay": "ls_furniture:blocks/spruce_leaves_frosted_side",
-    "particle": "ls_furniture:blocks/spruce_leaves"
+    "all": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "particle": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "east": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "south": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "north": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "west": "ls_furniture:blocks/leaves_spruce_frosted_side",
+    "up": "ls_furniture:blocks/leaves_spruce_frosted_top",
+    "tint": "ls_furniture:blocks/leaves_spruce",
+    "down": "ls_furniture:blocks/invisible"
   },
   "render_type": "cutout_mipped"
 }

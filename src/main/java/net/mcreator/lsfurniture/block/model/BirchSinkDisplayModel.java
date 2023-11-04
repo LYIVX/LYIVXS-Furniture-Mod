@@ -19,6 +19,6 @@ public class BirchSinkDisplayModel extends AnimatedGeoModel<BirchSinkDisplayItem
 
 	@Override
 	public ResourceLocation getTextureResource(BirchSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_birch.png");
 	}
 }

@@ -736,53 +736,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_button",
-          "image": "button.png",
-          "hoveredImage": "button_highlighted.png",
-          "onClick": {
-            "name": "GiveGuideBook"
-          },
-          "x": 126,
-          "y": 83
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_book_brown",
-          "image": "book_brown.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "GiveGuideBook"
-          },
-          "x": 128,
-          "y": 85
-        }
-      },
-      {
-        "type": "checkbox",
-        "data": {
-          "name": "Connected",
-          "text": "",
-          "isCheckedProcedure": {
-            "name": "Checked"
-          },
-          "x": 96,
-          "y": 37
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab_horizontal_left_plain_deselect.png",
-          "use1Xscale": false,
-          "x": 88,
-          "y": 31
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_connected_textures",
@@ -791,8 +744,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 94,
-          "y": 35
+          "x": 124,
+          "y": 81
         }
       },
       {
@@ -917,10 +870,54 @@
           "x": 280,
           "y": 12
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_left1",
+          "image": "arrow_left.png",
+          "hoveredImage": "arrow_left_highlighted.png",
+          "x": 161,
+          "y": 102
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_right1",
+          "image": "arrow_right.png",
+          "hoveredImage": "arrow_right_highlighted.png",
+          "x": 301,
+          "y": 103
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_right_horizontal_deselect.png",
+          "use1Xscale": false,
+          "x": 301,
+          "y": 99
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "Connected",
+          "text": "",
+          "isCheckedProcedure": {
+            "name": "Checked"
+          },
+          "x": 126,
+          "y": 83
+        }
       }
     ],
     "onTick": {
       "name": "MasonryPro"
+    },
+    "onClosed": {
+      "name": "MasonryGUIThisGUIIsClosed"
     },
     "gridSettings": {
       "sx": 18,

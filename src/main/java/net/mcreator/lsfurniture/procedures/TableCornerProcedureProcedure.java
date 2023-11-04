@@ -19,8 +19,8 @@ public class TableCornerProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		String groupTag = "";
 		BlockState model = Blocks.AIR.defaultBlockState();
-		model = LsFurnitureModBlocks.TABLE_CORNER.get().defaultBlockState();
-		groupTag = "forge" + ":" + "custom_table";
+		model = LsFurnitureModBlocks.OAK_TABLE_CORNER.get().defaultBlockState();
+		groupTag = "forge" + ":" + "oak_table";
 		if ((world.getBlockState(new BlockPos(x, y, z - 1)).isFaceSturdy(world, new BlockPos(x, y, z - 1), Direction.SOUTH)
 				|| (world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
 				&& (world.getBlockState(new BlockPos(x + 1, y, z)).isFaceSturdy(world, new BlockPos(x + 1, y, z), Direction.WEST)

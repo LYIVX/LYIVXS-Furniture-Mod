@@ -15,5 +15,14 @@ public class SinkRecipeCallerProcedure {
 		MangroveSinkRecipeProcedure.execute(entity);
 		CrimsonSinkRecipeProcedure.execute(entity);
 		WarpedSinkRecipeProcedure.execute(entity);
+		OakBricksSinkRecipeProcedure.execute(entity);
+		DarkOakDeepslateSinkRecipeProcedure.execute(entity);
+		SpruceAndesiteSinkRecipeProcedure.execute(entity);
+		AcaciaDioriteSinkRecipeProcedure.execute(entity);
+		BirchGraniteSinkRecipeProcedure.execute(entity);
+		JungleNetherBricksSinkRecipeProcedure.execute(entity);
+		MangroveQuartzSinkRecipeProcedure.execute(entity);
+		CrimsonNetherWartSinkRecipeProcedure.execute(entity);
+		WarpedWarpedWartSinkRecipeProcedure.execute(entity);
 	}
 }

@@ -19,6 +19,6 @@ public class SpruceDeskDisplayModel extends AnimatedGeoModel<SpruceDeskDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/spruce_desk.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/desk_spruce.png");
 	}
 }

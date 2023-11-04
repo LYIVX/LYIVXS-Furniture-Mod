@@ -43,7 +43,7 @@ public class OakLeavesRecipeProcedure {
 						return 0;
 					}
 				}.getAmount(4) >= 1
-				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.SHEAR.get()) {
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.CHISEL.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(Blocks.OAK_LEAVES);
 				_setstack.setCount(1);

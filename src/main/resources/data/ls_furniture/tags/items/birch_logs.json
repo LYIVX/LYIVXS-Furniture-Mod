@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:birch_log_reinforced",
+    "ls_furniture:birch_log_bundle",
+    "minecraft:birch_log"
+  ]
+}

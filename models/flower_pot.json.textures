@@ -2,70 +2,70 @@
   "mappings": {
     "default": {
       "map": {
-        "log": "oak_log",
+        "log": "log_oak",
         "flowerpot": "flower_pot",
-        "leave": "oak_leaves",
+        "leave": "leaves_oak",
         "dirt": "dirt"
       },
       "name": "default"
     },
     "dark_oak": {
       "map": {
-        "log": "dark_oak_log",
+        "log": "log_dark_oak",
         "flowerpot": "flower_pot",
-        "leave": "dark_oak_leaves",
+        "leave": "leaves_dark_oak",
         "dirt": "dirt"
       },
       "name": "dark_oak"
     },
     "spruce": {
       "map": {
-        "log": "spruce_log",
+        "log": "log_spruce",
         "flowerpot": "flower_pot",
-        "leave": "spruce_leaves",
+        "leave": "leaves_spruce",
         "dirt": "dirt"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "log": "acacia_log",
+        "log": "log_acacia",
         "flowerpot": "flower_pot",
-        "leave": "acacia_leaves",
+        "leave": "leaves_acacia",
         "dirt": "dirt"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "log": "birch_log",
+        "log": "log_birch",
         "flowerpot": "flower_pot",
-        "leave": "birch_leaves",
+        "leave": "leaves_birch",
         "dirt": "dirt"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "log": "jungle_log",
+        "log": "log_jungle",
         "flowerpot": "flower_pot",
-        "leave": "jungle_leaves",
+        "leave": "leaves_jungle",
         "dirt": "dirt"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "log": "mangrove_log",
+        "log": "log_mangrove",
         "flowerpot": "flower_pot",
-        "leave": "mangrove_leaves",
+        "leave": "leaves_mangrove",
         "dirt": "dirt"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "log": "crimson_stem_animation",
+        "log": "stem_crimson_animation",
         "flowerpot": "flower_pot",
         "leave": "nether_wart_block",
         "dirt": "dirt"
@@ -74,7 +74,7 @@
     },
     "warped": {
       "map": {
-        "log": "warped_stem_animation",
+        "log": "stem_warped_animation",
         "flowerpot": "flower_pot",
         "leave": "warped_wart_block",
         "dirt": "dirt"

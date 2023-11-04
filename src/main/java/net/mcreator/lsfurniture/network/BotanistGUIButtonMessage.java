@@ -15,7 +15,6 @@ import net.mcreator.lsfurniture.world.inventory.BotanistGUIMenu;
 import net.mcreator.lsfurniture.procedures.OpenGlassblowerGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenCarpentryGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenBotanistGUIProcedure;
-import net.mcreator.lsfurniture.procedures.GiveGuideBookProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -71,29 +70,21 @@ public class BotanistGUIButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			GiveGuideBookProcedure.execute(world, x, y, z);
+			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			GiveGuideBookProcedure.execute(world, x, y, z);
+			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
+			OpenBotanistGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
-
-			OpenBotanistGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 6) {
-
 			OpenGlassblowerGUIProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 7) {
+		if (buttonID == 5) {
 
 			OpenBotanistGUIProcedure.execute(world, x, y, z, entity);
 		}

@@ -1,0 +1,45 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakDoorAcacia"
+      },
+      {
+        "value": "CUSTOM:OakDoorBirch"
+      },
+      {
+        "value": "CUSTOM:OakDoorDarkOak"
+      },
+      {
+        "value": "CUSTOM:OakDoorJungle"
+      },
+      {
+        "value": "CUSTOM:OakDoorMangrove"
+      },
+      {
+        "value": "CUSTOM:OakDoorSpruce"
+      },
+      {
+        "value": "CUSTOM:OakDoorWarped"
+      },
+      {
+        "value": "CUSTOM:OakDoorCrimson"
+      },
+      {
+        "value": "CUSTOM:OakDoor1"
+      },
+      {
+        "value": "Blocks.OAK_DOOR"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_door",
+    "namespace": "mod"
+  }
+}

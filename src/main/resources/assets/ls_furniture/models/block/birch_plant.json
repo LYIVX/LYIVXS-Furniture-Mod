@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/leaf_plant",
+  "textures": {
+    "all": "ls_furniture:blocks/plant_birch",
+    "particle": "ls_furniture:blocks/plant_birch",
+    "log": "ls_furniture:blocks/log_birch",
+    "leave": "ls_furniture:blocks/leaves_birch"
+  },
+  "render_type": "cutout"
+}

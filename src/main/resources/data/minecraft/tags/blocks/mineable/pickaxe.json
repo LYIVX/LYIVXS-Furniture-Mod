@@ -1,15 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_sink",
-    "ls_furniture:spruce_sink",
-    "ls_furniture:birch_sink",
-    "ls_furniture:jungle_sink",
-    "ls_furniture:acacia_sink",
-    "ls_furniture:dark_oak_sink",
-    "ls_furniture:mangrove_sink",
-    "ls_furniture:crimson_sink",
-    "ls_furniture:warped_sink",
     "ls_furniture:oak_oven",
     "ls_furniture:spruce_oven",
     "ls_furniture:birch_oven",
@@ -24,6 +15,15 @@
     "ls_furniture:kettle",
     "ls_furniture:toaster",
     "ls_furniture:fridge_freezer_block_1",
-    "ls_furniture:fridge_freezer_block_2"
+    "ls_furniture:fridge_freezer_block_2",
+    "ls_furniture:deepslate_oven",
+    "ls_furniture:andesite_oven",
+    "ls_furniture:diorite_oven",
+    "ls_furniture:granite_oven",
+    "ls_furniture:nether_bricks_oven",
+    "ls_furniture:quartz_oven",
+    "ls_furniture:nether_wart_oven",
+    "ls_furniture:warped_wart_oven",
+    "ls_furniture:bricks_oven"
   ]
 }

@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_end",
   "textures": {
-    "all": "ls_furniture:blocks/spruce_planks",
-    "particle": "ls_furniture:blocks/spruce_planks",
-    "1": "ls_furniture:blocks/spruce_log",
-    "2": "ls_furniture:blocks/stripped_spruce"
+    "all": "ls_furniture:blocks/table_end_spruce",
+    "particle": "ls_furniture:blocks/table_end_spruce",
+    "1": "ls_furniture:blocks/log_spruce",
+    "2": "ls_furniture:blocks/table_end_spruce"
   },
   "render_type": "cutout"
 }

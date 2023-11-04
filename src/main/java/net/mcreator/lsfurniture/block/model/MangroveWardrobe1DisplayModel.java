@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.MangroveWardrobe1DisplayItem;
 public class MangroveWardrobe1DisplayModel extends AnimatedGeoModel<MangroveWardrobe1DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(MangroveWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobe_buttom.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_bottom.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(MangroveWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobe_buttom.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_bottom.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveWardrobe1DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_mangrove.png");
 	}
 }

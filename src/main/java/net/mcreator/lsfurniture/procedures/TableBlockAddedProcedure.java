@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 public class TableBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		String groupTag = "";
-		groupTag = "forge" + ":" + "custom_table";
+		groupTag = "forge" + ":" + "oak_table";
 		if ((world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
 			TableMainProcedureProcedure.execute(world, x, y, (z - 1));
 		}

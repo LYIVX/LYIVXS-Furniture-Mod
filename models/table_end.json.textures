@@ -2,239 +2,15 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "oak_log",
-        "2": "stripped_oak"
+        "1": "log_oak",
+        "2": "table_end_oak"
       },
       "name": "default"
     },
-    "oak_gold": {
-      "map": {
-        "1": "oak_log",
-        "2": "oakgoldconnectedtexture"
-      },
-      "name": "oak_gold"
-    },
-    "oak_iron": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_iron_end"
-      },
-      "name": "oak_iron"
-    },
-    "oak_netherite": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_netherite_end"
-      },
-      "name": "oak_netherite"
-    },
-    "dark_oak_iron": {
-      "map": {
-        "1": "dark_oak_log",
-        "2": "dark_oak_iron_end"
-      },
-      "name": "dark_oak_iron"
-    },
-    "dark_oak_copper": {
-      "map": {
-        "1": "dark_oak_log",
-        "2": "dark_oak_copper_end"
-      },
-      "name": "dark_oak_copper"
-    },
-    "oak_copper": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_copper_end"
-      },
-      "name": "oak_copper"
-    },
-    "dark_oak_gold": {
-      "map": {
-        "1": "dark_oak_log",
-        "2": "dark_oak_gold_end"
-      },
-      "name": "dark_oak_gold"
-    },
-    "dark_oak_netherite": {
-      "map": {
-        "1": "dark_oak_log",
-        "2": "dark_oak_netherite_end"
-      },
-      "name": "dark_oak_netherite"
-    },
-    "spruce_iron": {
-      "map": {
-        "1": "spruce_log",
-        "2": "spruce_iron_end"
-      },
-      "name": "spruce_iron"
-    },
-    "spruce_copper": {
-      "map": {
-        "1": "spruce_log",
-        "2": "spruce_copper_end"
-      },
-      "name": "spruce_copper"
-    },
-    "spruce_gold": {
-      "map": {
-        "1": "spruce_log",
-        "2": "spruce_gold_end"
-      },
-      "name": "spruce_gold"
-    },
-    "spruce_netherite": {
-      "map": {
-        "1": "spruce_log",
-        "2": "spruce_netherite_end"
-      },
-      "name": "spruce_netherite"
-    },
-    "birch_iron": {
-      "map": {
-        "1": "birch_log",
-        "2": "birch_iron_end"
-      },
-      "name": "birch_iron"
-    },
-    "birch_copper": {
-      "map": {
-        "1": "birch_log",
-        "2": "birch_copper_end"
-      },
-      "name": "birch_copper"
-    },
-    "birch_gold": {
-      "map": {
-        "1": "birch_log",
-        "2": "birch_gold_end"
-      },
-      "name": "birch_gold"
-    },
-    "birch_netherite": {
-      "map": {
-        "1": "birch_log",
-        "2": "birch_netherite_end"
-      },
-      "name": "birch_netherite"
-    },
-    "acacia_iron": {
-      "map": {
-        "1": "acacia_log",
-        "2": "acacia_iron_end"
-      },
-      "name": "acacia_iron"
-    },
-    "acacia_copper": {
-      "map": {
-        "1": "acacia_log",
-        "2": "acacia_copper_end"
-      },
-      "name": "acacia_copper"
-    },
-    "acacia_gold": {
-      "map": {
-        "1": "acacia_log",
-        "2": "acacia_gold_end"
-      },
-      "name": "acacia_gold"
-    },
-    "acacia_netherite": {
-      "map": {
-        "1": "acacia_log",
-        "2": "acacia_netherite_end"
-      },
-      "name": "acacia_netherite"
-    },
-    "jungle_iron": {
-      "map": {
-        "1": "jungle_log",
-        "2": "jungle_iron_end"
-      },
-      "name": "jungle_iron"
-    },
-    "jungle_copper": {
-      "map": {
-        "1": "jungle_log",
-        "2": "jungle_copper_end"
-      },
-      "name": "jungle_copper"
-    },
-    "jungle_gold": {
-      "map": {
-        "1": "jungle_log",
-        "2": "jungle_gold_end"
-      },
-      "name": "jungle_gold"
-    },
-    "jungle_netherite": {
-      "map": {
-        "1": "jungle_log",
-        "2": "jungle_netherite_end"
-      },
-      "name": "jungle_netherite"
-    },
-    "mangrove_iron": {
-      "map": {
-        "1": "cherry_log",
-        "2": "mangrove_iron_end"
-      },
-      "name": "mangrove_iron"
-    },
-    "mangrove_copper": {
-      "map": {
-        "1": "cherry_log",
-        "2": "mangrove_copper_end"
-      },
-      "name": "mangrove_copper"
-    },
-    "mangrove_gold": {
-      "map": {
-        "1": "cherry_log",
-        "2": "mangrove_gold_end"
-      },
-      "name": "mangrove_gold"
-    },
-    "mangrove_netherite": {
-      "map": {
-        "1": "cherry_log",
-        "2": "mangrove_netherite_end"
-      },
-      "name": "mangrove_netherite"
-    },
-    "warped_iron": {
-      "map": {
-        "1": "warped_stem_animation",
-        "2": "warped_iron_end"
-      },
-      "name": "warped_iron"
-    },
-    "warped_copper": {
-      "map": {
-        "1": "warped_stem_animation",
-        "2": "warped_copper_end"
-      },
-      "name": "warped_copper"
-    },
-    "warped_gold": {
-      "map": {
-        "1": "warped_stem_animation",
-        "2": "warped_gold_end"
-      },
-      "name": "warped_gold"
-    },
-    "warped_netherite": {
-      "map": {
-        "1": "warped_stem_animation",
-        "2": "warped_netherite_end"
-      },
-      "name": "warped_netherite"
-    },
     "dark_oak": {
       "map": {
-        "1": "dark_oak_log",
-        "2": "stripped_dark_oak"
+        "1": "log_dark_oak",
+        "2": "table_end_dark_oak"
       },
       "name": "dark_oak"
     },
@@ -247,50 +23,50 @@
     },
     "spruce": {
       "map": {
-        "1": "spruce_log",
-        "2": "stripped_spruce"
+        "1": "log_spruce",
+        "2": "table_end_spruce"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "1": "acacia_log",
-        "2": "stripped_acacia"
+        "1": "log_acacia",
+        "2": "table_end_acacia"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "1": "birch_log",
-        "2": "strippedbirch"
+        "1": "log_birch",
+        "2": "table_end_birch"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "1": "jungle_log",
-        "2": "stripped_jungle"
+        "1": "log_jungle",
+        "2": "table_end_jungle"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "1": "mangrove_log",
-        "2": "stripped_mangrove"
+        "1": "log_mangrove",
+        "2": "table_end_mangrove"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "1": "crimson_stem_animation",
-        "2": "stripped_crimson"
+        "1": "stem_crimson_animation",
+        "2": "table_end_crimson"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "1": "warped_stem_animation",
-        "2": "stripped_warped"
+        "1": "stem_warped_animation",
+        "2": "table_end_warped"
       },
       "name": "warped"
     }

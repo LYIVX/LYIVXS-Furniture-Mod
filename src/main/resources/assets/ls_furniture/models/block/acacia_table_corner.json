@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner",
   "textures": {
-    "all": "ls_furniture:blocks/acacia_planks",
-    "particle": "ls_furniture:blocks/acacia_planks",
-    "1": "ls_furniture:blocks/acacia_log",
-    "2": "ls_furniture:blocks/stripped_acacia"
+    "all": "ls_furniture:blocks/table_corner_acacia",
+    "particle": "ls_furniture:blocks/table_corner_acacia",
+    "1": "ls_furniture:blocks/log_acacia",
+    "2": "ls_furniture:blocks/table_corner_acacia"
   },
   "render_type": "cutout"
 }

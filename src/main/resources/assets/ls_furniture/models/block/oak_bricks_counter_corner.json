@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/counter_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/bricks",
+    "particle": "ls_furniture:blocks/bricks",
+    "Counter Top": "ls_furniture:blocks/bricks",
+    "Stripped": "ls_furniture:blocks/stripped_oak"
+  },
+  "render_type": "solid"
+}

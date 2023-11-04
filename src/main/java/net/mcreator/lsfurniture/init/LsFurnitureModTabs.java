@@ -15,7 +15,7 @@ public class LsFurnitureModTabs {
 		TAB_TAB = new CreativeModeTab("tabtab") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.get());
+				return new ItemStack(LsFurnitureModBlocks.FURNITURE_CRAFTER.get());
 			}
 
 			@Override
@@ -26,7 +26,7 @@ public class LsFurnitureModTabs {
 		TAB_TAB_2 = new CreativeModeTab("tabtab_2") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(LsFurnitureModBlocks.FURNITURE_CRAFTER_BETA.get());
+				return new ItemStack(LsFurnitureModBlocks.FURNITURE_CRAFTER.get());
 			}
 
 			@Override

@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "acacia_drawer",
+    "texture": "drawer_acacia",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,12 +14,12 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_acacia",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -184,7 +184,7 @@
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
-    "normal": "bed_side_draw.geo.json",
+    "normal": "drawer.geo.json",
     "displaySettings": "bed_side_draw.item.json"
   }
 }

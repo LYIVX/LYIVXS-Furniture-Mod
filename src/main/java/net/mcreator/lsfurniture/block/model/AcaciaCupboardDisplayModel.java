@@ -19,6 +19,6 @@ public class AcaciaCupboardDisplayModel extends AnimatedGeoModel<AcaciaCupboardD
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaCupboardDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_acacia.png");
 	}
 }

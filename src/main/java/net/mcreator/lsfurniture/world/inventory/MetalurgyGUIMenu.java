@@ -23,6 +23,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.lsfurniture.procedures.MetalurgyProProcedure;
+import net.mcreator.lsfurniture.procedures.MetalurgyGUIThisGUIIsClosedProcedure;
 import net.mcreator.lsfurniture.network.MetalurgyGUISlotMessage;
 import net.mcreator.lsfurniture.init.LsFurnitureModMenus;
 import net.mcreator.lsfurniture.LsFurnitureMod;
@@ -622,6 +623,7 @@ public class MetalurgyGUIMenu extends AbstractContainerMenu implements Supplier<
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		MetalurgyGUIThisGUIIsClosedProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

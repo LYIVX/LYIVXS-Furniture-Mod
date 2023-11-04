@@ -19,6 +19,6 @@ public class AcaciaSinkDisplayModel extends AnimatedGeoModel<AcaciaSinkDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_acacia.png");
 	}
 }

@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/cupboard.item",
   "textures": {
-    "particle": "ls_furniture:blocks/spruce_cupboard"
+    "particle": "ls_furniture:blocks/planks_spruce"
   }
 }

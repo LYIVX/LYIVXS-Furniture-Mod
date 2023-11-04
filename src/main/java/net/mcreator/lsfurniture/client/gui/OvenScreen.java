@@ -17,13 +17,6 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class OvenScreen extends AbstractContainerScreen<OvenMenu> {
 	private final static HashMap<String, Object> guistate = OvenMenu.guistate;
 	private final Level world;
@@ -69,39 +62,14 @@ public class OvenScreen extends AbstractContainerScreen<OvenMenu> {
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_back.png"));
 		this.blit(ms, this.leftPos + 103, this.topPos + 26, 0, 0, 22, 15, 22, 15);
 
-		double Progress1 = 0;
-		Progress1 = (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "smeltingtime")) / 4.54;
-
-		int progressint1 = (int) Progress1;
-
-
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_back.png"));
 		this.blit(ms, this.leftPos + 103, this.topPos + 44, 0, 0, 22, 15, 22, 15);
 
-		double Progress2 = 0;
-		Progress2 = (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "smeltingtime2")) / 4.54;
-
-		int progressint2 = (int) Progress2;
+		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_fill.png"));
+		this.blit(ms, this.leftPos + 103, this.topPos + 26, 0, 0, 22, 15, 22, 15);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_fill.png"));
-		this.blit(ms, this.leftPos + 103, this.topPos + 26, 0, 0, progressint1, 15, progressint1, 15);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_fill.png"));
-		this.blit(ms, this.leftPos + 103, this.topPos + 44, 0, 0, progressint2, 15, progressint2, 15);
+		this.blit(ms, this.leftPos + 103, this.topPos + 44, 0, 0, 22, 15, 22, 15);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/progress_arrow_negative.png"));
 		this.blit(ms, this.leftPos + 103, this.topPos + 26, 0, 0, 22, 15, 22, 15);

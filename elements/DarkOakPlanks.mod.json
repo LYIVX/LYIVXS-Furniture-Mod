@@ -1,0 +1,36 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ConnectingDarkOakPlain"
+      },
+      {
+        "value": "CUSTOM:FramedDarkOakPlain"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakStripped"
+      },
+      {
+        "value": "CUSTOM:FramedDarkOakStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedDarkOakSmallBricks"
+      },
+      {
+        "value": "Blocks.PLANKS#5"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "dark_oak_planks",
+    "namespace": "mod"
+  }
+}

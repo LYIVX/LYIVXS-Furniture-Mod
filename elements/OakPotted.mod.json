@@ -16,8 +16,8 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Foliage",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -44,7 +44,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "Blocks.LEAVES#0"
+      "value": "CUSTOM:OakPlant"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -118,9 +118,6 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onDestroyedByPlayer": {
-      "name": "PottedBlockDestroyedByPlayer"
-    },
-    "onDestroyedByExplosion": {
       "name": "PottedBlockDestroyedByPlayer"
     },
     "spawnWorldTypes": [],

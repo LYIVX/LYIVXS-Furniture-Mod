@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "ls_furniture:connecting_birch_small_bricks",
+    "ls_furniture:framed_birch_stripped",
+    "ls_furniture:framed_birch_plain",
+    "ls_furniture:framed_birch_small_bricks",
+    "ls_furniture:connecting_birch_stripped",
+    "ls_furniture:connecting_birch_plain",
     "minecraft:birch_planks"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/wardrobepart.item",
   "textures": {
-    "particle": "ls_furniture:blocks/jungle_wardrobe"
+    "particle": "ls_furniture:blocks/planks_jungle"
   }
 }

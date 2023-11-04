@@ -3,8 +3,9 @@
   "textures": {
     "all": "ls_furniture:blocks/anvil_flat",
     "particle": "ls_furniture:blocks/anvil_flat",
-    "1": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/black_wool"
+    "Frame": "ls_furniture:blocks/anvil_flat",
+    "Screen": "ls_furniture:blocks/wool_black",
+    "RGB": "ls_furniture:blocks/invisible"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

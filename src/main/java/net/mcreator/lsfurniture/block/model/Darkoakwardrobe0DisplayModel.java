@@ -19,6 +19,6 @@ public class Darkoakwardrobe0DisplayModel extends AnimatedGeoModel<Darkoakwardro
 
 	@Override
 	public ResourceLocation getTextureResource(Darkoakwardrobe0DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/dark_oak_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_dark_oak.png");
 	}
 }

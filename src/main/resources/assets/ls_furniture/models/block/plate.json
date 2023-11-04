@@ -2,9 +2,9 @@
   "parent": "ls_furniture:custom/plate",
   "textures": {
     "all": "ls_furniture:blocks/white_concrete",
-    "particle": "ls_furniture:blocks/white_concrete",
-    "2": "ls_furniture:blocks/white_concrete",
-    "missing": "ls_furniture:blocks/invisible"
+    "particle": "ls_furniture:blocks/plate",
+    "Plate": "ls_furniture:blocks/plate",
+    "Food": "ls_furniture:blocks/invisible"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "cutout"
 }

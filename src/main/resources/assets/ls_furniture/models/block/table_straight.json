@@ -1,9 +1,0 @@
-{
-  "parent": "ls_furniture:custom/table_straight",
-  "textures": {
-    "all": "ls_furniture:blocks/oak_planks",
-    "particle": "ls_furniture:blocks/oak_planks",
-    "1": "ls_furniture:blocks/stripped_oak"
-  },
-  "render_type": "cutout"
-}

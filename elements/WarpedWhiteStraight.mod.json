@@ -2,25 +2,25 @@
   "_fv": 47,
   "_type": "block",
   "definition": {
-    "texture": "white_wool",
+    "texture": "wool_white",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "sofa_straight:warpedwhite",
+    "customModelName": "sofa_straight:warped_white",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_warped",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -148,7 +148,7 @@
       "name": "SeatAdded"
     },
     "onTickUpdate": {
-      "name": "CrimsonWhiteBlockAdded"
+      "name": "WarpedWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
       "name": "SeatBlockDestroyed"

@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oak_planks",
+        "0": "planks_oak",
         "3": "apple",
         "4": "apple_item",
         "missing": "invisible"
@@ -11,7 +11,7 @@
     },
     "oak": {
       "map": {
-        "0": "oak_planks",
+        "0": "planks_oak",
         "3": "invisible",
         "4": "invisible",
         "missing": "invisible"

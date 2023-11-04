@@ -2,13 +2,13 @@
   "parent": "ls_furniture:custom/cupboard_vent",
   "textures": {
     "all": "ls_furniture:blocks/glowstone",
-    "particle": "ls_furniture:blocks/glowstone",
+    "particle": "ls_furniture:blocks/planks_crimson",
     "1": "ls_furniture:blocks/anvil_flat",
     "2": "ls_furniture:blocks/glowstone",
-    "3": "ls_furniture:blocks/white_wool",
-    "4": "ls_furniture:blocks/lime_wool",
-    "5": "ls_furniture:blocks/red_wool",
-    "6": "ls_furniture:blocks/crimson_planks",
+    "3": "ls_furniture:blocks/wool_white",
+    "4": "ls_furniture:blocks/wool_lime",
+    "5": "ls_furniture:blocks/wool_red",
+    "6": "ls_furniture:blocks/stripped_crimson",
     "7": "ls_furniture:blocks/stripped_crimson"
   },
   "render_type": "solid"

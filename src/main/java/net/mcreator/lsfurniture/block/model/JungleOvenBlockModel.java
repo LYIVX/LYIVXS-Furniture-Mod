@@ -19,6 +19,6 @@ public class JungleOvenBlockModel extends AnimatedGeoModel<JungleOvenTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(JungleOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_jungle.png");
 	}
 }

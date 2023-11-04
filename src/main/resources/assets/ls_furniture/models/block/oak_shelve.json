@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/shelve",
   "textures": {
-    "all": "ls_furniture:blocks/oak_planks",
-    "particle": "ls_furniture:blocks/oak_planks",
+    "all": "ls_furniture:blocks/planks_oak",
+    "particle": "ls_furniture:blocks/planks_oak",
     "1": "ls_furniture:blocks/stripped_oak",
-    "2": "ls_furniture:blocks/oak_log"
+    "2": "ls_furniture:blocks/log_oak"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

@@ -140,7 +140,7 @@ public class JungleCounterTileEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Jungle Counter");
+		return Component.literal("Counter (Jungle)");
 	}
 
 	@Override

@@ -140,7 +140,7 @@ public class CrimsonCounterTileEntity extends RandomizableContainerBlockEntity i
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Crimson Counter");
+		return Component.literal("Counter (Crimson/Nether Wart)");
 	}
 
 	@Override

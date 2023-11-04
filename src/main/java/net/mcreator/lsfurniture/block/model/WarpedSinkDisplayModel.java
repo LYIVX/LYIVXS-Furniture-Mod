@@ -19,6 +19,6 @@ public class WarpedSinkDisplayModel extends AnimatedGeoModel<WarpedSinkDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_warped.png");
 	}
 }

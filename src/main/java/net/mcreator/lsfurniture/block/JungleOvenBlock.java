@@ -154,7 +154,7 @@ public class JungleOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Jungle Oven");
+					return Component.literal("Oven (Jungle)");
 				}
 
 				@Override

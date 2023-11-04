@@ -19,6 +19,6 @@ public class MangroveWardrobeBlockModel extends AnimatedGeoModel<MangroveWardrob
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveWardrobeTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_mangrove.png");
 	}
 }

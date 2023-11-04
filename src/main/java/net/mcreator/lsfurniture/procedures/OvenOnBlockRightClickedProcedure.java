@@ -21,7 +21,7 @@ public class OvenOnBlockRightClickedProcedure {
 				world.setBlock(_pos, _bs.setValue(_integerProp, 0), 3);
 		}
 		{
-			int _value = 2;
+			int _value = 1;
 			BlockPos _pos = new BlockPos(x, y, z);
 			BlockState _bs = world.getBlockState(_pos);
 			if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -34,7 +34,7 @@ public class OvenOnBlockRightClickedProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.open")), SoundSource.BLOCKS, (float) 0.4, 1, false);
 			}
 		}
-		LsFurnitureMod.queueServerWork(35, () -> {
+		LsFurnitureMod.queueServerWork(25, () -> {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.close")), SoundSource.BLOCKS, (float) 0.4, 1);

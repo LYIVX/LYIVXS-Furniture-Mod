@@ -19,6 +19,6 @@ public class BirchOvenDisplayModel extends AnimatedGeoModel<BirchOvenDisplayItem
 
 	@Override
 	public ResourceLocation getTextureResource(BirchOvenDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/birch_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_birch.png");
 	}
 }

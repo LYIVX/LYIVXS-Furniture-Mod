@@ -1,32 +1,36 @@
 {
   "mappings": {
-    "minecraft": {
-      "map": {
-        "1": "anvil_flat",
-        "3": "computer_minecraft_animation"
-      },
-      "name": "minecraft"
-    },
     "default": {
       "map": {
-        "1": "anvil_flat",
-        "3": "black_wool"
+        "Frame": "anvil_flat",
+        "Screen": "wool_black",
+        "RGB": "invisible"
       },
       "name": "default"
     },
-    "cod": {
-      "map": {
-        "1": "anvil_flat",
-        "3": "computer_cod"
-      },
-      "name": "cod"
-    },
     "statik": {
       "map": {
-        "1": "anvil_flat",
-        "3": "computer_static"
+        "Frame": "anvil_flat",
+        "Screen": "computer_static",
+        "RGB": "rgb_lights"
       },
       "name": "statik"
+    },
+    "minecraft": {
+      "map": {
+        "Frame": "anvil_flat",
+        "Screen": "computer_minecraft_animation",
+        "RGB": "rgb_lights"
+      },
+      "name": "minecraft"
+    },
+    "cod": {
+      "map": {
+        "Frame": "anvil_flat",
+        "Screen": "computer_cod",
+        "RGB": "rgb_lights"
+      },
+      "name": "cod"
     }
   }
 }

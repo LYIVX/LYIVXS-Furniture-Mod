@@ -1,0 +1,67 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "log": "log_oak",
+        "leave": "leaves_oak"
+      },
+      "name": "default"
+    },
+    "dark_oak": {
+      "map": {
+        "log": "log_dark_oak",
+        "leave": "leaves_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "spruce": {
+      "map": {
+        "log": "log_spruce",
+        "leave": "leaves_spruce"
+      },
+      "name": "spruce"
+    },
+    "acacia": {
+      "map": {
+        "log": "log_acacia",
+        "leave": "leaves_acacia"
+      },
+      "name": "acacia"
+    },
+    "birch": {
+      "map": {
+        "log": "log_birch",
+        "leave": "leaves_birch"
+      },
+      "name": "birch"
+    },
+    "jungle": {
+      "map": {
+        "log": "log_jungle",
+        "leave": "leaves_jungle"
+      },
+      "name": "jungle"
+    },
+    "mangrove": {
+      "map": {
+        "log": "log_mangrove",
+        "leave": "leaves_mangrove"
+      },
+      "name": "mangrove"
+    },
+    "crimson": {
+      "map": {
+        "log": "stem_warped_animation",
+        "leave": "nether_wart_block"
+      },
+      "name": "crimson"
+    },
+    "warped": {
+      "map": {
+        "log": "stem_warped_animation",
+        "leave": "warped_wart_block"
+      },
+      "name": "warped"
+    }
+  }
+}

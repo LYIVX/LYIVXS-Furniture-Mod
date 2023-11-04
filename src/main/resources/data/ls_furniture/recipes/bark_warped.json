@@ -1,0 +1,14 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_stem"
+    },
+    {
+      "tag": "forge:tools/axes"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:warped_bark"
+  }
+}

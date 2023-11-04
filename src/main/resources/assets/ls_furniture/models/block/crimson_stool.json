@@ -1,11 +1,11 @@
 {
   "parent": "ls_furniture:custom/stool",
   "textures": {
-    "all": "ls_furniture:blocks/crimson_planks",
-    "particle": "ls_furniture:blocks/crimson_planks",
-    "0": "ls_furniture:blocks/crimson_stem_animation",
-    "1": "ls_furniture:blocks/stripped_crimson",
-    "2": "ls_furniture:blocks/invisible"
+    "all": "ls_furniture:blocks/planks_crimson",
+    "particle": "ls_furniture:blocks/planks_crimson",
+    "Log": "ls_furniture:blocks/stem_crimson_animation",
+    "Stripped": "ls_furniture:blocks/stripped_crimson",
+    "Wool": "ls_furniture:blocks/invisible"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "cutout"
 }

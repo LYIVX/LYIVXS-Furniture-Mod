@@ -1,8 +1,8 @@
 {
   "parent": "block/template_glass_pane_side",
   "textures": {
-    "edge": "ls_furniture:blocks/oak_planks",
+    "edge": "ls_furniture:blocks/planks_oak",
     "pane": "ls_furniture:blocks/connecting_oak_glass"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

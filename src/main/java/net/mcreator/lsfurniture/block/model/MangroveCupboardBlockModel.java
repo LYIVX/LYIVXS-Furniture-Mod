@@ -19,6 +19,6 @@ public class MangroveCupboardBlockModel extends AnimatedGeoModel<MangroveCupboar
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveCupboardTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_mangrove.png");
 	}
 }

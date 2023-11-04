@@ -19,6 +19,6 @@ public class AcaciaWardrobeDisplayModel extends AnimatedGeoModel<AcaciaWardrobeD
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_acacia.png");
 	}
 }

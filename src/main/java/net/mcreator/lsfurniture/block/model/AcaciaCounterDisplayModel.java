@@ -19,6 +19,6 @@ public class AcaciaCounterDisplayModel extends AnimatedGeoModel<AcaciaCounterDis
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_acacia.png");
 	}
 }

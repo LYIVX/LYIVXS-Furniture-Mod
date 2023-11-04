@@ -19,6 +19,6 @@ public class WarpedCupboardDisplayModel extends AnimatedGeoModel<WarpedCupboardD
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedCupboardDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/warped_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_warped.png");
 	}
 }

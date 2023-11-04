@@ -140,7 +140,7 @@ public class WarpedOvenTileEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Warped Oven");
+		return Component.literal("Oven (Warped)");
 	}
 
 	@Override

@@ -19,6 +19,6 @@ public class MangroveOvenDisplayModel extends AnimatedGeoModel<MangroveOvenDispl
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveOvenDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_mangrove.png");
 	}
 }

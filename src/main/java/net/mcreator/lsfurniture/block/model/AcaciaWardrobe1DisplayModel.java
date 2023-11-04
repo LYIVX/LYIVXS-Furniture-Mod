@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.AcaciaWardrobe1DisplayItem;
 public class AcaciaWardrobe1DisplayModel extends AnimatedGeoModel<AcaciaWardrobe1DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(AcaciaWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobe_buttom.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_bottom.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(AcaciaWardrobe1DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobe_buttom.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_bottom.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaWardrobe1DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/acacia_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_acacia.png");
 	}
 }

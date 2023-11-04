@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/cupboard_corner",
   "textures": {
-    "all": "ls_furniture:blocks/warped_planks",
-    "particle": "ls_furniture:blocks/warped_planks",
-    "0": "ls_furniture:blocks/warped_planks",
+    "all": "ls_furniture:blocks/planks_warped",
+    "particle": "ls_furniture:blocks/planks_warped",
+    "0": "ls_furniture:blocks/stripped_warped",
     "1": "ls_furniture:blocks/stripped_warped"
   },
   "render_type": "cutout_mipped"

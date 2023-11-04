@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_straight",
   "textures": {
-    "all": "ls_furniture:blocks/warped_planks",
-    "particle": "ls_furniture:blocks/warped_planks",
-    "1": "ls_furniture:blocks/stripped_warped"
+    "all": "ls_furniture:blocks/table_straight_warped",
+    "particle": "ls_furniture:blocks/table_straight_warped",
+    "1": "ls_furniture:blocks/table_straight_warped"
   },
   "render_type": "cutout"
 }

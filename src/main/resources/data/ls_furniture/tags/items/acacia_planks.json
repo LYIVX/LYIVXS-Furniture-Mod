@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "minecraft:acacia_planks"
+    "minecraft:acacia_planks",
+    "ls_furniture:framed_acacia_small_bricks",
+    "ls_furniture:connecting_acacia_plain",
+    "ls_furniture:connecting_acacia_small_bricks",
+    "ls_furniture:framed_acacia_stripped",
+    "ls_furniture:framed_acacia_plain",
+    "ls_furniture:connecting_acacia_stripped"
   ]
 }

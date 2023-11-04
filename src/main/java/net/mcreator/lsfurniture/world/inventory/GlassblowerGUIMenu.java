@@ -23,6 +23,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.lsfurniture.procedures.GlassblowerProProcedure;
+import net.mcreator.lsfurniture.procedures.GlassblowerGUIThisGUIIsClosedProcedure;
 import net.mcreator.lsfurniture.network.GlassblowerGUISlotMessage;
 import net.mcreator.lsfurniture.init.LsFurnitureModMenus;
 import net.mcreator.lsfurniture.LsFurnitureMod;
@@ -622,6 +623,7 @@ public class GlassblowerGUIMenu extends AbstractContainerMenu implements Supplie
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		GlassblowerGUIThisGUIIsClosedProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

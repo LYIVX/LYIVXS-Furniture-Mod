@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:JungleLogBundle"
+      },
+      {
+        "value": "Blocks.LOG#3"
+      },
+      {
+        "value": "CUSTOM:JungleLogReinforced"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "jungle_logs",
+    "namespace": "mod"
+  }
+}

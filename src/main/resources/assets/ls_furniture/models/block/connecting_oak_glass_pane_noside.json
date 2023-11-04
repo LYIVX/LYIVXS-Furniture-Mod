@@ -3,5 +3,5 @@
   "textures": {
     "pane": "ls_furniture:blocks/connecting_oak_glass"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

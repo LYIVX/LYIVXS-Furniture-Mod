@@ -10,7 +10,7 @@
     "default": {
       "map": {
         "1": "anvil_flat",
-        "3": "black_wool"
+        "3": "wool_black"
       },
       "name": "default"
     },

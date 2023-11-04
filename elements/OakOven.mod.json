@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "oak_oven",
+    "texture": "oven_oak",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,7 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "iron_block",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -50,7 +50,7 @@
         "subtract": false
       }
     ],
-    "name": "Oak Oven",
+    "name": "Oven (Oak)",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 6.0,

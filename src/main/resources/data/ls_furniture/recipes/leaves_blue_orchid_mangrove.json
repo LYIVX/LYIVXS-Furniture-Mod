@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "tag": "ls_furniture:mangrove_leaves"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:chisel"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:mangrove_leaves_blue_orchid"
+  }
+}

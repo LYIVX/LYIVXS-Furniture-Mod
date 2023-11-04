@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/desk.item",
   "textures": {
-    "particle": "ls_furniture:blocks/mangrove_desk"
+    "particle": "ls_furniture:blocks/planks_mangrove"
   }
 }

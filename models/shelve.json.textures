@@ -3,63 +3,63 @@
     "default": {
       "map": {
         "1": "stripped_oak",
-        "2": "oak_log"
+        "2": "log_oak"
       },
       "name": "default"
     },
     "darkoak": {
       "map": {
         "1": "stripped_dark_oak",
-        "2": "dark_oak_log"
+        "2": "log_dark_oak"
       },
       "name": "darkoak"
     },
     "spruce": {
       "map": {
         "1": "stripped_spruce",
-        "2": "spruce_log"
+        "2": "log_spruce"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
         "1": "stripped_acacia",
-        "2": "acacia_log"
+        "2": "log_acacia"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "1": "strippedbirch",
-        "2": "birch_log"
+        "1": "stripped_birch",
+        "2": "log_birch"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
         "1": "stripped_jungle",
-        "2": "jungle_log"
+        "2": "log_jungle"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
         "1": "stripped_mangrove",
-        "2": "mangrove_log"
+        "2": "log_mangrove"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
         "1": "stripped_crimson",
-        "2": "crimson_stem_animation"
+        "2": "stem_crimson_animation"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
         "1": "stripped_warped",
-        "2": "warped_stem_animation"
+        "2": "stem_warped_animation"
       },
       "name": "warped"
     }

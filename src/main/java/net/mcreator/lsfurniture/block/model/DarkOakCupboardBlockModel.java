@@ -19,6 +19,6 @@ public class DarkOakCupboardBlockModel extends AnimatedGeoModel<DarkOakCupboardT
 
 	@Override
 	public ResourceLocation getTextureResource(DarkOakCupboardTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/dark_oak_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_dark_oak.png");
 	}
 }

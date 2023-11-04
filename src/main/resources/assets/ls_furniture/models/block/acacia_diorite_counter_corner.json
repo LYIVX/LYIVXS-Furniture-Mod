@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:custom/counter_corner",
+  "textures": {
+    "all": "ls_furniture:blocks/planks_acacia",
+    "particle": "ls_furniture:blocks/planks_acacia",
+    "Counter Top": "ls_furniture:blocks/polished_diorite",
+    "Stripped": "ls_furniture:blocks/stripped_acacia"
+  },
+  "render_type": "solid"
+}

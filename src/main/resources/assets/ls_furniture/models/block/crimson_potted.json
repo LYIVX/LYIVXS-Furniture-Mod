@@ -3,7 +3,7 @@
   "textures": {
     "all": "ls_furniture:blocks/flower_pot",
     "particle": "ls_furniture:blocks/flower_pot",
-    "log": "ls_furniture:blocks/crimson_stem_animation",
+    "log": "ls_furniture:blocks/stem_crimson_animation",
     "flowerpot": "ls_furniture:blocks/flower_pot",
     "leave": "ls_furniture:blocks/nether_wart_block",
     "dirt": "ls_furniture:blocks/dirt"

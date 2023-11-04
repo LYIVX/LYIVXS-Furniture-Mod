@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.entity.JungleWardrobe1TileEntity;
 public class JungleWardrobe1BlockModel extends AnimatedGeoModel<JungleWardrobe1TileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(JungleWardrobe1TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobe_buttom.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_bottom.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(JungleWardrobe1TileEntity animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobe_buttom.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_bottom.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(JungleWardrobe1TileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_jungle.png");
 	}
 }

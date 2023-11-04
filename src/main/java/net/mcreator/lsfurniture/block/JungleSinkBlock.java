@@ -1,12 +1,9 @@
 
 package net.mcreator.lsfurniture.block;
 
-import net.minecraftforge.common.util.ForgeSoundType;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -16,6 +13,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Mirror;
@@ -26,18 +24,22 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.lsfurniture.procedures.SinkUpdateTickProcedure;
 import net.mcreator.lsfurniture.procedures.SinkOnBlockRightClickedProcedure;
 import net.mcreator.lsfurniture.init.LsFurnitureModBlockEntities;
+import net.mcreator.lsfurniture.block.entity.JungleSinkTileEntity;
 
 import javax.annotation.Nullable;
 
@@ -45,14 +47,11 @@ import java.util.List;
 import java.util.Collections;
 
 public class JungleSinkBlock extends BaseEntityBlock implements EntityBlock {
-	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 2);
+	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 3);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public JungleSinkBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD)
-				.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("block.wood.break")), () -> new SoundEvent(new ResourceLocation("block.metal.step")), () -> new SoundEvent(new ResourceLocation("block.wood.place")),
-						() -> new SoundEvent(new ResourceLocation("block.wood.hit")), () -> new SoundEvent(new ResourceLocation("block.wood.fall"))))
-				.strength(2f, 3f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -81,10 +80,10 @@ public class JungleSinkBlock extends BaseEntityBlock implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> Shapes.join(Shapes.or(box(0, 0, 0, 16, 16, 15), box(0, 14, 0, 16, 16, 16), box(0, 16, 0, 16, 18, 1), box(1, 16, 2, 15, 17, 14)), box(3, 13, 4, 13, 17, 12), BooleanOp.ONLY_FIRST);
-			case NORTH -> Shapes.join(Shapes.or(box(0, 0, 1, 16, 16, 16), box(0, 14, 0, 16, 16, 16), box(0, 16, 15, 16, 18, 16), box(1, 16, 2, 15, 17, 14)), box(3, 13, 4, 13, 17, 12), BooleanOp.ONLY_FIRST);
-			case EAST -> Shapes.join(Shapes.or(box(0, 0, 0, 15, 16, 16), box(0, 14, 0, 16, 16, 16), box(0, 16, 0, 1, 18, 16), box(2, 16, 1, 14, 17, 15)), box(4, 13, 3, 12, 17, 13), BooleanOp.ONLY_FIRST);
-			case WEST -> Shapes.join(Shapes.or(box(1, 0, 0, 16, 16, 16), box(0, 14, 0, 16, 16, 16), box(15, 16, 0, 16, 18, 16), box(2, 16, 1, 14, 17, 15)), box(4, 13, 3, 12, 17, 13), BooleanOp.ONLY_FIRST);
+			default -> Shapes.or(box(0, 0, 0, 16, 16, 15), box(0, 16, 0, 16, 18, 1), box(0, 14, 0, 16, 16, 16));
+			case NORTH -> Shapes.or(box(0, 0, 1, 16, 16, 16), box(0, 16, 15, 16, 18, 16), box(0, 14, 0, 16, 16, 16));
+			case EAST -> Shapes.or(box(0, 0, 0, 15, 16, 16), box(0, 16, 0, 1, 18, 16), box(0, 14, 0, 16, 16, 16));
+			case WEST -> Shapes.or(box(1, 0, 0, 16, 16, 16), box(15, 16, 0, 16, 18, 16), box(0, 14, 0, 16, 16, 16));
 		};
 	}
 
@@ -107,18 +106,28 @@ public class JungleSinkBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
-	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem() instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 0;
-		return false;
-	}
-
-	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 1);
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		SinkUpdateTickProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -134,5 +143,44 @@ public class JungleSinkBlock extends BaseEntityBlock implements EntityBlock {
 
 		SinkOnBlockRightClickedProcedure.execute(world, x, y, z, entity);
 		return InteractionResult.SUCCESS;
+	}
+
+	@Override
+	public MenuProvider getMenuProvider(BlockState state, Level worldIn, BlockPos pos) {
+		BlockEntity tileEntity = worldIn.getBlockEntity(pos);
+		return tileEntity instanceof MenuProvider menuProvider ? menuProvider : null;
+	}
+
+	@Override
+	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
+		super.triggerEvent(state, world, pos, eventID, eventParam);
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+	}
+
+	@Override
+	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
+		if (state.getBlock() != newState.getBlock()) {
+			BlockEntity blockEntity = world.getBlockEntity(pos);
+			if (blockEntity instanceof JungleSinkTileEntity be) {
+				Containers.dropContents(world, pos, be);
+				world.updateNeighbourForOutputSignal(pos, this);
+			}
+			super.onRemove(state, world, pos, newState, isMoving);
+		}
+	}
+
+	@Override
+	public boolean hasAnalogOutputSignal(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+		BlockEntity tileentity = world.getBlockEntity(pos);
+		if (tileentity instanceof JungleSinkTileEntity be)
+			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
+		else
+			return 0;
 	}
 }

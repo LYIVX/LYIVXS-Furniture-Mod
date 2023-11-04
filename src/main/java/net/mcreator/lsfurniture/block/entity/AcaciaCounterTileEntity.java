@@ -140,7 +140,7 @@ public class AcaciaCounterTileEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Acacia Counter");
+		return Component.literal("Counter (Acacia)");
 	}
 
 	@Override

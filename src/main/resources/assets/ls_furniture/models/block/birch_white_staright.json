@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/sofa_straight",
   "textures": {
-    "all": "ls_furniture:blocks/white_wool",
-    "particle": "ls_furniture:blocks/white_wool",
-    "0": "ls_furniture:blocks/birch_planks",
-    "1": "ls_furniture:blocks/white_wool"
+    "all": "ls_furniture:blocks/wool_white",
+    "particle": "ls_furniture:blocks/planks_birch",
+    "Planks": "ls_furniture:blocks/planks_birch",
+    "Wool": "ls_furniture:blocks/wool_white"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

@@ -4,7 +4,7 @@
     "all": "ls_furniture:blocks/anvil_flat",
     "particle": "ls_furniture:blocks/anvil_flat",
     "1": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/black_wool"
+    "3": "ls_furniture:blocks/wool_black"
   },
   "render_type": "cutout_mipped"
 }

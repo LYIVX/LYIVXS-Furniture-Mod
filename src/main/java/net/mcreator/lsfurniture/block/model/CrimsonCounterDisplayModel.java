@@ -19,6 +19,6 @@ public class CrimsonCounterDisplayModel extends AnimatedGeoModel<CrimsonCounterD
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_crimson.png");
 	}
 }

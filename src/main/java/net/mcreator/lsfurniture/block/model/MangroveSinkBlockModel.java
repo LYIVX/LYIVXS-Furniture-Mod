@@ -19,6 +19,6 @@ public class MangroveSinkBlockModel extends AnimatedGeoModel<MangroveSinkTileEnt
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveSinkTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_mangrove.png");
 	}
 }

@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_door"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:oak_glass_door_2"
+  }
+}

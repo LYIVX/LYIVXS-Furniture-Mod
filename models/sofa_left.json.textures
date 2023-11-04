@@ -2,276 +2,276 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "oak_planks",
-        "1": "white_wool"
+        "Planks": "planks_oak",
+        "Wool": "wool_white"
       },
       "name": "default"
     },
     "oak_black": {
       "map": {
-        "0": "oak_planks",
-        "1": "black_wool"
+        "Planks": "oak_planks",
+        "Wool": "black_wool"
       },
       "name": "oak_black"
     },
     "oak_cyan": {
       "map": {
-        "0": "oak_planks",
-        "1": "cyan_wool"
+        "Planks": "planks_oak",
+        "Wool": "cyan_wool"
       },
       "name": "oak_cyan"
     },
     "oak_gray": {
       "map": {
-        "0": "oak_planks",
-        "1": "gray_wool"
+        "Planks": "planks_oak",
+        "Wool": "gray_wool"
       },
       "name": "oak_gray"
     },
     "oak_blue": {
       "map": {
-        "0": "oak_planks",
-        "1": "blue_wool"
+        "Planks": "planks_oak",
+        "Wool": "blue_wool"
       },
       "name": "oak_blue"
     },
     "oak_brown": {
       "map": {
-        "0": "oak_planks",
-        "1": "brown_wool"
+        "Planks": "planks_oak",
+        "Wool": "brown_wool"
       },
       "name": "oak_brown"
     },
     "oak_green": {
       "map": {
-        "0": "oak_planks",
-        "1": "green_wool"
+        "Planks": "planks_oak",
+        "Wool": "green_wool"
       },
       "name": "oak_green"
     },
     "oak_light_blue": {
       "map": {
-        "0": "oak_planks",
-        "1": "light_blue_wool"
+        "Planks": "planks_oak",
+        "Wool": "light_blue_wool"
       },
       "name": "oak_light_blue"
     },
     "oak_light_gray": {
       "map": {
-        "0": "oak_planks",
-        "1": "light_gray_wool"
+        "Planks": "planks_oak",
+        "Wool": "light_gray_wool"
       },
       "name": "oak_light_gray"
     },
     "oak_lime": {
       "map": {
-        "0": "oak_planks",
-        "1": "lime_wool"
+        "Planks": "planks_oak",
+        "Wool": "lime_wool"
       },
       "name": "oak_lime"
     },
     "oak_magenta": {
       "map": {
-        "0": "oak_planks",
-        "1": "magenta_wool"
+        "Planks": "planks_oak",
+        "Wool": "magenta_wool"
       },
       "name": "oak_magenta"
     },
     "oak_orange": {
       "map": {
-        "0": "oak_planks",
-        "1": "orange_wool"
+        "Planks": "planks_oak",
+        "Wool": "orange_wool"
       },
       "name": "oak_orange"
     },
     "oak_pink": {
       "map": {
-        "0": "oak_planks",
-        "1": "pink_wool"
+        "Planks": "planks_oak",
+        "Wool": "pink_wool"
       },
       "name": "oak_pink"
     },
     "oak_purple": {
       "map": {
-        "0": "oak_planks",
-        "1": "purple_wool"
+        "Planks": "planks_oak",
+        "Wool": "purple_wool"
       },
       "name": "oak_purple"
     },
     "oak_red": {
       "map": {
-        "0": "oak_planks",
-        "1": "red_wool"
+        "Planks": "planks_oak",
+        "Wool": "red_wool"
       },
       "name": "oak_red"
     },
     "oak_yellow": {
       "map": {
-        "0": "oak_planks",
-        "1": "yellow_wool"
+        "Planks": "planks_oak",
+        "Wool": "yellow_wool"
       },
       "name": "oak_yellow"
     },
     "dark_oak_white": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "white_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "wool_white"
       },
       "name": "dark_oak_white"
     },
     "dark_oak_black": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "black_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "black_wool"
       },
       "name": "dark_oak_black"
     },
     "dark_oak_blue": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "blue_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "blue_wool"
       },
       "name": "dark_oak_blue"
     },
     "dark_oak_brown": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "brown_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "brown_wool"
       },
       "name": "dark_oak_brown"
     },
     "dark_oak_cyan": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "cyan_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "cyan_wool"
       },
       "name": "dark_oak_cyan"
     },
     "dark_oak_gray": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "gray_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "gray_wool"
       },
       "name": "dark_oak_gray"
     },
     "dark_oak_green": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "green_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "green_wool"
       },
       "name": "dark_oak_green"
     },
     "dark_oak_light_blue": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "light_blue_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "light_blue_wool"
       },
       "name": "dark_oak_light_blue"
     },
     "dark_oak_light_gray": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "light_gray_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "light_gray_wool"
       },
       "name": "dark_oak_light_gray"
     },
     "dark_oak_lime": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "lime_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "lime_wool"
       },
       "name": "dark_oak_lime"
     },
     "dark_oak_magenta": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "magenta_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "magenta_wool"
       },
       "name": "dark_oak_magenta"
     },
     "dark_oak_orange": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "orange_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "orange_wool"
       },
       "name": "dark_oak_orange"
     },
     "dark_oak_pink": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "pink_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "pink_wool"
       },
       "name": "dark_oak_pink"
     },
     "dark_oak_purple": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "purple_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "purple_wool"
       },
       "name": "dark_oak_purple"
     },
     "dark_oak_red": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "red_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "red_wool"
       },
       "name": "dark_oak_red"
     },
     "dark_oak_yellow": {
       "map": {
-        "0": "dark_oak_planks",
-        "1": "yellow_wool"
+        "Planks": "planks_dark_oak",
+        "Wool": "yellow_wool"
       },
       "name": "dark_oak_yellow"
     },
     "spruce_white": {
       "map": {
-        "0": "spruce_planks",
-        "1": "white_wool"
+        "Planks": "planks_spruce",
+        "Wool": "wool_white"
       },
       "name": "spruce_white"
     },
     "acacia_white": {
       "map": {
-        "0": "acacia_planks",
-        "1": "white_wool"
+        "Planks": "planks_acacia",
+        "Wool": "wool_white"
       },
       "name": "acacia_white"
     },
-    "birchwhite": {
+    "birch_white": {
       "map": {
-        "0": "birch_planks",
-        "1": "white_wool"
+        "Planks": "planks_birch",
+        "Wool": "wool_white"
       },
-      "name": "birchwhite"
+      "name": "birch_white"
     },
-    "junglewhite": {
+    "jungle_white": {
       "map": {
-        "0": "jungle_planks",
-        "1": "white_wool"
+        "Planks": "planks_jungle",
+        "Wool": "wool_white"
       },
-      "name": "junglewhite"
+      "name": "jungle_white"
     },
-    "mangrovewhite": {
+    "mangrove_white": {
       "map": {
-        "0": "mangrove_planks",
-        "1": "white_wool"
+        "Planks": "planks_mangrove",
+        "Wool": "wool_white"
       },
-      "name": "mangrovewhite"
+      "name": "mangrove_white"
     },
-    "crimsonwhite": {
+    "crimson_white": {
       "map": {
-        "0": "crimson_planks",
-        "1": "white_wool"
+        "Planks": "planks_crimson",
+        "Wool": "wool_white"
       },
-      "name": "crimsonwhite"
+      "name": "crimson_white"
     },
-    "warpedwhite": {
+    "warped_white": {
       "map": {
-        "0": "warped_planks",
-        "1": "white_wool"
+        "Planks": "planks_warped",
+        "Wool": "wool_white"
       },
-      "name": "warpedwhite"
+      "name": "warped_white"
     }
   }
 }

@@ -19,6 +19,6 @@ public class CrimsonCupboardBlockModel extends AnimatedGeoModel<CrimsonCupboardT
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonCupboardTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_cupboard.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/cupboard_crimson.png");
 	}
 }

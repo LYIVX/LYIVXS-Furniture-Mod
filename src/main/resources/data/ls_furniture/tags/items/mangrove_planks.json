@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "minecraft:mangrove_planks"
+    "ls_furniture:framed_mangrove_small_bricks",
+    "ls_furniture:framed_mangrove_plain",
+    "minecraft:mangrove_planks",
+    "ls_furniture:connecting_mangrove_stripped",
+    "ls_furniture:framed_mangrove_stripped",
+    "ls_furniture:connecting_mangrove_small_bricks",
+    "ls_furniture:connecting_mangrove_plain"
   ]
 }

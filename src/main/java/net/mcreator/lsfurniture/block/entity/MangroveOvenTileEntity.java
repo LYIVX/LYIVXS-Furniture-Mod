@@ -140,7 +140,7 @@ public class MangroveOvenTileEntity extends RandomizableContainerBlockEntity imp
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Mangrove Oven");
+		return Component.literal("Oven (Mangrove)");
 	}
 
 	@Override

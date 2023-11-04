@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ConnectingOakBigBricks"
+      },
+      {
+        "value": "CUSTOM:FramedOakBigBricks"
+      },
+      {
+        "value": "CUSTOM:OakBigBricks"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_big_bricks_tag",
+    "namespace": "mod"
+  }
+}

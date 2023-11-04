@@ -1,12 +1,5 @@
 {
-  "type": "fusion:connecting",
   "parent": "block/cube_all",
-   "connections": [
-   {
-     "type": "fusion:is_same_block"
-   }
-  ],
-  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:blocks/connecting_mangrove_glass",
     "particle": "ls_furniture:blocks/connecting_mangrove_glass"

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:framed_spruce_small_bricks",
+    "ls_furniture:framed_spruce_plain",
+    "ls_furniture:framed_spruce_stripped",
+    "ls_furniture:connecting_spruce_stripped",
+    "ls_furniture:connecting_spruce_small_bricks",
+    "minecraft:spruce_planks",
+    "ls_furniture:connecting_spruce_plain"
+  ]
+}

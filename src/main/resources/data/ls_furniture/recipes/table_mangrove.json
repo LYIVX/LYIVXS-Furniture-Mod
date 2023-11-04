@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:mangrove_planks"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:mangrove_bark"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:mangrove_table_none"
+  }
+}

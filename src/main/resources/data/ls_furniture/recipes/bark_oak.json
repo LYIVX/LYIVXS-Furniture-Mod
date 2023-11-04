@@ -1,0 +1,14 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_log"
+    },
+    {
+      "tag": "forge:tools/axes"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:oak_bark"
+  }
+}

@@ -4,9 +4,9 @@
       "map": {
         "1": "anvil_flat",
         "2": "anvil_flat",
-        "3": "black_wool",
-        "4": "green_wool",
-        "5": "red_wool"
+        "3": "wool_black",
+        "4": "wool_green",
+        "5": "wool_red"
       },
       "name": "default"
     },
@@ -14,9 +14,9 @@
       "map": {
         "1": "anvil_flat",
         "2": "glowstone",
-        "3": "white_wool",
-        "4": "lime_wool",
-        "5": "red_wool"
+        "3": "wool_white",
+        "4": "wool_lime",
+        "5": "wool_red"
       },
       "name": "on"
     }

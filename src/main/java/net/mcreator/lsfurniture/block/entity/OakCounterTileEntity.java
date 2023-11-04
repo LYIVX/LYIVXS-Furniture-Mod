@@ -140,7 +140,7 @@ public class OakCounterTileEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Oak Counter");
+		return Component.literal("Counter (Oak)");
 	}
 
 	@Override

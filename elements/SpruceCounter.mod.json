@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "animatedblock",
   "definition": {
-    "texture": "spruce_counter",
+    "texture": "counter_spruce",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,12 +14,12 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "planks_spruce",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT_MIPPED",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -50,7 +50,7 @@
         "subtract": false
       }
     ],
-    "name": "Spruce Counter",
+    "name": "Counter (Spruce)",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
@@ -176,6 +176,12 @@
       "name": "SpruceCounterBlockAdded"
     },
     "onTickUpdate": {
+      "name": "SpruceCounterBlockAdded"
+    },
+    "onDestroyedByPlayer": {
+      "name": "SpruceCounterBlockAdded"
+    },
+    "onDestroyedByExplosion": {
       "name": "SpruceCounterBlockAdded"
     },
     "spawnWorldTypes": [],

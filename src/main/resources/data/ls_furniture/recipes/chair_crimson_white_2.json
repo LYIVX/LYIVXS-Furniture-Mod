@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:carpentry",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_planks"
+    },
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "item": "ls_furniture:crimson_bark"
+    },
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "ls_furniture:saw"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:crimson_white_chair"
+  }
+}

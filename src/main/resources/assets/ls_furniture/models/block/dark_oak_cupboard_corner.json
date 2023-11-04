@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/cupboard_corner",
   "textures": {
-    "all": "ls_furniture:blocks/dark_oak_planks",
-    "particle": "ls_furniture:blocks/dark_oak_planks",
-    "0": "ls_furniture:blocks/dark_oak_planks",
+    "all": "ls_furniture:blocks/planks_dark_oak",
+    "particle": "ls_furniture:blocks/planks_dark_oak",
+    "0": "ls_furniture:blocks/stripped_dark_oak",
     "1": "ls_furniture:blocks/stripped_dark_oak"
   },
   "render_type": "cutout_mipped"

@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner",
   "textures": {
-    "all": "ls_furniture:blocks/mangrove_planks",
-    "particle": "ls_furniture:blocks/mangrove_planks",
-    "1": "ls_furniture:blocks/mangrove_log",
-    "2": "ls_furniture:blocks/stripped_mangrove"
+    "all": "ls_furniture:blocks/table_corner_mangrove",
+    "particle": "ls_furniture:blocks/table_corner_mangrove",
+    "1": "ls_furniture:blocks/log_mangrove",
+    "2": "ls_furniture:blocks/table_corner_mangrove"
   },
   "render_type": "cutout"
 }

@@ -19,6 +19,6 @@ public class JungleWardrobeDisplayModel extends AnimatedGeoModel<JungleWardrobeD
 
 	@Override
 	public ResourceLocation getTextureResource(JungleWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/jungle_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_jungle.png");
 	}
 }

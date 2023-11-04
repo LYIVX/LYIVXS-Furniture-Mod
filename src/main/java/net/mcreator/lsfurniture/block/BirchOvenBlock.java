@@ -154,7 +154,7 @@ public class BirchOvenBlock extends BaseEntityBlock implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Birch Oven");
+					return Component.literal("Oven (Birch)");
 				}
 
 				@Override

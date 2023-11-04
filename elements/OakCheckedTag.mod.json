@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ConnectingOakChecked"
+      },
+      {
+        "value": "CUSTOM:FramedOakChecked"
+      },
+      {
+        "value": "CUSTOM:OakChecked"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oak_checked_tag",
+    "namespace": "forge"
+  }
+}

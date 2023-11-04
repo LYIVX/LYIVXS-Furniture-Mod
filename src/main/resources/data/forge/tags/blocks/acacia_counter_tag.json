@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "ls_furniture:acacia_counter",
-    "ls_furniture:acacia_counter_corner",
-    "ls_furniture:acacia_sink",
-    "ls_furniture:acacia_oven"
+    "ls_furniture:acacia_counter_corner"
   ]
 }

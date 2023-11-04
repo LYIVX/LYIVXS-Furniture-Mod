@@ -1,12 +1,5 @@
 {
   "parent": "block/cube_all",
-  "type": "fusion:connecting",
-   "connections": [
-   {
-     "type": "fusion:is_same_block"
-   }
-  ],
-  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:blocks/connecting_stone_polished",
     "particle": "ls_furniture:blocks/connecting_stone_polished"

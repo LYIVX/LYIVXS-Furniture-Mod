@@ -19,6 +19,6 @@ public class CrimsonWardrobeDisplayModel extends AnimatedGeoModel<CrimsonWardrob
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_crimson.png");
 	}
 }

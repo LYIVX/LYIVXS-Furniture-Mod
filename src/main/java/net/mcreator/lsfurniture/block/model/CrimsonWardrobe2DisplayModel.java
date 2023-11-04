@@ -9,16 +9,16 @@ import net.mcreator.lsfurniture.block.display.CrimsonWardrobe2DisplayItem;
 public class CrimsonWardrobe2DisplayModel extends AnimatedGeoModel<CrimsonWardrobe2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonWardrobe2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/wardrobetop.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(CrimsonWardrobe2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/wardrobetop.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/wardrobe_top.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonWardrobe2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_wardrobe.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_crimson.png");
 	}
 }

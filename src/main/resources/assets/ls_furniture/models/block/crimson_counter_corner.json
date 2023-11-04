@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/counter_corner",
   "textures": {
-    "all": "ls_furniture:blocks/crimson_planks",
-    "particle": "ls_furniture:blocks/crimson_planks",
-    "0": "ls_furniture:blocks/crimson_planks",
-    "1": "ls_furniture:blocks/dtripped_crimson"
+    "all": "ls_furniture:blocks/planks_crimson",
+    "particle": "ls_furniture:blocks/planks_crimson",
+    "Counter Top": "ls_furniture:blocks/stripped_crimson",
+    "Stripped": "ls_furniture:blocks/stripped_crimson"
   },
-  "render_type": "cutout_mipped"
+  "render_type": "solid"
 }

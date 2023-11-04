@@ -1,8 +1,15 @@
 {
-  "parent": "block/cube_all",
+  "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/mangrove_leaves_blue_orchid",
-    "particle": "ls_furniture:blocks/mangrove_leaves_blue_orchid"
+    "all": "ls_furniture:blocks/blue_orchid",
+    "particle": "ls_furniture:blocks/blue_orchid",
+    "east": "ls_furniture:blocks/blue_orchid",
+    "south": "ls_furniture:blocks/blue_orchid",
+    "north": "ls_furniture:blocks/blue_orchid",
+    "west": "ls_furniture:blocks/blue_orchid",
+    "up": "ls_furniture:blocks/blue_orchid",
+    "tint": "ls_furniture:blocks/leaves_mangrove",
+    "down": "ls_furniture:blocks/blue_orchid"
   },
   "render_type": "cutout_mipped"
 }

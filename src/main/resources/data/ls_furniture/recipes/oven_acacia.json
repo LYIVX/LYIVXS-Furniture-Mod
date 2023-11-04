@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:metallurgy",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:acacia_planks"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:hammer"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:acacia_oven"
+  }
+}

@@ -140,7 +140,7 @@ public class AcaciaOvenTileEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Acacia Oven");
+		return Component.literal("Oven (Acacia)");
 	}
 
 	@Override

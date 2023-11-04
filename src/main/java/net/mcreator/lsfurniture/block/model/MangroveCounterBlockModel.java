@@ -19,6 +19,6 @@ public class MangroveCounterBlockModel extends AnimatedGeoModel<MangroveCounterT
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/mangrove_counter.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/counter_mangrove.png");
 	}
 }

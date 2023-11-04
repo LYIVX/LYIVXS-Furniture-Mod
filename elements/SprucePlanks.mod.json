@@ -5,16 +5,25 @@
     "type": "Items",
     "items": [
       {
+        "value": "CUSTOM:ConnectingSprucePlain"
+      },
+      {
+        "value": "CUSTOM:FramedSprucePlain"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceStripped"
+      },
+      {
+        "value": "CUSTOM:FramedSpruceStripped"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceSmallBricks"
+      },
+      {
+        "value": "CUSTOM:FramedSpruceSmallBricks"
+      },
+      {
         "value": "Blocks.PLANKS#1"
-      },
-      {
-        "value": "CUSTOM:SpruceBricks1"
-      },
-      {
-        "value": "CUSTOM:SpruceBricks1Non"
-      },
-      {
-        "value": "CUSTOM:SpruceHorizontalStrips"
       }
     ],
     "blocks": [],
@@ -22,6 +31,6 @@
     "entities": [],
     "biomes": [],
     "name": "spruce_planks",
-    "namespace": "forge"
+    "namespace": "mod"
   }
 }

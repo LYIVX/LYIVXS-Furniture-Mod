@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BirchLogBundle"
+      },
+      {
+        "value": "Blocks.LOG#2"
+      },
+      {
+        "value": "CUSTOM:BirchLogReinforced"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "birch_logs",
+    "namespace": "mod"
+  }
+}

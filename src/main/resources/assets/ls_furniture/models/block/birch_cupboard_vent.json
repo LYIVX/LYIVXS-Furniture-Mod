@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/cupboard_vent",
   "textures": {
-    "all": "ls_furniture:blocks/birch_planks",
-    "particle": "ls_furniture:blocks/birch_planks",
+    "all": "ls_furniture:blocks/planks_birch",
+    "particle": "ls_furniture:blocks/planks_birch",
     "1": "ls_furniture:blocks/anvil_flat",
     "2": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/black_wool",
-    "4": "ls_furniture:blocks/green_wool",
-    "5": "ls_furniture:blocks/red_wool",
-    "6": "ls_furniture:blocks/birch_planks",
-    "7": "ls_furniture:blocks/strippedbirch"
+    "3": "ls_furniture:blocks/wool_black",
+    "4": "ls_furniture:blocks/wool_green",
+    "5": "ls_furniture:blocks/wool_red",
+    "6": "ls_furniture:blocks/stripped_birch",
+    "7": "ls_furniture:blocks/stripped_birch"
   },
   "render_type": "solid"
 }

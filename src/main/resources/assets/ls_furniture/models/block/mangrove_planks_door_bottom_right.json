@@ -1,0 +1,8 @@
+{
+  "parent": "block/door_bottom_right",
+  "textures": {
+    "bottom": "ls_furniture:blocks/planks_mangrove",
+    "top": "ls_furniture:blocks/planks_mangrove"
+  },
+  "render_type": "solid"
+}

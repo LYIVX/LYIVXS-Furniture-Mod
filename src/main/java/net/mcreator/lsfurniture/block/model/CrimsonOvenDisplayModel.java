@@ -19,6 +19,6 @@ public class CrimsonOvenDisplayModel extends AnimatedGeoModel<CrimsonOvenDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonOvenDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_oven.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/oven_crimson.png");
 	}
 }

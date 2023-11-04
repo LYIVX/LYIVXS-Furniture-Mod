@@ -19,6 +19,6 @@ public class CrimsonSinkDisplayModel extends AnimatedGeoModel<CrimsonSinkDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/crimson_sink.png");
+		return new ResourceLocation("ls_furniture", "textures/blocks/sink_crimson.png");
 	}
 }

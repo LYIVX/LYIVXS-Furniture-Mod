@@ -28,9 +28,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.lsfurniture.procedures.WarpedWhiteBlockAddedProcedure;
 import net.mcreator.lsfurniture.procedures.SeatBlockDestroyedProcedure;
 import net.mcreator.lsfurniture.procedures.SeatAddedProcedure;
-import net.mcreator.lsfurniture.procedures.CrimsonWhiteBlockAddedProcedure;
 import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 
 import java.util.List;
@@ -113,7 +113,7 @@ public class WarpedWhiteStraightBlock extends Block {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		CrimsonWhiteBlockAddedProcedure.execute(world, x, y, z);
+		WarpedWhiteBlockAddedProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 1);
 	}
 

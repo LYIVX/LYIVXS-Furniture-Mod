@@ -3,5 +3,5 @@
   "textures": {
     "layer0": "ls_furniture:blocks/connecting_birch_glass"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

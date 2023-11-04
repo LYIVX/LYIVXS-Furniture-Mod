@@ -2,45 +2,10 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "oak_log",
-        "2": "stripped_oak"
+        "1": "log_oak",
+        "2": "table_corner_oak"
       },
       "name": "default"
-    },
-    "oak_gold": {
-      "map": {
-        "1": "oak_log",
-        "2": "oakgoldconnectedtexture"
-      },
-      "name": "oak_gold"
-    },
-    "dark_oak": {
-      "map": {
-        "1": "dark_oak_log",
-        "2": "stripped_dark_oak"
-      },
-      "name": "dark_oak"
-    },
-    "oak_iron": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_iron_corner"
-      },
-      "name": "oak_iron"
-    },
-    "oak_copper": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_copper_cross"
-      },
-      "name": "oak_copper"
-    },
-    "oak_netherite": {
-      "map": {
-        "1": "oak_log",
-        "2": "oak_netherite_corner"
-      },
-      "name": "oak_netherite"
     },
     "iron_glass": {
       "map": {
@@ -51,52 +16,59 @@
     },
     "spruce": {
       "map": {
-        "1": "spruce_log",
-        "2": "stripped_spruce"
+        "1": "log_spruce",
+        "2": "table_corner_spruce"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "1": "acacia_log",
-        "2": "stripped_acacia"
+        "1": "log_acacia",
+        "2": "table_corner_acacia"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "1": "birch_log",
-        "2": "strippedbirch"
+        "1": "log_birch",
+        "2": "table_corner_birch"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "1": "jungle_log",
-        "2": "stripped_jungle"
+        "1": "log_jungle",
+        "2": "table_corner_jungle"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "1": "mangrove_log",
-        "2": "stripped_mangrove"
+        "1": "log_mangrove",
+        "2": "table_corner_mangrove"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "1": "crimson_stem_animation",
-        "2": "stripped_crimson"
+        "1": "stem_crimson_animation",
+        "2": "table_corner_crimson"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "1": "warped_stem_animation",
-        "2": "stripped_warped"
+        "1": "stem_warped_animation",
+        "2": "table_corner_warped"
       },
       "name": "warped"
+    },
+    "dark_oak": {
+      "map": {
+        "1": "log_dark_oak",
+        "2": "table_corner_dark_oak"
+      },
+      "name": "dark_oak"
     }
   }
 }
