@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakShelve"
+      },
+      {
+        "value": "CUSTOM:DarkOakShelve"
+      },
+      {
+        "value": "CUSTOM:SpruceShelve"
+      },
+      {
+        "value": "CUSTOM:AcaciaShelve"
+      },
+      {
+        "value": "CUSTOM:BirchShelve"
+      },
+      {
+        "value": "CUSTOM:JungleShelve"
+      },
+      {
+        "value": "CUSTOM:MangroveShelve"
+      },
+      {
+        "value": "CUSTOM:CrimsonShelve"
+      },
+      {
+        "value": "CUSTOM:WarpedShelve"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "shelve_tag",
+    "namespace": "mod"
+  }
+}

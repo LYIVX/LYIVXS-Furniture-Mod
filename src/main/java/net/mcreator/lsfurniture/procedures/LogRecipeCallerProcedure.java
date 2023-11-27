@@ -13,5 +13,7 @@ public class LogRecipeCallerProcedure {
 		BirchLogsRecipeProcedure.execute(entity);
 		JungleLogsRecipeProcedure.execute(entity);
 		MangroveLogsRecipeProcedure.execute(entity);
+		CrimsonStemsRecipeProcedure.execute(entity);
+		WarpedStemsRecipeProcedure.execute(entity);
 	}
 }

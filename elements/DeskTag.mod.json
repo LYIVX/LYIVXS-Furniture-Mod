@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakDesk"
+      },
+      {
+        "value": "CUSTOM:SpruceDesk"
+      },
+      {
+        "value": "CUSTOM:AcaciaDesk"
+      },
+      {
+        "value": "CUSTOM:BirchDesk"
+      },
+      {
+        "value": "CUSTOM:JungleDesk"
+      },
+      {
+        "value": "CUSTOM:MangroveDesk"
+      },
+      {
+        "value": "CUSTOM:CrimsonDesk"
+      },
+      {
+        "value": "CUSTOM:WarpedDesk"
+      },
+      {
+        "value": "CUSTOM:DarkOakDesk"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "desk_tag",
+    "namespace": "mod"
+  }
+}

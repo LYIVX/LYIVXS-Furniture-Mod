@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/stem_crimson_bundle_top",
+    "up": "ls_furniture:blocks/stem_crimson_bundle_top",
+    "north": "ls_furniture:blocks/stem_crimson_bundle",
+    "east": "ls_furniture:blocks/stem_crimson_bundle",
+    "south": "ls_furniture:blocks/stem_crimson_bundle",
+    "west": "ls_furniture:blocks/stem_crimson_bundle",
+    "particle": "ls_furniture:blocks/stem_crimson_bundle_top"
+  },
+  "render_type": "solid"
+}

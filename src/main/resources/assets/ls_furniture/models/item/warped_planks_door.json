@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:blocks/planks_warped"
+    "layer0": "ls_furniture:items/warped_plank_door"
   },
-  "render_type": "solid"
+  "render_type": "translucent"
 }

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Anvil": "anvil_flat"
+      },
+      "name": "default"
+    }
+  }
+}

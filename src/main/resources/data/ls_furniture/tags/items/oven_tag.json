@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:spruce_oven",
+    "ls_furniture:crimson_oven",
+    "ls_furniture:diorite_oven",
+    "ls_furniture:acacia_oven",
+    "ls_furniture:nether_wart_oven",
+    "ls_furniture:deepslate_oven",
+    "ls_furniture:nether_bricks_oven",
+    "ls_furniture:oak_oven",
+    "ls_furniture:andesite_oven",
+    "ls_furniture:quartz_oven",
+    "ls_furniture:bricks_oven",
+    "ls_furniture:dark_oak_oven",
+    "ls_furniture:warped_wart_oven",
+    "ls_furniture:birch_oven",
+    "ls_furniture:jungle_oven",
+    "ls_furniture:granite_oven",
+    "ls_furniture:mangrove_oven",
+    "ls_furniture:warped_oven"
+  ]
+}

@@ -3,10 +3,10 @@
   "textures": {
     "down": "ls_furniture:blocks/logs_top_spruce",
     "up": "ls_furniture:blocks/logs_top_spruce",
-    "north": "ls_furniture:blocks/logs_spruce",
-    "east": "ls_furniture:blocks/logs_spruce",
-    "south": "ls_furniture:blocks/logs_spruce",
-    "west": "ls_furniture:blocks/logs_spruce",
+    "north": "ls_furniture:blocks/log_spruce_bundle",
+    "east": "ls_furniture:blocks/log_spruce_bundle",
+    "south": "ls_furniture:blocks/log_spruce_bundle",
+    "west": "ls_furniture:blocks/log_spruce_bundle",
     "particle": "ls_furniture:blocks/logs_top_spruce"
   },
   "render_type": "solid"

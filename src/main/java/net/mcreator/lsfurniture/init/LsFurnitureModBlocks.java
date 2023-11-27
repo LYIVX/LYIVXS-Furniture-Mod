@@ -34,6 +34,8 @@ import net.mcreator.lsfurniture.block.WarpedTableEndBlock;
 import net.mcreator.lsfurniture.block.WarpedTableCrossBlock;
 import net.mcreator.lsfurniture.block.WarpedTableCornerBlock;
 import net.mcreator.lsfurniture.block.WarpedStoolBlock;
+import net.mcreator.lsfurniture.block.WarpedStemReinforcedBlock;
+import net.mcreator.lsfurniture.block.WarpedStemBundleBlock;
 import net.mcreator.lsfurniture.block.WarpedSinkBlock;
 import net.mcreator.lsfurniture.block.WarpedShelveBlock;
 import net.mcreator.lsfurniture.block.WarpedPottedBlock;
@@ -133,6 +135,7 @@ import net.mcreator.lsfurniture.block.RackBlock;
 import net.mcreator.lsfurniture.block.QuartzOvenBlock;
 import net.mcreator.lsfurniture.block.PolarBearTeddyBlock;
 import net.mcreator.lsfurniture.block.PlateBlock;
+import net.mcreator.lsfurniture.block.OvenVentShaftBlock;
 import net.mcreator.lsfurniture.block.OvenVentOnBlock;
 import net.mcreator.lsfurniture.block.OvenVentBlock;
 import net.mcreator.lsfurniture.block.OakYellowStraightBlock;
@@ -400,6 +403,7 @@ import net.mcreator.lsfurniture.block.FramedAcaciaStrippedBlock;
 import net.mcreator.lsfurniture.block.FramedAcaciaSmallBricksBlock;
 import net.mcreator.lsfurniture.block.FramedAcaciaPlainBlock;
 import net.mcreator.lsfurniture.block.FirePlaceOffBlock;
+import net.mcreator.lsfurniture.block.FirePlaceChimneyBlock;
 import net.mcreator.lsfurniture.block.FirePlaceBlock;
 import net.mcreator.lsfurniture.block.EndermanTeddyBlock;
 import net.mcreator.lsfurniture.block.Dranier1PlateBlock;
@@ -528,6 +532,8 @@ import net.mcreator.lsfurniture.block.CrimsonTableEndBlock;
 import net.mcreator.lsfurniture.block.CrimsonTableCrossBlock;
 import net.mcreator.lsfurniture.block.CrimsonTableCornerBlock;
 import net.mcreator.lsfurniture.block.CrimsonStoolBlock;
+import net.mcreator.lsfurniture.block.CrimsonStemReinforcedBlock;
+import net.mcreator.lsfurniture.block.CrimsonStemBundleBlock;
 import net.mcreator.lsfurniture.block.CrimsonSinkBlock;
 import net.mcreator.lsfurniture.block.CrimsonShelveBlock;
 import net.mcreator.lsfurniture.block.CrimsonPottedBlock;
@@ -1536,6 +1542,12 @@ public class LsFurnitureModBlocks {
 	public static final RegistryObject<Block> MANGROVE_PLANKS_DOOR = REGISTRY.register("mangrove_planks_door", () -> new MangrovePlanksDoorBlock());
 	public static final RegistryObject<Block> CRIMSON_PLANKS_DOOR = REGISTRY.register("crimson_planks_door", () -> new CrimsonPlanksDoorBlock());
 	public static final RegistryObject<Block> WARPED_PLANKS_DOOR = REGISTRY.register("warped_planks_door", () -> new WarpedPlanksDoorBlock());
+	public static final RegistryObject<Block> OVEN_VENT_SHAFT = REGISTRY.register("oven_vent_shaft", () -> new OvenVentShaftBlock());
+	public static final RegistryObject<Block> FIRE_PLACE_CHIMNEY = REGISTRY.register("fire_place_chimney", () -> new FirePlaceChimneyBlock());
+	public static final RegistryObject<Block> CRIMSON_STEM_BUNDLE = REGISTRY.register("crimson_stem_bundle", () -> new CrimsonStemBundleBlock());
+	public static final RegistryObject<Block> WARPED_STEM_BUNDLE = REGISTRY.register("warped_stem_bundle", () -> new WarpedStemBundleBlock());
+	public static final RegistryObject<Block> CRIMSON_STEM_REINFORCED = REGISTRY.register("crimson_stem_reinforced", () -> new CrimsonStemReinforcedBlock());
+	public static final RegistryObject<Block> WARPED_STEM_REINFORCED = REGISTRY.register("warped_stem_reinforced", () -> new WarpedStemReinforcedBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

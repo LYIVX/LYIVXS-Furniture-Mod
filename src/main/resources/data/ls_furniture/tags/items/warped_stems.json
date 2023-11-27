@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warped_stem",
+    "ls_furniture:warped_stem_bundle",
+    "ls_furniture:warped_stem_reinforced"
+  ]
+}

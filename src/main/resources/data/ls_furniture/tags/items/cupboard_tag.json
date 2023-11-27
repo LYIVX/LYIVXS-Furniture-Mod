@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:oak_cupboard",
+    "ls_furniture:mangrove_cupboard",
+    "ls_furniture:acacia_cupboard",
+    "ls_furniture:spruce_cupboard",
+    "ls_furniture:birch_cupboard",
+    "ls_furniture:dark_oak_cupboard",
+    "ls_furniture:warped_cupboard",
+    "ls_furniture:jungle_cupboard",
+    "ls_furniture:crimson_cupboard"
+  ]
+}

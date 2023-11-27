@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:custom/oven_vent_shaft",
+  "textures": {
+    "all": "ls_furniture:blocks/anvil_flat",
+    "particle": "ls_furniture:blocks/anvil_flat",
+    "Anvil": "ls_furniture:blocks/anvil_flat"
+  },
+  "render_type": "cutout_mipped"
+}

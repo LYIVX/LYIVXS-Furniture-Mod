@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Blocks.CRIMSON_STEM"
+      },
+      {
+        "value": "CUSTOM:CrimsonStemBundle"
+      },
+      {
+        "value": "CUSTOM:CrimsonStemReinforced"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "crimson_stems",
+    "namespace": "mod"
+  }
+}

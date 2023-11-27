@@ -1029,6 +1029,12 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.MANGROVE_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> CRIMSON_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.CRIMSON_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
 	public static final RegistryObject<Item> WARPED_PLANKS_DOOR = doubleBlock(LsFurnitureModBlocks.WARPED_PLANKS_DOOR, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> OVEN_VENT_SHAFT = block(LsFurnitureModBlocks.OVEN_VENT_SHAFT, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> FIRE_PLACE_CHIMNEY = block(LsFurnitureModBlocks.FIRE_PLACE_CHIMNEY, LsFurnitureModTabs.TAB_TAB);
+	public static final RegistryObject<Item> CRIMSON_STEM_BUNDLE = block(LsFurnitureModBlocks.CRIMSON_STEM_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> WARPED_STEM_BUNDLE = block(LsFurnitureModBlocks.WARPED_STEM_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> CRIMSON_STEM_REINFORCED = block(LsFurnitureModBlocks.CRIMSON_STEM_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> WARPED_STEM_REINFORCED = block(LsFurnitureModBlocks.WARPED_STEM_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

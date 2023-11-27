@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakStool"
+      },
+      {
+        "value": "CUSTOM:DarkOakStool"
+      },
+      {
+        "value": "CUSTOM:SpruceStool"
+      },
+      {
+        "value": "CUSTOM:AcaciaStool"
+      },
+      {
+        "value": "CUSTOM:BirchStool"
+      },
+      {
+        "value": "CUSTOM:JungleStool"
+      },
+      {
+        "value": "CUSTOM:MangroveStool"
+      },
+      {
+        "value": "CUSTOM:CrimsonStool"
+      },
+      {
+        "value": "CUSTOM:WarpedStool"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "stool_tag",
+    "namespace": "mod"
+  }
+}

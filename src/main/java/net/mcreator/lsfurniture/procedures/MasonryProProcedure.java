@@ -238,5 +238,7 @@ public class MasonryProProcedure {
 			}
 		}
 		PathRecipeCallerProcedure.execute(x, y, z, entity);
+		FirePlaceRecipeProcedure.execute(entity);
+		FirePlaceChimneyRecipeProcedure.execute(entity);
 	}
 }

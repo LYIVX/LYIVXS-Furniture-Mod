@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakCupboardVent"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboardVent"
+      },
+      {
+        "value": "CUSTOM:SpruceCupboardVent"
+      },
+      {
+        "value": "CUSTOM:AcaciaCupboardVent"
+      },
+      {
+        "value": "CUSTOM:BirchCupboardVent"
+      },
+      {
+        "value": "CUSTOM:JungleCupboardVent"
+      },
+      {
+        "value": "CUSTOM:MangroveCupboardVent"
+      },
+      {
+        "value": "CUSTOM:CrimsonCupboardVent"
+      },
+      {
+        "value": "CUSTOM:WarpedCupboardVent"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "cupboard_vent_tag",
+    "namespace": "mod"
+  }
+}

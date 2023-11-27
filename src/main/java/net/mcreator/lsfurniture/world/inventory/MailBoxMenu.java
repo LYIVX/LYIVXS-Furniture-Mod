@@ -82,9 +82,9 @@ public class MailBoxMenu extends AbstractContainerMenu implements Supplier<Map<I
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, -70 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, -67 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, -70 + 142));
+			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, -67 + 142));
 	}
 
 	@Override

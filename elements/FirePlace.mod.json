@@ -65,7 +65,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 0,
+    "tickRate": 2,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -128,6 +128,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "FirePlaceOnBlockRightClicked"
+    },
+    "onTickUpdate": {
+      "name": "FireplaceUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

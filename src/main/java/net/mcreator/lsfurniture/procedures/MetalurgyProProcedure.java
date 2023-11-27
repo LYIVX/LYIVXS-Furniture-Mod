@@ -240,6 +240,7 @@ public class MetalurgyProProcedure {
 		OvenRecipeCallerProcedure.execute(x, y, z, entity);
 		FridgeFreezerRecipeProcedure.execute(entity);
 		OvenVentRecipeProcedure.execute(entity);
+		OvenVentShaftRecipeProcedure.execute(entity);
 		DrainerRecipeProcedure.execute(entity);
 		RackRecipeProcedure.execute(entity);
 	}

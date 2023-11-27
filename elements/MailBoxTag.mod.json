@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakMailBox"
+      },
+      {
+        "value": "CUSTOM:DarkOakMailBox"
+      },
+      {
+        "value": "CUSTOM:SpruceMailBox"
+      },
+      {
+        "value": "CUSTOM:AcaciaMailBox"
+      },
+      {
+        "value": "CUSTOM:BirchMailBox"
+      },
+      {
+        "value": "CUSTOM:JungleMailBox"
+      },
+      {
+        "value": "CUSTOM:MangroveMailBox"
+      },
+      {
+        "value": "CUSTOM:CrimsonMailBox"
+      },
+      {
+        "value": "CUSTOM:WarpedMailBox"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "mail_box_tag",
+    "namespace": "mod"
+  }
+}

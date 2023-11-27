@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakChair"
+      },
+      {
+        "value": "CUSTOM:SpruceChair"
+      },
+      {
+        "value": "CUSTOM:BirchChair"
+      },
+      {
+        "value": "CUSTOM:JungleChair"
+      },
+      {
+        "value": "CUSTOM:MangroveChair"
+      },
+      {
+        "value": "CUSTOM:WarpedChair"
+      },
+      {
+        "value": "CUSTOM:DarkOakChair"
+      },
+      {
+        "value": "CUSTOM:CrimsonChair"
+      },
+      {
+        "value": "CUSTOM:AcaciaChair"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "chair_tag",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:warped_drawer",
+    "ls_furniture:dark_oak_drawer",
+    "ls_furniture:oak_drawer",
+    "ls_furniture:spruce_drawer",
+    "ls_furniture:mangrove_drawer",
+    "ls_furniture:acacia_drawer",
+    "ls_furniture:birch_drawer",
+    "ls_furniture:crimson_drawer",
+    "ls_furniture:jungle_drawer"
+  ]
+}

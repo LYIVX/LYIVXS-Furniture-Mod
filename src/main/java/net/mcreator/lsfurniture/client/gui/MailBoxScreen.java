@@ -29,7 +29,7 @@ public class MailBoxScreen extends AbstractContainerScreen<MailBoxMenu> {
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 176;
-		this.imageHeight = 96;
+		this.imageHeight = 99;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("ls_furniture:textures/screens/mail_box.png");
@@ -50,7 +50,7 @@ public class MailBoxScreen extends AbstractContainerScreen<MailBoxMenu> {
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/mail_box2.png"));
-		this.blit(ms, this.leftPos + 0, this.topPos + -27, 0, 0, 176, 123, 176, 123);
+		this.blit(ms, this.leftPos + 72, this.topPos + -27, 0, 0, 176, 123, 176, 123);
 
 		RenderSystem.disableBlend();
 	}
@@ -71,7 +71,7 @@ public class MailBoxScreen extends AbstractContainerScreen<MailBoxMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.mail_box.label_inventory"), 7, 4, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.ls_furniture.mail_box.label_inventory"), 8, 6, -12829636);
 	}
 
 	@Override

@@ -25,9 +25,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.lsfurniture.procedures.FireplaceUpdateTickProcedure;
 import net.mcreator.lsfurniture.procedures.FirePlaceOnBlockRightClickedProcedure;
 import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 
@@ -103,6 +106,22 @@ public class FirePlaceBlock extends Block {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(LsFurnitureModBlocks.FIRE_PLACE.get()));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 2);
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		FireplaceUpdateTickProcedure.execute(world, x, y, z, blockstate);
+		world.scheduleTick(pos, this, 2);
 	}
 
 	@Override

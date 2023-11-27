@@ -877,6 +877,9 @@
           "name": "imagebutton_arrow_left1",
           "image": "arrow_left.png",
           "hoveredImage": "arrow_left_highlighted.png",
+          "displayCondition": {
+            "name": "MasonryButtonsShow"
+          },
           "x": 161,
           "y": 102
         }
@@ -887,6 +890,9 @@
           "name": "imagebutton_arrow_right1",
           "image": "arrow_right.png",
           "hoveredImage": "arrow_right_highlighted.png",
+          "displayCondition": {
+            "name": "MasonryButtonsShow"
+          },
           "x": 301,
           "y": 103
         }
@@ -896,6 +902,9 @@
         "data": {
           "image": "tab_right_horizontal_deselect.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "MasonryButtonsShow"
+          },
           "x": 301,
           "y": 99
         }

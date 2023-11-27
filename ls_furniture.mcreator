@@ -25046,7 +25046,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_oak_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakSmallBricks",
@@ -25080,7 +25080,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_big_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakBigBricks",
@@ -25114,7 +25114,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/ConnectingOakHorizontalStripesBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakHorizontalStripes",
@@ -25148,7 +25148,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_oak_vertical_stripes.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakVerticalStripes",
@@ -25182,7 +25182,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_oak_wavey.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakWavey",
@@ -25216,7 +25216,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/ConnectingOakMosaicBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakMosaic",
@@ -25250,7 +25250,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_diagonal.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakDiagonal",
@@ -25284,7 +25284,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_dunes.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakDunes",
@@ -25318,7 +25318,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/ConnectingOakCheckeredBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakCheckered",
@@ -25352,7 +25352,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_oak_checked.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakChecked",
@@ -25386,7 +25386,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_oak_swirl.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakSwirl",
@@ -25420,7 +25420,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_oak_slash.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakSlash",
@@ -26826,7 +26826,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_oak_stripped.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakStripped",
@@ -26860,7 +26860,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_oak_plain.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected/Oak"
+      "path": "~/Blocks/Chiseled/Connected/Oak/Connecting"
     },
     {
       "name": "FramedOakPlain",
@@ -27149,7 +27149,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_warped_plain.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Warped"
     },
     {
       "name": "FramedWarpedPlain",
@@ -27455,7 +27455,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_dark_oak_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Dark Oak"
     },
     {
       "name": "FramedDarkOakSmallBricks",
@@ -27472,7 +27472,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/framed_dark_oak_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Dark Oak"
     },
     {
       "name": "ConnectingSpruceSmallBricks",
@@ -27489,7 +27489,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/ConnectingSpruceSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Spruce"
     },
     {
       "name": "FramedSpruceSmallBricks",
@@ -27506,7 +27506,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/FramedSpruceSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Spruce"
     },
     {
       "name": "ConnectingAcaciaSmallBricks",
@@ -27523,7 +27523,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_acacia_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Acacia"
     },
     {
       "name": "FramedAcaciaSmallBricks",
@@ -27540,7 +27540,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/FramedAcaciaSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Acacia"
     },
     {
       "name": "ConnectingBirchSmallBricks",
@@ -27557,7 +27557,7 @@
           "src/main/resources/assets/ls_furniture/models/block/connecting_birch_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Birch"
     },
     {
       "name": "FramedBirchSmallBricks",
@@ -27574,7 +27574,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/FramedBirchSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Birch"
     },
     {
       "name": "ConnectingJungleSmallBricks",
@@ -27591,7 +27591,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_jungle_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Jungle"
     },
     {
       "name": "FramedJungleSmallBricks",
@@ -27608,7 +27608,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/FramedJungleSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Jungle"
     },
     {
       "name": "ConnectingMangroveSmallBricks",
@@ -27625,7 +27625,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_mangrove_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Mangrove"
     },
     {
       "name": "FramedMangroveSmallBricks",
@@ -27642,7 +27642,7 @@
           "src/main/java/net/mcreator/lsfurniture/block/FramedMangroveSmallBricksBlock.java"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Mangrove"
     },
     {
       "name": "ConnectingCrimsonSmallBricks",
@@ -27659,7 +27659,7 @@
           "src/main/resources/assets/ls_furniture/models/item/connecting_crimson_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Crimson"
     },
     {
       "name": "FramedCrimsonSmallBricks",
@@ -27676,7 +27676,7 @@
           "src/main/resources/assets/ls_furniture/models/item/framed_crimson_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Crimson"
     },
     {
       "name": "ConnectingWarpedSmallBricks",
@@ -27693,7 +27693,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/connecting_warped_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Warped"
     },
     {
       "name": "FramedWarpedSmallBricks",
@@ -27710,7 +27710,7 @@
           "src/main/resources/assets/ls_furniture/blockstates/framed_warped_small_bricks.json"
         ]
       },
-      "path": "~/Blocks/Chiseled/Connected"
+      "path": "~/Blocks/Chiseled/Connected/Warped"
     },
     {
       "name": "OakLeavesPoppy",
@@ -34232,6 +34232,448 @@
         ]
       },
       "path": "~/Blocks/Doors"
+    },
+    {
+      "name": "OvenVentShaft",
+      "type": "block",
+      "sortid": 1709,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oven_vent_shaft",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/OvenVentShaftBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/oven_vent_shaft.json",
+          "src/main/resources/assets/ls_furniture/models/block/oven_vent_shaft.json",
+          "src/main/resources/assets/ls_furniture/models/item/oven_vent_shaft.json"
+        ]
+      },
+      "path": "~/Blocks/Random/Oven Vent"
+    },
+    {
+      "name": "OvenVentShaftRecipe",
+      "type": "procedure",
+      "sortid": 1710,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oven_vent_shaft_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/OvenVentShaftRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Random/Oven Vent"
+    },
+    {
+      "name": "FirePlaceChimney",
+      "type": "block",
+      "sortid": 1711,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_place_chimney",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/item/fire_place_chimney.json",
+          "src/main/resources/assets/ls_furniture/blockstates/fire_place_chimney.json",
+          "src/main/resources/assets/ls_furniture/models/block/fire_place_chimney.json",
+          "src/main/java/net/mcreator/lsfurniture/block/FirePlaceChimneyBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Random/Fire Place"
+    },
+    {
+      "name": "FirePlaceChimneyRecipe",
+      "type": "procedure",
+      "sortid": 1712,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_place_chimney_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/FirePlaceChimneyRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Random/Fire Place"
+    },
+    {
+      "name": "FireplaceUpdateTick",
+      "type": "procedure",
+      "sortid": 1713,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireplace_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/FireplaceUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Random/Fire Place"
+    },
+    {
+      "name": "CrimsonStemBundle",
+      "type": "block",
+      "sortid": 1714,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stem_bundle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/item/crimson_stem_bundle.json",
+          "src/main/resources/assets/ls_furniture/blockstates/crimson_stem_bundle.json",
+          "src/main/java/net/mcreator/lsfurniture/block/CrimsonStemBundleBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/crimson_stem_bundle.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "WarpedStemBundle",
+      "type": "block",
+      "sortid": 1715,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stem_bundle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/item/warped_stem_bundle.json",
+          "src/main/resources/assets/ls_furniture/models/block/warped_stem_bundle.json",
+          "src/main/resources/assets/ls_furniture/blockstates/warped_stem_bundle.json",
+          "src/main/java/net/mcreator/lsfurniture/block/WarpedStemBundleBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "CrimsonStemReinforced",
+      "type": "block",
+      "sortid": 1716,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stem_reinforced",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/CrimsonStemReinforcedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/crimson_stem_reinforced.json",
+          "src/main/resources/assets/ls_furniture/models/item/crimson_stem_reinforced.json",
+          "src/main/resources/assets/ls_furniture/blockstates/crimson_stem_reinforced.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "WarpedStemReinforced",
+      "type": "block",
+      "sortid": 1717,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stem_reinforced",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/blockstates/warped_stem_reinforced.json",
+          "src/main/java/net/mcreator/lsfurniture/block/WarpedStemReinforcedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/item/warped_stem_reinforced.json",
+          "src/main/resources/assets/ls_furniture/models/block/warped_stem_reinforced.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "CrimsonStemsRecipe",
+      "type": "procedure",
+      "sortid": 1718,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stems_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/CrimsonStemsRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "WarpedStemsRecipe",
+      "type": "procedure",
+      "sortid": 1719,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stems_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/procedures/WarpedStemsRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "CrimsonStems",
+      "type": "tag",
+      "sortid": 1720,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stems",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/crimson_stems.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "WarpedStems",
+      "type": "tag",
+      "sortid": 1721,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stems",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/warped_stems.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CounterTag",
+      "type": "tag",
+      "sortid": 1722,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/counter_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SinkTag",
+      "type": "tag",
+      "sortid": 1723,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sink_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/sink_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "OvenTag",
+      "type": "tag",
+      "sortid": 1724,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oven_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/oven_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "DrawerTag",
+      "type": "tag",
+      "sortid": 1725,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drawer_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/drawer_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "DeskTag",
+      "type": "tag",
+      "sortid": 1726,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desk_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/desk_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ShelveTag",
+      "type": "tag",
+      "sortid": 1727,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shelve_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/shelve_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "WardrobeTag",
+      "type": "tag",
+      "sortid": 1728,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wardrobe_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/wardrobe_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CupboardTag",
+      "type": "tag",
+      "sortid": 1729,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cupboard_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/cupboard_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CupboardVentTag",
+      "type": "tag",
+      "sortid": 1730,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cupboard_vent_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/cupboard_vent_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "MailBoxTag",
+      "type": "tag",
+      "sortid": 1731,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mail_box_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/mail_box_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SofaTag",
+      "type": "tag",
+      "sortid": 1732,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sofa_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/sofa_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "StoolTag",
+      "type": "tag",
+      "sortid": 1733,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stool_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/stool_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ChairTag",
+      "type": "tag",
+      "sortid": 1734,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chair_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/chair_tag.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "TableTag",
+      "type": "tag",
+      "sortid": 1735,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "table_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ls_furniture/tags/items/table_tag.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
@@ -34435,6 +34877,7 @@
       "block.ls_furniture.acacia_white_right_end": "Acacia White Sofa",
       "gui.ls_furniture.shelve.label_shelve": "Shelve",
       "block.ls_furniture.dark_oak_cupboard_vent": "Dark Oak Cupboard Vent",
+      "block.ls_furniture.warped_stem_bundle": "Warped Stem (Bundle)",
       "block.ls_furniture.crimson_cupboard": "Crimson Cupboard",
       "block.ls_furniture.connecting_birch_small_bricks": "Birch Planks (Small Bricks)",
       "block.ls_furniture.acacia_table_cross": "Acacia Table",
@@ -34837,6 +35280,7 @@
       "item.ls_furniture.crimson_bark": "Crimson Bark",
       "block.ls_furniture.dark_oak_leaves_poppy": "Dark Oak Leaves (Poppy)",
       "block.ls_furniture.diorite_oven": "Oven (Diorite)",
+      "block.ls_furniture.fire_place_chimney": "Fire Place Chimney",
       "block.ls_furniture.fire_place": "Fire Place",
       "block.ls_furniture.oak_log_bundle": "Oak Log (Bundle)",
       "gui.ls_furniture.carpentry_gui.Connected": "",
@@ -34919,6 +35363,7 @@
       "block.ls_furniture.oak_white_sofa": "Oak White Sofa",
       "block.ls_furniture.spruce_mail_box": "Spruce Mail Box",
       "block.ls_furniture.oak_cupboard_vent": "Oak Cupboard Vent",
+      "block.ls_furniture.crimson_stem_reinforced": "Crimson Log (Reinforced)",
       "block.ls_furniture.tv_wall_off": "TV",
       "block.ls_furniture.any_stone_plank": "Any Stone / Plank",
       "gui.ls_furniture.botanist_gui.Connected": "",
@@ -34950,6 +35395,7 @@
       "gui.ls_furniture.masonry_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.connecting_acacia_stripped": "Acacia Planks (Stripped)",
       "block.ls_furniture.mangrove_log_reinforced": "Mangrove Log (Reinforced)",
+      "block.ls_furniture.oven_vent_shaft": "Oven Vent Shaft",
       "block.ls_furniture.mangrove_plank_path_3": "Mangrove Plank Path",
       "block.ls_furniture.mangrove_plank_path_2": "Mangrove Plank Path",
       "block.ls_furniture.mangrove_table_cross": "Mangrove Table",
@@ -35085,6 +35531,7 @@
       "block.ls_furniture.birch_table_junction": "Birch Table",
       "block.ls_furniture.birch_granite_sink": "Sink (Birch/Granite)",
       "block.ls_furniture.birch_chair": "Birch Chair",
+      "block.ls_furniture.warped_stem_reinforced": "Warped Log (Reinforced)",
       "block.ls_furniture.rack": "Plate Rack",
       "block.ls_furniture.framed_warped_stripped": "Warped Planks (Stripped)",
       "gui.ls_furniture.fridge.label_fridge": "Fridge",
@@ -35115,6 +35562,7 @@
       "block.ls_furniture.connecting_mangrove_glass_pane": "Mangrove Glass Pane",
       "block.ls_furniture.mangrove_counter": "Counter (Mangrove)",
       "block.ls_furniture.oak_light_blue_sofa": "Oak Light Blue Sofa",
+      "block.ls_furniture.crimson_stem_bundle": "Crimson Stem (Bundle)",
       "gui.ls_furniture.botanist_gui.tooltip_masonry": "Botanist",
       "block.ls_furniture.mangrove_table_straight": "Mangrove Table",
       "block.ls_furniture.deepslate_path_131": "Deepslate Path",
@@ -35778,7 +36226,12 @@
                 "children": [
                   {
                     "name": "Oak",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "Connecting",
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "name": "Glass",
@@ -35888,20 +36341,12 @@
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "mod_logo",
-    "requiredMods": [
-      "fusion",
-      "patchouli",
-      "geckolib3"
-    ],
+    "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "emi",
-      "fusion",
       "jade",
-      "patchouli",
       "geckolib",
-      "allmods",
       "jei"
     ],
     "currentGenerator": "forge-1.19.2",

@@ -11,6 +11,7 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.lsfurniture.world.inventory.MasonryGUIMenu;
+import net.mcreator.lsfurniture.procedures.MasonryButtonsShowProcedure;
 import net.mcreator.lsfurniture.procedures.Disablepictureadditional3Procedure;
 import net.mcreator.lsfurniture.procedures.Disablepictureadditional2Procedure;
 import net.mcreator.lsfurniture.procedures.DisablePictureToolProcedure;
@@ -122,10 +123,10 @@ public class MasonryGUIScreen extends AbstractContainerScreen<MasonryGUIMenu> {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/chisel_slot.png"));
 			this.blit(ms, this.leftPos + 28, this.topPos + 48, 0, 0, 16, 16, 16, 16);
 		}
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_right_horizontal_deselect.png"));
-		this.blit(ms, this.leftPos + 181, this.topPos + 62, 0, 0, 16, 25, 16, 25);
-
+		if (MasonryButtonsShowProcedure.execute(entity)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_right_horizontal_deselect.png"));
+			this.blit(ms, this.leftPos + 181, this.topPos + 62, 0, 0, 16, 25, 16, 25);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -255,11 +256,23 @@ public class MasonryGUIScreen extends AbstractContainerScreen<MasonryGUIMenu> {
 		guistate.put("button:imagebutton_comparitor", imagebutton_comparitor);
 		this.addRenderableWidget(imagebutton_comparitor);
 		imagebutton_arrow_left1 = new ImageButton(this.leftPos + 41, this.topPos + 65, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left1.png"), 11, 34, e -> {
-		});
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (MasonryButtonsShowProcedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_arrow_left1", imagebutton_arrow_left1);
 		this.addRenderableWidget(imagebutton_arrow_left1);
 		imagebutton_arrow_right1 = new ImageButton(this.leftPos + 181, this.topPos + 66, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_right1.png"), 11, 34, e -> {
-		});
+		}) {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (MasonryButtonsShowProcedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_arrow_right1", imagebutton_arrow_right1);
 		this.addRenderableWidget(imagebutton_arrow_right1);
 		Connected = new Checkbox(this.leftPos + 6, this.topPos + 46, 20, 20, Component.translatable("gui.ls_furniture.masonry_gui.Connected"),

@@ -180,6 +180,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ChairAdded"
+    },
     "onBlockAdded": {
       "name": "ChairAdded"
     },

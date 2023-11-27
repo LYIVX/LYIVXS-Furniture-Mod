@@ -3,10 +3,10 @@
   "textures": {
     "down": "ls_furniture:blocks/logs-top_birch",
     "up": "ls_furniture:blocks/logs-top_birch",
-    "north": "ls_furniture:blocks/logs_birch",
-    "east": "ls_furniture:blocks/logs_birch",
-    "south": "ls_furniture:blocks/logs_birch",
-    "west": "ls_furniture:blocks/logs_birch",
+    "north": "ls_furniture:blocks/log_birch_bundle",
+    "east": "ls_furniture:blocks/log_birch_bundle",
+    "south": "ls_furniture:blocks/log_birch_bundle",
+    "west": "ls_furniture:blocks/log_birch_bundle",
     "particle": "ls_furniture:blocks/logs-top_birch"
   },
   "render_type": "solid"

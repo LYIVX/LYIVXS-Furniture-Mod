@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:DarkOakTableNone"
+      },
+      {
+        "value": "CUSTOM:SpruceTableNone"
+      },
+      {
+        "value": "CUSTOM:AcaciaTableNone"
+      },
+      {
+        "value": "CUSTOM:BirchTableNone"
+      },
+      {
+        "value": "CUSTOM:JungleTableNone"
+      },
+      {
+        "value": "CUSTOM:MangroveTableNone"
+      },
+      {
+        "value": "CUSTOM:CrimsonTableNone"
+      },
+      {
+        "value": "CUSTOM:WarpedTableNone"
+      },
+      {
+        "value": "CUSTOM:OakTableNone"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "table_tag",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakWardrobe0"
+      },
+      {
+        "value": "CUSTOM:Darkoakwardrobe0"
+      },
+      {
+        "value": "CUSTOM:Sprucewardrobe"
+      },
+      {
+        "value": "CUSTOM:AcaciaWardrobe"
+      },
+      {
+        "value": "CUSTOM:BirchWardrobe"
+      },
+      {
+        "value": "CUSTOM:JungleWardrobe"
+      },
+      {
+        "value": "CUSTOM:MangroveWardrobe"
+      },
+      {
+        "value": "CUSTOM:CrimsonWardrobe"
+      },
+      {
+        "value": "CUSTOM:WarpedWardrobe"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "wardrobe_tag",
+    "namespace": "mod"
+  }
+}

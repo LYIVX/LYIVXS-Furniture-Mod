@@ -1,0 +1,69 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakSink"
+      },
+      {
+        "value": "CUSTOM:DarkOakSink"
+      },
+      {
+        "value": "CUSTOM:SpruceSink"
+      },
+      {
+        "value": "CUSTOM:AcaciaSink"
+      },
+      {
+        "value": "CUSTOM:BirchSink"
+      },
+      {
+        "value": "CUSTOM:JungleSink"
+      },
+      {
+        "value": "CUSTOM:MangroveSink"
+      },
+      {
+        "value": "CUSTOM:CrimsonSink"
+      },
+      {
+        "value": "CUSTOM:WarpedSink"
+      },
+      {
+        "value": "CUSTOM:OakBricksSink"
+      },
+      {
+        "value": "CUSTOM:DarkOakDeepslateSink"
+      },
+      {
+        "value": "CUSTOM:SpruceAndesiteSink"
+      },
+      {
+        "value": "CUSTOM:AcaciaDioriteSink"
+      },
+      {
+        "value": "CUSTOM:BirchGraniteSink"
+      },
+      {
+        "value": "CUSTOM:JungleNetherBricksSink"
+      },
+      {
+        "value": "CUSTOM:MangroveQuartzSink"
+      },
+      {
+        "value": "CUSTOM:CrimsonNetherWartSink"
+      },
+      {
+        "value": "CUSTOM:WarpedWarpedWartSink"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "sink_tag",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakDrawer"
+      },
+      {
+        "value": "CUSTOM:DarkOakDrawer"
+      },
+      {
+        "value": "CUSTOM:SpruceDrawer"
+      },
+      {
+        "value": "CUSTOM:AcaciaDrawer"
+      },
+      {
+        "value": "CUSTOM:BirchDrawer"
+      },
+      {
+        "value": "CUSTOM:JungleDrawer"
+      },
+      {
+        "value": "CUSTOM:MangroveDrawer"
+      },
+      {
+        "value": "CUSTOM:CrimsonDrawer"
+      },
+      {
+        "value": "CUSTOM:WarpedDrawer"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "drawer_tag",
+    "namespace": "mod"
+  }
+}

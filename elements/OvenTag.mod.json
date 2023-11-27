@@ -1,0 +1,69 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakOven"
+      },
+      {
+        "value": "CUSTOM:DarkOakOven"
+      },
+      {
+        "value": "CUSTOM:SpruceOven"
+      },
+      {
+        "value": "CUSTOM:AcaciaOven"
+      },
+      {
+        "value": "CUSTOM:BirchOven"
+      },
+      {
+        "value": "CUSTOM:JungleOven"
+      },
+      {
+        "value": "CUSTOM:MangroveOven"
+      },
+      {
+        "value": "CUSTOM:WarpedOven"
+      },
+      {
+        "value": "CUSTOM:CrimsonOven"
+      },
+      {
+        "value": "CUSTOM:DeepslateOven"
+      },
+      {
+        "value": "CUSTOM:AndesiteOven"
+      },
+      {
+        "value": "CUSTOM:DioriteOven"
+      },
+      {
+        "value": "CUSTOM:GraniteOven"
+      },
+      {
+        "value": "CUSTOM:NetherBricksOven"
+      },
+      {
+        "value": "CUSTOM:QuartzOven"
+      },
+      {
+        "value": "CUSTOM:NetherWartOven"
+      },
+      {
+        "value": "CUSTOM:WarpedWartOven"
+      },
+      {
+        "value": "CUSTOM:BricksOven"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "oven_tag",
+    "namespace": "mod"
+  }
+}

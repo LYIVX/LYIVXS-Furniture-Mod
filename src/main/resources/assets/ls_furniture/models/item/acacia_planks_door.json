@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:blocks/planks_acacia"
+    "layer0": "ls_furniture:items/acacia_plank_door"
   },
-  "render_type": "solid"
+  "render_type": "translucent"
 }

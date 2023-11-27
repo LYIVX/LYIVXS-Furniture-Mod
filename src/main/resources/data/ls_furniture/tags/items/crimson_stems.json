@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crimson_stem",
+    "ls_furniture:crimson_stem_reinforced",
+    "ls_furniture:crimson_stem_bundle"
+  ]
+}

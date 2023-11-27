@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:dark_oak_shelve",
+    "ls_furniture:warped_shelve",
+    "ls_furniture:oak_shelve",
+    "ls_furniture:jungle_shelve",
+    "ls_furniture:crimson_shelve",
+    "ls_furniture:acacia_shelve",
+    "ls_furniture:mangrove_shelve",
+    "ls_furniture:birch_shelve",
+    "ls_furniture:spruce_shelve"
+  ]
+}

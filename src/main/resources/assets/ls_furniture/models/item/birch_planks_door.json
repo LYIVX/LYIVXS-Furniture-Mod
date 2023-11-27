@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:blocks/planks_birch"
+    "layer0": "ls_furniture:items/birch_plank_door"
   },
-  "render_type": "solid"
+  "render_type": "translucent"
 }

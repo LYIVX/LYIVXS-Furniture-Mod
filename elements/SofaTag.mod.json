@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:OakWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteSofa"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "sofa_tag",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:WarpedStemBundle"
+      },
+      {
+        "value": "CUSTOM:WarpedStemReinforced"
+      },
+      {
+        "value": "Blocks.WARPED_STEM"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "warped_stems",
+    "namespace": "mod"
+  }
+}

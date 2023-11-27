@@ -15,8 +15,14 @@ import net.mcreator.lsfurniture.entity.ChairEntity;
 
 public class ChairAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		boolean found = false;
 		double direction = 0;
-		String BlockName = "";
+		double X = 0;
+		double Y = 0;
+		double Z = 0;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
 				BlockState _bs = world.getBlockState(pos);

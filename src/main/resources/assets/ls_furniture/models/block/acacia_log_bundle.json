@@ -3,10 +3,10 @@
   "textures": {
     "down": "ls_furniture:blocks/logs_top_acacia",
     "up": "ls_furniture:blocks/logs_top_acacia",
-    "north": "ls_furniture:blocks/logs_acacia",
-    "east": "ls_furniture:blocks/logs_acacia",
-    "south": "ls_furniture:blocks/logs_acacia",
-    "west": "ls_furniture:blocks/logs_acacia",
+    "north": "ls_furniture:blocks/log_acacia_bundle",
+    "east": "ls_furniture:blocks/log_acacia_bundle",
+    "south": "ls_furniture:blocks/log_acacia_bundle",
+    "west": "ls_furniture:blocks/log_acacia_bundle",
     "particle": "ls_furniture:blocks/logs_top_acacia"
   },
   "render_type": "solid"
