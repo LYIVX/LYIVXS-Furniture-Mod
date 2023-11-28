@@ -1053,6 +1053,19 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> MANGROVE_LOG_NAILED = block(LsFurnitureModBlocks.MANGROVE_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CRIMSON_STEM_NAILED = block(LsFurnitureModBlocks.CRIMSON_STEM_NAILED, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> WARPED_STEM_NAILED = block(LsFurnitureModBlocks.WARPED_STEM_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_GLASS_DOOR_1 = doubleBlock(LsFurnitureModBlocks.DARK_OAK_GLASS_DOOR_1, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_GLASS_DOOR_2 = doubleBlock(LsFurnitureModBlocks.DARK_OAK_GLASS_DOOR_2, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_GLASS_DOOR_3 = doubleBlock(LsFurnitureModBlocks.DARK_OAK_GLASS_DOOR_3, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_GLASS_DOOR_4 = doubleBlock(LsFurnitureModBlocks.DARK_OAK_GLASS_DOOR_4, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_GLASS_DOOR_5 = doubleBlock(LsFurnitureModBlocks.DARK_OAK_GLASS_DOOR_5, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_BIRCH = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_BIRCH, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_ACACIA = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_ACACIA, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_OAK = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_OAK, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_JUNGLE = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_JUNGLE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_MANGROVE = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_MANGROVE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_SPRUCE = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_SPRUCE, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_WARPED = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_WARPED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_DOOR_CRIMSON = doubleBlock(LsFurnitureModBlocks.DARK_OAK_DOOR_CRIMSON, LsFurnitureModTabs.TAB_TAB_2);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

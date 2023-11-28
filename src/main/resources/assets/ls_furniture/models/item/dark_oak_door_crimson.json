@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ls_furniture:items/door_dark_oak_crimson"
+  },
+  "render_type": "translucent"
+}

@@ -508,7 +508,20 @@ import net.mcreator.lsfurniture.block.DarkOakLeavesDandilionBlock;
 import net.mcreator.lsfurniture.block.DarkOakLeavesBlueOrchidBlock;
 import net.mcreator.lsfurniture.block.DarkOakGreenSofaBlock;
 import net.mcreator.lsfurniture.block.DarkOakGraySofaBlock;
+import net.mcreator.lsfurniture.block.DarkOakGlassDoor5Block;
+import net.mcreator.lsfurniture.block.DarkOakGlassDoor4Block;
+import net.mcreator.lsfurniture.block.DarkOakGlassDoor3Block;
+import net.mcreator.lsfurniture.block.DarkOakGlassDoor2Block;
+import net.mcreator.lsfurniture.block.DarkOakGlassDoor1Block;
 import net.mcreator.lsfurniture.block.DarkOakDrawerBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorWarpedBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorSpruceBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorOakBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorMangroveBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorJungleBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorCrimsonBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorBirchBlock;
+import net.mcreator.lsfurniture.block.DarkOakDoorAcaciaBlock;
 import net.mcreator.lsfurniture.block.DarkOakDeskBlock;
 import net.mcreator.lsfurniture.block.DarkOakDeepslateSinkBlock;
 import net.mcreator.lsfurniture.block.DarkOakDeepslateCounterCornerBlock;
@@ -1584,6 +1597,19 @@ public class LsFurnitureModBlocks {
 	public static final RegistryObject<Block> MANGROVE_LOG_NAILED = REGISTRY.register("mangrove_log_nailed", () -> new MangroveLogNailedBlock());
 	public static final RegistryObject<Block> CRIMSON_STEM_NAILED = REGISTRY.register("crimson_stem_nailed", () -> new CrimsonStemNailedBlock());
 	public static final RegistryObject<Block> WARPED_STEM_NAILED = REGISTRY.register("warped_stem_nailed", () -> new WarpedStemNailedBlock());
+	public static final RegistryObject<Block> DARK_OAK_GLASS_DOOR_1 = REGISTRY.register("dark_oak_glass_door_1", () -> new DarkOakGlassDoor1Block());
+	public static final RegistryObject<Block> DARK_OAK_GLASS_DOOR_2 = REGISTRY.register("dark_oak_glass_door_2", () -> new DarkOakGlassDoor2Block());
+	public static final RegistryObject<Block> DARK_OAK_GLASS_DOOR_3 = REGISTRY.register("dark_oak_glass_door_3", () -> new DarkOakGlassDoor3Block());
+	public static final RegistryObject<Block> DARK_OAK_GLASS_DOOR_4 = REGISTRY.register("dark_oak_glass_door_4", () -> new DarkOakGlassDoor4Block());
+	public static final RegistryObject<Block> DARK_OAK_GLASS_DOOR_5 = REGISTRY.register("dark_oak_glass_door_5", () -> new DarkOakGlassDoor5Block());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_BIRCH = REGISTRY.register("dark_oak_door_birch", () -> new DarkOakDoorBirchBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_ACACIA = REGISTRY.register("dark_oak_door_acacia", () -> new DarkOakDoorAcaciaBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_OAK = REGISTRY.register("dark_oak_door_oak", () -> new DarkOakDoorOakBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_JUNGLE = REGISTRY.register("dark_oak_door_jungle", () -> new DarkOakDoorJungleBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_MANGROVE = REGISTRY.register("dark_oak_door_mangrove", () -> new DarkOakDoorMangroveBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_SPRUCE = REGISTRY.register("dark_oak_door_spruce", () -> new DarkOakDoorSpruceBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_WARPED = REGISTRY.register("dark_oak_door_warped", () -> new DarkOakDoorWarpedBlock());
+	public static final RegistryObject<Block> DARK_OAK_DOOR_CRIMSON = REGISTRY.register("dark_oak_door_crimson", () -> new DarkOakDoorCrimsonBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
