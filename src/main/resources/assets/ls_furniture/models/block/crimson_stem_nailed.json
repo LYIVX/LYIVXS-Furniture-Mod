@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_top_mangrove",
+    "up": "ls_furniture:blocks/log_top_mangrove",
+    "north": "ls_furniture:blocks/stem_nailed_crimson",
+    "east": "ls_furniture:blocks/stem_nailed_crimson",
+    "south": "ls_furniture:blocks/stem_nailed_crimson",
+    "west": "ls_furniture:blocks/stem_nailed_crimson",
+    "particle": "ls_furniture:blocks/log_top_mangrove"
+  },
+  "render_type": "solid"
+}

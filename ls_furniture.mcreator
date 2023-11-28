@@ -34674,6 +34674,312 @@
         ]
       },
       "path": "~/Tags"
+    },
+    {
+      "name": "OakLogPillar",
+      "type": "block",
+      "sortid": 1736,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oak_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/blockstates/oak_log_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/OakLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/oak_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/item/oak_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "DarkOakLogPillar",
+      "type": "block",
+      "sortid": 1737,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dark_oak_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/blockstates/dark_oak_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/dark_oak_log_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/DarkOakLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/models/item/dark_oak_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "SpruceLogPillar",
+      "type": "block",
+      "sortid": 1738,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spruce_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/SpruceLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/models/item/spruce_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/spruce_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/blockstates/spruce_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "AcaciaLogPillar",
+      "type": "block",
+      "sortid": 1739,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/AcaciaLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/acacia_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/acacia_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/item/acacia_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "BirchLogPillar",
+      "type": "block",
+      "sortid": 1740,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "birch_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/BirchLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/birch_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/birch_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/item/birch_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "JungleLogPillar",
+      "type": "block",
+      "sortid": 1741,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jungle_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/jungle_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/blockstates/jungle_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/item/jungle_log_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/JungleLogPillarBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "MangroveLogPillar",
+      "type": "block",
+      "sortid": 1742,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mangrove_log_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/mangrove_log_pillar.json",
+          "src/main/resources/assets/ls_furniture/blockstates/mangrove_log_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/MangroveLogPillarBlock.java",
+          "src/main/resources/assets/ls_furniture/models/item/mangrove_log_pillar.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "CrimsonStemPillar",
+      "type": "block",
+      "sortid": 1743,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stem_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/item/crimson_stem_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/crimson_stem_pillar.json",
+          "src/main/resources/assets/ls_furniture/blockstates/crimson_stem_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/CrimsonStemPillarBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "WarpedStemPillar",
+      "type": "block",
+      "sortid": 1744,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stem_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/item/warped_stem_pillar.json",
+          "src/main/resources/assets/ls_furniture/models/block/warped_stem_pillar.json",
+          "src/main/resources/assets/ls_furniture/blockstates/warped_stem_pillar.json",
+          "src/main/java/net/mcreator/lsfurniture/block/WarpedStemPillarBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "OakLogNailed",
+      "type": "block",
+      "sortid": 1745,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oak_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/blockstates/oak_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/oak_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/block/oak_log_nailed.json",
+          "src/main/java/net/mcreator/lsfurniture/block/OakLogNailedBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "DarkOakLogNailed",
+      "type": "block",
+      "sortid": 1746,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dark_oak_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/DarkOakLogNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/dark_oak_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/blockstates/dark_oak_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/dark_oak_log_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "SpruceLogNailed",
+      "type": "block",
+      "sortid": 1747,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spruce_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/blockstates/spruce_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/block/spruce_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/spruce_log_nailed.json",
+          "src/main/java/net/mcreator/lsfurniture/block/SpruceLogNailedBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "AcaciaLogNailed",
+      "type": "block",
+      "sortid": 1748,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/AcaciaLogNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/acacia_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/acacia_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/blockstates/acacia_log_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "BirchLogNailed",
+      "type": "block",
+      "sortid": 1749,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "birch_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/BirchLogNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/item/birch_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/blockstates/birch_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/block/birch_log_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "JungleLogNailed",
+      "type": "block",
+      "sortid": 1750,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jungle_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/JungleLogNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/jungle_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/jungle_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/block/jungle_log_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "MangroveLogNailed",
+      "type": "block",
+      "sortid": 1751,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mangrove_log_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/MangroveLogNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/mangrove_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/block/mangrove_log_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/mangrove_log_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "CrimsonStemNailed",
+      "type": "block",
+      "sortid": 1752,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crimson_stem_nailed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/lsfurniture/block/CrimsonStemNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/models/block/crimson_stem_nailed.json",
+          "src/main/resources/assets/ls_furniture/blockstates/crimson_stem_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/crimson_stem_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
+    },
+    {
+      "name": "WarpedStemNailed",
+      "type": "block",
+      "sortid": 1753,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warped_stem_nailed",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ls_furniture/models/block/warped_stem_nailed.json",
+          "src/main/java/net/mcreator/lsfurniture/block/WarpedStemNailedBlock.java",
+          "src/main/resources/assets/ls_furniture/blockstates/warped_stem_nailed.json",
+          "src/main/resources/assets/ls_furniture/models/item/warped_stem_nailed.json"
+        ]
+      },
+      "path": "~/Blocks/Chiseled/Normal"
     }
   ],
   "variable_elements": [
@@ -34708,12 +35014,12 @@
   ],
   "language_map": {
     "en_us": {
-      "gui.ls_furniture.engineering_gui.Connected": "",
       "block.ls_furniture.andesite_path_91": "Andesite Path",
-      "block.ls_furniture.connecting_jungle_glass": "Jungle Glass",
+      "gui.ls_furniture.engineering_gui.Connected": "",
       "gui.ls_furniture.engineering_gui.tooltip_masonry": "Masonry",
-      "block.ls_furniture.andesite_path_92": "Andesite Path",
+      "block.ls_furniture.connecting_jungle_glass": "Jungle Glass",
       "block.ls_furniture.crimson_white_right_end": "Crimson White Sofa",
+      "block.ls_furniture.andesite_path_92": "Andesite Path",
       "block.ls_furniture.fridge_freezer_block": "Fridge Freezer",
       "block.ls_furniture.mangrove_planks_door": "Mangrove Planks",
       "block.ls_furniture.jungle_log_reinforced": "Jungle Log (Reinforced)",
@@ -34722,8 +35028,8 @@
       "block.ls_furniture.connecting_oak_plain": "Oak Planks (Plain)",
       "block.ls_furniture.blackstone_path_131": "Blackstone Path",
       "block.ls_furniture.blackstone_path_133": "Blackstone Path",
-      "block.ls_furniture.blackstone_path_132": "Blackstone Path",
       "gui.ls_furniture.freezer.label_fridge": "Freezer",
+      "block.ls_furniture.blackstone_path_132": "Blackstone Path",
       "block.ls_furniture.dark_oak_blinds_top_closed": "Dark Oak Blinds",
       "block.ls_furniture.stone_path_133": "Stone Path",
       "block.ls_furniture.dark_oak_leaves_dandilion": "Dark Oak Leaves (Dandilion)",
@@ -34733,10 +35039,10 @@
       "block.ls_furniture.stone_path_131": "Stone Path",
       "block.ls_furniture.oak_wardrobe_0": "Oak Wardrobe",
       "block.ls_furniture.crimson_oven": "Oven (Crimson)",
-      "block.ls_furniture.dark_oak_green_sofa": "Dark Oak Green Sofa",
       "block.ls_furniture.oak_wardrobe_1": "Oak Wardrobe",
-      "block.ls_furniture.andesite_path_74": "Andesite Path",
+      "block.ls_furniture.dark_oak_green_sofa": "Dark Oak Green Sofa",
       "block.ls_furniture.oak_wardrobe_2": "Oak Wardrobe",
+      "block.ls_furniture.andesite_path_74": "Andesite Path",
       "block.ls_furniture.andesite_path_75": "Andesite Path",
       "gui.ls_furniture.oven.label_oven": "Oven",
       "block.ls_furniture.tv_wall_on": "TV",
@@ -34750,13 +35056,14 @@
       "block.ls_furniture.iron_corner": "Iron Glass Table",
       "block.ls_furniture.spruce_cupboard_vent": "Spruce Cupboard Vent",
       "block.ls_furniture.warped_stool": "Warped Stool",
-      "block.ls_furniture.dark_oak_table_cross": "Dark Oak Table",
       "block.ls_furniture.tv_wall_minecraft": "TV",
+      "block.ls_furniture.dark_oak_table_cross": "Dark Oak Table",
       "block.ls_furniture.acacia_mail_box": "Acacia Mail Box",
       "block.ls_furniture.warped_table_none": "Warped Table",
       "block.ls_furniture.birch_log_bundle": "Birch Log (Bundle)",
-      "block.ls_furniture.oak_orange_sofa": "Oak Orange Sofa",
       "block.ls_furniture.toaster": "Toaster",
+      "block.ls_furniture.oak_orange_sofa": "Oak Orange Sofa",
+      "block.ls_furniture.acacia_log_nailed": "Acacia Log (Nailed)",
       "gui.ls_furniture.metalurgy_gui.Connected": "",
       "block.ls_furniture.acacia_counter_corner": "Counter (Acacia)",
       "block.ls_furniture.deepslate_oven": "Oven (Deepslate)",
@@ -34803,14 +35110,14 @@
       "gui.ls_furniture.counter.label_counter": "Counter",
       "block.ls_furniture.warped_drawer": "Warped Drawer",
       "block.ls_furniture.mangrove_leaves_dandilion": "Mangrove Leaves (Dandilion)",
-      "gui.ls_furniture.furniture_wood.label_recipe": "Recipe",
       "block.ls_furniture.chicken_teddy": "Chicken Teddy",
+      "gui.ls_furniture.furniture_wood.label_recipe": "Recipe",
       "gui.ls_furniture.weavery_gui.Connected": "",
       "block.ls_furniture.acacia_plank_path_3": "Acacia Plank Path",
-      "block.ls_furniture.acacia_plank_path_1": "Acacia Plank Path",
       "block.ls_furniture.dark_oak_white_sofa": "Dark Oak White Sofa",
-      "block.ls_furniture.acacia_plank_path_2": "Acacia Plank Path",
+      "block.ls_furniture.acacia_plank_path_1": "Acacia Plank Path",
       "block.ls_furniture.birch_white_sofa": "Birch White Sofa",
+      "block.ls_furniture.acacia_plank_path_2": "Acacia Plank Path",
       "block.ls_furniture.oak_brown_sofa": "Oak Brown Sofa",
       "block.ls_furniture.oak_plank_path_8": "Oak Plank Path ",
       "block.ls_furniture.connecting_stone_polished": "Stone (Polished)",
@@ -34819,6 +35126,7 @@
       "block.ls_furniture.spruce_wardrobe_2": "Spruce Wardrobe",
       "block.ls_furniture.spruce_wardrobe_1": "Spruce Wardrobe",
       "block.ls_furniture.any_wool": "Any Wool",
+      "block.ls_furniture.spruce_log_nailed": "Spruce Log (Nailed)",
       "block.ls_furniture.warped_wardrobe": "Warped Wardrobe",
       "block.ls_furniture.any_wood": "Any Wood / Log",
       "block.ls_furniture.framed_oak_checked": "Oak Planks (Checked)",
@@ -34830,14 +35138,15 @@
       "block.ls_furniture.computer_minecraft": "Computer",
       "block.ls_furniture.oak_potted": "Potted Oak",
       "block.ls_furniture.spruce_potted": "Potted Spruce",
+      "block.ls_furniture.spruce_log_pillar": "Spruce Log (Pillar)",
       "block.ls_furniture.acacia_diorite_counter_corner": "Counter (Acacia/Diorite)",
       "block.ls_furniture.dark_oak_plank_path_3": "Dark Oak Plank Path",
       "block.ls_furniture.dark_oak_plank_path_2": "Dark Oak Plank Path",
       "block.ls_furniture.dark_oak_desk": "Dark Oak Desk",
       "block.ls_furniture.dark_oak_sink": "Sink (Dark Oak)",
       "block.ls_furniture.book_shelf_door": "Bookshelf",
-      "block.ls_furniture.cherry_plank_path_3": "Cherry Plank Path",
       "block.ls_furniture.oak_glass_door_1": "Oak Door (Glass)",
+      "block.ls_furniture.cherry_plank_path_3": "Cherry Plank Path",
       "block.ls_furniture.cherry_plank_path_2": "Cherry Plank Path",
       "block.ls_furniture.oak_glass_door_2": "Oak Door (Glass)",
       "block.ls_furniture.oak_glass_door_3": "Oak Door (Glass)",
@@ -34846,10 +35155,11 @@
       "block.ls_furniture.acacia_potted": "Potted Acacia",
       "block.ls_furniture.mangrove_chair": "Mangrove Chair",
       "block.ls_furniture.any_planks": "Any Planks",
-      "block.ls_furniture.oak_door_acacia": "Oak Door (Acacia)",
       "block.ls_furniture.cherry_plank_path_1": "Cherry Plank Path",
+      "block.ls_furniture.oak_door_acacia": "Oak Door (Acacia)",
       "block.ls_furniture.oak_white_left_end": "Oak White Sofa",
       "gui.ls_furniture.furniture_metal.tooltip_paths": "Paths",
+      "block.ls_furniture.crimson_stem_pillar": "Crimson Stem (Pillar)",
       "block.ls_furniture.oak_door_1": "Oak Door",
       "block.ls_furniture.dark_oak_cyan_sofa": "Dark Oak Cyan Sofa",
       "gui.ls_furniture.weavery_gui.tooltip_carpentry": "Carpentry",
@@ -34861,8 +35171,9 @@
       "gui.ls_furniture.oven.label_proc_oven_fuel_remaining": "Uses Left:",
       "gui.ls_furniture.metalurgy_gui.tooltip_masonry": "Masonry",
       "block.ls_furniture.spruce_desk": "Spruce Desk",
-      "gui.ls_furniture.furniture_metal.tooltip_empty1": "Stone",
+      "block.ls_furniture.warped_stem_nailed": "Warped Stem (Nailed)",
       "block.ls_furniture.acacia_leaves_blue_orchid": "Acacia Leaves (Blue Orchid)",
+      "gui.ls_furniture.furniture_metal.tooltip_empty1": "Stone",
       "block.ls_furniture.oak_glass_door_5": "Oak Door (Glass)",
       "block.ls_furniture.oak_glass_door_6": "Oak Door (Glass)",
       "block.ls_furniture.oak_glass_door_7": "Oak Door (Glass)",
@@ -34873,11 +35184,11 @@
       "block.ls_furniture.spruce_white_chair": "Spruce White Chair",
       "block.ls_furniture.jungle_table_cross": "Jungle Table",
       "block.ls_furniture.warped_warped_wart_counter": "Counter (Warped/Warped Wart)",
-      "entity.ls_furniture.chair": "Chair",
       "block.ls_furniture.acacia_white_right_end": "Acacia White Sofa",
+      "entity.ls_furniture.chair": "Chair",
       "gui.ls_furniture.shelve.label_shelve": "Shelve",
-      "block.ls_furniture.dark_oak_cupboard_vent": "Dark Oak Cupboard Vent",
       "block.ls_furniture.warped_stem_bundle": "Warped Stem (Bundle)",
+      "block.ls_furniture.dark_oak_cupboard_vent": "Dark Oak Cupboard Vent",
       "block.ls_furniture.crimson_cupboard": "Crimson Cupboard",
       "block.ls_furniture.connecting_birch_small_bricks": "Birch Planks (Small Bricks)",
       "block.ls_furniture.acacia_table_cross": "Acacia Table",
@@ -34888,8 +35199,8 @@
       "block.ls_furniture.furniture_crafter": "Furniture Crafter",
       "block.ls_furniture.jungle_table_end": "Jungle Table",
       "block.ls_furniture.mangrove_white_straight": "Straight White Sofa",
-      "item.ls_furniture.acacia_bark": "Acacia Bark",
       "block.ls_furniture.oak_table_cross": "Table (Oak)",
+      "item.ls_furniture.acacia_bark": "Acacia Bark",
       "block.ls_furniture.oak_counter_corner": "Counter (Oak)",
       "item.ls_furniture.dark_oak_bark": "Dark Oak Bark",
       "block.ls_furniture.jungle_chair": "Jungle Chair",
@@ -34900,14 +35211,15 @@
       "block.ls_furniture.spruce_sink": "Sink (Spruce)",
       "gui.ls_furniture.cupboard.label_cupboard": "Cupboard",
       "block.ls_furniture.oak_cupboard_vent_on": "Oak Cupboard Vent",
+      "block.ls_furniture.oak_log_nailed": "Oak Log (Nailed)",
       "block.ls_furniture.oak_door_mangrove": "Oak Door (Mangrove)",
       "block.ls_furniture.mangrove_table_corner": "Mangrove Table",
       "block.ls_furniture.dark_oak_cupboard": "Dark Oak Cupboard",
       "block.ls_furniture.connecting_oak_slash": "Oak Planks (Slash)",
       "block.ls_furniture.computer_cod": "Computer",
       "block.ls_furniture.mangrove_leaves_frosted": "Mangrove Leaves (Frosted)",
-      "gui.ls_furniture.masonry_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.connecting_acacia_glass": "Acacia Glass",
+      "gui.ls_furniture.masonry_gui.tooltip_connected_textures": "Connected Textures",
       "gui.ls_furniture.carpentry_2_gui.tooltip_connected_textures": "Connected Textures",
       "block.ls_furniture.framed_oak_big_bricks": "Oak Planks (Big Bricks)",
       "block.ls_furniture.oak_leaves_dandilion": "Oak Leaves (Dandilion)",
@@ -34921,12 +35233,13 @@
       "block.ls_furniture.mangrove_table_none": "Mangrove Table",
       "gui.ls_furniture.recipe_explainer.label_additional": "Additional",
       "block.ls_furniture.crimson_nether_wart_counter_corner": "Counter (Crimson/Nether Wart)",
+      "block.ls_furniture.jungle_log_nailed": "Jungle Log (Nailed)",
       "block.ls_furniture.spruce_cupboard_vent_on": "Spruce Cupboard Vent",
       "block.ls_furniture.quartz_oven": "Oven (Quartz)",
       "block.ls_furniture.framed_oak_horizontal_stripes": "Oak Planks (Horizontal Stripes)",
       "block.ls_furniture.connecting_dark_oak_plain": "Dark Oak Planks (Plain)",
-      "block.ls_furniture.andesite_path_10": "Andesite Path",
       "block.ls_furniture.birch_planks_door": "Birch Planks",
+      "block.ls_furniture.andesite_path_10": "Andesite Path",
       "block.ls_furniture.andesite_path_11": "Andesite Path",
       "block.ls_furniture.andesite_path_12": "Andesite Path",
       "gui.ls_furniture.desk.label_inventory": "Inventory",
@@ -34936,24 +35249,25 @@
       "block.ls_furniture.spruce_chair": "Spruce Chair",
       "block.ls_furniture.acacia_log_reinforced": "Acacia Log (Reinforced)",
       "block.ls_furniture.jungle_shelve": "Jungle Shelve",
-      "block.ls_furniture.crimson_table_end": "Crimson Table",
-      "block.ls_furniture.dark_oak_black_sofa": "Dark Oak Black Sofa",
       "item.ls_furniture.saw": "Saw",
+      "block.ls_furniture.dark_oak_black_sofa": "Dark Oak Black Sofa",
+      "block.ls_furniture.crimson_table_end": "Crimson Table",
       "block.ls_furniture.mangrove_leaves_poppy": "Mangrove Leaves (Poppy)",
       "gui.ls_furniture.shelve.label_inventory": "Inventory",
       "block.ls_furniture.oak_blinds_top_closed": "Oak Blinds",
       "block.ls_furniture.birch_table_straight": "Birch Table",
-      "block.ls_furniture.crimson_table_straight": "Crimson Table",
       "block.ls_furniture.dark_oak_table_corner": "Dark Oak Table",
+      "block.ls_furniture.crimson_table_straight": "Crimson Table",
       "block.ls_furniture.spruce_table_straight": "Spruce Table",
       "block.ls_furniture.tv_stand_minecraft": "TV",
       "block.ls_furniture.spruce_counter_corner": "Counter (Spruce)",
       "block.ls_furniture.crimson_counter_corner": "Counter (Crimson/Nether Wart)",
-      "block.ls_furniture.andesite_oven": "Oven (Andesite)",
+      "block.ls_furniture.acacia_log_pillar": "Acacia Log (Pillar)",
       "block.ls_furniture.darkoakwardrobe_2": "Spruce Wardrobe",
+      "block.ls_furniture.andesite_oven": "Oven (Andesite)",
       "block.ls_furniture.darkoakwardrobe_1": "Dark Oak Wardrobe",
-      "block.ls_furniture.framed_oak_mosaic": "Oak Planks (Mosaic)",
       "block.ls_furniture.darkoakwardrobe_0": "Dark Oak Wardrobe",
+      "block.ls_furniture.framed_oak_mosaic": "Oak Planks (Mosaic)",
       "block.ls_furniture.sprucewardrobe": "Spurce Wardrobe",
       "block.ls_furniture.warped_mail_box": "Warped Mail Box",
       "gui.ls_furniture.recipe_explainer.label_secondary": "Secondary",
@@ -34976,8 +35290,8 @@
       "gui.ls_furniture.carpentry_gui.tooltip_engineering": "Engineering",
       "block.ls_furniture.dark_oak_counter_corner": "Counter (Dark Oak)",
       "gui.ls_furniture.carpentry_2_gui.tooltip_carpentry": "Carpentry",
-      "block.ls_furniture.mangrove_shelve": "Mangrove Shelve",
       "block.ls_furniture.framed_crimson_plain": "Crimson Planks (Plain)",
+      "block.ls_furniture.mangrove_shelve": "Mangrove Shelve",
       "gui.ls_furniture.cupboard.label_inventory": "Inventory",
       "gui.ls_furniture.freezer.label_inventory": "Inventory",
       "block.ls_furniture.connecting_spruce_glass": "Spruce Glass",
@@ -34997,8 +35311,8 @@
       "block.ls_furniture.spruce_counter": "Counter (Spruce)",
       "block.ls_furniture.connecting_dark_oak_glass_cross": "Dark Oak Glass",
       "block.ls_furniture.connecting_oak_vertical_stripes": "Oak Planks (Vertical Stripes)",
-      "block.ls_furniture.deepslate_path_92": "Deepslate Path",
       "block.ls_furniture.jungle_white_left_end": "Jungle White Sofa",
+      "block.ls_furniture.deepslate_path_92": "Deepslate Path",
       "block.ls_furniture.deepslate_path_91": "Deepslate Path",
       "block.ls_furniture.oak_small_bricks": "Oak Planks (Small Bricks)",
       "block.ls_furniture.oak_sink": "Sink (Oak)",
@@ -35064,6 +35378,7 @@
       "block.ls_furniture.deepslate_path_5": "Deepslate Path",
       "block.ls_furniture.oak_mail_box": "Oak Mail Box",
       "block.ls_furniture.birch_table_cross": "Birch Table",
+      "block.ls_furniture.crimson_stem_nailed": "Crimson Stem (Nailed)",
       "block.ls_furniture.deepslate_path_8": "Deepslate Path",
       "gui.ls_furniture.glassblower_gui.Connected": "",
       "block.ls_furniture.dark_oak_red_sofa": "Dark Oak Red Sofa",
@@ -35073,6 +35388,7 @@
       "block.ls_furniture.jungle_mail_box": "Jungle Mail Box",
       "block.ls_furniture.birch_cupboard": "Birch Cupboard",
       "block.ls_furniture.crimson_table_none": "Crimson Table",
+      "block.ls_furniture.warped_stem_pillar": "Warped Stem (Pillar)",
       "block.ls_furniture.jungle_drawer": "Jungle Drawer",
       "block.ls_furniture.drawer": "Drawer",
       "block.ls_furniture.drainer_plate": "Drainer",
@@ -35120,6 +35436,7 @@
       "gui.ls_furniture.furniture_wood.tooltip_output1": "Output",
       "block.ls_furniture.acacia_white_staright": "Acacia White Sofa",
       "block.ls_furniture.warped_oven": "Oven (Warped)",
+      "block.ls_furniture.jungle_log_pillar": "Jungle Log (Pillar)",
       "gui.ls_furniture.furniture_teddys.tooltip_paths": "Paths",
       "block.ls_furniture.jungle_table_none": "Jungle Table",
       "gui.ls_furniture.furniture_chisel.label_recipe": "Recipe",
@@ -35143,6 +35460,7 @@
       "block.ls_furniture.oak_diagonal": "Oak Planks (Diagonal)",
       "block.ls_furniture.connecting_oak_glass_pane": "Oak Glass Pane",
       "block.ls_furniture.framed_oak_checkered": "Oak Planks (Checkered)",
+      "block.ls_furniture.mangrove_log_nailed": "Mangrove Log (Nailed)",
       "block.ls_furniture.crimson_white_straight": "Crimson White Sofa",
       "block.ls_furniture.framed_dark_oak_plain": "Dark Oak Planks (Plain)",
       "gui.ls_furniture.furniture_chisel.tooltip_paths": "Paths",
@@ -35187,9 +35505,11 @@
       "block.ls_furniture.framed_oak_vertical_stripes": "Oak Planks (Vertical Stripes)",
       "block.ls_furniture.spruce_white_sofa": "Spruce White Sofa",
       "block.ls_furniture.dark_oak_blue_sofa": "Dark Oak Blue Sofa",
+      "block.ls_furniture.dark_oak_log_nailed": "Dark Oak Log (Nailed)",
       "block.ls_furniture.connecting_warped_glass_cross": "Warped Glass",
       "gui.ls_furniture.metalurgy_gui.tooltip_carpentry": "Carpentry",
       "block.ls_furniture.spruce_shelve": "Spruce Shelve",
+      "block.ls_furniture.birch_log_pillar": "Birch Log (Pillar)",
       "block.ls_furniture.oak_door_jungle": "Oak Door (Jungle)",
       "gui.ls_furniture.botanist_gui.tooltip_connected_textures": "Connected Textures",
       "gui.ls_furniture.engineering_gui.tooltip_connected_textures": "Connected Textures",
@@ -35345,6 +35665,7 @@
       "block.ls_furniture.jungle_sink": "Sink (Jungle)",
       "block.ls_furniture.spruce_white_corner": "Spruce White Sofa",
       "block.ls_furniture.acacia_leaves_poppy": "Acacia Leaves (Poppy)",
+      "block.ls_furniture.mangrove_log_pillar": "Mangrove Log (Pillar)",
       "block.ls_furniture.oak_leaves_poppy": "Oak Leaves (Poppy)",
       "block.ls_furniture.connecting_spruce_plain": "Spruce Planks (Plain)",
       "gui.ls_furniture.carpentry_2_gui.label_carpentry": "Carpentry",
@@ -35433,6 +35754,7 @@
       "block.ls_furniture.jungle_leaves_blue_orchid": "Jungle Leaves (Blue Orchid)",
       "gui.ls_furniture.glassblower_gui.tooltip_masonry": "Botanist",
       "gui.ls_furniture.masonry_gui.Connected": "",
+      "block.ls_furniture.dark_oak_log_pillar": "Dark Oak Log (Pillar)",
       "block.ls_furniture.birch_granite_counter_corner": "Counter (Birch/Granite)",
       "block.ls_furniture.jungle_counter_corner": "Counter (Jungle)",
       "block.ls_furniture.spruce_white_right_end": "Spruce White Sofa",
@@ -35440,10 +35762,12 @@
       "block.ls_furniture.jungle_plant": "Oak Plant",
       "gui.ls_furniture.furniture_decorations.tooltip_paths": "Paths",
       "block.ls_furniture.birch_white_corner": "Birch White Sofa",
+      "block.ls_furniture.oak_log_pillar": "Oak Log (Pillar)",
       "block.ls_furniture.crimson_desk": "Crimson Desk",
       "block.ls_furniture.crimson_sink": "Sink (Crimson)",
       "block.ls_furniture.iron_straight": "Iron Glass Table",
       "block.ls_furniture.jungle_leaves_dandilion": "Jungle Leaves (Dandilion)",
+      "block.ls_furniture.birch_log_nailed": "Birch Log (Nailed)",
       "block.ls_furniture.oak_vertical_stripes": "Oak Planks (Vertical Stripes)",
       "block.ls_furniture.mangrove_table_end": " Mangrove Table",
       "block.ls_furniture.oak_door_spruce": "Oak Door (Spruce)",
@@ -36345,8 +36669,13 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "emi",
+      "fusion",
       "jade",
+      "patchouli",
       "geckolib",
+      "reauth",
+      "allmods",
       "jei"
     ],
     "currentGenerator": "forge-1.19.2",

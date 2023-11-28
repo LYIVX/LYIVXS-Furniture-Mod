@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_top_spruce",
+    "up": "ls_furniture:blocks/log_top_spruce",
+    "north": "ls_furniture:blocks/log_nailed_spruce",
+    "east": "ls_furniture:blocks/log_nailed_spruce",
+    "south": "ls_furniture:blocks/log_nailed_spruce",
+    "west": "ls_furniture:blocks/log_nailed_spruce",
+    "particle": "ls_furniture:blocks/log_top_spruce"
+  },
+  "render_type": "solid"
+}

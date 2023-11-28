@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_pillar_acacia_top",
+    "up": "ls_furniture:blocks/log_pillar_acacia_top",
+    "north": "ls_furniture:blocks/log_pillar_acacia",
+    "east": "ls_furniture:blocks/log_pillar_acacia",
+    "south": "ls_furniture:blocks/log_pillar_acacia",
+    "west": "ls_furniture:blocks/log_pillar_acacia",
+    "particle": "ls_furniture:blocks/log_pillar_acacia_top"
+  },
+  "render_type": "solid"
+}

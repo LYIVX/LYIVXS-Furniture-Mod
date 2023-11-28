@@ -1035,6 +1035,24 @@ public class LsFurnitureModItems {
 	public static final RegistryObject<Item> WARPED_STEM_BUNDLE = block(LsFurnitureModBlocks.WARPED_STEM_BUNDLE, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> CRIMSON_STEM_REINFORCED = block(LsFurnitureModBlocks.CRIMSON_STEM_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
 	public static final RegistryObject<Item> WARPED_STEM_REINFORCED = block(LsFurnitureModBlocks.WARPED_STEM_REINFORCED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LOG_PILLAR = block(LsFurnitureModBlocks.OAK_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LOG_PILLAR = block(LsFurnitureModBlocks.DARK_OAK_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LOG_PILLAR = block(LsFurnitureModBlocks.SPRUCE_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LOG_PILLAR = block(LsFurnitureModBlocks.ACACIA_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LOG_PILLAR = block(LsFurnitureModBlocks.BIRCH_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LOG_PILLAR = block(LsFurnitureModBlocks.JUNGLE_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LOG_PILLAR = block(LsFurnitureModBlocks.MANGROVE_LOG_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> CRIMSON_STEM_PILLAR = block(LsFurnitureModBlocks.CRIMSON_STEM_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> WARPED_STEM_PILLAR = block(LsFurnitureModBlocks.WARPED_STEM_PILLAR, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> OAK_LOG_NAILED = block(LsFurnitureModBlocks.OAK_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> DARK_OAK_LOG_NAILED = block(LsFurnitureModBlocks.DARK_OAK_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> SPRUCE_LOG_NAILED = block(LsFurnitureModBlocks.SPRUCE_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> ACACIA_LOG_NAILED = block(LsFurnitureModBlocks.ACACIA_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> BIRCH_LOG_NAILED = block(LsFurnitureModBlocks.BIRCH_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> JUNGLE_LOG_NAILED = block(LsFurnitureModBlocks.JUNGLE_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> MANGROVE_LOG_NAILED = block(LsFurnitureModBlocks.MANGROVE_LOG_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> CRIMSON_STEM_NAILED = block(LsFurnitureModBlocks.CRIMSON_STEM_NAILED, LsFurnitureModTabs.TAB_TAB_2);
+	public static final RegistryObject<Item> WARPED_STEM_NAILED = block(LsFurnitureModBlocks.WARPED_STEM_NAILED, LsFurnitureModTabs.TAB_TAB_2);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

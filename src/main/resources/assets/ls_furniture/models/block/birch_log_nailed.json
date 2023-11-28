@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_top_birch",
+    "up": "ls_furniture:blocks/log_top_birch",
+    "north": "ls_furniture:blocks/log_nailed_birch",
+    "east": "ls_furniture:blocks/log_nailed_birch",
+    "south": "ls_furniture:blocks/log_nailed_birch",
+    "west": "ls_furniture:blocks/log_nailed_birch",
+    "particle": "ls_furniture:blocks/log_top_birch"
+  },
+  "render_type": "solid"
+}

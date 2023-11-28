@@ -22,13 +22,43 @@ description="Furniture Mod"
 
 
 [[dependencies.ls_furniture]]
+    modId="emi"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="fusion"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
     modId="jade"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
+    modId="patchouli"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
     modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="reauth"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="allmods"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

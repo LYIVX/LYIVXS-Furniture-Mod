@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_pillar_dark_oak_top",
+    "up": "ls_furniture:blocks/log_pillar_dark_oak_top",
+    "north": "ls_furniture:blocks/log_pillar_dark_oak",
+    "east": "ls_furniture:blocks/log_pillar_dark_oak",
+    "south": "ls_furniture:blocks/log_pillar_dark_oak",
+    "west": "ls_furniture:blocks/log_pillar_dark_oak",
+    "particle": "ls_furniture:blocks/log_pillar_dark_oak_top"
+  },
+  "render_type": "solid"
+}

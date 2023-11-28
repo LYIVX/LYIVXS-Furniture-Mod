@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/log_pillar_jungle_top",
+    "up": "ls_furniture:blocks/log_pillar_jungle_top",
+    "north": "ls_furniture:blocks/log_pillar_jungle",
+    "east": "ls_furniture:blocks/log_pillar_jungle",
+    "south": "ls_furniture:blocks/log_pillar_jungle",
+    "west": "ls_furniture:blocks/log_pillar_jungle",
+    "particle": "ls_furniture:blocks/log_pillar_jungle_top"
+  },
+  "render_type": "solid"
+}

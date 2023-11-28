@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/logs_top_jungle",
-    "up": "ls_furniture:blocks/logs_top_jungle",
-    "north": "ls_furniture:blocks/log_jungle_bundle",
-    "east": "ls_furniture:blocks/log_jungle_bundle",
-    "south": "ls_furniture:blocks/log_jungle_bundle",
-    "west": "ls_furniture:blocks/log_jungle_bundle",
-    "particle": "ls_furniture:blocks/logs_top_jungle"
+    "down": "ls_furniture:blocks/log_bundle_jungle_top",
+    "up": "ls_furniture:blocks/log_bundle_jungle_top",
+    "north": "ls_furniture:blocks/log_bundle_jungle",
+    "east": "ls_furniture:blocks/log_bundle_jungle",
+    "south": "ls_furniture:blocks/log_bundle_jungle",
+    "west": "ls_furniture:blocks/log_bundle_jungle",
+    "particle": "ls_furniture:blocks/log_bundle_jungle_top"
   },
   "render_type": "solid"
 }

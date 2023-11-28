@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ls_furniture:blocks/warped_stem_top",
+    "up": "ls_furniture:blocks/warped_stem_top",
+    "north": "ls_furniture:blocks/stem_nailed_warped",
+    "east": "ls_furniture:blocks/stem_nailed_warped",
+    "south": "ls_furniture:blocks/stem_nailed_warped",
+    "west": "ls_furniture:blocks/stem_nailed_warped",
+    "particle": "ls_furniture:blocks/warped_stem_top"
+  },
+  "render_type": "solid"
+}
