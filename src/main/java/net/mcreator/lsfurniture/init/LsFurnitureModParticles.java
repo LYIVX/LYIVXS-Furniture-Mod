@@ -15,6 +15,6 @@ import net.mcreator.lsfurniture.client.particle.KettleParticleParticle;
 public class LsFurnitureModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
-		event.register(LsFurnitureModParticleTypes.KETTLE_PARTICLE.get(), KettleParticleParticle::provider);
+		event.registerSpriteSet(LsFurnitureModParticleTypes.KETTLE_PARTICLE.get(), KettleParticleParticle::provider);
 	}
 }

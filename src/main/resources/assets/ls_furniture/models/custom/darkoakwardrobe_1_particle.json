@@ -1,6 +1,6 @@
 {
-  "parent": "ls_furniture:displaysettings/wardrobepart.item",
+  "parent": "ls_furniture:displaysettings/fridge_frezzer_bottom.item",
   "textures": {
-    "particle": "ls_furniture:blocks/planks_dark_oak"
+    "particle": "ls_furniture:block/planks_dark_oak"
   }
 }

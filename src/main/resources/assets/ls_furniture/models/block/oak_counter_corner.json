@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/counter_corner",
   "textures": {
-    "all": "ls_furniture:blocks/planks_oak",
-    "particle": "ls_furniture:blocks/planks_oak",
-    "Counter Top": "ls_furniture:blocks/stripped_oak",
-    "Stripped": "ls_furniture:blocks/stripped_oak"
+    "all": "ls_furniture:block/planks_oak",
+    "particle": "ls_furniture:block/planks_oak",
+    "Counter Top": "ls_furniture:block/stripped_oak",
+    "Stripped": "ls_furniture:block/stripped_oak"
   },
   "render_type": "solid"
 }

@@ -32,10 +32,10 @@ public class SeatDiesProcedure {
 				return false;
 			}
 		}.checkGamemode(sourceentity)) {
-			world.levelEvent(2001, new BlockPos(x, y, z), Block.getId((world.getBlockState(new BlockPos(x, y, z)))));
+			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId((world.getBlockState(BlockPos.containing(x, y, z)))));
 			{
-				BlockPos _pos = new BlockPos(x, y, z);
-				Block.dropResources(world.getBlockState(_pos), world, new BlockPos(x, y, z), null);
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
 				world.destroyBlock(_pos, false);
 			}
 			{
@@ -57,8 +57,8 @@ public class SeatDiesProcedure {
 				return false;
 			}
 		}.checkGamemode(sourceentity)) {
-			world.levelEvent(2001, new BlockPos(x, y, z), Block.getId((world.getBlockState(new BlockPos(x, y, z)))));
-			world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId((world.getBlockState(BlockPos.containing(x, y, z)))));
+			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			{
 				final Vec3 _center = new Vec3((x + 0.5), y, (z + 0.5));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))

@@ -58,6 +58,6 @@ public class WorldInteractionRecipeCategory implements IRecipeCategory<WorldInte
         builder.addSlot(RecipeIngredientRole.INPUT, 50, 1).addIngredients(recipe.getIngredients().get(1)).setSlotName("Tool");
 
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 108, 1).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 108, 1).addItemStack(recipe.getResultItem(null));
     }
 }

@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.AcaciaDrawerTileEntity;
 
-public class AcaciaDrawerBlockModel extends AnimatedGeoModel<AcaciaDrawerTileEntity> {
+public class AcaciaDrawerBlockModel extends GeoModel<AcaciaDrawerTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(AcaciaDrawerTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
@@ -19,6 +19,6 @@ public class AcaciaDrawerBlockModel extends AnimatedGeoModel<AcaciaDrawerTileEnt
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaDrawerTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_acacia.png");
+		return new ResourceLocation("ls_furniture", "textures/block/drawer_acacia.png");
 	}
 }

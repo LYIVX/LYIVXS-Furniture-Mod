@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.JungleDrawerTileEntity;
 
-public class JungleDrawerBlockModel extends AnimatedGeoModel<JungleDrawerTileEntity> {
+public class JungleDrawerBlockModel extends GeoModel<JungleDrawerTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(JungleDrawerTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
@@ -19,6 +19,6 @@ public class JungleDrawerBlockModel extends AnimatedGeoModel<JungleDrawerTileEnt
 
 	@Override
 	public ResourceLocation getTextureResource(JungleDrawerTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_jungle.png");
+		return new ResourceLocation("ls_furniture", "textures/block/drawer_jungle.png");
 	}
 }

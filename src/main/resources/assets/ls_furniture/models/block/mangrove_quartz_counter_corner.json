@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/counter_corner",
   "textures": {
-    "all": "ls_furniture:blocks/planks_mangrove",
-    "particle": "ls_furniture:blocks/planks_mangrove",
-    "Counter Top": "ls_furniture:blocks/quartz_block_top",
-    "Stripped": "ls_furniture:blocks/stripped_mangrove"
+    "all": "ls_furniture:block/planks_mangrove",
+    "particle": "ls_furniture:block/planks_mangrove",
+    "Counter Top": "ls_furniture:block/quartz_block_top",
+    "Stripped": "ls_furniture:block/stripped_mangrove"
   },
   "render_type": "solid"
 }

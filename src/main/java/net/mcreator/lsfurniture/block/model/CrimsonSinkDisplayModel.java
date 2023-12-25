@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.CrimsonSinkDisplayItem;
 
-public class CrimsonSinkDisplayModel extends AnimatedGeoModel<CrimsonSinkDisplayItem> {
+public class CrimsonSinkDisplayModel extends GeoModel<CrimsonSinkDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonSinkDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/sink.animation.json");
@@ -19,6 +19,6 @@ public class CrimsonSinkDisplayModel extends AnimatedGeoModel<CrimsonSinkDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/sink_crimson.png");
+		return new ResourceLocation("ls_furniture", "textures/block/sink_crimson.png");
 	}
 }

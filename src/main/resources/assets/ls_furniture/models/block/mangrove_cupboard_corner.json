@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/cupboard_corner",
   "textures": {
-    "all": "ls_furniture:blocks/planks_mangrove",
-    "particle": "ls_furniture:blocks/planks_mangrove",
-    "0": "ls_furniture:blocks/stripped_mangrove",
-    "1": "ls_furniture:blocks/stripped_mangrove"
+    "all": "ls_furniture:block/planks_mangrove",
+    "particle": "ls_furniture:block/planks_mangrove",
+    "0": "ls_furniture:block/stripped_mangrove",
+    "1": "ls_furniture:block/stripped_mangrove"
   },
   "render_type": "cutout_mipped"
 }

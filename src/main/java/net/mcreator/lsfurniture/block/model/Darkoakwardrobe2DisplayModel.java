@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.Darkoakwardrobe2DisplayItem;
 
-public class Darkoakwardrobe2DisplayModel extends AnimatedGeoModel<Darkoakwardrobe2DisplayItem> {
+public class Darkoakwardrobe2DisplayModel extends GeoModel<Darkoakwardrobe2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(Darkoakwardrobe2DisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
@@ -19,6 +19,6 @@ public class Darkoakwardrobe2DisplayModel extends AnimatedGeoModel<Darkoakwardro
 
 	@Override
 	public ResourceLocation getTextureResource(Darkoakwardrobe2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_dark_oak.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_dark_oak.png");
 	}
 }

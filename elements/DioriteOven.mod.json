@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "oven_diorite",
@@ -51,7 +51,9 @@
       }
     ],
     "name": "Oven (Diorite)",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
@@ -131,6 +133,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -147,19 +150,14 @@
     "onTickUpdate": {
       "name": "OvenPro0"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
+    "blocksToReplace": [],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "oven.geo.json",
-    "displaySettings": "bed_side_draw.item.json"
+    "displaySettings": "oven.item.json"
   }
 }

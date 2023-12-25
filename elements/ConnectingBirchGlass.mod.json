@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "connecting_birch_glass",
@@ -34,7 +34,9 @@
       }
     ],
     "name": "Birch Glass",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 0.8,
     "resistance": 1.3,
     "hasGravity": false,
@@ -117,7 +119,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

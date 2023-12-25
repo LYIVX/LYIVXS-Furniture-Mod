@@ -1,6 +1,6 @@
 {
-  "parent": "ls_furniture:displaysettings/fidge_frezzer.item",
+  "parent": "ls_furniture:displaysettings/fridge_frezzer_top.item",
   "textures": {
-    "particle": "ls_furniture:blocks/iron_block"
+    "particle": "ls_furniture:block/iron_block"
   }
 }

@@ -13,8 +13,6 @@
  */
 package net.mcreator.lsfurniture;
 
-import software.bernie.geckolib3.GeckoLib;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -31,7 +29,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.lsfurniture.init.LsFurnitureModTabs;
 import net.mcreator.lsfurniture.init.LsFurnitureModSounds;
 import net.mcreator.lsfurniture.init.LsFurnitureModParticleTypes;
 import net.mcreator.lsfurniture.init.LsFurnitureModMenus;
@@ -56,7 +53,6 @@ public class LsFurnitureMod {
 
 	public LsFurnitureMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-		LsFurnitureModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		LsFurnitureModSounds.REGISTRY.register(bus);
 		LsFurnitureModBlocks.REGISTRY.register(bus);
@@ -65,9 +61,9 @@ public class LsFurnitureMod {
 		LsFurnitureModBlockEntities.REGISTRY.register(bus);
 
 		LsFurnitureModParticleTypes.REGISTRY.register(bus);
+
 		LsFurnitureModMenus.REGISTRY.register(bus);
 
-		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

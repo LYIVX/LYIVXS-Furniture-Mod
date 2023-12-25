@@ -1,7 +1,14 @@
 {
-  "parent": "block/template_glass_pane_noside",
+  "parent": "ls_furniture:block/mt-ct/f_noside",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "pane": "ls_furniture:blocks/connecting_acacia_glass"
+    "pane": "ls_furniture:block/connecting_acacia_glass"
   },
   "render_type": "translucent"
 }

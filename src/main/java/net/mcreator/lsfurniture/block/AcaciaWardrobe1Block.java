@@ -28,6 +28,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -74,6 +75,11 @@ public class AcaciaWardrobe1Block extends BaseEntityBlock implements EntityBlock
 	@Override
 	public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
 		return LsFurnitureModBlockEntities.ACACIA_WARDROBE_1.get().create(blockPos, blockState);
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

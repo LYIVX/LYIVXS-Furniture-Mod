@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_straight",
   "textures": {
-    "all": "ls_furniture:blocks/table_straight_spruce",
-    "particle": "ls_furniture:blocks/table_straight_spruce",
-    "1": "ls_furniture:blocks/table_straight_spruce"
+    "all": "ls_furniture:block/table_straight_spruce",
+    "particle": "ls_furniture:block/table_straight_spruce",
+    "1": "ls_furniture:block/table_straight_spruce"
   },
   "render_type": "cutout"
 }

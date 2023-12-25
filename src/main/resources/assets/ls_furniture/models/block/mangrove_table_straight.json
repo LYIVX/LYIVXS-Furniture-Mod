@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_straight",
   "textures": {
-    "all": "ls_furniture:blocks/table_straight_mangrove",
-    "particle": "ls_furniture:blocks/table_straight_mangrove",
-    "1": "ls_furniture:blocks/table_straight_mangrove"
+    "all": "ls_furniture:block/table_straight_mangrove",
+    "particle": "ls_furniture:block/table_straight_mangrove",
+    "1": "ls_furniture:block/table_straight_mangrove"
   },
   "render_type": "cutout"
 }

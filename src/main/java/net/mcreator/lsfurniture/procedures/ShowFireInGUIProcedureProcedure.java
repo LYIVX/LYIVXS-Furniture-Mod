@@ -13,7 +13,7 @@ public class ShowFireInGUIProcedureProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "fuelticks") > 0) {
+		}.getValue(world, BlockPos.containing(x, y, z), "fuelticks") > 0) {
 			return true;
 		}
 		return false;

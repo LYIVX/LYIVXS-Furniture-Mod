@@ -1,24 +1,24 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.FridgeFreezerBlock2DisplayItem;
 
-public class FridgeFreezerBlock2DisplayModel extends AnimatedGeoModel<FridgeFreezerBlock2DisplayItem> {
+public class FridgeFreezerBlock2DisplayModel extends GeoModel<FridgeFreezerBlock2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(FridgeFreezerBlock2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "animations/fidge_frezzer2.animation.json");
+		return new ResourceLocation("ls_furniture", "animations/fridge_frezzer_top.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(FridgeFreezerBlock2DisplayItem animatable) {
-		return new ResourceLocation("ls_furniture", "geo/fidge_frezzer2.geo.json");
+		return new ResourceLocation("ls_furniture", "geo/fridge_frezzer_top.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(FridgeFreezerBlock2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/iron_block.png");
+		return new ResourceLocation("ls_furniture", "textures/block/iron_block.png");
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "enderman",
@@ -88,7 +88,9 @@
       }
     ],
     "name": "Enderman Teddy",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 0.8,
     "resistance": 0.8,
     "hasGravity": false,
@@ -174,7 +176,7 @@
     "onRightClicked": {
       "name": "EndermanTeddyOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

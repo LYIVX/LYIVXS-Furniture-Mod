@@ -13,6 +13,6 @@ public class OvenTimeRemaining2Procedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "smeltingtime2"));
+		}.getValue(world, BlockPos.containing(x, y, z), "smeltingtime2"));
 	}
 }

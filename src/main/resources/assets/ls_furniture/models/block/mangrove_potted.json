@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/flower_pot",
   "textures": {
-    "all": "ls_furniture:blocks/flower_pot",
-    "particle": "ls_furniture:blocks/flower_pot",
-    "log": "ls_furniture:blocks/log_mangrove",
-    "flowerpot": "ls_furniture:blocks/flower_pot",
-    "leave": "ls_furniture:blocks/leaves_mangrove",
-    "dirt": "ls_furniture:blocks/dirt"
+    "all": "ls_furniture:block/flower_pot",
+    "particle": "ls_furniture:block/flower_pot",
+    "log": "ls_furniture:block/log_mangrove",
+    "flowerpot": "ls_furniture:block/flower_pot",
+    "leave": "ls_furniture:block/leaves_mangrove",
+    "dirt": "ls_furniture:block/dirt"
   },
   "render_type": "cutout_mipped"
 }

@@ -1,14 +1,14 @@
 {
   "parent": "ls_furniture:custom/fire_place",
   "textures": {
-    "all": "ls_furniture:blocks/bricks",
-    "particle": "ls_furniture:blocks/bricks",
-    "Stone Bricks": "ls_furniture:blocks/stone_bricks",
-    "Bricks": "ls_furniture:blocks/bricks",
-    "Fire": "ls_furniture:blocks/invisible",
-    "coal": "ls_furniture:blocks/coal_block",
-    "Black": "ls_furniture:blocks/black_concrete",
-    "Iron Bars": "ls_furniture:blocks/iron_bars"
+    "all": "ls_furniture:block/bricks",
+    "particle": "ls_furniture:block/bricks",
+    "Stone Bricks": "ls_furniture:block/stone_bricks",
+    "Bricks": "ls_furniture:block/bricks",
+    "Fire": "ls_furniture:block/invisible",
+    "coal": "ls_furniture:block/coal_block",
+    "Black": "ls_furniture:block/black_concrete",
+    "Iron Bars": "ls_furniture:block/iron_bars"
   },
   "render_type": "cutout_mipped"
 }

@@ -26,7 +26,7 @@ import net.mcreator.lsfurniture.LsFurnitureMod;
 public class LsFurnitureModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, LsFurnitureMod.MODID);
 	public static final RegistryObject<EntityType<SeatEntity>> SEAT = register("seat",
-			EntityType.Builder.<SeatEntity>of(SeatEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(SeatEntity::new).fireImmune().sized(0.95f, 0.63f));
+			EntityType.Builder.<SeatEntity>of(SeatEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(SeatEntity::new).fireImmune().sized(0.95f, 0.01f));
 	public static final RegistryObject<EntityType<SofaEntity>> SOFA = register("sofa",
 			EntityType.Builder.<SofaEntity>of(SofaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(SofaEntity::new).fireImmune().sized(0.88f, 0.63f));
 	public static final RegistryObject<EntityType<ChairEntity>> CHAIR = register("chair",

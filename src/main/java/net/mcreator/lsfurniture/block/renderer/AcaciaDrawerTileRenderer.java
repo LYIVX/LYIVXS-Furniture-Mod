@@ -1,25 +1,21 @@
 package net.mcreator.lsfurniture.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
+import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.lsfurniture.block.model.AcaciaDrawerBlockModel;
 import net.mcreator.lsfurniture.block.entity.AcaciaDrawerTileEntity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class AcaciaDrawerTileRenderer extends GeoBlockRenderer<AcaciaDrawerTileEntity> {
-	public AcaciaDrawerTileRenderer(BlockEntityRendererProvider.Context rendererDispatcherIn) {
-		super(rendererDispatcherIn, new AcaciaDrawerBlockModel());
+	public AcaciaDrawerTileRenderer() {
+		super(new AcaciaDrawerBlockModel());
 	}
 
 	@Override
-	public RenderType getRenderType(AcaciaDrawerTileEntity animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(AcaciaDrawerTileEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

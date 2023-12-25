@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/tv-stand",
   "textures": {
-    "all": "ls_furniture:blocks/computer_minecraft",
-    "particle": "ls_furniture:blocks/anvil_flat",
-    "1": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/computer_minecraft_animation"
+    "all": "ls_furniture:block/computer_minecraft",
+    "particle": "ls_furniture:block/anvil_flat",
+    "1": "ls_furniture:block/anvil_flat",
+    "3": "ls_furniture:block/computer_minecraft_animation"
   },
   "render_type": "solid"
 }

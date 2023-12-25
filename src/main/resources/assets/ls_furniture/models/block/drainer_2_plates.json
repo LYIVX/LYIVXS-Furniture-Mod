@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/drainer_plate2",
   "textures": {
-    "all": "ls_furniture:blocks/anvil",
-    "particle": "ls_furniture:blocks/anvil",
-    "1": "ls_furniture:blocks/plate_rack"
+    "all": "ls_furniture:block/anvil",
+    "particle": "ls_furniture:block/anvil",
+    "1": "ls_furniture:block/plate_rack"
   },
   "render_type": "solid"
 }

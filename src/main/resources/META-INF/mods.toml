@@ -1,40 +1,28 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[45,)"
 license="All Rights Reserved"
 
 [[mods]]
 modId="ls_furniture"
-version="0.4.1"
+version="0.5.2"
 displayName="LYIVX's Furniture"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://curseforge.com/minecraft/mc-mods/lyivxs-furniture"
 logoFile="logo.png"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="LYIVX, MCreator"
 description="Furniture Mod"
 
 [[dependencies.ls_furniture]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2]"
+    versionRange="[1.19.4]"
     ordering="NONE"
     side="BOTH"
 
 
 
-[[dependencies.ls_furniture]]
-    modId="emi"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.ls_furniture]]
     modId="fusion"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="jade"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
@@ -47,18 +35,6 @@ description="Furniture Mod"
     side="BOTH"
 [[dependencies.ls_furniture]]
     modId="geckolib"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="reauth"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="allmods"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

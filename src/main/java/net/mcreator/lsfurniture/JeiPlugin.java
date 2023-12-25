@@ -25,6 +25,18 @@ public class JeiPlugin implements IModPlugin {
     public static RecipeType<MetallurgyRecipe> METALLURGY_TYPE =
             new RecipeType<>(MetallurgyRecipeCategory.UID, MetallurgyRecipe.class);
 
+    public static RecipeType<BotanistRecipe> BOTANIST_TYPE =
+            new RecipeType<>(BotanistRecipeCategory.UID, BotanistRecipe.class);
+
+    public static RecipeType<EngineeringRecipe> ENGINEERING_TYPE =
+            new RecipeType<>(EngineeringRecipeCategory.UID, EngineeringRecipe.class);
+
+    public static RecipeType<WeaveryRecipe> WEAVERY_TYPE =
+            new RecipeType<>(WeaveryRecipeCategory.UID, WeaveryRecipe.class);
+
+    public static RecipeType<GlassblowerRecipe> GLASSBLOWER_TYPE =
+            new RecipeType<>(GlassblowerRecipeCategory.UID, GlassblowerRecipe.class);
+
     public static RecipeType<WorldInteractionRecipe> WORLD_INTERACTION_TYPE =
             new RecipeType<>(WorldInteractionRecipeCategory.UID, WorldInteractionRecipe.class);
 
@@ -39,6 +51,10 @@ public class JeiPlugin implements IModPlugin {
         registration.addRecipeCategories(new CarpentryTickRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new MasonryRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new MetallurgyRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new BotanistRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new EngineeringRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new WeaveryRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new GlassblowerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new WorldInteractionRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
@@ -57,6 +73,18 @@ public class JeiPlugin implements IModPlugin {
 
         List<MetallurgyRecipe> recipesCraftingMetallurgy = rm.getAllRecipesFor(MetallurgyRecipe.Type.INSTANCE);
         registration.addRecipes(METALLURGY_TYPE, recipesCraftingMetallurgy);
+
+        List<BotanistRecipe> recipesCraftingBotanist = rm.getAllRecipesFor(BotanistRecipe.Type.INSTANCE);
+        registration.addRecipes(BOTANIST_TYPE, recipesCraftingBotanist);
+
+        List<EngineeringRecipe> recipesCraftingEngineering = rm.getAllRecipesFor(EngineeringRecipe.Type.INSTANCE);
+        registration.addRecipes(ENGINEERING_TYPE, recipesCraftingEngineering);
+
+        List<WeaveryRecipe> recipesCraftingWeavery = rm.getAllRecipesFor(WeaveryRecipe.Type.INSTANCE);
+        registration.addRecipes(WEAVERY_TYPE, recipesCraftingWeavery);
+
+        List<GlassblowerRecipe> recipesCraftingGlassblower = rm.getAllRecipesFor(GlassblowerRecipe.Type.INSTANCE);
+        registration.addRecipes(GLASSBLOWER_TYPE, recipesCraftingGlassblower);
 
         List<WorldInteractionRecipe> recipesCraftingWorldInteraction = rm.getAllRecipesFor(WorldInteractionRecipe.Type.INSTANCE);
         registration.addRecipes(WORLD_INTERACTION_TYPE, recipesCraftingWorldInteraction);

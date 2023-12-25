@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/chair",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_acacia",
-    "Pattern": "ls_furniture:blocks/pattern_acacia",
-    "Log": "ls_furniture:blocks/log_acacia",
-    "Wool": "ls_furniture:blocks/wool_white",
-    "Stripped": "ls_furniture:blocks/stripped_acacia"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/planks_acacia",
+    "Pattern": "ls_furniture:block/pattern_acacia",
+    "Log": "ls_furniture:block/log_acacia",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_acacia"
   },
   "render_type": "cutout_mipped"
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "bricks",
@@ -70,7 +70,9 @@
       }
     ],
     "name": "Counter (Oak/Bricks)",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 310.0,
     "hasGravity": false,
@@ -165,7 +167,7 @@
     "onDestroyedByExplosion": {
       "name": "OakBricksCounterBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

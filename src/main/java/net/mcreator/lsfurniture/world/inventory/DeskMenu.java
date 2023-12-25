@@ -268,9 +268,9 @@ public class DeskMenu extends AbstractContainerMenu implements Supplier<Map<Inte
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
 					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.set(p_38904_.split(slot1.getMaxStackSize()));
+						slot1.setByPlayer(p_38904_.split(slot1.getMaxStackSize()));
 					} else {
-						slot1.set(p_38904_.split(p_38904_.getCount()));
+						slot1.setByPlayer(p_38904_.split(p_38904_.getCount()));
 					}
 					slot1.setChanged();
 					flag = true;

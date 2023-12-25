@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.BirchGraniteSinkTileEntity;
 
-public class BirchGraniteSinkBlockModel extends AnimatedGeoModel<BirchGraniteSinkTileEntity> {
+public class BirchGraniteSinkBlockModel extends GeoModel<BirchGraniteSinkTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BirchGraniteSinkTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/sink.animation.json");
@@ -19,6 +19,6 @@ public class BirchGraniteSinkBlockModel extends AnimatedGeoModel<BirchGraniteSin
 
 	@Override
 	public ResourceLocation getTextureResource(BirchGraniteSinkTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/sink_birch_granite.png");
+		return new ResourceLocation("ls_furniture", "textures/block/sink_birch_granite.png");
 	}
 }

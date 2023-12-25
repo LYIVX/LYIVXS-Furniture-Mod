@@ -9,13 +9,13 @@ public class DarkOakBlindsBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		String groupTag = "";
 		groupTag = "forge" + ":" + "dark_oak_blinds";
-		if ((world.getBlockState(new BlockPos(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
 			DarkOakBlindsMainProcedure.execute(world, x, (y - 1), z);
 		}
-		if ((world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
+		if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
 			DarkOakBlindsMainProcedure.execute(world, x, (y + 1), z);
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))) {
 			DarkOakBlindsMainProcedure.execute(world, x, y, z);
 		}
 	}

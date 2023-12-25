@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/fire_place_chimney",
   "textures": {
-    "all": "ls_furniture:blocks/bricks",
-    "particle": "ls_furniture:blocks/bricks",
-    "Bricks": "ls_furniture:blocks/bricks"
+    "all": "ls_furniture:block/bricks",
+    "particle": "ls_furniture:block/bricks",
+    "Bricks": "ls_furniture:block/bricks"
   },
   "render_type": "cutout_mipped"
 }

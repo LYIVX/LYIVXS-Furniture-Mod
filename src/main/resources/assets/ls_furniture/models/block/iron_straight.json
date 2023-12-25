@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_straight_glass",
   "textures": {
-    "all": "ls_furniture:blocks/iron_straight",
-    "particle": "ls_furniture:blocks/iron_straight",
-    "0": "ls_furniture:blocks/iron_straight"
+    "all": "ls_furniture:block/iron_straight",
+    "particle": "ls_furniture:block/iron_straight",
+    "0": "ls_furniture:block/iron_straight"
   },
   "render_type": "cutout_mipped"
 }

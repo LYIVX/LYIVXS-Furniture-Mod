@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/bookshelf_plank_door"
+    "layer0": "ls_furniture:item/door_bookshelf_planks"
   },
   "render_type": "translucent"
 }

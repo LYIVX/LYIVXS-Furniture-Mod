@@ -1,8 +1,15 @@
 {
   "parent": "block/cube_all",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:blocks/connecting_dark_oak_glass_cross",
-    "particle": "ls_furniture:blocks/connecting_dark_oak_glass_cross"
+    "all": "ls_furniture:block/connecting_dark_oak_glass_cross",
+    "particle": "ls_furniture:block/connecting_dark_oak_glass_cross"
   },
   "render_type": "cutout"
 }

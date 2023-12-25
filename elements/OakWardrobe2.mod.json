@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "wardrobe_oak",
@@ -33,7 +33,9 @@
       }
     ],
     "name": "Oak Wardrobe",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -113,6 +115,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -132,19 +135,14 @@
     "onDestroyedByExplosion": {
       "name": "WardrobeBlockDestroyed"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
+    "blocksToReplace": [],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "wardrobe_top.geo.json",
-    "displaySettings": "wardrobepart.item.json"
+    "displaySettings": "wardrobe_bottom.item.json"
   }
 }

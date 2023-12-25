@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:blocks/connecting_warped_glass"
+    "layer0": "ls_furniture:block/connecting_warped_glass"
   },
   "render_type": "translucent"
 }

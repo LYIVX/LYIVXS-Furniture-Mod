@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.AcaciaDioriteSinkDisplayItem;
 
-public class AcaciaDioriteSinkDisplayModel extends AnimatedGeoModel<AcaciaDioriteSinkDisplayItem> {
+public class AcaciaDioriteSinkDisplayModel extends GeoModel<AcaciaDioriteSinkDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(AcaciaDioriteSinkDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/sink.animation.json");
@@ -19,6 +19,6 @@ public class AcaciaDioriteSinkDisplayModel extends AnimatedGeoModel<AcaciaDiorit
 
 	@Override
 	public ResourceLocation getTextureResource(AcaciaDioriteSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/sink_acacia_diorite.png");
+		return new ResourceLocation("ls_furniture", "textures/block/sink_acacia_diorite.png");
 	}
 }

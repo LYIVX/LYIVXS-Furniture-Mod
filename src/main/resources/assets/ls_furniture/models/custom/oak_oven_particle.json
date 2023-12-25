@@ -1,6 +1,6 @@
 {
-  "parent": "ls_furniture:displaysettings/bed_side_draw.item",
+  "parent": "ls_furniture:displaysettings/oven.item",
   "textures": {
-    "particle": "ls_furniture:blocks/iron_block"
+    "particle": "ls_furniture:block/iron_block"
   }
 }

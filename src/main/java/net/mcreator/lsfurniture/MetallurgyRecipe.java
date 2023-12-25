@@ -34,7 +34,7 @@ public class MetallurgyRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer p_44001_) {
+    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
         return output;
     }
 
@@ -46,6 +46,11 @@ public class MetallurgyRecipe implements Recipe<SimpleContainer> {
     @Override
     public boolean canCraftInDimensions(int p_43999_, int p_44000_) {
         return true;
+    }
+
+    @Override
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
+        return output.copy();
     }
 
     @Override
@@ -62,10 +67,6 @@ public class MetallurgyRecipe implements Recipe<SimpleContainer> {
     public RecipeType<?> getType() {
 
         return Type.INSTANCE;
-    }
-
-    public ItemStack getResultItem() {
-        return output.copy();
     }
 
     public static class Type implements RecipeType<MetallurgyRecipe> {
@@ -113,7 +114,7 @@ public class MetallurgyRecipe implements Recipe<SimpleContainer> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
             }
-            buf.writeItemStack(recipe.getResultItem(), false);
+            buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
 }

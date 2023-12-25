@@ -3,10 +3,7 @@
   "values": [
     "minecraft:jungle_planks",
     "ls_furniture:connecting_jungle_small_bricks",
-    "ls_furniture:framed_jungle_small_bricks",
     "ls_furniture:connecting_jungle_stripped",
-    "ls_furniture:framed_jungle_plain",
-    "ls_furniture:framed_jungle_stripped",
     "ls_furniture:connecting_jungle_plain"
   ]
 }

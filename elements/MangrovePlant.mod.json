@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "plant",
   "definition": {
     "renderType": 2,
@@ -29,7 +29,9 @@
       }
     ],
     "name": "Oak Plant",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:TAB"
     },
@@ -79,7 +81,7 @@
     "canBePlacedOn": [],
     "isBonemealable": false,
     "frequencyOnChunks": 0,
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "generationType": "Flower",
     "patchSize": 11,

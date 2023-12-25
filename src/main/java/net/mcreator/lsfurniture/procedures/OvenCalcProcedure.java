@@ -14,6 +14,6 @@ public class OvenCalcProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "tagName")) / 4.54;
+		}.getValue(world, BlockPos.containing(x, y, z), "tagName")) / 4.54;
 	}
 }

@@ -1,11 +1,11 @@
 {
   "parent": "ls_furniture:custom/stool",
   "textures": {
-    "all": "ls_furniture:blocks/planks_acacia",
-    "particle": "ls_furniture:blocks/planks_acacia",
-    "Log": "ls_furniture:blocks/log_acacia",
-    "Stripped": "ls_furniture:blocks/stripped_acacia",
-    "Wool": "ls_furniture:blocks/invisible"
+    "all": "ls_furniture:block/planks_acacia",
+    "particle": "ls_furniture:block/planks_acacia",
+    "Log": "ls_furniture:block/log_acacia",
+    "Stripped": "ls_furniture:block/stripped_acacia",
+    "Wool": "ls_furniture:block/invisible"
   },
   "render_type": "cutout"
 }

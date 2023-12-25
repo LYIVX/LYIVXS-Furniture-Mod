@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "glowstone",
@@ -124,7 +124,9 @@
       }
     ],
     "name": "Oven Vent",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
@@ -210,7 +212,7 @@
     "onRightClicked": {
       "name": "OvenVentOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

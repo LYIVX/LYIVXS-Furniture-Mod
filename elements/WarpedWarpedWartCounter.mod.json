@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "counter_warped_warped_wart",
@@ -51,7 +51,6 @@
       }
     ],
     "name": "Counter (Warped/Warped Wart)",
-    "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -131,6 +130,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [
       0,
@@ -184,7 +184,6 @@
     "onDestroyedByExplosion": {
       "name": "WarpedWarpedWartCounterBlockAdded"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

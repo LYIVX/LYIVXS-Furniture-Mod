@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.OakCounterTileEntity;
 
-public class OakCounterBlockModel extends AnimatedGeoModel<OakCounterTileEntity> {
+public class OakCounterBlockModel extends GeoModel<OakCounterTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(OakCounterTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class OakCounterBlockModel extends AnimatedGeoModel<OakCounterTileEntity>
 
 	@Override
 	public ResourceLocation getTextureResource(OakCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_oak.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_oak.png");
 	}
 }

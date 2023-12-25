@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "computer_cod",
@@ -61,7 +61,9 @@
       }
     ],
     "name": "TV",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
@@ -147,7 +149,7 @@
     "onRightClicked": {
       "name": "TVStandOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

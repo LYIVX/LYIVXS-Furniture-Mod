@@ -22,9 +22,9 @@ public class DrainerOnBlockRightClickedProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.RACK.get().asItem()
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER.get()) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRAINER_PLATE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -57,9 +57,9 @@ public class DrainerOnBlockRightClickedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.PLATE.get().asItem()
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_PLATE.get()) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_PLATE.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRANIER_1_PLATE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -92,9 +92,9 @@ public class DrainerOnBlockRightClickedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.PLATE.get().asItem()
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRANIER_1_PLATE.get()) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRANIER_1_PLATE.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRAINER_2_PLATES.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -127,9 +127,9 @@ public class DrainerOnBlockRightClickedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_2_PLATES.get()) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_2_PLATES.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRANIER_1_PLATE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -163,9 +163,9 @@ public class DrainerOnBlockRightClickedProcedure {
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRANIER_1_PLATE.get()) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRANIER_1_PLATE.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRAINER_PLATE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -198,9 +198,10 @@ public class DrainerOnBlockRightClickedProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem() && (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_PLATE.get()) {
+		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DRAINER_PLATE.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.DRAINER.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

@@ -3,6 +3,7 @@ package net.mcreator.lsfurniture;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -33,7 +34,7 @@ public class CarpentryTickRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer p_44001_) {
+    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
         return output;
     }
 
@@ -47,7 +48,8 @@ public class CarpentryTickRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
-    public ItemStack getResultItem() {
+    @Override
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
         return output.copy();
     }
 
@@ -112,7 +114,7 @@ public class CarpentryTickRecipe implements Recipe<SimpleContainer> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
             }
-            buf.writeItemStack(recipe.getResultItem(), false);
+            buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
 }

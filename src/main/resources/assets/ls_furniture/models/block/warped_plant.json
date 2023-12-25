@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
   "textures": {
-    "all": "ls_furniture:blocks/plant_warped",
-    "particle": "ls_furniture:blocks/plant_warped",
-    "log": "ls_furniture:blocks/stem_warped_animation",
-    "leave": "ls_furniture:blocks/warped_wart_block"
+    "all": "ls_furniture:block/plant_warped",
+    "particle": "ls_furniture:block/plant_warped",
+    "log": "ls_furniture:block/stem_warped_animation",
+    "leave": "ls_furniture:block/warped_wart_block"
   },
   "render_type": "cutout"
 }

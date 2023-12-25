@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.JungleNetherBricksCounterDisplayItem;
 
-public class JungleNetherBricksCounterDisplayModel extends AnimatedGeoModel<JungleNetherBricksCounterDisplayItem> {
+public class JungleNetherBricksCounterDisplayModel extends GeoModel<JungleNetherBricksCounterDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(JungleNetherBricksCounterDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class JungleNetherBricksCounterDisplayModel extends AnimatedGeoModel<Jung
 
 	@Override
 	public ResourceLocation getTextureResource(JungleNetherBricksCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_jungle_nether_brick.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_jungle_nether_brick.png");
 	}
 }

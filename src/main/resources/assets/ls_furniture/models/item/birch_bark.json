@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/birch_bark"
+    "layer0": "ls_furniture:item/birch_bark"
   }
 }

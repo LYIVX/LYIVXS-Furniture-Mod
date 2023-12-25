@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_cross",
   "textures": {
-    "all": "ls_furniture:blocks/table_cross_jungle",
-    "particle": "ls_furniture:blocks/table_cross_jungle",
-    "1": "ls_furniture:blocks/table_cross_jungle"
+    "all": "ls_furniture:block/table_cross_jungle",
+    "particle": "ls_furniture:block/table_cross_jungle",
+    "1": "ls_furniture:block/table_cross_jungle"
   },
   "render_type": "cutout"
 }

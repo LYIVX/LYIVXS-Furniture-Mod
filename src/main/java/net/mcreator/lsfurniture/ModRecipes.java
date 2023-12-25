@@ -23,6 +23,18 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<MetallurgyRecipe>> METALLURGY_SERIALIZER =
             SERIALIZERS.register("metallurgy", () -> MetallurgyRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<BotanistRecipe>> BOTANIST_SERIALIZER =
+            SERIALIZERS.register("botanist", () -> BotanistRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<EngineeringRecipe>> ENGINEERING_SERIALIZER =
+            SERIALIZERS.register("engineering", () -> EngineeringRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<WeaveryRecipe>> WEAVERY_SERIALIZER =
+            SERIALIZERS.register("weavery", () -> WeaveryRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<GlassblowerRecipe>> Glassblower_SERIALIZER =
+            SERIALIZERS.register("glassblower", () -> GlassblowerRecipe.Serializer.INSTANCE);
+
     public static final RegistryObject<RecipeSerializer<WorldInteractionRecipe>> WORLD_INTERACTION_SERIALIZER =
             SERIALIZERS.register("world_interaction", () -> WorldInteractionRecipe.Serializer.INSTANCE);
 

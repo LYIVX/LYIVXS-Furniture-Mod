@@ -8,7 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Checkbox;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.lsfurniture.world.inventory.CarpentryGUIMenu;
 import net.mcreator.lsfurniture.procedures.Disablepictureadditional3Procedure;
@@ -152,13 +151,11 @@ public class CarpentryGUIScreen extends AbstractContainerScreen<CarpentryGUIMenu
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		imagebutton_tab_deselect = new ImageButton(this.leftPos + 78, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new CarpentryGUIButtonMessage(0, x, y, z));
@@ -231,7 +228,7 @@ public class CarpentryGUIScreen extends AbstractContainerScreen<CarpentryGUIMenu
 		});
 		guistate.put("button:imagebutton_wool", imagebutton_wool);
 		this.addRenderableWidget(imagebutton_wool);
-		imagebutton_arrow_left = new ImageButton(this.leftPos + -15, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
+		imagebutton_arrow_left = new ImageButton(this.leftPos + -16, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new CarpentryGUIButtonMessage(9, x, y, z));
 				CarpentryGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);

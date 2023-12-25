@@ -37,9 +37,6 @@ public class WrenchOnBlockRightClickedProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModItems.WRENCH.get()) {
-			if (!entity.isShiftKeyDown()) {
-				WrenchConnectedChangerProcedure.execute(world, x, y, z);
-			}
 			if (entity.isShiftKeyDown()) {
 				if ((new Object() {
 					public Direction getDirection(BlockState _bs) {
@@ -51,10 +48,10 @@ public class WrenchOnBlockRightClickedProcedure {
 								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
 								: Direction.NORTH;
 					}
-				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.NORTH) {
+				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 					{
 						Direction _dir = Direction.EAST;
-						BlockPos _pos = new BlockPos(x, y, z);
+						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 						if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -75,10 +72,10 @@ public class WrenchOnBlockRightClickedProcedure {
 								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
 								: Direction.NORTH;
 					}
-				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.EAST) {
+				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 					{
 						Direction _dir = Direction.SOUTH;
-						BlockPos _pos = new BlockPos(x, y, z);
+						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 						if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -99,10 +96,10 @@ public class WrenchOnBlockRightClickedProcedure {
 								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
 								: Direction.NORTH;
 					}
-				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.SOUTH) {
+				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 					{
 						Direction _dir = Direction.WEST;
-						BlockPos _pos = new BlockPos(x, y, z);
+						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 						if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -123,10 +120,10 @@ public class WrenchOnBlockRightClickedProcedure {
 								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
 								: Direction.NORTH;
 					}
-				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.WEST) {
+				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 					{
 						Direction _dir = Direction.NORTH;
-						BlockPos _pos = new BlockPos(x, y, z);
+						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 						if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {

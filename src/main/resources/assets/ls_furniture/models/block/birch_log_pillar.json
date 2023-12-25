@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/log_pillar_birch_top",
-    "up": "ls_furniture:blocks/log_pillar_birch_top",
-    "north": "ls_furniture:blocks/log_pillar_birch",
-    "east": "ls_furniture:blocks/log_pillar_birch",
-    "south": "ls_furniture:blocks/log_pillar_birch",
-    "west": "ls_furniture:blocks/log_pillar_birch",
-    "particle": "ls_furniture:blocks/log_pillar_birch_top"
+    "down": "ls_furniture:block/log_pillar_birch_top",
+    "up": "ls_furniture:block/log_pillar_birch_top",
+    "north": "ls_furniture:block/log_pillar_birch",
+    "east": "ls_furniture:block/log_pillar_birch",
+    "south": "ls_furniture:block/log_pillar_birch",
+    "west": "ls_furniture:block/log_pillar_birch",
+    "particle": "ls_furniture:block/log_pillar_birch_top"
   },
   "render_type": "solid"
 }

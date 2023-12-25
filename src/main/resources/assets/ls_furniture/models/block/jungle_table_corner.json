@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner",
   "textures": {
-    "all": "ls_furniture:blocks/table_corner_jungle",
-    "particle": "ls_furniture:blocks/table_corner_jungle",
-    "1": "ls_furniture:blocks/log_jungle",
-    "2": "ls_furniture:blocks/table_corner_jungle"
+    "all": "ls_furniture:block/table_corner_jungle",
+    "particle": "ls_furniture:block/table_corner_jungle",
+    "1": "ls_furniture:block/log_jungle",
+    "2": "ls_furniture:block/table_corner_jungle"
   },
   "render_type": "cutout"
 }

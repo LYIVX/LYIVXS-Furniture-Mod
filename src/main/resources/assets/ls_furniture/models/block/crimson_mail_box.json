@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_crimson",
-    "particle": "ls_furniture:blocks/planks_crimson",
-    "0": "ls_furniture:blocks/stem_crimson_animation",
-    "1": "ls_furniture:blocks/stripped_crimson",
-    "2": "ls_furniture:blocks/stem_crimson_animation",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_crimson",
+    "particle": "ls_furniture:block/planks_crimson",
+    "0": "ls_furniture:block/stem_crimson_animation",
+    "1": "ls_furniture:block/stripped_crimson",
+    "2": "ls_furniture:block/stem_crimson_animation",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "solid"
 }

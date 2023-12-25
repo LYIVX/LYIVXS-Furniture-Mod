@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/shelve",
   "textures": {
-    "all": "ls_furniture:blocks/planks_dark_oak",
-    "particle": "ls_furniture:blocks/planks_dark_oak",
-    "1": "ls_furniture:blocks/stripped_dark_oak",
-    "2": "ls_furniture:blocks/log_dark_oak"
+    "all": "ls_furniture:block/planks_dark_oak",
+    "particle": "ls_furniture:block/planks_dark_oak",
+    "1": "ls_furniture:block/stripped_dark_oak",
+    "2": "ls_furniture:block/log_dark_oak"
   },
   "render_type": "solid"
 }

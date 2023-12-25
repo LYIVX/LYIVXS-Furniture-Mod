@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "table_cross_mangrove",
@@ -34,7 +34,9 @@
       }
     ],
     "name": "Mangrove Table",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -129,7 +131,7 @@
     "onDestroyedByExplosion": {
       "name": "MangroveTableBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

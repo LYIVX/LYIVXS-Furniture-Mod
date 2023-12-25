@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.CrimsonOvenTileEntity;
 
-public class CrimsonOvenBlockModel extends AnimatedGeoModel<CrimsonOvenTileEntity> {
+public class CrimsonOvenBlockModel extends GeoModel<CrimsonOvenTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonOvenTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/oven.animation.json");
@@ -19,6 +19,6 @@ public class CrimsonOvenBlockModel extends AnimatedGeoModel<CrimsonOvenTileEntit
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oven_crimson.png");
+		return new ResourceLocation("ls_furniture", "textures/block/oven_crimson.png");
 	}
 }

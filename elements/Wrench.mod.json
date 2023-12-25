@@ -1,13 +1,17 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "tool",
   "definition": {
     "toolType": "Special",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "wrench",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Shears",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:TAB"
     },
@@ -18,7 +22,6 @@
     "damageVsEntity": 4.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": true,

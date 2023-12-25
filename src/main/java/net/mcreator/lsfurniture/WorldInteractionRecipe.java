@@ -34,7 +34,7 @@ public class WorldInteractionRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer p_44001_) {
+    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
         return output;
     }
 
@@ -48,7 +48,8 @@ public class WorldInteractionRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
-    public ItemStack getResultItem() {
+    @Override
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
         return output.copy();
     }
 
@@ -113,7 +114,7 @@ public class WorldInteractionRecipe implements Recipe<SimpleContainer> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
             }
-            buf.writeItemStack(recipe.getResultItem(), false);
+            buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
 }

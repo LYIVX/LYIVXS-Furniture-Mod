@@ -18,7 +18,7 @@ public class DisablePictureBlock1Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos(x, y, z), 0)) {
+		}.getAmount(world, BlockPos.containing(x, y, z), 0)) {
 			return false;
 		}
 		return true;

@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_end",
   "textures": {
-    "all": "ls_furniture:blocks/table_end_acacia",
-    "particle": "ls_furniture:blocks/table_end_acacia",
-    "1": "ls_furniture:blocks/log_acacia",
-    "2": "ls_furniture:blocks/table_end_acacia"
+    "all": "ls_furniture:block/table_end_acacia",
+    "particle": "ls_furniture:block/table_end_acacia",
+    "1": "ls_furniture:block/log_acacia",
+    "2": "ls_furniture:block/table_end_acacia"
   },
   "render_type": "cutout"
 }

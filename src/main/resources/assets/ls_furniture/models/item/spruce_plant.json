@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/spruce_plant"
+    "layer0": "ls_furniture:item/spruce_plant"
   }
 }

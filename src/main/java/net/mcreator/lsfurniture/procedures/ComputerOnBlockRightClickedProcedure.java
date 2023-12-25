@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class ComputerOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_OFF.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_OFF.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.COMPUTER_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -43,9 +43,9 @@ public class ComputerOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_ON.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_ON.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.COMPUTER_MINECRAFT.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -73,9 +73,9 @@ public class ComputerOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_MINECRAFT.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_MINECRAFT.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.COMPUTER_COD.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -103,9 +103,9 @@ public class ComputerOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_COD.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.COMPUTER_COD.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.COMPUTER_OFF.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

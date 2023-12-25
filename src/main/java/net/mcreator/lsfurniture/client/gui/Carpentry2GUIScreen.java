@@ -8,7 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Checkbox;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.lsfurniture.world.inventory.Carpentry2GUIMenu;
 import net.mcreator.lsfurniture.procedures.Disablepictureadditional3Procedure;
@@ -90,7 +89,7 @@ public class Carpentry2GUIScreen extends AbstractContainerScreen<Carpentry2GUIMe
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_large.png"));
-		this.blit(ms, this.leftPos + 0, this.topPos + -6, 0, 0, 68, 12, 68, 12);
+		this.blit(ms, this.leftPos + -1, this.topPos + -6, 0, 0, 68, 12, 68, 12);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/furniture_crafter_brown_background_chisel.png"));
 		this.blit(ms, this.leftPos + 53, this.topPos + 7, 0, 0, 127, 72, 127, 72);
@@ -152,13 +151,11 @@ public class Carpentry2GUIScreen extends AbstractContainerScreen<Carpentry2GUIMe
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		imagebutton_tab_deselect = new ImageButton(this.leftPos + 78, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect.png"), 32, 64, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new Carpentry2GUIButtonMessage(0, x, y, z));
@@ -231,7 +228,7 @@ public class Carpentry2GUIScreen extends AbstractContainerScreen<Carpentry2GUIMe
 		});
 		guistate.put("button:imagebutton_wool", imagebutton_wool);
 		this.addRenderableWidget(imagebutton_wool);
-		imagebutton_arrow_left = new ImageButton(this.leftPos + -15, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
+		imagebutton_arrow_left = new ImageButton(this.leftPos + -16, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new Carpentry2GUIButtonMessage(9, x, y, z));
 				Carpentry2GUIButtonMessage.handleButtonAction(entity, 9, x, y, z);

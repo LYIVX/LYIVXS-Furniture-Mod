@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner_glass",
   "textures": {
-    "all": "ls_furniture:blocks/iron_corner",
-    "particle": "ls_furniture:blocks/iron_corner",
-    "1": "ls_furniture:blocks/anvil_flat",
-    "2": "ls_furniture:blocks/iron_corner"
+    "all": "ls_furniture:block/iron_corner",
+    "particle": "ls_furniture:block/iron_corner",
+    "1": "ls_furniture:block/anvil_flat",
+    "2": "ls_furniture:block/iron_corner"
   },
   "render_type": "cutout_mipped"
 }

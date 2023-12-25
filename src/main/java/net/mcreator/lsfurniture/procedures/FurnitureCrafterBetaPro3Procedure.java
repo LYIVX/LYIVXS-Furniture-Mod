@@ -18,7 +18,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 		if (entity == null)
 			return;
 		double slot_number = 0;
-		if (((new Object() {
+		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -26,7 +26,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount() >= 1) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -36,8 +36,8 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 0)).copy());
-				_setstack.setCount(((new Object() {
+				}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy());
+				_setstack.setCount((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
@@ -45,14 +45,14 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount());
+				}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 0;
-					final int _amount = ((new Object() {
+					final int _amount = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -60,7 +60,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount();
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getCount();
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
@@ -71,7 +71,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 				}
 			}
 		}
-		if (((new Object() {
+		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -79,7 +79,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount() >= 1) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -89,8 +89,8 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 1)).copy());
-				_setstack.setCount(((new Object() {
+				}.getItemStack(world, BlockPos.containing(x, y, z), 1)).copy());
+				_setstack.setCount((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
@@ -98,14 +98,14 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount());
+				}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 1;
-					final int _amount = ((new Object() {
+					final int _amount = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -113,7 +113,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount();
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getCount();
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
@@ -124,7 +124,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 				}
 			}
 		}
-		if (((new Object() {
+		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -132,7 +132,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount() >= 1) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -142,8 +142,8 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 2)).copy());
-				_setstack.setCount(((new Object() {
+				}.getItemStack(world, BlockPos.containing(x, y, z), 2)).copy());
+				_setstack.setCount((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
@@ -151,14 +151,14 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount());
+				}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 2;
-					final int _amount = ((new Object() {
+					final int _amount = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -166,7 +166,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount();
+					}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getCount();
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
@@ -177,7 +177,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 				}
 			}
 		}
-		if (((new Object() {
+		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -185,7 +185,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount() >= 1) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -195,8 +195,8 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 3)).copy());
-				_setstack.setCount(((new Object() {
+				}.getItemStack(world, BlockPos.containing(x, y, z), 3)).copy());
+				_setstack.setCount((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
@@ -204,14 +204,14 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount());
+				}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final int _amount = ((new Object() {
+					final int _amount = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -219,7 +219,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount();
+					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getCount();
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
@@ -230,7 +230,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 				}
 			}
 		}
-		if (((new Object() {
+		if ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -238,7 +238,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount() >= 1) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
@@ -248,8 +248,8 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 4)).copy());
-				_setstack.setCount(((new Object() {
+				}.getItemStack(world, BlockPos.containing(x, y, z), 4)).copy());
+				_setstack.setCount((new Object() {
 					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
@@ -257,14 +257,14 @@ public class FurnitureCrafterBetaPro3Procedure {
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount());
+				}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 4;
-					final int _amount = ((new Object() {
+					final int _amount = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -272,7 +272,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount();
+					}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getCount();
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
@@ -285,7 +285,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 		}
 		slot_number = 5;
 		for (int index0 = 0; index0 < 23; index0++) {
-			if (((new Object() {
+			if ((new Object() {
 				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 					BlockEntity _ent = world.getBlockEntity(pos);
@@ -293,12 +293,12 @@ public class FurnitureCrafterBetaPro3Procedure {
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 					return _retval.get();
 				}
-			}.getItemStack(world, new BlockPos(x, y, z), (int) slot_number))).getCount() >= 1) {
+			}.getItemStack(world, BlockPos.containing(x, y, z), (int) slot_number)).getCount() >= 1) {
 				{
-					BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = (int) slot_number;
-						final int _amount = ((new Object() {
+						final int _amount = (new Object() {
 							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 								BlockEntity _ent = world.getBlockEntity(pos);
@@ -306,7 +306,7 @@ public class FurnitureCrafterBetaPro3Procedure {
 									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 								return _retval.get();
 							}
-						}.getItemStack(world, new BlockPos(x, y, z), (int) slot_number))).getCount();
+						}.getItemStack(world, BlockPos.containing(x, y, z), (int) slot_number)).getCount();
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								ItemStack _stk = capability.getStackInSlot(_slotid).copy();

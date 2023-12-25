@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.Cupboard",
+				"identifier": "geometry.cupboard",
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 3,
@@ -29,24 +29,24 @@
 						{"origin": [-7, 1, 6], "size": [14, 14, 2], "uv": [0, 18]},
 						{"origin": [-7, 1, 0], "size": [14, 1, 2], "uv": [28, 35]},
 						{"origin": [-7, 14, 0], "size": [14, 1, 2], "uv": [32, 26]},
-						{"origin": [-7, 1, 2], "size": [14, 1, 4], "uv": [28, 30]},
-						{"origin": [-7, 14, 2], "size": [14, 1, 4], "uv": [32, 18]}
+						{"origin": [-7, 1, 2], "size": [14, 1, 4], "uv": [32, 18]},
+						{"origin": [-7, 14, 2], "size": [14, 1, 4], "uv": [28, 30]}
 					]
 				},
 				{
 					"name": "right",
 					"pivot": [6, 8.25, 0],
 					"cubes": [
-						{"origin": [0, 2, 0], "size": [7, 12, 1], "uv": [48, 0]},
-						{"origin": [1, 6, -0.01], "size": [4, 4, 0], "uv": [0, 4]}
+						{"origin": [0, 2, 0], "size": [7, 12, 1], "uv": [36, 38]},
+						{"origin": [1, 6, -0.01], "size": [4, 4, 0], "uv": [0, 0]}
 					]
 				},
 				{
 					"name": "left",
 					"pivot": [-6, 8.25, 0],
 					"cubes": [
-						{"origin": [-7, 2, 0], "size": [7, 12, 1], "uv": [36, 38]},
-						{"origin": [-5, 6, -0.01], "size": [4, 4, 0], "uv": [0, 0]}
+						{"origin": [-7, 2, 0], "size": [7, 12, 1], "uv": [48, 0]},
+						{"origin": [-5, 6, -0.01], "size": [4, 4, 0], "uv": [0, 4]}
 					]
 				}
 			]

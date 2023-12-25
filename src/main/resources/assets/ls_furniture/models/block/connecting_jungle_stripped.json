@@ -1,8 +1,15 @@
 {
   "parent": "block/cube_all",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:blocks/connecting_jungle_stripped",
-    "particle": "ls_furniture:blocks/connecting_jungle_stripped"
+    "all": "ls_furniture:block/connecting_jungle_stripped",
+    "particle": "ls_furniture:block/connecting_jungle_stripped"
   },
   "render_type": "solid"
 }

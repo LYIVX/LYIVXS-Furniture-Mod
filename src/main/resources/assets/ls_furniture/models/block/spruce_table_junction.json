@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_junction",
   "textures": {
-    "all": "ls_furniture:blocks/table_junction_spruce",
-    "particle": "ls_furniture:blocks/table_junction_spruce",
-    "1": "ls_furniture:blocks/table_junction_spruce"
+    "all": "ls_furniture:block/table_junction_spruce",
+    "particle": "ls_furniture:block/table_junction_spruce",
+    "1": "ls_furniture:block/table_junction_spruce"
   },
   "render_type": "cutout"
 }

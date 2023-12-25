@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/sink.item",
   "textures": {
-    "particle": "ls_furniture:blocks/planks_mangrove"
+    "particle": "ls_furniture:block/planks_mangrove"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "sink_mangrove",
@@ -51,7 +51,6 @@
       }
     ],
     "name": "Sink (Mangrove)",
-    "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -131,6 +130,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -147,7 +147,6 @@
     "onTickUpdate": {
       "name": "SinkUpdateTick"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

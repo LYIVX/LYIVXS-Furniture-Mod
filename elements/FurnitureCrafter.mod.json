@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "crafting_table_side",
@@ -34,7 +34,9 @@
       }
     ],
     "name": "Furniture Crafter",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -155,7 +157,7 @@
     "onRightClicked": {
       "name": "FurnitureCrafterBetaOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

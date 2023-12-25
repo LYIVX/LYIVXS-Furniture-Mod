@@ -1,6 +1,7 @@
 package net.mcreator.lsfurniture.procedures;
 
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
@@ -23,12 +24,13 @@ public class StoolAddedProcedure {
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos(x, y, z))) == Direction.NORTH) {
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.NORTH) {
 			direction = 180;
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
@@ -36,12 +38,13 @@ public class StoolAddedProcedure {
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos(x, y, z))) == Direction.SOUTH) {
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.SOUTH) {
 			direction = 0;
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
@@ -49,12 +52,13 @@ public class StoolAddedProcedure {
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos(x, y, z))) == Direction.WEST) {
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.WEST) {
 			direction = 90;
 		} else if ((new Object() {
 			public Direction getDirection(BlockPos pos) {
@@ -62,12 +66,13 @@ public class StoolAddedProcedure {
 				Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (property != null && _bs.getValue(property) instanceof Direction _dir)
 					return _dir;
-				property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (property != null && _bs.getValue(property) instanceof Direction.Axis _axis)
-					return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+				else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+					return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
 				return Direction.NORTH;
 			}
-		}.getDirection(new BlockPos(x, y, z))) == Direction.EAST) {
+		}.getDirection(BlockPos.containing(x, y, z))) == Direction.EAST) {
 			direction = -90;
 		}
 		if (world instanceof ServerLevel _level) {
@@ -77,8 +82,8 @@ public class StoolAddedProcedure {
 			entityToSpawn.setYHeadRot((float) direction);
 			entityToSpawn.setDeltaMovement(0, 0, 0);
 			if (entityToSpawn instanceof Mob _mobToSpawn)
-				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-			world.addFreshEntity(entityToSpawn);
+				_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			_level.addFreshEntity(entityToSpawn);
 		}
 	}
 }

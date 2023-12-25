@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.OakWardrobe0TileEntity;
 
-public class OakWardrobe0BlockModel extends AnimatedGeoModel<OakWardrobe0TileEntity> {
+public class OakWardrobe0BlockModel extends GeoModel<OakWardrobe0TileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(OakWardrobe0TileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe.animation.json");
@@ -19,6 +19,6 @@ public class OakWardrobe0BlockModel extends AnimatedGeoModel<OakWardrobe0TileEnt
 
 	@Override
 	public ResourceLocation getTextureResource(OakWardrobe0TileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_oak.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_oak.png");
 	}
 }

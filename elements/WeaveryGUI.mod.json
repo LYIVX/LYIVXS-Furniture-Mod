@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -525,7 +525,7 @@
         "data": {
           "image": "tab_large.png",
           "use1Xscale": false,
-          "x": 119,
+          "x": 120,
           "y": 31
         }
       },

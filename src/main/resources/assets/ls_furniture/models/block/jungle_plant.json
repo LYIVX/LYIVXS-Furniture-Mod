@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
   "textures": {
-    "all": "ls_furniture:blocks/plant_jungle",
-    "particle": "ls_furniture:blocks/plant_jungle",
-    "log": "ls_furniture:blocks/log_jungle",
-    "leave": "ls_furniture:blocks/leaves_jungle"
+    "all": "ls_furniture:block/plant_jungle",
+    "particle": "ls_furniture:block/plant_jungle",
+    "log": "ls_furniture:block/log_jungle",
+    "leave": "ls_furniture:block/leaves_jungle"
   },
   "render_type": "cutout"
 }

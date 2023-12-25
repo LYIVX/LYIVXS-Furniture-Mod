@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.MangroveWardrobe1DisplayItem;
 
-public class MangroveWardrobe1DisplayModel extends AnimatedGeoModel<MangroveWardrobe1DisplayItem> {
+public class MangroveWardrobe1DisplayModel extends GeoModel<MangroveWardrobe1DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(MangroveWardrobe1DisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe_bottom.animation.json");
@@ -19,6 +19,6 @@ public class MangroveWardrobe1DisplayModel extends AnimatedGeoModel<MangroveWard
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveWardrobe1DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_mangrove.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_mangrove.png");
 	}
 }

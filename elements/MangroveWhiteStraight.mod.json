@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "wool_white",
@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_mangrove",
+    "particleTexture": "stripped_mangrove",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -25,43 +25,108 @@
     "boundingBoxes": [
       {
         "mx": 0.0,
+        "my": 10.0,
+        "mz": 13.0,
+        "Mx": 16.0,
+        "My": 12.0,
+        "Mz": 16.5,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 12.0,
+        "mz": 13.8,
+        "Mx": 16.0,
+        "My": 14.0,
+        "Mz": 17.3,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 14.0,
+        "mz": 14.6,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 18.1,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 2.0,
+        "My": 2.0,
+        "Mz": 2.0,
+        "subtract": false
+      },
+      {
+        "mx": 14.0,
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 6.0,
+        "My": 2.0,
+        "Mz": 2.0,
+        "subtract": false
+      },
+      {
+        "mx": 14.0,
+        "my": 0.0,
+        "mz": 14.0,
+        "Mx": 16.0,
+        "My": 2.0,
         "Mz": 16.0,
         "subtract": false
       },
       {
         "mx": 0.0,
-        "my": 6.0,
+        "my": 0.0,
+        "mz": 14.0,
+        "Mx": 2.0,
+        "My": 2.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 3.0,
+        "my": 2.0,
+        "mz": 0.0,
+        "Mx": 13.0,
+        "My": 6.0,
+        "Mz": 13.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 2.0,
+        "mz": 0.0,
+        "Mx": 3.0,
+        "My": 6.0,
+        "Mz": 13.0,
+        "subtract": false
+      },
+      {
+        "mx": 13.0,
+        "my": 2.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 6.0,
+        "Mz": 13.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 2.0,
         "mz": 13.0,
         "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
-        "subtract": false
-      },
-      {
-        "mx": 0.0,
-        "my": 10.0,
-        "mz": 12.0,
-        "Mx": 16.0,
-        "My": 14.0,
-        "Mz": 13.0,
-        "subtract": false
-      },
-      {
-        "mx": 0.0,
-        "my": 6.0,
-        "mz": 0.5,
-        "Mx": 16.0,
         "My": 10.0,
-        "Mz": 13.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
     "name": "Straight White Sofa",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -147,7 +212,7 @@
     "onBlockAdded": {
       "name": "SeatAdded"
     },
-    "onTickUpdate": {
+    "onNeighbourBlockChanges": {
       "name": "MangroveWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
@@ -156,7 +221,7 @@
     "onDestroyedByExplosion": {
       "name": "SeatBlockDestroyed"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

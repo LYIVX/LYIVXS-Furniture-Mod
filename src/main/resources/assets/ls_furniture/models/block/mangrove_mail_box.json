@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_mangrove",
-    "particle": "ls_furniture:blocks/planks_mangrove",
-    "0": "ls_furniture:blocks/log_mangrove",
-    "1": "ls_furniture:blocks/stripped_mangrove",
-    "2": "ls_furniture:blocks/log_mangrove",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_mangrove",
+    "particle": "ls_furniture:block/planks_mangrove",
+    "0": "ls_furniture:block/log_mangrove",
+    "1": "ls_furniture:block/stripped_mangrove",
+    "2": "ls_furniture:block/log_mangrove",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "cutout_mipped"
 }

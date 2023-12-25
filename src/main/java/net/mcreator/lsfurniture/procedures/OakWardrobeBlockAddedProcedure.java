@@ -16,7 +16,7 @@ import java.util.Map;
 public class OakWardrobeBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		Direction direction = Direction.NORTH;
-		if (world.isEmptyBlock(new BlockPos(x, y + 1, z))) {
+		if (world.isEmptyBlock(BlockPos.containing(x, y + 1, z))) {
 			direction = new Object() {
 				public Direction getDirection(BlockState _bs) {
 					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
@@ -25,9 +25,9 @@ public class OakWardrobeBlockAddedProcedure {
 					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 				}
-			}.getDirection((world.getBlockState(new BlockPos(x, y, z))));
+			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))));
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.OAK_WARDROBE_1.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -41,7 +41,7 @@ public class OakWardrobeBlockAddedProcedure {
 				world.setBlock(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos(x, y + 1, z);
+				BlockPos _bp = BlockPos.containing(x, y + 1, z);
 				BlockState _bs = LsFurnitureModBlocks.OAK_WARDROBE_2.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -56,7 +56,7 @@ public class OakWardrobeBlockAddedProcedure {
 			}
 			{
 				Direction _dir = direction;
-				BlockPos _pos = new BlockPos(x, y + 1, z);
+				BlockPos _pos = BlockPos.containing(x, y + 1, z);
 				BlockState _bs = world.getBlockState(_pos);
 				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -69,8 +69,8 @@ public class OakWardrobeBlockAddedProcedure {
 			}
 		} else {
 			{
-				BlockPos _pos = new BlockPos(x, y, z);
-				Block.dropResources(world.getBlockState(_pos), world, new BlockPos(x, y, z), null);
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
 				world.destroyBlock(_pos, false);
 			}
 		}

@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_warped",
-    "particle": "ls_furniture:blocks/planks_warped",
-    "0": "ls_furniture:blocks/stem_warped_animation",
-    "1": "ls_furniture:blocks/stripped_warped",
-    "2": "ls_furniture:blocks/stem_warped_animation",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_warped",
+    "particle": "ls_furniture:block/planks_warped",
+    "0": "ls_furniture:block/stem_warped_animation",
+    "1": "ls_furniture:block/stripped_warped",
+    "2": "ls_furniture:block/stem_warped_animation",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "solid"
 }

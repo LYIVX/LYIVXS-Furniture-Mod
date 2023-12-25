@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/log_bundle_oak_top",
-    "up": "ls_furniture:blocks/log_bundle_oak_top",
-    "north": "ls_furniture:blocks/log_bundle_oak",
-    "east": "ls_furniture:blocks/log_bundle_oak",
-    "south": "ls_furniture:blocks/log_bundle_oak",
-    "west": "ls_furniture:blocks/log_bundle_oak",
-    "particle": "ls_furniture:blocks/log_bundle_oak_top"
+    "down": "ls_furniture:block/log_bundle_oak_top",
+    "up": "ls_furniture:block/log_bundle_oak_top",
+    "north": "ls_furniture:block/log_bundle_oak",
+    "east": "ls_furniture:block/log_bundle_oak",
+    "south": "ls_furniture:block/log_bundle_oak",
+    "west": "ls_furniture:block/log_bundle_oak",
+    "particle": "ls_furniture:block/log_bundle_oak_top"
   },
   "render_type": "solid"
 }

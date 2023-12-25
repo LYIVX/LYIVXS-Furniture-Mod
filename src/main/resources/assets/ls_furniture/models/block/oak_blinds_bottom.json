@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/blinds2",
   "textures": {
-    "all": "ls_furniture:blocks/planks_oak",
-    "particle": "ls_furniture:blocks/planks_oak",
-    "1": "ls_furniture:blocks/planks_oak",
-    "2": "ls_furniture:blocks/white_concrete"
+    "all": "ls_furniture:block/planks_oak",
+    "particle": "ls_furniture:block/planks_oak",
+    "1": "ls_furniture:block/planks_oak",
+    "2": "ls_furniture:block/white_concrete"
   },
   "render_type": "solid"
 }

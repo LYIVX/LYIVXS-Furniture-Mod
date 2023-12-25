@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "desk_dark_oak",
@@ -87,7 +87,6 @@
       }
     ],
     "name": "Dark Oak Desk",
-    "specialInfo": [],
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -167,6 +166,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [
       0,
@@ -208,7 +208,6 @@
     "onRightClicked": {
       "name": "DeskOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

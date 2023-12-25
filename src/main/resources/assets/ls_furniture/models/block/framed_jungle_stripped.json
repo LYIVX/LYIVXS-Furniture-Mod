@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ls_furniture:blocks/connecting_jungle_stripped",
-    "particle": "ls_furniture:blocks/connecting_jungle_stripped"
-  },
-  "render_type": "solid"
-}

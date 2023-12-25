@@ -21,16 +21,17 @@ public class BirchTableCornerProProcedure {
 		BlockState model = Blocks.AIR.defaultBlockState();
 		model = LsFurnitureModBlocks.BIRCH_TABLE_CORNER.get().defaultBlockState();
 		groupTag = "forge" + ":" + "birch_table";
-		if ((world.getBlockState(new BlockPos(x, y, z - 1)).isFaceSturdy(world, new BlockPos(x, y, z - 1), Direction.SOUTH)
-				|| (world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& (world.getBlockState(new BlockPos(x + 1, y, z)).isFaceSturdy(world, new BlockPos(x + 1, y, z), Direction.WEST)
-						|| (world.getBlockState(new BlockPos(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& !world.getBlockState(new BlockPos(x, y, z + 1)).isFaceSturdy(world, new BlockPos(x, y, z + 1), Direction.NORTH)
-				&& !(world.getBlockState(new BlockPos(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& !world.getBlockState(new BlockPos(x - 1, y, z)).isFaceSturdy(world, new BlockPos(x - 1, y, z), Direction.EAST)
-				&& !(world.getBlockState(new BlockPos(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))) && !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == model.getBlock())) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z - 1)).isFaceSturdy(world, BlockPos.containing(x, y, z - 1), Direction.SOUTH)
+				|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& (world.getBlockState(BlockPos.containing(x + 1, y, z)).isFaceSturdy(world, BlockPos.containing(x + 1, y, z), Direction.WEST)
+						|| (world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& !world.getBlockState(BlockPos.containing(x, y, z + 1)).isFaceSturdy(world, BlockPos.containing(x, y, z + 1), Direction.NORTH)
+				&& !(world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !world.getBlockState(BlockPos.containing(x - 1, y, z)).isFaceSturdy(world, BlockPos.containing(x - 1, y, z), Direction.EAST)
+				&& !(world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == model.getBlock())) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = model;
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
@@ -51,7 +52,7 @@ public class BirchTableCornerProProcedure {
 			}
 			{
 				Direction _dir = Direction.NORTH;
-				BlockPos _pos = new BlockPos(x, y, z);
+				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
 				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -63,16 +64,17 @@ public class BirchTableCornerProProcedure {
 				}
 			}
 		}
-		if (!world.getBlockState(new BlockPos(x, y, z - 1)).isFaceSturdy(world, new BlockPos(x, y, z - 1), Direction.SOUTH)
-				&& !(world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x + 1, y, z)).isFaceSturdy(world, new BlockPos(x + 1, y, z), Direction.WEST)
-						|| (world.getBlockState(new BlockPos(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& (world.getBlockState(new BlockPos(x, y, z + 1)).isFaceSturdy(world, new BlockPos(x, y, z + 1), Direction.NORTH)
-						|| (world.getBlockState(new BlockPos(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& !world.getBlockState(new BlockPos(x - 1, y, z)).isFaceSturdy(world, new BlockPos(x - 1, y, z), Direction.EAST)
-				&& !(world.getBlockState(new BlockPos(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))) && !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == model.getBlock())) {
+		if (!world.getBlockState(BlockPos.containing(x, y, z - 1)).isFaceSturdy(world, BlockPos.containing(x, y, z - 1), Direction.SOUTH)
+				&& !(world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x + 1, y, z)).isFaceSturdy(world, BlockPos.containing(x + 1, y, z), Direction.WEST)
+						|| (world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z + 1)).isFaceSturdy(world, BlockPos.containing(x, y, z + 1), Direction.NORTH)
+						|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& !world.getBlockState(BlockPos.containing(x - 1, y, z)).isFaceSturdy(world, BlockPos.containing(x - 1, y, z), Direction.EAST)
+				&& !(world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == model.getBlock())) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = model;
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
@@ -93,7 +95,7 @@ public class BirchTableCornerProProcedure {
 			}
 			{
 				Direction _dir = Direction.EAST;
-				BlockPos _pos = new BlockPos(x, y, z);
+				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
 				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -105,17 +107,17 @@ public class BirchTableCornerProProcedure {
 				}
 			}
 		}
-		if (!world.getBlockState(new BlockPos(x, y, z - 1)).isFaceSturdy(world, new BlockPos(x, y, z - 1), Direction.SOUTH)
-				&& !(world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& !world.getBlockState(new BlockPos(x + 1, y, z)).isFaceSturdy(world, new BlockPos(x + 1, y, z), Direction.WEST)
-				&& !(world.getBlockState(new BlockPos(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x, y, z + 1)).isFaceSturdy(world, new BlockPos(x, y, z + 1), Direction.NORTH)
-						|| (world.getBlockState(new BlockPos(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& (world.getBlockState(new BlockPos(x - 1, y, z)).isFaceSturdy(world, new BlockPos(x - 1, y, z), Direction.EAST)
-						|| (world.getBlockState(new BlockPos(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == model.getBlock())) {
+		if (!world.getBlockState(BlockPos.containing(x, y, z - 1)).isFaceSturdy(world, BlockPos.containing(x, y, z - 1), Direction.SOUTH)
+				&& !(world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !world.getBlockState(BlockPos.containing(x + 1, y, z)).isFaceSturdy(world, BlockPos.containing(x + 1, y, z), Direction.WEST)
+				&& !(world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z + 1)).isFaceSturdy(world, BlockPos.containing(x, y, z + 1), Direction.NORTH)
+						|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& (world.getBlockState(BlockPos.containing(x - 1, y, z)).isFaceSturdy(world, BlockPos.containing(x - 1, y, z), Direction.EAST)
+						|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == model.getBlock())) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = model;
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
@@ -136,7 +138,7 @@ public class BirchTableCornerProProcedure {
 			}
 			{
 				Direction _dir = Direction.SOUTH;
-				BlockPos _pos = new BlockPos(x, y, z);
+				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
 				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
@@ -148,17 +150,17 @@ public class BirchTableCornerProProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z - 1)).isFaceSturdy(world, new BlockPos(x, y, z - 1), Direction.SOUTH)
-				|| (world.getBlockState(new BlockPos(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& !world.getBlockState(new BlockPos(x + 1, y, z)).isFaceSturdy(world, new BlockPos(x + 1, y, z), Direction.WEST)
-				&& !(world.getBlockState(new BlockPos(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& !world.getBlockState(new BlockPos(x, y, z + 1)).isFaceSturdy(world, new BlockPos(x, y, z + 1), Direction.NORTH)
-				&& !(world.getBlockState(new BlockPos(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x - 1, y, z)).isFaceSturdy(world, new BlockPos(x - 1, y, z), Direction.EAST)
-						|| (world.getBlockState(new BlockPos(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
-				&& !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == model.getBlock())) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z - 1)).isFaceSturdy(world, BlockPos.containing(x, y, z - 1), Direction.SOUTH)
+				|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& !world.getBlockState(BlockPos.containing(x + 1, y, z)).isFaceSturdy(world, BlockPos.containing(x + 1, y, z), Direction.WEST)
+				&& !(world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !world.getBlockState(BlockPos.containing(x, y, z + 1)).isFaceSturdy(world, BlockPos.containing(x, y, z + 1), Direction.NORTH)
+				&& !(world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x - 1, y, z)).isFaceSturdy(world, BlockPos.containing(x - 1, y, z), Direction.EAST)
+						|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))))
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == model.getBlock())) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = model;
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
@@ -179,7 +181,7 @@ public class BirchTableCornerProProcedure {
 			}
 			{
 				Direction _dir = Direction.WEST;
-				BlockPos _pos = new BlockPos(x, y, z);
+				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
 				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {

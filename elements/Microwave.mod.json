@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "microwave",
@@ -33,7 +33,6 @@
       }
     ],
     "name": "Microwave",
-    "specialInfo": [],
     "hardness": 4.0,
     "resistance": 5.0,
     "hasGravity": false,
@@ -113,6 +112,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -126,7 +126,6 @@
     "onRightClicked": {
       "name": "MicrowaveOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

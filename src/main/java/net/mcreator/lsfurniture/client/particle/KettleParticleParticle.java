@@ -31,7 +31,6 @@ public class KettleParticleParticle extends TextureSheetParticle {
 	}
 
 	private final SpriteSet spriteSet;
-
 	private float angularVelocity;
 	private float angularAcceleration;
 
@@ -39,7 +38,6 @@ public class KettleParticleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-
 		this.lifetime = 15;
 		this.gravity = -0.05f;
 		this.hasPhysics = true;

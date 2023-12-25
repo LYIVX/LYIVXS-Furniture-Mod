@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/slime_teddy",
   "textures": {
-    "all": "ls_furniture:blocks/slime",
-    "particle": "ls_furniture:blocks/green_wool",
-    "0": "ls_furniture:blocks/slime"
+    "all": "ls_furniture:block/slime",
+    "particle": "ls_furniture:block/green_wool",
+    "0": "ls_furniture:block/slime"
   },
   "render_type": "cutout_mipped"
 }

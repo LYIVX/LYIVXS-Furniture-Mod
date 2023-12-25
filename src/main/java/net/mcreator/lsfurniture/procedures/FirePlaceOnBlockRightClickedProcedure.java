@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class FirePlaceOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.FIRE_PLACE.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.FIRE_PLACE.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.FIRE_PLACE_OFF.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -43,9 +43,9 @@ public class FirePlaceOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.FIRE_PLACE_OFF.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.FIRE_PLACE_OFF.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = LsFurnitureModBlocks.FIRE_PLACE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

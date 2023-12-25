@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "planks_crimson",
@@ -61,7 +61,9 @@
       }
     ],
     "name": "Crimson Cupboard",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -150,7 +152,7 @@
     "onTickUpdate": {
       "name": "CrimsonCupboardBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

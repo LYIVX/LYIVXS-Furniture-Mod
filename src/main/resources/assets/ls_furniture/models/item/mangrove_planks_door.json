@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/mangrove_plank_door"
+    "layer0": "ls_furniture:item/door_mangrove_planks"
   },
   "render_type": "translucent"
 }

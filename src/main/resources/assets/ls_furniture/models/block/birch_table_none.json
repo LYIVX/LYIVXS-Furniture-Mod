@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_none",
   "textures": {
-    "all": "ls_furniture:blocks/table_none_birch",
-    "particle": "ls_furniture:blocks/table_none_birch",
-    "1": "ls_furniture:blocks/log_birch",
-    "2": "ls_furniture:blocks/table_none_birch"
+    "all": "ls_furniture:block/table_none_birch",
+    "particle": "ls_furniture:block/table_none_birch",
+    "1": "ls_furniture:block/log_birch",
+    "2": "ls_furniture:block/table_none_birch"
   },
   "render_type": "cutout"
 }

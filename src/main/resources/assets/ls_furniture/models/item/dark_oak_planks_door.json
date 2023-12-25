@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/dark_oak_plank_door"
+    "layer0": "ls_furniture:item/door_dark_oak_planks"
   },
   "render_type": "translucent"
 }

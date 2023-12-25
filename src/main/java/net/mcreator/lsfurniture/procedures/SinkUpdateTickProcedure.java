@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 public class SinkUpdateTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
-			BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+			BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 			int _amount = 1000;
 			if (_ent != null)
 				_ent.getCapability(ForgeCapabilities.FLUID_HANDLER, null).ifPresent(capability -> capability.fill(new FluidStack(Fluids.WATER, _amount), IFluidHandler.FluidAction.EXECUTE));

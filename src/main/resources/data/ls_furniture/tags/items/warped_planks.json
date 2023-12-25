@@ -1,11 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:framed_warped_plain",
     "minecraft:warped_planks",
     "ls_furniture:connecting_warped_small_bricks",
-    "ls_furniture:framed_warped_small_bricks",
-    "ls_furniture:framed_warped_stripped",
     "ls_furniture:connecting_warped_plain",
     "ls_furniture:connecting_warped_stripped"
   ]

@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
   "textures": {
-    "all": "ls_furniture:blocks/plant_acacia",
-    "particle": "ls_furniture:blocks/plant_acacia",
-    "log": "ls_furniture:blocks/log_acacia",
-    "leave": "ls_furniture:blocks/leaves_acacia"
+    "all": "ls_furniture:block/plant_acacia",
+    "particle": "ls_furniture:block/plant_acacia",
+    "log": "ls_furniture:block/log_acacia",
+    "leave": "ls_furniture:block/leaves_acacia"
   },
   "render_type": "cutout"
 }

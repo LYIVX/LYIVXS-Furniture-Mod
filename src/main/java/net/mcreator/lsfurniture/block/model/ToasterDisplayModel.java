@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.ToasterDisplayItem;
 
-public class ToasterDisplayModel extends AnimatedGeoModel<ToasterDisplayItem> {
+public class ToasterDisplayModel extends GeoModel<ToasterDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(ToasterDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/toaster.animation.json");
@@ -19,6 +19,6 @@ public class ToasterDisplayModel extends AnimatedGeoModel<ToasterDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(ToasterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/toaster.png");
+		return new ResourceLocation("ls_furniture", "textures/block/toaster.png");
 	}
 }

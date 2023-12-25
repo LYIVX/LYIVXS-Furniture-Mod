@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.CrimsonDrawerTileEntity;
 
-public class CrimsonDrawerBlockModel extends AnimatedGeoModel<CrimsonDrawerTileEntity> {
+public class CrimsonDrawerBlockModel extends GeoModel<CrimsonDrawerTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonDrawerTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
@@ -19,6 +19,6 @@ public class CrimsonDrawerBlockModel extends AnimatedGeoModel<CrimsonDrawerTileE
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonDrawerTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_crimson.png");
+		return new ResourceLocation("ls_furniture", "textures/block/drawer_crimson.png");
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "planks_dark_oak",
@@ -34,7 +34,9 @@
       }
     ],
     "name": "Dark Oak Blinds",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -132,7 +134,7 @@
     "onDestroyedByExplosion": {
       "name": "DarkOakBlindsClosedBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

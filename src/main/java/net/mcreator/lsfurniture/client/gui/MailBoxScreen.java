@@ -6,7 +6,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.lsfurniture.world.inventory.MailBoxMenu;
 
@@ -50,7 +49,7 @@ public class MailBoxScreen extends AbstractContainerScreen<MailBoxMenu> {
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/mail_box2.png"));
-		this.blit(ms, this.leftPos + 72, this.topPos + -27, 0, 0, 176, 123, 176, 123);
+		this.blit(ms, this.leftPos + 72, this.topPos + -28, 0, 0, 176, 123, 176, 123);
 
 		RenderSystem.disableBlend();
 	}
@@ -77,12 +76,10 @@ public class MailBoxScreen extends AbstractContainerScreen<MailBoxMenu> {
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 	}
 }

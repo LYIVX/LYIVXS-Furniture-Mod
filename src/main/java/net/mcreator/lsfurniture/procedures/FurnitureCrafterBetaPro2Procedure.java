@@ -36,7 +36,7 @@ public class FurnitureCrafterBetaPro2Procedure {
 			_player.containerMenu.broadcastChanges();
 		}
 		{
-			BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
+			BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 			if (_ent != null) {
 				final int _slotid = 4;
 				final int _amount = 1;

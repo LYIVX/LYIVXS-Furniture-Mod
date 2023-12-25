@@ -1,10 +1,11 @@
 {
   "parent": "ls_furniture:custom/sofa",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_acacia",
-    "Planks": "ls_furniture:blocks/planks_acacia",
-    "Wool": "ls_furniture:blocks/wool_white"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/stripped_acacia",
+    "Log": "ls_furniture:block/log_acacia",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_acacia"
   },
   "render_type": "solid"
 }

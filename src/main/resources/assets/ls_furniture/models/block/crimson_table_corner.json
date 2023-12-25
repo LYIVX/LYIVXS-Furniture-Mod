@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_corner",
   "textures": {
-    "all": "ls_furniture:blocks/table_corner_crimson",
-    "particle": "ls_furniture:blocks/table_corner_crimson",
-    "1": "ls_furniture:blocks/stem_crimson_animation",
-    "2": "ls_furniture:blocks/table_corner_crimson"
+    "all": "ls_furniture:block/table_corner_crimson",
+    "particle": "ls_furniture:block/table_corner_crimson",
+    "1": "ls_furniture:block/stem_crimson_animation",
+    "2": "ls_furniture:block/table_corner_crimson"
   },
   "render_type": "cutout"
 }

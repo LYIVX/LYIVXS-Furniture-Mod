@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/log_pillar_spruce_top",
-    "up": "ls_furniture:blocks/log_pillar_spruce_top",
-    "north": "ls_furniture:blocks/log_pillar_spruce",
-    "east": "ls_furniture:blocks/log_pillar_spruce",
-    "south": "ls_furniture:blocks/log_pillar_spruce",
-    "west": "ls_furniture:blocks/log_pillar_spruce",
-    "particle": "ls_furniture:blocks/log_pillar_spruce_top"
+    "down": "ls_furniture:block/log_pillar_spruce_top",
+    "up": "ls_furniture:block/log_pillar_spruce_top",
+    "north": "ls_furniture:block/log_pillar_spruce",
+    "east": "ls_furniture:block/log_pillar_spruce",
+    "south": "ls_furniture:block/log_pillar_spruce",
+    "west": "ls_furniture:block/log_pillar_spruce",
+    "particle": "ls_furniture:block/log_pillar_spruce_top"
   },
   "render_type": "solid"
 }

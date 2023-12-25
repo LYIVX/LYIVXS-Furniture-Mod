@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/acacia_bark"
+    "layer0": "ls_furniture:item/acacia_bark"
   }
 }

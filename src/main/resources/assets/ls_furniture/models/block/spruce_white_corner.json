@@ -1,10 +1,11 @@
 {
   "parent": "ls_furniture:custom/sofa_corner",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_spruce",
-    "Planks": "ls_furniture:blocks/planks_spruce",
-    "Wool": "ls_furniture:blocks/wool_white"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/stripped_spruce",
+    "Log": "ls_furniture:block/log_spruce",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_spruce"
   },
   "render_type": "solid"
 }

@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/log_pillar_mangrove_top",
-    "up": "ls_furniture:blocks/log_pillar_mangrove_top",
-    "north": "ls_furniture:blocks/log_pillar_mangrove",
-    "east": "ls_furniture:blocks/log_pillar_mangrove",
-    "south": "ls_furniture:blocks/log_pillar_mangrove",
-    "west": "ls_furniture:blocks/log_pillar_mangrove",
-    "particle": "ls_furniture:blocks/log_pillar_mangrove_top"
+    "down": "ls_furniture:block/log_pillar_mangrove_top",
+    "up": "ls_furniture:block/log_pillar_mangrove_top",
+    "north": "ls_furniture:block/log_pillar_mangrove",
+    "east": "ls_furniture:block/log_pillar_mangrove",
+    "south": "ls_furniture:block/log_pillar_mangrove",
+    "west": "ls_furniture:block/log_pillar_mangrove",
+    "particle": "ls_furniture:block/log_pillar_mangrove_top"
   },
   "render_type": "solid"
 }

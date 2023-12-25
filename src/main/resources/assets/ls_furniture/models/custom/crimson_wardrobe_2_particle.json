@@ -1,6 +1,6 @@
 {
-  "parent": "ls_furniture:displaysettings/wardrobepart.item",
+  "parent": "ls_furniture:displaysettings/wardrobe_top.item",
   "textures": {
-    "particle": "ls_furniture:blocks/planks_crimson"
+    "particle": "ls_furniture:block/planks_crimson"
   }
 }

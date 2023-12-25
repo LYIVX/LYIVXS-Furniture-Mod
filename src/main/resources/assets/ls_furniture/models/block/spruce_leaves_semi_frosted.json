@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "particle": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "east": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "south": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "north": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "west": "ls_furniture:blocks/leaves_spruce_frosted_side",
-    "up": "ls_furniture:blocks/leaves_spruce_frosted_top",
-    "tint": "ls_furniture:blocks/leaves_spruce",
-    "down": "ls_furniture:blocks/invisible"
+    "all": "ls_furniture:block/leaves_spruce_frosted_side",
+    "particle": "ls_furniture:block/leaves_spruce_frosted_side",
+    "east": "ls_furniture:block/leaves_spruce_frosted_side",
+    "south": "ls_furniture:block/leaves_spruce_frosted_side",
+    "north": "ls_furniture:block/leaves_spruce_frosted_side",
+    "west": "ls_furniture:block/leaves_spruce_frosted_side",
+    "up": "ls_furniture:block/leaves_spruce_frosted_top",
+    "tint": "ls_furniture:block/leaves_spruce",
+    "down": "ls_furniture:block/invisible"
   },
   "render_type": "cutout_mipped"
 }

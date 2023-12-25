@@ -1,8 +1,15 @@
 {
-  "parent": "block/template_glass_pane_side_alt",
+  "parent": "ls_furniture:block/mt-ct/f_side_alt",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "edge": "ls_furniture:blocks/planks_birch",
-    "pane": "ls_furniture:blocks/connecting_birch_glass"
+    "edge": "ls_furniture:block/planks_birch",
+    "pane": "ls_furniture:block/connecting_birch_glass"
   },
   "render_type": "translucent"
 }

@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/chair",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_warped",
-    "Pattern": "ls_furniture:blocks/pattern_warped",
-    "Log": "ls_furniture:blocks/stem_warped_animation",
-    "Wool": "ls_furniture:blocks/wool_white",
-    "Stripped": "ls_furniture:blocks/stripped_warped"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/planks_warped",
+    "Pattern": "ls_furniture:block/pattern_warped",
+    "Log": "ls_furniture:block/stem_warped_animation",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_warped"
   },
   "render_type": "cutout_mipped"
 }

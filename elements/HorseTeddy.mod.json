@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "horse_black",
@@ -133,7 +133,9 @@
       }
     ],
     "name": "Horse Teddy",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 0.8,
     "resistance": 0.8,
     "hasGravity": false,
@@ -219,7 +221,7 @@
     "onRightClicked": {
       "name": "HorseTeddyOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

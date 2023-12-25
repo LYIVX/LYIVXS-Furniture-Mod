@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/blue_orchid",
-    "particle": "ls_furniture:blocks/blue_orchid",
-    "east": "ls_furniture:blocks/blue_orchid",
-    "south": "ls_furniture:blocks/blue_orchid",
-    "north": "ls_furniture:blocks/blue_orchid",
-    "west": "ls_furniture:blocks/blue_orchid",
-    "up": "ls_furniture:blocks/blue_orchid",
-    "tint": "ls_furniture:blocks/leaves_mangrove",
-    "down": "ls_furniture:blocks/blue_orchid"
+    "all": "ls_furniture:block/blue_orchid",
+    "particle": "ls_furniture:block/blue_orchid",
+    "east": "ls_furniture:block/blue_orchid",
+    "south": "ls_furniture:block/blue_orchid",
+    "north": "ls_furniture:block/blue_orchid",
+    "west": "ls_furniture:block/blue_orchid",
+    "up": "ls_furniture:block/blue_orchid",
+    "tint": "ls_furniture:block/leaves_mangrove",
+    "down": "ls_furniture:block/blue_orchid"
   },
   "render_type": "cutout_mipped"
 }

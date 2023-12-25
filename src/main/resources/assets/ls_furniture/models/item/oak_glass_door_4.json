@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/oak_glass_door4"
+    "layer0": "ls_furniture:item/oak_glass_door4"
   },
   "render_type": "translucent"
 }

@@ -1,9 +1,0 @@
-{
-  "parent": "ls_furniture:custom/stone_path_11",
-  "textures": {
-    "all": "ls_furniture:blocks/stone_path_11_granite",
-    "particle": "ls_furniture:blocks/stone_path_11_granite",
-    "0": "ls_furniture:blocks/stone_path_11_granite"
-  },
-  "render_type": "cutout_mipped"
-}

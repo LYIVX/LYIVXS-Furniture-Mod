@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.SpruceDrawerDisplayItem;
 
-public class SpruceDrawerDisplayModel extends AnimatedGeoModel<SpruceDrawerDisplayItem> {
+public class SpruceDrawerDisplayModel extends GeoModel<SpruceDrawerDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(SpruceDrawerDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
@@ -19,6 +19,6 @@ public class SpruceDrawerDisplayModel extends AnimatedGeoModel<SpruceDrawerDispl
 
 	@Override
 	public ResourceLocation getTextureResource(SpruceDrawerDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_spruce.png");
+		return new ResourceLocation("ls_furniture", "textures/block/drawer_spruce.png");
 	}
 }

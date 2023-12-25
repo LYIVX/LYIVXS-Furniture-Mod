@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "kettle",
@@ -60,7 +60,6 @@
       }
     ],
     "name": "Kettle",
-    "specialInfo": [],
     "hardness": 4.0,
     "resistance": 5.0,
     "hasGravity": false,
@@ -140,6 +139,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -153,7 +153,6 @@
     "onRightClicked": {
       "name": "KettleOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

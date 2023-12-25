@@ -1,19 +1,31 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "livingentity",
   "definition": {
     "mobName": "Sofa",
     "mobLabel": "",
     "mobModelName": "ModelSeat",
     "mobModelTexture": "seat.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
     "modelWidth": 0.95,
-    "modelHeight": 0.63,
+    "modelHeight": 0.01,
     "modelShadowSize": 0.0,
-    "mountedYOffset": 0.0,
+    "mountedYOffset": -0.2,
     "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
@@ -60,11 +72,17 @@
     "health": 1,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "disableCollisions": false,
+    "disableCollisions": true,
     "ridable": true,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -96,8 +114,15 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "whenMobIsHurt": {
       "name": "SeatDies"
+    },
+    "onMobTickUpdate": {
+      "name": "OnInitialEntitySpawn"
+    },
+    "onInitialSpawn": {
+      "name": "OnInitialEntitySpawn"
     },
     "hasAI": false,
     "aiBase": "(none)",

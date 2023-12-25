@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/enderman_teddy",
   "textures": {
-    "all": "ls_furniture:blocks/enderman",
-    "particle": "ls_furniture:blocks/black_wool",
-    "0": "ls_furniture:blocks/enderman"
+    "all": "ls_furniture:block/enderman",
+    "particle": "ls_furniture:block/black_wool",
+    "0": "ls_furniture:block/enderman"
   },
   "render_type": "cutout_mipped"
 }

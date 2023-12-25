@@ -70,7 +70,7 @@ public class MasonryRecipeCategory implements IRecipeCategory<MasonryRecipe> {
         builder.addSlot(RecipeIngredientRole.INPUT, 28, 48).addIngredients(recipe.getIngredients().get(4));
 
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 64, 28).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 64, 28).addItemStack(recipe.getResultItem(null));
 
     }
 }

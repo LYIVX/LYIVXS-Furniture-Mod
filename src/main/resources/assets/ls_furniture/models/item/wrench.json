@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "ls_furniture:items/wrench"
+    "layer0": "ls_furniture:item/wrench"
   }
 }

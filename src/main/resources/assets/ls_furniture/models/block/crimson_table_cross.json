@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_cross",
   "textures": {
-    "all": "ls_furniture:blocks/table_cross_crimson",
-    "particle": "ls_furniture:blocks/table_cross_crimson",
-    "1": "ls_furniture:blocks/table_cross_crimson"
+    "all": "ls_furniture:block/table_cross_crimson",
+    "particle": "ls_furniture:block/table_cross_crimson",
+    "1": "ls_furniture:block/table_cross_crimson"
   },
   "render_type": "cutout"
 }

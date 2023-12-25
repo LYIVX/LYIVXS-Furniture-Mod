@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_acacia",
-    "particle": "ls_furniture:blocks/planks_acacia",
-    "0": "ls_furniture:blocks/log_acacia",
-    "1": "ls_furniture:blocks/stripped_acacia",
-    "2": "ls_furniture:blocks/log_acacia",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_acacia",
+    "particle": "ls_furniture:block/planks_acacia",
+    "0": "ls_furniture:block/log_acacia",
+    "1": "ls_furniture:block/stripped_acacia",
+    "2": "ls_furniture:block/log_acacia",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "solid"
 }

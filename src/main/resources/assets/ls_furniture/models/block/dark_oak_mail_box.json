@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_dark_oak",
-    "particle": "ls_furniture:blocks/planks_dark_oak",
-    "0": "ls_furniture:blocks/log_dark_oak",
-    "1": "ls_furniture:blocks/stripped_dark_oak",
-    "2": "ls_furniture:blocks/log_dark_oak",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_dark_oak",
+    "particle": "ls_furniture:block/planks_dark_oak",
+    "0": "ls_furniture:block/log_dark_oak",
+    "1": "ls_furniture:block/stripped_dark_oak",
+    "2": "ls_furniture:block/log_dark_oak",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "solid"
 }

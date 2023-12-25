@@ -8,7 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Checkbox;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.lsfurniture.world.inventory.GlassblowerGUIMenu;
 import net.mcreator.lsfurniture.procedures.Disablepictureadditional3Procedure;
@@ -133,13 +132,11 @@ public class GlassblowerGUIScreen extends AbstractContainerScreen<GlassblowerGUI
 	@Override
 	public void onClose() {
 		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		imagebutton_tab_deselect_right_edge_3 = new ImageButton(this.leftPos + 39, this.topPos + -35, 32, 35, 0, 0, 35, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_tab_deselect_right_edge_3.png"), 32, 70, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new GlassblowerGUIButtonMessage(0, x, y, z));
@@ -148,7 +145,7 @@ public class GlassblowerGUIScreen extends AbstractContainerScreen<GlassblowerGUI
 		});
 		guistate.put("button:imagebutton_tab_deselect_right_edge_3", imagebutton_tab_deselect_right_edge_3);
 		this.addRenderableWidget(imagebutton_tab_deselect_right_edge_3);
-		imagebutton_arrow_left = new ImageButton(this.leftPos + -15, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
+		imagebutton_arrow_left = new ImageButton(this.leftPos + -16, this.topPos + -28, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left.png"), 11, 34, e -> {
 			if (true) {
 				LsFurnitureMod.PACKET_HANDLER.sendToServer(new GlassblowerGUIButtonMessage(1, x, y, z));
 				GlassblowerGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);

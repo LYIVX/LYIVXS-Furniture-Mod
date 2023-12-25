@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.WarpedCounterTileEntity;
 
-public class WarpedCounterBlockModel extends AnimatedGeoModel<WarpedCounterTileEntity> {
+public class WarpedCounterBlockModel extends GeoModel<WarpedCounterTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(WarpedCounterTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class WarpedCounterBlockModel extends AnimatedGeoModel<WarpedCounterTileE
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_warped.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_warped.png");
 	}
 }

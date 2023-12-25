@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ls_furniture:blocks/non_oak_checkered",
-    "particle": "ls_furniture:blocks/non_oak_checkered"
+    "all": "ls_furniture:block/non_oak_checkered",
+    "particle": "ls_furniture:block/non_oak_checkered"
   },
   "render_type": "solid"
 }

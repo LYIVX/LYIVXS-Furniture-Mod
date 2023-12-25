@@ -77,14 +77,14 @@ public class MailBoxMenu extends AbstractContainerMenu implements Supplier<Map<I
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, -19) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, -20) {
 			private final int slot = 0;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, -67 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, -68 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, -67 + 142));
+			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, -68 + 142));
 	}
 
 	@Override
@@ -190,9 +190,9 @@ public class MailBoxMenu extends AbstractContainerMenu implements Supplier<Map<I
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
 					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.set(p_38904_.split(slot1.getMaxStackSize()));
+						slot1.setByPlayer(p_38904_.split(slot1.getMaxStackSize()));
 					} else {
-						slot1.set(p_38904_.split(p_38904_.getCount()));
+						slot1.setByPlayer(p_38904_.split(p_38904_.getCount()));
 					}
 					slot1.setChanged();
 					flag = true;

@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/tv-stand",
   "textures": {
-    "all": "ls_furniture:blocks/anvil_flat",
-    "particle": "ls_furniture:blocks/anvil_flat",
-    "1": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/anvil_flat",
+    "particle": "ls_furniture:block/anvil_flat",
+    "1": "ls_furniture:block/anvil_flat",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "cutout_mipped"
 }

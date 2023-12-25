@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/chair",
   "textures": {
-    "all": "ls_furniture:blocks/planks_birch",
-    "particle": "ls_furniture:blocks/planks_birch",
-    "Pattern": "ls_furniture:blocks/pattern_birch",
-    "Log": "ls_furniture:blocks/log_birch",
-    "Wool": "ls_furniture:blocks/invisible",
-    "Stripped": "ls_furniture:blocks/stripped_birch"
+    "all": "ls_furniture:block/planks_birch",
+    "particle": "ls_furniture:block/planks_birch",
+    "Pattern": "ls_furniture:block/pattern_birch",
+    "Log": "ls_furniture:block/log_birch",
+    "Wool": "ls_furniture:block/invisible",
+    "Stripped": "ls_furniture:block/stripped_birch"
   },
   "render_type": "cutout_mipped"
 }

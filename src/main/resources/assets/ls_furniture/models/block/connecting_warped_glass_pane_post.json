@@ -1,8 +1,15 @@
 {
-  "parent": "block/template_glass_pane_post",
+  "parent": "ls_furniture:block/mt-ct/f_post",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "edge": "ls_furniture:blocks/planks_warped",
-    "pane": "ls_furniture:blocks/connecting_warped_glass"
+    "edge": "ls_furniture:block/planks_warped",
+    "pane": "ls_furniture:block/connecting_warped_glass"
   },
   "render_type": "translucent"
 }

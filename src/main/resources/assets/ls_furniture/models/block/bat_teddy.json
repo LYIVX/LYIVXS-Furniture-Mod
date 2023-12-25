@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/bat_teddy",
   "textures": {
-    "all": "ls_furniture:blocks/bat",
-    "particle": "ls_furniture:blocks/brown_wool",
-    "1": "ls_furniture:blocks/bat"
+    "all": "ls_furniture:block/bat",
+    "particle": "ls_furniture:block/brown_wool",
+    "1": "ls_furniture:block/bat"
   },
   "render_type": "cutout_mipped"
 }

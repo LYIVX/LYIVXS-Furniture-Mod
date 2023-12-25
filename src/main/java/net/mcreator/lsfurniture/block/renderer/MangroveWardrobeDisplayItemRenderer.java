@@ -1,6 +1,6 @@
 package net.mcreator.lsfurniture.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
+import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.RenderType;
@@ -9,16 +9,13 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.mcreator.lsfurniture.block.model.MangroveWardrobeDisplayModel;
 import net.mcreator.lsfurniture.block.display.MangroveWardrobeDisplayItem;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class MangroveWardrobeDisplayItemRenderer extends GeoItemRenderer<MangroveWardrobeDisplayItem> {
 	public MangroveWardrobeDisplayItemRenderer() {
 		super(new MangroveWardrobeDisplayModel());
 	}
 
 	@Override
-	public RenderType getRenderType(MangroveWardrobeDisplayItem animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(MangroveWardrobeDisplayItem animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

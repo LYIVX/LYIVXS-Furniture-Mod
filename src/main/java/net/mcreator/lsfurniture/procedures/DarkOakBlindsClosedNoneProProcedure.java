@@ -20,9 +20,10 @@ public class DarkOakBlindsClosedNoneProProcedure {
 		BlockState model = Blocks.AIR.defaultBlockState();
 		model = LsFurnitureModBlocks.DARK_OAK_BLINDS_TOP_CLOSED.get().defaultBlockState();
 		groupTag = "forge" + ":" + "dark_oak_blinds_closed";
-		if (!(world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH)))) && !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == model.getBlock())) {
+		if (!(world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((groupTag).toLowerCase(java.util.Locale.ENGLISH))))
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == model.getBlock())) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = model;
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

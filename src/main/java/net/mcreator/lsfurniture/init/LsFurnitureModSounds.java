@@ -15,5 +15,5 @@ import net.mcreator.lsfurniture.LsFurnitureMod;
 
 public class LsFurnitureModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, LsFurnitureMod.MODID);
-	public static final RegistryObject<SoundEvent> MICROWAVE = REGISTRY.register("microwave", () -> new SoundEvent(new ResourceLocation("ls_furniture", "microwave")));
+	public static final RegistryObject<SoundEvent> MICROWAVE = REGISTRY.register("microwave", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("ls_furniture", "microwave")));
 }

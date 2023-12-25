@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
   "textures": {
-    "all": "ls_furniture:blocks/plant_oak",
-    "particle": "ls_furniture:blocks/plant_oak",
-    "log": "ls_furniture:blocks/log_oak",
-    "leave": "ls_furniture:blocks/leaves_oak"
+    "all": "ls_furniture:block/plant_oak",
+    "particle": "ls_furniture:block/plant_oak",
+    "log": "ls_furniture:block/log_oak",
+    "leave": "ls_furniture:block/leaves_oak"
   },
   "render_type": "cutout"
 }

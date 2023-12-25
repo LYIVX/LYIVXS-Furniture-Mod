@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.JungleDeskDisplayItem;
 
-public class JungleDeskDisplayModel extends AnimatedGeoModel<JungleDeskDisplayItem> {
+public class JungleDeskDisplayModel extends GeoModel<JungleDeskDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(JungleDeskDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/desk.animation.json");
@@ -19,6 +19,6 @@ public class JungleDeskDisplayModel extends AnimatedGeoModel<JungleDeskDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(JungleDeskDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/desk_jungle.png");
+		return new ResourceLocation("ls_furniture", "textures/block/desk_jungle.png");
 	}
 }

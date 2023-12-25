@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/poppy",
-    "particle": "ls_furniture:blocks/poppy",
-    "east": "ls_furniture:blocks/poppy",
-    "south": "ls_furniture:blocks/poppy",
-    "north": "ls_furniture:blocks/poppy",
-    "west": "ls_furniture:blocks/poppy",
-    "up": "ls_furniture:blocks/poppy",
-    "tint": "ls_furniture:blocks/leaves_oak",
-    "down": "ls_furniture:blocks/poppy"
+    "all": "ls_furniture:block/poppy",
+    "particle": "ls_furniture:block/poppy",
+    "east": "ls_furniture:block/poppy",
+    "south": "ls_furniture:block/poppy",
+    "north": "ls_furniture:block/poppy",
+    "west": "ls_furniture:block/poppy",
+    "up": "ls_furniture:block/poppy",
+    "tint": "ls_furniture:block/leaves_oak",
+    "down": "ls_furniture:block/poppy"
   },
   "render_type": "cutout_mipped"
 }

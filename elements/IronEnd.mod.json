@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "iron_end",
@@ -52,7 +52,9 @@
       }
     ],
     "name": "Iron Glass Table",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
@@ -138,7 +140,7 @@
     "onBlockAdded": {
       "name": "IronTableBlockAdded"
     },
-    "onTickUpdate": {
+    "onNeighbourBlockChanges": {
       "name": "IronTableBlockAdded"
     },
     "onDestroyedByPlayer": {
@@ -147,7 +149,7 @@
     "onDestroyedByExplosion": {
       "name": "IronTableBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

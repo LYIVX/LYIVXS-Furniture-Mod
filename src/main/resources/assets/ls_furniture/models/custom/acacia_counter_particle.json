@@ -1,6 +1,6 @@
 {
   "parent": "ls_furniture:displaysettings/counter.item",
   "textures": {
-    "particle": "ls_furniture:blocks/counter_acacia"
+    "particle": "ls_furniture:block/counter_acacia"
   }
 }

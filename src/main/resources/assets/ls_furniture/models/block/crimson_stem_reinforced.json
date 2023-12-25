@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/crimson_stem_top",
-    "up": "ls_furniture:blocks/crimson_stem_top",
-    "north": "ls_furniture:blocks/stem_reinforced_crimson",
-    "east": "ls_furniture:blocks/stem_reinforced_crimson",
-    "south": "ls_furniture:blocks/stem_reinforced_crimson",
-    "west": "ls_furniture:blocks/stem_reinforced_crimson",
-    "particle": "ls_furniture:blocks/crimson_stem_top"
+    "down": "ls_furniture:block/crimson_stem_top",
+    "up": "ls_furniture:block/crimson_stem_top",
+    "north": "ls_furniture:block/stem_reinforced_crimson",
+    "east": "ls_furniture:block/stem_reinforced_crimson",
+    "south": "ls_furniture:block/stem_reinforced_crimson",
+    "west": "ls_furniture:block/stem_reinforced_crimson",
+    "particle": "ls_furniture:block/crimson_stem_top"
   },
   "render_type": "solid"
 }

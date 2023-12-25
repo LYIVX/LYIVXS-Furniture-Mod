@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.CrimsonWardrobe2DisplayItem;
 
-public class CrimsonWardrobe2DisplayModel extends AnimatedGeoModel<CrimsonWardrobe2DisplayItem> {
+public class CrimsonWardrobe2DisplayModel extends GeoModel<CrimsonWardrobe2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonWardrobe2DisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
@@ -19,6 +19,6 @@ public class CrimsonWardrobe2DisplayModel extends AnimatedGeoModel<CrimsonWardro
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonWardrobe2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_crimson.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_crimson.png");
 	}
 }

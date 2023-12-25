@@ -29,123 +29,109 @@ public class FurnitureCrafterBetaOnBlockRightClickedProcedure {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Carpentry")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("CarpentryGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("CarpentryGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new CarpentryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new CarpentryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Masonry")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("MasonryGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("MasonryGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new MasonryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new MasonryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Metallurgy")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("MetalurgyGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("MetalurgyGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new MetalurgyGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new MetalurgyGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Weavery")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("WeaveryGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WeaveryGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new WeaveryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WeaveryGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Engineering")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("EngineeringGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("EngineeringGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new EngineeringGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new EngineeringGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Glass_Blower")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("GlassblowerGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("GlassblowerGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new GlassblowerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new GlassblowerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		} else if (((entity.getCapability(LsFurnitureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LsFurnitureModVariables.PlayerVariables())).Furniture_Crafter_Menu).equals("Botanist")) {
-			{
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("BotanistGUI");
-						}
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("BotanistGUI");
+					}
 
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new BotanistGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new BotanistGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
 			}
 		}
 	}

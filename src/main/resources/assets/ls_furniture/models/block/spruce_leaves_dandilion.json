@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/block",
   "textures": {
-    "all": "ls_furniture:blocks/dandilion",
-    "particle": "ls_furniture:blocks/dandilion",
-    "east": "ls_furniture:blocks/dandilion",
-    "south": "ls_furniture:blocks/dandilion",
-    "north": "ls_furniture:blocks/dandilion",
-    "west": "ls_furniture:blocks/dandilion",
-    "up": "ls_furniture:blocks/dandilion",
-    "tint": "ls_furniture:blocks/leaves_spruce",
-    "down": "ls_furniture:blocks/dandilion"
+    "all": "ls_furniture:block/dandilion",
+    "particle": "ls_furniture:block/dandilion",
+    "east": "ls_furniture:block/dandilion",
+    "south": "ls_furniture:block/dandilion",
+    "north": "ls_furniture:block/dandilion",
+    "west": "ls_furniture:block/dandilion",
+    "up": "ls_furniture:block/dandilion",
+    "tint": "ls_furniture:block/leaves_spruce",
+    "down": "ls_furniture:block/dandilion"
   },
   "render_type": "cutout_mipped"
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "iron_golem",
@@ -97,7 +97,9 @@
       }
     ],
     "name": "Iron Golem Teddy",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 0.8,
     "resistance": 0.8,
     "hasGravity": false,
@@ -183,7 +185,7 @@
     "onRightClicked": {
       "name": "IronGolemTeddyOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

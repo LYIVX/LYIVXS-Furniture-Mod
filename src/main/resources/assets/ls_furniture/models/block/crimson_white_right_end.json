@@ -1,10 +1,11 @@
 {
   "parent": "ls_furniture:custom/sofa_right",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_crimson",
-    "Planks": "ls_furniture:blocks/planks_crimson",
-    "Wool": "ls_furniture:blocks/wool_white"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/stripped_crimson",
+    "Log": "ls_furniture:block/stem_crimson_animation",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_crimson"
   },
   "render_type": "solid"
 }

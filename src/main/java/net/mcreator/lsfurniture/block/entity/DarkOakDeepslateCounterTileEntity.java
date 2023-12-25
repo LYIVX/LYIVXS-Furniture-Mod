@@ -1,14 +1,13 @@
 package net.mcreator.lsfurniture.block.entity;
 
-import software.bernie.geckolib3.util.GeckoLibUtil;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.builder.ILoopType.EDefaultLoopTypes;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoBlockEntity;
 
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
@@ -19,7 +18,6 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Inventory;
@@ -42,8 +40,8 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class DarkOakDeepslateCounterTileEntity extends RandomizableContainerBlockEntity implements IAnimatable, WorldlyContainer {
-	public AnimationFactory factory = GeckoLibUtil.createFactory(this);
+public class DarkOakDeepslateCounterTileEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity, WorldlyContainer {
+	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(27, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
@@ -51,37 +49,36 @@ public class DarkOakDeepslateCounterTileEntity extends RandomizableContainerBloc
 		super(LsFurnitureModBlockEntities.DARK_OAK_DEEPSLATE_COUNTER.get(), pos, state);
 	}
 
-	private <E extends BlockEntity & IAnimatable> PlayState predicate(AnimationEvent<E> event) {
+	private PlayState predicate(AnimationState event) {
 		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
 		if (animationprocedure.equals("0")) {
-			event.getController().setAnimation(new AnimationBuilder().addAnimation(animationprocedure, EDefaultLoopTypes.LOOP));
-			return PlayState.CONTINUE;
+			return event.setAndContinue(RawAnimation.begin().thenLoop(animationprocedure));
 		}
 		return PlayState.STOP;
 	}
 
-	private <E extends BlockEntity & IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
+	private PlayState procedurePredicate(AnimationState event) {
 		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
-		if (!(animationprocedure.equals("0")) && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			event.getController().setAnimation(new AnimationBuilder().addAnimation(animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-			if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+		if (!(animationprocedure.equals("0")) && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			event.getController().setAnimation(RawAnimation.begin().thenPlay(animationprocedure));
+			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 				if (this.getBlockState().getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp)
 					level.setBlock(this.getBlockPos(), this.getBlockState().setValue(_integerProp, 0), 3);
-				event.getController().markNeedsReload();
+				event.getController().forceAnimationReset();
 			}
 		}
 		return PlayState.CONTINUE;
 	}
 
 	@Override
-	public void registerControllers(AnimationData data) {
-		data.addAnimationController(new AnimationController<DarkOakDeepslateCounterTileEntity>(this, "controller", 0, this::predicate));
-		data.addAnimationController(new AnimationController<DarkOakDeepslateCounterTileEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
+	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
+		data.add(new AnimationController<DarkOakDeepslateCounterTileEntity>(this, "controller", 0, this::predicate));
+		data.add(new AnimationController<DarkOakDeepslateCounterTileEntity>(this, "procedurecontroller", 0, this::procedurePredicate));
 	}
 
 	@Override
-	public AnimationFactory getFactory() {
-		return factory;
+	public AnimatableInstanceCache getAnimatableInstanceCache() {
+		return this.cache;
 	}
 
 	@Override

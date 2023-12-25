@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.BirchWardrobe2DisplayItem;
 
-public class BirchWardrobe2DisplayModel extends AnimatedGeoModel<BirchWardrobe2DisplayItem> {
+public class BirchWardrobe2DisplayModel extends GeoModel<BirchWardrobe2DisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(BirchWardrobe2DisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe_top.animation.json");
@@ -19,6 +19,6 @@ public class BirchWardrobe2DisplayModel extends AnimatedGeoModel<BirchWardrobe2D
 
 	@Override
 	public ResourceLocation getTextureResource(BirchWardrobe2DisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_birch.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_birch.png");
 	}
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ls_furniture:blocks/connecting_dark_oak_plain",
-    "particle": "ls_furniture:blocks/connecting_dark_oak_plain"
-  },
-  "render_type": "solid"
-}

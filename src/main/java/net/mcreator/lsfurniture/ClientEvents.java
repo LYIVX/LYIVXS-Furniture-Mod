@@ -19,6 +19,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,7 +32,8 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import software.bernie.geckolib3.GeckoLib;
+import software.bernie.geckolib.GeckoLib;
+
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -46,33 +48,43 @@ import java.util.function.Supplier;
 public class ClientEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_OAK_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_WARPED_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_OAK_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_WARPED_GLASS_CROSS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_OAK_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS_PANE.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(LsFurnitureModBlocks.CONNECTING_WARPED_GLASS_PANE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_OAK_GLASS.get(), RenderType.translucent());// 49
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS.get(), RenderType.translucent());// 50
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS.get(), RenderType.translucent());// 51
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS.get(), RenderType.translucent());// 52
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS.get(), RenderType.translucent());// 53
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS.get(), RenderType.translucent());// 54
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS.get(), RenderType.translucent());// 55
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS.get(), RenderType.translucent());// 56
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_WARPED_GLASS.get(), RenderType.translucent());// 57
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_OAK_GLASS_CROSS.get(), RenderType.translucent());// 58
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS_CROSS.get(), RenderType.translucent());// 59
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS_CROSS.get(), RenderType.translucent());// 60
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS_CROSS.get(), RenderType.translucent());// 61
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS_CROSS.get(), RenderType.translucent());// 62
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS_CROSS.get(), RenderType.translucent());// 63
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS_CROSS.get(), RenderType.translucent());// 64
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS_CROSS.get(), RenderType.translucent());// 65
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_WARPED_GLASS_CROSS.get(), RenderType.translucent());// 66
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_OAK_GLASS_PANE.get(), RenderType.translucent());// 67
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS_PANE.get(), RenderType.translucent());// 68
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS_PANE.get(), RenderType.translucent());// 69
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS_PANE.get(), RenderType.translucent());// 70
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS_PANE.get(), RenderType.translucent());// 71
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS_PANE.get(), RenderType.translucent());// 72
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS_PANE.get(), RenderType.translucent());// 73
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS_PANE.get(), RenderType.translucent());// 74
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_WARPED_GLASS_PANE.get(), RenderType.translucent());// 75
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_OAK_GLASS_CROSS_PANE.get(), RenderType.translucent());// 67
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_DARK_OAK_GLASS_CROSS_PANE.get(), RenderType.translucent());// 68
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_SPRUCE_GLASS_CROSS_PANE.get(), RenderType.translucent());// 69
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_ACACIA_GLASS_CROSS_PANE.get(), RenderType.translucent());// 70
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_BIRCH_GLASS_CROSS_PANE.get(), RenderType.translucent());// 71
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_JUNGLE_GLASS_CROSS_PANE.get(), RenderType.translucent());// 72
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_MANGROVE_GLASS_CROSS_PANE.get(), RenderType.translucent());// 73
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_CRIMSON_GLASS_CROSS_PANE.get(), RenderType.translucent());// 74
+        ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_WARPED_GLASS_CROSS_PANE.get(), RenderType.translucent());// 75
+
 
 
 
@@ -84,7 +96,6 @@ public class ClientEvents {
 
         public LsFurnitureMod() {
             MinecraftForge.EVENT_BUS.register(this);
-            LsFurnitureModTabs.load();
             IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
             LsFurnitureModSounds.REGISTRY.register(bus);
             LsFurnitureModBlocks.REGISTRY.register(bus);

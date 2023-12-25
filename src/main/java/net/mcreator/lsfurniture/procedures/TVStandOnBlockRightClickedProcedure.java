@@ -17,9 +17,9 @@ public class TVStandOnBlockRightClickedProcedure {
 		if (entity == null)
 			return;
 		if (entity.isShiftKeyDown()) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_OFF.get()) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_OFF.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_OFF.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -47,9 +47,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_OFF.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_OFF.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_OFF.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -77,9 +77,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_ON.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_ON.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_ON.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -107,9 +107,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_ON.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_ON.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_ON.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -137,9 +137,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_MINECRAFT.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_MINECRAFT.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_MINECRAFT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -167,9 +167,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_MINECRAFT.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_MINECRAFT.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_MINECRAFT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -197,9 +197,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_COD.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_COD.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_COD.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -227,9 +227,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_COD.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_COD.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_COD.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -259,9 +259,9 @@ public class TVStandOnBlockRightClickedProcedure {
 				}
 			}
 		} else {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_OFF.get()) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_OFF.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_ON.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -289,9 +289,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_ON.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_ON.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_MINECRAFT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -319,9 +319,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_MINECRAFT.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_MINECRAFT.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_COD.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -349,9 +349,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_COD.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_STAND_COD.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_STAND_OFF.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -379,9 +379,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_OFF.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_OFF.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_ON.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -409,9 +409,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_ON.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_ON.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_MINECRAFT.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -439,9 +439,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_MINECRAFT.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_MINECRAFT.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_COD.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -469,9 +469,9 @@ public class TVStandOnBlockRightClickedProcedure {
 						}
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_COD.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.TV_WALL_COD.get()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.TV_WALL_OFF.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

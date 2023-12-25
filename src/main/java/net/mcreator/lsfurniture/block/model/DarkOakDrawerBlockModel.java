@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.DarkOakDrawerTileEntity;
 
-public class DarkOakDrawerBlockModel extends AnimatedGeoModel<DarkOakDrawerTileEntity> {
+public class DarkOakDrawerBlockModel extends GeoModel<DarkOakDrawerTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(DarkOakDrawerTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/drawer.animation.json");
@@ -19,6 +19,6 @@ public class DarkOakDrawerBlockModel extends AnimatedGeoModel<DarkOakDrawerTileE
 
 	@Override
 	public ResourceLocation getTextureResource(DarkOakDrawerTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/drawer_dark_oak.png");
+		return new ResourceLocation("ls_furniture", "textures/block/drawer_dark_oak.png");
 	}
 }

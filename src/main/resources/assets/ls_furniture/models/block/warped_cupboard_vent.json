@@ -1,15 +1,15 @@
 {
   "parent": "ls_furniture:custom/cupboard_vent",
   "textures": {
-    "all": "ls_furniture:blocks/planks_warped",
-    "particle": "ls_furniture:blocks/planks_warped",
-    "1": "ls_furniture:blocks/anvil_flat",
-    "2": "ls_furniture:blocks/anvil_flat",
-    "3": "ls_furniture:blocks/wool_black",
-    "4": "ls_furniture:blocks/wool_green",
-    "5": "ls_furniture:blocks/wool_red",
-    "6": "ls_furniture:blocks/stripped_warped",
-    "7": "ls_furniture:blocks/stripped_warped"
+    "all": "ls_furniture:block/planks_warped",
+    "particle": "ls_furniture:block/planks_warped",
+    "1": "ls_furniture:block/anvil_flat",
+    "2": "ls_furniture:block/anvil_flat",
+    "3": "ls_furniture:block/wool_black",
+    "4": "ls_furniture:block/wool_green",
+    "5": "ls_furniture:block/wool_red",
+    "6": "ls_furniture:block/stripped_warped",
+    "7": "ls_furniture:block/stripped_warped"
   },
   "render_type": "solid"
 }

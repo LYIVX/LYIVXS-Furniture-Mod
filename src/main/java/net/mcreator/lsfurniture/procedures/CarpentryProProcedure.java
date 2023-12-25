@@ -37,7 +37,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -45,7 +45,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -53,7 +53,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -61,7 +61,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -69,7 +69,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -77,7 +77,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -85,7 +85,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -93,7 +93,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -101,7 +101,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -109,7 +109,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -117,7 +117,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -125,7 +125,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2)).getItem() == Items.IRON_INGOT && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == Items.IRON_INGOT && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -133,7 +133,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -141,7 +141,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -149,7 +149,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -157,7 +157,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("forge:cupboards"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("forge:cupboards"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -165,7 +165,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1)).getItem() == LsFurnitureModBlocks.OVEN_VENT.get().asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == LsFurnitureModBlocks.OVEN_VENT.get().asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -173,7 +173,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -181,7 +181,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -189,7 +189,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getItem() == Blocks.AIR.asItem() || (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -197,7 +197,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).is(ItemTags.create(new ResourceLocation("minecraft:planks"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -205,7 +205,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("forge:wool"))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("forge:wool"))) && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -213,7 +213,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -221,7 +221,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == Blocks.AIR.asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -229,7 +229,7 @@ public class CarpentryProProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos(x, y, z), 4)).getItem() == Blocks.AIR.asItem())) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 4)).getItem() == Blocks.AIR.asItem())) {
 			for (int index0 = 0; index0 < 28; index0++) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					((Slot) _slots.get((int) SlotNumber)).remove(1);

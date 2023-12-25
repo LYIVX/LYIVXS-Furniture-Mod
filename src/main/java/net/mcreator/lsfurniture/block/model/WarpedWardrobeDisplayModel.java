@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.WarpedWardrobeDisplayItem;
 
-public class WarpedWardrobeDisplayModel extends AnimatedGeoModel<WarpedWardrobeDisplayItem> {
+public class WarpedWardrobeDisplayModel extends GeoModel<WarpedWardrobeDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(WarpedWardrobeDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/wardrobe.animation.json");
@@ -19,6 +19,6 @@ public class WarpedWardrobeDisplayModel extends AnimatedGeoModel<WarpedWardrobeD
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedWardrobeDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/wardrobe_warped.png");
+		return new ResourceLocation("ls_furniture", "textures/block/wardrobe_warped.png");
 	}
 }

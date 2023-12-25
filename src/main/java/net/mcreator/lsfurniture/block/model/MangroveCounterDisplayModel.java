@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.MangroveCounterDisplayItem;
 
-public class MangroveCounterDisplayModel extends AnimatedGeoModel<MangroveCounterDisplayItem> {
+public class MangroveCounterDisplayModel extends GeoModel<MangroveCounterDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(MangroveCounterDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class MangroveCounterDisplayModel extends AnimatedGeoModel<MangroveCounte
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_mangrove.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_mangrove.png");
 	}
 }

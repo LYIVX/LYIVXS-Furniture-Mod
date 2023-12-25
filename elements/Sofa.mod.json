@@ -1,15 +1,15 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "livingentity",
   "definition": {
     "mobName": "Seat",
     "mobLabel": "",
     "mobModelName": "ModelSeat",
     "mobModelTexture": "seat.png",
-    "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "modelLayers": [],
     "modelWidth": 0.88,
     "modelHeight": 0.63,
     "modelShadowSize": 0.0,
@@ -60,6 +60,9 @@
     "health": 1,
     "xpAmount": 0,
     "waterMob": false,
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -96,6 +99,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "whenMobIsHurt": {
       "name": "SeatDies"
     },

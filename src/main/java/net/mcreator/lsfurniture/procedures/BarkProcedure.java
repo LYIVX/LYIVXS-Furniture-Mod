@@ -37,8 +37,8 @@ public class BarkProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:logs")))) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.OAK_LOG) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:logs")))) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.OAK_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.OAK_BARK.get());
@@ -46,7 +46,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DARK_OAK_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DARK_OAK_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.DARK_OAK_BARK.get());
@@ -54,7 +54,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.SPRUCE_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.SPRUCE_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.SPRUCE_BARK.get());
@@ -62,7 +62,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.ACACIA_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.ACACIA_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.ACACIA_BARK.get());
@@ -70,7 +70,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.BIRCH_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.BIRCH_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.BIRCH_BARK.get());
@@ -78,7 +78,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.JUNGLE_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.JUNGLE_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.JUNGLE_BARK.get());
@@ -86,7 +86,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.MANGROVE_LOG) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.MANGROVE_LOG) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.MANGROVE_BARK.get());
@@ -94,7 +94,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.CRIMSON_STEM) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CRIMSON_STEM) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.CRIMSON_BARK.get());
@@ -102,7 +102,7 @@ public class BarkProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.WARPED_STEM) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WARPED_STEM) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(LsFurnitureModItems.WARPED_BARK.get());

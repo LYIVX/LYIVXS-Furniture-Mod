@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.MangroveQuartzSinkDisplayItem;
 
-public class MangroveQuartzSinkDisplayModel extends AnimatedGeoModel<MangroveQuartzSinkDisplayItem> {
+public class MangroveQuartzSinkDisplayModel extends GeoModel<MangroveQuartzSinkDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(MangroveQuartzSinkDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/sink.animation.json");
@@ -19,6 +19,6 @@ public class MangroveQuartzSinkDisplayModel extends AnimatedGeoModel<MangroveQua
 
 	@Override
 	public ResourceLocation getTextureResource(MangroveQuartzSinkDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/sink_mangrove_quartz.png");
+		return new ResourceLocation("ls_furniture", "textures/block/sink_mangrove_quartz.png");
 	}
 }

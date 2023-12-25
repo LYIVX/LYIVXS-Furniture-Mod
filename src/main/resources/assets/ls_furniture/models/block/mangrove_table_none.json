@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/table_none",
   "textures": {
-    "all": "ls_furniture:blocks/table_none_mangrove",
-    "particle": "ls_furniture:blocks/table_none_mangrove",
-    "1": "ls_furniture:blocks/log_mangrove",
-    "2": "ls_furniture:blocks/table_none_mangrove"
+    "all": "ls_furniture:block/table_none_mangrove",
+    "particle": "ls_furniture:block/table_none_mangrove",
+    "1": "ls_furniture:block/log_mangrove",
+    "2": "ls_furniture:block/table_none_mangrove"
   },
   "render_type": "cutout"
 }

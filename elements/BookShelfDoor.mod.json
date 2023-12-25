@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "bookshelf",
@@ -14,7 +14,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "bookshelf_plank_door",
+    "itemTexture": "door_bookshelf_planks",
     "particleTexture": "",
     "blockBase": "Door",
     "tintType": "No tint",
@@ -35,9 +35,11 @@
       }
     ],
     "name": "Bookshelf",
-    "specialInfo": [
-      "Door"
-    ],
+    "specialInformation": {
+      "fixedValue": [
+        "Door"
+      ]
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -120,7 +122,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

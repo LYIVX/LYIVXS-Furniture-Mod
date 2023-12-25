@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ls_furniture:blocks/connecting_oak_mosaic",
-    "particle": "ls_furniture:blocks/connecting_oak_mosaic"
-  },
-  "render_type": "solid"
-}

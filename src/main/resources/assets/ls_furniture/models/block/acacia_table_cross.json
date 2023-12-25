@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_cross",
   "textures": {
-    "all": "ls_furniture:blocks/table_cross_acacia",
-    "particle": "ls_furniture:blocks/table_cross_acacia",
-    "1": "ls_furniture:blocks/table_cross_acacia"
+    "all": "ls_furniture:block/table_cross_acacia",
+    "particle": "ls_furniture:block/table_cross_acacia",
+    "1": "ls_furniture:block/table_cross_acacia"
   },
   "render_type": "cutout"
 }

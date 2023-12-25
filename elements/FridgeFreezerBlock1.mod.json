@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "animatedblock",
   "definition": {
     "texture": "iron_block",
@@ -42,7 +42,9 @@
       }
     ],
     "name": "Fridge Freezer",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 5.0,
     "resistance": 6.0,
     "hasGravity": false,
@@ -122,6 +124,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
+    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [
       0,
@@ -169,19 +172,14 @@
     "onDestroyedByExplosion": {
       "name": "FridgeFreezerBlock1BlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
+    "blocksToReplace": [],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
-    "normal": "fidge_frezzer_1.geo.json",
-    "displaySettings": "fidge_frezzer.item.json"
+    "normal": "fridge_frezzer_bottom.geo.json",
+    "displaySettings": "fridge_frezzer_bottom.item.json"
   }
 }

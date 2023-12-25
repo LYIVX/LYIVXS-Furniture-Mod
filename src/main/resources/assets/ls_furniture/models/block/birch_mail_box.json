@@ -1,12 +1,12 @@
 {
   "parent": "ls_furniture:custom/mail_box",
   "textures": {
-    "all": "ls_furniture:blocks/planks_birch",
-    "particle": "ls_furniture:blocks/planks_birch",
-    "0": "ls_furniture:blocks/log_birch",
-    "1": "ls_furniture:blocks/stripped_birch",
-    "2": "ls_furniture:blocks/log_birch",
-    "3": "ls_furniture:blocks/wool_black"
+    "all": "ls_furniture:block/planks_birch",
+    "particle": "ls_furniture:block/planks_birch",
+    "0": "ls_furniture:block/log_birch",
+    "1": "ls_furniture:block/stripped_birch",
+    "2": "ls_furniture:block/log_birch",
+    "3": "ls_furniture:block/wool_black"
   },
   "render_type": "solid"
 }

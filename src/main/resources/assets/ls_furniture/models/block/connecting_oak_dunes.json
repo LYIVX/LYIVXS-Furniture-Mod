@@ -1,8 +1,15 @@
 {
   "parent": "block/cube_all",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:blocks/connecting_oak_dunes",
-    "particle": "ls_furniture:blocks/connecting_oak_dunes"
+    "all": "ls_furniture:block/connecting_oak_dunes",
+    "particle": "ls_furniture:block/connecting_oak_dunes"
   },
   "render_type": "solid"
 }

@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ls_furniture:blocks/log_top_acacia",
-    "up": "ls_furniture:blocks/log_top_acacia",
-    "north": "ls_furniture:blocks/log_acacia_reinforced",
-    "east": "ls_furniture:blocks/log_acacia_reinforced",
-    "south": "ls_furniture:blocks/log_acacia_reinforced",
-    "west": "ls_furniture:blocks/log_acacia_reinforced",
-    "particle": "ls_furniture:blocks/log_top_acacia"
+    "down": "ls_furniture:block/log_top_acacia",
+    "up": "ls_furniture:block/log_top_acacia",
+    "north": "ls_furniture:block/log_acacia_reinforced",
+    "east": "ls_furniture:block/log_acacia_reinforced",
+    "south": "ls_furniture:block/log_acacia_reinforced",
+    "west": "ls_furniture:block/log_acacia_reinforced",
+    "particle": "ls_furniture:block/log_top_acacia"
   },
   "render_type": "solid"
 }

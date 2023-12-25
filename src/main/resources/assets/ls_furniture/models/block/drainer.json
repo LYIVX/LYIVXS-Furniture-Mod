@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/drainer",
   "textures": {
-    "all": "ls_furniture:blocks/anvil",
-    "particle": "ls_furniture:blocks/anvil",
-    "3": "ls_furniture:blocks/anvil"
+    "all": "ls_furniture:block/anvil",
+    "particle": "ls_furniture:block/anvil",
+    "3": "ls_furniture:block/anvil"
   },
   "render_type": "solid"
 }

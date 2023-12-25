@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "bricks",
@@ -43,7 +43,9 @@
       }
     ],
     "name": "Fire Place",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 9.0,
     "hasGravity": false,
@@ -132,7 +134,7 @@
     "onTickUpdate": {
       "name": "FireplaceUpdateTick"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

@@ -1,9 +1,9 @@
 {
   "parent": "ls_furniture:custom/table_junction",
   "textures": {
-    "all": "ls_furniture:blocks/table_junction_oak",
-    "particle": "ls_furniture:blocks/planks_oak",
-    "1": "ls_furniture:blocks/table_junction_oak"
+    "all": "ls_furniture:block/table_junction_oak",
+    "particle": "ls_furniture:block/planks_oak",
+    "1": "ls_furniture:block/table_junction_oak"
   },
   "render_type": "cutout"
 }

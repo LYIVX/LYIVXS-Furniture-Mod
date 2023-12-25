@@ -38,10 +38,10 @@ public class PotBlockClickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.FLOWER_POT) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.FLOWER_POT) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.OAK_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.OAK_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -57,7 +57,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.DARK_OAK_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.DARK_OAK_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -73,7 +73,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.SPRUCE_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.SPRUCE_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -89,7 +89,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.ACACIA_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.ACACIA_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -105,7 +105,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.BIRCH_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.BIRCH_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -121,7 +121,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.JUNGLE_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.JUNGLE_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -137,7 +137,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.MANGROVE_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.MANGROVE_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -153,7 +153,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.CRIMSON_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.CRIMSON_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -169,7 +169,7 @@ public class PotBlockClickProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == LsFurnitureModBlocks.WARPED_PLANT.get().asItem()) {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = LsFurnitureModBlocks.WARPED_POTTED.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -186,7 +186,7 @@ public class PotBlockClickProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.OAK_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.OAK_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.OAK_PLANT.get());
@@ -196,7 +196,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -211,7 +211,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.DARK_OAK_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.DARK_OAK_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.DARK_OAK_PLANT.get());
@@ -221,7 +221,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -236,7 +236,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.SPRUCE_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.SPRUCE_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.SPRUCE_PLANT.get());
@@ -246,7 +246,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -261,7 +261,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.ACACIA_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.ACACIA_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.ACACIA_PLANT.get());
@@ -271,7 +271,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -286,7 +286,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.BIRCH_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.BIRCH_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.BIRCH_PLANT.get());
@@ -296,7 +296,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -311,7 +311,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.JUNGLE_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.JUNGLE_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.JUNGLE_PLANT.get());
@@ -321,7 +321,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -336,7 +336,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.MANGROVE_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.MANGROVE_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.MANGROVE_PLANT.get());
@@ -346,7 +346,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -361,7 +361,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.CRIMSON_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.CRIMSON_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.CRIMSON_PLANT.get());
@@ -371,7 +371,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -386,7 +386,7 @@ public class PotBlockClickProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LsFurnitureModBlocks.WARPED_POTTED.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == LsFurnitureModBlocks.WARPED_POTTED.get()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.WARPED_PLANT.get());
@@ -396,7 +396,7 @@ public class PotBlockClickProcedure {
 						_player.getInventory().setChanged();
 				}
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = Blocks.FLOWER_POT.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

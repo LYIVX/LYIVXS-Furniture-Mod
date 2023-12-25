@@ -28,9 +28,10 @@ public class OakBlindsBlockClickedProcedure {
 		bottomc = LsFurnitureModBlocks.OAK_BLINDS_BOTTOM_CLOSED.get().defaultBlockState();
 		open = "oak_blinds";
 		closed = "oak_blinds_closed";
-		if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH)))) && (world.getBlockState(new BlockPos(x, y, z))).getBlock() == top.getBlock()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == top.getBlock()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = topc;
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -58,10 +59,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
-					&& (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == bottom.getBlock()) {
+			if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
+					&& (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == bottom.getBlock()) {
 				{
-					BlockPos _bp = new BlockPos(x, y - 1, z);
+					BlockPos _bp = BlockPos.containing(x, y - 1, z);
 					BlockState _bs = bottomc;
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -90,10 +91,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == bottom.getBlock()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == bottom.getBlock()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = bottomc;
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -121,10 +122,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
-					&& (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == top.getBlock()) {
+			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + open)).toLowerCase(java.util.Locale.ENGLISH))))
+					&& (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == top.getBlock()) {
 				{
-					BlockPos _bp = new BlockPos(x, y + 1, z);
+					BlockPos _bp = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = topc;
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -153,10 +154,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == topc.getBlock()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == topc.getBlock()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = top;
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -184,10 +185,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
-					&& (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == bottomc.getBlock()) {
+			if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
+					&& (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == bottomc.getBlock()) {
 				{
-					BlockPos _bp = new BlockPos(x, y - 1, z);
+					BlockPos _bp = BlockPos.containing(x, y - 1, z);
 					BlockState _bs = bottom;
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -216,10 +217,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
-				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == bottomc.getBlock()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == bottomc.getBlock()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = bottom;
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -247,10 +248,10 @@ public class OakBlindsBlockClickedProcedure {
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
-					&& (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == topc.getBlock()) {
+			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation((("forge" + ":" + closed)).toLowerCase(java.util.Locale.ENGLISH))))
+					&& (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == topc.getBlock()) {
 				{
-					BlockPos _bp = new BlockPos(x, y + 1, z);
+					BlockPos _bp = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = top;
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

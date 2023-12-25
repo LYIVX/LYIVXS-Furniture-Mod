@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.CrimsonNetherWartCounterDisplayItem;
 
-public class CrimsonNetherWartCounterDisplayModel extends AnimatedGeoModel<CrimsonNetherWartCounterDisplayItem> {
+public class CrimsonNetherWartCounterDisplayModel extends GeoModel<CrimsonNetherWartCounterDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CrimsonNetherWartCounterDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class CrimsonNetherWartCounterDisplayModel extends AnimatedGeoModel<Crims
 
 	@Override
 	public ResourceLocation getTextureResource(CrimsonNetherWartCounterDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_crimson_nether_wart.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_crimson_nether_wart.png");
 	}
 }

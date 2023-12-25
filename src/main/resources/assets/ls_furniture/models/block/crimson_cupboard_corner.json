@@ -1,10 +1,10 @@
 {
   "parent": "ls_furniture:custom/cupboard_corner",
   "textures": {
-    "all": "ls_furniture:blocks/planks_crimson",
-    "particle": "ls_furniture:blocks/planks_crimson",
-    "0": "ls_furniture:blocks/stripped_crimson",
-    "1": "ls_furniture:blocks/stripped_crimson"
+    "all": "ls_furniture:block/planks_crimson",
+    "particle": "ls_furniture:block/planks_crimson",
+    "0": "ls_furniture:block/stripped_crimson",
+    "1": "ls_furniture:block/stripped_crimson"
   },
   "render_type": "cutout_mipped"
 }

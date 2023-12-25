@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.NetherBricksOvenTileEntity;
 
-public class NetherBricksOvenBlockModel extends AnimatedGeoModel<NetherBricksOvenTileEntity> {
+public class NetherBricksOvenBlockModel extends GeoModel<NetherBricksOvenTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(NetherBricksOvenTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/oven.animation.json");
@@ -19,6 +19,6 @@ public class NetherBricksOvenBlockModel extends AnimatedGeoModel<NetherBricksOve
 
 	@Override
 	public ResourceLocation getTextureResource(NetherBricksOvenTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oven_nether_bricks.png");
+		return new ResourceLocation("ls_furniture", "textures/block/oven_nether_bricks.png");
 	}
 }

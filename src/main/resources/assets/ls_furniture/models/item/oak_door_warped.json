@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ls_furniture:items/oak_door_warped"
+    "layer0": "ls_furniture:item/oak_door_warped"
   },
   "render_type": "translucent"
 }

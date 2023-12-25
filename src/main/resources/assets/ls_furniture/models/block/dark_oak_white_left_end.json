@@ -1,10 +1,11 @@
 {
   "parent": "ls_furniture:custom/sofa_left",
   "textures": {
-    "all": "ls_furniture:blocks/wool_white",
-    "particle": "ls_furniture:blocks/planks_dark_oak",
-    "Planks": "ls_furniture:blocks/planks_dark_oak",
-    "Wool": "ls_furniture:blocks/wool_white"
+    "all": "ls_furniture:block/wool_white",
+    "particle": "ls_furniture:block/stripped_dark_oak",
+    "Log": "ls_furniture:block/log_dark_oak",
+    "Wool": "ls_furniture:block/wool_white",
+    "Stripped": "ls_furniture:block/stripped_dark_oak"
   },
   "render_type": "solid"
 }

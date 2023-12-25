@@ -7,17 +7,18 @@
 		"1": {
 			"animation_length": 2,
 			"bones": {
-				"draw1": {
-					"position": {
+				"1": {
+					"rotation": {
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
 						"0.75": {
-							"vector": [0, 0, -6],
+							"vector": [0, 75, 0],
 							"easing": "easeInOutCubic"
 						},
 						"1.25": {
-							"vector": [0, 0, -6]
+							"vector": [0, 75, 0],
+							"easing": "easeInOutCubic"
 						},
 						"2.0": {
 							"vector": [0, 0, 0],
@@ -25,31 +26,24 @@
 						}
 					}
 				},
-				"draw2": {
-					"position": {
+				"2": {
+					"rotation": {
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
 						"0.75": {
-							"vector": [0, 0, -10],
+							"vector": [0, -55, 0],
 							"easing": "easeInOutCubic"
 						},
 						"1.25": {
-							"vector": [0, 0, -10]
+							"vector": [0, -55, 0],
+							"easing": "easeInOutCubic"
 						},
 						"2.0": {
 							"vector": [0, 0, 0],
-							"easing": "easeInOutQuad"
+							"easing": "easeInOutCubic"
 						}
 					}
-				}
-			},
-			"sound_effects": {
-				"0.0": {
-					"effect": "open"
-				},
-				"1.25": {
-					"effect": "close1"
 				}
 			}
 		}

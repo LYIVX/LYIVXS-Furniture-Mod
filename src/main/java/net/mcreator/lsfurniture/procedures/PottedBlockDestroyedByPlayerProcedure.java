@@ -1,7 +1,6 @@
 package net.mcreator.lsfurniture.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -9,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.client.Minecraft;
 
 public class PottedBlockDestroyedByPlayerProcedure {
@@ -25,7 +25,7 @@ public class PottedBlockDestroyedByPlayerProcedure {
 				return false;
 			}
 		}.checkGamemode(entity)) {
-			if (world instanceof Level _level && !_level.isClientSide()) {
+			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.FLOWER_POT));
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);

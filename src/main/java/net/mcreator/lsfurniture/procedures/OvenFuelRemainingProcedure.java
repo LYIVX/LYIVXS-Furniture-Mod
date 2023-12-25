@@ -13,6 +13,6 @@ public class OvenFuelRemainingProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "fuelticks")) / 100);
+		}.getValue(world, BlockPos.containing(x, y, z), "fuelticks")) / 100);
 	}
 }

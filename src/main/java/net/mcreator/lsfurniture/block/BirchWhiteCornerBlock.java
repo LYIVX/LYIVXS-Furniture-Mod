@@ -21,10 +21,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -45,6 +45,11 @@ public class BirchWhiteCornerBlock extends Block {
 	}
 
 	@Override
+	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+	}
+
+	@Override
 	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
 		return true;
 	}
@@ -62,10 +67,14 @@ public class BirchWhiteCornerBlock extends Block {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(0, 0, 0, 16, 6, 16), box(0, 6, 0, 16, 16, 3), box(13, 6, 3, 16, 16, 16), box(0, 10, 3, 13, 14, 4), box(12, 10, 4, 13, 14, 16), box(0, 6, 3, 13, 10, 15.5), box(0.5, 6, 15.5, 13, 10, 16));
-			case NORTH -> Shapes.or(box(0, 0, 0, 16, 6, 16), box(0, 6, 13, 16, 16, 16), box(0, 6, 0, 3, 16, 13), box(3, 10, 12, 16, 14, 13), box(3, 10, 0, 4, 14, 12), box(3, 6, 0.5, 16, 10, 13), box(3, 6, 0, 15.5, 10, 0.5));
-			case EAST -> Shapes.or(box(0, 0, 0, 16, 6, 16), box(0, 6, 0, 3, 16, 16), box(3, 6, 0, 16, 16, 3), box(3, 10, 3, 4, 14, 16), box(4, 10, 3, 16, 14, 4), box(3, 6, 3, 15.5, 10, 16), box(15.5, 6, 3, 16, 10, 15.5));
-			case WEST -> Shapes.or(box(0, 0, 0, 16, 6, 16), box(13, 6, 0, 16, 16, 16), box(0, 6, 13, 13, 16, 16), box(12, 10, 0, 13, 14, 13), box(0, 10, 12, 12, 14, 13), box(0.5, 6, 0, 13, 10, 13), box(0, 6, 0.5, 0.5, 10, 13));
+			default -> Shapes.or(box(0, 10, -0.5, 16, 12, 3), box(0, 12, -1.3, 16, 14, 2.2), box(0, 14, -2.1, 16, 16, 1.4), box(13, 10, 0, 16.5, 12, 16), box(13.8, 12, 0, 17.3, 14, 16), box(14.6, 14, 0, 18.1, 16, 16), box(14, 0, 14, 16, 2, 16),
+					box(0, 0, 14, 2, 2, 16), box(0, 0, 0, 2, 2, 2), box(14, 0, 0, 16, 2, 2), box(3, 2, 3, 13, 6, 16), box(0, 2, 3, 3, 6, 16), box(0, 2, 0, 16, 10, 3), box(13, 2, 3, 16, 10, 16));
+			case NORTH -> Shapes.or(box(0, 10, 13, 16, 12, 16.5), box(0, 12, 13.8, 16, 14, 17.3), box(0, 14, 14.6, 16, 16, 18.1), box(-0.5, 10, 0, 3, 12, 16), box(-1.3, 12, 0, 2.2, 14, 16), box(-2.1, 14, 0, 1.4, 16, 16), box(0, 0, 0, 2, 2, 2),
+					box(14, 0, 0, 16, 2, 2), box(14, 0, 14, 16, 2, 16), box(0, 0, 14, 2, 2, 16), box(3, 2, 0, 13, 6, 13), box(13, 2, 0, 16, 6, 13), box(0, 2, 13, 16, 10, 16), box(0, 2, 0, 3, 10, 13));
+			case EAST -> Shapes.or(box(-0.5, 10, 0, 3, 12, 16), box(-1.3, 12, 0, 2.2, 14, 16), box(-2.1, 14, 0, 1.4, 16, 16), box(0, 10, -0.5, 16, 12, 3), box(0, 12, -1.3, 16, 14, 2.2), box(0, 14, -2.1, 16, 16, 1.4), box(14, 0, 0, 16, 2, 2),
+					box(14, 0, 14, 16, 2, 16), box(0, 0, 14, 2, 2, 16), box(0, 0, 0, 2, 2, 2), box(3, 2, 3, 16, 6, 13), box(3, 2, 13, 16, 6, 16), box(0, 2, 0, 3, 10, 16), box(3, 2, 0, 16, 10, 3));
+			case WEST -> Shapes.or(box(13, 10, 0, 16.5, 12, 16), box(13.8, 12, 0, 17.3, 14, 16), box(14.6, 14, 0, 18.1, 16, 16), box(0, 10, 13, 16, 12, 16.5), box(0, 12, 13.8, 16, 14, 17.3), box(0, 14, 14.6, 16, 16, 18.1), box(0, 0, 14, 2, 2, 16),
+					box(0, 0, 0, 2, 2, 2), box(14, 0, 0, 16, 2, 2), box(14, 0, 14, 16, 2, 16), box(0, 2, 3, 13, 6, 13), box(0, 2, 0, 13, 6, 3), box(13, 2, 0, 16, 10, 16), box(0, 2, 13, 13, 10, 16));
 		};
 	}
 
@@ -103,18 +112,13 @@ public class BirchWhiteCornerBlock extends Block {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 1);
 		SeatAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
-		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		BirchWhiteBlockAddedProcedure.execute(world, x, y, z);
-		world.scheduleTick(pos, this, 1);
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		BirchWhiteBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

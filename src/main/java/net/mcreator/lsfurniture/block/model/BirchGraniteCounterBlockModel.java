@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.entity.BirchGraniteCounterTileEntity;
 
-public class BirchGraniteCounterBlockModel extends AnimatedGeoModel<BirchGraniteCounterTileEntity> {
+public class BirchGraniteCounterBlockModel extends GeoModel<BirchGraniteCounterTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BirchGraniteCounterTileEntity animatable) {
 		return new ResourceLocation("ls_furniture", "animations/counter.animation.json");
@@ -19,6 +19,6 @@ public class BirchGraniteCounterBlockModel extends AnimatedGeoModel<BirchGranite
 
 	@Override
 	public ResourceLocation getTextureResource(BirchGraniteCounterTileEntity entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/counter_birch_granite.png");
+		return new ResourceLocation("ls_furniture", "textures/block/counter_birch_granite.png");
 	}
 }

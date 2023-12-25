@@ -1,12 +1,12 @@
 package net.mcreator.lsfurniture.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.block.display.AndesiteOvenDisplayItem;
 
-public class AndesiteOvenDisplayModel extends AnimatedGeoModel<AndesiteOvenDisplayItem> {
+public class AndesiteOvenDisplayModel extends GeoModel<AndesiteOvenDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(AndesiteOvenDisplayItem animatable) {
 		return new ResourceLocation("ls_furniture", "animations/oven.animation.json");
@@ -19,6 +19,6 @@ public class AndesiteOvenDisplayModel extends AnimatedGeoModel<AndesiteOvenDispl
 
 	@Override
 	public ResourceLocation getTextureResource(AndesiteOvenDisplayItem entity) {
-		return new ResourceLocation("ls_furniture", "textures/blocks/oven_andesite.png");
+		return new ResourceLocation("ls_furniture", "textures/block/oven_andesite.png");
 	}
 }
