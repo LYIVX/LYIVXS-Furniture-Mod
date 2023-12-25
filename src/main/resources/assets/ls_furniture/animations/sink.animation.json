@@ -12,8 +12,7 @@
 			}
 		},
 		"1": {
-			"loop": "hold_on_last_frame",
-			"animation_length": 3,
+			"animation_length": 2,
 			"bones": {
 				"water_flow": {
 					"position": {
@@ -111,7 +110,6 @@
 			}
 		},
 		"2": {
-			"loop": "hold_on_last_frame",
 			"animation_length": 1,
 			"bones": {
 				"water_flow": {
@@ -178,7 +176,6 @@
 			}
 		},
 		"3": {
-			"loop": "hold_on_last_frame",
 			"animation_length": 0.5,
 			"bones": {
 				"water_still": {
