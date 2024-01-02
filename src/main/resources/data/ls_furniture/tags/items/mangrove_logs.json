@@ -3,6 +3,9 @@
   "values": [
     "ls_furniture:mangrove_log_bundle",
     "ls_furniture:mangrove_log_reinforced",
-    "minecraft:mangrove_log"
+    "minecraft:mangrove_log",
+    "ls_furniture:mangrove_log_pillar",
+    "ls_furniture:mangrove_log_nailed",
+    "ls_furniture:connecting_mangrove_log_pillar"
   ]
 }

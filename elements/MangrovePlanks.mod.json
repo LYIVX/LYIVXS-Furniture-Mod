@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingMangrovePlain"
       },
       {
-        "value": "CUSTOM:FramedMangrovePlain"
-      },
-      {
         "value": "CUSTOM:ConnectingMangroveStripped"
-      },
-      {
-        "value": "CUSTOM:FramedMangroveStripped"
       },
       {
         "value": "CUSTOM:ConnectingMangroveSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedMangroveSmallBricks"
+        "value": "CUSTOM:ConnectingMangroveBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "mangrove_planks",
     "namespace": "mod"
   }

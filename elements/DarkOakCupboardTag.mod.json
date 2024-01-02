@@ -21,6 +21,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "dark_oak_cupboard_tag",
     "namespace": "forge"
   }

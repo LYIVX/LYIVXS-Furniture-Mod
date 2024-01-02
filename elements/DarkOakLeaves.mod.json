@@ -27,6 +27,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "dark_oak_leaves",
     "namespace": "mod"
   }

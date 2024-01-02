@@ -12,12 +12,22 @@
       },
       {
         "value": "CUSTOM:BirchLogReinforced"
+      },
+      {
+        "value": "CUSTOM:BirchLogPillar"
+      },
+      {
+        "value": "CUSTOM:BirchLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "birch_logs",
     "namespace": "mod"
   }

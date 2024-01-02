@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:mangrove_leaves_blue_orchid",
-    "ls_furniture:mangrove_leaves_semi_frosted",
+    "minecraft:mangrove_leaves",
     "ls_furniture:mangrove_leaves_poppy",
     "ls_furniture:mangrove_leaves_dandilion",
-    "ls_furniture:mangrove_leaves_frosted",
-    "minecraft:mangrove_leaves"
+    "ls_furniture:mangrove_leaves_blue_orchid",
+    "ls_furniture:mangrove_leaves_semi_frosted",
+    "ls_furniture:mangrove_leaves_frosted"
   ]
 }

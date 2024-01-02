@@ -28,8 +28,9 @@ public class WarpedWhiteSofaRecipeProcedure {
 				}
 				return 0;
 			}
-		}.getAmount(0) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-				.getItem() == LsFurnitureModBlocks.WARPED_WHITE_SOFA.get().asItem() && new Object() {
+		}.getAmount(0) >= 1
+				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Blocks.WARPED_PLANKS.asItem()
+				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -63,7 +64,7 @@ public class WarpedWhiteSofaRecipeProcedure {
 						return 0;
 					}
 				}.getAmount(0) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.getItem() == LsFurnitureModBlocks.WARPED_WHITE_SOFA.get().asItem() && new Object() {
+						.getItem() == Blocks.WARPED_PLANKS.asItem() && new Object() {
 							public int getAmount(int sltid) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();

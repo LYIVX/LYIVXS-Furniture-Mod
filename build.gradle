@@ -11,9 +11,9 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '1.0'
+version = '1.19.4-0.5.2b'
 group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+archivesBaseName = 'LYIVXs Furniture Mod'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 

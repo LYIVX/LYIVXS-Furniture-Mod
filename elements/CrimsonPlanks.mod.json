@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingCrimsonPlain"
       },
       {
-        "value": "CUSTOM:FramedCrimsonPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingCrimsonStripped"
-      },
-      {
-        "value": "CUSTOM:FramedCrimsonStripped"
       },
       {
         "value": "CUSTOM:ConnectingCrimsonSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedCrimsonSmallBricks"
+        "value": "CUSTOM:ConnectingCrimsonBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "crimson_planks",
     "namespace": "mod"
   }

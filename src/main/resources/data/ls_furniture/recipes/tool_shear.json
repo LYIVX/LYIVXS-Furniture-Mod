@@ -1,24 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "0 2",
-    " 4 ",
-    "6 8"
+    "a a",
+    " b ",
+    "c c"
   ],
   "key": {
-    "0": {
+    "a": {
       "item": "minecraft:iron_ingot"
     },
-    "2": {
-      "item": "minecraft:iron_ingot"
-    },
-    "4": {
+    "b": {
       "item": "minecraft:iron_nugget"
     },
-    "6": {
-      "item": "minecraft:stick"
-    },
-    "8": {
+    "c": {
       "item": "minecraft:stick"
     }
   },

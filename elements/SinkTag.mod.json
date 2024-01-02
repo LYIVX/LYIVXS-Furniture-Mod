@@ -63,6 +63,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "sink_tag",
     "namespace": "mod"
   }

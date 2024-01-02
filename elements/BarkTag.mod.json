@@ -8,9 +8,6 @@
         "value": "CUSTOM:OakBark"
       },
       {
-        "value": "CUSTOM:DarkOakBrak"
-      },
-      {
         "value": "CUSTOM:SpruceBark"
       },
       {
@@ -30,12 +27,16 @@
       },
       {
         "value": "CUSTOM:WarpedBark"
+      },
+      {
+        "value": "CUSTOM:DarkOakBark"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "bark",
     "namespace": "mod"
   }

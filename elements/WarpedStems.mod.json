@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.WARPED_STEM"
+      },
+      {
+        "value": "CUSTOM:WarpedStemPillar"
+      },
+      {
+        "value": "CUSTOM:WarpedStemNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedStemPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "warped_stems",
     "namespace": "mod"
   }

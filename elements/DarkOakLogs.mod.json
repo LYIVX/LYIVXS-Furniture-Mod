@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.LOG2#1"
+      },
+      {
+        "value": "CUSTOM:DarkOakLogPillar"
+      },
+      {
+        "value": "CUSTOM:DarkOakLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "dark_oak_logs",
     "namespace": "mod"
   }

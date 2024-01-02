@@ -8,28 +8,53 @@
         "value": "CUSTOM:ConnectingSprucePlain"
       },
       {
-        "value": "CUSTOM:FramedSprucePlain"
-      },
-      {
         "value": "CUSTOM:ConnectingSpruceStripped"
-      },
-      {
-        "value": "CUSTOM:FramedSpruceStripped"
       },
       {
         "value": "CUSTOM:ConnectingSpruceSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedSpruceSmallBricks"
+        "value": "Blocks.PLANKS#1"
       },
       {
-        "value": "Blocks.PLANKS#1"
+        "value": "CUSTOM:ConnectingSpruceBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "spruce_planks",
     "namespace": "mod"
   }

@@ -36,6 +36,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "stool_tag",
     "namespace": "mod"
   }

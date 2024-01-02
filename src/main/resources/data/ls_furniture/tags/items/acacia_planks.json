@@ -3,7 +3,18 @@
   "values": [
     "minecraft:acacia_planks",
     "ls_furniture:connecting_acacia_plain",
+    "ls_furniture:connecting_acacia_stripped",
     "ls_furniture:connecting_acacia_small_bricks",
-    "ls_furniture:connecting_acacia_stripped"
+    "ls_furniture:connecting_acacia_big_bricks",
+    "ls_furniture:connecting_acacia_horizontal_stripes",
+    "ls_furniture:connecting_acacia_vertical_stripes",
+    "ls_furniture:connecting_acacia_wavey",
+    "ls_furniture:connecting_acacia_mosaic",
+    "ls_furniture:connecting_acacia_diagonal",
+    "ls_furniture:connecting_acacia_dunes",
+    "ls_furniture:connecting_acacia_checkered",
+    "ls_furniture:connecting_acacia_checked",
+    "ls_furniture:connecting_acacia_swirl",
+    "ls_furniture:connecting_acacia_slash"
   ]
 }

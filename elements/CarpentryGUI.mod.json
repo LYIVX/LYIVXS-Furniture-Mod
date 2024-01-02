@@ -17,7 +17,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 0,
           "disablePickup": {
@@ -35,7 +36,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 1,
           "disablePickup": {
@@ -53,7 +55,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementMetal"
           },
           "id": 2,
           "disablePickup": {
@@ -71,7 +74,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementDye"
           },
           "id": 3,
           "disablePickup": {
@@ -89,7 +93,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementTool"
           },
           "id": 4,
           "disablePickup": {
@@ -869,50 +874,6 @@
           },
           "x": 280,
           "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_arrow_right1",
-          "image": "arrow_right.png",
-          "hoveredImage": "arrow_right_highlighted.png",
-          "onClick": {
-            "name": "OpenCarpentry2GUI"
-          },
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 301,
-          "y": 102
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_arrow_left1",
-          "image": "arrow_left.png",
-          "hoveredImage": "arrow_left_highlighted.png",
-          "onClick": {
-            "name": "OpenCarpentry2GUI"
-          },
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 161,
-          "y": 102
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab_right_horizontal_deselect.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 301,
-          "y": 98
         }
       },
       {

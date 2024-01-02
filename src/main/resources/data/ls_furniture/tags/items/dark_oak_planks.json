@@ -1,9 +1,20 @@
 {
   "replace": false,
   "values": [
-    "minecraft:dark_oak_planks",
-    "ls_furniture:connecting_dark_oak_small_bricks",
     "ls_furniture:connecting_dark_oak_plain",
-    "ls_furniture:connecting_dark_oak_stripped"
+    "ls_furniture:connecting_dark_oak_stripped",
+    "ls_furniture:connecting_dark_oak_small_bricks",
+    "minecraft:dark_oak_planks",
+    "ls_furniture:connecting_dark_oak_big_bricks",
+    "ls_furniture:connecting_dark_oak_horizontal_stripes",
+    "ls_furniture:connecting_dark_oak_vertical_stripes",
+    "ls_furniture:connecting_dark_oak_wavey",
+    "ls_furniture:connecting_dark_oak_mosaic",
+    "ls_furniture:connecting_dark_oak_diagonal",
+    "ls_furniture:connecting_dark_oak_dunes",
+    "ls_furniture:connecting_dark_oak_checkered",
+    "ls_furniture:connecting_dark_oak_checked",
+    "ls_furniture:connecting_dark_oak_swirl",
+    "ls_furniture:connecting_dark_oak_slash"
   ]
 }

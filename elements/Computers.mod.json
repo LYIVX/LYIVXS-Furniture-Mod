@@ -31,6 +31,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "computers",
     "namespace": "forge"
   }

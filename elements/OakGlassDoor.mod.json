@@ -30,6 +30,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "oak_glass_door",
     "namespace": "mod"
   }

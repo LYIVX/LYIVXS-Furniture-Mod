@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_glass_door_3",
     "ls_furniture:oak_glass_door_2",
-    "ls_furniture:oak_glass_door_5",
+    "ls_furniture:oak_glass_door_3",
     "ls_furniture:oak_glass_door_4",
-    "ls_furniture:oak_glass_door_7",
+    "ls_furniture:oak_glass_door_5",
     "ls_furniture:oak_glass_door_6",
+    "ls_furniture:oak_glass_door_7",
     "ls_furniture:oak_glass_door_1"
   ]
 }

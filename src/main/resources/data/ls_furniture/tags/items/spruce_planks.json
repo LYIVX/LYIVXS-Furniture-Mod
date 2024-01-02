@@ -1,9 +1,20 @@
 {
   "replace": false,
   "values": [
+    "ls_furniture:connecting_spruce_plain",
     "ls_furniture:connecting_spruce_stripped",
     "ls_furniture:connecting_spruce_small_bricks",
     "minecraft:spruce_planks",
-    "ls_furniture:connecting_spruce_plain"
+    "ls_furniture:connecting_spruce_big_bricks",
+    "ls_furniture:connecting_spruce_horizontal_stripes",
+    "ls_furniture:connecting_spruce_vertical_stripes",
+    "ls_furniture:connecting_spruce_wavey",
+    "ls_furniture:connecting_spruce_mosaic",
+    "ls_furniture:connecting_spruce_diagonal",
+    "ls_furniture:connecting_spruce_dunes",
+    "ls_furniture:connecting_spruce_checkered",
+    "ls_furniture:connecting_spruce_checked",
+    "ls_furniture:connecting_spruce_swirl",
+    "ls_furniture:connecting_spruce_slash"
   ]
 }

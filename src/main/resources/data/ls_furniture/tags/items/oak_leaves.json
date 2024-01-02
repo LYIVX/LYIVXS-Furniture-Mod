@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_leaves_poppy",
-    "ls_furniture:oak_leaves_semi_frosted",
-    "ls_furniture:oak_leaves_frosted",
-    "ls_furniture:oak_leaves_dandilion",
+    "minecraft:oak_leaves",
     "ls_furniture:oak_leaves_blue_orchid",
-    "minecraft:oak_leaves"
+    "ls_furniture:oak_leaves_poppy",
+    "ls_furniture:oak_leaves_dandilion",
+    "ls_furniture:oak_leaves_semi_frosted",
+    "ls_furniture:oak_leaves_frosted"
   ]
 }

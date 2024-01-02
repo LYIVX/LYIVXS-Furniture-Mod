@@ -2,10 +2,10 @@
   "replace": false,
   "values": [
     "minecraft:jungle_leaves",
-    "ls_furniture:jungle_leaves_blue_orchid",
-    "ls_furniture:jungle_leaves_frosted",
-    "ls_furniture:jungle_leaves_semi_frosted",
     "ls_furniture:jungle_leaves_poppy",
-    "ls_furniture:jungle_leaves_dandilion"
+    "ls_furniture:jungle_leaves_dandilion",
+    "ls_furniture:jungle_leaves_blue_orchid",
+    "ls_furniture:jungle_leaves_semi_frosted",
+    "ls_furniture:jungle_leaves_frosted"
   ]
 }

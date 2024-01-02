@@ -21,6 +21,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "birch_cupboard_tag",
     "namespace": "forge"
   }

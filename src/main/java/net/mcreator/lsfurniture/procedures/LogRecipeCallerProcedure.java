@@ -2,18 +2,20 @@ package net.mcreator.lsfurniture.procedures;
 
 import net.minecraft.world.entity.Entity;
 
+import java.util.HashMap;
+
 public class LogRecipeCallerProcedure {
-	public static void execute(double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(double x, double y, double z, Entity entity, HashMap guistate) {
+		if (entity == null || guistate == null)
 			return;
-		OakLogsRecipeProcedure.execute(entity);
-		DarkOakLogsRecipeProcedure.execute(entity);
-		SpruceLogsRecipeProcedure.execute(entity);
-		AcaciaLogsRecipeProcedure.execute(entity);
-		BirchLogsRecipeProcedure.execute(entity);
-		JungleLogsRecipeProcedure.execute(entity);
-		MangroveLogsRecipeProcedure.execute(entity);
-		CrimsonStemsRecipeProcedure.execute(entity);
-		WarpedStemsRecipeProcedure.execute(entity);
+		OakLogsRecipeProcedure.execute(entity, guistate);
+		DarkOakLogsRecipeProcedure.execute(entity, guistate);
+		SpruceLogsRecipeProcedure.execute(entity, guistate);
+		AcaciaLogsRecipeProcedure.execute(entity, guistate);
+		BirchLogsRecipeProcedure.execute(entity, guistate);
+		JungleLogsRecipeProcedure.execute(entity, guistate);
+		MangroveLogsRecipeProcedure.execute(entity, guistate);
+		CrimsonStemsRecipeProcedure.execute(entity, guistate);
+		WarpedStemsRecipeProcedure.execute(entity, guistate);
 	}
 }

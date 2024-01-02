@@ -1,14 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    " 1",
-    "2 "
+    " a",
+    "b "
   ],
   "key": {
-    "1": {
+    "a": {
       "item": "minecraft:iron_ingot"
     },
-    "2": {
+    "b": {
       "item": "minecraft:stick"
     }
   },

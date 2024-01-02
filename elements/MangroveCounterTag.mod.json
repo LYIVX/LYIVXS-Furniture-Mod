@@ -15,6 +15,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "mangrove_counter_tag",
     "namespace": "forge"
   }

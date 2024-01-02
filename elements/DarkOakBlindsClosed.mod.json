@@ -15,6 +15,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "dark_oak_blinds_closed",
     "namespace": "forge"
   }

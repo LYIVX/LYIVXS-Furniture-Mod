@@ -15,6 +15,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "warped_warped_wart_counter_tag",
     "namespace": "forge"
   }

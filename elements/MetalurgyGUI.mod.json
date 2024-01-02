@@ -17,7 +17,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementEXIngot"
           },
           "id": 0,
           "disablePickup": {
@@ -35,7 +36,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacement"
           },
           "id": 1,
           "disablePickup": {
@@ -53,7 +55,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementMetal"
           },
           "id": 2,
           "disablePickup": {
@@ -71,7 +74,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementDye"
           },
           "id": 3,
           "disablePickup": {
@@ -89,7 +93,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "DisablePlacementTool"
           },
           "id": 4,
           "disablePickup": {

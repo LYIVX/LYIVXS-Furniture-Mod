@@ -20,8 +20,14 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<MasonryRecipe>> MASONRY_SERIALIZER =
             SERIALIZERS.register("masonry", () -> MasonryRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<MasonryTickRecipe>> MASONRY_TICK_SERIALIZER =
+            SERIALIZERS.register("masonry_tick", () -> MasonryTickRecipe.Serializer.INSTANCE);
+
     public static final RegistryObject<RecipeSerializer<MetallurgyRecipe>> METALLURGY_SERIALIZER =
             SERIALIZERS.register("metallurgy", () -> MetallurgyRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<MetallurgyTickRecipe>> METALLURGY_TICK_SERIALIZER =
+            SERIALIZERS.register("metallurgy_tick", () -> MetallurgyTickRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<BotanistRecipe>> BOTANIST_SERIALIZER =
             SERIALIZERS.register("botanist", () -> BotanistRecipe.Serializer.INSTANCE);

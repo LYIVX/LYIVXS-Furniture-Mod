@@ -50,7 +50,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 		super(LsFurnitureModMenus.CARPENTRY_2_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
-		this.internal = new ItemStackHandler(33);
+		this.internal = new ItemStackHandler(26);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -85,22 +85,22 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 8) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 7) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 28, 8) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 28, 7) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 28) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 27) {
 			private final int slot = 2;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 28, 28) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 28, 27) {
 			private final int slot = 3;
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 28, 48) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 28, 47) {
 			private final int slot = 4;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 54, 8) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 54, 9) {
 			private final int slot = 5;
 
 			@Override
@@ -114,7 +114,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 72, 8) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 72, 9) {
 			private final int slot = 6;
 
 			@Override
@@ -128,7 +128,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 90, 8) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 90, 9) {
 			private final int slot = 7;
 
 			@Override
@@ -142,7 +142,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 108, 8) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 108, 9) {
 			private final int slot = 8;
 
 			@Override
@@ -156,7 +156,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 126, 8) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 126, 9) {
 			private final int slot = 9;
 
 			@Override
@@ -170,7 +170,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 144, 8) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 144, 9) {
 			private final int slot = 10;
 
 			@Override
@@ -184,7 +184,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 162, 8) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 162, 9) {
 			private final int slot = 11;
 
 			@Override
@@ -198,7 +198,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 54, 26) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 54, 27) {
 			private final int slot = 12;
 
 			@Override
@@ -212,7 +212,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 72, 26) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 72, 27) {
 			private final int slot = 13;
 
 			@Override
@@ -226,7 +226,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 90, 26) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 90, 27) {
 			private final int slot = 14;
 
 			@Override
@@ -240,7 +240,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 108, 26) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 108, 27) {
 			private final int slot = 15;
 
 			@Override
@@ -254,7 +254,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 126, 26) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 126, 27) {
 			private final int slot = 16;
 
 			@Override
@@ -268,7 +268,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 144, 26) {
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 144, 27) {
 			private final int slot = 17;
 
 			@Override
@@ -282,7 +282,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 162, 26) {
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 162, 27) {
 			private final int slot = 18;
 
 			@Override
@@ -296,7 +296,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 54, 44) {
+		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 54, 45) {
 			private final int slot = 19;
 
 			@Override
@@ -310,7 +310,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 72, 44) {
+		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 72, 45) {
 			private final int slot = 20;
 
 			@Override
@@ -324,7 +324,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 90, 44) {
+		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 90, 45) {
 			private final int slot = 21;
 
 			@Override
@@ -338,7 +338,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 108, 44) {
+		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 108, 45) {
 			private final int slot = 22;
 
 			@Override
@@ -352,7 +352,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 126, 44) {
+		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 126, 45) {
 			private final int slot = 23;
 
 			@Override
@@ -366,7 +366,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 144, 44) {
+		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 144, 45) {
 			private final int slot = 24;
 
 			@Override
@@ -380,7 +380,7 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 162, 44) {
+		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 162, 45) {
 			private final int slot = 25;
 
 			@Override
@@ -394,109 +394,11 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 54, 62) {
-			private final int slot = 26;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(26, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 72, 62) {
-			private final int slot = 27;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(27, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 90, 62) {
-			private final int slot = 28;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(28, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 108, 62) {
-			private final int slot = 29;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(29, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 126, 62) {
-			private final int slot = 30;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(30, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 144, 62) {
-			private final int slot = 31;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(31, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 162, 62) {
-			private final int slot = 32;
-
-			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(32, 1, 0);
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return false;
-			}
-		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 6 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 6 + 8 + sj * 18, -15 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 6 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 6 + 8 + si * 18, -15 + 142));
 	}
 
 	@Override
@@ -519,16 +421,16 @@ public class Carpentry2GUIMenu extends AbstractContainerMenu implements Supplier
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 33) {
-				if (!this.moveItemStackTo(itemstack1, 33, this.slots.size(), true))
+			if (index < 26) {
+				if (!this.moveItemStackTo(itemstack1, 26, this.slots.size(), true))
 					return ItemStack.EMPTY;
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 33, false)) {
-				if (index < 33 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 33 + 27, this.slots.size(), true))
+			} else if (!this.moveItemStackTo(itemstack1, 0, 26, false)) {
+				if (index < 26 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 26 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 33, 33 + 27, false))
+					if (!this.moveItemStackTo(itemstack1, 26, 26 + 27, false))
 						return ItemStack.EMPTY;
 				}
 				return ItemStack.EMPTY;

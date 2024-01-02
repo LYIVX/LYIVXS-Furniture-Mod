@@ -1,5 +1,17 @@
 repositories {
 	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
+}
+dependencies {
+	compileOnly fg.deobf("dev.emi:emi-forge:1.0.23+1.19.4:api")
+	runtimeOnly fg.deobf("dev.emi:emi-forge:1.0.23+1.19.4")
+}
+
+
+repositories {
+	maven {
 		url = "https://api.modrinth.com/maven"
 	}
 }

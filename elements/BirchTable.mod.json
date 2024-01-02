@@ -27,6 +27,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "birch_table",
     "namespace": "forge"
   }

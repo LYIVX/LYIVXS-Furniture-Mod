@@ -1,14 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "0",
-    "1"
+    "a",
+    "b"
   ],
   "key": {
-    "0": {
+    "a": {
       "item": "minecraft:oak_leaves"
     },
-    "1": {
+    "b": {
       "item": "minecraft:stick"
     }
   },

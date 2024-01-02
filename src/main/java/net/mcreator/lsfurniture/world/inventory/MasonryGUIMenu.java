@@ -24,6 +24,10 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.lsfurniture.procedures.MasonryProProcedure;
 import net.mcreator.lsfurniture.procedures.MasonryGUIThisGUIIsClosedProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementToolProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementMetalProcedure;
+import net.mcreator.lsfurniture.procedures.DisablePlacementDyeProcedure;
 import net.mcreator.lsfurniture.network.MasonryGUISlotMessage;
 import net.mcreator.lsfurniture.init.LsFurnitureModMenus;
 import net.mcreator.lsfurniture.LsFurnitureMod;
@@ -87,18 +91,43 @@ public class MasonryGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 8) {
 			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementProcedure.execute(itemstack);
+			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 28, 8) {
 			private final int slot = 1;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementProcedure.execute(itemstack);
+			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 28) {
 			private final int slot = 2;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementMetalProcedure.execute(itemstack);
+			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 28, 28) {
 			private final int slot = 3;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementDyeProcedure.execute(itemstack);
+			}
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 28, 48) {
 			private final int slot = 4;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !DisablePlacementToolProcedure.execute(itemstack);
+			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 54, 8) {
 			private final int slot = 5;
@@ -656,7 +685,7 @@ public class MasonryGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			MasonryProProcedure.execute(world, x, y, z, entity);
+			MasonryProProcedure.execute(world, x, y, z, entity, guistate);
 		}
 	}
 }

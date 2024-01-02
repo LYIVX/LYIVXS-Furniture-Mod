@@ -24,6 +24,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "birch_white_sofa_tag",
     "namespace": "forge"
   }

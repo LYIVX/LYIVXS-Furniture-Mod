@@ -63,6 +63,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "oven_tag",
     "namespace": "mod"
   }

@@ -27,6 +27,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "mangrove_leaves",
     "namespace": "mod"
   }

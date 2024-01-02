@@ -82,7 +82,7 @@
 		{
 			"from": [11, 8, 11],
 			"to": [13, 15, 13],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 12]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 12]},
 			"faces": {
 				"north": {"uv": [3, 1, 5, 8], "texture": "#Log"},
 				"east": {"uv": [3, 1, 5, 8], "texture": "#Log", "cullface": "east"},
@@ -94,7 +94,7 @@
 		{
 			"from": [5, 8.5, 11.5],
 			"to": [11, 14.9, 12.5],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 12]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 12]},
 			"faces": {
 				"north": {"uv": [5, 8, 11, 15], "texture": "#Pattern"},
 				"south": {"uv": [5, 8, 11, 15], "texture": "#Pattern"},
@@ -104,7 +104,7 @@
 		{
 			"from": [3, 8, 11],
 			"to": [5, 15, 13],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 12]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 12]},
 			"faces": {
 				"north": {"uv": [11, 1, 13, 8], "texture": "#Log"},
 				"east": {"uv": [3, 1, 5, 8], "texture": "#Log", "cullface": "east"},

@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
+    "ls_furniture:oak_mail_box",
+    "ls_furniture:dark_oak_mail_box",
+    "ls_furniture:spruce_mail_box",
+    "ls_furniture:acacia_mail_box",
+    "ls_furniture:birch_mail_box",
+    "ls_furniture:jungle_mail_box",
     "ls_furniture:mangrove_mail_box",
     "ls_furniture:crimson_mail_box",
-    "ls_furniture:jungle_mail_box",
-    "ls_furniture:dark_oak_mail_box",
-    "ls_furniture:oak_mail_box",
-    "ls_furniture:spruce_mail_box",
-    "ls_furniture:warped_mail_box",
-    "ls_furniture:birch_mail_box",
-    "ls_furniture:acacia_mail_box"
+    "ls_furniture:warped_mail_box"
   ]
 }

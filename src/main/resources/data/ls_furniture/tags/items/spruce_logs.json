@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:spruce_log_reinforced",
     "ls_furniture:spruce_log_bundle",
-    "minecraft:spruce_log"
+    "ls_furniture:spruce_log_reinforced",
+    "minecraft:spruce_log",
+    "ls_furniture:spruce_log_pillar",
+    "ls_furniture:spruce_log_nailed",
+    "ls_furniture:connecting_spruce_log_pillar"
   ]
 }

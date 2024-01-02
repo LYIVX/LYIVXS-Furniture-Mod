@@ -11,73 +11,37 @@
         "value": "CUSTOM:ConnectingOakSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedOakSmallBricks"
-      },
-      {
         "value": "CUSTOM:ConnectingOakBigBricks"
-      },
-      {
-        "value": "CUSTOM:FramedOakBigBricks"
       },
       {
         "value": "CUSTOM:ConnectingOakHorizontalStripes"
       },
       {
-        "value": "CUSTOM:FramedOakHorizontalStripes"
-      },
-      {
         "value": "CUSTOM:ConnectingOakVerticalStripes"
-      },
-      {
-        "value": "CUSTOM:FramedOakVerticalStripes"
       },
       {
         "value": "CUSTOM:ConnectingOakWavey"
       },
       {
-        "value": "CUSTOM:FramedOakWavey"
-      },
-      {
         "value": "CUSTOM:ConnectingOakMosaic"
-      },
-      {
-        "value": "CUSTOM:FramedOakMosaic"
       },
       {
         "value": "CUSTOM:ConnectingOakDiagonal"
       },
       {
-        "value": "CUSTOM:FramedOakDiagonal"
-      },
-      {
         "value": "CUSTOM:ConnectingOakDunes"
-      },
-      {
-        "value": "CUSTOM:FramedOakDunes"
       },
       {
         "value": "CUSTOM:ConnectingOakCheckered"
       },
       {
-        "value": "CUSTOM:FramedOakCheckered"
-      },
-      {
         "value": "CUSTOM:ConnectingOakChecked"
-      },
-      {
-        "value": "CUSTOM:FramedOakChecked"
       },
       {
         "value": "CUSTOM:ConnectingOakSwirl"
       },
       {
-        "value": "CUSTOM:FramedOakSwirl"
-      },
-      {
         "value": "CUSTOM:ConnectingOakSlash"
-      },
-      {
-        "value": "CUSTOM:FramedOakSlash"
       },
       {
         "value": "CUSTOM:OakBigBricks"
@@ -116,13 +80,7 @@
         "value": "CUSTOM:OakSlash"
       },
       {
-        "value": "CUSTOM:FramedOakPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingOakPlain"
-      },
-      {
-        "value": "CUSTOM:FramedOakStripped"
       },
       {
         "value": "CUSTOM:ConnectingOakStripped"
@@ -132,6 +90,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "oak_planks",
     "namespace": "mod"
   }

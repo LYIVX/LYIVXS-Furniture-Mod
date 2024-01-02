@@ -27,6 +27,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "crimson_table",
     "namespace": "forge"
   }

@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "CUSTOM:OakLogPillar"
+      },
+      {
+        "value": "CUSTOM:OakLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingOakLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "oak_logs",
     "namespace": "mod"
   }

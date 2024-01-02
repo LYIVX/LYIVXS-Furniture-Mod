@@ -12,12 +12,22 @@
       },
       {
         "value": "CUSTOM:CrimsonStemReinforced"
+      },
+      {
+        "value": "CUSTOM:CrimsonStemPillar"
+      },
+      {
+        "value": "CUSTOM:CrimsonStemNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingCrimsonStemPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "crimson_stems",
     "namespace": "mod"
   }

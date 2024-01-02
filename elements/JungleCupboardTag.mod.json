@@ -21,6 +21,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "jungle_cupboard_tag",
     "namespace": "forge"
   }

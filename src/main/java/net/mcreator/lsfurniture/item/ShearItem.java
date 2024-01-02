@@ -21,7 +21,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class ShearItem extends Item {
 	public ShearItem() {
-		super(new Item.Properties().durability(100));
+		super(new Item.Properties().durability(5000));
 	}
 
 	@Override

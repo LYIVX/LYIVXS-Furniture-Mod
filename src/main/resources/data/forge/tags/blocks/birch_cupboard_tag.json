@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:birch_cupboard_vent",
+    "ls_furniture:birch_cupboard_corner",
     "ls_furniture:birch_cupboard",
-    "ls_furniture:birch_cupboard_vent_on",
-    "ls_furniture:birch_cupboard_corner"
+    "ls_furniture:birch_cupboard_vent",
+    "ls_furniture:birch_cupboard_vent_on"
   ]
 }

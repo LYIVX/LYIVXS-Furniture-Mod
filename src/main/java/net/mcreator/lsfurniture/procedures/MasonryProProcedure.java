@@ -19,10 +19,11 @@ import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 import java.util.function.Supplier;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
+import java.util.HashMap;
 
 public class MasonryProProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
+		if (entity == null || guistate == null)
 			return;
 		String tag = "";
 		double SlotNumber = 0;
@@ -239,5 +240,7 @@ public class MasonryProProcedure {
 		}
 		FirePlaceRecipeProcedure.execute(entity);
 		FirePlaceChimneyRecipeProcedure.execute(entity);
+		StoneRecipeProcedure.execute(entity, guistate);
+		SmoothStoneRecipeProcedure.execute(entity, guistate);
 	}
 }

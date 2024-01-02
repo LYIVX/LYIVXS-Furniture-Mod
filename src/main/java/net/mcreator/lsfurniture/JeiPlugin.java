@@ -22,8 +22,14 @@ public class JeiPlugin implements IModPlugin {
     public static RecipeType<MasonryRecipe> MASONRY_TYPE =
             new RecipeType<>(MasonryRecipeCategory.UID, MasonryRecipe.class);
 
+    public static RecipeType<MasonryTickRecipe> MASONRY_TICK_TYPE =
+            new RecipeType<>(MasonryTickRecipeCategory.UID, MasonryTickRecipe.class);
+
     public static RecipeType<MetallurgyRecipe> METALLURGY_TYPE =
             new RecipeType<>(MetallurgyRecipeCategory.UID, MetallurgyRecipe.class);
+
+    public static RecipeType<MetallurgyTickRecipe> METALLURGY_TICK_TYPE =
+            new RecipeType<>(MetallurgyTickRecipeCategory.UID, MetallurgyTickRecipe.class);
 
     public static RecipeType<BotanistRecipe> BOTANIST_TYPE =
             new RecipeType<>(BotanistRecipeCategory.UID, BotanistRecipe.class);
@@ -50,7 +56,9 @@ public class JeiPlugin implements IModPlugin {
         registration.addRecipeCategories(new CarpentryRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CarpentryTickRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new MasonryRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new MasonryTickRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new MetallurgyRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new MetallurgyTickRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new BotanistRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new EngineeringRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new WeaveryRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
@@ -71,8 +79,14 @@ public class JeiPlugin implements IModPlugin {
         List<MasonryRecipe> recipesCraftingMasonry = rm.getAllRecipesFor(MasonryRecipe.Type.INSTANCE);
         registration.addRecipes(MASONRY_TYPE, recipesCraftingMasonry);
 
+        List<MasonryTickRecipe> recipesCraftingMasonryTick = rm.getAllRecipesFor(MasonryTickRecipe.Type.INSTANCE);
+        registration.addRecipes(MASONRY_TICK_TYPE, recipesCraftingMasonryTick);
+
         List<MetallurgyRecipe> recipesCraftingMetallurgy = rm.getAllRecipesFor(MetallurgyRecipe.Type.INSTANCE);
         registration.addRecipes(METALLURGY_TYPE, recipesCraftingMetallurgy);
+
+        List<MetallurgyTickRecipe> recipesCraftingMetallurgyTick = rm.getAllRecipesFor(MetallurgyTickRecipe.Type.INSTANCE);
+        registration.addRecipes(METALLURGY_TICK_TYPE, recipesCraftingMetallurgyTick);
 
         List<BotanistRecipe> recipesCraftingBotanist = rm.getAllRecipesFor(BotanistRecipe.Type.INSTANCE);
         registration.addRecipes(BOTANIST_TYPE, recipesCraftingBotanist);

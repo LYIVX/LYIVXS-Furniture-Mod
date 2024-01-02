@@ -12,6 +12,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "emptyslot",
     "namespace": "mod"
   }

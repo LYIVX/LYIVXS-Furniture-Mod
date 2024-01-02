@@ -154,34 +154,6 @@ public class Carpentry2GUISlotMessage {
 
 			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
 		}
-		if (slot == 26 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 27 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 28 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 29 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 30 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 31 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 32 && changeType == 1) {
-
-			FurnitureCrafterBetaPro2Procedure.execute(world, x, y, z, entity);
-		}
 	}
 
 	@SubscribeEvent

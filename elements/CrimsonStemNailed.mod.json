@@ -2,8 +2,8 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "log_top_mangrove",
-    "textureTop": "log_top_mangrove",
+    "texture": "crimson_stem_top",
+    "textureTop": "crimson_stem_top",
     "textureLeft": "stem_nailed_crimson",
     "textureFront": "stem_nailed_crimson",
     "textureRight": "stem_nailed_crimson",

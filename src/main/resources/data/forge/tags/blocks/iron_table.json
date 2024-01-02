@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
+    "ls_furniture:iron_straight",
     "ls_furniture:iron_none",
     "ls_furniture:iron_junction",
-    "ls_furniture:iron_end",
     "ls_furniture:iron_corner",
-    "ls_furniture:iron_cross",
-    "ls_furniture:iron_straight"
+    "ls_furniture:iron_end",
+    "ls_furniture:iron_cross"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:hammer",
-    "ls_furniture:shear",
+    "ls_furniture:chisel",
     "ls_furniture:saw",
-    "ls_furniture:chisel"
+    "ls_furniture:hammer",
+    "ls_furniture:shear"
   ]
 }

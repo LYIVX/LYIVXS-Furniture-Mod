@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.LOG2#0"
+      },
+      {
+        "value": "CUSTOM:AcaciaLogPillar"
+      },
+      {
+        "value": "CUSTOM:AcaciaLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "acacia_logs",
     "namespace": "mod"
   }

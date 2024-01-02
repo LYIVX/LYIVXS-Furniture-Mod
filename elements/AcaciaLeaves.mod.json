@@ -27,6 +27,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "acacia_leaves",
     "namespace": "mod"
   }

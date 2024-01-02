@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
-    "minecraft:warped_stem",
     "ls_furniture:warped_stem_bundle",
-    "ls_furniture:warped_stem_reinforced"
+    "ls_furniture:warped_stem_reinforced",
+    "minecraft:warped_stem",
+    "ls_furniture:warped_stem_pillar",
+    "ls_furniture:warped_stem_nailed",
+    "ls_furniture:connecting_warped_stem_pillar"
   ]
 }

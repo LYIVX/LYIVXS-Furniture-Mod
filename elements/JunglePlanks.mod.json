@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingJunglePlain"
       },
       {
-        "value": "CUSTOM:FramedJunglePlain"
-      },
-      {
         "value": "CUSTOM:ConnectingJungleStripped"
-      },
-      {
-        "value": "CUSTOM:FramedJungleStripped"
       },
       {
         "value": "CUSTOM:ConnectingJungleSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedJungleSmallBricks"
+        "value": "CUSTOM:ConnectingJungleBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "jungle_planks",
     "namespace": "mod"
   }

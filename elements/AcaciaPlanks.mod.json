@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingAcaciaPlain"
       },
       {
-        "value": "CUSTOM:FramedAcaciaPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingAcaciaStripped"
-      },
-      {
-        "value": "CUSTOM:FramedAcaciaStripped"
       },
       {
         "value": "CUSTOM:ConnectingAcaciaSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedAcaciaSmallBricks"
+        "value": "CUSTOM:ConnectingAcaciaBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingAcaciaSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "acacia_planks",
     "namespace": "mod"
   }

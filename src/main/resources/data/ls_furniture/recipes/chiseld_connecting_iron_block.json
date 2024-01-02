@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:metallurgy_tick",
+  "ingredients": [
+    {
+      "tag": "ls_furniture:iron_block"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:chisel"
+    }
+  ],
+  "output": {
+    "item": "ls_furniture:connected_iron_block"
+  }
+}

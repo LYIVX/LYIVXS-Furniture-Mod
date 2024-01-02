@@ -10,6 +10,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.lsfurniture.init.LsFurnitureModItems;
+import net.mcreator.lsfurniture.init.LsFurnitureModBlocks;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -119,7 +120,7 @@ public class JungleWhiteChairRecipeProcedure {
 						}.getAmount(4) >= 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY)
 								.getItem() == LsFurnitureModItems.SAW.get()) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Blocks.JUNGLE_PLANKS);
+				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.JUNGLE_WHITE_CHAIR.get());
 				_setstack.setCount(1);
 				((Slot) _slots.get(5)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

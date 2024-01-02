@@ -21,6 +21,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "crimson_cupboard_tag",
     "namespace": "forge"
   }

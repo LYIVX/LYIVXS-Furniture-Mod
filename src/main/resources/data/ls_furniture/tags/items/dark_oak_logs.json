@@ -3,6 +3,9 @@
   "values": [
     "ls_furniture:dark_oak_log_bundle",
     "ls_furniture:dark_oak_log_reinforced",
-    "minecraft:dark_oak_log"
+    "minecraft:dark_oak_log",
+    "ls_furniture:dark_oak_log_pillar",
+    "ls_furniture:dark_oak_log_nailed",
+    "ls_furniture:connecting_dark_oak_log_pillar"
   ]
 }

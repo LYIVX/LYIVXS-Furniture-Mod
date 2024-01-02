@@ -8,28 +8,53 @@
         "value": "CUSTOM:ConnectingDarkOakPlain"
       },
       {
-        "value": "CUSTOM:FramedDarkOakPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingDarkOakStripped"
-      },
-      {
-        "value": "CUSTOM:FramedDarkOakStripped"
       },
       {
         "value": "CUSTOM:ConnectingDarkOakSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedDarkOakSmallBricks"
+        "value": "Blocks.PLANKS#5"
       },
       {
-        "value": "Blocks.PLANKS#5"
+        "value": "CUSTOM:ConnectingDarkOakBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingDarkOakSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "dark_oak_planks",
     "namespace": "mod"
   }

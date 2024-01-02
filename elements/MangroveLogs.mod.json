@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.MANGROVE_LOG"
+      },
+      {
+        "value": "CUSTOM:MangroveLogPillar"
+      },
+      {
+        "value": "CUSTOM:MangroveLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingMangroveLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "mangrove_logs",
     "namespace": "mod"
   }

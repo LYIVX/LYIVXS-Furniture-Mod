@@ -2,7 +2,10 @@
   "replace": false,
   "values": [
     "minecraft:crimson_stem",
+    "ls_furniture:crimson_stem_bundle",
     "ls_furniture:crimson_stem_reinforced",
-    "ls_furniture:crimson_stem_bundle"
+    "ls_furniture:crimson_stem_pillar",
+    "ls_furniture:crimson_stem_nailed",
+    "ls_furniture:connecting_crimson_stem_pillar"
   ]
 }

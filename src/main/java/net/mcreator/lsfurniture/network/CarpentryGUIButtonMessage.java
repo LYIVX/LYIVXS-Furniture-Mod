@@ -18,7 +18,6 @@ import net.mcreator.lsfurniture.procedures.OpenMasonryGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenGlassblowerGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenEngineeringGUIProcedure;
 import net.mcreator.lsfurniture.procedures.OpenCarpentryGUIProcedure;
-import net.mcreator.lsfurniture.procedures.OpenCarpentry2GUIProcedure;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
 import java.util.function.Supplier;
@@ -115,14 +114,6 @@ public class CarpentryGUIButtonMessage {
 		if (buttonID == 11) {
 
 			OpenEngineeringGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 12) {
-
-			OpenCarpentry2GUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 13) {
-
-			OpenCarpentry2GUIProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

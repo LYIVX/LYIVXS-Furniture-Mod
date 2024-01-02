@@ -51,6 +51,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "masonry_extra_page",
     "namespace": "mod"
   }

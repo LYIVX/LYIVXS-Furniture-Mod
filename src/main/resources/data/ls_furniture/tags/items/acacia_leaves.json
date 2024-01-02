@@ -2,10 +2,10 @@
   "replace": false,
   "values": [
     "minecraft:acacia_leaves",
-    "ls_furniture:acacia_leaves_frosted",
-    "ls_furniture:acacia_leaves_semi_frosted",
     "ls_furniture:acacia_leaves_poppy",
+    "ls_furniture:acacia_leaves_dandilion",
     "ls_furniture:acacia_leaves_blue_orchid",
-    "ls_furniture:acacia_leaves_dandilion"
+    "ls_furniture:acacia_leaves_semi_frosted",
+    "ls_furniture:acacia_leaves_frosted"
   ]
 }

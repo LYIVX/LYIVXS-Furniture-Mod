@@ -2,10 +2,10 @@
   "replace": false,
   "values": [
     "ls_furniture:warped_table_none",
-    "ls_furniture:warped_table_corner",
-    "ls_furniture:warped_table_cross",
-    "ls_furniture:warped_table_junction",
     "ls_furniture:warped_table_straight",
+    "ls_furniture:warped_table_corner",
+    "ls_furniture:warped_table_junction",
+    "ls_furniture:warped_table_cross",
     "ls_furniture:warped_table_end"
   ]
 }

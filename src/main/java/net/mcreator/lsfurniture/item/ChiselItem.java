@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ChiselItem extends Item {
 	public ChiselItem() {
-		super(new Item.Properties().durability(100).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(5000).rarity(Rarity.COMMON));
 	}
 
 	@Override

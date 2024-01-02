@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_door_1",
-    "minecraft:oak_door",
-    "ls_furniture:oak_door_warped",
-    "ls_furniture:oak_door_spruce",
-    "ls_furniture:oak_door_crimson",
     "ls_furniture:oak_door_acacia",
-    "ls_furniture:oak_door_mangrove",
-    "ls_furniture:oak_door_jungle",
     "ls_furniture:oak_door_birch",
-    "ls_furniture:oak_door_dark_oak"
+    "ls_furniture:oak_door_dark_oak",
+    "ls_furniture:oak_door_jungle",
+    "ls_furniture:oak_door_mangrove",
+    "ls_furniture:oak_door_spruce",
+    "ls_furniture:oak_door_warped",
+    "ls_furniture:oak_door_crimson",
+    "ls_furniture:oak_door_1",
+    "minecraft:oak_door"
   ]
 }

@@ -12,12 +12,22 @@
       },
       {
         "value": "Blocks.LOG#1"
+      },
+      {
+        "value": "CUSTOM:SpruceLogPillar"
+      },
+      {
+        "value": "CUSTOM:SpruceLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingSpruceLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "spruce_logs",
     "namespace": "mod"
   }

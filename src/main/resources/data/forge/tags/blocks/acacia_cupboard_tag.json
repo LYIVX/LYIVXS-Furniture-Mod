@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "ls_furniture:acacia_cupboard",
-    "ls_furniture:acacia_cupboard_vent_on",
+    "ls_furniture:acacia_cupboard_corner",
     "ls_furniture:acacia_cupboard_vent",
-    "ls_furniture:acacia_cupboard_corner"
+    "ls_furniture:acacia_cupboard_vent_on"
   ]
 }

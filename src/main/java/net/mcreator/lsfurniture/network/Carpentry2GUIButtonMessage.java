@@ -115,14 +115,6 @@ public class Carpentry2GUIButtonMessage {
 
 			OpenEngineeringGUIProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 12) {
-
-			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 13) {
-
-			OpenCarpentryGUIProcedure.execute(world, x, y, z, entity);
-		}
 	}
 
 	@SubscribeEvent

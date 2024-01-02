@@ -18,7 +18,6 @@ import net.mcreator.lsfurniture.procedures.DisablePictureBlock2Procedure;
 import net.mcreator.lsfurniture.procedures.DisablePictureBlock1Procedure;
 import net.mcreator.lsfurniture.procedures.DisablePictureAdditional4Procedure;
 import net.mcreator.lsfurniture.procedures.CheckedProcedure;
-import net.mcreator.lsfurniture.procedures.CarpentryButtonsShowProcedure;
 import net.mcreator.lsfurniture.network.CarpentryGUIButtonMessage;
 import net.mcreator.lsfurniture.LsFurnitureMod;
 
@@ -45,8 +44,6 @@ public class CarpentryGUIScreen extends AbstractContainerScreen<CarpentryGUIMenu
 	ImageButton imagebutton_arrow_left;
 	ImageButton imagebutton_arrow_right;
 	ImageButton imagebutton_comparitor;
-	ImageButton imagebutton_arrow_right1;
-	ImageButton imagebutton_arrow_left1;
 
 	public CarpentryGUIScreen(CarpentryGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -121,10 +118,6 @@ public class CarpentryGUIScreen extends AbstractContainerScreen<CarpentryGUIMenu
 		if (DisablePictureToolProcedure.execute(world, x, y, z)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tool.png"));
 			this.blit(ms, this.leftPos + 28, this.topPos + 48, 0, 0, 16, 16, 16, 16);
-		}
-		if (CarpentryButtonsShowProcedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("ls_furniture:textures/screens/tab_right_horizontal_deselect.png"));
-			this.blit(ms, this.leftPos + 181, this.topPos + 61, 0, 0, 16, 25, 16, 25);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -252,34 +245,6 @@ public class CarpentryGUIScreen extends AbstractContainerScreen<CarpentryGUIMenu
 		});
 		guistate.put("button:imagebutton_comparitor", imagebutton_comparitor);
 		this.addRenderableWidget(imagebutton_comparitor);
-		imagebutton_arrow_right1 = new ImageButton(this.leftPos + 181, this.topPos + 65, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_right1.png"), 11, 34, e -> {
-			if (CarpentryButtonsShowProcedure.execute(entity)) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new CarpentryGUIButtonMessage(12, x, y, z));
-				CarpentryGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (CarpentryButtonsShowProcedure.execute(entity))
-					super.render(ms, gx, gy, ticks);
-			}
-		};
-		guistate.put("button:imagebutton_arrow_right1", imagebutton_arrow_right1);
-		this.addRenderableWidget(imagebutton_arrow_right1);
-		imagebutton_arrow_left1 = new ImageButton(this.leftPos + 41, this.topPos + 65, 11, 17, 0, 0, 17, new ResourceLocation("ls_furniture:textures/screens/atlas/imagebutton_arrow_left1.png"), 11, 34, e -> {
-			if (CarpentryButtonsShowProcedure.execute(entity)) {
-				LsFurnitureMod.PACKET_HANDLER.sendToServer(new CarpentryGUIButtonMessage(13, x, y, z));
-				CarpentryGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (CarpentryButtonsShowProcedure.execute(entity))
-					super.render(ms, gx, gy, ticks);
-			}
-		};
-		guistate.put("button:imagebutton_arrow_left1", imagebutton_arrow_left1);
-		this.addRenderableWidget(imagebutton_arrow_left1);
 		Connected = new Checkbox(this.leftPos + 6, this.topPos + 46, 20, 20, Component.translatable("gui.ls_furniture.carpentry_gui.Connected"),
 
 				CheckedProcedure.execute());

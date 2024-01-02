@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
+    "ls_furniture:dark_oak_table_none",
     "ls_furniture:spruce_table_none",
-    "ls_furniture:jungle_table_none",
     "ls_furniture:acacia_table_none",
-    "ls_furniture:oak_table_none",
-    "ls_furniture:mangrove_table_none",
-    "ls_furniture:warped_table_none",
     "ls_furniture:birch_table_none",
+    "ls_furniture:jungle_table_none",
+    "ls_furniture:mangrove_table_none",
     "ls_furniture:crimson_table_none",
-    "ls_furniture:dark_oak_table_none"
+    "ls_furniture:warped_table_none",
+    "ls_furniture:oak_table_none"
   ]
 }

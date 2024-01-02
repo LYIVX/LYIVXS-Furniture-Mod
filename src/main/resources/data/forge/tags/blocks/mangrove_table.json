@@ -2,10 +2,10 @@
   "replace": false,
   "values": [
     "ls_furniture:mangrove_table_none",
-    "ls_furniture:mangrove_table_cross",
     "ls_furniture:mangrove_table_straight",
+    "ls_furniture:mangrove_table_corner",
     "ls_furniture:mangrove_table_junction",
-    "ls_furniture:mangrove_table_end",
-    "ls_furniture:mangrove_table_corner"
+    "ls_furniture:mangrove_table_cross",
+    "ls_furniture:mangrove_table_end"
   ]
 }

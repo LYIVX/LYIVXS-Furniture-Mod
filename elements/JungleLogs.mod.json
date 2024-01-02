@@ -12,12 +12,22 @@
       },
       {
         "value": "CUSTOM:JungleLogReinforced"
+      },
+      {
+        "value": "CUSTOM:JungleLogPillar"
+      },
+      {
+        "value": "CUSTOM:JungleLogNailed"
+      },
+      {
+        "value": "CUSTOM:ConnectingJungleLogPillar"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "jungle_logs",
     "namespace": "mod"
   }

@@ -36,6 +36,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "chair_tag",
     "namespace": "mod"
   }

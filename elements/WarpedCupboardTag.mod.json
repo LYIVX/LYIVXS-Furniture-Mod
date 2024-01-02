@@ -21,6 +21,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "warped_cupboard_tag",
     "namespace": "forge"
   }

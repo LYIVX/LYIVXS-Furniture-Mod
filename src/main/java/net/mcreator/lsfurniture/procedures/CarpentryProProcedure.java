@@ -251,7 +251,8 @@ public class CarpentryProProcedure {
 		CupboardVentRecipeCallerProcedure.execute(x, y, z, entity);
 		ShelveRecipeCallerProcedure.execute(x, y, z, entity);
 		MailboxRecipeCallerProcedure.execute(x, y, z, entity);
-		OakPlanksRecipeProcedure.execute(entity, guistate);
-		LogRecipeCallerProcedure.execute(x, y, z, entity);
+		PlanksRecipeCallerProcedure.execute(x, y, z, entity, guistate);
+		LogRecipeCallerProcedure.execute(x, y, z, entity, guistate);
+		DoorRecipeCallerProcedure.execute(x, y, z, entity);
 	}
 }

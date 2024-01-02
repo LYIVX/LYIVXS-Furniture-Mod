@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:spruce_leaves_dandilion",
-    "ls_furniture:spruce_leaves_semi_frosted",
-    "minecraft:spruce_leaves",
     "ls_furniture:spruce_leaves_poppy",
+    "ls_furniture:spruce_leaves_dandilion",
+    "ls_furniture:spruce_leaves_blue_orchid",
+    "ls_furniture:spruce_leaves_semi_frosted",
     "ls_furniture:spruce_leaves_frosted",
-    "ls_furniture:spruce_leaves_blue_orchid"
+    "minecraft:spruce_leaves"
   ]
 }

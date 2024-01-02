@@ -20,6 +20,8 @@ public class OakPlanksRecipeProcedure {
 	public static void execute(Entity entity, HashMap guistate) {
 		if (entity == null || guistate == null)
 			return;
+		String tag = "";
+		tag = "ls_furniture:" + "oak_planks";
 		if ((guistate.containsKey("checkbox:Connected") ? ((Checkbox) guistate.get("checkbox:Connected")).selected() : false) && new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -31,7 +33,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -63,7 +65,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -96,7 +98,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -128,7 +130,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -161,7 +163,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -193,7 +195,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -226,7 +228,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -258,7 +260,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -291,7 +293,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -312,7 +314,7 @@ public class OakPlanksRecipeProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		} else {
-			if ((guistate.containsKey("checkbox:Connected") ? ((Checkbox) guistate.get("checkbox:Connected")).selected() : false) && new Object() {
+			if (new Object() {
 				public int getAmount(int sltid) {
 					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -323,7 +325,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -356,7 +358,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -388,7 +390,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -421,7 +423,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -453,7 +455,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -486,7 +488,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -518,7 +520,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -551,7 +553,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -583,7 +585,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -616,7 +618,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -648,7 +650,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -681,7 +683,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -713,7 +715,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -746,7 +748,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -778,7 +780,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -811,7 +813,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -843,7 +845,7 @@ public class OakPlanksRecipeProcedure {
 				}
 			}.getAmount(0) >= 1
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-							.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+							.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 					&& new Object() {
@@ -876,7 +878,7 @@ public class OakPlanksRecipeProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
-						.is(ItemTags.create(new ResourceLocation("ls_furniture:oak_planks")))
+						.is(ItemTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 				&& new Object() {
@@ -893,7 +895,7 @@ public class OakPlanksRecipeProcedure {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(LsFurnitureModBlocks.CONNECTING_OAK_STRIPPED.get());
 				_setstack.setCount(1);
-				((Slot) _slots.get(17)).set(_setstack);
+				((Slot) _slots.get(18)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

@@ -4,9 +4,9 @@
   "definition": {
     "type": 1,
     "width": 188,
-    "height": 166,
+    "height": 152,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": -8,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -25,7 +25,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 127,
-          "y": 44
+          "y": 50
         }
       },
       {
@@ -43,7 +43,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 147,
-          "y": 44
+          "y": 50
         }
       },
       {
@@ -61,7 +61,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 127,
-          "y": 64
+          "y": 70
         }
       },
       {
@@ -79,7 +79,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 147,
-          "y": 64
+          "y": 70
         }
       },
       {
@@ -97,7 +97,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 147,
-          "y": 84
+          "y": 90
         }
       },
       {
@@ -112,7 +112,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 173,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -127,7 +127,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 191,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -142,7 +142,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 209,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -157,7 +157,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 227,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -172,7 +172,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 245,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -187,7 +187,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 263,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -202,7 +202,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 281,
-          "y": 44
+          "y": 52
         }
       },
       {
@@ -217,7 +217,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 173,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -232,7 +232,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 191,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -247,7 +247,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 209,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -262,7 +262,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 227,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -277,7 +277,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 245,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -292,7 +292,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 263,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -307,7 +307,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 281,
-          "y": 62
+          "y": 70
         }
       },
       {
@@ -322,7 +322,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 173,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -337,7 +337,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 191,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -352,7 +352,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 209,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -367,7 +367,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 227,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -382,7 +382,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 245,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -397,7 +397,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 263,
-          "y": 80
+          "y": 88
         }
       },
       {
@@ -412,112 +412,7 @@
             "name": "FurnitureCrafterBetaPro2"
           },
           "x": 281,
-          "y": 80
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 26,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 173,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 27,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 191,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 28,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 209,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 29,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 227,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 30,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 245,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 31,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 263,
-          "y": 98
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 32,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "FurnitureCrafterBetaPro2"
-          },
-          "x": 281,
-          "y": 98
+          "y": 88
         }
       },
       {
@@ -525,8 +420,8 @@
         "data": {
           "image": "tab_large.png",
           "use1Xscale": false,
-          "x": 119,
-          "y": 31
+          "x": 120,
+          "y": 38
         }
       },
       {
@@ -534,8 +429,8 @@
         "data": {
           "image": "furniture_crafter_brown_background_chisel.png",
           "use1Xscale": false,
-          "x": 173,
-          "y": 44
+          "x": 347,
+          "y": 88
         }
       },
       {
@@ -550,7 +445,7 @@
             "falpha": 0.0
           },
           "x": 125,
-          "y": 35
+          "y": 40
         }
       },
       {
@@ -563,7 +458,7 @@
             "name": "OpenMetalurgyGUI"
           },
           "x": 198,
-          "y": 8
+          "y": 15
         }
       },
       {
@@ -576,7 +471,7 @@
             "name": "OpenWeaveryGUI"
           },
           "x": 237,
-          "y": 8
+          "y": 15
         }
       },
       {
@@ -589,7 +484,7 @@
             "name": "OpenCarpentryGUI"
           },
           "x": 120,
-          "y": 0
+          "y": 7
         }
       },
       {
@@ -602,7 +497,7 @@
             "name": "OpenEngineeringGUI"
           },
           "x": 276,
-          "y": 8
+          "y": 15
         }
       },
       {
@@ -615,7 +510,7 @@
             "name": "OpenMasonryGUI"
           },
           "x": 159,
-          "y": 2
+          "y": 9
         }
       },
       {
@@ -628,7 +523,7 @@
             "name": "OpenCarpentryGUI"
           },
           "x": 124,
-          "y": 6
+          "y": 12
         }
       },
       {
@@ -640,8 +535,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 123,
-          "y": 6
+          "x": 124,
+          "y": 12
         }
       },
       {
@@ -654,7 +549,7 @@
             "name": "OpenMasonryGUI"
           },
           "x": 163,
-          "y": 6
+          "y": 13
         }
       },
       {
@@ -666,8 +561,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 162,
-          "y": 6
+          "x": 163,
+          "y": 13
         }
       },
       {
@@ -680,7 +575,7 @@
             "name": "OpenMetalurgyGUI"
           },
           "x": 202,
-          "y": 12
+          "y": 19
         }
       },
       {
@@ -692,8 +587,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 201,
-          "y": 12
+          "x": 202,
+          "y": 19
         }
       },
       {
@@ -706,7 +601,7 @@
             "name": "OpenWeaveryGUI"
           },
           "x": 241,
-          "y": 12
+          "y": 19
         }
       },
       {
@@ -718,8 +613,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 240,
-          "y": 12
+          "x": 241,
+          "y": 19
         }
       },
       {
@@ -731,8 +626,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 279,
-          "y": 12
+          "x": 280,
+          "y": 19
         }
       },
       {
@@ -745,7 +640,7 @@
           "width": 24,
           "height": 24,
           "x": 124,
-          "y": 81
+          "y": 87
         }
       },
       {
@@ -783,7 +678,7 @@
             "name": "DisablePictureBlock1"
           },
           "x": 128,
-          "y": 45
+          "y": 51
         }
       },
       {
@@ -795,7 +690,7 @@
             "name": "DisablePictureBlock2"
           },
           "x": 148,
-          "y": 45
+          "y": 51
         }
       },
       {
@@ -807,7 +702,7 @@
             "name": "Disablepictureadditional2"
           },
           "x": 128,
-          "y": 65
+          "y": 71
         }
       },
       {
@@ -819,7 +714,7 @@
             "name": "Disablepictureadditional3"
           },
           "x": 128,
-          "y": 65
+          "y": 71
         }
       },
       {
@@ -831,7 +726,7 @@
             "name": "DisablePictureAdditional4"
           },
           "x": 128,
-          "y": 65
+          "y": 71
         }
       },
       {
@@ -843,7 +738,7 @@
             "name": "DisablePictureDye"
           },
           "x": 148,
-          "y": 65
+          "y": 71
         }
       },
       {
@@ -855,7 +750,7 @@
             "name": "DisablePictureTool"
           },
           "x": 148,
-          "y": 85
+          "y": 91
         }
       },
       {
@@ -868,51 +763,7 @@
             "name": "OpenEngineeringGUI"
           },
           "x": 280,
-          "y": 12
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_arrow_right1",
-          "image": "arrow_right.png",
-          "hoveredImage": "arrow_right_highlighted.png",
-          "onClick": {
-            "name": "OpenCarpentryGUI"
-          },
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 301,
-          "y": 102
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_arrow_left1",
-          "image": "arrow_left.png",
-          "hoveredImage": "arrow_left_highlighted.png",
-          "onClick": {
-            "name": "OpenCarpentryGUI"
-          },
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 161,
-          "y": 102
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab_right_horizontal_deselect.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "CarpentryButtonsShow"
-          },
-          "x": 301,
-          "y": 98
+          "y": 19
         }
       },
       {
@@ -924,7 +775,7 @@
             "name": "Checked"
           },
           "x": 126,
-          "y": 83
+          "y": 89
         }
       }
     ],
@@ -937,8 +788,8 @@
     "gridSettings": {
       "sx": 18,
       "sy": 18,
-      "ox": 11,
-      "oy": 15,
+      "ox": 5,
+      "oy": 31,
       "snapOnGrid": false
     }
   }

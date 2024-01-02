@@ -24,6 +24,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "acacia_white_sofa_tag",
     "namespace": "forge"
   }

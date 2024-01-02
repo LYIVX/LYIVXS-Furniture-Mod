@@ -2,8 +2,19 @@
   "replace": false,
   "values": [
     "minecraft:jungle_planks",
-    "ls_furniture:connecting_jungle_small_bricks",
+    "ls_furniture:connecting_jungle_plain",
     "ls_furniture:connecting_jungle_stripped",
-    "ls_furniture:connecting_jungle_plain"
+    "ls_furniture:connecting_jungle_small_bricks",
+    "ls_furniture:connecting_jungle_big_bricks",
+    "ls_furniture:connecting_jungle_horizontal_stripes",
+    "ls_furniture:connecting_jungle_vertical_stripes",
+    "ls_furniture:connecting_jungle_wavey",
+    "ls_furniture:connecting_jungle_mosaic",
+    "ls_furniture:connecting_jungle_diagonal",
+    "ls_furniture:connecting_jungle_dunes",
+    "ls_furniture:connecting_jungle_checkered",
+    "ls_furniture:connecting_jungle_checked",
+    "ls_furniture:connecting_jungle_swirl",
+    "ls_furniture:connecting_jungle_slash"
   ]
 }

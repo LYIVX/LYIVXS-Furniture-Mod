@@ -39,6 +39,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "oak_door",
     "namespace": "mod"
   }

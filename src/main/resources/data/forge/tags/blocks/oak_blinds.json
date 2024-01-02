@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_blinds_bottom",
-    "ls_furniture:oak_blinds_top"
+    "ls_furniture:oak_blinds_top",
+    "ls_furniture:oak_blinds_bottom"
   ]
 }

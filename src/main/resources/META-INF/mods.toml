@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="ls_furniture"
-version="0.5.2"
+version="0.5.3"
 displayName="LYIVX's Furniture"
 displayURL="https://curseforge.com/minecraft/mc-mods/lyivxs-furniture"
 logoFile="logo.png"
@@ -20,7 +20,25 @@ description="Furniture Mod"
     side="BOTH"
 
 
+[[dependencies.ls_furniture]]
+    modId="fusion"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.ls_furniture]]
+    modId=""
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.ls_furniture]]
     modId="fusion"
     mandatory=false

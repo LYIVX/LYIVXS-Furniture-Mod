@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:dark_oak_deepslate_counter_corner",
-    "ls_furniture:dark_oak_deepslate_counter"
+    "ls_furniture:dark_oak_deepslate_counter",
+    "ls_furniture:dark_oak_deepslate_counter_corner"
   ]
 }

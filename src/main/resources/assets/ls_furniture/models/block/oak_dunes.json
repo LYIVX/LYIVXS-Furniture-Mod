@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ls_furniture:block/non_oak_dunes",
-    "particle": "ls_furniture:block/non_oak_dunes"
+    "all": "ls_furniture:block/oak_dunes",
+    "particle": "ls_furniture:block/oak_dunes"
   },
   "render_type": "solid"
 }

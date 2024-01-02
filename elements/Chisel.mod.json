@@ -16,7 +16,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 0.0,
-    "damageCount": 100,
+    "damageCount": 5000,
     "recipeRemainder": {
       "value": ""
     },
@@ -29,11 +29,17 @@
     "specialInformation": {
       "fixedValue": []
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 37,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

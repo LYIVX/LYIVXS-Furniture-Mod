@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
       "item": "ls_furniture:saw"
@@ -14,7 +15,7 @@
       "item": "ls_furniture:wrench"
     },
     {
-      "item": "ls_furniture:shear"
+      "item": "ls_furniture:wrench"
     },
     {
       "item": "ls_furniture:chisel"

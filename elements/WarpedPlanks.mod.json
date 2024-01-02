@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingWarpedPlain"
       },
       {
-        "value": "CUSTOM:FramedWarpedPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingWarpedStripped"
-      },
-      {
-        "value": "CUSTOM:FramedWarpedStripped"
       },
       {
         "value": "CUSTOM:ConnectingWarpedSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedWarpedSmallBricks"
+        "value": "CUSTOM:ConnectingWarpedBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingWarpedSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "warped_planks",
     "namespace": "mod"
   }

@@ -11,25 +11,50 @@
         "value": "CUSTOM:ConnectingBirchPlain"
       },
       {
-        "value": "CUSTOM:FramedBirchPlain"
-      },
-      {
         "value": "CUSTOM:ConnectingBirchStripped"
-      },
-      {
-        "value": "CUSTOM:FramedBirchStripped"
       },
       {
         "value": "CUSTOM:ConnectingBirchSmallBricks"
       },
       {
-        "value": "CUSTOM:FramedBirchSmallBricks"
+        "value": "CUSTOM:ConnectingBirchBigBricks"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchHorizontalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchVerticalStripes"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchWavey"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchMosaic"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchDiagonal"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchDunes"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchCheckered"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchChecked"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchSwirl"
+      },
+      {
+        "value": "CUSTOM:ConnectingBirchSlash"
       }
     ],
     "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "birch_planks",
     "namespace": "mod"
   }

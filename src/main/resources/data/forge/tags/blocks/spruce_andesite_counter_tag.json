@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:spruce_andesite_counter_corner",
-    "ls_furniture:spruce_andesite_counter"
+    "ls_furniture:spruce_andesite_counter",
+    "ls_furniture:spruce_andesite_counter_corner"
   ]
 }

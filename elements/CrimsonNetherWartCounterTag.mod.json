@@ -15,6 +15,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "crimson_nether_wart_counter_tag",
     "namespace": "forge"
   }

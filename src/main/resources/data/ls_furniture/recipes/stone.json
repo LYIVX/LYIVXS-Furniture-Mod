@@ -1,0 +1,23 @@
+{
+  "type": "ls_furniture:masonry",
+  "ingredients": [
+    {
+      "tag": "ls_furniture:stone"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "tag": "ls_furniture:emptyslot"
+    },
+    {
+      "item": "ls_furniture:chisel"
+    }
+  ],
+  "output": {
+    "item": "minecraft:stone"
+  }
+}

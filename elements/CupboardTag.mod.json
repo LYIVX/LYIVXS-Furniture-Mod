@@ -36,6 +36,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "cupboard_tag",
     "namespace": "mod"
   }

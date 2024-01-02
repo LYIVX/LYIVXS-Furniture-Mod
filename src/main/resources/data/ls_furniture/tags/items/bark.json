@@ -2,12 +2,13 @@
   "replace": false,
   "values": [
     "ls_furniture:oak_bark",
-    "ls_furniture:warped_bark",
-    "ls_furniture:birch_bark",
-    "ls_furniture:crimson_bark",
-    "ls_furniture:jungle_bark",
     "ls_furniture:spruce_bark",
     "ls_furniture:acacia_bark",
-    "ls_furniture:mangrove_bark"
+    "ls_furniture:birch_bark",
+    "ls_furniture:jungle_bark",
+    "ls_furniture:mangrove_bark",
+    "ls_furniture:crimson_bark",
+    "ls_furniture:warped_bark",
+    "ls_furniture:dark_oak_bark"
   ]
 }

@@ -90,6 +90,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "wardrobe",
     "namespace": "forge"
   }

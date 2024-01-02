@@ -43,6 +43,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "t_vs",
     "namespace": "forge"
   }

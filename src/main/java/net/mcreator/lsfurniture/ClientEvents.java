@@ -46,6 +46,49 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientEvents {
+	@Mod("ls_furniture")
+    public static class LsFurnitureMod {
+        public static final Logger LOGGER = LogManager.getLogger(net.mcreator.lsfurniture.LsFurnitureMod.class);
+        public static final String MODID = "ls_furniture";
+
+        public LsFurnitureMod() {
+            MinecraftForge.EVENT_BUS.register(this);
+            IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+            LsFurnitureModSounds.REGISTRY.register(bus);
+            LsFurnitureModBlocks.REGISTRY.register(bus);
+            LsFurnitureModItems.REGISTRY.register(bus);
+            LsFurnitureModEntities.REGISTRY.register(bus);
+            LsFurnitureModBlockEntities.REGISTRY.register(bus);
+
+            LsFurnitureModParticleTypes.REGISTRY.register(bus);
+            LsFurnitureModMenus.REGISTRY.register(bus);
+
+            ModRecipes.register(bus);
+
+            GeckoLib.initialize();
+        }
+
+        private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
+
+        public static void queueServerWork(int tick, Runnable action) {
+            workQueue.add(new AbstractMap.SimpleEntry(action, tick));
+        }
+
+        @SubscribeEvent
+        public void tick(TickEvent.ServerTickEvent event) {
+            if (event.phase == TickEvent.Phase.END) {
+                List<AbstractMap.SimpleEntry<Runnable, Integer>> actions = new ArrayList<>();
+                workQueue.forEach(work -> {
+                    work.setValue(work.getValue() - 1);
+                    if (work.getValue() == 0)
+                        actions.add(work);
+                });
+                actions.forEach(e -> e.getKey().run());
+                workQueue.removeAll(actions);
+            }
+        }
+    }
+
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer((Block)LsFurnitureModBlocks.CONNECTING_OAK_GLASS.get(), RenderType.translucent());// 49
@@ -89,48 +132,7 @@ public class ClientEvents {
 
 
     }
-    @Mod("ls_furniture")
-    public static class LsFurnitureMod {
-        public static final Logger LOGGER = LogManager.getLogger(net.mcreator.lsfurniture.LsFurnitureMod.class);
-        public static final String MODID = "ls_furniture";
-
-        public LsFurnitureMod() {
-            MinecraftForge.EVENT_BUS.register(this);
-            IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-            LsFurnitureModSounds.REGISTRY.register(bus);
-            LsFurnitureModBlocks.REGISTRY.register(bus);
-            LsFurnitureModItems.REGISTRY.register(bus);
-            LsFurnitureModEntities.REGISTRY.register(bus);
-            LsFurnitureModBlockEntities.REGISTRY.register(bus);
-
-            LsFurnitureModParticleTypes.REGISTRY.register(bus);
-            LsFurnitureModMenus.REGISTRY.register(bus);
-
-            ModRecipes.register(bus);
-
-            GeckoLib.initialize();
-        }
-
-        private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
-
-        public static void queueServerWork(int tick, Runnable action) {
-            workQueue.add(new AbstractMap.SimpleEntry(action, tick));
-        }
-
-        @SubscribeEvent
-        public void tick(TickEvent.ServerTickEvent event) {
-            if (event.phase == TickEvent.Phase.END) {
-                List<AbstractMap.SimpleEntry<Runnable, Integer>> actions = new ArrayList<>();
-                workQueue.forEach(work -> {
-                    work.setValue(work.getValue() - 1);
-                    if (work.getValue() == 0)
-                        actions.add(work);
-                });
-                actions.forEach(e -> e.getKey().run());
-                workQueue.removeAll(actions);
-            }
-        }
-    }
+    
 
 
 }
