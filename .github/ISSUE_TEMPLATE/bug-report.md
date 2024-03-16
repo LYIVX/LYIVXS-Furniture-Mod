@@ -16,16 +16,16 @@ assignees: LYIVX
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behaviour:
+Steps to reproduce the behavior:
 - Break Block
 - Place Block
 
-**Expected behaviour**
+
+**Expected behavior**
 A clear and concise description of what you expected to happen.
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem. Drag Beneath!!!
-
+If applicable, add screenshots to help explain your problem.
 
 **Version:**
  - Version [e.g. LYIVX's Furniture Mod-1.20.1-1.0.0]

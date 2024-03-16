@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: "[Feature Request]"
 labels: Feature Request
 assignees: LYIVX
 
@@ -9,8 +9,7 @@ assignees: LYIVX
 
 **Issue Rule Checks:**
 
-* [] I have checked that my problem is not already reported *
-(Mark With An X in '[]')
+* [ ] I have checked that my problem is not already reported *
 
 **Describe The Feature You'd Like.**
 A clear and concise description of what feature you would like to see. Ex. Id like to see [...]
