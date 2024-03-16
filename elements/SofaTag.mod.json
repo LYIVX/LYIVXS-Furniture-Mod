@@ -2,13 +2,11 @@
   "_fv": 57,
   "_type": "tag",
   "definition": {
-    "type": "Items",
-    "items": [
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
       {
         "value": "CUSTOM:OakWhiteSofa"
-      },
-      {
-        "value": "CUSTOM:DarkOakWhiteSofa"
       },
       {
         "value": "CUSTOM:SpruceWhiteSofa"
@@ -29,10 +27,114 @@
         "value": "CUSTOM:CrimsonWhiteSofa"
       },
       {
+        "value": "CUSTOM:SpruceWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteStaright"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteStaright"
+      },
+      {
+        "value": "CUSTOM:OakWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:OakWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:OakWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:OakWhiteCorner"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteRightEnd"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteLeftEnd"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteStraight"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteCorner"
+      },
+      {
         "value": "CUSTOM:WarpedWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:CherryWhiteSofa"
+      },
+      {
+        "value": "CUSTOM:BambooWhiteSofa"
       }
     ],
-    "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],

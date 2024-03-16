@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_wardrobe_0",
-    "ls_furniture:darkoakwardrobe_0",
-    "ls_furniture:sprucewardrobe",
     "ls_furniture:acacia_wardrobe",
     "ls_furniture:birch_wardrobe",
     "ls_furniture:jungle_wardrobe",

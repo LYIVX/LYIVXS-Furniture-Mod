@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/table_none",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_none_warped",
-    "particle": "ls_furniture:block/table_none_warped",
-    "1": "ls_furniture:block/stem_warped_animation",
-    "2": "ls_furniture:block/pattern_filled_warped"
+    "particle": "block/stripped_warped_stem",
+    "1": "block/warped_stem",
+    "2": "ls_furniture:block/table_none_warped"
   },
   "render_type": "cutout"
 }

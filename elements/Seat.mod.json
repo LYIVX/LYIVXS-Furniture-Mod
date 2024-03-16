@@ -2,18 +2,18 @@
   "_fv": 57,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Sofa",
+    "mobName": "Seat",
     "mobLabel": "",
     "mobModelName": "ModelSeat",
     "mobModelTexture": "seat.png",
     "transparentModelCondition": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "isShakingCondition": {
       "fixedValue": false
     },
     "solidBoundingBox": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "visualScale": {
       "fixedValue": 1.0
@@ -22,10 +22,10 @@
       "fixedValue": 1.0
     },
     "modelLayers": [],
-    "modelWidth": 0.95,
+    "modelWidth": 0.1,
     "modelHeight": 0.01,
     "modelShadowSize": 0.0,
-    "mountedYOffset": -0.2,
+    "mountedYOffset": 0.25,
     "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
@@ -73,16 +73,16 @@
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "pushedByFluids": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "disableCollisions": true,
+    "disableCollisions": false,
     "ridable": true,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -93,8 +93,8 @@
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,
-    "immuneToPlayer": false,
-    "immuneToExplosion": false,
+    "immuneToPlayer": true,
+    "immuneToExplosion": true,
     "immuneToTrident": true,
     "immuneToAnvil": true,
     "immuneToWither": true,
@@ -115,14 +115,8 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "whenMobIsHurt": {
-      "name": "SeatDies"
-    },
     "onMobTickUpdate": {
-      "name": "OnInitialEntitySpawn"
-    },
-    "onInitialSpawn": {
-      "name": "OnInitialEntitySpawn"
+      "name": "SeatDespawn"
     },
     "hasAI": false,
     "aiBase": "(none)",

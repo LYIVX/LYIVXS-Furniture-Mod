@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:birch_planks",
-    "ls_furniture:connecting_birch_plain",
-    "ls_furniture:connecting_birch_stripped",
-    "ls_furniture:connecting_birch_small_bricks",
-    "ls_furniture:connecting_birch_big_bricks",
-    "ls_furniture:connecting_birch_horizontal_stripes",
-    "ls_furniture:connecting_birch_vertical_stripes",
-    "ls_furniture:connecting_birch_wavey",
-    "ls_furniture:connecting_birch_mosaic",
-    "ls_furniture:connecting_birch_diagonal",
-    "ls_furniture:connecting_birch_dunes",
-    "ls_furniture:connecting_birch_checkered",
-    "ls_furniture:connecting_birch_checked",
-    "ls_furniture:connecting_birch_swirl",
-    "ls_furniture:connecting_birch_slash"
+    "minecraft:birch_planks"
   ]
 }

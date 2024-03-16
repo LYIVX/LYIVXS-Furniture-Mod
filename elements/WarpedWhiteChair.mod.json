@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_warped",
+    "particleTexture": "stripped_warped",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -225,7 +225,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "NETHER_WOOD"
     },
     "breakSound": {
       "value": ""
@@ -263,14 +263,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "ChairAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "ChairBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "ChairBlockDestroyed"
+    "onRightClicked": {
+      "name": "SeatAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

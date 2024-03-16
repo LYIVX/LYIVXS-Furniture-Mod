@@ -236,17 +236,14 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
+    "onRightClicked": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
       "name": "DarkOakWhiteBlockAdded"
     },
-    "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
+    "onTickUpdate": {
+      "name": "DarkOakWhiteBlockAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

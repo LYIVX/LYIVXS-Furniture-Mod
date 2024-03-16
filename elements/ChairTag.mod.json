@@ -2,8 +2,9 @@
   "_fv": 57,
   "_type": "tag",
   "definition": {
-    "type": "Items",
-    "items": [
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
       {
         "value": "CUSTOM:OakChair"
       },
@@ -29,10 +30,48 @@
         "value": "CUSTOM:CrimsonChair"
       },
       {
+        "value": "CUSTOM:OakWhiteChair"
+      },
+      {
+        "value": "CUSTOM:DarkOakWhiteChair"
+      },
+      {
+        "value": "CUSTOM:SpruceWhiteChair"
+      },
+      {
+        "value": "CUSTOM:AcaciaWhiteChair"
+      },
+      {
+        "value": "CUSTOM:BirchWhiteChair"
+      },
+      {
+        "value": "CUSTOM:JungleWhiteChair"
+      },
+      {
+        "value": "CUSTOM:MangroveWhiteChair"
+      },
+      {
+        "value": "CUSTOM:CrimsonWhiteChair"
+      },
+      {
+        "value": "CUSTOM:WarpedWhiteChair"
+      },
+      {
         "value": "CUSTOM:AcaciaChair"
+      },
+      {
+        "value": "CUSTOM:CherryChair"
+      },
+      {
+        "value": "CUSTOM:CherryWhiteChair"
+      },
+      {
+        "value": "CUSTOM:BambooChair"
+      },
+      {
+        "value": "CUSTOM:BambooWhiteChair"
       }
     ],
-    "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],

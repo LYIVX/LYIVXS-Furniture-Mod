@@ -17,27 +17,6 @@
     "blocks": [
       {
         "value": "CUSTOM:TVStandOff"
-      },
-      {
-        "value": "CUSTOM:TVStandOn"
-      },
-      {
-        "value": "CUSTOM:TVStandMinecraft"
-      },
-      {
-        "value": "CUSTOM:TVStandCod"
-      },
-      {
-        "value": "CUSTOM:TVWallOff"
-      },
-      {
-        "value": "CUSTOM:TVWallOn"
-      },
-      {
-        "value": "CUSTOM:TVWallMinecraft"
-      },
-      {
-        "value": "CUSTOM:TVWallCod"
       }
     ],
     "functions": [],

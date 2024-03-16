@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:computer_off",
-    "ls_furniture:computer_on",
-    "ls_furniture:computer_minecraft",
-    "ls_furniture:computer_cod"
+    "ls_furniture:computer_off"
   ]
 }

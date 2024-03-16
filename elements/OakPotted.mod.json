@@ -44,7 +44,7 @@
     "creativeTab": {
       "value": "CUSTOM:TAB"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": "CUSTOM:OakPlant"
     },

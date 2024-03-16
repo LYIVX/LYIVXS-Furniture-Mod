@@ -2,13 +2,13 @@
   "mappings": {
     "default": {
       "map": {
-        "east": "invisible",
-        "south": "invisible",
-        "north": "invisible",
-        "west": "invisible",
-        "up": "invisible",
-        "tint": "invisible",
-        "down": "invisible"
+        "east": "aaa",
+        "south": "aaa",
+        "north": "aaa",
+        "west": "aaa",
+        "up": "aaa",
+        "tint": "aaa",
+        "down": "aaa"
       },
       "name": "default"
     },
@@ -56,105 +56,21 @@
         "west": "leaves_oak_frosted_side",
         "up": "leaves_oak_frosted_top",
         "tint": "leaves_oak",
-        "down": "invisible"
+        "down": "aaa"
       },
       "name": "oaksemifrosted"
     },
-    "darkoakpoppy": {
+	"oakfrosted": {
       "map": {
-        "east": "poppy",
-        "south": "poppy",
-        "north": "poppy",
-        "west": "poppy",
-        "up": "poppy",
-        "tint": "leaves_dark_oak",
-        "down": "poppy"
+        "east": "leaves_oak_frosted_top",
+        "south": "leaves_oak_frosted_top",
+        "north": "leaves_oak_frosted_top",
+        "west": "leaves_oak_frosted_top",
+        "up": "leaves_oak_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_oak_frosted_top"
       },
-      "name": "darkoakpoppy"
-    },
-    "darkoakdandilion": {
-      "map": {
-        "east": "dandilion",
-        "south": "dandilion",
-        "north": "dandilion",
-        "west": "dandilion",
-        "up": "dandilion",
-        "tint": "leaves_dark_oak",
-        "down": "dandilion"
-      },
-      "name": "darkoakdandilion"
-    },
-    "darkoakblueorchid": {
-      "map": {
-        "east": "blue_orchid",
-        "south": "blue_orchid",
-        "north": "blue_orchid",
-        "west": "blue_orchid",
-        "up": "blue_orchid",
-        "tint": "leaves_dark_oak",
-        "down": "blue_orchid"
-      },
-      "name": "darkoakblueorchid"
-    },
-    "darkoaksemifrosted": {
-      "map": {
-        "east": "leaves_dark_oak_frosted_side",
-        "south": "leaves_dark_oak_frosted_side",
-        "north": "leaves_dark_oak_frosted_side",
-        "west": "leaves_dark_oak_frosted_side",
-        "up": "leaves_dark_oak_frosted_top",
-        "tint": "leaves_dark_oak",
-        "down": "invisible"
-      },
-      "name": "darkoaksemifrosted"
-    },
-    "acaciapoppy": {
-      "map": {
-        "east": "poppy",
-        "south": "poppy",
-        "north": "poppy",
-        "west": "poppy",
-        "up": "poppy",
-        "tint": "leaves_acacia",
-        "down": "poppy"
-      },
-      "name": "acaciapoppy"
-    },
-    "acaciadandilion": {
-      "map": {
-        "east": "dandilion",
-        "south": "dandilion",
-        "north": "dandilion",
-        "west": "dandilion",
-        "up": "dandilion",
-        "tint": "leaves_acacia",
-        "down": "dandilion"
-      },
-      "name": "acaciadandilion"
-    },
-    "acaciablueorchid": {
-      "map": {
-        "east": "blue_orchid",
-        "south": "blue_orchid",
-        "north": "blue_orchid",
-        "west": "blue_orchid",
-        "up": "blue_orchid",
-        "tint": "leaves_acacia",
-        "down": "blue_orchid"
-      },
-      "name": "acaciablueorchid"
-    },
-    "acaciasemifrosted": {
-      "map": {
-        "east": "leaves_acacia_frosted_side",
-        "south": "leaves_acacia_frosted_side",
-        "north": "leaves_acacia_frosted_side",
-        "west": "leaves_acacia_frosted_side",
-        "up": "leaves_acacia_frosted_top",
-        "tint": "leaves_acacia",
-        "down": "invisible"
-      },
-      "name": "acaciasemifrosted"
+      "name": "oakfrosted"
     },
     "sprucepoppy": {
       "map": {
@@ -200,11 +116,23 @@
         "west": "leaves_spruce_frosted_side",
         "up": "leaves_spruce_frosted_top",
         "tint": "leaves_spruce",
-        "down": "invisible"
+        "down": "aaa"
       },
       "name": "sprucesemifrosted"
+    },    
+	"sprucefrosted": {
+      "map": {
+        "east": "leaves_spruce_frosted_top",
+        "south": "leaves_spruce_frosted_top",
+        "north": "leaves_spruce_frosted_top",
+        "west": "leaves_spruce_frosted_top",
+        "up": "leaves_spruce_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_spruce_frosted_top"
+      },
+      "name": "sprucefrosted"
     },
-    "birchpoppy": {
+	    "birchpoppy": {
       "map": {
         "east": "poppy",
         "south": "poppy",
@@ -248,11 +176,23 @@
         "west": "leaves_birch_frosted_side",
         "up": "leaves_birch_frosted_top",
         "tint": "leaves_birch",
-        "down": "invisible"
+        "down": "aaa"
       },
       "name": "birchsemifrosted"
+	},
+	"birchfrosted": {
+      "map": {
+        "east": "leaves_birch_frosted_top",
+        "south": "leaves_birch_frosted_top",
+        "north": "leaves_birch_frosted_top",
+        "west": "leaves_birch_frosted_top",
+        "up": "leaves_birch_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_birch_frosted_top"
+      },
+      "name": "birchfrosted"
     },
-    "junglepoppy": {
+	"junglepoppy": {
       "map": {
         "east": "poppy",
         "south": "poppy",
@@ -296,10 +236,142 @@
         "west": "leaves_jungle_frosted_side",
         "up": "leaves_jungle_frosted_top",
         "tint": "leaves_jungle",
-        "down": "invisible"
+        "down": "aaa"
       },
       "name": "junglesemifrosted"
     },
+	"junglefrosted": {
+      "map": {
+        "east": "leaves_jungle_frosted_top",
+        "south": "leaves_jungle_frosted_top",
+        "north": "leaves_jungle_frosted_top",
+        "west": "leaves_jungle_frosted_top",
+        "up": "leaves_jungle_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_jungle_frosted_top"
+      },
+      "name": "junglefrosted"
+    },
+    "acaciapoppy": {
+      "map": {
+        "east": "poppy",
+        "south": "poppy",
+        "north": "poppy",
+        "west": "poppy",
+        "up": "poppy",
+        "tint": "leaves_acacia",
+        "down": "poppy"
+      },
+      "name": "acaciapoppy"
+    },
+    "acaciadandilion": {
+      "map": {
+        "east": "dandilion",
+        "south": "dandilion",
+        "north": "dandilion",
+        "west": "dandilion",
+        "up": "dandilion",
+        "tint": "leaves_acacia",
+        "down": "dandilion"
+      },
+      "name": "acaciadandilion"
+    },
+    "acaciablueorchid": {
+      "map": {
+        "east": "blue_orchid",
+        "south": "blue_orchid",
+        "north": "blue_orchid",
+        "west": "blue_orchid",
+        "up": "blue_orchid",
+        "tint": "leaves_acacia",
+        "down": "blue_orchid"
+      },
+      "name": "acaciablueorchid"
+    },
+    "acaciasemifrosted": {
+      "map": {
+        "east": "leaves_acacia_frosted_side",
+        "south": "leaves_acacia_frosted_side",
+        "north": "leaves_acacia_frosted_side",
+        "west": "leaves_acacia_frosted_side",
+        "up": "leaves_acacia_frosted_top",
+        "tint": "leaves_acacia",
+        "down": "aaa"
+      },
+      "name": "acaciasemifrosted"
+	},
+	"acaciafrosted": {
+      "map": {
+        "east": "leaves_acacia_frosted_top",
+        "south": "leaves_acacia_frosted_top",
+        "north": "leaves_acacia_frosted_top",
+        "west": "leaves_acacia_frosted_top",
+        "up": "leaves_acacia_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_acacia_frosted_top"
+      },
+      "name": "acaciafrosted"
+    },
+	"darkoakpoppy": {
+      "map": {
+        "east": "poppy",
+        "south": "poppy",
+        "north": "poppy",
+        "west": "poppy",
+        "up": "poppy",
+        "tint": "leaves_dark_oak",
+        "down": "poppy"
+      },
+      "name": "darkoakpoppy"
+    },
+    "darkoakdandilion": {
+      "map": {
+        "east": "dandilion",
+        "south": "dandilion",
+        "north": "dandilion",
+        "west": "dandilion",
+        "up": "dandilion",
+        "tint": "leaves_dark_oak",
+        "down": "dandilion"
+      },
+      "name": "darkoakdandilion"
+    },
+    "darkoakblueorchid": {
+      "map": {
+        "east": "blue_orchid",
+        "south": "blue_orchid",
+        "north": "blue_orchid",
+        "west": "blue_orchid",
+        "up": "blue_orchid",
+        "tint": "leaves_dark_oak",
+        "down": "blue_orchid"
+      },
+      "name": "darkoakblueorchid"
+    },
+    "darkoaksemifrosted": {
+      "map": {
+        "east": "leaves_dark_oak_frosted_side",
+        "south": "leaves_dark_oak_frosted_side",
+        "north": "leaves_dark_oak_frosted_side",
+        "west": "leaves_dark_oak_frosted_side",
+        "up": "leaves_dark_oak_frosted_top",
+        "tint": "leaves_dark_oak",
+        "down": "aaa"
+      },
+      "name": "darkoaksemifrosted"
+    },   
+	"dark_oakfrosted": {
+      "map": {
+        "east": "leaves_dark_oak_frosted_top",
+        "south": "leaves_dark_oak_frosted_top",
+        "north": "leaves_dark_oak_frosted_top",
+        "west": "leaves_dark_oak_frosted_top",
+        "up": "leaves_dark_oak_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_dark_oak_frosted_top"
+      },
+      "name": "dark_oakfrosted"
+    },	
     "mangrovepoppy": {
       "map": {
         "east": "poppy",
@@ -344,9 +416,81 @@
         "west": "leaves_mangrove_frosted_side",
         "up": "leaves_mangrove_frosted_top",
         "tint": "leaves_mangrove",
-        "down": "invisible"
+        "down": "aaa"
       },
       "name": "mangrovesemifrosted"
+    },
+	"mangrovefrosted": {
+      "map": {
+        "east": "leaves_mangrove_frosted_top",
+        "south": "leaves_mangrove_frosted_top",
+        "north": "leaves_mangrove_frosted_top",
+        "west": "leaves_mangrove_frosted_top",
+        "up": "leaves_mangrove_frosted_top",
+        "tint": "aaa",
+        "down": "leaves_mangrove_frosted_top"
+      },
+      "name": "mangrovefrosted"
+    },
+    "cherrypoppy": {
+      "map": {
+        "east": "poppy",
+        "south": "poppy",
+        "north": "poppy",
+        "west": "poppy",
+        "up": "poppy",
+        "tint": "cherry_leaves",
+        "down": "poppy"
+      },
+      "name": "cherrypoppy"
+    },
+    "cherrydandilion": {
+      "map": {
+        "east": "dandilion",
+        "south": "dandilion",
+        "north": "dandilion",
+        "west": "dandilion",
+        "up": "dandilion",
+        "tint": "cherry_leaves",
+        "down": "dandilion"
+      },
+      "name": "cherrydandilion"
+    },
+    "cherryblueorchid": {
+      "map": {
+        "east": "blue_orchid",
+        "south": "blue_orchid",
+        "north": "blue_orchid",
+        "west": "blue_orchid",
+        "up": "blue_orchid",
+        "tint": "cherry_leaves",
+        "down": "blue_orchid"
+      },
+      "name": "cherryblueorchid"
+    },
+    "cherrysemifrosted": {
+      "map": {
+        "east": "leaves_cherry_semi",
+        "south": "leaves_cherry_semi",
+        "north": "leaves_cherry_semi",
+        "west": "leaves_cherry_semi",
+        "up": "leaves_cherry_frosted",
+        "tint": "cherry_leaves",
+        "down": "aaa"
+      },
+      "name": "cherrysemifrosted"
+    },
+	"cherryfrosted": {
+      "map": {
+        "east": "leaves_cherry_frosted",
+        "south": "leaves_cherry_frosted",
+        "north": "leaves_cherry_frosted",
+        "west": "leaves_cherry_frosted",
+        "up": "leaves_cherry_frosted",
+        "tint": "aaa",
+        "down": "leaves_cherry_frosted"
+      },
+      "name": "cherryfrosted"
     }
   }
 }

@@ -71,6 +71,22 @@
         "Stripped": "stripped_warped"
       },
       "name": "warped_white"
+    },
+    "bamboo_white": {
+      "map": {
+        "Log": "log_bamboo",
+        "Wool": "wool_white",
+        "Stripped": "stripped_bamboo"
+      },
+      "name": "bamboo_white"
+    },
+    "cherry_white": {
+      "map": {
+        "Log": "log_cherry",
+        "Wool": "wool_white",
+        "Stripped": "stripped_cherry"
+      },
+      "name": "cherry_white"
     }
   }
 }

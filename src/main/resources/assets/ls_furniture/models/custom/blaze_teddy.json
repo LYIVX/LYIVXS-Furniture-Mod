@@ -1,6 +1,5 @@
 {
   "credit": "Made with Blockbench",
-  "parent": "blaze_teddy",
   "texture_size": [
     64,
     32
@@ -9,23 +8,23 @@
     {
       "name": "upperBodyParts0",
       "from": [
-        5.5,
-        3,
-        6.5
+        12,
+        9,
+        8
       ],
       "to": [
-        6.5,
-        7,
-        7.5
+        13,
+        13,
+        9
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          5.5,
-          -5,
-          6.5
+          11.5,
+          0.5,
+          8
         ]
       },
       "faces": {
@@ -88,23 +87,23 @@
     {
       "name": "upperBodyParts1",
       "from": [
-        9.5,
-        4.5,
-        8.5
+        2.5,
+        9,
+        8
       ],
       "to": [
-        10.5,
-        8.5,
-        9.5
+        3.5,
+        13,
+        9
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          9.5,
-          -3.5,
-          8.5
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -167,23 +166,23 @@
     {
       "name": "upperBodyParts2",
       "from": [
+        9.5,
         7.5,
-        3.5,
-        6
+        5.5
       ],
       "to": [
-        8.5,
-        7.5,
-        7
+        10.5,
+        11.5,
+        6.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          7.5,
-          -4.5,
-          6
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -246,23 +245,23 @@
     {
       "name": "upperBodyParts3",
       "from": [
-        6.5,
-        1.5,
-        9.5
+        9.5,
+        8,
+        10.5
       ],
       "to": [
-        7.5,
-        5.5,
-        10.5
+        10.5,
+        12,
+        11.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          6.5,
-          -6.5,
-          9.5
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -325,23 +324,23 @@
     {
       "name": "upperBodyParts4",
       "from": [
-        9,
-        1,
-        7
+        4.5,
+        8,
+        5.5
       ],
       "to": [
-        10,
-        5,
-        8
+        5.5,
+        12,
+        6.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          9,
-          -7,
-          7
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -404,23 +403,23 @@
     {
       "name": "upperBodyParts5",
       "from": [
-        8.5,
-        3,
-        10
+        4.5,
+        7.5,
+        10.5
       ],
       "to": [
-        9.5,
-        7,
-        11
+        5.5,
+        11.5,
+        11.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          8.5,
-          -5,
-          10
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -484,21 +483,21 @@
       "name": "upperBodyParts6",
       "from": [
         7,
-        0,
-        8
+        9,
+        3.5
       ],
       "to": [
         8,
-        4,
-        9
+        13,
+        4.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          7,
-          -8,
+          8,
+          0,
           8
         ]
       },
@@ -562,22 +561,22 @@
     {
       "name": "upperBodyParts7",
       "from": [
-        10.5,
-        5.5,
-        8
+        7,
+        9,
+        12
       ],
       "to": [
-        11.5,
-        9.5,
-        9
+        8,
+        13,
+        13
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          10.5,
-          -2.5,
+          8,
+          0,
           8
         ]
       },
@@ -641,22 +640,22 @@
     {
       "name": "upperBodyParts8",
       "from": [
-        4.5,
-        5,
-        8
+        5.5,
+        2.5,
+        9
       ],
       "to": [
-        5.5,
-        9,
-        9
+        6.5,
+        6.5,
+        10
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          4.5,
-          -3,
+          8,
+          0,
           8
         ]
       },
@@ -720,23 +719,23 @@
     {
       "name": "upperBodyParts9",
       "from": [
-        6.5,
-        5,
-        10.5
+        7,
+        3,
+        5.5
       ],
       "to": [
-        7.5,
-        9,
-        11.5
+        8,
+        7,
+        6.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          6.5,
-          -3,
-          10.5
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -799,23 +798,23 @@
     {
       "name": "upperBodyParts10",
       "from": [
-        6.5,
-        4,
-        8.5
+        10,
+        2.75,
+        6.5
       ],
       "to": [
-        7.5,
-        8,
-        9.5
+        11,
+        6.75,
+        7.5
       ],
       "shade": false,
       "rotation": {
         "angle": 0,
         "axis": "y",
         "origin": [
-          6.5,
-          -4,
-          8.5
+          8,
+          0,
+          8
         ]
       },
       "faces": {
@@ -878,14 +877,14 @@
     {
       "name": "upperBodyParts11",
       "from": [
-        8,
-        4,
-        8
+        9,
+        2.5,
+        10
       ],
       "to": [
-        9,
-        8,
-        9
+        10,
+        6.5,
+        11
       ],
       "shade": false,
       "rotation": {
@@ -893,7 +892,7 @@
         "axis": "y",
         "origin": [
           8,
-          -4,
+          0,
           8
         ]
       },
@@ -958,12 +957,12 @@
       "name": "head",
       "from": [
         6,
-        8.5,
+        10,
         6
       ],
       "to": [
         10,
-        12.5,
+        14,
         10
       ],
       "shade": false,
@@ -972,7 +971,7 @@
         "axis": "y",
         "origin": [
           8,
-          -1.5,
+          0,
           8
         ]
       },
@@ -1075,11 +1074,6 @@
         135,
         0
       ],
-      "translation": [
-        0,
-        2.75,
-        0
-      ],
       "scale": [
         0.4,
         0.4,
@@ -1090,11 +1084,6 @@
       "rotation": [
         0,
         135,
-        0
-      ],
-      "translation": [
-        0,
-        2.75,
         0
       ],
       "scale": [
@@ -1110,9 +1099,9 @@
         0
       ],
       "scale": [
-        0.68,
-        0.68,
-        0.68
+        0.25,
+        0.25,
+        0.25
       ]
     },
     "gui": {
@@ -1120,25 +1109,20 @@
         30,
         225,
         0
-      ],
-      "translation": [
-        0.5,
-        1.25,
-        0
       ]
     },
     "head": {
       "translation": [
         0,
-        14.5,
+        5.25,
         0
       ]
     },
     "fixed": {
-      "translation": [
-        0,
-        3.5,
-        -1
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     }
   },
@@ -1146,9 +1130,9 @@
     {
       "name": "upperBodyParts0",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1160,9 +1144,9 @@
     {
       "name": "upperBodyParts1",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1174,9 +1158,9 @@
     {
       "name": "upperBodyParts2",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1188,9 +1172,9 @@
     {
       "name": "upperBodyParts3",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1202,9 +1186,9 @@
     {
       "name": "upperBodyParts4",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1216,9 +1200,9 @@
     {
       "name": "upperBodyParts5",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1230,9 +1214,9 @@
     {
       "name": "upperBodyParts6",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1244,9 +1228,9 @@
     {
       "name": "upperBodyParts7",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1258,9 +1242,9 @@
     {
       "name": "upperBodyParts8",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1272,9 +1256,9 @@
     {
       "name": "upperBodyParts9",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1286,9 +1270,9 @@
     {
       "name": "upperBodyParts10",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1300,9 +1284,9 @@
     {
       "name": "upperBodyParts11",
       "origin": [
-        0,
-        24,
-        0
+        103,
+        25,
+        96
       ],
       "color": 0,
       "nbt": "{}",
@@ -1314,9 +1298,9 @@
     {
       "name": "head",
       "origin": [
-        0,
+        8,
         24,
-        0
+        8
       ],
       "color": 0,
       "nbt": "{}",

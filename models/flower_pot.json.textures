@@ -80,6 +80,15 @@
         "dirt": "dirt"
       },
       "name": "warped"
+    },
+    "cherry": {
+      "map": {
+        "log": "log_cherry",
+        "flowerpot": "flower_pot",
+        "leave": "cherry_leaves",
+        "dirt": "dirt"
+      },
+      "name": "cherry"
     }
   }
 }

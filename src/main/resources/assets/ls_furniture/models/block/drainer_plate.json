@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/drainer_plate",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/anvil",
-    "particle": "ls_furniture:block/anvil",
-    "1": "ls_furniture:block/anvil",
-    "2": "ls_furniture:block/iron_block"
+    "all": "block/anvil",
+    "particle": "block/anvil",
+    "Anvil": "block/anvil",
+    "Iron_Block": "block/iron_block"
   },
   "render_type": "solid"
 }

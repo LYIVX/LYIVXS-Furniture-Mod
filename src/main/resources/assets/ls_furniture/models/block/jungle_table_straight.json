@@ -1,8 +1,15 @@
 {
   "parent": "ls_furniture:custom/table_straight",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_straight_jungle",
-    "particle": "ls_furniture:block/table_straight_jungle",
+    "particle": "ls_furniture:block/stripped_jungle",
     "1": "ls_furniture:block/table_straight_jungle"
   },
   "render_type": "cutout"

@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/shelve",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_spruce",
-    "particle": "ls_furniture:block/planks_spruce",
-    "1": "ls_furniture:block/stripped_spruce",
-    "2": "ls_furniture:block/log_spruce"
+    "all": "block/stripped_spruce_log",
+    "particle": "block/stripped_spruce_log",
+    "1": "block/stripped_spruce_log",
+    "2": "block/spruce_log"
   },
   "render_type": "solid"
 }

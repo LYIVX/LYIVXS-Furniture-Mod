@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "white_wool",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -23,42 +23,6 @@
     "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
     "boundingBoxes": [
-      {
-        "mx": 9.45468,
-        "my": 0.0,
-        "mz": 5.74214,
-        "Mx": 13.45468,
-        "My": 1.6,
-        "Mz": 8.14214,
-        "subtract": false
-      },
-      {
-        "mx": 2.34532,
-        "my": 0.0,
-        "mz": 5.74214,
-        "Mx": 6.34532,
-        "My": 1.6,
-        "Mz": 8.14214,
-        "subtract": false
-      },
-      {
-        "mx": 11.59783,
-        "my": 0.0,
-        "mz": 9.66083,
-        "Mx": 15.59783,
-        "My": 1.6,
-        "Mz": 12.86083,
-        "subtract": false
-      },
-      {
-        "mx": 0.20217,
-        "my": 0.0,
-        "mz": 9.66083,
-        "Mx": 4.20217,
-        "My": 1.6,
-        "Mz": 12.86083,
-        "subtract": false
-      },
       {
         "mx": 5.1,
         "my": 0.0,

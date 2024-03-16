@@ -7,18 +7,6 @@
     "blocks": [
       {
         "value": "CUSTOM:WarpedWhiteSofa"
-      },
-      {
-        "value": "CUSTOM:WarpedWhiteCorner"
-      },
-      {
-        "value": "CUSTOM:WarpedWhiteStraight"
-      },
-      {
-        "value": "CUSTOM:WarpedWhiteLeftEnd"
-      },
-      {
-        "value": "CUSTOM:WarpedWhiteRightEnd"
       }
     ],
     "functions": [],

@@ -1,220 +1,268 @@
 {
   "mappings": {
-    "default": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_oak",
-        "7": "stripped_oak"
-      },
-      "name": "default"
-    },
-    "oak_on": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_oak",
-        "7": "stripped_oak"
-      },
-      "name": "oak_on"
-    },
-    "dark_oak": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_dark_oak",
-        "7": "stripped_dark_oak"
-      },
-      "name": "dark_oak"
-    },
-    "dark_oak_on": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_dark_oak",
-        "7": "stripped_dark_oak"
-      },
-      "name": "dark_oak_on"
-    },
-    "spruce_on": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_spruce",
-        "7": "stripped_spruce"
-      },
-      "name": "spruce_on"
-    },
-    "spruce": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_spruce",
-        "7": "stripped_spruce"
-      },
-      "name": "spruce"
-    },
-    "acacia": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_acacia",
-        "7": "stripped_acacia"
-      },
-      "name": "acacia"
-    },
     "acacia_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_acacia",
-        "7": "stripped_acacia"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_acacia",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_acacia"
       },
       "name": "acacia_on"
     },
-    "birch": {
+    "oak_off": {
       "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_birch",
-        "7": "stripped_birch"
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_oak",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_oak"
       },
-      "name": "birch"
+      "name": "oak_off"
     },
     "birch_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_birch",
-        "7": "stripped_birch"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_birch",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_birch"
       },
       "name": "birch_on"
     },
-    "jungle": {
+    "dark_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_jungle",
-        "7": "stripped_jungle"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_dark_oak",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_dark_oak"
       },
-      "name": "jungle"
+      "name": "dark_on"
+    },
+    "bamboo_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_bamboo",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_bamboo"
+      },
+      "name": "bamboo_off"
+    },
+    "cherry_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_cherry",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_cherry"
+      },
+      "name": "cherry_off"
+    },
+    "crimson_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "stem_crimson",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_crimson"
+      },
+      "name": "crimson_off"
+    },
+    "cherry_on": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_cherry",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_crimson"
+      },
+      "name": "cherry_on"
+    },
+    "birch_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_birch",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_birch"
+      },
+      "name": "birch_off"
+    },
+    "spruce_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_spruce",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_spruce"
+      },
+      "name": "spruce_off"
+    },
+    "dark_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_dark_oak",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_dark_oak"
+      },
+      "name": "dark_off"
+    },
+    "spruce_on": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_spruce",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_spruce"
+      },
+      "name": "spruce_on"
+    },
+    "warped_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "stem_warped",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_warped"
+      },
+      "name": "warped_off"
     },
     "jungle_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_jungle",
-        "7": "stripped_jungle"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_jungle",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_jungle"
       },
       "name": "jungle_on"
     },
-    "mangrove": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_mangrove",
-        "7": "stripped_mangrove"
-      },
-      "name": "mangrove"
-    },
-    "mangrove_on": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_mangrove",
-        "7": "stripped_mangrove"
-      },
-      "name": "mangrove_on"
-    },
-    "crimson": {
-      "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_crimson",
-        "7": "stripped_crimson"
-      },
-      "name": "crimson"
-    },
     "crimson_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_crimson",
-        "7": "stripped_crimson"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "stem_crimson_animation",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_crimson"
       },
       "name": "crimson_on"
     },
-    "warped": {
+    "default": {
       "map": {
-        "1": "anvil_flat",
-        "2": "anvil_flat",
-        "3": "wool_black",
-        "4": "wool_green",
-        "5": "wool_red",
-        "6": "stripped_warped",
-        "7": "stripped_warped"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_oak",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_oak"
       },
-      "name": "warped"
+      "name": "default"
     },
     "warped_on": {
       "map": {
-        "1": "anvil_flat",
-        "2": "glowstone",
-        "3": "wool_white",
-        "4": "wool_lime",
-        "5": "wool_red",
-        "6": "stripped_warped",
-        "7": "stripped_warped"
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "stem_warped",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_warped"
       },
       "name": "warped_on"
+    },
+    "mangrove_on": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_mangrove",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_mangrove"
+      },
+      "name": "mangrove_on"
+    },
+    "jungle_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_jungle",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_jungle"
+      },
+      "name": "jungle_off"
+    },
+    "acacia_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_acacia",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_acacia"
+      },
+      "name": "acacia_off"
+    },
+    "bamboo_on": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_lime",
+        "Secondary": "log_bamboo",
+        "Light": "glowstone",
+        "Anvil": "anvil",
+        "On/Off": "wool_white",
+        "Main": "stripped_bamboo"
+      },
+      "name": "bamboo_on"
+    },
+    "mangrove_off": {
+      "map": {
+        "Red": "wool_red",
+        "Lime": "wool_green",
+        "Secondary": "log_mangrove",
+        "Light": "black_concrete",
+        "Anvil": "anvil",
+        "On/Off": "black_concrete",
+        "Main": "stripped_mangrove"
+      },
+      "name": "mangrove_off"
     }
   }
 }

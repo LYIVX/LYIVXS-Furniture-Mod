@@ -1,11 +1,11 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:acacia_door"
+      "item": "minecraft:warped_door"
     },
     {
-      "item": "minecraft:acacia_planks"
+      "item": "minecraft:warped_planks"
     },
     {
       "tag": "ls_furniture:emptyslot"
@@ -18,6 +18,6 @@
     }
   ],
   "output": {
-    "item": "ls_furniture:acacia_planks_door"
+    "item": "ls_furniture:warped_planks_door"
   }
 }

@@ -1,14 +1,14 @@
 {
-  "type": "ls_furniture:metallurgy",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
       "item": "minecraft:iron_block"
     },
     {
-      "tag": "ls_furniture:emptyslot"
+      "item": "minecraft:iron_block"
     },
     {
-      "item": "minecraft:iron_ingot"
+      "tag": "ls_furniture:emptyslot"
     },
     {
       "tag": "ls_furniture:emptyslot"
@@ -18,6 +18,6 @@
     }
   ],
   "output": {
-    "item": "ls_furniture:fridge_freezer_block"
+    "item": "ls_furniture:fridge_freezer"
   }
 }

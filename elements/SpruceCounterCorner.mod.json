@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "counter_corner:spruce",
+    "customModelName": "counter_corner:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -74,7 +74,7 @@
       "fixedValue": []
     },
     "hardness": 2.0,
-    "resistance": 3.0,
+    "resistance": 310.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -82,7 +82,7 @@
     },
     "destroyTool": "axe",
     "customDrop": {
-      "value": "CUSTOM:SpruceCounter"
+      "value": "CUSTOM:OakCounter"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -103,7 +103,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": "CUSTOM:SpruceCounter"
+      "value": "CUSTOM:OakCounter"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -155,18 +155,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "SpruceCounterBlockAdded"
-    },
-    "onTickUpdate": {
-      "name": "SpruceCounterBlockAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "SpruceCounterBlockAdded"
-    },
-    "onDestroyedByExplosion": {
-      "name": "SpruceCounterBlockAdded"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

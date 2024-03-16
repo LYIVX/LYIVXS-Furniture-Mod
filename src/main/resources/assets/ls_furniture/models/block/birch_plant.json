@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/plant_birch",
     "particle": "ls_furniture:block/plant_birch",
-    "log": "ls_furniture:block/log_birch",
-    "leave": "ls_furniture:block/leaves_birch"
+    "log": "block/birch_log",
+    "leave": "block/birch_leaves"
   },
   "render_type": "cutout"
 }

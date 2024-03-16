@@ -9,6 +9,8 @@
     "ls_furniture:mangrove_bark",
     "ls_furniture:crimson_bark",
     "ls_furniture:warped_bark",
-    "ls_furniture:dark_oak_bark"
+    "ls_furniture:dark_oak_bark",
+    "ls_furniture:cherry_bark",
+    "minecraft:bamboo"
   ]
 }

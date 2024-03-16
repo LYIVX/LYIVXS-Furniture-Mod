@@ -8,18 +8,6 @@
 	},
 	"elements": [
 		{
-			"from": [0, 0, 0],
-			"to": [2, 2, 2],
-			"faces": {
-				"north": {"uv": [14, 14, 16, 16], "texture": "#Log"},
-				"east": {"uv": [14, 14, 16, 16], "texture": "#Log"},
-				"south": {"uv": [0, 14, 2, 16], "texture": "#Log"},
-				"west": {"uv": [0, 14, 2, 16], "texture": "#Log"},
-				"up": {"uv": [0, 0, 2, 2], "texture": "#Log"},
-				"down": {"uv": [0, 14, 2, 16], "texture": "#Log"}
-			}
-		},
-		{
 			"from": [14, 0, 0],
 			"to": [16, 2, 2],
 			"faces": {

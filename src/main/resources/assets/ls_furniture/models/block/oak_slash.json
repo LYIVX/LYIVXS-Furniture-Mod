@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ls_furniture:block/oak_slash",
-    "particle": "ls_furniture:block/oak_slash"
-  },
-  "render_type": "solid"
-}

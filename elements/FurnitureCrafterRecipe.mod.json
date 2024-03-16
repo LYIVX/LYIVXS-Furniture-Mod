@@ -9,13 +9,13 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:Saw"
+        "value": ""
       },
       {
         "value": ""
@@ -30,13 +30,13 @@
         "value": "CUSTOM:Wrench"
       },
       {
-        "value": "CUSTOM:Wrench"
+        "value": "CUSTOM:Shear"
       },
       {
         "value": "CUSTOM:Chisel"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Saw"
       }
     ],
     "recipeReturnStack": {

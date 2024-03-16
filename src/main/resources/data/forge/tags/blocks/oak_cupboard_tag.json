@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:oak_cupboard",
-    "ls_furniture:oak_cupboard_corner",
-    "ls_furniture:oak_cupboard_vent",
-    "ls_furniture:oak_cupboard_vent_on"
+    "ls_furniture:oak_cabinet"
   ]
 }

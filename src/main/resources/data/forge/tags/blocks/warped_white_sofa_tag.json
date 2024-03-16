@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:warped_white_sofa",
-    "ls_furniture:warped_white_corner",
-    "ls_furniture:warped_white_straight",
-    "ls_furniture:warped_white_left_end",
-    "ls_furniture:warped_white_right_end"
+    "ls_furniture:warped_white_sofa"
   ]
 }

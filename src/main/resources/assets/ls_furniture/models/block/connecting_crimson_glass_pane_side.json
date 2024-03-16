@@ -8,7 +8,7 @@
   ],
   "loader": "fusion:model",
   "textures": {
-    "edge": "ls_furniture:block/planks_crimson",
+    "edge": "ls_furniture:block/stripped_crimson",
     "pane": "ls_furniture:block/connecting_crimson_glass"
   },
   "render_type": "translucent"

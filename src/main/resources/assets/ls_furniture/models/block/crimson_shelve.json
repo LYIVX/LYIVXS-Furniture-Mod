@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/shelve",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_crimson",
-    "particle": "ls_furniture:block/planks_crimson",
-    "1": "ls_furniture:block/stripped_crimson",
-    "2": "ls_furniture:block/stem_crimson_animation"
+    "all": "block/stripped_crimson_stem",
+    "particle": "block/stripped_crimson_stem",
+    "1": "block/stripped_crimson_stem",
+    "2": "block/crimson_stem"
   },
   "render_type": "solid"
 }

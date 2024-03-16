@@ -3,14 +3,13 @@
 	"parent": "snow_golem_teddy",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "mcreator:entity/snow_golem",
-		"particle": "mcreator:entity/blaze"
+		"0": "mcreator:entity/snow_golem"
 	},
 	"elements": [
 		{
 			"name": "head",
-			"from": [6.6, 8.2, 6.6],
-			"to": [9.4, 11, 9.4],
+			"from": [6.25, 10.25, 6.25],
+			"to": [9.75, 13.75, 9.75],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -24,8 +23,8 @@
 		},
 		{
 			"name": "arm1",
-			"from": [3.8, 6.6, 7.8],
-			"to": [8.2, 7, 8.2],
+			"from": [2.75, 8.25, 7.75],
+			"to": [8.25, 8.75, 8.25],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -39,8 +38,8 @@
 		},
 		{
 			"name": "arm2",
-			"from": [7.8, 6.6, 7.8],
-			"to": [12.2, 7, 8.2],
+			"from": [7.75, 8.25, 7.75],
+			"to": [13.25, 8.75, 8.25],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -54,8 +53,8 @@
 		},
 		{
 			"name": "piece1",
-			"from": [6.2, 4.6, 6.2],
-			"to": [9.8, 8.2, 9.8],
+			"from": [5.75, 5.75, 5.75],
+			"to": [10.25, 10.25, 10.25],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -69,8 +68,8 @@
 		},
 		{
 			"name": "piece2",
-			"from": [5.8, 0.2, 5.8],
-			"to": [10.2, 4.6, 10.2],
+			"from": [5.25, 0.25, 5.25],
+			"to": [10.75, 5.75, 10.75],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -86,37 +85,37 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"thirdperson_lefthand": {
 			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.375, 0.375, 0.375]
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 135, 0],
-			"translation": [0, 2.75, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0, 135, 0],
-			"translation": [0, 2.75, 0],
+			"translation": [0, 1, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"ground": {
 			"translation": [0, 3, 0],
-			"scale": [0.5, 0.5, 0.5]
+			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"translation": [0.5, 1.25, 0]
+			"translation": [0.5, 1, 0]
 		},
 		"head": {
 			"translation": [0, 14.5, 0]
 		},
 		"fixed": {
-			"translation": [0, 3.5, -1]
+			"scale": [0.5, 0.5, 0.5]
 		}
 	},
 	"groups": [
@@ -126,7 +125,7 @@
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
-			"children": [0]
+			"children": []
 		},
 		{
 			"name": "arm1",
@@ -134,7 +133,7 @@
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
-			"children": [1]
+			"children": []
 		},
 		{
 			"name": "arm2",
@@ -142,7 +141,7 @@
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
-			"children": [2]
+			"children": []
 		},
 		{
 			"name": "piece1",
@@ -150,11 +149,51 @@
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
-			"children": [3]
+			"children": []
 		},
 		{
 			"name": "piece2",
 			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"shade": false,
+			"children": []
+		},
+		{
+			"name": "head",
+			"origin": [8, 20, 8],
+			"color": 0,
+			"nbt": "{}",
+			"shade": false,
+			"children": [0]
+		},
+		{
+			"name": "arm1",
+			"origin": [16, 18, 16],
+			"color": 0,
+			"nbt": "{}",
+			"shade": false,
+			"children": [1]
+		},
+		{
+			"name": "arm2",
+			"origin": [16, 18, 16],
+			"color": 0,
+			"nbt": "{}",
+			"shade": false,
+			"children": [2]
+		},
+		{
+			"name": "piece1",
+			"origin": [8, 11, 8],
+			"color": 0,
+			"nbt": "{}",
+			"shade": false,
+			"children": [3]
+		},
+		{
+			"name": "piece2",
+			"origin": [8, 0, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,

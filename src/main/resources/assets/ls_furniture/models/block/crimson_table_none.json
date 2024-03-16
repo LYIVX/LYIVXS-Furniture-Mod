@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/table_none",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_none_crimson",
-    "particle": "ls_furniture:block/table_none_crimson",
-    "1": "ls_furniture:block/stem_crimson_animation",
+    "particle": "block/stripped_crimson_stem",
+    "1": "block/crimson_stem",
     "2": "ls_furniture:block/table_none_crimson"
   },
   "render_type": "cutout"

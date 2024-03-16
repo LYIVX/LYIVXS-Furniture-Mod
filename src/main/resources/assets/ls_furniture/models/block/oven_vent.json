@@ -1,13 +1,20 @@
 {
   "parent": "ls_furniture:custom/oven_vent",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/anvil_flat",
-    "particle": "ls_furniture:block/anvil_flat",
-    "1": "ls_furniture:block/anvil_flat",
-    "2": "ls_furniture:block/anvil_flat",
-    "3": "ls_furniture:block/wool_black",
-    "4": "ls_furniture:block/wool_green",
-    "5": "ls_furniture:block/wool_red"
+    "all": "block/anvil",
+    "particle": "block/anvil",
+    "1": "block/anvil",
+    "2": "block/anvil",
+    "3": "block/black_wool",
+    "4": "block/green_wool",
+    "5": "block/red_wool"
   },
   "render_type": "cutout_mipped"
 }

@@ -1,8 +1,15 @@
 {
   "parent": "ls_furniture:custom/table_cross",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_cross_birch",
-    "particle": "ls_furniture:block/table_cross_birch",
+    "particle": "ls_furniture:block/stripped_birch",
     "1": "ls_furniture:block/table_cross_birch"
   },
   "render_type": "cutout"

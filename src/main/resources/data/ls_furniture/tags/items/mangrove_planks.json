@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:mangrove_planks",
-    "ls_furniture:connecting_mangrove_plain",
-    "ls_furniture:connecting_mangrove_stripped",
-    "ls_furniture:connecting_mangrove_small_bricks",
-    "ls_furniture:connecting_mangrove_big_bricks",
-    "ls_furniture:connecting_mangrove_horizontal_stripes",
-    "ls_furniture:connecting_mangrove_vertical_stripes",
-    "ls_furniture:connecting_mangrove_wavey",
-    "ls_furniture:connecting_mangrove_mosaic",
-    "ls_furniture:connecting_mangrove_diagonal",
-    "ls_furniture:connecting_mangrove_dunes",
-    "ls_furniture:connecting_mangrove_checkered",
-    "ls_furniture:connecting_mangrove_checked",
-    "ls_furniture:connecting_mangrove_swirl",
-    "ls_furniture:connecting_mangrove_slash"
+    "minecraft:mangrove_planks"
   ]
 }

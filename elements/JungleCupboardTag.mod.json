@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:JungleCupboardVent"
-      },
-      {
-        "value": "CUSTOM:JungleCupboardVentOn"
-      },
-      {
-        "value": "CUSTOM:JungleCupboard"
-      },
-      {
-        "value": "CUSTOM:JungleCupboardCorner"
+        "value": "CUSTOM:JungleCabinet"
       }
     ],
     "functions": [],

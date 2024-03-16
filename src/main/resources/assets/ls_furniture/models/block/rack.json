@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/plate_rack",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/anvil",
-    "particle": "ls_furniture:block/iron_block",
-    "2": "ls_furniture:block/iron_block"
+    "all": "block/anvil",
+    "particle": "block/iron_block",
+    "Iron_Block": "block/iron_block"
   },
   "render_type": "solid"
 }

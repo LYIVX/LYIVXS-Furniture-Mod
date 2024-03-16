@@ -1,20 +1,21 @@
 {
   "_fv": 57,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
-    "texture": "oven_crimson",
+    "texture": "stripped_crimson",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "oven_closed:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "iron_block",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -24,10 +25,10 @@
     "boundingBoxes": [
       {
         "mx": 0.0,
-        "my": 0.0,
-        "mz": 1.0,
+        "my": 16.0,
+        "mz": 15.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 18.0,
         "Mz": 16.0,
         "subtract": false
       },
@@ -42,38 +43,38 @@
       },
       {
         "mx": 0.0,
-        "my": 16.0,
-        "mz": 15.0,
+        "my": 0.0,
+        "mz": 1.0,
         "Mx": 16.0,
-        "My": 18.0,
+        "My": 15.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Oven (Crimson)",
+    "name": "Crimson Oven",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 5.0,
-    "resistance": 6.0,
+    "hardness": 2.0,
+    "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:TAB"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": true,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "WOOD"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -94,12 +95,11 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 2.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "WOOD"
     },
     "breakSound": {
       "value": ""
@@ -118,14 +118,8 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "breakHarvestLevel": 0,
+    "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "Oven",
     "openGUIOnRightClick": true,
@@ -133,9 +127,15 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "generateFeature": false,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      4
+    ],
+    "inventoryInSlotIDs": [
+      0,
+      1,
+      2,
+      3
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -144,20 +144,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "OvenOnBlockRightClicked"
-    },
     "onTickUpdate": {
       "name": "OvenPro0"
     },
+    "generateFeature": false,
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "oven.geo.json",
-    "displaySettings": "oven.item.json"
+    "maxGenerateHeight": 64
   }
 }

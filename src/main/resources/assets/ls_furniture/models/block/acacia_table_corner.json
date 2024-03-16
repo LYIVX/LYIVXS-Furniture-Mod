@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/table_corner",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_corner_acacia",
-    "particle": "ls_furniture:block/table_corner_acacia",
-    "1": "ls_furniture:block/log_acacia",
+    "particle": "block/stripped_acacia_log",
+    "1": "block/acacia_log",
     "2": "ls_furniture:block/table_corner_acacia"
   },
   "render_type": "cutout"

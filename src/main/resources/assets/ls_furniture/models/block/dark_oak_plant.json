@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/plant_dark_oak",
     "particle": "ls_furniture:block/plant_dark_oak",
-    "log": "ls_furniture:block/log_dark_oak",
-    "leave": "ls_furniture:block/leaves_dark_oak"
+    "log": "block/dark_oak_log",
+    "leave": "block/dark_oak_leaves"
   },
   "render_type": "cutout"
 }

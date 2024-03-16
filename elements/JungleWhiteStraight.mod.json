@@ -209,17 +209,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
+    "onRightClicked": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
+      "name": "JungleWhiteBlockAdded"
+    },
+    "onTickUpdate": {
       "name": "JungleWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
+      "name": "JungleWhiteBlockAdded"
     },
     "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
+      "name": "JungleWhiteMain"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

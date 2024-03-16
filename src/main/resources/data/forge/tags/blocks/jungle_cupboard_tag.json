@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:jungle_cupboard_vent",
-    "ls_furniture:jungle_cupboard_vent_on",
-    "ls_furniture:jungle_cupboard",
-    "ls_furniture:jungle_cupboard_corner"
+    "ls_furniture:jungle_cabinet"
   ]
 }

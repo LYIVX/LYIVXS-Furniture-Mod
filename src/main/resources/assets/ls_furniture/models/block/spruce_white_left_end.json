@@ -1,11 +1,18 @@
 {
   "parent": "ls_furniture:custom/sofa_left",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/wool_white",
-    "particle": "ls_furniture:block/stripped_spruce",
-    "Log": "ls_furniture:block/log_spruce",
-    "Wool": "ls_furniture:block/wool_white",
-    "Stripped": "ls_furniture:block/stripped_spruce"
+    "all": "block/white_wool",
+    "particle": "block/stripped_spruce_log",
+    "Log": "block/spruce_log",
+    "Wool": "block/white_wool",
+    "Stripped": "block/stripped_spruce_log"
   },
   "render_type": "solid"
 }

@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "planks_birch",
+    "texture": "stripped_birch",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -264,16 +264,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "ChairAdded"
-    },
-    "onBlockAdded": {
-      "name": "ChairAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "ChairBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "ChairBlockDestroyed"
+      "name": "SeatAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

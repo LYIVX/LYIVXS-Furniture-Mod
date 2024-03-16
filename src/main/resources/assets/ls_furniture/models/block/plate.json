@@ -1,5 +1,12 @@
 {
   "parent": "ls_furniture:custom/plate",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/white_concrete",
     "particle": "ls_furniture:block/plate",

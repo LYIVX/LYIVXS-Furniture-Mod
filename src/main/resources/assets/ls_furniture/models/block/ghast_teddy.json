@@ -1,8 +1,15 @@
 {
   "parent": "ls_furniture:custom/ghast_teddy",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/ghast",
-    "particle": "ls_furniture:block/light_gray_wool",
+    "particle": "ls_furniture:block/ghast",
     "0": "ls_furniture:block/ghast"
   },
   "render_type": "cutout_mipped"

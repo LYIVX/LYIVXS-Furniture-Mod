@@ -62,6 +62,20 @@
         "2": "stem_warped_animation"
       },
       "name": "warped"
+    },
+    "cherry": {
+      "map": {
+        "1": "stripped_cherry",
+        "2": "log_cherry"
+      },
+      "name": "cherry"
+    },
+    "bamboo": {
+      "map": {
+        "1": "stripped_bamboo",
+        "2": "log_bamboo"
+      },
+      "name": "bamboo"
     }
   }
 }

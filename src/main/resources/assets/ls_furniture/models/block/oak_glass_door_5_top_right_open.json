@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_right_open",
-  "textures": {
-    "bottom": "ls_furniture:block/oak_glass_door_bottom5",
-    "top": "ls_furniture:block/oak_glass_door_top4"
-  },
-  "render_type": "cutout_mipped"
-}

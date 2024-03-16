@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/drainer",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/anvil",
-    "particle": "ls_furniture:block/anvil",
-    "3": "ls_furniture:block/anvil"
+    "all": "block/anvil",
+    "particle": "block/anvil",
+    "Anvil": "block/anvil"
   },
   "render_type": "solid"
 }

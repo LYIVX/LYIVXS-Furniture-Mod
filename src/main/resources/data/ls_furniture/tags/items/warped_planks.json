@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:warped_planks",
-    "ls_furniture:connecting_warped_plain",
-    "ls_furniture:connecting_warped_stripped",
-    "ls_furniture:connecting_warped_small_bricks",
-    "ls_furniture:connecting_warped_big_bricks",
-    "ls_furniture:connecting_warped_horizontal_stripes",
-    "ls_furniture:connecting_warped_vertical_stripes",
-    "ls_furniture:connecting_warped_wavey",
-    "ls_furniture:connecting_warped_mosaic",
-    "ls_furniture:connecting_warped_diagonal",
-    "ls_furniture:connecting_warped_dunes",
-    "ls_furniture:connecting_warped_checkered",
-    "ls_furniture:connecting_warped_checked",
-    "ls_furniture:connecting_warped_swirl",
-    "ls_furniture:connecting_warped_slash"
+    "minecraft:warped_planks"
   ]
 }

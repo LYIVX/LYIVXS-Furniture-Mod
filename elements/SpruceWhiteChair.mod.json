@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_spruce",
+    "particleTexture": "stripped_spruce",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -264,16 +264,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "ChairAdded"
-    },
-    "onBlockAdded": {
-      "name": "ChairAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "ChairBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "ChairBlockDestroyed"
+      "name": "SeatAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

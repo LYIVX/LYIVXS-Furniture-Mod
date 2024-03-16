@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/counter_corner",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_oak",
-    "particle": "ls_furniture:block/planks_oak",
-    "Counter Top": "ls_furniture:block/stripped_oak",
-    "Stripped": "ls_furniture:block/stripped_oak"
+    "all": "block/stripped_oak_log",
+    "particle": "block/stripped_oak_log",
+    "Counter Top": "block/oak_log",
+    "Stripped": "block/stripped_oak_log"
   },
   "render_type": "solid"
 }

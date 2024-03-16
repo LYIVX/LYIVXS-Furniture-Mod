@@ -2,11 +2,9 @@
   "_fv": 57,
   "_type": "tag",
   "definition": {
-    "type": "Items",
-    "items": [
-      {
-        "value": "CUSTOM:OakCounter"
-      },
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
       {
         "value": "CUSTOM:DarkOakCounter"
       },
@@ -29,37 +27,18 @@
         "value": "CUSTOM:WarpedCounter"
       },
       {
-        "value": "CUSTOM:OakBricksCounter"
-      },
-      {
-        "value": "CUSTOM:DarkOakDeepslateCounter"
-      },
-      {
-        "value": "CUSTOM:SpruceAndesiteCounter"
-      },
-      {
-        "value": "CUSTOM:BirchGraniteCounter"
-      },
-      {
-        "value": "CUSTOM:JungleNetherBricksCounter"
-      },
-      {
-        "value": "CUSTOM:MangroveQuartzCounter"
-      },
-      {
-        "value": "CUSTOM:CrimsonNetherWartCounter"
-      },
-      {
-        "value": "CUSTOM:WarpedWarpedWartCounter"
-      },
-      {
-        "value": "CUSTOM:AcaciaDioriteCounter"
-      },
-      {
         "value": "CUSTOM:AcaciaCounter"
+      },
+      {
+        "value": "CUSTOM:OakCounter"
+      },
+      {
+        "value": "CUSTOM:CherryCounter"
+      },
+      {
+        "value": "CUSTOM:BambooCounter"
       }
     ],
-    "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],

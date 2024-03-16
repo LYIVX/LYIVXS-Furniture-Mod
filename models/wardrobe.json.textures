@@ -1,10 +1,103 @@
 {
   "mappings": {
+    "bamboo": {
+      "map": {
+        "Handle Big": "handle_bamboo",
+        "Main": "stripped_bamboo",
+        "Door": "log_bamboo",
+        "Handle": "handle_bamboo"
+      },
+      "name": "bamboo"
+    },
+    "cherry": {
+      "map": {
+        "Handle Big": "handle_cherry",
+        "Main": "stripped_cherry",
+        "Door": "log_cherry",
+        "Handle": "handle_cherry"
+      },
+      "name": "cherry"
+    },
     "default": {
       "map": {
-        "2": "any_wardrobe"
+        "Handle Big": "handle_big_oak",
+        "Main": "stripped_oak",
+        "Door": "log_oak",
+        "Handle": "handle_oak"
       },
       "name": "default"
+    },
+    "crimson": {
+      "map": {
+        "Handle Big": "handle_crimson",
+        "Main": "stripped_crimson",
+        "Door": "stem_crimson_animation",
+        "Handle": "handle_crimson"
+      },
+      "name": "crimson"
+    },
+    "birch": {
+      "map": {
+        "Handle Big": "handle_big_oak",
+        "Main": "stripped_birch",
+        "Door": "log_birch",
+        "Handle": "handle_oak"
+      },
+      "name": "birch"
+    },
+    "acacia": {
+      "map": {
+        "Handle Big": "handle_big_oak",
+        "Main": "stripped_acacia",
+        "Door": "log_acacia",
+        "Handle": "handle_oak"
+      },
+      "name": "acacia"
+    },
+    "warped": {
+      "map": {
+        "Handle Big": "handle_warped",
+        "Main": "stripped_warped",
+        "Door": "stem_warped_animation",
+        "Handle": "handle_warped"
+      },
+      "name": "warped"
+    },
+    "jungle": {
+      "map": {
+        "Handle Big": "handle_big_oak",
+        "Main": "stripped_jungle",
+        "Door": "log_jungle",
+        "Handle": "handle_oak"
+      },
+      "name": "jungle"
+    },
+    "dark_oak": {
+      "map": {
+        "Handle Big": "handle_big_dark_oak",
+        "Main": "stripped_dark_oak",
+        "Door": "log_dark_oak",
+        "Handle": "handle_dark_oak"
+      },
+      "name": "dark_oak"
+    },
+    "mangrove": {
+      "map": {
+        "Handle Big": "handle_big_oak",
+        "Main": "stripped_mangrove",
+        "Door": "log_mangrove",
+        "Handle": "handle_oak"
+      },
+      "name": "mangrove"
+    },
+    "spruce": {
+      "map": {
+        "Handle Big": "handle_spruce",
+        "Main": "stripped_spruce",
+        "Door": "log_spruce",
+        "Handle": "handle_spruce"
+      },
+      "name": "spruce"
     }
   }
 }

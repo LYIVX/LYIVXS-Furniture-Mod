@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/stool",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_acacia",
-    "particle": "ls_furniture:block/planks_acacia",
-    "Log": "ls_furniture:block/log_acacia",
-    "Stripped": "ls_furniture:block/stripped_acacia",
+    "all": "block/stripped_acacia_log",
+    "particle": "block/stripped_acacia_log",
+    "Log": "block/acacia_log",
+    "Stripped": "block/stripped_acacia_log",
     "Wool": "ls_furniture:block/invisible"
   },
   "render_type": "cutout"

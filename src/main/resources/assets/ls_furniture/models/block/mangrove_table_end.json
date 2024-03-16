@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/table_end",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_end_mangrove",
-    "particle": "ls_furniture:block/table_end_mangrove",
-    "1": "ls_furniture:block/log_mangrove",
+    "particle": "block/stripped_mangrove_log",
+    "1": "block/mangrove_log",
     "2": "ls_furniture:block/table_end_mangrove"
   },
   "render_type": "cutout"

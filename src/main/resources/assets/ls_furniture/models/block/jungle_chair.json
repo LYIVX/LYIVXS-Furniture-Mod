@@ -1,12 +1,19 @@
 {
   "parent": "ls_furniture:custom/chair",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_jungle",
-    "particle": "ls_furniture:block/planks_jungle",
-    "Pattern": "ls_furniture:block/pattern_jungle",
-    "Log": "ls_furniture:block/log_jungle",
+    "all": "block/stripped_jungle_log",
+    "particle": "block/stripped_jungle_log",
+    "Pattern": "block/jungle_trapdoor",
+    "Log": "block/jungle_log",
     "Wool": "ls_furniture:block/invisible",
-    "Stripped": "ls_furniture:block/stripped_jungle"
+    "Stripped": "block/stripped_jungle_log"
   },
   "render_type": "cutout_mipped"
 }

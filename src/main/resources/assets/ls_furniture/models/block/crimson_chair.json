@@ -1,12 +1,19 @@
 {
   "parent": "ls_furniture:custom/chair",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_crimson",
-    "particle": "ls_furniture:block/planks_crimson",
-    "Pattern": "ls_furniture:block/pattern_crimson",
-    "Log": "ls_furniture:block/stem_crimson_animation",
+    "all": "block/stripped_crimson_stem",
+    "particle": "block/stripped_crimson_stem",
+    "Pattern": "block/crimson_trapdoor",
+    "Log": "block/crimson_stem",
     "Wool": "ls_furniture:block/invisible",
-    "Stripped": "ls_furniture:block/stripped_crimson"
+    "Stripped": "block/stripped_crimson_stem"
   },
   "render_type": "cutout_mipped"
 }

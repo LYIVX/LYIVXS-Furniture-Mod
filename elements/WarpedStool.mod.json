@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "planks_warped",
+    "texture": "stripped_warped",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -153,7 +153,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "NETHER_WOOD"
     },
     "breakSound": {
       "value": ""
@@ -191,14 +191,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "StoolAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "StoolBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "StoolBlockDestroyed"
+    "onRightClicked": {
+      "name": "SeatAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

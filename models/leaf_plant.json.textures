@@ -62,6 +62,13 @@
         "leave": "warped_wart_block"
       },
       "name": "warped"
+    },
+    "cherry": {
+      "map": {
+        "log": "log_cherry",
+        "leave": "cherry_leaves"
+      },
+      "name": "cherry"
     }
   }
 }

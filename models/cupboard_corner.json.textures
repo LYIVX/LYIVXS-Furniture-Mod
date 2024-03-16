@@ -2,64 +2,64 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "stripped_oak",
-        "1": "stripped_oak"
+        "Top": "stripped_oak",
+        "Main": "stripped_oak"
       },
       "name": "default"
     },
     "dark_oak": {
       "map": {
-        "0": "stripped_dark_oak",
-        "1": "stripped_dark_oak"
+        "Top": "stripped_dark_oak",
+        "Main": "stripped_dark_oak"
       },
       "name": "dark_oak"
     },
     "spruce": {
       "map": {
-        "0": "stripped_spruce",
-        "1": "stripped_spruce"
+        "Top": "stripped_spruce",
+        "Main": "stripped_spruce"
       },
       "name": "spruce"
     },
     "acacia": {
       "map": {
-        "0": "stripped_acacia",
-        "1": "stripped_acacia"
+        "Top": "stripped_acacia",
+        "Main": "stripped_acacia"
       },
       "name": "acacia"
     },
     "birch": {
       "map": {
-        "0": "stripped_birch",
-        "1": "stripped_birch"
+        "Top": "stripped_birch",
+        "Main": "stripped_birch"
       },
       "name": "birch"
     },
     "jungle": {
       "map": {
-        "0": "stripped_jungle",
-        "1": "stripped_jungle"
+        "Top": "stripped_jungle",
+        "Main": "stripped_jungle"
       },
       "name": "jungle"
     },
     "mangrove": {
       "map": {
-        "0": "stripped_mangrove",
-        "1": "stripped_mangrove"
+        "Top": "stripped_mangrove",
+        "Main": "stripped_mangrove"
       },
       "name": "mangrove"
     },
     "crimson": {
       "map": {
-        "0": "stripped_crimson",
-        "1": "stripped_crimson"
+        "Top": "stripped_crimson",
+        "Main": "stripped_crimson"
       },
       "name": "crimson"
     },
     "warped": {
       "map": {
-        "0": "stripped_warped",
-        "1": "stripped_warped"
+        "Top": "stripped_warped",
+        "Main": "stripped_warped"
       },
       "name": "warped"
     }

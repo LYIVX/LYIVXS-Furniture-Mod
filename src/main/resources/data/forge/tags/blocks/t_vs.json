@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:tv_stand_off",
-    "ls_furniture:tv_stand_on",
-    "ls_furniture:tv_stand_minecraft",
-    "ls_furniture:tv_stand_cod",
-    "ls_furniture:tv_wall_off",
-    "ls_furniture:tv_wall_on",
-    "ls_furniture:tv_wall_minecraft",
-    "ls_furniture:tv_wall_cod"
+    "ls_furniture:tv_stand_off"
   ]
 }

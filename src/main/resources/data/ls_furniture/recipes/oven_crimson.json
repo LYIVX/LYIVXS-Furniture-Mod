@@ -1,14 +1,14 @@
 {
-  "type": "ls_furniture:metallurgy",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:stripped_crimson_stem"
     },
     {
-      "item": "minecraft:crimson_planks"
+      "item": "ls_furniture:oven_module"
     },
     {
-      "tag": "ls_furniture:emptyslot"
+      "item": "ls_furniture:crimson_bark"
     },
     {
       "tag": "ls_furniture:emptyslot"

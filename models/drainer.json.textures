@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "3": "anvil"
+        "Anvil": "anvil"
       },
       "name": "default"
     }

@@ -1,7 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "procedure",
-  "definition": {
-    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"call_procedure\"><field name=\"procedure\">MangroveCupboardPro</field><comment h=\"39\" pinned=\"false\" w=\"119\">Post Script (n)</comment><next><block type=\"call_procedure\"><field name=\"procedure\">MangroveCupboardCornerPro</field><comment h=\"38\" pinned=\"false\" w=\"126\">Corner Script (l)</comment></block></next></block></next></block></xml>"
-  }
-}

@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/plant_acacia",
     "particle": "ls_furniture:block/plant_acacia",
-    "log": "ls_furniture:block/log_acacia",
-    "leave": "ls_furniture:block/leaves_acacia"
+    "log": "block/acacia_log",
+    "leave": "block/acacia_leaves"
   },
   "render_type": "cutout"
 }

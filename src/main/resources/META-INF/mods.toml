@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[47,)"
 license="All Rights Reserved"
 
 [[mods]]
 modId="ls_furniture"
-version="0.5.3"
+version="0.6.2"
 displayName="LYIVX's Furniture"
 displayURL="https://curseforge.com/minecraft/mc-mods/lyivxs-furniture"
 logoFile="logo.png"
@@ -15,44 +15,32 @@ description="Furniture Mod"
 [[dependencies.ls_furniture]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4]"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
+
 
 
 [[dependencies.ls_furniture]]
     modId="fusion"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="geckolib"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.ls_furniture]]
-    modId=""
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
-    modId="fusion"
+    modId="use_compiled_mods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.ls_furniture]]
+    modId="jade"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.ls_furniture]]
     modId="patchouli"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.ls_furniture]]
-    modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

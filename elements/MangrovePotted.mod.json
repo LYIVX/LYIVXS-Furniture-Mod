@@ -46,7 +46,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "Blocks.MANGROVE_LEAVES"
+      "value": "CUSTOM:MangrovePlant"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -100,7 +100,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",

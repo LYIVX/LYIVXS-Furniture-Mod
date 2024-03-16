@@ -9,14 +9,14 @@
     {
       "name": "body",
       "from": [
-        6,
-        3,
-        7
+        5.6,
+        3.6,
+        6.8
       ],
       "to": [
-        10,
-        9,
-        9
+        10.4,
+        10.8,
+        9.2
       ],
       "shade": false,
       "rotation": {
@@ -88,14 +88,14 @@
     {
       "name": "head",
       "from": [
-        6,
-        9,
-        6
+        5.6,
+        10.8,
+        5.6
       ],
       "to": [
-        10,
-        13,
-        10
+        10.4,
+        15.6,
+        10.4
       ],
       "shade": false,
       "rotation": {
@@ -167,14 +167,14 @@
     {
       "name": "leg0",
       "from": [
-        6,
+        5.6,
         0,
-        9
+        9.2
       ],
       "to": [
         8,
-        3,
-        11
+        3.6,
+        11.6
       ],
       "shade": false,
       "rotation": {
@@ -248,12 +248,12 @@
       "from": [
         8,
         0,
-        9
+        9.2
       ],
       "to": [
-        10,
-        3,
-        11
+        10.4,
+        3.6,
+        11.6
       ],
       "shade": false,
       "rotation": {
@@ -325,14 +325,14 @@
     {
       "name": "leg2",
       "from": [
-        6,
+        5.6,
         0,
-        5
+        4.4
       ],
       "to": [
         8,
-        3,
-        7
+        3.6,
+        6.8
       ],
       "shade": false,
       "rotation": {
@@ -406,12 +406,12 @@
       "from": [
         8,
         0,
-        5
+        4.4
       ],
       "to": [
-        10,
-        3,
-        7
+        10.4,
+        3.6,
+        6.8
       ],
       "shade": false,
       "rotation": {
@@ -522,11 +522,6 @@
         135,
         0
       ],
-      "translation": [
-        0,
-        2.75,
-        0
-      ],
       "scale": [
         0.4,
         0.4,
@@ -537,11 +532,6 @@
       "rotation": [
         0,
         135,
-        0
-      ],
-      "translation": [
-        0,
-        2.75,
         0
       ],
       "scale": [
@@ -557,9 +547,9 @@
         0
       ],
       "scale": [
-        0.68,
-        0.68,
-        0.68
+        0.25,
+        0.25,
+        0.25
       ]
     },
     "gui": {
@@ -568,10 +558,10 @@
         225,
         0
       ],
-      "translation": [
-        0.5,
-        1.25,
-        0
+      "scale": [
+        0.8,
+        0.8,
+        0.8
       ]
     },
     "head": {
@@ -582,10 +572,10 @@
       ]
     },
     "fixed": {
-      "translation": [
-        0,
-        3.5,
-        -1
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     }
   },
@@ -600,9 +590,7 @@
       "color": 0,
       "nbt": "{}",
       "shade": false,
-      "children": [
-        0
-      ]
+      "children": []
     },
     {
       "name": "head",
@@ -614,9 +602,7 @@
       "color": 0,
       "nbt": "{}",
       "shade": false,
-      "children": [
-        1
-      ]
+      "children": []
     },
     {
       "name": "leg0",
@@ -628,9 +614,7 @@
       "color": 0,
       "nbt": "{}",
       "shade": false,
-      "children": [
-        2
-      ]
+      "children": []
     },
     {
       "name": "leg1",
@@ -642,9 +626,7 @@
       "color": 0,
       "nbt": "{}",
       "shade": false,
-      "children": [
-        3
-      ]
+      "children": []
     },
     {
       "name": "leg2",
@@ -656,9 +638,7 @@
       "color": 0,
       "nbt": "{}",
       "shade": false,
-      "children": [
-        4
-      ]
+      "children": []
     },
     {
       "name": "leg3",
@@ -666,6 +646,88 @@
         2,
         6,
         -4
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": []
+    },
+    {
+      "name": "body",
+      "origin": [
+        8,
+        0,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": [
+        0
+      ]
+    },
+    {
+      "name": "head",
+      "origin": [
+        8,
+        18,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": [
+        1
+      ]
+    },
+    {
+      "name": "leg0",
+      "origin": [
+        6,
+        6,
+        12
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": [
+        2
+      ]
+    },
+    {
+      "name": "leg1",
+      "origin": [
+        10,
+        6,
+        12
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": [
+        3
+      ]
+    },
+    {
+      "name": "leg2",
+      "origin": [
+        6,
+        6,
+        4
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "shade": false,
+      "children": [
+        4
+      ]
+    },
+    {
+      "name": "leg3",
+      "origin": [
+        10,
+        6,
+        4
       ],
       "color": 0,
       "nbt": "{}",

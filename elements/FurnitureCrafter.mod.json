@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -103,8 +103,8 @@
     "breakHarvestLevel": 0,
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "CarpentryGUI",
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "FurnitureCrafterGUI",
+    "openGUIOnRightClick": true,
     "inventorySize": 33,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -154,9 +154,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "FurnitureCrafterBetaOnBlockRightClicked"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

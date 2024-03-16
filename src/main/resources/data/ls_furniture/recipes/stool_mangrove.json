@@ -1,8 +1,8 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:mangrove_planks"
+      "item": "minecraft:stripped_mangrove_log"
     },
     {
       "tag": "ls_furniture:emptyslot"

@@ -1,7 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "ls_furniture:oak_bricks_counter",
-    "ls_furniture:oak_bricks_counter_corner"
-  ]
+  "values": []
 }

@@ -2,7 +2,9 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "plate_rack"
+        "Anvil": "anvil",
+        "Iron_Block": "iron_block",
+        "Plate": "plate"
       },
       "name": "default"
     }

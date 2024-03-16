@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_mangrove_glass",
-    "textureTop": "planks_mangrove",
+    "textureTop": "stripped_mangrove",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",

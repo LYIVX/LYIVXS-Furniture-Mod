@@ -71,6 +71,22 @@
         "Wool": "invisible"
       },
       "name": "warped"
+    },
+    "cherry": {
+      "map": {
+        "Log": "cherry_log",
+        "Wool": "invisible",
+        "Stripped": "stripped_cherry"
+      },
+      "name": "cherry"
+    },
+    "bamboo": {
+      "map": {
+        "Log": "log_bamboo",
+        "Wool": "invisible",
+        "Stripped": "stripped_bamboo"
+      },
+      "name": "bamboo"
     }
   }
 }

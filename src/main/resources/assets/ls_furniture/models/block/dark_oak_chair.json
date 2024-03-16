@@ -1,12 +1,19 @@
 {
   "parent": "ls_furniture:custom/chair",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_dark_oak",
-    "particle": "ls_furniture:block/planks_dark_oak",
-    "Pattern": "ls_furniture:block/pattern_dark_oak",
-    "Log": "ls_furniture:block/log_dark_oak",
+    "all": "block/stripped_dark_oak_log",
+    "particle": "block/stripped_dark_oak_log",
+    "Pattern": "block/dark_oak_trapdoor",
+    "Log": "block/dark_oak_log",
     "Wool": "ls_furniture:block/invisible",
-    "Stripped": "ls_furniture:block/stripped_dark_oak"
+    "Stripped": "block/stripped_dark_oak_log"
   },
   "render_type": "cutout_mipped"
 }

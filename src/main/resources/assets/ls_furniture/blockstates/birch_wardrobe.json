@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "ls_furniture:custom/birch_wardrobe_particle"
+      "model": "ls_furniture:block/birch_wardrobe"
     },
     "facing=east": {
-      "model": "ls_furniture:custom/birch_wardrobe_particle",
+      "model": "ls_furniture:block/birch_wardrobe",
       "y": 90
     },
     "facing=south": {
-      "model": "ls_furniture:custom/birch_wardrobe_particle",
+      "model": "ls_furniture:block/birch_wardrobe",
       "y": 180
     },
     "facing=west": {
-      "model": "ls_furniture:custom/birch_wardrobe_particle",
+      "model": "ls_furniture:block/birch_wardrobe",
       "y": 270
     }
   }

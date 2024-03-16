@@ -1,9 +1,16 @@
 {
-  "parent": "ls_furniture:custom/table_straight_glass",
+  "parent": "ls_furniture:custom/table_straight",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/iron_straight",
-    "particle": "ls_furniture:block/iron_straight",
-    "0": "ls_furniture:block/iron_straight"
+    "all": "ls_furniture:block/glass_straight",
+    "particle": "ls_furniture:block/glass_straight",
+    "1": "ls_furniture:block/glass_straight"
   },
   "render_type": "cutout_mipped"
 }

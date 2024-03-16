@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:WarpedCupboard"
-      },
-      {
-        "value": "CUSTOM:WarpedCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:WarpedCupboardVent"
-      },
-      {
-        "value": "CUSTOM:WarpedCupboardVentOn"
+        "value": "CUSTOM:WarpedCabinet"
       }
     ],
     "functions": [],

@@ -1,11 +1,18 @@
 {
   "parent": "ls_furniture:custom/sofa",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/wool_white",
-    "particle": "ls_furniture:block/stripped_dark_oak",
-    "Log": "ls_furniture:block/log_dark_oak",
-    "Wool": "ls_furniture:block/wool_white",
-    "Stripped": "ls_furniture:block/stripped_dark_oak"
+    "all": "block/white_wool",
+    "particle": "block/stripped_dark_oak_log",
+    "Log": "block/dark_oak_log",
+    "Wool": "block/white_wool",
+    "Stripped": "block/stripped_dark_oak_log"
   },
   "render_type": "solid"
 }

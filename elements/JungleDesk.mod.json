@@ -1,92 +1,69 @@
 {
   "_fv": 57,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
-    "texture": "desk_jungle",
+    "texture": "stripped_jungle",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "desk_drawer_none:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_jungle",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 1.0,
-        "my": 11.0,
-        "mz": 2.0,
-        "Mx": 15.0,
-        "My": 12.0,
-        "Mz": 14.0,
-        "subtract": false
-      },
-      {
-        "mx": 1.0,
+        "mx": 0.0,
         "my": 14.0,
-        "mz": 2.0,
-        "Mx": 15.0,
-        "My": 15.0,
-        "Mz": 14.0,
-        "subtract": false
-      },
-      {
-        "mx": 1.0,
-        "my": 13.0,
-        "mz": 2.0,
-        "Mx": 15.0,
-        "My": 14.0,
-        "Mz": 3.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
         "subtract": false
       },
       {
         "mx": 0.0,
         "my": 0.0,
-        "mz": 2.0,
+        "mz": 1.0,
         "Mx": 1.0,
-        "My": 16.0,
-        "Mz": 15.0,
+        "My": 14.0,
+        "Mz": 16.0,
         "subtract": false
       },
       {
         "mx": 15.0,
         "my": 0.0,
-        "mz": 2.0,
+        "mz": 1.0,
         "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 15.0,
+        "My": 14.0,
+        "Mz": 16.0,
         "subtract": false
       },
       {
         "mx": 1.0,
         "my": 0.0,
-        "mz": 14.0,
-        "Mx": 15.0,
-        "My": 16.0,
-        "Mz": 15.0,
-        "subtract": false
-      },
-      {
-        "mx": 1.0,
-        "my": 12.0,
-        "mz": 2.0,
-        "Mx": 15.0,
-        "My": 13.0,
-        "Mz": 3.0,
+        "mz": 15.0,
+        "Mx": 16.0,
+        "My": 14.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
     "name": "Jungle Desk",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -108,7 +85,7 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 1,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -127,7 +104,6 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 1,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -152,13 +128,7 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "Desk",
     "openGUIOnRightClick": true,
@@ -166,7 +136,6 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [
       0,
@@ -205,21 +174,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "DeskOnBlockRightClicked"
-    },
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "TAG:stone_ore_replaceables"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "desk.geo.json",
-    "displaySettings": "desk.item.json"
+    "maxGenerateHeight": 64
   }
 }

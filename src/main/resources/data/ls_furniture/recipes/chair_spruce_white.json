@@ -1,8 +1,8 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:spruce_planks"
+      "item": "minecraft:stripped_spruce_log"
     },
     {
       "item": "minecraft:white_wool"

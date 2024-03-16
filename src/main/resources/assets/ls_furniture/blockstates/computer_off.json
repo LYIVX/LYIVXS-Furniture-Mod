@@ -1,18 +1,63 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,blockstate=0": {
       "model": "ls_furniture:block/computer_off"
     },
-    "facing=east": {
+    "facing=east,blockstate=0": {
       "model": "ls_furniture:block/computer_off",
       "y": 90
     },
-    "facing=south": {
+    "facing=south,blockstate=0": {
       "model": "ls_furniture:block/computer_off",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,blockstate=0": {
       "model": "ls_furniture:block/computer_off",
+      "y": 270
+    },
+    "facing=north,blockstate=1": {
+      "model": "ls_furniture:block/computer_bs_blockstate_0"
+    },
+    "facing=east,blockstate=1": {
+      "model": "ls_furniture:block/computer_bs_blockstate_0",
+      "y": 90
+    },
+    "facing=south,blockstate=1": {
+      "model": "ls_furniture:block/computer_bs_blockstate_0",
+      "y": 180
+    },
+    "facing=west,blockstate=1": {
+      "model": "ls_furniture:block/computer_bs_blockstate_0",
+      "y": 270
+    },
+    "facing=north,blockstate=2": {
+      "model": "ls_furniture:block/computer_bs_blockstate_1"
+    },
+    "facing=east,blockstate=2": {
+      "model": "ls_furniture:block/computer_bs_blockstate_1",
+      "y": 90
+    },
+    "facing=south,blockstate=2": {
+      "model": "ls_furniture:block/computer_bs_blockstate_1",
+      "y": 180
+    },
+    "facing=west,blockstate=2": {
+      "model": "ls_furniture:block/computer_bs_blockstate_1",
+      "y": 270
+    },
+    "facing=north,blockstate=3": {
+      "model": "ls_furniture:block/computer_bs_blockstate_2"
+    },
+    "facing=east,blockstate=3": {
+      "model": "ls_furniture:block/computer_bs_blockstate_2",
+      "y": 90
+    },
+    "facing=south,blockstate=3": {
+      "model": "ls_furniture:block/computer_bs_blockstate_2",
+      "y": 180
+    },
+    "facing=west,blockstate=3": {
+      "model": "ls_furniture:block/computer_bs_blockstate_2",
       "y": 270
     }
   }

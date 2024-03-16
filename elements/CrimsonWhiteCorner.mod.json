@@ -236,17 +236,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
+    "onRightClicked": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
+      "name": "CrimsonWhiteBlockAdded"
+    },
+    "onTickUpdate": {
       "name": "CrimsonWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
+      "name": "CrimsonWhiteBlockAdded"
     },
     "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
+      "name": "CrimsonWhiteBlockAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

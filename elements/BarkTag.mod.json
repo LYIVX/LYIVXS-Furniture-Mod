@@ -30,6 +30,12 @@
       },
       {
         "value": "CUSTOM:DarkOakBark"
+      },
+      {
+        "value": "CUSTOM:CherryBark"
+      },
+      {
+        "value": "Blocks.BAMBOO"
       }
     ],
     "blocks": [],

@@ -39,7 +39,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 132,
+          "x": 133,
           "y": 53
         }
       },
@@ -57,7 +57,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 150,
+          "x": 151,
           "y": 53
         }
       },
@@ -75,7 +75,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 168,
+          "x": 169,
           "y": 53
         }
       },
@@ -93,7 +93,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 186,
+          "x": 187,
           "y": 53
         }
       },
@@ -111,7 +111,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 204,
+          "x": 205,
           "y": 53
         }
       },
@@ -129,7 +129,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 222,
+          "x": 223,
           "y": 53
         }
       },
@@ -147,7 +147,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 240,
+          "x": 241,
           "y": 53
         }
       },
@@ -165,7 +165,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 258,
+          "x": 259,
           "y": 53
         }
       },
@@ -183,7 +183,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 276,
+          "x": 277,
           "y": 53
         }
       },
@@ -201,7 +201,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 132,
+          "x": 133,
           "y": 71
         }
       },
@@ -219,7 +219,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 150,
+          "x": 151,
           "y": 71
         }
       },
@@ -237,7 +237,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 168,
+          "x": 169,
           "y": 71
         }
       },
@@ -255,7 +255,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 186,
+          "x": 187,
           "y": 71
         }
       },
@@ -273,7 +273,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 204,
+          "x": 205,
           "y": 71
         }
       },
@@ -291,7 +291,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 222,
+          "x": 223,
           "y": 71
         }
       },
@@ -309,7 +309,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 240,
+          "x": 241,
           "y": 71
         }
       },
@@ -327,7 +327,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 258,
+          "x": 259,
           "y": 71
         }
       },
@@ -345,7 +345,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 276,
+          "x": 277,
           "y": 71
         }
       },
@@ -363,7 +363,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 132,
+          "x": 133,
           "y": 89
         }
       },
@@ -381,7 +381,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 150,
+          "x": 151,
           "y": 89
         }
       },
@@ -399,7 +399,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 168,
+          "x": 169,
           "y": 89
         }
       },
@@ -417,7 +417,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 186,
+          "x": 187,
           "y": 89
         }
       },
@@ -435,7 +435,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 204,
+          "x": 205,
           "y": 89
         }
       },
@@ -453,7 +453,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 222,
+          "x": 223,
           "y": 89
         }
       },
@@ -471,7 +471,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 240,
+          "x": 241,
           "y": 89
         }
       },
@@ -489,7 +489,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 258,
+          "x": 259,
           "y": 89
         }
       },
@@ -507,7 +507,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 276,
+          "x": 277,
           "y": 89
         }
       },
@@ -527,10 +527,16 @@
         }
       }
     ],
+    "onOpen": {
+      "name": "Opened"
+    },
+    "onClosed": {
+      "name": "Closed"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,
-      "ox": 11,
+      "ox": 12,
       "oy": 15,
       "snapOnGrid": false
     }

@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_left",
-  "textures": {
-    "bottom": "ls_furniture:block/door_dark_oak_warped_bottom",
-    "top": "ls_furniture:block/door_dark_oak_warped_top"
-  },
-  "render_type": "cutout_mipped"
-}

@@ -2,14 +2,14 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "planks_warped",
+    "texture": "stripped_warped",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "cupboard_vent:warped",
+    "customModelName": "cupboard_vent:warped_off",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -99,7 +99,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "NETHER_WOOD"
     },
     "breakSound": {
       "value": ""
@@ -138,7 +138,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "WarpedCupboardVentOnBlockRightClicked"
+      "name": "BSSwitcher"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

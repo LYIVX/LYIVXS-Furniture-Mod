@@ -1,12 +1,19 @@
 {
-  "parent": "ls_furniture:custom/mail_box",
+  "parent": "ls_furniture:custom/mail_box_empty",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_oak",
-    "particle": "ls_furniture:block/planks_oak",
-    "0": "ls_furniture:block/log_oak",
-    "1": "ls_furniture:block/stripped_oak",
-    "2": "ls_furniture:block/log_oak",
-    "3": "ls_furniture:block/wool_black"
+    "all": "block/stripped_oak_log",
+    "particle": "block/stripped_oak_log",
+    "Log": "block/oak_log",
+    "Black": "block/black_concrete",
+    "Stripped": "block/stripped_oak_log",
+    "Red": "block/red_wool"
   },
   "render_type": "solid"
 }

@@ -239,14 +239,8 @@
     "onBlockAdded": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onTickUpdate": {
       "name": "JungleWhiteBlockAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
-    },
-    "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "ls_furniture:custom/oak_drawer_particle"
+    "facing=north,open=false": {
+      "model": "ls_furniture:block/oak_drawer"
     },
-    "facing=east": {
-      "model": "ls_furniture:custom/oak_drawer_particle",
+    "facing=east,open=false": {
+      "model": "ls_furniture:block/oak_drawer",
       "y": 90
     },
-    "facing=south": {
-      "model": "ls_furniture:custom/oak_drawer_particle",
+    "facing=south,open=false": {
+      "model": "ls_furniture:block/oak_drawer",
       "y": 180
     },
-    "facing=west": {
-      "model": "ls_furniture:custom/oak_drawer_particle",
+    "facing=west,open=false": {
+      "model": "ls_furniture:block/oak_drawer",
+      "y": 270
+    },
+    "facing=north,open=true": {
+      "model": "ls_furniture:block/drawer/oak_drawer"
+    },
+    "facing=east,open=true": {
+      "model": "ls_furniture:block/drawer/oak_drawer",
+      "y": 90
+    },
+    "facing=south,open=true": {
+      "model": "ls_furniture:block/drawer/oak_drawer",
+      "y": 180
+    },
+    "facing=west,open=true": {
+      "model": "ls_furniture:block/drawer/oak_drawer",
       "y": 270
     }
   }

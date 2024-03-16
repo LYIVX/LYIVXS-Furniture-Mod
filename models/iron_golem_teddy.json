@@ -3,14 +3,13 @@
 	"parent": "iron_golem_teddy",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "mcreator:entity/iron_golem/iron_golem",
-		"particle": "mcreator:entity/blaze"
+		"0": "iron_golem"
 	},
 	"elements": [
 		{
 			"name": "body",
-			"from": [5.3, 6.9, 6.2],
-			"to": [10.7, 10.5, 9.5],
+			"from": [4.31, 8.61, 5.54],
+			"to": [11.69, 13.53, 10.05],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -24,8 +23,8 @@
 		},
 		{
 			"name": "body",
-			"from": [6.5, 5.25, 6.95],
-			"to": [9.5, 7.05, 9.05],
+			"from": [5.95, 6.355, 6.565],
+			"to": [10.05, 8.815, 9.435],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -39,8 +38,8 @@
 		},
 		{
 			"name": "head",
-			"from": [6.8, 10.5, 5.75],
-			"to": [9.2, 13.5, 8.15],
+			"from": [6.36, 13.53, 4.925],
+			"to": [9.64, 17.63, 8.205],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -54,8 +53,8 @@
 		},
 		{
 			"name": "head",
-			"from": [7.7, 10.2, 5.15],
-			"to": [8.3, 11.4, 5.75],
+			"from": [7.59, 13.12, 4.105],
+			"to": [8.41, 14.76, 4.925],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -69,8 +68,8 @@
 		},
 		{
 			"name": "arm0",
-			"from": [4.1, 1.65, 7.1],
-			"to": [5.3, 10.65, 8.9],
+			"from": [2.67, 1.435, 6.77],
+			"to": [4.31, 13.735, 9.23],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -84,8 +83,8 @@
 		},
 		{
 			"name": "arm1",
-			"from": [10.7, 1.65, 7.1],
-			"to": [11.9, 10.65, 8.9],
+			"from": [11.69, 1.435, 6.77],
+			"to": [13.33, 13.735, 9.23],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -99,8 +98,8 @@
 		},
 		{
 			"name": "leg0",
-			"from": [5.75, 0.6, 7.1],
-			"to": [7.55, 5.4, 8.6],
+			"from": [4.925, 0, 6.77],
+			"to": [7.385, 6.56, 8.82],
 			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
@@ -114,8 +113,8 @@
 		},
 		{
 			"name": "leg1",
-			"from": [8.45, 0.6, 7.1],
-			"to": [10.25, 5.4, 8.6],
+			"from": [8.615, 0, 6.77],
+			"to": [11.075, 6.56, 8.82],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [8.125, 0.625, 8.875, 2.625], "texture": "#0"},
@@ -140,33 +139,34 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 135, 0],
-			"translation": [0, 2.75, 0],
+			"translation": [0, 1.75, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0, 135, 0],
-			"translation": [0, 2.75, 0],
+			"translation": [0, 1.75, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"ground": {
 			"translation": [0, 3, 0],
-			"scale": [0.68, 0.68, 0.68]
+			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"translation": [0.5, 1.25, 0]
+			"translation": [0, -0.25, 0],
+			"scale": [0.85, 0.85, 0.85]
 		},
 		"head": {
-			"translation": [0, 14.5, 0]
+			"translation": [0, 7.75, 0]
 		},
 		"fixed": {
-			"translation": [0, 3.5, -1]
+			"scale": [0.5, 0.5, 0.5]
 		}
 	},
 	"groups": [
 		{
 			"name": "body",
-			"origin": [0, 31, 0],
+			"origin": [8, 31, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
@@ -174,7 +174,7 @@
 		},
 		{
 			"name": "head",
-			"origin": [0, 31, -2],
+			"origin": [8, 31, 6],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
@@ -182,7 +182,7 @@
 		},
 		{
 			"name": "arm0",
-			"origin": [0, 31, 0],
+			"origin": [8, 31, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
@@ -190,7 +190,7 @@
 		},
 		{
 			"name": "arm1",
-			"origin": [0, 31, 0],
+			"origin": [8, 31, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
@@ -198,7 +198,7 @@
 		},
 		{
 			"name": "leg0",
-			"origin": [-4, 13, 0],
+			"origin": [4, 13, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,
@@ -206,7 +206,7 @@
 		},
 		{
 			"name": "leg1",
-			"origin": [5, 13, 0],
+			"origin": [13, 13, 8],
 			"color": 0,
 			"nbt": "{}",
 			"shade": false,

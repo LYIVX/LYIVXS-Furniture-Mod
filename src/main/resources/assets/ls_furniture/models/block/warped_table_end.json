@@ -1,9 +1,16 @@
 {
   "parent": "ls_furniture:custom/table_end",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/table_end_warped",
-    "particle": "ls_furniture:block/table_end_warped",
-    "1": "ls_furniture:block/stem_warped_animation",
+    "particle": "block/stripped_warped_stem",
+    "1": "block/warped_stem",
     "2": "ls_furniture:block/table_end_warped"
   },
   "render_type": "cutout"

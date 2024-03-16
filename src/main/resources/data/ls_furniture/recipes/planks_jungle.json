@@ -1,5 +1,5 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
       "tag": "ls_furniture:jungle_planks"

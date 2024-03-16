@@ -6,12 +6,6 @@
       },
       "name": "default"
     },
-    "iron_glass": {
-      "map": {
-        "1": "iron_cross"
-      },
-      "name": "iron_glass"
-    },
     "spruce": {
       "map": {
         "1": "table_cross_spruce"
@@ -59,6 +53,24 @@
         "1": "table_cross_dark_oak"
       },
       "name": "dark_oak"
+    },
+    "cherry": {
+      "map": {
+        "1": "table_cross_cherry"
+      },
+      "name": "cherry"
+    },
+    "bamboo": {
+      "map": {
+        "1": "table_cross_bamboo"
+      },
+      "name": "bamboo"
+    },
+    "glass": {
+      "map": {
+        "1": "glass_cross"
+      },
+      "name": "glass"
     }
   }
 }

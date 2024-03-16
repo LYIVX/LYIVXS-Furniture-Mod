@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/stool",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/planks_spruce",
-    "particle": "ls_furniture:block/planks_spruce",
-    "Log": "ls_furniture:block/log_spruce",
-    "Stripped": "ls_furniture:block/stripped_spruce",
+    "all": "block/stripped_spruce_log",
+    "particle": "block/stripped_spruce_log",
+    "Log": "block/spruce_log",
+    "Stripped": "block/stripped_spruce_log",
     "Wool": "ls_furniture:block/invisible"
   },
   "render_type": "cutout"

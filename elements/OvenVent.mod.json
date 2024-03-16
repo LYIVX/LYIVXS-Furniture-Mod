@@ -132,11 +132,11 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:TAB"
+      "value": "No creative tab entry"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:VentModule"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -157,7 +157,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:VentModule"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -210,7 +210,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "OvenVentOnBlockRightClicked"
+      "name": "BSSwitcher"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

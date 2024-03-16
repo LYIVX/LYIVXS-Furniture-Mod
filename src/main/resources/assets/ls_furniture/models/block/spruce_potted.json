@@ -1,12 +1,19 @@
 {
   "parent": "ls_furniture:custom/flower_pot",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/flower_pot",
-    "particle": "ls_furniture:block/flower_pot",
-    "log": "ls_furniture:block/log_spruce",
-    "flowerpot": "ls_furniture:block/flower_pot",
-    "leave": "ls_furniture:block/leaves_spruce",
-    "dirt": "ls_furniture:block/dirt"
+    "all": "block/flower_pot",
+    "particle": "block/flower_pot",
+    "log": "block/spruce_log",
+    "flowerpot": "block/flower_pot",
+    "leave": "block/spruce_leaves",
+    "dirt": "block/dirt"
   },
   "render_type": "cutout_mipped"
 }

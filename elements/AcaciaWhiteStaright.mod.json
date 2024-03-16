@@ -209,17 +209,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
+    "onRightClicked": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
+      "name": "AcaciaWhiteBlockAdded"
+    },
+    "onTickUpdate": {
       "name": "AcaciaWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
+      "name": "AcaciaWhiteBlockAdded"
     },
     "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
+      "name": "AcaciaWhiteBlockAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

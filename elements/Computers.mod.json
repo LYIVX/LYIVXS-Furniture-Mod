@@ -17,15 +17,6 @@
     "blocks": [
       {
         "value": "CUSTOM:ComputerOff"
-      },
-      {
-        "value": "CUSTOM:ComputerOn"
-      },
-      {
-        "value": "CUSTOM:ComputerMinecraft"
-      },
-      {
-        "value": "CUSTOM:ComputerCOD"
       }
     ],
     "functions": [],

@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_left_open",
-  "textures": {
-    "bottom": "ls_furniture:block/oak_door_bottom_acacia",
-    "top": "ls_furniture:block/oak_door_top_acacia"
-  },
-  "render_type": "cutout_mipped"
-}

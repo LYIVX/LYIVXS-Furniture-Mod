@@ -5,7 +5,7 @@
       "item": "minecraft:warped_stem"
     },
     {
-      "tag": "forge:tools/axes"
+      "tag": "minecraft:axes"
     }
   ],
   "output": {

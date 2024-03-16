@@ -2,8 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "anvil",
-        "2": "iron_block"
+        "Anvil": "anvil",
+        "Iron_Block": "iron_block"
       },
       "name": "default"
     }

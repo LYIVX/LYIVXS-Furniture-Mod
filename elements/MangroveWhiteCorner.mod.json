@@ -236,17 +236,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
+    "onRightClicked": {
       "name": "SeatAdded"
     },
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
+      "name": "MangroveWhiteBlockAdded"
+    },
+    "onTickUpdate": {
       "name": "MangroveWhiteBlockAdded"
     },
     "onDestroyedByPlayer": {
-      "name": "SeatBlockDestroyed"
+      "name": "MangroveWhiteBlockAdded"
     },
     "onDestroyedByExplosion": {
-      "name": "SeatBlockDestroyed"
+      "name": "MangroveWhiteBlockAdded"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

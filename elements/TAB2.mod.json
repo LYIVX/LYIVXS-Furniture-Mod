@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "tab",
   "definition": {
-    "name": "LYIVX's Chisel",
+    "name": "LYIVX's Connecting Blocks",
     "icon": {
       "value": "CUSTOM:FurnitureCrafter"
     },
-    "showSearch": true
+    "showSearch": false
   }
 }

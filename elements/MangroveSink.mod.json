@@ -1,36 +1,28 @@
 {
   "_fv": 57,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
-    "texture": "sink_mangrove",
+    "texture": "stripped_mangrove",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "sink_off:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_mangrove",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "particleTexture": "",
+    "tintType": "Water",
+    "isItemTinted": true,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
-      {
-        "mx": 0.0,
-        "my": 0.0,
-        "mz": 1.0,
-        "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
-        "subtract": false
-      },
       {
         "mx": 0.0,
         "my": 16.0,
@@ -48,9 +40,21 @@
         "My": 16.0,
         "Mz": 16.0,
         "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 1.0,
+        "Mx": 16.0,
+        "My": 15.0,
+        "Mz": 16.0,
+        "subtract": false
       }
     ],
-    "name": "Sink (Mangrove)",
+    "name": "Mangrove Sink",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -91,7 +95,6 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 3.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -116,13 +119,7 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "CUSTOM:KettleParticle"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -130,7 +127,6 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "generateFeature": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -139,7 +135,7 @@
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
     "isFluidTank": true,
-    "fluidCapacity": 1,
+    "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "SinkOnBlockRightClicked"
@@ -147,18 +143,17 @@
     "onTickUpdate": {
       "name": "SinkUpdateTick"
     },
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "TAG:stone_ore_replaceables"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "sink.geo.json",
-    "displaySettings": "sink.item.json"
+    "maxGenerateHeight": 64
   }
 }

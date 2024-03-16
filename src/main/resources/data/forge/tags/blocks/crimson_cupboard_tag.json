@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ls_furniture:crimson_cupboard_corner",
-    "ls_furniture:crimson_cupboard",
-    "ls_furniture:crimson_cupboard_vent",
-    "ls_furniture:crimson_cupboard_vent_on"
+    "ls_furniture:crimson_cabinet"
   ]
 }

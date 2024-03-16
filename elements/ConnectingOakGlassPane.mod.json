@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "connecting_oak_glass",
-    "textureTop": "planks_oak",
+    "textureTop": "stripped_oak",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",

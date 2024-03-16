@@ -1,73 +1,127 @@
 repositories {
 	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
+		url = "https://api.modrinth.com/maven"
+	}
+}
+	dependencies {
+		implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.1.0c-forge-mc1.20.1")
+}
+
+
+def compileModsDir = 'compile-mods-1.20.1'
+task addnewfoldersmods(type: DefaultTask){
+	ant.mkdir(dir: 'compile-mods-1.20.1/');
+}
+repositories {
+	flatDir {
+	name "compile-mods" 
+	dir file(compileModsDir)
+	}
+}
+      
+dependencies {
+	for (compileModJar in fileTree(dir: compileModsDir, include: '*.jar')) {
+	def basename = compileModJar.name.substring(0, compileModJar.name.length() - ".jar".length()) 
+	def versionSep = basename.lastIndexOf('-') 
+	assert versionSep != -1 
+	def artifactId = basename.substring(0, versionSep) 
+	def version = basename.substring(versionSep + 1)
+	implementation fg.deobf("compile-mods:$artifactId:$version")}
+}
+	minecraft {
+		mappings channel: 'official', version: '1.20.1'
+			accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+		runs {
+			client {
+				workingDirectory project.file('run')
+				property 'forge.logging.markers', 'REGISTRIES'
+				property 'forge.logging.console.level', 'debug'
+				property 'mixin.env.remapRefMap', 'true'
+				property 'mixin.env.refMapRemappingFile', "${buildDir}/build/createSrgToMcp/output.srg"
+				mods {
+					examplemod {
+						source sourceSets.main
+					}
+				}
+			}
+			server {
+				workingDirectory project.file('run')
+				property 'forge.logging.markers', 'REGISTRIES'
+				property 'forge.logging.console.level', 'debug'
+				property 'mixin.env.remapRefMap', 'true'
+				property 'mixin.env.refMapRemappingFile', "${buildDir}/build/createSrgToMcp/output.srg"
+				mods {
+					examplemod {
+						source sourceSets.main
+                }
+            }
+		}
+	}
+}
+
+
+minecraft {
+	runs {
+		client {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}	
+	}
+}  
+repositories {
+	maven {
+		url "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
 	}
 }
 dependencies {
-	compileOnly fg.deobf("dev.emi:emi-forge:1.0.23+1.19.4:api")
-	runtimeOnly fg.deobf("dev.emi:emi-forge:1.0.23+1.19.4")
+	compileOnly fg.deobf("curse.maven:jade-324717:4986594")
+	runtimeOnly fg.deobf("curse.maven:jade-324717:4986594")
+}
+
+
+minecraft {
+	runs {
+		client {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+		server {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+		data {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+	}
+}  
+repositories {
+    maven { url 'https://maven.blamejared.com' }
+}
+dependencies {
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE")
 }
 
 
 repositories {
 	maven {
-		url = "https://api.modrinth.com/maven"
-	}
+	name = "Progwml6 maven"
+	url = "https://dvs1.progwml6.com/files/maven/"
+	}    
+	maven {
+	name = "ModMaven"
+	url = "https://modmaven.k-4u.nl"
+	}    
 }
-	dependencies {
-		implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.1.0b-forge-mc1.19.4")
-}
-
-
-minecraft {
-  runs {
-      client {
-          property 'mixin.env.remapRefMap', 'true'
-          property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-      }
-  }
-}
-repositories {
-  maven {
-    url = "https://maven.blamejared.com"
-  }
-}
-
+      
 dependencies {
-  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.4-79.1-FORGE:api")
-  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.4-79.1-FORGE")
-}
-
-
-repositories {
-  maven {
-      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
-  }
-}
-
-dependencies {
-  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19.4:4.1.3')
-}
-
-
-repositories {
-  maven {
-    // location of the maven that hosts JEI files
-    name = "Progwml6 maven"
-    url = "https://dvs1.progwml6.com/files/maven/"
-  }    
-  maven {
-    // location of a maven mirror for JEI files, as a fallback
-    name = "ModMaven"
-    url = "https://modmaven.dev"
-  }   
-}
-
-dependencies {
-  compileOnly fg.deobf("mezz.jei:jei-1.19.4-common-api:13.1.0.16")
-  compileOnly fg.deobf("mezz.jei:jei-1.19.4-forge-api:13.1.0.16")
-  runtimeOnly fg.deobf("mezz.jei:jei-1.19.4-forge:13.1.0.16")
+	compileOnly fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27")
+	compileOnly fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.2.0.27")
+	runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27")
 }
 
 

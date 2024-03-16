@@ -161,6 +161,42 @@
         "Stripped": "stripped_warped"
       },
       "name": "warped_white"
+    },
+    "cherry_white": {
+      "map": {
+        "Pattern": "cherry_trapdoor",
+        "Log": "cherry_log",
+        "Wool": "wool_white",
+        "Stripped": "stripped_cherry"
+      },
+      "name": "cherry_white"
+    },
+    "cherry": {
+      "map": {
+        "Pattern": "cherry_trapdoor",
+        "Log": "cherry_log",
+        "Wool": "invisible",
+        "Stripped": "stripped_cherry"
+      },
+      "name": "cherry"
+    },
+    "bamboo": {
+      "map": {
+        "Pattern": "log_top_bamboo",
+        "Log": "log_bamboo",
+        "Wool": "invisible",
+        "Stripped": "stripped_bamboo"
+      },
+      "name": "bamboo"
+    },
+    "bamboo_white": {
+      "map": {
+        "Pattern": "log_top_bamboo",
+        "Log": "log_bamboo",
+        "Wool": "wool_white",
+        "Stripped": "stripped_bamboo"
+      },
+      "name": "bamboo_white"
     }
   }
 }

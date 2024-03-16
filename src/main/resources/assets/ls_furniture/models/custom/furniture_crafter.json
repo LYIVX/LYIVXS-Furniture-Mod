@@ -30,7 +30,7 @@
             15,
             14
           ],
-          "texture": "#CraftingTableSide"
+          "texture": "#OakPlanks"
         },
         "east": {
           "uv": [
@@ -39,7 +39,7 @@
             15,
             14
           ],
-          "texture": "#CraftingTableSide"
+          "texture": "#OakPlanks"
         },
         "south": {
           "uv": [
@@ -48,7 +48,7 @@
             15,
             14
           ],
-          "texture": "#CraftingTableSide"
+          "texture": "#OakPlanks"
         },
         "west": {
           "uv": [
@@ -57,7 +57,7 @@
             15,
             14
           ],
-          "texture": "#CraftingTableSide"
+          "texture": "#OakPlanks"
         },
         "up": {
           "uv": [
@@ -183,15 +183,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            7,
-            1,
-            9,
-            15
-          ],
-          "texture": "#CraftingTableSide"
-        },
         "east": {
           "uv": [
             7,
@@ -217,26 +208,6 @@
             9,
             15
           ],
-          "texture": "#CraftingTableSide"
-        },
-        "up": {
-          "uv": [
-            7,
-            0,
-            9,
-            1
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
-        },
-        "down": {
-          "uv": [
-            7,
-            15,
-            9,
-            16
-          ],
-          "rotation": 180,
           "texture": "#CraftingTableSide"
         }
       }
@@ -281,15 +252,6 @@
           ],
           "texture": "#CraftingTableSide"
         },
-        "south": {
-          "uv": [
-            7,
-            1,
-            9,
-            15
-          ],
-          "texture": "#CraftingTableSide"
-        },
         "west": {
           "uv": [
             8,
@@ -297,26 +259,6 @@
             7,
             15
           ],
-          "texture": "#CraftingTableSide"
-        },
-        "up": {
-          "uv": [
-            7,
-            15,
-            9,
-            16
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
-        },
-        "down": {
-          "uv": [
-            7,
-            0,
-            9,
-            1
-          ],
-          "rotation": 180,
           "texture": "#CraftingTableSide"
         }
       }
@@ -369,35 +311,6 @@
             15
           ],
           "texture": "#CraftingTableSide"
-        },
-        "west": {
-          "uv": [
-            7,
-            1,
-            9,
-            15
-          ],
-          "texture": "#CraftingTableSide"
-        },
-        "up": {
-          "uv": [
-            0,
-            7,
-            1,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
-        },
-        "down": {
-          "uv": [
-            0,
-            7,
-            1,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
         }
       }
     },
@@ -432,15 +345,6 @@
           ],
           "texture": "#CraftingTableSide"
         },
-        "east": {
-          "uv": [
-            7,
-            1,
-            9,
-            15
-          ],
-          "texture": "#CraftingTableSide"
-        },
         "south": {
           "uv": [
             7,
@@ -458,26 +362,6 @@
             15
           ],
           "texture": "#CraftingTableSide"
-        },
-        "up": {
-          "uv": [
-            15,
-            7,
-            16,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
-        },
-        "down": {
-          "uv": [
-            15,
-            7,
-            16,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#CraftingTableSide"
         }
       }
     },
@@ -752,25 +636,7 @@
           ],
           "texture": "#CraftingTableSide"
         },
-        "east": {
-          "uv": [
-            15,
-            15,
-            16,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "south": {
-          "uv": [
-            0,
-            15,
-            1,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
-        "west": {
           "uv": [
             0,
             15,
@@ -823,25 +689,7 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            15,
-            15,
-            16,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "east": {
-          "uv": [
-            0,
-            15,
-            1,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
-        "south": {
           "uv": [
             0,
             15,
@@ -912,15 +760,6 @@
           ],
           "texture": "#CraftingTableTop"
         },
-        "east": {
-          "uv": [
-            0,
-            15,
-            1,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "south": {
           "uv": [
             0,
@@ -929,15 +768,6 @@
             16
           ],
           "texture": "#CraftingTableSide"
-        },
-        "west": {
-          "uv": [
-            15,
-            15,
-            16,
-            16
-          ],
-          "texture": "#CraftingTableTop"
         },
         "up": {
           "uv": [
@@ -981,15 +811,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            0,
-            15,
-            1,
-            16
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "east": {
           "uv": [
             0,
@@ -998,15 +819,6 @@
             16
           ],
           "texture": "#CraftingTableSide"
-        },
-        "south": {
-          "uv": [
-            15,
-            15,
-            16,
-            16
-          ],
-          "texture": "#CraftingTableTop"
         },
         "west": {
           "uv": [
@@ -1070,25 +882,7 @@
           ],
           "texture": "#CraftingTableSide"
         },
-        "east": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "south": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
-        "west": {
           "uv": [
             0,
             0,
@@ -1141,25 +935,7 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "east": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
-        "south": {
           "uv": [
             0,
             0,
@@ -1230,15 +1006,6 @@
           ],
           "texture": "#CraftingTableTop"
         },
-        "east": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "south": {
           "uv": [
             0,
@@ -1247,15 +1014,6 @@
             1
           ],
           "texture": "#CraftingTableSide"
-        },
-        "west": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#CraftingTableTop"
         },
         "up": {
           "uv": [
@@ -1299,15 +1057,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            0,
-            0,
-            1,
-            1
-          ],
-          "texture": "#CraftingTableTop"
-        },
         "east": {
           "uv": [
             0,
@@ -1316,15 +1065,6 @@
             1
           ],
           "texture": "#CraftingTableSide"
-        },
-        "south": {
-          "uv": [
-            15,
-            0,
-            16,
-            1
-          ],
-          "texture": "#CraftingTableTop"
         },
         "west": {
           "uv": [
@@ -1416,16 +1156,6 @@
           "texture": "#AnvilFlat"
         },
         "up": {
-          "uv": [
-            2,
-            4,
-            7,
-            12
-          ],
-          "rotation": 180,
-          "texture": "#AnvilFlat"
-        },
-        "down": {
           "uv": [
             2,
             4,
@@ -1623,16 +1353,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            10,
-            3,
-            11,
-            4
-          ],
-          "rotation": 270,
-          "texture": "#Wrench"
-        },
         "east": {
           "uv": [
             11,
@@ -1951,16 +1671,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            13,
-            6,
-            14,
-            7
-          ],
-          "rotation": 270,
-          "texture": "#Wrench"
-        },
         "east": {
           "uv": [
             14,
@@ -2033,16 +1743,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            9,
-            7,
-            10,
-            9
-          ],
-          "rotation": 270,
-          "texture": "#Wrench"
-        },
         "east": {
           "uv": [
             11,
@@ -2050,16 +1750,6 @@
             9,
             8
           ],
-          "texture": "#Wrench"
-        },
-        "south": {
-          "uv": [
-            10,
-            7,
-            11,
-            9
-          ],
-          "rotation": 90,
           "texture": "#Wrench"
         },
         "west": {
@@ -2378,16 +2068,6 @@
             3,
             12
           ],
-          "texture": "#Wrench"
-        },
-        "south": {
-          "uv": [
-            3,
-            11,
-            4,
-            12
-          ],
-          "rotation": 90,
           "texture": "#Wrench"
         },
         "west": {
@@ -3080,16 +2760,6 @@
           ],
           "rotation": 270,
           "texture": "#Saw"
-        },
-        "down": {
-          "uv": [
-            5,
-            9,
-            6,
-            11
-          ],
-          "rotation": 270,
-          "texture": "#Saw"
         }
       }
     },
@@ -3240,16 +2910,6 @@
           "texture": "#Saw"
         },
         "up": {
-          "uv": [
-            3,
-            11,
-            4,
-            12
-          ],
-          "rotation": 270,
-          "texture": "#Saw"
-        },
-        "down": {
           "uv": [
             3,
             11,
@@ -4004,16 +3664,6 @@
           ],
           "rotation": 90,
           "texture": "#Saw"
-        },
-        "down": {
-          "uv": [
-            5,
-            9,
-            6,
-            11
-          ],
-          "rotation": 90,
-          "texture": "#Saw"
         }
       }
     },
@@ -4164,16 +3814,6 @@
           "texture": "#Saw"
         },
         "up": {
-          "uv": [
-            3,
-            11,
-            4,
-            12
-          ],
-          "rotation": 90,
-          "texture": "#Saw"
-        },
-        "down": {
           "uv": [
             3,
             11,
@@ -4497,16 +4137,6 @@
             4
           ],
           "rotation": 90,
-          "texture": "#Shears"
-        },
-        "up": {
-          "uv": [
-            10,
-            3,
-            11,
-            4
-          ],
-          "rotation": 270,
           "texture": "#Shears"
         },
         "down": {
@@ -4835,16 +4465,6 @@
           "rotation": 90,
           "texture": "#Shears"
         },
-        "up": {
-          "uv": [
-            13,
-            6,
-            14,
-            7
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
-        },
         "down": {
           "uv": [
             13,
@@ -4928,16 +4548,6 @@
           ],
           "rotation": 270,
           "texture": "#Shears"
-        },
-        "down": {
-          "uv": [
-            6,
-            7,
-            7,
-            9
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
         }
       }
     },
@@ -5001,26 +4611,6 @@
             8
           ],
           "rotation": 90,
-          "texture": "#Shears"
-        },
-        "up": {
-          "uv": [
-            9,
-            7,
-            10,
-            9
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
-        },
-        "down": {
-          "uv": [
-            10,
-            7,
-            11,
-            9
-          ],
-          "rotation": 270,
           "texture": "#Shears"
         }
       }
@@ -5180,16 +4770,6 @@
           ],
           "rotation": 270,
           "texture": "#Shears"
-        },
-        "down": {
-          "uv": [
-            2,
-            9,
-            3,
-            10
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
         }
       }
     },
@@ -5240,26 +4820,6 @@
             5,
             9,
             4,
-            10
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
-        },
-        "west": {
-          "uv": [
-            4,
-            9,
-            5,
-            10
-          ],
-          "rotation": 90,
-          "texture": "#Shears"
-        },
-        "up": {
-          "uv": [
-            4,
-            9,
-            5,
             10
           ],
           "rotation": 270,
@@ -5424,16 +4984,6 @@
           "texture": "#Shears"
         },
         "up": {
-          "uv": [
-            5,
-            12,
-            6,
-            13
-          ],
-          "rotation": 270,
-          "texture": "#Shears"
-        },
-        "down": {
           "uv": [
             5,
             12,
@@ -5640,16 +5190,6 @@
             11,
             3,
             10,
-            4
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
-        "east": {
-          "uv": [
-            10,
-            3,
-            11,
             4
           ],
           "rotation": 180,
@@ -5981,16 +5521,6 @@
           "rotation": 180,
           "texture": "#Shears"
         },
-        "east": {
-          "uv": [
-            13,
-            6,
-            14,
-            7
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
         "south": {
           "uv": [
             13,
@@ -6085,16 +5615,6 @@
           "rotation": 180,
           "texture": "#Shears"
         },
-        "west": {
-          "uv": [
-            6,
-            7,
-            7,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
         "up": {
           "uv": [
             4,
@@ -6149,29 +5669,9 @@
           "rotation": 180,
           "texture": "#Shears"
         },
-        "east": {
-          "uv": [
-            9,
-            7,
-            10,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
         "south": {
           "uv": [
             9,
-            7,
-            11,
-            9
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
-        "west": {
-          "uv": [
-            10,
             7,
             11,
             9
@@ -6337,16 +5837,6 @@
           "rotation": 180,
           "texture": "#Shears"
         },
-        "west": {
-          "uv": [
-            2,
-            9,
-            3,
-            10
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
         "up": {
           "uv": [
             2,
@@ -6401,16 +5891,6 @@
           "rotation": 180,
           "texture": "#Shears"
         },
-        "east": {
-          "uv": [
-            4,
-            9,
-            5,
-            10
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
         "south": {
           "uv": [
             4,
@@ -6432,16 +5912,6 @@
           "texture": "#Shears"
         },
         "up": {
-          "uv": [
-            4,
-            9,
-            5,
-            10
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
-        "down": {
           "uv": [
             4,
             9,
@@ -6580,16 +6050,6 @@
           "texture": "#Shears"
         },
         "south": {
-          "uv": [
-            5,
-            12,
-            6,
-            13
-          ],
-          "rotation": 180,
-          "texture": "#Shears"
-        },
-        "west": {
           "uv": [
             5,
             12,
@@ -6941,15 +6401,6 @@
           ],
           "rotation": 180,
           "texture": "#Hammer"
-        },
-        "down": {
-          "uv": [
-            7,
-            4,
-            8,
-            5
-          ],
-          "texture": "#Hammer"
         }
       }
     },
@@ -7013,16 +6464,6 @@
             8
           ],
           "rotation": 90,
-          "texture": "#Hammer"
-        },
-        "up": {
-          "uv": [
-            12,
-            4,
-            13,
-            8
-          ],
-          "rotation": 180,
           "texture": "#Hammer"
         },
         "down": {
@@ -7096,16 +6537,6 @@
             7
           ],
           "rotation": 90,
-          "texture": "#Hammer"
-        },
-        "up": {
-          "uv": [
-            13,
-            5,
-            14,
-            7
-          ],
-          "rotation": 180,
           "texture": "#Hammer"
         },
         "down": {
@@ -7522,15 +6953,6 @@
           ],
           "rotation": 180,
           "texture": "#Hammer"
-        },
-        "down": {
-          "uv": [
-            3,
-            11,
-            4,
-            12
-          ],
-          "texture": "#Hammer"
         }
       }
     },
@@ -7853,16 +7275,6 @@
             5
           ],
           "texture": "#Hammer"
-        },
-        "down": {
-          "uv": [
-            7,
-            4,
-            8,
-            5
-          ],
-          "rotation": 180,
-          "texture": "#Hammer"
         }
       }
     },
@@ -7926,15 +7338,6 @@
             8
           ],
           "rotation": 270,
-          "texture": "#Hammer"
-        },
-        "up": {
-          "uv": [
-            12,
-            4,
-            13,
-            8
-          ],
           "texture": "#Hammer"
         },
         "down": {
@@ -8009,15 +7412,6 @@
             7
           ],
           "rotation": 270,
-          "texture": "#Hammer"
-        },
-        "up": {
-          "uv": [
-            13,
-            5,
-            14,
-            7
-          ],
           "texture": "#Hammer"
         },
         "down": {
@@ -8434,16 +7828,6 @@
             12
           ],
           "texture": "#Hammer"
-        },
-        "down": {
-          "uv": [
-            3,
-            11,
-            4,
-            12
-          ],
-          "rotation": 180,
-          "texture": "#Hammer"
         }
       }
     },
@@ -8590,15 +7974,6 @@
             8
           ],
           "rotation": 270,
-          "texture": "#Chisel"
-        },
-        "up": {
-          "uv": [
-            11,
-            3,
-            12,
-            8
-          ],
           "texture": "#Chisel"
         },
         "down": {
@@ -8758,15 +8133,6 @@
           "rotation": 270,
           "texture": "#Chisel"
         },
-        "up": {
-          "uv": [
-            12,
-            4,
-            13,
-            7
-          ],
-          "texture": "#Chisel"
-        },
         "down": {
           "uv": [
             12,
@@ -8924,15 +8290,6 @@
           "rotation": 270,
           "texture": "#Chisel"
         },
-        "up": {
-          "uv": [
-            13,
-            5,
-            14,
-            7
-          ],
-          "texture": "#Chisel"
-        },
         "down": {
           "uv": [
             13,
@@ -9014,16 +8371,6 @@
             7,
             11
           ],
-          "texture": "#Chisel"
-        },
-        "down": {
-          "uv": [
-            6,
-            7,
-            7,
-            11
-          ],
-          "rotation": 180,
           "texture": "#Chisel"
         }
       }
@@ -9347,16 +8694,6 @@
             14
           ],
           "texture": "#Chisel"
-        },
-        "down": {
-          "uv": [
-            2,
-            12,
-            3,
-            14
-          ],
-          "rotation": 180,
-          "texture": "#Chisel"
         }
       }
     },
@@ -9503,16 +8840,6 @@
             8
           ],
           "rotation": 90,
-          "texture": "#Chisel"
-        },
-        "up": {
-          "uv": [
-            11,
-            3,
-            12,
-            8
-          ],
-          "rotation": 180,
           "texture": "#Chisel"
         },
         "down": {
@@ -9671,16 +8998,6 @@
           "rotation": 90,
           "texture": "#Chisel"
         },
-        "up": {
-          "uv": [
-            12,
-            4,
-            13,
-            7
-          ],
-          "rotation": 180,
-          "texture": "#Chisel"
-        },
         "down": {
           "uv": [
             12,
@@ -9837,16 +9154,6 @@
           "rotation": 90,
           "texture": "#Chisel"
         },
-        "up": {
-          "uv": [
-            13,
-            5,
-            14,
-            7
-          ],
-          "rotation": 180,
-          "texture": "#Chisel"
-        },
         "down": {
           "uv": [
             13,
@@ -9928,15 +9235,6 @@
             11
           ],
           "rotation": 180,
-          "texture": "#Chisel"
-        },
-        "down": {
-          "uv": [
-            6,
-            7,
-            7,
-            11
-          ],
           "texture": "#Chisel"
         }
       }
@@ -10261,509 +9559,20 @@
           ],
           "rotation": 180,
           "texture": "#Chisel"
-        },
-        "down": {
-          "uv": [
-            2,
-            12,
-            3,
-            14
-          ],
-          "texture": "#Chisel"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_14",
-      "from": [
-        2.3,
-        15,
-        5.3
-      ],
-      "to": [
-        2.3,
-        21.3,
-        10.7
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            5,
-            9,
-            6,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            11,
-            9,
-            5,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            10,
-            9,
-            11,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            5,
-            9,
-            11,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            5,
-            9,
-            11,
-            10
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            5,
-            15,
-            11,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_15",
-      "from": [
-        2.3,
-        15,
-        3.5
-      ],
-      "to": [
-        2.3,
-        20.4,
-        5.3
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            3,
-            10,
-            4,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            5,
-            10,
-            3,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            4,
-            10,
-            5,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            3,
-            10,
-            5,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            3,
-            10,
-            5,
-            11
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            3,
-            15,
-            5,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_16",
-      "from": [
-        2.3,
-        15,
-        10.7
-      ],
-      "to": [
-        2.3,
-        20.4,
-        12.5
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            11,
-            10,
-            12,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            13,
-            10,
-            11,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            12,
-            10,
-            13,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            11,
-            10,
-            13,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            11,
-            10,
-            13,
-            11
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            11,
-            15,
-            13,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_17",
-      "from": [
-        2.3,
-        15,
-        2.6
-      ],
-      "to": [
-        2.3,
-        19.5,
-        3.5
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            2,
-            11,
-            3,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            3,
-            11,
-            2,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            2,
-            11,
-            3,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            2,
-            11,
-            3,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            2,
-            11,
-            3,
-            12
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            2,
-            15,
-            3,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_18",
-      "from": [
-        2.3,
-        15,
-        12.5
-      ],
-      "to": [
-        2.3,
-        19.5,
-        13.4
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            13,
-            11,
-            14,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            14,
-            11,
-            13,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            13,
-            11,
-            14,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            13,
-            11,
-            14,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            13,
-            11,
-            14,
-            12
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            13,
-            15,
-            14,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
-        }
-      }
-    },
-    {
-      "name": "stonecutter_saw_19",
-      "from": [
-        2.3,
-        15,
-        1.7
-      ],
-      "to": [
-        2.3,
-        17.7,
-        2.6
-      ],
-      "rotation": {
-        "angle": 0,
-        "axis": "y",
-        "origin": [
-          8,
-          9.325,
-          8
-        ]
-      },
-      "faces": {
-        "north": {
-          "uv": [
-            1,
-            13,
-            2,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "east": {
-          "uv": [
-            2,
-            13,
-            1,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            1,
-            13,
-            2,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "west": {
-          "uv": [
-            1,
-            13,
-            2,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "up": {
-          "uv": [
-            1,
-            13,
-            2,
-            14
-          ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
-          "uv": [
-            1,
-            15,
-            2,
-            16
-          ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
         }
       }
     },
     {
       "name": "stonecutter_saw_20",
       "from": [
-        2.3,
+        2.4,
         15,
-        13.4
+        1.5
       ],
       "to": [
-        2.3,
-        17.7,
-        14.3
+        2.4,
+        21,
+        14.4
       ],
       "rotation": {
         "angle": 0,
@@ -10775,28 +9584,10 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            14,
-            15,
-            15,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
         "east": {
           "uv": [
-            15,
-            13,
-            14,
-            16
-          ],
-          "texture": "#StoneCutterSaw"
-        },
-        "south": {
-          "uv": [
-            14,
-            13,
+            1,
+            9,
             15,
             16
           ],
@@ -10804,32 +9595,144 @@
         },
         "west": {
           "uv": [
-            14,
-            13,
+            1,
+            9,
             15,
             16
           ],
           "texture": "#StoneCutterSaw"
-        },
-        "up": {
+        }
+      }
+    },
+    {
+      "name": "stonecutter_saw_21",
+      "from": [
+        15.001,
+        9,
+        0
+      ],
+      "to": [
+        15.001,
+        15,
+        16
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          9.325,
+          8
+        ]
+      },
+      "faces": {
+        "east": {
           "uv": [
-            14,
-            13,
-            15,
-            14
+            0,
+            0,
+            16,
+            6
           ],
-          "rotation": 90,
-          "texture": "#StoneCutterSaw"
-        },
-        "down": {
+          "texture": "#CraftingTableSide"
+        }
+      }
+    },
+    {
+      "name": "stonecutter_saw_22",
+      "from": [
+        0,
+        9,
+        0.999
+      ],
+      "to": [
+        16,
+        15,
+        0.999
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          15,
+          12,
+          1
+        ]
+      },
+      "faces": {
+        "north": {
           "uv": [
-            14,
-            15,
-            15,
-            16
+            0,
+            0,
+            16,
+            6
           ],
-          "rotation": 270,
-          "texture": "#StoneCutterSaw"
+          "texture": "#CraftingTableSide"
+        }
+      }
+    },
+    {
+      "name": "stonecutter_saw_23",
+      "from": [
+        0,
+        9,
+        15.001
+      ],
+      "to": [
+        16,
+        15,
+        15.001
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          15,
+          12,
+          1
+        ]
+      },
+      "faces": {
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#CraftingTableSide"
+        }
+      }
+    },
+    {
+      "name": "stonecutter_saw_22",
+      "from": [
+        0.999,
+        9,
+        0
+      ],
+      "to": [
+        0.999,
+        15,
+        16
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          9.325,
+          8
+        ]
+      },
+      "faces": {
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#CraftingTableSide"
         }
       }
     },
@@ -10877,15 +9780,6 @@
             15,
             3.6,
             16,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
-        "west": {
-          "uv": [
-            11.7,
-            3.6,
-            12.2,
             4.1
           ],
           "texture": "#AnvilFlat"
@@ -10960,15 +9854,6 @@
           ],
           "texture": "#AnvilFlat"
         },
-        "west": {
-          "uv": [
-            11.7,
-            3.6,
-            12.2,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "up": {
           "uv": [
             0,
@@ -11017,15 +9902,6 @@
             0,
             3.6,
             1,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
-        "east": {
-          "uv": [
-            3.8,
-            3.6,
-            4.3,
             4.1
           ],
           "texture": "#AnvilFlat"
@@ -11100,15 +9976,6 @@
           ],
           "texture": "#AnvilFlat"
         },
-        "east": {
-          "uv": [
-            3.8,
-            3.6,
-            4.3,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "south": {
           "uv": [
             15,
@@ -11170,15 +10037,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            3.8,
-            3.6,
-            4.3,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "east": {
           "uv": [
             15,
@@ -11249,15 +10107,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            3.8,
-            3.6,
-            4.3,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "east": {
           "uv": [
             15,
@@ -11328,15 +10177,6 @@
         ]
       },
       "faces": {
-        "north": {
-          "uv": [
-            3.8,
-            3.6,
-            4.3,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "east": {
           "uv": [
             15,
@@ -11425,15 +10265,6 @@
           ],
           "texture": "#AnvilFlat"
         },
-        "south": {
-          "uv": [
-            11.7,
-            3.6,
-            12.2,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "west": {
           "uv": [
             0,
@@ -11504,15 +10335,6 @@
           ],
           "texture": "#AnvilFlat"
         },
-        "south": {
-          "uv": [
-            11.7,
-            3.6,
-            12.2,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
         "west": {
           "uv": [
             0,
@@ -11579,15 +10401,6 @@
             15,
             3.6,
             16,
-            4.1
-          ],
-          "texture": "#AnvilFlat"
-        },
-        "south": {
-          "uv": [
-            11.7,
-            3.6,
-            12.2,
             4.1
           ],
           "texture": "#AnvilFlat"
@@ -12060,9 +10873,7 @@
             125,
             126,
             127,
-            128,
-            129,
-            130
+            128
           ]
         },
         {
@@ -12075,6 +10886,8 @@
           "color": 0,
           "nbt": "{}",
           "children": [
+            129,
+            130,
             131,
             132,
             133,
@@ -12082,9 +10895,7 @@
             135,
             136,
             137,
-            138,
-            139,
-            140
+            138
           ]
         }
       ]

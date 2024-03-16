@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/plant_spruce",
     "particle": "ls_furniture:block/plant_spruce",
-    "log": "ls_furniture:block/log_spruce",
-    "leave": "ls_furniture:block/leaves_spruce"
+    "log": "block/spruce_log",
+    "leave": "block/spruce_leaves"
   },
   "render_type": "cutout"
 }

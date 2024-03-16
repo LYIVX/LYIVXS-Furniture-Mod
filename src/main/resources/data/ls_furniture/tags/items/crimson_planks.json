@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:crimson_planks",
-    "ls_furniture:connecting_crimson_plain",
-    "ls_furniture:connecting_crimson_stripped",
-    "ls_furniture:connecting_crimson_small_bricks",
-    "ls_furniture:connecting_crimson_big_bricks",
-    "ls_furniture:connecting_crimson_horizontal_stripes",
-    "ls_furniture:connecting_crimson_vertical_stripes",
-    "ls_furniture:connecting_crimson_wavey",
-    "ls_furniture:connecting_crimson_mosaic",
-    "ls_furniture:connecting_crimson_diagonal",
-    "ls_furniture:connecting_crimson_dunes",
-    "ls_furniture:connecting_crimson_checkered",
-    "ls_furniture:connecting_crimson_checked",
-    "ls_furniture:connecting_crimson_swirl",
-    "ls_furniture:connecting_crimson_slash"
+    "minecraft:crimson_planks"
   ]
 }

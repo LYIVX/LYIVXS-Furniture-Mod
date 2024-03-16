@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "light_gray_wool",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -24,12 +24,12 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 4.95,
-        "my": -0.40625,
-        "mz": 5.25,
-        "Mx": 10.95,
-        "My": 5.59375,
-        "Mz": 11.25,
+        "mx": 4.0,
+        "my": 0.0,
+        "mz": 4.0,
+        "Mx": 12.0,
+        "My": 8.0,
+        "Mz": 12.0,
         "subtract": false
       }
     ],

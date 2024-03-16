@@ -1,8 +1,15 @@
 {
   "parent": "ls_furniture:custom/snow_golem_teddy",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/snow_golem",
-    "particle": "ls_furniture:block/white_wool",
+    "particle": "ls_furniture:block/snow_golem",
     "0": "ls_furniture:block/snow_golem"
   },
   "render_type": "cutout_mipped"

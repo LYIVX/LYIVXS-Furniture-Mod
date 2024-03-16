@@ -2,16 +2,11 @@
   "_fv": 57,
   "_type": "tag",
   "definition": {
-    "type": "Items",
-    "items": [
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
       {
         "value": "CUSTOM:OakCupboard"
-      },
-      {
-        "value": "CUSTOM:DarkOakCupboard"
-      },
-      {
-        "value": "CUSTOM:AcaciaCupboard"
       },
       {
         "value": "CUSTOM:SpruceCupboard"
@@ -23,7 +18,19 @@
         "value": "CUSTOM:JungleCupboard"
       },
       {
+        "value": "CUSTOM:AcaciaCupboard"
+      },
+      {
+        "value": "CUSTOM:DarkOakCupboard"
+      },
+      {
         "value": "CUSTOM:MangroveCupboard"
+      },
+      {
+        "value": "CUSTOM:CherryCupboard"
+      },
+      {
+        "value": "CUSTOM:BambooCupboard"
       },
       {
         "value": "CUSTOM:CrimsonCupboard"
@@ -32,7 +39,6 @@
         "value": "CUSTOM:WarpedCupboard"
       }
     ],
-    "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],

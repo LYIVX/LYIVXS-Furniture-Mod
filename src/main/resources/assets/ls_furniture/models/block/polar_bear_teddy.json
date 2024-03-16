@@ -1,8 +1,15 @@
 {
   "parent": "ls_furniture:custom/polar_bear_teddy",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/polarbear",
-    "particle": "ls_furniture:block/white_wool",
+    "particle": "ls_furniture:block/polarbear",
     "0": "ls_furniture:block/polarbear"
   },
   "render_type": "cutout_mipped"

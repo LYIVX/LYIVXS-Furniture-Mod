@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/leaf_plant",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
     "all": "ls_furniture:block/plant_crimson",
     "particle": "ls_furniture:block/plant_crimson",
-    "log": "ls_furniture:block/stem_warped_animation",
-    "leave": "ls_furniture:block/nether_wart_block"
+    "log": "block/crimson_stem",
+    "leave": "block/nether_wart_block"
   },
   "render_type": "cutout"
 }

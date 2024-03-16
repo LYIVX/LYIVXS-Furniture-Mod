@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:BirchCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:BirchCupboard"
-      },
-      {
-        "value": "CUSTOM:BirchCupboardVent"
-      },
-      {
-        "value": "CUSTOM:BirchCupboardVentOn"
+        "value": "CUSTOM:BirchCabinet"
       }
     ],
     "functions": [],

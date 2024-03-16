@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:MangroveCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:MangroveCupboard"
-      },
-      {
-        "value": "CUSTOM:MangroveCupboardVent"
-      },
-      {
-        "value": "CUSTOM:MangroveCupboardVentOn"
+        "value": "CUSTOM:MangroveCabinet"
       }
     ],
     "functions": [],

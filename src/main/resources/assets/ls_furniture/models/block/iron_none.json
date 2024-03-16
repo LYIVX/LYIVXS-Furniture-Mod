@@ -1,10 +1,17 @@
 {
   "parent": "ls_furniture:custom/table_none",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/iron_none",
-    "particle": "ls_furniture:block/iron_none",
-    "1": "ls_furniture:block/anvil_flat",
-    "2": "ls_furniture:block/iron_none"
+    "all": "ls_furniture:block/glass_none",
+    "particle": "ls_furniture:block/glass_none",
+    "1": "ls_furniture:block/anvil",
+    "2": "ls_furniture:block/glass_none"
   },
   "render_type": "cutout_mipped"
 }

@@ -8,7 +8,7 @@
   ],
   "loader": "fusion:model",
   "textures": {
-    "edge": "ls_furniture:block/planks_warped",
+    "edge": "ls_furniture:block/stripped_warped",
     "pane": "ls_furniture:block/connecting_warped_glass"
   },
   "render_type": "translucent"

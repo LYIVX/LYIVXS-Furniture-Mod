@@ -1,16 +1,6 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-				"0": {
-			"loop": true,
-			"bones": {
-				"bone2": {
-					"rotation": {
-						"vector": [0, 0, 0]
-					}
-				}
-			}
-		},
 		"1": {
 			"animation_length": 3,
 			"bones": {
@@ -32,6 +22,16 @@
 							"easing": "easeInElastic",
 							"easingArgs": [1]
 						}
+					}
+				}
+			}
+		},
+		"0": {
+			"loop": true,
+			"bones": {
+				"bone2": {
+					"rotation": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}

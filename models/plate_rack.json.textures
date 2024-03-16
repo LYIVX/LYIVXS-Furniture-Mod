@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "2": "iron_block"
+        "Iron_Block": "iron_block"
       },
       "name": "default"
     }

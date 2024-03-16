@@ -1,14 +1,14 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:stripped_oak_log"
     },
     {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:stripped_oak_log"
     },
     {
-      "tag": "ls_furniture:emptyslot"
+      "item": "ls_furniture:oak_bark"
     },
     {
       "tag": "ls_furniture:emptyslot"
@@ -18,6 +18,6 @@
     }
   ],
   "output": {
-    "item": "ls_furniture:oak_wardrobe_0"
+    "item": "ls_furniture:oak_wardrobe"
   }
 }

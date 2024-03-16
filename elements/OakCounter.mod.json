@@ -1,20 +1,21 @@
 {
   "_fv": 57,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
-    "texture": "counter_oak",
+    "texture": "stripped_oak",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "counter:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "planks_oak",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -24,10 +25,10 @@
     "boundingBoxes": [
       {
         "mx": 0.0,
-        "my": 0.0,
-        "mz": 1.0,
+        "my": 16.0,
+        "mz": 15.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 18.0,
         "Mz": 16.0,
         "subtract": false
       },
@@ -42,15 +43,18 @@
       },
       {
         "mx": 0.0,
-        "my": 16.0,
-        "mz": 15.0,
+        "my": 0.0,
+        "mz": 1.0,
         "Mx": 16.0,
-        "My": 18.0,
+        "My": 14.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Counter (Oak)",
+    "name": "Oak Counter",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 3.0,
     "hasGravity": false,
@@ -91,7 +95,6 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 1,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -116,51 +119,16 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
-    "hasInventory": true,
-    "guiBoundTo": "Counter",
-    "openGUIOnRightClick": true,
-    "inventorySize": 27,
+    "isBonemealable": false,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "generateFeature": false,
     "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26
-    ],
+    "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -169,33 +137,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "CounterOnBlockRightClicked"
-    },
-    "onBlockAdded": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onTickUpdate": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onDestroyedByExplosion": {
-      "name": "OakcounterBlockAdded"
-    },
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "TAG:stone_ore_replaceables"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "counter.geo.json",
-    "displaySettings": "counter.item.json"
+    "maxGenerateHeight": 64
   }
 }

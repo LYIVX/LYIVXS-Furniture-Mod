@@ -2,14 +2,14 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "planks_birch",
+    "texture": "stripped_birch",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "cupboard_vent:birch",
+    "customModelName": "cupboard_vent:birch_off",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -138,7 +138,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "BirchCupboardVentOnBlockRightClicked"
+      "name": "BSSwitcher"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

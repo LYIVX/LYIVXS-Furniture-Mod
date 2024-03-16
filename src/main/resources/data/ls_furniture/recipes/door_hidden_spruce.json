@@ -1,11 +1,11 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:crimson_door"
+      "item": "minecraft:spruce_door"
     },
     {
-      "item": "minecraft:crimson_planks"
+      "item": "minecraft:spruce_planks"
     },
     {
       "tag": "ls_furniture:emptyslot"
@@ -18,6 +18,6 @@
     }
   ],
   "output": {
-    "item": "ls_furniture:crimson_planks_door"
+    "item": "ls_furniture:spruce_planks_door"
   }
 }

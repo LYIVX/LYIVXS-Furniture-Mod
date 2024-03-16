@@ -1,14 +1,14 @@
 {
-  "type": "ls_furniture:metallurgy",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:stripped_spruce_log"
     },
     {
-      "item": "minecraft:spruce_planks"
+      "item": "ls_furniture:oven_module"
     },
     {
-      "tag": "ls_furniture:emptyslot"
+      "item": "ls_furniture:spruce_bark"
     },
     {
       "tag": "ls_furniture:emptyslot"

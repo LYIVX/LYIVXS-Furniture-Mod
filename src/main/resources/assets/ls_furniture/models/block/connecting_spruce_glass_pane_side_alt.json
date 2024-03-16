@@ -8,7 +8,7 @@
   ],
   "loader": "fusion:model",
   "textures": {
-    "edge": "ls_furniture:block/planks_spruce",
+    "edge": "ls_furniture:block/stripped_spruce",
     "pane": "ls_furniture:block/connecting_spruce_glass"
   },
   "render_type": "translucent"

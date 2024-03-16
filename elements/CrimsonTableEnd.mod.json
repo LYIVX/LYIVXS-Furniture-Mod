@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "stripped_crimson",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -99,7 +99,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "NETHER_WOOD"
     },
     "breakSound": {
       "value": ""

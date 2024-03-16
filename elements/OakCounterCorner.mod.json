@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "planks_oak",
+    "texture": "stripped_oak",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -74,7 +74,7 @@
       "fixedValue": []
     },
     "hardness": 2.0,
-    "resistance": 310.0,
+    "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -155,18 +155,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onTickUpdate": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "OakcounterBlockAdded"
-    },
-    "onDestroyedByExplosion": {
-      "name": "OakcounterBlockAdded"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

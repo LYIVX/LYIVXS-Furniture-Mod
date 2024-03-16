@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:SpruceCupboard"
-      },
-      {
-        "value": "CUSTOM:SpruceCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:SpruceCupboardVent"
-      },
-      {
-        "value": "CUSTOM:SpruceCupboardVentOn"
+        "value": "CUSTOM:SpruceCabinet"
       }
     ],
     "functions": [],

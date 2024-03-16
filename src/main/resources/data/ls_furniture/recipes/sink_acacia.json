@@ -1,20 +1,20 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:acacia_planks"
+      "item": "minecraft:stripped_acacia_log"
+    },
+    {
+      "item": "ls_furniture:sinkmodule"
+    },
+    {
+      "item": "ls_furniture:acacia_bark"
     },
     {
       "tag": "ls_furniture:emptyslot"
     },
     {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "tag": "ls_furniture:emptyslot"
-    },
-    {
-      "item": "ls_furniture:saw"
+      "item": "ls_furniture:hammer"
     }
   ],
   "output": {

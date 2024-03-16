@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:CrimsonCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:CrimsonCupboard"
-      },
-      {
-        "value": "CUSTOM:CrimsonCupboardVent"
-      },
-      {
-        "value": "CUSTOM:CrimsonCupboardVentOn"
+        "value": "CUSTOM:CrimsonCabinet"
       }
     ],
     "functions": [],

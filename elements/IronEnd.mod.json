@@ -2,14 +2,14 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "iron_end",
+    "texture": "glass_end",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "table_end_glass:default",
+    "customModelName": "table_end:glass",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -51,12 +51,12 @@
         "subtract": false
       }
     ],
-    "name": "Iron Glass Table",
+    "name": "Glass Table",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 5.0,
-    "resistance": 6.0,
+    "hardness": 0.3,
+    "resistance": 0.3,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -74,7 +74,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "GLASS"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -99,7 +99,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "GLASS"
     },
     "breakSound": {
       "value": ""

@@ -1,10 +1,17 @@
 {
-  "parent": "ls_furniture:custom/table_corner_glass",
+  "parent": "ls_furniture:custom/table_corner",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "loader": "fusion:model",
   "textures": {
-    "all": "ls_furniture:block/iron_corner",
-    "particle": "ls_furniture:block/iron_corner",
-    "1": "ls_furniture:block/anvil_flat",
-    "2": "ls_furniture:block/iron_corner"
+    "all": "ls_furniture:block/galss_corner",
+    "particle": "ls_furniture:block/galss_corner",
+    "1": "ls_furniture:block/anvil",
+    "2": "ls_furniture:block/galss_corner"
   },
   "render_type": "cutout_mipped"
 }

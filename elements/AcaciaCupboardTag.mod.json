@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:AcaciaCupboard"
-      },
-      {
-        "value": "CUSTOM:AcaciaCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:AcaciaCupboardVent"
-      },
-      {
-        "value": "CUSTOM:AcaciaCupboardVentOn"
+        "value": "CUSTOM:AcaciaCabinet"
       }
     ],
     "functions": [],

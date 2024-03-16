@@ -155,18 +155,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "DarkOakCounterBlockAdded"
-    },
-    "onTickUpdate": {
-      "name": "DarkOakCounterBlockAdded"
-    },
-    "onDestroyedByPlayer": {
-      "name": "DarkOakCounterBlockAdded"
-    },
-    "onDestroyedByExplosion": {
-      "name": "DarkOakCounterBlockAdded"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

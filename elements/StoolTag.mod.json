@@ -2,8 +2,9 @@
   "_fv": 57,
   "_type": "tag",
   "definition": {
-    "type": "Items",
-    "items": [
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
       {
         "value": "CUSTOM:OakStool"
       },
@@ -30,9 +31,14 @@
       },
       {
         "value": "CUSTOM:WarpedStool"
+      },
+      {
+        "value": "CUSTOM:CherryStool"
+      },
+      {
+        "value": "CUSTOM:BambooStool"
       }
     ],
-    "blocks": [],
     "functions": [],
     "entities": [],
     "biomes": [],

@@ -6,16 +6,7 @@
     "items": [],
     "blocks": [
       {
-        "value": "CUSTOM:OakCupboard"
-      },
-      {
-        "value": "CUSTOM:OakCupboardCorner"
-      },
-      {
-        "value": "CUSTOM:OakCupboardVent"
-      },
-      {
-        "value": "CUSTOM:OakCupboardVentOn"
+        "value": "CUSTOM:OakCabinet"
       }
     ],
     "functions": [],

@@ -1,8 +1,8 @@
 {
-  "type": "ls_furniture:carpentry",
+  "type": "ls_furniture:f_c",
   "ingredients": [
     {
-      "item": "minecraft:birch_planks"
+      "item": "minecraft:stripped_birch_log"
     },
     {
       "item": "minecraft:white_wool"
