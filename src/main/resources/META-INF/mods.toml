@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="All Rights Reserved"
+license="GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
 modId="ls_furniture"
