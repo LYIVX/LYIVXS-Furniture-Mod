@@ -7,7 +7,7 @@
     <table style="border-style:solid;border-width:5px;">
         <tbody>
             <tr>
-                <td style="text-align:right;vertical-align:top;">
+                <td style="vertical-align:top;width:%;">
                     <figure class="image" data-ckbox-resource-id="codMwDAKkhYp"><a href="https://modrinth.com/mod/lyivxs-furniture" target="_blank" rel="noopener noreferrer">
                             <picture>
         <source srcset="https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/80.webp 80w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/160.webp 160w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/240.webp 240w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/320.webp 320w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/400.webp 400w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/480.webp 480w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/560.webp 560w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/640.webp 640w,https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/660.webp 660w" sizes="(max-width: 660px) 100vw, 660px" type="image/webp"><img src="https://ckbox.cloud/64a702104d4d92496ca8/assets/66vfJMVAtdvj/images/660.png" width="660" height="660">
