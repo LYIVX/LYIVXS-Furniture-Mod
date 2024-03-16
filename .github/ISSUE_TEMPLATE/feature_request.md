@@ -9,7 +9,8 @@ assignees: LYIVX
 
 **Issue Rule Checks:**
 
-* [ ] I have checked that my problem is not already reported *
+* [] I have checked that my problem is not already reported *
+(Mark With An X in '[]')
 
 **Describe The Feature You'd Like.**
 A clear and concise description of what feature you would like to see. Ex. Id like to see [...]
