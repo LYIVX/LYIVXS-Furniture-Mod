@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: "[BUG]"
 labels: Bug
 assignees: LYIVX
 
@@ -9,7 +9,7 @@ assignees: LYIVX
 
 **Issue Rule Checks:**
 
-* [ ] I have checked that my problem is not already reported *
+* [] I have checked that my problem is not already reported *
 
 **Describe the bug**
 A clear and concise description of what the bug is.
