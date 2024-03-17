@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/cupboard/models/cupboard_open",
+  "textures": {
+    "all": "block/stripped_oak_log",
+    "particle": "block/stripped_oak_log",
+    "Main": "block/stripped_oak_log",
+    "Top": "block/oak_log",
+    "Handle": "ls_furniture:block/handle_oak"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:block/counter/models/counter_cupboard_open",
+  "textures": {
+    "all": "block/stripped_warped_stem",
+    "particle": "block/stripped_warped_stem",
+    "Main": "block/stripped_warped_stem",
+    "Top": "block/warped_stem",
+    "Handle": "ls_furniture:block/handle_warped",
+    "Door": "block/warped_stem"
+  },
+  "render_type": "cutout"
+}

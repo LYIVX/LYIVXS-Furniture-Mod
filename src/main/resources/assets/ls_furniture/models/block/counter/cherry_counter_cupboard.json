@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:block/counter/models/counter_cupboard_open",
+  "textures": {
+    "all": "block/stripped_cherry_log",
+    "particle": "block/stripped_cherry_log",
+    "Main": "block/stripped_cherry_log",
+    "Top": "block/cherry_log",
+    "Handle": "ls_furniture:block/handle_cherry",
+    "Door": "block/cherry_log"
+  },
+  "render_type": "cutout"
+}

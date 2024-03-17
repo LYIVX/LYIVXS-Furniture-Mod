@@ -1,0 +1,14 @@
+{
+  "parent": "ls_furniture:block/sink/models/sink_on",
+  "textures": {
+    "all": "block/stripped_acacia_log",
+    "particle": "block/stripped_acacia_log",
+    "Red": "block/red_wool",
+    "Water": "block/water_still",
+    "Top": "block/acacia_log",
+    "Blue": "block/blue_wool",
+    "Anvil": "block/anvil",
+    "Main": "block/stripped_acacia_log"
+  },
+  "render_type": "translucent"
+}

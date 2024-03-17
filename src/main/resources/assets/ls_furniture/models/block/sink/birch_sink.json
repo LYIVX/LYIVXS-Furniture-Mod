@@ -1,0 +1,14 @@
+{
+  "parent": "ls_furniture:block/sink/models/sink_on",
+  "textures": {
+    "all": "block/stripped_birch_log",
+    "particle": "block/stripped_birch_log",
+    "Red": "block/red_wool",
+    "Water": "block/water_still",
+    "Top": "block/birch_log",
+    "Blue": "block/blue_wool",
+    "Anvil": "block/anvil",
+    "Main": "block/stripped_birch_log"
+  },
+  "render_type": "translucent"
+}

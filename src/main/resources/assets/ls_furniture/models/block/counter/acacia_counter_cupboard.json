@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:block/counter/models/counter_cupboard_open",
+  "textures": {
+    "all": "block/stripped_acacia_log",
+    "particle": "block/stripped_acacia_log",
+    "Main": "block/stripped_acacia_log",
+    "Top": "block/acacia_log",
+    "Handle": "ls_furniture:block/handle_oak",
+    "Door": "block/acacia_log"
+  },
+  "render_type": "cutout"
+}

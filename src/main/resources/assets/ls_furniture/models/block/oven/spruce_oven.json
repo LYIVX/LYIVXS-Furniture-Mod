@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:block/oven/models/oven_open",
+  "textures": {
+    "all": "block/iron_block",
+    "particle": "block/iron_block",
+    "Glass": "block/glass",
+    "Main": "block/iron_block",
+    "Anvil": "block/anvil",
+    "Top": "block/spruce_log"
+  },
+  "render_type": "cutout_mipped"
+}

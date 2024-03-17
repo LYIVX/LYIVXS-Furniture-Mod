@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/drawer/models/drawer_open",
+  "textures": {
+    "all": "block/stripped_oak_log",
+    "particle": "block/stripped_oak_log",
+    "Stripped": "block/stripped_oak_log",
+    "Log": "block/oak_log",
+    "Handle": "ls_furniture:block/handle_big_oak"
+  },
+  "render_type": "cutout"
+}

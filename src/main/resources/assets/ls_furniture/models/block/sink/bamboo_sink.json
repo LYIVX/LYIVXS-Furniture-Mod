@@ -1,0 +1,14 @@
+{
+  "parent": "ls_furniture:block/sink/models/sink_on",
+  "textures": {
+    "all": "block/stripped_bamboo_block",
+    "particle": "block/stripped_bamboo_block",
+    "Red": "block/red_wool",
+    "Water": "block/water_still",
+    "Top": "block/bamboo_block",
+    "Blue": "block/blue_wool",
+    "Anvil": "block/anvil",
+    "Main": "block/stripped_bamboo_block"
+  },
+  "render_type": "translucent"
+}

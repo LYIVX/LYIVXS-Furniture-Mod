@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/mailbox/models/mail_box_full",
+  "textures": {
+    "all": "block/stripped_mangrove_log",
+    "particle": "block/stripped_mangrove_log",
+    "Log": "block/mangrove_log",
+    "Stripped": "block/stripped_mangrove_log",
+    "Black": "block/black_concrete"
+  },
+  "render_type": "cutout"
+}

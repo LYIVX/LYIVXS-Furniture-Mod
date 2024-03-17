@@ -1,0 +1,12 @@
+{
+  "parent": "ls_furniture:block/counter/models/counter_cupboard_open",
+  "textures": {
+    "all": "block/stripped_spruce_log",
+    "particle": "block/stripped_spruce_log",
+    "Main": "block/stripped_spruce_log",
+    "Top": "block/spruce_log",
+    "Handle": "ls_furniture:block/handle_spruce",
+    "Door": "block/spruce_log"
+  },
+  "render_type": "cutout"
+}

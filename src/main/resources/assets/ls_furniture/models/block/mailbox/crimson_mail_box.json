@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/mailbox/models/mail_box_full",
+  "textures": {
+    "all": "block/stripped_crimson_stem",
+    "particle": "block/stripped_crimson_stem",
+    "Log": "block/crimson_stem",
+    "Stripped": "block/stripped_crimson_stem",
+    "Black": "block/black_concrete"
+  },
+  "render_type": "cutout"
+}

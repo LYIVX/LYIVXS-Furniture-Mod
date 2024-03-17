@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/mailbox/models/mail_box_full",
+  "textures": {
+    "all": "block/stripped_oak_log",
+    "particle": "block/stripped_oak_log",
+    "Log": "block/oak_log",
+    "Stripped": "block/stripped_oak_log",
+    "Black": "block/black_concrete"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/desk/models/desk_drawer_open_none",
+  "textures": {
+    "all": "block/stripped_acacia_log",
+    "particle": "block/stripped_acacia_log",
+    "Main": "block/stripped_acacia_log",
+    "Door": "block/acacia_log",
+    "Handle": "ls_furniture:block/handle_big_oak"
+  },
+  "render_type": "cutout"
+}

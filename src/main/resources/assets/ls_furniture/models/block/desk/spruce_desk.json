@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/desk/models/desk_drawer_open_none",
+  "textures": {
+    "all": "block/stripped_spruce_log",
+    "particle": "block/stripped_spruce_log",
+    "Main": "block/stripped_spruce_log",
+    "Door": "block/spruce_log",
+    "Handle": "ls_furniture:block/handle_spruce"
+  },
+  "render_type": "cutout"
+}
