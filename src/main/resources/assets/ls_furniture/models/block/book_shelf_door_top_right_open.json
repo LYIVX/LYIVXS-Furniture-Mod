@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_right_open",
-  "textures": {
-    "bottom": "block/bookshelf",
-    "top": "block/bookshelf"
-  },
-  "render_type": "solid"
-}

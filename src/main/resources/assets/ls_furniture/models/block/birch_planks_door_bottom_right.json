@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_bottom_right",
-  "textures": {
-    "bottom": "block/birch_planks",
-    "top": "block/birch_planks"
-  },
-  "render_type": "solid"
-}

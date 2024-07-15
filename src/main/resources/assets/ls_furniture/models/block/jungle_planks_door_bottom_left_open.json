@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_bottom_left_open",
-  "textures": {
-    "bottom": "block/jungle_planks",
-    "top": "block/jungle_planks"
-  },
-  "render_type": "solid"
-}
