@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "ls_furniture:block/connecting_dark_oak_glass"
-  },
-  "render_type": "translucent"
-}

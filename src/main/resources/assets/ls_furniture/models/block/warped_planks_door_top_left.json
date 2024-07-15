@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_left",
-  "textures": {
-    "bottom": "block/warped_planks",
-    "top": "block/warped_planks"
-  },
-  "render_type": "solid"
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "ls_furniture:displaysettings/sink.item",
-  "textures": {
-    "particle": "ls_furniture:block/planks_birch"
-  }
-}
