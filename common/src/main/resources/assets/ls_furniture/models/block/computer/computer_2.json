@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/computer/computer",
+	"textures": {
+		"Frame": "block/anvil",
+		"Screen": "ls_furniture:block/computer_static",
+		"particle": "#Frame",
+		"RGB": "ls_furniture:block/rgb_lights"
+	}
+}

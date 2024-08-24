@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,part=head": {
+      "model": "ls_furniture:block/bed/warped/bed_head"
+    },
+    "facing=east,part=head": {
+      "model": "ls_furniture:block/bed/warped/bed_head",
+      "y": 90
+    },
+    "facing=south,part=head": {
+      "model": "ls_furniture:block/bed/warped/bed_head",
+      "y": 180
+    },
+    "facing=west,part=head": {
+      "model": "ls_furniture:block/bed/warped/bed_head",
+      "y": 270
+    },
+    "facing=north,part=foot": {
+      "model": "ls_furniture:block/bed/warped/bed_foot"
+    },
+    "facing=east,part=foot": {
+      "model": "ls_furniture:block/bed/warped/bed_foot",
+      "y": 90
+    },
+    "facing=south,part=foot": {
+      "model": "ls_furniture:block/bed/warped/bed_foot",
+      "y": 180
+    },
+    "facing=west,part=foot": {
+      "model": "ls_furniture:block/bed/warped/bed_foot",
+      "y": 270
+    }
+  }
+}

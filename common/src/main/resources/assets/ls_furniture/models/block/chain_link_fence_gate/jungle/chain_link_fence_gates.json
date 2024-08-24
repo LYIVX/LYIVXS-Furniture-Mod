@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fence_gates/chain_link_fence_gate",
+  "textures": {
+    "all": "block/chain",
+    "particle": "block/chain",
+    "Stripped": "block/chain",
+    "Log": "block/jungle_log"
+  },
+  "render_type": "solid"
+}

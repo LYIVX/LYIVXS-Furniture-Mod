@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,stand=false,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1"
+    },
+    "facing=east,stand=false,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1",
+      "y": 90
+    },
+    "facing=south,stand=false,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1",
+      "y": 180
+    },
+    "facing=west,stand=false,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1",
+      "y": 270
+    },
+    "facing=north,stand=true,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1_stand"
+    },
+    "facing=east,stand=true,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1_stand",
+      "y": 90
+    },
+    "facing=south,stand=true,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1_stand",
+      "y": 180
+    },
+    "facing=west,stand=true,variant=1": {
+      "model": "ls_furniture:block/tv/tv_1_stand",
+      "y": 270
+    },
+    "facing=north,stand=false,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2"
+    },
+    "facing=east,stand=false,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2",
+      "y": 90
+    },
+    "facing=south,stand=false,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2",
+      "y": 180
+    },
+    "facing=west,stand=false,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2",
+      "y": 270
+    },
+    "facing=north,stand=true,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2_stand"
+    },
+    "facing=east,stand=true,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2_stand",
+      "y": 90
+    },
+    "facing=south,stand=true,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2_stand",
+      "y": 180
+    },
+    "facing=west,stand=true,variant=2": {
+      "model": "ls_furniture:block/tv/tv_2_stand",
+      "y": 270
+    }
+  }
+}

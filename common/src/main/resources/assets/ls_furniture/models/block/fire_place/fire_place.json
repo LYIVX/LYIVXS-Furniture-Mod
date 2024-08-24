@@ -1,0 +1,12 @@
+{
+	"parent": "ls_furniture:block/template/fire_place/fire_place",
+	"textures": {
+		"particle": "block/bricks",
+		"Bricks": "block/bricks",
+		"Iron Bars": "block/iron_bars",
+		"Black": "block/black_concrete",
+		"Fire": "block/fire_0",
+		"Stone Bricks": "block/stone_bricks",
+		"Coal": "block/coal_block"
+	}
+}

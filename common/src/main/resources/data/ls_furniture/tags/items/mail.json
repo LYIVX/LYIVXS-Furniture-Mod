@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:letter",
+    "ls_furniture:oak_crate",
+    "ls_furniture:spruce_crate",
+    "ls_furniture:birch_crate",
+    "ls_furniture:jungle_crate",
+    "ls_furniture:acacia_crate",
+    "ls_furniture:dark_oak_crate",
+    "ls_furniture:mangrove_crate",
+    "ls_furniture:cherry_crate",
+    "ls_furniture:bamboo_crate",
+    "ls_furniture:crimson_crate",
+    "ls_furniture:warped_crate"
+  ]
+}

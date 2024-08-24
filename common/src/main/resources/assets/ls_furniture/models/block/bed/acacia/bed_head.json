@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/beds/bed_head",
+  "textures": {
+    "Main": "block/stripped_acacia_log",
+    "Secondary": "block/acacia_log",
+    "White": "block/white_wool",
+    "particle": "#Main"
+  }
+}

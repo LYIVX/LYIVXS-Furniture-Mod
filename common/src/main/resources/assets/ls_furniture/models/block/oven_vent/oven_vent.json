@@ -1,0 +1,11 @@
+{
+	"parent": "ls_furniture:block/template/oven_vent/oven_vent",
+	"textures": {
+		"particle": "block/anvil",
+		"Anvil": "block/anvil",
+		"Lamp": "block/redstone_lamp_on",
+		"White": "block/white_wool",
+		"Green/Lime": "block/green_wool",
+		"Red": "block/lime_wool"
+	}
+}

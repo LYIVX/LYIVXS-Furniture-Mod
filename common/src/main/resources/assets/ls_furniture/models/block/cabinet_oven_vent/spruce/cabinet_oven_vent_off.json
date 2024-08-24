@@ -1,0 +1,13 @@
+{
+  "parent": "ls_furniture:block/template/cabinet_oven_vents/cabinet_oven_vent",
+  "textures": {
+    "Anvil": "block/anvil",
+    "Lamp": "block/redstone_lamp",
+    "White": "block/black_wool",
+    "Green": "block/red_wool",
+    "Red": "block/red_wool",
+    "particle": "block/stripped_spruce_log",
+    "Main": "block/stripped_spruce_log",
+    "Secondary": "block/spruce_log"
+  }
+}

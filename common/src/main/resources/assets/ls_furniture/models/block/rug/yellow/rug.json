@@ -1,0 +1,7 @@
+{
+  "parent": "ls_furniture:block/template/rugs/rug",
+  "textures": {
+    "particle": "#wool",
+    "wool": "block/yellow_wool"
+  }
+}

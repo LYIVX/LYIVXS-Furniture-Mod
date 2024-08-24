@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/lamps/lamp_wall",
+  "textures": {
+    "Log": "block/warped_stem",
+    "particle": "block/stripped_warped_stem_top",
+    "Stripped": "block/stripped_warped_stem",
+    "Torch": "block/warped_stem"
+  }
+}

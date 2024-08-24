@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/counter_islands/counter_island",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_oak_log",
+    "Secondary": "block/oak_log"
+  }
+}

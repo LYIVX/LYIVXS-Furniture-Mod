@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/lamps/lamp_middle",
+  "textures": {
+    "Log": "block/mangrove_log",
+    "particle": "block/stripped_mangrove_log_top",
+    "Stripped": "block/stripped_mangrove_log",
+    "Torch": "block/mangrove_log"
+  }
+}

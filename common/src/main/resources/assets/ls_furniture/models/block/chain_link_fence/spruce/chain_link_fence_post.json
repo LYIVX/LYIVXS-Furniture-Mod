@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_post",
+
+  "textures": {
+    "all": "block/stripped_spruce_log",
+    "particle": "block/stripped_spruce_log",
+    "Stripped": "block/stripped_spruce_log",
+    "Log": "block/spruce_log"
+  },
+  "render_type": "solid"
+}

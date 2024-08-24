@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "ls_furniture:spruce_furniture_pack"
+  },
+  "ingredient_count": 2,
+  "result": "ls_furniture:spruce_planks_hidden_door",
+  "count": 2
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/crates/crate",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_warped_stem",
+    "Secondary": "block/warped_stem",
+    "Handle": "block/anvil"
+  }
+}

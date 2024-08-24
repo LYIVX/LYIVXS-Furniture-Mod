@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "ls_furniture:block/rug/magenta/rug"
+        },
+        "facing=east": {
+            "model": "ls_furniture:block/rug/magenta/rug",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "ls_furniture:block/rug/magenta/rug",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "ls_furniture:block/rug/magenta/rug",
+            "y": 270
+        }
+    }
+}
