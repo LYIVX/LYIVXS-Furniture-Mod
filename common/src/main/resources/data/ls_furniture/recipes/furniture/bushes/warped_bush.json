@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:warped_wart_block"
+  },
+  "ingredient_count": 1,
+  "result": "ls_furniture:warped_bush",
+  "count": 1
+}

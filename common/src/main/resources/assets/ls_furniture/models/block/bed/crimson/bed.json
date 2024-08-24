@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/beds/bed",
+  "textures": {
+    "Main": "block/stripped_crimson_stem",
+    "Secondary": "block/crimson_stem",
+    "White": "block/white_wool",
+    "particle": "#Main"
+  }
+}

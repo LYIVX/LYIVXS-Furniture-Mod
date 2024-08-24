@@ -1,0 +1,65 @@
+{
+    "variants": {
+        "facing=north,model=bottom,open=false,model=bottom": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom"
+        },
+        "facing=east,model=bottom,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom",
+            "y": 90
+        },
+        "facing=south,model=bottom,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom",
+            "y": 180
+        },
+        "facing=west,model=bottom,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom",
+            "y": 270
+        },
+        "facing=north,model=bottom,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom_open"
+        },
+        "facing=east,model=bottom,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom_open",
+            "y": 90
+        },
+        "facing=south,model=bottom,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom_open",
+            "y": 180
+        },
+        "facing=west,model=bottom,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_bottom_open",
+            "y": 270
+        },
+        "facing=north,model=top,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top"
+        },
+        "facing=east,model=top,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top",
+            "y": 90
+        },
+        "facing=south,model=top,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top",
+            "y": 180
+        },
+        "facing=west,model=top,open=false": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top",
+            "y": 270
+        },
+
+        "facing=north,model=top,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top_open"
+        },
+        "facing=east,model=top,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top_open",
+            "y": 90
+        },
+        "facing=south,model=top,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top_open",
+            "y": 180
+        },
+        "facing=west,model=top,open=true": {
+            "model": "ls_furniture:block/wardrobe/dark_oak/wardrobe_top_open",
+            "y": 270
+        }
+    }
+}

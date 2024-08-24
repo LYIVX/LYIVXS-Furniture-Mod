@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:birch_leaves"
+  },
+  "ingredient_count": 1,
+  "result": "ls_furniture:birch_bush",
+  "count": 1
+}

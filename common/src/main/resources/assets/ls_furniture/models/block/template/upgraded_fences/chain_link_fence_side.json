@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "block/chain",
+		"Chain": "block/chain"
+	},
+	"elements": [
+		{
+			"from": [8, 0, 0],
+			"to": [8, 16, 6.5],
+			"faces": {
+				"east": {"uv": [0, 0, 6, 16], "texture": "#Chain"},
+				"west": {"uv": [0, 0, 6, 16], "texture": "#Chain"}
+			}
+		}
+	]
+}

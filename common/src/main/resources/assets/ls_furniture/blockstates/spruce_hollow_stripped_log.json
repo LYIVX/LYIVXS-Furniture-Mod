@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ls_furniture:block/hollow_logs/spruce/hollow_stripped_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ls_furniture:block/hollow_logs/spruce/hollow_stripped_log"
+    },
+    "axis=z": {
+      "model": "ls_furniture:block/hollow_logs/spruce/hollow_stripped_log",
+      "x": 90
+    }
+  }
+}

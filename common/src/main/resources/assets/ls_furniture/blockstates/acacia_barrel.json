@@ -1,0 +1,56 @@
+{
+    "variants": {
+        "facing=down,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel",
+            "x": 180
+        },
+        "facing=down,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open",
+            "x": 180
+        },
+        "facing=east,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel",
+            "x": 90,
+            "y": 90
+        },
+        "facing=east,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open",
+            "x": 90,
+            "y": 90
+        },
+        "facing=north,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel",
+            "x": 90
+        },
+        "facing=north,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open",
+            "x": 90
+        },
+        "facing=south,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel",
+            "x": 90,
+            "y": 180
+        },
+        "facing=south,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open",
+            "x": 90,
+            "y": 180
+        },
+        "facing=up,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel"
+        },
+        "facing=up,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open"
+        },
+        "facing=west,open=false": {
+            "model": "ls_furniture:block/barrel/acacia/barrel",
+            "x": 90,
+            "y": 270
+        },
+        "facing=west,open=true": {
+            "model": "ls_furniture:block/barrel/acacia/barrel_open",
+            "x": 90,
+            "y": 270
+        }
+    }
+}

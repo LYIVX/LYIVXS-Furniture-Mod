@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/wardrobes/wardrobe_top",
+  "textures": {
+    "particle": "#Main",
+    "Handle": "ls_furniture:block/handles/handle_warped",
+    "Secondary": "block/warped_stem",
+    "Main": "block/stripped_warped_stem",
+    "Handle Big": "ls_furniture:block/handles/handle_warped"
+  }
+}

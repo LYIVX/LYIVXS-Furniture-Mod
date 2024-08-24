@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "ls_furniture:red_wool"
+  },
+  "ingredient_count": 2,
+  "result": "ls_furniture:red_rug",
+  "count": 3
+}
