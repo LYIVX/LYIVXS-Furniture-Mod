@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,lit=false,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven"
+    },
+    "facing=north,lit=true,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_on"
+    },
+    "facing=north,lit=false,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open"
+    },
+    "facing=north,lit=true,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open_on"
+    },
+    "facing=east,lit=false,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven",
+      "y": 90
+    },
+    "facing=east,lit=true,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_on",
+      "y": 90
+    },
+    "facing=east,lit=false,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open",
+      "y": 90
+    },
+    "facing=east,lit=true,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open_on",
+      "y": 90
+    },
+    "facing=south,lit=false,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven",
+      "y": 180
+    },
+    "facing=south,lit=true,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_on",
+      "y": 180
+    },
+    "facing=south,lit=false,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open",
+      "y": 180
+    },
+    "facing=south,lit=true,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open_on",
+      "y": 180
+    },
+    "facing=west,lit=false,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven",
+      "y": 270
+    },
+    "facing=west,lit=true,open=false": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_on",
+      "y": 270
+    },
+    "facing=west,lit=false,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open",
+      "y": 270
+    },
+    "facing=west,lit=true,open=true": {
+      "model": "ls_furniture:block/counter_oven/mangrove/counter_oven_open_on",
+      "y": 270
+    }
+  }
+}

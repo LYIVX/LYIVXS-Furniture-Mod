@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_outer",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_mangrove_log",
+    "Secondary": "block/white_wool",
+    "Leg": "block/mangrove_log"
+  }
+}

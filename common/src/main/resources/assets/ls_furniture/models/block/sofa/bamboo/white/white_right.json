@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_right",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_bamboo_block",
+    "Secondary": "block/white_wool",
+    "Leg": "block/bamboo_block"
+  }
+}

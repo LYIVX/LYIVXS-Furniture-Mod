@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_inner",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_dark_oak_log",
+    "Secondary": "block/dark_oak_log",
+    "Leg": "block/dark_oak_log"
+  }
+}

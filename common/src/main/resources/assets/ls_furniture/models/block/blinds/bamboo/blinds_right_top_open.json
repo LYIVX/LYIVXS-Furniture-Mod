@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/blinds/blinds_right_top_open",
+  "textures": {
+    "particle": "block/stripped_bamboo_block",
+    "Main": "block/stripped_bamboo_block",
+    "Secondary": "block/bamboo_block",
+    "Pole": "block/white_concrete",
+    "Pole2": "block/light_gray_concrete"
+  }
+}

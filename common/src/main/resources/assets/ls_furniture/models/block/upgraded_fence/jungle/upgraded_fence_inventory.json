@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_inventory",
+
+  "textures": {
+    "all": "block/stripped_jungle_log",
+    "particle": "block/stripped_jungle_log",
+    "Stripped": "block/stripped_jungle_log",
+    "Log": "block/jungle_log"
+  },
+  "render_type": "solid"
+}

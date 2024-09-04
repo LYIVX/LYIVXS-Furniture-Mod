@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/stools/stool_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Leg": "block/jungle_log",
+		"Main": "block/stripped_jungle_log",
+		"Secondary": "block/stripped_jungle_log"
+	}
+}

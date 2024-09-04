@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_inventory",
+
+  "textures": {
+    "all": "block/stripped_dark_oak_log",
+    "particle": "block/stripped_dark_oak_log",
+    "Stripped": "block/stripped_dark_oak_log",
+    "Log": "block/dark_oak_log"
+  },
+  "render_type": "solid"
+}

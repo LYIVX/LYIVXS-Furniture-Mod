@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "ls_furniture:block/counter_sink/mangrove/counter_sink"
+        },
+        "facing=east": {
+            "model": "ls_furniture:block/counter_sink/mangrove/counter_sink",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "ls_furniture:block/counter_sink/mangrove/counter_sink",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "ls_furniture:block/counter_sink/mangrove/counter_sink",
+            "y": 270
+        }
+    }
+}

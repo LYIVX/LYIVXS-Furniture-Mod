@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/counter_cupboards/counter_cupboard",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_warped_stem",
+    "Secondary": "block/warped_stem",
+    "Handle": "ls_furniture:block/handles/handle_warped"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/shelfs/shelf_left",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_jungle_log",
+    "Secondary": "block/jungle_log"
+  }
+}

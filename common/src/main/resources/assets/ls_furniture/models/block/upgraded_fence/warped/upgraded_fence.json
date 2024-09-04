@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_side",
+
+  "textures": {
+    "all": "block/stripped_warped_stem",
+    "particle": "block/stripped_warped_stem",
+    "Stripped": "block/stripped_warped_stem",
+    "Log": "block/warped_stem"
+  },
+  "render_type": "solid"
+}

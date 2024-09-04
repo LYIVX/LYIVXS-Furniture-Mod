@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_post",
+
+  "textures": {
+    "all": "block/stripped_crimson_stem",
+    "particle": "block/stripped_crimson_stem",
+    "Stripped": "block/stripped_crimson_stem",
+    "Log": "block/crimson_stem"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,tucked=false": {
+            "model": "ls_furniture:block/stool/dark_oak/stool"
+        },
+        "facing=east,tucked=false": {
+            "model": "ls_furniture:block/stool/dark_oak/stool",
+            "y": 90
+        },
+        "facing=south,tucked=false": {
+            "model": "ls_furniture:block/stool/dark_oak/stool",
+            "y": 180
+        },
+        "facing=west,tucked=false": {
+            "model": "ls_furniture:block/stool/dark_oak/stool",
+            "y": 270
+        },
+        "facing=north,tucked=true": {
+            "model": "ls_furniture:block/stool/dark_oak/stool_tucked"
+        },
+        "facing=east,tucked=true": {
+            "model": "ls_furniture:block/stool/dark_oak/stool_tucked",
+            "y": 90
+        },
+        "facing=south,tucked=true": {
+            "model": "ls_furniture:block/stool/dark_oak/stool_tucked",
+            "y": 180
+        },
+        "facing=west,tucked=true": {
+            "model": "ls_furniture:block/stool/dark_oak/stool_tucked",
+            "y": 270
+        }
+    }
+}

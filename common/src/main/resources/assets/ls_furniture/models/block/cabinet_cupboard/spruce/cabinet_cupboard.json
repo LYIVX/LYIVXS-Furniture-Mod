@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/cabinet_cupboards/cabinet_cupboard",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_spruce_log",
+    "Secondary": "block/spruce_log",
+    "Handle": "ls_furniture:block/handles/handle_spruce"
+  }
+}

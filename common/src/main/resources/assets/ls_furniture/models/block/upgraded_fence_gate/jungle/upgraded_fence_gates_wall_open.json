@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fence_gates/upgraded_fence_gate_open",
+  "textures": {
+    "all": "block/stripped_jungle_log",
+    "particle": "block/stripped_jungle_log",
+    "Stripped": "block/stripped_jungle_log",
+    "Log": "block/jungle_log"
+  },
+  "render_type": "solid"
+}

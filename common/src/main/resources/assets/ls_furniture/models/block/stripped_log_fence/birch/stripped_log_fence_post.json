@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "block/stripped_birch_log",
+    "particle": "block/stripped_birch_log"
+  },
+  "render_type": "solid"
+}
