@@ -1,10 +1,13 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.google.common.base.Ticker;
+import dev.architectury.event.events.common.TickEvent;
 import net.lyivx.ls_furniture.common.blocks.entity.MailboxBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
+import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocksTags;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.client.gui.screens.Screen;
@@ -29,6 +32,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -98,7 +103,6 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
             SHAPE_SOUTH_OPEN, SHAPE_WEST_OPEN, SHAPE_NORTH_OPEN, SHAPE_EAST_OPEN
     };
 
-
     public MailboxBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any()
@@ -107,24 +111,10 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
         ALL_MAILBOXES.add(this);
     }
 
-    private boolean updateMailbox(BlockState state, Level world, BlockPos pos) {
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if(blockEntity instanceof MailboxBlockEntity) {
-            boolean mail = ((MailboxBlockEntity) blockEntity).hasMail();
-
-            if(state.getValue(HAS_MAIL) != mail) {
-                world.setBlock(pos, state.setValue(HAS_MAIL, mail), Block.UPDATE_ALL);
-                blockEntity.setChanged();
-                world.playSound(null, pos, ModSoundEvents.MAILBOX_UPDATE.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
-                return true;
-            }
-        }
-        return false;
-    }
-
     @Override
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        updateMailbox(state, level, pos);
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide ? null : createTickerHelper(type, ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxBlockEntity::tick);
     }
 
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
@@ -135,44 +125,33 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
         MailboxBlockEntity mailbox = (MailboxBlockEntity) blockEntity;
 
         if(!mailbox.hasOwner()) {
-            System.out.println("Mailbox does not have an owner -- setting owner and quitting");
             mailbox.setOwner(player);
             player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
             return InteractionResult.sidedSuccess(false);
         }
-        System.out.println("Mailbox has an owner -- continuing");
 
         if(mailbox.isOwner(player)) {
-            System.out.println("Player is the owner -- updating state or opening UI, and quitting");
             mailbox.updateDisplayName(player);
             player.openMenu(mailbox);
             return InteractionResult.sidedSuccess(false);
         }
 
-        System.out.println("Player is not the owner -- continuing");
-
         if(player.getItemInHand(hand).isEmpty()) {
-            System.out.println("Player has no item in hand -- quitting");
             player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.no_permission"), true);
             return InteractionResult.FAIL;
         }
 
-        System.out.println("Player has an item in hand -- continuing");
-
         if(mailbox.isFull()) {
-            System.out.println("Mailbox is full -- quitting");
             player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.full"), true);
             return InteractionResult.FAIL;
         }
-
-        System.out.println("Mailbox is not full -- continuing");
 
         ItemStack result = mailbox.addMail(player.getItemInHand(hand));
         player.setItemInHand(hand, result);
 
         if(result.isEmpty()) {
-            System.out.println("Mail is added to mailbox -- quitting");
             Component ownerName = mailbox.getOwnerDisplayName();
+
             if (ownerName != null) {
                 player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.mail_delivered_to", ownerName), true);
             } else {
@@ -181,7 +160,6 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
             return InteractionResult.sidedSuccess(false);
         }
 
-        System.out.println("Mail is not added to mailbox -- end of method");
 
         player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.invalid_mail"), true);
         return InteractionResult.FAIL;
@@ -227,9 +205,9 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         MailboxBlockEntity mailbox = (MailboxBlockEntity) blockEntity;
-        if(entity instanceof Player) {
-            mailbox.setOwner((Player) entity);
-            ((Player) entity).displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
+        if (entity instanceof Player player) {
+            mailbox.setOwner(player);
+            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
         }
         if(stack.hasCustomHoverName()) {
             BlockEntity tileEntity = level.getBlockEntity(pos);
@@ -237,6 +215,8 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
                 ((MailboxBlockEntity) tileEntity).setCustomName(stack.getHoverName());
             }
         }
+        mailbox.setChanged();
+        level.sendBlockUpdated(pos, state, state, 3);
     }
 
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -285,4 +265,5 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
     public List<Property<?>> getWrenchableProperties() {
         return List.of(FACING);
     }
+
 }

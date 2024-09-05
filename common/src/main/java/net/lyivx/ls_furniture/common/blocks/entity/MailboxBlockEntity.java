@@ -13,7 +13,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -26,12 +28,12 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
-import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.UUID;
+
+import static net.lyivx.ls_furniture.common.blocks.MailboxBlock.HAS_MAIL;
 
 public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
     private NonNullList<ItemStack> items;
@@ -74,6 +76,13 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
         return false;
     }
 
+    void updateBlockState(BlockState state, boolean hasMail) {
+        BlockState newState = state.setValue(HAS_MAIL, hasMail);
+        if (newState != state) {
+            this.level.setBlock(this.getBlockPos(), newState, 3);
+        }
+    }
+
     public void updateDisplayName(Player playerEntity) {
         if(isOwner(playerEntity)) {
             String playerName = playerEntity.getGameProfile().getName();
@@ -86,7 +95,8 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
 
     public void setOwner(Player playerEntity) {
         owner = playerEntity.getStringUUID();
-        updateDisplayName(playerEntity);
+        this.ownerDisplayName = playerEntity.getGameProfile().getName();
+        BlockEntityHelper.broadcastUpdate(this, false);
     }
 
     public UUID getOwner() {
@@ -101,9 +111,8 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
         return hasOwner() && playerEntity.getStringUUID().equals(owner);
     }
 
-    @Override
-    protected void setItems(NonNullList<ItemStack> newInventory) {
-        items = newInventory;
+    protected void setItems(NonNullList<ItemStack> itemStacks) {
+        items = itemStacks;
     }
 
     public boolean isFull() {
@@ -111,14 +120,27 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     public ItemStack addMail(ItemStack stack) {
-        if(!this.getBlockState().is(ModBlocksTags.BYPASSES_MAIL_TAG_TAG) && !stack.is(ModItemTags.MAIL_TAG)) return stack;
-        if(stack.getItem() instanceof LetterItem) LetterItem.signLetter(stack, "Anonymous Player");
-        int slot = getFreeSlot();
-        if(slot < getContainerSize()) {
-            ItemStack result = items.set(slot, stack);
-            BlockEntityHelper.broadcastUpdate(this, false);
+        if (!this.getBlockState().is(ModBlocksTags.BYPASSES_MAIL_TAG_TAG) && !stack.is(ModItemTags.MAIL_TAG)) return stack;
 
-            if(result.isEmpty()) {
+        if (stack.getItem() instanceof LetterItem) {
+            LetterItem.signLetter(stack, "Anonymous Player");
+        }
+
+        int slot = getFreeSlot();
+        if (slot < getContainerSize()) {
+            ItemStack currentStack = items.get(slot);
+
+            if (currentStack.isEmpty()) {
+                ItemStack stackToAdd = stack.copy();
+                stackToAdd.setCount(1); // Only add one item
+
+                items.set(slot, stackToAdd);
+
+                stack.shrink(1);
+
+                BlockEntityHelper.broadcastUpdate(this, false);
+                updateBlockState(this.getBlockState(), hasMail());
+
                 Player mailboxOwner = level.getPlayerByUUID(getOwner());
                 if (mailboxOwner != null) {
                     if (hasCustomName()) {
@@ -126,15 +148,20 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
                     } else {
                         mailboxOwner.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.new_mail"), true);
                     }
-                    if(mailboxOwner instanceof ServerPlayer serverPlayer)
+                    if (mailboxOwner instanceof ServerPlayer serverPlayer) {
                         BlockEntityHelper.playSoundToPlayer(serverPlayer, ModSoundEvents.MAIL_RECEIVED.get(), SoundSource.MASTER, 1.0f, 1.0f);
+                    }
                 }
+
+                return stack;
             }
 
-            return result;
+            return stack;
         }
+
         return stack;
     }
+
 
     private int getFreeSlot() {
         int slot = 0;
@@ -143,26 +170,30 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     public Component getOwnerDisplayName() {
-        return (!hasOwner() || ownerDisplayName.isEmpty()) ? null : Component.literal(ownerDisplayName);
+        return (!hasOwner() || ownerDisplayName == null || ownerDisplayName.isEmpty()) ? null : Component.literal(ownerDisplayName);
     }
 
+    @Override
     protected void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
+        tag.putString("Owner", owner == null ? "" : owner);
+        tag.putString("OwnerDisplayName", ownerDisplayName == null ? "" : ownerDisplayName);
         if (!this.trySaveLootTable(tag)) {
             ContainerHelper.saveAllItems(tag, this.items);
         }
-        tag.putString("Owner", owner == null ? "" : owner);
-        tag.putString("OwnerDisplayName", ownerDisplayName == null ? "" : ownerDisplayName);
+
+
     }
 
+    @Override
     public void load(CompoundTag tag) {
         super.load(tag);
-        this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        if (!this.tryLoadLootTable(tag)) {
-            ContainerHelper.loadAllItems(tag, this.items);
-        }
         owner = tag.getString("Owner");
         ownerDisplayName = tag.getString("OwnerDisplayName");
+        this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if (!this.tryLoadLootTable(tag)) {
+            ContainerHelper.loadAllItems(tag, this.items);  // Loading items
+        }
     }
 
     public int getContainerSize() {
@@ -205,5 +236,31 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
         double e = (double)this.worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)this.worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
         this.level.playSound(null, d, e, f, sound, SoundSource.BLOCKS, 0.5F, this.level.random.nextFloat() * 0.1F + 0.9F);
+    }
+
+    public static void tick(Level level, BlockPos pos, BlockState state, MailboxBlockEntity blockEntity) {
+        if (!level.isClientSide) {
+
+            MailboxBlockEntity mailboxBlockEntity = (MailboxBlockEntity) blockEntity;
+            boolean hasMail = mailboxBlockEntity.hasMail();
+
+            // Only update the block state if the current state differs from the desired state
+            if (state.getValue(HAS_MAIL) != hasMail) {
+                mailboxBlockEntity.updateBlockState(state, hasMail);
+
+                // Optionally play a sound when the mailbox state changes
+                level.playSound(null, pos, ModSoundEvents.MAILBOX_UPDATE.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
+            }
+        }
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return this.saveWithoutMetadata(); // Send the current state of the block entity to the client
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 }

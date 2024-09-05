@@ -1,65 +1,114 @@
 package net.lyivx.ls_furniture.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.lyivx.ls_furniture.common.blocks.entity.MailboxBlockEntity;
-import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
+import net.minecraft.util.FastColor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import org.joml.Matrix4f;
 
 public class MailboxRenderer implements BlockEntityRenderer<MailboxBlockEntity> {
-    private final Camera camera;
-    private final Font font;
+    private final BlockEntityRendererProvider.Context context;
+    private static final float[] sideRotationY2D = { 0, 0, 2, 0, 3, 1 };
+    private static final int TEXT_COLOR_TRANSPARENT = FastColor.ARGB32.color(0, 255, 255, 255);
+    public MailboxRenderer(BlockEntityRendererProvider.Context context) {
+        this.context = context;
+    }
 
-    public MailboxRenderer(BlockEntityRendererProvider.Context ctx) {
-        Minecraft minecraft = Minecraft.getInstance();
-        camera = minecraft.gameRenderer.getMainCamera();
-        font = ctx.getFont();
+    private float getRotationYForSide2D (Direction side) {
+        return sideRotationY2D[side.ordinal()] * 90 * (float)Math.PI / 180f;
     }
 
     @Override
-    public void render(MailboxBlockEntity blockEntity, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int light, int overlay) {
-        if(shouldShowName(blockEntity)) {
-            renderNameTag(blockEntity, poseStack, buffer, light);
+    public void render(MailboxBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int packedOverlay) {
+
+        Player player = Minecraft.getInstance().player;
+        if (player == null) return;
+
+        Level level = blockEntity.getLevel();
+        if (level == null) return;
+
+        String ownerDisplayName = blockEntity.getOwnerDisplayName() != null ? blockEntity.getOwnerDisplayName().getString() : "";
+
+        float distance = (float)Math.sqrt(blockEntity.getBlockPos().distToCenterSqr(player.position()));
+        float alpha = Math.max(1f - ((distance) / 10), 0.05f);
+
+        if (distance > 10) return;
+
+        float Line1Offset = -1f/16f;
+
+        BlockState blockState = blockEntity.getBlockState();
+        Direction side = blockState.getValue(HorizontalDirectionalBlock.FACING);
+
+        poseStack.pushPose();
+
+        try {
+
+            switch (side) {
+                case NORTH:
+                    poseStack.translate(0.5f, 0.775f, 0.6545f);
+                    break;
+                case SOUTH:
+                    poseStack.translate(0.5f, 0.775f, 0.3455f);
+                    break;
+                case WEST:
+                    poseStack.translate(0.6545f, 0.775f, 0.5f);
+                    break;
+                case EAST:
+                    poseStack.translate(0.3455f, 0.775f, 0.5f);
+                    break;
+            }
+
+            poseStack.mulPoseMatrix((new Matrix4f()).rotateYXZ(getRotationYForSide2D(side), 0, 0));
+            poseStack.translate(-0.5f, 0, -0.5f);
+
+            // Adjust position to render on the block face
+            float zOffset = 15.05f / 16f;
+
+            packedLight = 255;
+
+            renderLine(ownerDisplayName, Line1Offset, zOffset, packedLight, poseStack, buffer, alpha);
+        } finally {
+            poseStack.popPose();  // Ensure poseStack is always popped, even in case of exception
         }
+
     }
 
-    private boolean shouldShowName(MailboxBlockEntity mailbox) {
-        if(!mailbox.hasOwner()) return false;
+    private void renderLine(String text, float yOffset, float zOffset, int packedLight, PoseStack poseStack, MultiBufferSource buffer, float alpha) {
 
-        HitResult hitResult = camera.getEntity().pick(20.0d, 0.0f, false);
-        if(hitResult.getType() == HitResult.Type.BLOCK) {
-            BlockPos pos = ((BlockHitResult) hitResult).getBlockPos();
-            return pos.equals(mailbox.getBlockPos());
-        }
+        Font textRenderer = this.context.getFont();
+        int textWidth = textRenderer.width(text);
 
-        return false;
-    }
+        poseStack.pushPose();
+        // Adjust position to render on the block face
+        poseStack.translate(0.5f, yOffset, zOffset);
+        // Flip Text Upside Down & Shrink
+        poseStack.scale(1/192f, -1/192f, 1f);
 
-    // based on net.minecraft.client.renderer.entity.EntityRenderer#renderNameTag
-    private void renderNameTag(MailboxBlockEntity mailbox, PoseStack ms, MultiBufferSource buffer, int light) {
-        if(!Minecraft.renderNames()) return;
+        int color = 0xFFFFFF;
+        color = (int) (255 * alpha) << 24 | TEXT_COLOR_TRANSPARENT;
+        float x = (float) -textWidth / 2;
+        float y = 0;
+        boolean dropShadow = false;
+        Matrix4f matrix = poseStack.last().pose();
+        Font.DisplayMode displayMode = Font.DisplayMode.NORMAL;
+        int backgroundColor = 0;
 
-        Component content = mailbox.getOwnerDisplayName();
-        if(content == null) content = Component.literal("???");
-
-        ms.pushPose();
-        ms.translate(.5, 1, .5);
-        ms.mulPose(camera.rotation());
-        ms.scale(-.025f, -.025f, .025f);
-        Matrix4f matrix4f = ms.last().pose();
-        float backOpacity = Minecraft.getInstance().options.getBackgroundOpacity(.25f);
-        int alpha = (int)(backOpacity * 255.0f) << 24;
-        float centerOffset = (float)(-font.width(content) / 2);
-        font.drawInBatch(content, centerOffset, 0, 553648127, false, matrix4f, buffer, Font.DisplayMode.NORMAL, alpha, light);
-        font.drawInBatch(content, centerOffset, 0, -1, false, matrix4f, buffer, Font.DisplayMode.NORMAL, 0, light);
-        ms.popPose();
+        textRenderer.drawInBatch(text, x, y, color, dropShadow, matrix, buffer, displayMode, backgroundColor, packedLight);
+        poseStack.popPose();
     }
 }
