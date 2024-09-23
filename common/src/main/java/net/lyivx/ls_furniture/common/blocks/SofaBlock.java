@@ -325,8 +325,6 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock, Wren
         return !(blockState.getBlock() instanceof SofaBlock) || blockState.getValue(FACING) != state.getValue(FACING);
     }
 
-
-
     @Override
     public BlockState rotate(BlockState state, Rotation rotation) {
         return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));

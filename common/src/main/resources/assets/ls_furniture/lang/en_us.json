@@ -7,6 +7,24 @@
   "gui.ls_furniture.jei.world_interaction.use_on": "Right Click On Block",
 
 
+  "config.ls_furniture.title": "LYIVX's Furniture Config",
+  "config.ls_furniture.category.general": "General",
+
+  "config.ls_furniture.sort_recipes": "Sort Recipes",
+  "config.ls_furniture.sort_recipes.tooltip": "Sort recipes following creative tab order. Could cause issues if creative order differs between server and client.",
+
+  "config.ls_furniture.search_bar_mode": "Search Bar Mode",
+  "config.ls_furniture.search_bar_mode.tooltip": "Determines how the search bar behaves in the GUI.",
+
+  "config.ls_furniture.search_bar_threshold": "Search Bar Threshold",
+  "config.ls_furniture.search_bar_threshold.tooltip": "At how many recipes the search bar should appear when in AUTOMATIC or DYNAMIC mode.",
+
+  "config.ls_furniture.search_mode.off": "Off",
+  "config.ls_furniture.search_mode.on": "On",
+  "config.ls_furniture.search_mode.automatic": "Automatic",
+  "config.ls_furniture.search_mode.dynamic": "Dynamic",
+
+
   "container.ls_furniture.workstation": "Workstation",
   "container.ls_furniture.drawer": "Drawer",
   "container.ls_furniture.mailbox": "Mailbox",
@@ -18,6 +36,7 @@
   "container.ls_furniture.fridge": "Fridge",
   "container.ls_furniture.freezer": "Freezer",
   "container.ls_furniture.crate": "Crate",
+  "container.ls_furniture.tombstone.edit": "Edit Tombstone Message",
 
   "container.ls_furniture.oak_chest": "Oak Chest",
   "container.ls_furniture.oak_chestDouble": "Large Oak Chest",
@@ -74,6 +93,7 @@
   "tooltip.ls_furniture.oven_vent": "§eRight Click §rOn A Cabinet",
   "tooltip.ls_furniture.fire_place": "§eRight Click §rWith Flint And Steel To Turn On",
   "tooltip.ls_furniture.fire_place_off": "§eRight Click §rWith Empty Hand To Turn Off",
+  "tooltip.ls_furniture.tombstone": "§eShift-Right Click §rTo Turn Off Dirt",
 
 
   "tooltip.ls_furniture.connectable": "§2 Connectable",
@@ -82,6 +102,7 @@
   "tooltip.ls_furniture.hammerable": "§2 Hammerable",
   "tooltip.ls_furniture.wrenchable": "§2 Wrenchable",
   "tooltip.ls_furniture.dyeable": "§2 Dyeable",
+  "tooltip.ls_furniture.shulkerbox": "§2 ShulkerBox-Like",
 
   "tooltip.ls_furniture.letter_add": "§eShift-Right Click §rWith An Item In Your Off-Hand To Attach The Item To The Letter",
   "tooltip.ls_furniture.letter_remove": "§eShift-Right Click §r To Remove The Attached Item From The Letter",
@@ -101,9 +122,19 @@
   "msg.ls_furniture.mailbox.mail_delivered": "Mail delivered",
   "msg.ls_furniture.mailbox.invalid_mail": "You cannot mail that",
 
+
+  "msg.ls_furniture.tombstone.set_owner": "You are the Owner of this Tombstone",
+
+
+  "msg.ls_furniture.locked": "This Block Is Locked",
+  "msg.ls_furniture.tool.selected": "Selected: ",
+  "msg.ls_furniture.hammer.no_lock": " Can Not Be Locked at ",
+  "msg.ls_furniture.hammer.locked": "Locked",
+  "msg.ls_furniture.hammer.unlocked": "Unlocked",
+
+
   "subtitle.ls_furniture.mailbox_update": "Mailbox toggles",
   "subtitle.ls_furniture.mail_received": "Mail received",
-
 
 
   "itemGroup.ls_furniture.tab": "LYIVX's Furniture Mod",
@@ -222,6 +253,11 @@
   "block.ls_furniture.oak_cabinet_oven_vent": "Oak Cabinet Oven Vent",
   "block.ls_furniture.oak_planks_hidden_door": "Oak Planks Hidden Door",
   "block.ls_furniture.oak_crate": "Oak Crate",
+  "block.ls_furniture.oak_roof": "Oak Roof",
+  "block.ls_furniture.oak_roof_shallow": "Oak Roof Shallow",
+  "block.ls_furniture.oak_roof_steep": "Oak Roof Steep",
+  "block.ls_furniture.oak_railing": "Oak Railing",
+  "block.ls_furniture.oak_tombstone": "Oak Tombstone",
 
 
   "block.ls_furniture.spruce_table": "Spruce Table",
@@ -262,6 +298,12 @@
   "block.ls_furniture.spruce_cabinet_oven_vent": "Spruce Cabinet Oven Vent",
   "block.ls_furniture.spruce_planks_hidden_door": "Spruce Planks Hidden Door",
   "block.ls_furniture.spruce_crate": "Spruce Crate",
+  "block.ls_furniture.spruce_roof": "Spruce Roof",
+  "block.ls_furniture.spruce_roof_shallow": "Spruce Roof Shallow",
+  "block.ls_furniture.spruce_roof_steep": "Spruce Roof Steep",
+  "block.ls_furniture.spruce_railing": "Spruce Railing",
+  "block.ls_furniture.spruce_tombstone": "Spruce Tombstone",
+
 
 
   "block.ls_furniture.birch_table": "Birch Table",
@@ -302,6 +344,11 @@
   "block.ls_furniture.birch_cabinet_oven_vent": "Birch Cabinet Oven Vent",
   "block.ls_furniture.birch_planks_hidden_door": "Birch Planks Hidden Door",
   "block.ls_furniture.birch_crate": "Birch Crate",
+  "block.ls_furniture.birch_roof": "Birch Roof",
+  "block.ls_furniture.birch_roof_shallow": "Birch Roof Shallow",
+  "block.ls_furniture.birch_roof_steep": "Birch Roof Steep",
+  "block.ls_furniture.birch_railing": "Birch Railing",
+  "block.ls_furniture.birch_tombstone": "Birch Tombstone",
 
 
   "block.ls_furniture.jungle_table": "Jungle Table",
@@ -342,6 +389,11 @@
   "block.ls_furniture.jungle_cabinet_oven_vent": "Jungle Cabinet Oven Vent",
   "block.ls_furniture.jungle_planks_hidden_door": "Jungle Planks Hidden Door",
   "block.ls_furniture.jungle_crate": "Jungle Crate",
+  "block.ls_furniture.jungle_roof": "Jungle Roof",
+  "block.ls_furniture.jungle_roof_shallow": "Jungle Roof Shallow",
+  "block.ls_furniture.jungle_roof_steep": "Jungle Roof Steep",
+  "block.ls_furniture.jungle_railing": "Jungle Railing",
+  "block.ls_furniture.jungle_tombstone": "Jungle Tombstone",
 
 
   "block.ls_furniture.acacia_table": "Acacia Table",
@@ -382,6 +434,11 @@
   "block.ls_furniture.acacia_cabinet_oven_vent": "Acacia Cabinet Oven Vent",
   "block.ls_furniture.acacia_planks_hidden_door": "Acacia Planks Hidden Door",
   "block.ls_furniture.acacia_crate": "Acacia Crate",
+  "block.ls_furniture.acacia_roof": "Acacia Roof",
+  "block.ls_furniture.acacia_roof_shallow": "Acacia Roof Shallow",
+  "block.ls_furniture.acacia_roof_steep": "Acacia Roof Steep",
+  "block.ls_furniture.acacia_railing": "Acacia Railing",
+  "block.ls_furniture.acacia_tombstone": "Acacia Tombstone",
 
 
   "block.ls_furniture.dark_oak_table": "Dark Oak Table",
@@ -422,6 +479,11 @@
   "block.ls_furniture.dark_oak_cabinet_oven_vent": "Dark Oak Cabinet Oven Vent",
   "block.ls_furniture.dark_oak_planks_hidden_door": "Dark Oak Planks Hidden Door",
   "block.ls_furniture.dark_oak_crate": "Dark Oak Crate",
+  "block.ls_furniture.dark_oak_roof": "Dark Oak Roof",
+  "block.ls_furniture.dark_oak_roof_shallow": "Dark Oak Roof Shallow",
+  "block.ls_furniture.dark_oak_roof_steep": "Dark Oak Roof Steep",
+  "block.ls_furniture.dark_oak_railing": "Dark Oak Railing",
+  "block.ls_furniture.dark_oak_tombstone": "Dark Oak Tombstone",
 
 
   "block.ls_furniture.mangrove_table": "Mangrove Table",
@@ -462,6 +524,11 @@
   "block.ls_furniture.mangrove_cabinet_oven_vent": "Mangrove Cabinet Oven Vent",
   "block.ls_furniture.mangrove_planks_hidden_door": "Mangrove Planks Hidden Door",
   "block.ls_furniture.mangrove_crate": "Mangrove Crate",
+  "block.ls_furniture.mangrove_roof": "Mangrove Roof",
+  "block.ls_furniture.mangrove_roof_shallow": "Mangrove Roof Shallow",
+  "block.ls_furniture.mangrove_roof_steep": "Mangrove Roof Steep",
+  "block.ls_furniture.mangrove_railing": "Mangrove Railing",
+  "block.ls_furniture.mangrove_tombstone": "Mangrove Tombstone",
 
 
   "block.ls_furniture.cherry_table": "Cherry Table",
@@ -502,6 +569,11 @@
   "block.ls_furniture.cherry_cabinet_oven_vent": "Cherry Cabinet Oven Vent",
   "block.ls_furniture.cherry_planks_hidden_door": "Cherry Planks Hidden Door",
   "block.ls_furniture.cherry_crate": "Cherry Crate",
+  "block.ls_furniture.cherry_roof": "Cherry Roof",
+  "block.ls_furniture.cherry_roof_shallow": "Cherry Roof Shallow",
+  "block.ls_furniture.cherry_roof_steep": "Cherry Roof Steep",
+  "block.ls_furniture.cherry_railing": "Cherry Railing",
+  "block.ls_furniture.cherry_tombstone": "Cherry Tombstone",
 
 
   "block.ls_furniture.bamboo_table": "Bamboo Table",
@@ -542,6 +614,11 @@
   "block.ls_furniture.bamboo_cabinet_oven_vent": "Bamboo Cabinet Oven Vent",
   "block.ls_furniture.bamboo_planks_hidden_door": "Bamboo Planks Hidden Door",
   "block.ls_furniture.bamboo_crate": "Bamboo Crate",
+  "block.ls_furniture.bamboo_roof": "Bamboo Roof",
+  "block.ls_furniture.bamboo_roof_shallow": "Bamboo Roof Shallow",
+  "block.ls_furniture.bamboo_roof_steep": "Bamboo Roof Steep",
+  "block.ls_furniture.bamboo_railing": "Bamboo Railing",
+  "block.ls_furniture.bamboo_tombstone": "Bamboo Tombstone",
 
 
   "block.ls_furniture.crimson_table": "Crimson Table",
@@ -582,6 +659,11 @@
   "block.ls_furniture.crimson_cabinet_oven_vent": "Crimson Cabinet Oven Vent",
   "block.ls_furniture.crimson_planks_hidden_door": "Crimson Planks Hidden Door",
   "block.ls_furniture.crimson_crate": "Crimson Crate",
+  "block.ls_furniture.crimson_roof": "Crimson Roof",
+  "block.ls_furniture.crimson_roof_shallow": "Crimson Roof Shallow",
+  "block.ls_furniture.crimson_roof_steep": "Crimson Roof Steep",
+  "block.ls_furniture.crimson_railing": "Crimson Railing",
+  "block.ls_furniture.crimson_tombstone": "Crimson Tombstone",
 
 
   "block.ls_furniture.warped_table": "Warped Table",
@@ -622,6 +704,11 @@
   "block.ls_furniture.warped_cabinet_oven_vent": "Warped Cabinet Oven Vent",
   "block.ls_furniture.warped_planks_hidden_door": "Warped Planks Hidden Door",
   "block.ls_furniture.warped_crate": "Warped Crate",
+  "block.ls_furniture.warped_roof": "Warped Roof",
+  "block.ls_furniture.warped_roof_shallow": "Warped Roof Shallow",
+  "block.ls_furniture.warped_roof_steep": "Warped Roof Steep",
+  "block.ls_furniture.warped_railing": "Warped Railing",
+  "block.ls_furniture.warped_tombstone": "Warped Tombstone",
 
 
   "block.ls_furniture.azalea_bush": "Azalea Bush",

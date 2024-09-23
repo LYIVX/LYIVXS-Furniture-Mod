@@ -6,6 +6,7 @@ import net.lyivx.ls_furniture.common.blocks.properties.VerticalConnectionType;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
+import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -126,9 +127,14 @@ public class OvenVentShaftBlock extends BaseEntityBlock implements SimpleWaterlo
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         if (level.isClientSide) return;
 
-        VerticalConnectionType type = getType(state, level.getBlockState(pos.above()), level.getBlockState(pos.below()));
-        state = state.setValue(VERTICAL, type);
-        level.setBlock(pos, state, 3);
+        if (level.getBlockEntity(pos) instanceof LockableBlockEntity lockable && !lockable.isLocked()) {
+
+            VerticalConnectionType type = getType(state, level.getBlockState(pos.above()), level.getBlockState(pos.below()));
+            state = state.setValue(VERTICAL, type);
+            level.setBlock(pos, state, 3);
+
+            super.neighborChanged(state, level, pos, block, fromPos, isMoving);
+        }
     }
 
     public VerticalConnectionType getType(BlockState state, BlockState above, BlockState below) {
@@ -160,6 +166,11 @@ public class OvenVentShaftBlock extends BaseEntityBlock implements SimpleWaterlo
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
         if (state.getValue(WATERLOGGED)) level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+
+        BlockEntity blockEntity = level.getBlockEntity(currentPos);
+        if (blockEntity instanceof ILockable lockable && lockable.isLocked()) {
+            return state; // Return the current state if the block is locked
+        }
 
         return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
     }

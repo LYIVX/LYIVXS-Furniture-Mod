@@ -1,7 +1,5 @@
 {
 	"credit": "Made by LYIVX",
-	"ambientocclusion": false,
-	"render_type": "cutout",
 	"textures": {
 		"particle": "block/oak_log",
 		"Main": "block/stripped_oak_log"

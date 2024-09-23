@@ -3,26 +3,17 @@ package net.lyivx.ls_furniture.registry;
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
-import dev.architectury.injectables.annotations.ExpectPlatform;
-import io.netty.channel.epoll.EpollServerChannelConfig;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.blocks.*;
 import net.lyivx.ls_furniture.common.blocks.BushBlock;
 import net.lyivx.ls_furniture.common.blocks.ModStairBlock;
-import net.lyivx.ls_furniture.common.blocks.entity.*;
 import net.lyivx.ls_furniture.common.blocks.properties.LeafType;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
@@ -121,6 +112,15 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> CRATES = ResourcefulRegistries.create
             (BLOCKS);
 
+    public static final ResourcefulRegistry<Block> ROOFS = ResourcefulRegistries.create
+            (BLOCKS);
+
+    public static final ResourcefulRegistry<Block> RAILINGS = ResourcefulRegistries.create
+            (BLOCKS);
+
+    public static final ResourcefulRegistry<Block> TOMBSTONES = ResourcefulRegistries.create
+            (BLOCKS);
+
     ////////////////////////////////////// INTERACTIVE //////////////////////////////////////
 
     public static final RegistryEntry<WorkstationBlock> WORKSTATION = BLOCKS.register("workstation",
@@ -167,38 +167,38 @@ public class ModBlocks {
 
     ////////////////////////////////////// CHESTS //////////////////////////////////////
 
-    public static final Supplier<CustomChestBlock> OAK_CHEST = CHESTS.register("oak_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "oak"));
+    public static final Supplier<ModChestBlock> OAK_CHEST = CHESTS.register("oak_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "oak"));
 
-    public static final Supplier<CustomChestBlock> SPRUCE_CHEST = CHESTS.register("spruce_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "spruce"));
+    public static final Supplier<ModChestBlock> SPRUCE_CHEST = CHESTS.register("spruce_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "spruce"));
 
-    public static final Supplier<CustomChestBlock> BIRCH_CHEST = CHESTS.register("birch_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "birch"));
+    public static final Supplier<ModChestBlock> BIRCH_CHEST = CHESTS.register("birch_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "birch"));
 
-    public static final Supplier<CustomChestBlock> JUNGLE_CHEST = CHESTS.register("jungle_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "jungle"));
+    public static final Supplier<ModChestBlock> JUNGLE_CHEST = CHESTS.register("jungle_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "jungle"));
 
-    public static final Supplier<CustomChestBlock> ACACIA_CHEST = CHESTS.register("acacia_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "acacia"));
+    public static final Supplier<ModChestBlock> ACACIA_CHEST = CHESTS.register("acacia_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "acacia"));
 
-    public static final Supplier<CustomChestBlock> DARK_OAK_CHEST = CHESTS.register("dark_oak_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "dark_oak"));
+    public static final Supplier<ModChestBlock> DARK_OAK_CHEST = CHESTS.register("dark_oak_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "dark_oak"));
 
-    public static final Supplier<CustomChestBlock> MANGROVE_CHEST = CHESTS.register("mangrove_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "mangrove"));
+    public static final Supplier<ModChestBlock> MANGROVE_CHEST = CHESTS.register("mangrove_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "mangrove"));
 
-    public static final Supplier<CustomChestBlock> CHERRY_CHEST = CHESTS.register("cherry_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "cherry"));
+    public static final Supplier<ModChestBlock> CHERRY_CHEST = CHESTS.register("cherry_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "cherry"));
 
-    public static final Supplier<CustomChestBlock> BAMBOO_CHEST = CHESTS.register("bamboo_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "bamboo"));
+    public static final Supplier<ModChestBlock> BAMBOO_CHEST = CHESTS.register("bamboo_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "bamboo"));
 
-    public static final Supplier<CustomChestBlock> CRIMSON_CHEST = CHESTS.register("crimson_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "crimson"));
+    public static final Supplier<ModChestBlock> CRIMSON_CHEST = CHESTS.register("crimson_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "crimson"));
 
-    public static final Supplier<CustomChestBlock> WARPED_CHEST = CHESTS.register("warped_chest",
-            () -> new CustomChestBlock(MapColor.WOOD, "warped"));
+    public static final Supplier<ModChestBlock> WARPED_CHEST = CHESTS.register("warped_chest",
+            () -> new ModChestBlock(MapColor.WOOD, "warped"));
     
     ////////////////////////////////////// BARRELS //////////////////////////////////////
 
@@ -929,6 +929,41 @@ public class ModBlocks {
     public static final Supplier<BlindsBlock> WARPED_BLINDS = BLINDS.register("warped_blinds",
             () -> new BlindsBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
 
+    ////////////////////////////////////// TOMBSTONES ////////////////////////////////////
+
+    public static final RegistryEntry<TombstoneBlock> OAK_TOMBSTONE = TOMBSTONES.register("oak_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> SPRUCE_TOMBSTONE = TOMBSTONES.register("spruce_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> BIRCH_TOMBSTONE = TOMBSTONES.register("birch_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> JUNGLE_TOMBSTONE = TOMBSTONES.register("jungle_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> ACACIA_TOMBSTONE = TOMBSTONES.register("acacia_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> DARK_OAK_TOMBSTONE = TOMBSTONES.register("dark_oak_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> MANGROVE_TOMBSTONE = TOMBSTONES.register("mangrove_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> CHERRY_TOMBSTONE = TOMBSTONES.register("cherry_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> BAMBOO_TOMBSTONE = TOMBSTONES.register("bamboo_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> CRIMSON_TOMBSTONE = TOMBSTONES.register("crimson_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
+
+    public static final RegistryEntry<TombstoneBlock> WARPED_TOMBSTONE = TOMBSTONES.register("warped_tombstone",
+            () -> new TombstoneBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
+
     ////////////////////////////////////// STAIRS ////////////////////////////////////
 
     public static final Supplier<ModStairBlock> OAK_STAIR = STAIRS.register("oak_stair",
@@ -967,37 +1002,173 @@ public class ModBlocks {
     ////////////////////////////////////// PLATFORMS ////////////////////////////////////
 
     public static final Supplier<PlatformBlock> OAK_PLATFORM = PLATFORMS.register("oak_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> SPRUCE_PLATFORM = PLATFORMS.register("spruce_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> BIRCH_PLATFORM = PLATFORMS.register("birch_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> JUNGLE_PLATFORM = PLATFORMS.register("jungle_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> ACACIA_PLATFORM = PLATFORMS.register("acacia_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> DARK_OAK_PLATFORM = PLATFORMS.register("dark_oak_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> MANGROVE_PLATFORM = PLATFORMS.register("mangrove_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> CHERRY_PLATFORM = PLATFORMS.register("cherry_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> BAMBOO_PLATFORM = PLATFORMS.register("bamboo_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> CRIMSON_PLATFORM = PLATFORMS.register("crimson_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
 
     public static final Supplier<PlatformBlock> WARPED_PLATFORM = PLATFORMS.register("warped_platform",
-            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
+            () -> new PlatformBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS).noOcclusion()));
+    
+    ////////////////////////////////////// RAILINGS ////////////////////////////////////
+
+    public static final Supplier<RailingBlock> OAK_RAILING = RAILINGS.register("oak_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final Supplier<RailingBlock> SPRUCE_RAILING = RAILINGS.register("spruce_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
+
+    public static final Supplier<RailingBlock> BIRCH_RAILING = RAILINGS.register("birch_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+
+    public static final Supplier<RailingBlock> JUNGLE_RAILING = RAILINGS.register("jungle_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
+
+    public static final Supplier<RailingBlock> ACACIA_RAILING = RAILINGS.register("acacia_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
+
+    public static final Supplier<RailingBlock> DARK_OAK_RAILING = RAILINGS.register("dark_oak_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
+
+    public static final Supplier<RailingBlock> MANGROVE_RAILING = RAILINGS.register("mangrove_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
+
+    public static final Supplier<RailingBlock> CHERRY_RAILING = RAILINGS.register("cherry_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+
+    public static final Supplier<RailingBlock> BAMBOO_RAILING = RAILINGS.register("bamboo_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
+
+    public static final Supplier<RailingBlock> CRIMSON_RAILING = RAILINGS.register("crimson_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
+
+    public static final Supplier<RailingBlock> WARPED_RAILING = RAILINGS.register("warped_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
+
+    //////////////////////////////////// ROOFS ////////////////////////////////////
+
+    public static final Supplier<StairBlock> OAK_ROOF = ROOFS.register("oak_roof",
+            () -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> OAK_ROOF_SHALLOW = ROOFS.register("oak_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> OAK_ROOF_STEEP = ROOFS.register("oak_roof_steep",
+            () -> new RoofSteepBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> SPRUCE_ROOF = ROOFS.register("spruce_roof",
+            () -> new StairBlock(Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> SPRUCE_ROOF_SHALLOW = ROOFS.register("spruce_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> SPRUCE_ROOF_STEEP = ROOFS.register("spruce_roof_steep",
+            () -> new RoofSteepBlock(Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> BIRCH_ROOF = ROOFS.register("birch_roof",
+            () -> new StairBlock(Blocks.BIRCH_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> BIRCH_ROOF_SHALLOW = ROOFS.register("birch_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.BIRCH_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> BIRCH_ROOF_STEEP = ROOFS.register("birch_roof_steep",
+            () -> new RoofSteepBlock(Blocks.BIRCH_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BIRCH_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> JUNGLE_ROOF = ROOFS.register("jungle_roof",
+            () -> new StairBlock(Blocks.JUNGLE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> JUNGLE_ROOF_SHALLOW = ROOFS.register("jungle_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.JUNGLE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> JUNGLE_ROOF_STEEP = ROOFS.register("jungle_roof_steep",
+            () -> new RoofSteepBlock(Blocks.JUNGLE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> ACACIA_ROOF = ROOFS.register("acacia_roof",
+            () -> new StairBlock(Blocks.ACACIA_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ACACIA_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> ACACIA_ROOF_SHALLOW = ROOFS.register("acacia_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.ACACIA_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ACACIA_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> ACACIA_ROOF_STEEP = ROOFS.register("acacia_roof_steep",
+            () -> new RoofSteepBlock(Blocks.ACACIA_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ACACIA_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> DARK_OAK_ROOF = ROOFS.register("dark_oak_roof",
+            () -> new StairBlock(Blocks.DARK_OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> DARK_OAK_ROOF_SHALLOW = ROOFS.register("dark_oak_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.DARK_OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> DARK_OAK_ROOF_STEEP = ROOFS.register("dark_oak_roof_steep",
+            () -> new RoofSteepBlock(Blocks.DARK_OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DARK_OAK_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> MANGROVE_ROOF = ROOFS.register("mangrove_roof",
+            () -> new StairBlock(Blocks.MANGROVE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MANGROVE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> MANGROVE_ROOF_SHALLOW = ROOFS.register("mangrove_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.MANGROVE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MANGROVE_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> MANGROVE_ROOF_STEEP = ROOFS.register("mangrove_roof_steep",
+            () -> new RoofSteepBlock(Blocks.MANGROVE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MANGROVE_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> CHERRY_ROOF = ROOFS.register("cherry_roof",
+            () -> new StairBlock(Blocks.CHERRY_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CHERRY_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> CHERRY_ROOF_SHALLOW = ROOFS.register("cherry_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.CHERRY_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CHERRY_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> CHERRY_ROOF_STEEP = ROOFS.register("cherry_roof_steep",
+            () -> new RoofSteepBlock(Blocks.CHERRY_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CHERRY_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> BAMBOO_ROOF = ROOFS.register("bamboo_roof",
+            () -> new StairBlock(Blocks.BAMBOO_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BAMBOO_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> BAMBOO_ROOF_SHALLOW = ROOFS.register("bamboo_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.BAMBOO_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BAMBOO_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> BAMBOO_ROOF_STEEP = ROOFS.register("bamboo_roof_steep",
+            () -> new RoofSteepBlock(Blocks.BAMBOO_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BAMBOO_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> CRIMSON_ROOF = ROOFS.register("crimson_roof",
+            () -> new StairBlock(Blocks.CRIMSON_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CRIMSON_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> CRIMSON_ROOF_SHALLOW = ROOFS.register("crimson_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.CRIMSON_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CRIMSON_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> CRIMSON_ROOF_STEEP = ROOFS.register("crimson_roof_steep",
+            () -> new RoofSteepBlock(Blocks.CRIMSON_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CRIMSON_STAIRS).noOcclusion()));
+
+    public static final Supplier<StairBlock> WARPED_ROOF = ROOFS.register("warped_roof",
+            () -> new StairBlock(Blocks.WARPED_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.WARPED_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofShallowBlock> WARPED_ROOF_SHALLOW = ROOFS.register("warped_roof_shallow",
+            () -> new RoofShallowBlock(Blocks.WARPED_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.WARPED_STAIRS).noOcclusion()));
+
+    public static final Supplier<RoofSteepBlock> WARPED_ROOF_STEEP = ROOFS.register("warped_roof_steep",
+            () -> new RoofSteepBlock(Blocks.WARPED_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.WARPED_STAIRS).noOcclusion()));
 
     //////////////////////////////////// HIDDEN DOORS //////////////////////////////////// 
 

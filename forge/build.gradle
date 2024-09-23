@@ -39,6 +39,8 @@ dependencies {
 
     modImplementation("curse.maven:jade-324717:5640610")
 
+    modImplementation("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
+
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }

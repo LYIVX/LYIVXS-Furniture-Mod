@@ -36,6 +36,8 @@ dependencies {
 
     modImplementation "curse.maven:jade-324717:5530010"
 
+    modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") { transitive false }
+
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 

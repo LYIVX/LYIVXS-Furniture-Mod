@@ -5,6 +5,7 @@ import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -96,12 +97,29 @@ public class HammerItem extends Item {
             boolean newLockState = !lockable.isLocked();
             lockable.setLocked(newLockState);
 
-            String lockStatus = newLockState ? "Locked" : "Unlocked";
-            player.displayClientMessage(Component.literal(lockStatus + " " + blockName + " at " + posString), true);
+            Component lockStatus = newLockState
+                    ? Component.translatable("msg.ls_furniture.hammer.locked")
+                    : Component.translatable("msg.ls_furniture.hammer.unlocked");
+
+            Component lockedMessage = ((MutableComponent) lockStatus)
+                    .append(" ")
+                    .append(blockName)
+                    .append(" at ")
+                    .append(posString);
+
+            player.displayClientMessage(lockedMessage, true);
             level.playSound(null, pos, getUseSound(), SoundSource.BLOCKS, 1.0f, 1.0f);
             return InteractionResult.SUCCESS;
         } else {
-            player.displayClientMessage(Component.literal(blockName + " Can Not Be Locked at " + posString), true);
+            Component noLock = Component.translatable("msg.ls_furniture.hammer.no_lock");
+            Component blockNameComponent = Component.literal(blockName);
+            Component posStringComponent = Component.literal(posString);
+
+            Component noLockMessage = ((MutableComponent) blockNameComponent)
+                    .append(noLock)
+                    .append(posStringComponent);
+
+            player.displayClientMessage(noLockMessage, true);
             return InteractionResult.FAIL;
         }
     }
@@ -156,8 +174,14 @@ public class HammerItem extends Item {
             // Send message to player about the selected property
             if (level instanceof Level && !((Level) level).isClientSide()) {
                 String propertyName = formatString(nextProperty.getName());
-                player.displayClientMessage(Component.literal("Selected: " + propertyName), true);
-            }
+
+                Component selected = Component.translatable("msg.ls_furniture.tool.selected");
+                Component propertyNameComponent = Component.literal(propertyName);
+
+                Component selectedMessage = ((MutableComponent) selected)
+                        .append(propertyNameComponent);
+
+                player.displayClientMessage(selectedMessage, true);            }
         } else {
             // Change the value of the currently selected property
             Property<?> propertyToChange = hammerableProperties.get((int) selectedPropertyIndex);

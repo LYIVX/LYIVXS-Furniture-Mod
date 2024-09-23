@@ -69,7 +69,7 @@ public class RecipeSorter {
 
 
     public static void sort(List<WorkstationRecipe> recipes, Level level) {
-        if (Configs.SORT_RECIPES.get()) {
+        if (Configs.SORT_RECIPES) {
             //Just runs once if needed. Needs to be the same from server and client
             refreshIfNeeded(level.registryAccess());
 

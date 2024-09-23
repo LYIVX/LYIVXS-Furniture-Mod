@@ -25,8 +25,15 @@ public class ModBlockStateProperties {
     public static final BooleanProperty NORTH_PLATFORM = BooleanProperty.create("north");
     public static final BooleanProperty EAST_PLATFORM = BooleanProperty.create("east");
     public static final BooleanProperty SOUTH_PLATFORM = BooleanProperty.create("south");
-    public static final BooleanProperty WEST_PLATFORM = BooleanProperty.create("west");
+    public static final BooleanProperty WEST_PLATFORM = BooleanProperty.create("west");    
+    public static final BooleanProperty NORTH_RAILING = BooleanProperty.create("north_railing");
+    public static final BooleanProperty EAST_RAILING = BooleanProperty.create("east_railing");
+    public static final BooleanProperty SOUTH_RAILING = BooleanProperty.create("south_railing");
+    public static final BooleanProperty WEST_RAILING = BooleanProperty.create("west_railing");
     public static final BooleanProperty UPDATE = BooleanProperty.create("update");
     public static final BooleanProperty STAND = BooleanProperty.create("stand");
     public static final BooleanProperty HAS_MAIL = BooleanProperty.create("has_mail");
+    public static final BooleanProperty HAS_WATER = BooleanProperty.create("has_water");
+    public static final BooleanProperty HAS_DIRT = BooleanProperty.create("has_dirt");
+    public static final BooleanProperty IS_DOUBLE = BooleanProperty.create("is_double");
 }

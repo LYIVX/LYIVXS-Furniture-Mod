@@ -1,10 +1,9 @@
 package net.lyivx.ls_furniture.common.blocks.entity;
 
-import net.lyivx.ls_furniture.common.blocks.CounterCupboardBlock;
-import net.lyivx.ls_furniture.common.blocks.DrawerBlock;
 import net.lyivx.ls_furniture.common.blocks.MailboxBlock;
 import net.lyivx.ls_furniture.common.items.LetterItem;
 import net.lyivx.ls_furniture.common.menus.ModChestMenu;
+import net.lyivx.ls_furniture.common.utils.block.BlockEntityHelper;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocksTags;
 import net.lyivx.ls_furniture.registry.ModItemTags;
@@ -13,7 +12,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerPlayer;
@@ -27,7 +25,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 

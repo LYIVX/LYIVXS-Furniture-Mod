@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.fabric;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
+import net.lyivx.ls_furniture.config.ModMenuApiImpl;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;

@@ -6,6 +6,8 @@ import net.fabricmc.api.Environment;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.renderers.*;
 import net.lyivx.ls_furniture.client.screens.LetterScreen;
+import net.lyivx.ls_furniture.client.screens.TombstoneScreen;
+import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModEntities;
@@ -50,10 +52,12 @@ public class LYIVXsFurnitureModClient {
         registerer.registerBlockEntity(ModBlockEntitys.BED_ENTITY.get(), BedCushionRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CHOPPING_BOARD_ENTITY.get(), ChoppingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CUTTING_BOARD_ENTITY.get(), CuttingBoardRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.CUSTOM_CHEST_ENTITY.get(), CustomChestRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.MOD_CHEST_ENTITY.get(), CustomChestRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.COUNTER_OVEN_ENTITY.get(), OvenRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.DRAINER_ENTITY.get(), DrainerRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.RAILING_ENTITY.get(), RailingPreviewRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.TOMBSTONE_ENTITY.get(), TombstoneRenderer::new);
     }
 
     public static void registerEntityRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
@@ -63,32 +67,75 @@ public class LYIVXsFurnitureModClient {
     public static void registerBlockColors(BlockColorsRegister register)
     {
         register.apply((state, reader, pos, index) -> {
-            return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
-        }, ModBlocks.OAK_BUSH.get(), ModBlocks.JUNGLE_BUSH.get(), ModBlocks.ACACIA_BUSH.get(), ModBlocks.DARK_OAK_BUSH.get());
+            return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();},
+                ModBlocks.OAK_BUSH.get(),
+                ModBlocks.JUNGLE_BUSH.get(),
+                ModBlocks.ACACIA_BUSH.get(),
+                ModBlocks.DARK_OAK_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getEvergreenColor();
-        }, ModBlocks.SPRUCE_BUSH.get());
+            return FoliageColor.getEvergreenColor();},
+                ModBlocks.SPRUCE_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getBirchColor();
-        }, ModBlocks.BIRCH_BUSH.get());
+            return FoliageColor.getBirchColor();},
+                ModBlocks.BIRCH_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getMangroveColor();
-        }, ModBlocks.MANGROVE_BUSH.get());
+            return FoliageColor.getMangroveColor();},
+                ModBlocks.MANGROVE_BUSH.get());
+
+        register.apply((state, reader, pos, i) -> {
+            return BiomeColors.getAverageWaterColor(reader, pos);
+        },
+                ModBlocks.OAK_COUNTER_SINK.get(),
+                ModBlocks.SPRUCE_COUNTER_SINK.get(),
+                ModBlocks.BIRCH_COUNTER_SINK.get(),
+                ModBlocks.JUNGLE_COUNTER_SINK.get(),
+                ModBlocks.ACACIA_COUNTER_SINK.get(),
+                ModBlocks.DARK_OAK_COUNTER_SINK.get(),
+                ModBlocks.MANGROVE_COUNTER_SINK.get(),
+                ModBlocks.CHERRY_COUNTER_SINK.get(),
+                ModBlocks.BAMBOO_COUNTER_SINK.get(),
+                ModBlocks.CRIMSON_COUNTER_SINK.get(),
+                ModBlocks.WARPED_COUNTER_SINK.get());
+
     }
 
     public static void registerItemColors(ItemColorsRegister register)
     {
         register.apply((stack, index) -> {
-            BlockState state = ((BlockItem) stack.getItem()).getBlock().defaultBlockState();
-            return Minecraft.getInstance().getBlockColors().getColor(state, null, null, index);
-        }, ModBlocks.OAK_BUSH.get(), ModBlocks.SPRUCE_BUSH.get(), ModBlocks.BIRCH_BUSH.get(), ModBlocks.JUNGLE_BUSH.get(), ModBlocks.ACACIA_BUSH.get(), ModBlocks.DARK_OAK_BUSH.get(), ModBlocks.MANGROVE_BUSH.get());
+                    BlockState state = ((BlockItem) stack.getItem()).getBlock().defaultBlockState();
+                    return Minecraft.getInstance().getBlockColors().getColor(state, null, null, index);},
+                ModBlocks.OAK_BUSH.get(),
+                ModBlocks.SPRUCE_BUSH.get(),
+                ModBlocks.BIRCH_BUSH.get(),
+                ModBlocks.JUNGLE_BUSH.get(),
+                ModBlocks.ACACIA_BUSH.get(),
+                ModBlocks.DARK_OAK_BUSH.get(),
+                ModBlocks.MANGROVE_BUSH.get(),
+
+                ModBlocks.OAK_COUNTER_SINK.get(),
+                ModBlocks.SPRUCE_COUNTER_SINK.get(),
+                ModBlocks.BIRCH_COUNTER_SINK.get(),
+                ModBlocks.JUNGLE_COUNTER_SINK.get(),
+                ModBlocks.ACACIA_COUNTER_SINK.get(),
+                ModBlocks.DARK_OAK_COUNTER_SINK.get(),
+                ModBlocks.MANGROVE_COUNTER_SINK.get(),
+                ModBlocks.CHERRY_COUNTER_SINK.get(),
+                ModBlocks.BAMBOO_COUNTER_SINK.get(),
+                ModBlocks.CRIMSON_COUNTER_SINK.get(),
+                ModBlocks.WARPED_COUNTER_SINK.get());
     }
 
     public static void openLetterGui(ItemStack stack, Player player, InteractionHand hand) {
-        Minecraft.getInstance().setScreen(new LetterScreen(stack, player, hand));
+        Minecraft.getInstance().execute(() ->
+                Minecraft.getInstance().setScreen(new LetterScreen(stack, player, hand)));
+    }
+
+    public static void openTombstoneGUI(TombstoneBlockEntity tombstoneBlockEntity) {
+        Minecraft.getInstance().execute(() ->
+                Minecraft.getInstance().setScreen(new TombstoneScreen(tombstoneBlockEntity)));
     }
 
     public static void initRenderTypes() {
@@ -241,6 +288,17 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.CRIMSON_CHAIN_LINK_FENCE_GATE.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_CHAIN_LINK_FENCE_GATE.get(), RenderType.cutout());
 
+        setRenderType(ModBlocks.OAK_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.SPRUCE_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.BIRCH_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.JUNGLE_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.ACACIA_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.DARK_OAK_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.MANGROVE_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.CHERRY_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.BAMBOO_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.CRIMSON_ROOF_STEEP.get(), RenderType.cutout());
+        setRenderType(ModBlocks.WARPED_ROOF_STEEP.get(), RenderType.cutout());
     }
 
     public static void registerModel(Consumer<ResourceLocation> modelLoader) {

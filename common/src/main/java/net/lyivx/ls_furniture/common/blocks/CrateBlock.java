@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.common.blocks;
 import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.TooltipHelper;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -33,6 +34,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,9 +71,17 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, BlockGetter world, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, world, tooltip, flag);
+    public void appendHoverText(ItemStack stack, BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, level, tooltip, flag);
         TooltipHelper.appendInventoryContent(stack, tooltip);
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
+            tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
+            tooltip.add(Component.translatable("tooltip.ls_furniture.wrenchable"));
+            tooltip.add(Component.translatable("tooltip.ls_furniture.shulkerbox"));
+        } else {
+            tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
+        }
     }
 
     @Override

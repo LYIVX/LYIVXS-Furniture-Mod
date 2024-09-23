@@ -13,8 +13,6 @@ dependencies {
     modImplementation("curse.maven:selene-499980:5093417")
 
     modImplementation("curse.maven:jade-324717:5640610")
-
-
 }
 
 architectury {

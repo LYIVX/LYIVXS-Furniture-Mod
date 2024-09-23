@@ -1,18 +1,33 @@
 {
     "variants": {
-        "facing=north": {
+        "facing=north,has_water=false": {
             "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink"
         },
-        "facing=east": {
+        "facing=east,has_water=false": {
             "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink",
             "y": 90
         },
-        "facing=south": {
+        "facing=south,has_water=false": {
             "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink",
             "y": 180
         },
-        "facing=west": {
+        "facing=west,has_water=false": {
             "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink",
+            "y": 270
+        },
+        "facing=north,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink_full"
+        },
+        "facing=east,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink_full",
+            "y": 90
+        },
+        "facing=south,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink_full",
+            "y": 180
+        },
+        "facing=west,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/dark_oak/counter_sink_full",
             "y": 270
         }
     }

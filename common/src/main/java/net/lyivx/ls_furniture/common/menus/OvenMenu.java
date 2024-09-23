@@ -27,7 +27,6 @@ public class OvenMenu extends AbstractFurnaceMenu {
 
     }
 
-
     @Override
     public boolean stillValid(Player player) {
         return super.stillValid(player);

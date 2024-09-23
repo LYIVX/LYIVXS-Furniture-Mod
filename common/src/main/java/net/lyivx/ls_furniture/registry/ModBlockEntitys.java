@@ -19,7 +19,7 @@ public class ModBlockEntitys {
 
     public static final ResourcefulRegistry<BlockEntityType<?>> BLOCK_ENTITIES = ResourcefulRegistries.create
             (BuiltInRegistries.BLOCK_ENTITY_TYPE, LYIVXsFurnitureMod.MOD_ID);
-
+    
 
     public static final Supplier<BlockEntityType<PlateBlockEntity>> PLATE_ENTITY = BLOCK_ENTITIES.register("plate",
             () -> createBlockEntityType(PlateBlockEntity::new,
@@ -215,7 +215,7 @@ public class ModBlockEntitys {
                     ModBlocks.CRIMSON_WARDROBE.get(),
                     ModBlocks.WARPED_WARDROBE.get()));
 
-    public static final Supplier<BlockEntityType<CustomChestBlockEntity>> CUSTOM_CHEST_ENTITY = BLOCK_ENTITIES.register("custom_chest",
+    public static final Supplier<BlockEntityType<CustomChestBlockEntity>> MOD_CHEST_ENTITY = BLOCK_ENTITIES.register("custom_chest",
             () -> createBlockEntityType(CustomChestBlockEntity::new,
                     ModBlocks.OAK_CHEST.get(),
                     ModBlocks.SPRUCE_CHEST.get(),
@@ -300,6 +300,36 @@ public class ModBlockEntitys {
                     ModBlocks.BAMBOO_CRATE.get(),
                     ModBlocks.CRIMSON_CRATE.get(),
                     ModBlocks.WARPED_CRATE.get()));
+
+    public static final Supplier<BlockEntityType<RailingBlockEntity>> RAILING_ENTITY = BLOCK_ENTITIES.register("railing",
+            () -> createBlockEntityType(RailingBlockEntity::new,
+                    ModBlocks.OAK_RAILING.get(),
+                    ModBlocks.SPRUCE_RAILING.get(),
+                    ModBlocks.BIRCH_RAILING.get(),
+                    ModBlocks.JUNGLE_RAILING.get(),
+                    ModBlocks.ACACIA_RAILING.get(),
+                    ModBlocks.DARK_OAK_RAILING.get(),
+                    ModBlocks.MANGROVE_RAILING.get(),
+                    ModBlocks.CHERRY_RAILING.get(),
+                    ModBlocks.BAMBOO_RAILING.get(),
+                    ModBlocks.CRIMSON_RAILING.get(),
+                    ModBlocks.WARPED_RAILING.get()));
+
+
+
+    public static final Supplier<BlockEntityType<TombstoneBlockEntity>> TOMBSTONE_ENTITY = BLOCK_ENTITIES.register("tombstone",
+            () -> createBlockEntityType(TombstoneBlockEntity::new,
+                    ModBlocks.OAK_TOMBSTONE.get(),
+                    ModBlocks.SPRUCE_TOMBSTONE.get(),
+                    ModBlocks.BIRCH_TOMBSTONE.get(),
+                    ModBlocks.JUNGLE_TOMBSTONE.get(),
+                    ModBlocks.ACACIA_TOMBSTONE.get(),
+                    ModBlocks.DARK_OAK_TOMBSTONE.get(),
+                    ModBlocks.MANGROVE_TOMBSTONE.get(),
+                    ModBlocks.CHERRY_TOMBSTONE.get(),
+                    ModBlocks.BAMBOO_TOMBSTONE.get(),
+                    ModBlocks.CRIMSON_TOMBSTONE.get(),
+                    ModBlocks.WARPED_TOMBSTONE.get()));
 
     ////////////////////////////////////////////////////////////////////////////
 

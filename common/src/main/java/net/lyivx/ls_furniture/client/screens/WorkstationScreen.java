@@ -1,6 +1,7 @@
 package net.lyivx.ls_furniture.client.screens;
 
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
+import net.lyivx.ls_furniture.client.screens.widgets.HoverImageButton;
 import net.lyivx.ls_furniture.common.config.Configs;
 import net.lyivx.ls_furniture.common.menus.WorkstationMenu;
 import net.lyivx.ls_furniture.common.recipes.FilterableRecipe;
@@ -27,9 +28,9 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     private static final ResourceLocation BACKGROUND = LYIVXsFurnitureMod.res("textures/gui/container/workstation.png");
     private static final ResourceLocation BACKGROUND_SEARCH = LYIVXsFurnitureMod.res("textures/gui/container/workstation_search.png");
     private static final ResourceLocation RECIPE_BUTTON_LOCATION = new ResourceLocation("textures/gui/recipe_button.png");
+    private static final ResourceLocation CONFIG_ICON = LYIVXsFurnitureMod.res("textures/gui/workstation_config_button.png");
 
     private final RecipeBookComponent recipeBookComponent = new RecipeBookComponent();
-    private boolean widthTooNarrow;
 
     private float scrollOffs;
     private boolean scrolling;
@@ -40,6 +41,8 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
 
     private final List<FilterableRecipe> filteredRecipes = new ArrayList<>();
     private int filteredIndex = -1;
+
+    private HoverImageButton gearButton;
 
     public WorkstationScreen(WorkstationMenu workstationMenu, Inventory inventory, Component component) {
         super(workstationMenu, inventory, component);
@@ -61,6 +64,21 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
         this.searchBox.setTextColor(16777215);
         this.searchBox.setResponder(s -> this.refreshSearchResults());
         this.addRenderableWidget(this.searchBox);
+
+        this.gearButton = this.addRenderableWidget(new HoverImageButton(
+                this.leftPos + 158, //144
+                this.topPos + this.imageHeight - 160, //110
+                12, 10,
+                0, 0, 12,
+                CONFIG_ICON,
+                24, 10,
+                12, 10,
+                button -> {
+                    // Open configuration screen
+                    this.minecraft.setScreen(new ConfigurationScreen(this));
+                }
+                ));
+
 
         updateSearchBarVisibility();
     }
@@ -295,7 +313,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
             int max = maxScrollY();
             this.scrollOffs = ((float) mouseY - min - 7.5F) / ((max - min) - 15.0F);
             this.scrollOffs = Mth.clamp(this.scrollOffs, 0.0F, 1.0F);
-            this.startIndex = (int) ((this.scrollOffs * this.getOffscreenRows()) + 0.5) * 4;
+            this.startIndex = (int) ((this.scrollOffs * this.getOffscreenRows()) + 0.5) * 5;
             return true;
         } else {
             return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);

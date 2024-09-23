@@ -5,6 +5,7 @@ import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.items.*;
+import net.mehvahdjukaar.moonlight.api.item.FuelItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
@@ -125,76 +126,76 @@ public class ModItems {
     public static final Supplier<Item> TOAST = FOODS.register("toast",
             () -> new Item(normal(ModFoodProperties.TOAST)));
 
-    public static final Supplier<Item> OAK_BARK = INGREDIENTS.register("oak_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> OAK_BARK = INGREDIENTS.register("oak_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> SPRUCE_BARK = INGREDIENTS.register("spruce_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> SPRUCE_BARK = INGREDIENTS.register("spruce_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> BIRCH_BARK = INGREDIENTS.register("birch_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BIRCH_BARK = INGREDIENTS.register("birch_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> JUNGLE_BARK = INGREDIENTS.register("jungle_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> JUNGLE_BARK = INGREDIENTS.register("jungle_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> ACACIA_BARK = INGREDIENTS.register("acacia_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> ACACIA_BARK = INGREDIENTS.register("acacia_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> DARK_OAK_BARK = INGREDIENTS.register("dark_oak_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> DARK_OAK_BARK = INGREDIENTS.register("dark_oak_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> MANGROVE_BARK = INGREDIENTS.register("mangrove_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> MANGROVE_BARK = INGREDIENTS.register("mangrove_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> CHERRY_BARK = INGREDIENTS.register("cherry_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CHERRY_BARK = INGREDIENTS.register("cherry_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> BAMBOO_BARK = INGREDIENTS.register("bamboo_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BAMBOO_BARK = INGREDIENTS.register("bamboo_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> CRIMSON_BARK = INGREDIENTS.register("crimson_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CRIMSON_BARK = INGREDIENTS.register("crimson_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> WARPED_BARK = INGREDIENTS.register("warped_bark",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> WARPED_BARK = INGREDIENTS.register("warped_bark",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
     ///////////////////////////////// STICKS / RODS ////////////////////////////////////
     
     public static final Supplier<Item> IRON_ROD = INGREDIENTS.register("iron_rod",
             () -> new Item(new Item.Properties()));
     
-    public static final Supplier<Item> OAK_STICK = INGREDIENTS.register("oak_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> OAK_STICK = INGREDIENTS.register("oak_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
     public static final Supplier<Item> SPRUCE_STICK = INGREDIENTS.register("spruce_stick",
-            () -> new Item(new Item.Properties()));
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> BIRCH_STICK = INGREDIENTS.register("birch_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BIRCH_STICK = INGREDIENTS.register("birch_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> JUNGLE_STICK = INGREDIENTS.register("jungle_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> JUNGLE_STICK = INGREDIENTS.register("jungle_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> ACACIA_STICK = INGREDIENTS.register("acacia_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> ACACIA_STICK = INGREDIENTS.register("acacia_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> DARK_OAK_STICK = INGREDIENTS.register("dark_oak_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> DARK_OAK_STICK = INGREDIENTS.register("dark_oak_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> MANGROVE_STICK = INGREDIENTS.register("mangrove_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> MANGROVE_STICK = INGREDIENTS.register("mangrove_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> CHERRY_STICK = INGREDIENTS.register("cherry_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CHERRY_STICK = INGREDIENTS.register("cherry_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> BAMBOO_STICK = INGREDIENTS.register("bamboo_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BAMBOO_STICK = INGREDIENTS.register("bamboo_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> CRIMSON_STICK = INGREDIENTS.register("crimson_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CRIMSON_STICK = INGREDIENTS.register("crimson_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
-    public static final Supplier<Item> WARPED_STICK = INGREDIENTS.register("warped_stick",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> WARPED_STICK = INGREDIENTS.register("warped_stick",
+            () -> new FuelItem(new Item.Properties(), () -> 100));
 
 
     ///////////////////////////////// FURNITURE PACKS ////////////////////////////////////
@@ -205,38 +206,38 @@ public class ModItems {
     public static final Supplier<Item> CONSTRUCTION_FURNITURE_PACK = INGREDIENTS.register("construction_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> OAK_FURNITURE_PACK = INGREDIENTS.register("oak_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> OAK_FURNITURE_PACK = INGREDIENTS.register("oak_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> SPRUCE_FURNITURE_PACK = INGREDIENTS.register("spruce_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> SPRUCE_FURNITURE_PACK = INGREDIENTS.register("spruce_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> BIRCH_FURNITURE_PACK = INGREDIENTS.register("birch_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BIRCH_FURNITURE_PACK = INGREDIENTS.register("birch_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> JUNGLE_FURNITURE_PACK = INGREDIENTS.register("jungle_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> JUNGLE_FURNITURE_PACK = INGREDIENTS.register("jungle_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> ACACIA_FURNITURE_PACK = INGREDIENTS.register("acacia_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> ACACIA_FURNITURE_PACK = INGREDIENTS.register("acacia_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> DARK_OAK_FURNITURE_PACK = INGREDIENTS.register("dark_oak_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> DARK_OAK_FURNITURE_PACK = INGREDIENTS.register("dark_oak_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> MANGROVE_FURNITURE_PACK = INGREDIENTS.register("mangrove_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> MANGROVE_FURNITURE_PACK = INGREDIENTS.register("mangrove_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> CHERRY_FURNITURE_PACK = INGREDIENTS.register("cherry_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CHERRY_FURNITURE_PACK = INGREDIENTS.register("cherry_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> BAMBOO_FURNITURE_PACK = INGREDIENTS.register("bamboo_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> BAMBOO_FURNITURE_PACK = INGREDIENTS.register("bamboo_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> CRIMSON_FURNITURE_PACK = INGREDIENTS.register("crimson_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> CRIMSON_FURNITURE_PACK = INGREDIENTS.register("crimson_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
-    public static final Supplier<Item> WARPED_FURNITURE_PACK = INGREDIENTS.register("warped_furniture_pack",
-            () -> new Item(new Item.Properties()));
+    public static final Supplier<FuelItem> WARPED_FURNITURE_PACK = INGREDIENTS.register("warped_furniture_pack",
+            () -> new FuelItem(new Item.Properties(), () -> 200));
 
 
     /////////////////////////////////// CHESTS ////////////////////////////////////
@@ -1006,6 +1007,41 @@ public class ModItems {
     public static final Supplier<Item> WARPED_BLINDS = DECO.register("warped_blinds",
             () -> new BlockItem(ModBlocks.WARPED_BLINDS.get(), new Item.Properties()));
 
+    ////////////////////////////////////// TOMBSTONES ////////////////////////////////////
+
+    public static final Supplier<Item> OAK_TOMBSTONE = DECO.register("oak_tombstone",
+            () -> new BlockItem(ModBlocks.OAK_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> SPRUCE_TOMBSTONE = DECO.register("spruce_tombstone",
+            () -> new BlockItem(ModBlocks.SPRUCE_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BIRCH_TOMBSTONE = DECO.register("birch_tombstone",
+            () -> new BlockItem(ModBlocks.BIRCH_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> JUNGLE_TOMBSTONE = DECO.register("jungle_tombstone",
+            () -> new BlockItem(ModBlocks.JUNGLE_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> ACACIA_TOMBSTONE = DECO.register("acacia_tombstone",
+            () -> new BlockItem(ModBlocks.ACACIA_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> DARK_OAK_TOMBSTONE = DECO.register("dark_oak_tombstone",
+            () -> new BlockItem(ModBlocks.DARK_OAK_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> MANGROVE_TOMBSTONE = DECO.register("mangrove_tombstone",
+            () -> new BlockItem(ModBlocks.MANGROVE_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CHERRY_TOMBSTONE = DECO.register("cherry_tombstone",
+            () -> new BlockItem(ModBlocks.CHERRY_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BAMBOO_TOMBSTONE = DECO.register("bamboo_tombstone",
+            () -> new BlockItem(ModBlocks.BAMBOO_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CRIMSON_TOMBSTONE = DECO.register("crimson_tombstone",
+            () -> new BlockItem(ModBlocks.CRIMSON_TOMBSTONE.get(), new Item.Properties()));
+
+    public static final Supplier<Item> WARPED_TOMBSTONE = DECO.register("warped_tombstone",
+            () -> new BlockItem(ModBlocks.WARPED_TOMBSTONE.get(), new Item.Properties()));
+
     ////////////////////////////////////// STAIRS ////////////////////////////////////
 
     public static final Supplier<Item> OAK_STAIR = DECO.register("oak_stair",
@@ -1076,6 +1112,142 @@ public class ModItems {
     public static final Supplier<Item> WARPED_PLATFORM = DECO.register("warped_platform",
             () -> new BlockItem(ModBlocks.WARPED_PLATFORM.get(), new Item.Properties()));
     
+    ////////////////////////////////////// RAILINGS ////////////////////////////////////
+    
+    public static final Supplier<Item> OAK_RAILING = DECO.register("oak_railing",
+            () -> new BlockItem(ModBlocks.OAK_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> SPRUCE_RAILING = DECO.register("spruce_railing",
+            () -> new BlockItem(ModBlocks.SPRUCE_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BIRCH_RAILING = DECO.register("birch_railing",
+            () -> new BlockItem(ModBlocks.BIRCH_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> JUNGLE_RAILING = DECO.register("jungle_railing",
+            () -> new BlockItem(ModBlocks.JUNGLE_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> ACACIA_RAILING = DECO.register("acacia_railing",
+            () -> new BlockItem(ModBlocks.ACACIA_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> DARK_OAK_RAILING = DECO.register("dark_oak_railing",
+            () -> new BlockItem(ModBlocks.DARK_OAK_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> MANGROVE_RAILING = DECO.register("mangrove_railing",
+            () -> new BlockItem(ModBlocks.MANGROVE_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CHERRY_RAILING = DECO.register("cherry_railing",
+            () -> new BlockItem(ModBlocks.CHERRY_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BAMBOO_RAILING = DECO.register("bamboo_railing",
+            () -> new BlockItem(ModBlocks.BAMBOO_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CRIMSON_RAILING = DECO.register("crimson_railing",
+            () -> new BlockItem(ModBlocks.CRIMSON_RAILING.get(), new Item.Properties()));
+
+    public static final Supplier<Item> WARPED_RAILING = DECO.register("warped_railing",
+            () -> new BlockItem(ModBlocks.WARPED_RAILING.get(), new Item.Properties()));
+    
+    ////////////////////////////////////// ROOFS ////////////////////////////////////    
+
+    public static final Supplier<Item> OAK_ROOF = DECO.register("oak_roof",
+            () -> new BlockItem(ModBlocks.OAK_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> OAK_ROOF_SHALLOW = DECO.register("oak_roof_shallow",
+            () -> new BlockItem(ModBlocks.OAK_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> OAK_ROOF_STEEP = DECO.register("oak_roof_steep",
+            () -> new BlockItem(ModBlocks.OAK_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> SPRUCE_ROOF = DECO.register("spruce_roof",
+            () -> new BlockItem(ModBlocks.SPRUCE_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> SPRUCE_ROOF_SHALLOW = DECO.register("spruce_roof_shallow",
+            () -> new BlockItem(ModBlocks.SPRUCE_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> SPRUCE_ROOF_STEEP = DECO.register("spruce_roof_steep",
+            () -> new BlockItem(ModBlocks.SPRUCE_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> BIRCH_ROOF = DECO.register("birch_roof",
+            () -> new BlockItem(ModBlocks.BIRCH_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BIRCH_ROOF_SHALLOW = DECO.register("birch_roof_shallow",
+            () -> new BlockItem(ModBlocks.BIRCH_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BIRCH_ROOF_STEEP = DECO.register("birch_roof_steep",
+            () -> new BlockItem(ModBlocks.BIRCH_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> JUNGLE_ROOF = DECO.register("jungle_roof",
+            () -> new BlockItem(ModBlocks.JUNGLE_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> JUNGLE_ROOF_SHALLOW = DECO.register("jungle_roof_shallow",
+            () -> new BlockItem(ModBlocks.JUNGLE_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> JUNGLE_ROOF_STEEP = DECO.register("jungle_roof_steep",
+            () -> new BlockItem(ModBlocks.JUNGLE_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> ACACIA_ROOF = DECO.register("acacia_roof",
+            () -> new BlockItem(ModBlocks.ACACIA_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> ACACIA_ROOF_SHALLOW = DECO.register("acacia_roof_shallow",
+            () -> new BlockItem(ModBlocks.ACACIA_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> ACACIA_ROOF_STEEP = DECO.register("acacia_roof_steep",
+            () -> new BlockItem(ModBlocks.ACACIA_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> DARK_OAK_ROOF = DECO.register("dark_oak_roof",
+            () -> new BlockItem(ModBlocks.DARK_OAK_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> DARK_OAK_ROOF_SHALLOW = DECO.register("dark_oak_roof_shallow",
+            () -> new BlockItem(ModBlocks.DARK_OAK_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> DARK_OAK_ROOF_STEEP = DECO.register("dark_oak_roof_steep",
+            () -> new BlockItem(ModBlocks.DARK_OAK_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> MANGROVE_ROOF = DECO.register("mangrove_roof",
+            () -> new BlockItem(ModBlocks.MANGROVE_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> MANGROVE_ROOF_SHALLOW = DECO.register("mangrove_roof_shallow",
+            () -> new BlockItem(ModBlocks.MANGROVE_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> MANGROVE_ROOF_STEEP = DECO.register("mangrove_roof_steep",
+            () -> new BlockItem(ModBlocks.MANGROVE_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> CHERRY_ROOF = DECO.register("cherry_roof",
+            () -> new BlockItem(ModBlocks.CHERRY_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CHERRY_ROOF_SHALLOW = DECO.register("cherry_roof_shallow",
+            () -> new BlockItem(ModBlocks.CHERRY_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CHERRY_ROOF_STEEP = DECO.register("cherry_roof_steep",
+            () -> new BlockItem(ModBlocks.CHERRY_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> BAMBOO_ROOF = DECO.register("bamboo_roof",
+            () -> new BlockItem(ModBlocks.BAMBOO_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BAMBOO_ROOF_SHALLOW = DECO.register("bamboo_roof_shallow",
+            () -> new BlockItem(ModBlocks.BAMBOO_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> BAMBOO_ROOF_STEEP = DECO.register("bamboo_roof_steep",
+            () -> new BlockItem(ModBlocks.BAMBOO_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> CRIMSON_ROOF = DECO.register("crimson_roof",
+            () -> new BlockItem(ModBlocks.CRIMSON_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CRIMSON_ROOF_SHALLOW = DECO.register("crimson_roof_shallow",
+            () -> new BlockItem(ModBlocks.CRIMSON_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> CRIMSON_ROOF_STEEP = DECO.register("crimson_roof_steep",
+            () -> new BlockItem(ModBlocks.CRIMSON_ROOF_STEEP.get(), new Item.Properties()));
+    
+    public static final Supplier<Item> WARPED_ROOF = DECO.register("warped_roof",
+            () -> new BlockItem(ModBlocks.WARPED_ROOF.get(), new Item.Properties()));
+
+    public static final Supplier<Item> WARPED_ROOF_SHALLOW = DECO.register("warped_roof_shallow",
+            () -> new BlockItem(ModBlocks.WARPED_ROOF_SHALLOW.get(), new Item.Properties()));
+
+    public static final Supplier<Item> WARPED_ROOF_STEEP = DECO.register("warped_roof_steep",
+            () -> new BlockItem(ModBlocks.WARPED_ROOF_STEEP.get(), new Item.Properties()));
+
     ////////////////////////////////////// DOORS ////////////////////////////////////
 
     public static final Supplier<Item> BOOKSHELF_HIDDEN_DOOR = DECO.register("bookshelf_hidden_door",

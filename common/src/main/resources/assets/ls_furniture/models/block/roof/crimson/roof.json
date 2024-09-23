@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/roofs/roof",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_crimson_stem",
+    "Secondary": "block/crimson_stem"
+  }
+}

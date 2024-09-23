@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,has_dirt=false": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone"
+        },
+        "facing=east,has_dirt=false": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone",
+            "y": 90
+        },
+        "facing=south,has_dirt=false": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone",
+            "y": 180
+        },
+        "facing=west,has_dirt=false": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone",
+            "y": 270
+        },
+        "facing=north,has_dirt=true": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone_dirt"
+        },
+        "facing=east,has_dirt=true": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone_dirt",
+            "y": 90
+        },
+        "facing=south,has_dirt=true": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone_dirt",
+            "y": 180
+        },
+        "facing=west,has_dirt=true": {
+            "model": "ls_furniture:block/tombstone/spruce/tombstone_dirt",
+            "y": 270
+        }
+    }
+}

@@ -1,25 +1,33 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.monster.piglin.PiglinAi;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -32,6 +40,7 @@ import java.util.stream.Stream;
 public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty HAS_WATER = ModBlockStateProperties.HAS_WATER;
 
     protected static final VoxelShape SHAPE_NORTH = Stream.of(
             Block.box(0, 16, 15, 16, 18, 16),
@@ -78,9 +87,58 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
     public CounterSinkBlock(Properties properties) {
         super(properties);
         registerDefaultState(this.stateDefinition.any()
-                .setValue(FACING, Direction.NORTH));
+                .setValue(FACING, Direction.NORTH)
+                .setValue(HAS_WATER, false));
     }
 
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        ItemStack stack = player.getItemInHand(hand);
+        Item item = stack.getItem();
+
+        if (item instanceof WrenchItem) {
+            return InteractionResult.FAIL;
+        }
+
+        BlockPos waterPos = pos.below().below();
+        Block water = level.getBlockState(waterPos).getBlock();
+        boolean hasWater = state.getValue(HAS_WATER);
+
+
+        if (water == Blocks.WATER && !hasWater) {
+            level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
+            return InteractionResult.SUCCESS;
+        }
+
+        if (item == Items.BUCKET && hasWater) {
+            stack.shrink(1);
+
+            ItemStack waterBucket = Items.WATER_BUCKET.getDefaultInstance();
+            if (!(player.getInventory().getFreeSlot() < 1)) {
+                player.addItem(waterBucket);
+            } else {
+                popResource(level, pos.above(), waterBucket);
+            }
+
+            level.setBlock(pos, state.setValue(HAS_WATER, false), 3);
+        }
+
+        if (item == Items.WATER_BUCKET && !hasWater) {
+            stack.shrink(1);
+
+            ItemStack emptyBucket = Items.BUCKET.getDefaultInstance();
+            if (!(player.getInventory().getFreeSlot() < 1)) {
+                player.addItem(emptyBucket);
+
+            } else {
+                popResource(level, pos.above(), emptyBucket);
+            }
+
+            level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
+        }
+
+        return InteractionResult.SUCCESS;
+    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -96,7 +154,7 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED);
+        builder.add(FACING, WATERLOGGED,HAS_WATER);
     }
 
     @Override

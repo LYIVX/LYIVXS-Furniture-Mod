@@ -9,10 +9,11 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/lyivxs-furniture",
-    "issues": "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
+    "issues": "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues",
+    "sources": "https://github.com/LYIVX/LYIVXS-Furniture-Mod"
   },
   "license": "All-Rights-Reserved",
-  "icon": "icon.png",
+  "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -23,6 +24,9 @@
     ],
     "jei_mod_plugin": [
       "net.lyivx.ls_furniture.common.compat.ModJeiPlugin"
+    ],
+    "modmenu": [
+      "net.lyivx.ls_furniture.config.ModMenuApiImpl"
     ]
   },
   "mixins": [
@@ -34,5 +38,17 @@
     "minecraft": ">=1.20.1",
     "resourcefullib": "*",
     "moonlight": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/YxXJpZK7nv",
+        "modmenu.modrinth": "https://modrinth.com/mod/lyivxs-furniture",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/lyivxs-furniture"
+      }
+    }
   }
 }

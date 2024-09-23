@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.items;
 
+import net.mehvahdjukaar.moonlight.api.item.FuelItem;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;

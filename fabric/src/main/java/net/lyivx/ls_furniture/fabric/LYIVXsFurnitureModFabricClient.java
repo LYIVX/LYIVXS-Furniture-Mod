@@ -1,6 +1,5 @@
 package net.lyivx.ls_furniture.fabric;
 
-import dev.architectury.registry.menu.MenuRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;

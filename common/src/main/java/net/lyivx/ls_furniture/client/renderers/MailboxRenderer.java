@@ -57,7 +57,6 @@ public class MailboxRenderer implements BlockEntityRenderer<MailboxBlockEntity> 
         poseStack.pushPose();
 
         try {
-
             switch (side) {
                 case NORTH:
                     poseStack.translate(0.5f, 0.775f, 0.6545f);

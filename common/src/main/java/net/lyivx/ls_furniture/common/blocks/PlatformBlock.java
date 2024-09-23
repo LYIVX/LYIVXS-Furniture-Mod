@@ -48,55 +48,59 @@ import static net.lyivx.ls_furniture.common.blocks.ModStairBlock.MODEL_TYPE;
 
 public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final BooleanProperty NORTH_1 = ModBlockStateProperties.NORTH_PLATFORM;
-    public static final BooleanProperty EAST_1 = ModBlockStateProperties.EAST_PLATFORM;
-    public static final BooleanProperty SOUTH_1 = ModBlockStateProperties.SOUTH_PLATFORM;
-    public static final BooleanProperty WEST_1 = ModBlockStateProperties.WEST_PLATFORM;
+    public static final BooleanProperty NORTH_PLATFORM = ModBlockStateProperties.NORTH_PLATFORM;
+    public static final BooleanProperty EAST_PLATFORM = ModBlockStateProperties.EAST_PLATFORM;
+    public static final BooleanProperty SOUTH_PLATFORM = ModBlockStateProperties.SOUTH_PLATFORM;
+    public static final BooleanProperty WEST_PLATFORM = ModBlockStateProperties.WEST_PLATFORM;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty UPDATE = ModBlockStateProperties.UPDATE;
 
     protected static final VoxelShape BOTTOM = Block.box(0, 0, 0, 16, 1, 16);
-    protected static final VoxelShape NORTH_S = Stream.of(Block.box(14, 1, 0, 16, 14, 2), Block.box(0, 1, 0, 2, 14, 2), Block.box(2, 14, 0, 14, 16, 2), Block.box(1, 14, 0, 2, 15, 2), Block.box(14, 14, 0, 15, 15, 2)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    protected static final VoxelShape EAST_S = ShapeUtil.rotateShape(NORTH_S, Direction.EAST);
-    protected static final VoxelShape SOUTH_S = ShapeUtil.rotateShape(NORTH_S, Direction.SOUTH);
-    protected static final VoxelShape WEST_S = ShapeUtil.rotateShape(NORTH_S, Direction.WEST);
+    protected static final VoxelShape PLATFORM_NORTH = Stream.of(
+            Block.box(0, 14, 0, 16, 16, 2),
+            Block.box(3, 1, 0, 5, 14, 2),
+            Block.box(11, 1, 0, 13, 14, 2)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    protected static final VoxelShape PLATFORM_EAST = ShapeUtil.rotateShape(PLATFORM_NORTH, Direction.EAST);
+    protected static final VoxelShape PLATFORM_SOUTH = ShapeUtil.rotateShape(PLATFORM_NORTH, Direction.SOUTH);
+    protected static final VoxelShape PLATFORM_WEST = ShapeUtil.rotateShape(PLATFORM_NORTH, Direction.WEST);
     protected static final VoxelShape[] SHAPES = new VoxelShape[]{
             BOTTOM,
-            Shapes.or(BOTTOM, NORTH_S),
-            Shapes.or(BOTTOM, EAST_S),
-            Shapes.or(BOTTOM, NORTH_S, EAST_S),
-            Shapes.or(BOTTOM, SOUTH_S),
-            Shapes.or(BOTTOM, NORTH_S, SOUTH_S),
-            Shapes.or(BOTTOM, EAST_S, SOUTH_S),
-            Shapes.or(BOTTOM, NORTH_S, EAST_S, SOUTH_S),
-            Shapes.or(BOTTOM, WEST_S),
-            Shapes.or(BOTTOM, NORTH_S, WEST_S),
-            Shapes.or(BOTTOM, EAST_S, WEST_S),
-            Shapes.or(BOTTOM, NORTH_S, EAST_S, WEST_S),
-            Shapes.or(BOTTOM, SOUTH_S, WEST_S),
-            Shapes.or(BOTTOM, NORTH_S, SOUTH_S, WEST_S),
-            Shapes.or(BOTTOM, EAST_S, SOUTH_S, WEST_S),
-            Shapes.or(BOTTOM, NORTH_S, EAST_S, SOUTH_S, WEST_S)
+            Shapes.or(BOTTOM, PLATFORM_NORTH),
+            Shapes.or(BOTTOM, PLATFORM_EAST),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_EAST),
+            Shapes.or(BOTTOM, PLATFORM_SOUTH),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_SOUTH),
+            Shapes.or(BOTTOM, PLATFORM_EAST, PLATFORM_SOUTH),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_EAST, PLATFORM_SOUTH),
+            Shapes.or(BOTTOM, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_EAST, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_EAST, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_SOUTH, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_SOUTH, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_EAST, PLATFORM_SOUTH, PLATFORM_WEST),
+            Shapes.or(BOTTOM, PLATFORM_NORTH, PLATFORM_EAST, PLATFORM_SOUTH, PLATFORM_WEST)
     };
 
     public PlatformBlock(Properties properties) {
         super(properties);
         registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
-                .setValue(NORTH_1, true)
-                .setValue(EAST_1, true)
-                .setValue(SOUTH_1, true)
-                .setValue(WEST_1, true)
+                .setValue(NORTH_PLATFORM, true)
+                .setValue(EAST_PLATFORM, true)
+                .setValue(SOUTH_PLATFORM, true)
+                .setValue(WEST_PLATFORM, true)
                 .setValue(WATERLOGGED, false));
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         int shape = 0;
-        if (state.getValue(NORTH_1)) shape += 1;
-        if (state.getValue(EAST_1)) shape += 2;
-        if (state.getValue(SOUTH_1)) shape += 4;
-        if (state.getValue(WEST_1)) shape += 8;
+        if (state.getValue(NORTH_PLATFORM)) shape += 1;
+        if (state.getValue(EAST_PLATFORM)) shape += 2;
+        if (state.getValue(SOUTH_PLATFORM)) shape += 4;
+        if (state.getValue(WEST_PLATFORM)) shape += 8;
         return SHAPES[shape];
     }
 
@@ -129,7 +133,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, NORTH_1, EAST_1, SOUTH_1, WEST_1, UPDATE, WATERLOGGED);
+        builder.add(FACING, NORTH_PLATFORM, EAST_PLATFORM, SOUTH_PLATFORM, WEST_PLATFORM, UPDATE, WATERLOGGED);
     }
 
     @Override
@@ -217,29 +221,29 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
     @Override
     public BlockState rotate(BlockState state, Rotation rotation) {
-        boolean north_1 = state.getValue(NORTH_1);
-        boolean east_1 = state.getValue(EAST_1);
-        boolean south_1 = state.getValue(SOUTH_1);
-        boolean west_1 = state.getValue(WEST_1);
+        boolean north_1 = state.getValue(NORTH_PLATFORM);
+        boolean east_1 = state.getValue(EAST_PLATFORM);
+        boolean south_1 = state.getValue(SOUTH_PLATFORM);
+        boolean west_1 = state.getValue(WEST_PLATFORM);
         return switch(rotation) {
             case NONE -> state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
             case CLOCKWISE_90 -> state
                     .setValue(FACING, rotation.rotate(state.getValue(FACING)))
-                    .setValue(NORTH_1, west_1)
-                    .setValue(EAST_1, north_1)
-                    .setValue(SOUTH_1, east_1)
-                    .setValue(WEST_1, south_1);
+                    .setValue(NORTH_PLATFORM, west_1)
+                    .setValue(EAST_PLATFORM, north_1)
+                    .setValue(SOUTH_PLATFORM, east_1)
+                    .setValue(WEST_PLATFORM, south_1);
             case CLOCKWISE_180 -> state
                     .setValue(FACING, rotation.rotate(state.getValue(FACING)))
-                    .setValue(NORTH_1, south_1)
-                    .setValue(EAST_1, west_1)
-                    .setValue(SOUTH_1, north_1).setValue(WEST_1, east_1);
+                    .setValue(NORTH_PLATFORM, south_1)
+                    .setValue(EAST_PLATFORM, west_1)
+                    .setValue(SOUTH_PLATFORM, north_1).setValue(WEST_PLATFORM, east_1);
             case COUNTERCLOCKWISE_90 -> state
                     .setValue(FACING, rotation.rotate(state.getValue(FACING)))
-                    .setValue(NORTH_1, east_1)
-                    .setValue(EAST_1, south_1)
-                    .setValue(SOUTH_1, west_1)
-                    .setValue(WEST_1, north_1);
+                    .setValue(NORTH_PLATFORM, east_1)
+                    .setValue(EAST_PLATFORM, south_1)
+                    .setValue(SOUTH_PLATFORM, west_1)
+                    .setValue(WEST_PLATFORM, north_1);
         };
     }
 
@@ -263,7 +267,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
         boolean south_1 = (!south) || !(validConnection(level.getBlockState(pos.south().north())));
         boolean west_1 = (!west) || !(validConnection(level.getBlockState(pos.west().east())));
         boolean update = ((north ? 1 : 0) + (east ? 1 : 0) + (south ? 1 : 0) + (west ? 1 : 0)) % 2 == 0;
-        return state.setValue(NORTH_1, north_1).setValue(EAST_1, east_1).setValue(SOUTH_1, south_1).setValue(WEST_1, west_1).setValue(UPDATE, update);
+        return state.setValue(NORTH_PLATFORM, north_1).setValue(EAST_PLATFORM, east_1).setValue(SOUTH_PLATFORM, south_1).setValue(WEST_PLATFORM, west_1).setValue(UPDATE, update);
     }
 
     public boolean validConnection(BlockState state) {
@@ -291,7 +295,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     public List<Property<?>> getHammerableProperties() {
-        return List.of(NORTH_1, EAST_1, SOUTH_1, WEST_1);
+        return List.of(NORTH_PLATFORM, EAST_PLATFORM, SOUTH_PLATFORM, WEST_PLATFORM);
     }
 
     public List<Property<?>> getWrenchableProperties() {

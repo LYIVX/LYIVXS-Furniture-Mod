@@ -1,9 +1,9 @@
 package net.lyivx.ls_furniture;
 
-import dev.architectury.networking.simple.MessageType;
-import dev.architectury.networking.simple.SimpleNetworkManager;
-import net.lyivx.ls_furniture.common.config.Configs;
+import net.lyivx.ls_furniture.client.screens.ConfigScreen;
+import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
 import net.lyivx.ls_furniture.common.network.NetworkRecipeSync;
+import net.lyivx.ls_furniture.common.network.UpdateTombstonePacket;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -35,7 +35,11 @@ public class LYIVXsFurnitureMod {
         ModItemTags.init();
 
         NetworkRecipeSync.init();
-        Configs.init();
+
+        ConfigScreen.initConfig();
+
+
+
     }
 
     public static ResourceLocation res(String name) {
