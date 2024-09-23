@@ -62,7 +62,7 @@ public class ModJeiPlugin implements IModPlugin {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
 
         List<WorkstationRecipe> recipesCraftingWorkstation = rm.getAllRecipesFor(ModRecipes.WORKSTATION_RECIPE.get());
-        registration.addRecipes(WORKSTATION_RECIPE_TYPE, recipesCraftingWorkstation);
+        registration.addRecipes(WorkstationRecipeCategory.WORKSTATION_RECIPE_TYPE, recipesCraftingWorkstation);
 
         List<WorldInteractionRecipe> recipesCraftingWorldInteraction = rm.getAllRecipesFor(ModRecipes.WORLD_INTERACTION_RECIPE.get());
         registration.addRecipes(WorldInteractionRecipeCategory.WORLD_INTERACTION_RECIPE_TYPE, recipesCraftingWorldInteraction);
@@ -76,7 +76,7 @@ public class ModJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-        registration.addRecipeCatalyst(new ItemStack(ModBlocks.WORKSTATION.get()), WORKSTATION_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.WORKSTATION.get()), WorkstationRecipeCategory.WORKSTATION_RECIPE_TYPE);
         registration.addRecipeCatalyst(new ItemStack(Blocks.GRASS_BLOCK), WorldInteractionRecipeCategory.WORLD_INTERACTION_RECIPE_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.CHOPPING_BOARD.get()), ChoppingBoardCategory.CHOPPING_BOARD_RECIPE_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.CUTTING_BOARD.get()), CuttingBoardCategory.CUTTING_BOARD_RECIPE_TYPE);

@@ -35,8 +35,8 @@ public class CuttingBoardCategory extends BaseCategory<CuttingBoardRecipe> {
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull CuttingBoardRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 29, 6)
                 .addIngredients(recipe.input())
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
                 .setSlotName("input");
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 29, 82)
@@ -45,14 +45,14 @@ public class CuttingBoardCategory extends BaseCategory<CuttingBoardRecipe> {
 
         builder.addSlot(RecipeIngredientRole.CATALYST, 56, 42)
                 .addIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModItems.KNIFE.get()))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
                 .setSlotName("axe");
 
         builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 29, 42)
                 .addIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.CUTTING_BOARD.get(), recipe.uses()))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
+                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
                 .setSlotName("cutting_board");
 
     }

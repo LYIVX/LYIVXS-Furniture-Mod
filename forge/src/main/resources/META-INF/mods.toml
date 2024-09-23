@@ -40,3 +40,10 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
     versionRange = "[*,)"
     ordering = "NONE"
     side = "BOTH"
+
+[[dependencies.ls_furniture]]
+    modId = "architectury"
+    mandatory = true
+    versionRange = "[*,)"
+    ordering = "NONE"
+    side = "BOTH"

@@ -1,4 +1,5 @@
 {
+  "gui.ls_furniture.jei.workstation": "Workstation",
   "gui.ls_furniture.jei.chopping_board": "Chopping Board",
   "gui.ls_furniture.jei.cutting_board": "Cutting Board",
   "gui.ls_furniture.jei.chopping_board.chops": "Requires %s chops.",
