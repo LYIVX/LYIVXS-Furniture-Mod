@@ -53,17 +53,17 @@ shadowJar {
     exclude "fabric.mod.json"
 
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier.set("${minecraft_version}-dev-shadow") // Set the classifier for the output JAR file
+    archiveClassifier.set("dev-shadow-${minecraft_version}") // Set the classifier for the output JAR file
 }
 
 remapJar {
     input.set(shadowJar.archiveFile)
     dependsOn(shadowJar)
-    archiveClassifier.set("${minecraft_version}-Forge") // Set the classifier for the output remapped JAR file
+    archiveClassifier.set("Forge-${minecraft_version}") // Set the classifier for the output remapped JAR file
 }
 
 jar {
-    archiveClassifier.set("${minecraft_version}-dev") // Set the classifier for the output JAR file
+    archiveClassifier.set("dev-${minecraft_version}") // Set the classifier for the output JAR file
 }
 
 sourcesJar {
