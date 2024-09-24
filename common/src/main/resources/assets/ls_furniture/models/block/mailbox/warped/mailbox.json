@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/mailboxes/mailbox",
+  "textures": {
+    "particle": "#Main",
+    "Secondary": "block/warped_stem",
+    "Main": "block/stripped_warped_stem",
+    "Black": "block/black_concrete",
+    "Red": "block/red_wool"
+  }
+}

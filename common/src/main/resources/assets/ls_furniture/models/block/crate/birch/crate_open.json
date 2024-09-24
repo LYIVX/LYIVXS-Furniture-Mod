@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/crates/crate_open",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_birch_log",
+    "Secondary": "block/birch_log",
+    "Handle": "block/anvil"
+  }
+}

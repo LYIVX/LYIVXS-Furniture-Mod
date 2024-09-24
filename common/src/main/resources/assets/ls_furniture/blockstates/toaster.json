@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,toasting=false,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster"
+    },
+    "facing=east,toasting=false,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 90
+    },
+    "facing=south,toasting=false,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 180
+    },
+    "facing=west,toasting=false,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 270
+    },
+    "facing=north,toasting=true,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster_slice"
+    },
+    "facing=east,toasting=true,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 90
+    },
+    "facing=south,toasting=true,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 180
+    },
+    "facing=west,toasting=true,waterlogged=false": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 270
+    },
+    "facing=north,toasting=false,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster"
+    },
+    "facing=east,toasting=false,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 90
+    },
+    "facing=south,toasting=false,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 180
+    },
+    "facing=west,toasting=false,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster",
+      "y": 270
+    },
+    "facing=north,toasting=true,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster_slice"
+    },
+    "facing=east,toasting=true,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 90
+    },
+    "facing=south,toasting=true,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 180
+    },
+    "facing=west,toasting=true,waterlogged=true": {
+      "model": "ls_furniture:block/toaster/toaster_slice",
+      "y": 270
+    }
+  }
+}

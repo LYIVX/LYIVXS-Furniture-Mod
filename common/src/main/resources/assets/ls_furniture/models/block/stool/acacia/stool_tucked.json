@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/stools/stool_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Leg": "block/acacia_log",
+		"Main": "block/stripped_acacia_log",
+		"Secondary": "block/stripped_acacia_log"
+	}
+}

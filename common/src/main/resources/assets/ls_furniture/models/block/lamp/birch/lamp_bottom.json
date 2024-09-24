@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/lamps/lamp_bottom",
+  "textures": {
+    "Log": "block/birch_log",
+    "particle": "block/stripped_birch_log_top",
+    "Stripped": "block/stripped_birch_log",
+    "Torch": "block/birch_log"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:birch_planks"
+    }
+  },
+  "result": {
+    "item": "ls_furniture:birch_stick",
+    "count": 4
+  }
+}

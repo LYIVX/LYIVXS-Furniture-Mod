@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "facing=north,vertical=up,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top"
+    },
+    "facing=north,vertical=up,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top_open"
+    },
+    "facing=north,vertical=down,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom"
+    },
+    "facing=north,vertical=down,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom_open"
+    },
+    "facing=east,vertical=up,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top",
+      "y": 90
+    },
+    "facing=east,vertical=up,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top_open",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom_open",
+      "y": 90
+    },
+    "facing=south,vertical=up,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top",
+      "y": 180
+    },
+    "facing=south,vertical=up,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top_open",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom_open",
+      "y": 180
+    },
+    "facing=west,vertical=up,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top",
+      "y": 270
+    },
+    "facing=west,vertical=up,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_top_open",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=single,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=single,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_single_bottom_open",
+      "y": 270
+    },
+    "facing=north,vertical=up,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top"
+    },
+    "facing=north,vertical=up,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top_open"
+    },
+    "facing=north,vertical=down,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom"
+    },
+    "facing=north,vertical=down,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom_open"
+    },
+    "facing=east,vertical=up,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top",
+      "y": 90
+    },
+    "facing=east,vertical=up,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top_open",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom_open",
+      "y": 90
+    },
+    "facing=south,vertical=up,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top",
+      "y": 180
+    },
+    "facing=south,vertical=up,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top_open",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom_open",
+      "y": 180
+    },
+    "facing=west,vertical=up,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top",
+      "y": 270
+    },
+    "facing=west,vertical=up,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_top_open",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=left,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=left,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_left_bottom_open",
+      "y": 270
+    },
+    "facing=north,vertical=up,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top"
+    },
+    "facing=north,vertical=up,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top_open"
+    },
+    "facing=north,vertical=down,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom"
+    },
+    "facing=north,vertical=down,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom_open"
+    },
+    "facing=east,vertical=up,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top",
+      "y": 90
+    },
+    "facing=east,vertical=up,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top_open",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom_open",
+      "y": 90
+    },
+    "facing=south,vertical=up,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top",
+      "y": 180
+    },
+    "facing=south,vertical=up,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top_open",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom_open",
+      "y": 180
+    },
+    "facing=west,vertical=up,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top",
+      "y": 270
+    },
+    "facing=west,vertical=up,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_top_open",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=right,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=right,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_right_bottom_open",
+      "y": 270
+    },
+    "facing=north,vertical=up,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top"
+    },
+    "facing=north,vertical=up,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top_open"
+    },
+    "facing=north,vertical=down,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom"
+    },
+    "facing=north,vertical=down,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom_open"
+    },
+    "facing=east,vertical=up,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top",
+      "y": 90
+    },
+    "facing=east,vertical=up,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top_open",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom",
+      "y": 90
+    },
+    "facing=east,vertical=down,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom_open",
+      "y": 90
+    },
+    "facing=south,vertical=up,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top",
+      "y": 180
+    },
+    "facing=south,vertical=up,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top_open",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom",
+      "y": 180
+    },
+    "facing=south,vertical=down,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom_open",
+      "y": 180
+    },
+    "facing=west,vertical=up,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top",
+      "y": 270
+    },
+    "facing=west,vertical=up,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_top_open",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=middle,open=false": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom",
+      "y": 270
+    },
+    "facing=west,vertical=down,horizontal=middle,open=true": {
+      "model": "ls_furniture:block/blinds/bamboo/blinds_middle_bottom_open",
+      "y": 270
+    }
+  }
+}

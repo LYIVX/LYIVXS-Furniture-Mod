@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "vertical=single,facing=north": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_single"
+    },
+    "vertical=single,facing=east": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_single",
+      "y": 90
+    },
+    "vertical=single,facing=south": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_single",
+      "y": 180
+    },
+    "vertical=single,facing=west": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_single",
+      "y": 270
+    },
+    "vertical=top,facing=north": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_top"
+    },
+    "vertical=top,facing=east": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_top",
+      "y": 90
+    },
+    "vertical=top,facing=south": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_top",
+      "y": 180
+    },
+    "vertical=top,facing=west": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_top",
+      "y": 270
+    },
+    "vertical=bottom,facing=north": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_bottom"
+    },
+    "vertical=bottom,facing=east": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_bottom",
+      "y": 90
+    },
+    "vertical=bottom,facing=south": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_bottom",
+      "y": 180
+    },
+    "vertical=bottom,facing=west": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_bottom",
+      "y": 270
+    },
+    "vertical=middle,facing=north": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_middle"
+    },
+    "vertical=middle,facing=east": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_middle",
+      "y": 90
+    },
+    "vertical=middle,facing=south": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_middle",
+      "y": 180
+    },
+    "vertical=middle,facing=west": {
+      "model": "ls_furniture:block/oven_vent_shaft/oven_vent_shaft_middle",
+      "y": 270
+    }
+  }
+}

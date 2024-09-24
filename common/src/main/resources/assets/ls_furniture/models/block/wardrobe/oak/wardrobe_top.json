@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/wardrobes/wardrobe_top",
+  "textures": {
+    "particle": "#Main",
+    "Handle": "ls_furniture:block/handles/handle_oak",
+    "Secondary": "block/oak_log",
+    "Main": "block/stripped_oak_log",
+    "Handle Big": "ls_furniture:block/handles/handle_big_oak"
+  }
+}

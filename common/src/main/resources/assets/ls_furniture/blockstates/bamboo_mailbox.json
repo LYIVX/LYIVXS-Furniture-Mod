@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,has_mail=false": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox"
+        },
+        "facing=east,has_mail=false": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox",
+            "y": 90
+        },
+        "facing=south,has_mail=false": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox",
+            "y": 180
+        },
+        "facing=west,has_mail=false": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox",
+            "y": 270
+        },
+        "facing=north,has_mail=true": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox_has_mail"
+        },
+        "facing=east,has_mail=true": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox_has_mail",
+            "y": 90
+        },
+        "facing=south,has_mail=true": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox_has_mail",
+            "y": 180
+        },
+        "facing=west,has_mail=true": {
+            "model": "ls_furniture:block/mailbox/bamboo/mailbox_has_mail",
+            "y": 270
+        }
+    }
+}

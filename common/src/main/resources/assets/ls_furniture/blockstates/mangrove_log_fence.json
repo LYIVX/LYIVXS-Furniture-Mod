@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "ls_furniture:block/log_fence/mangrove/log_fence_post"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/log_fence/mangrove/log_fence",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/log_fence/mangrove/log_fence",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/log_fence/mangrove/log_fence",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/log_fence/mangrove/log_fence",
+        "y": 90,
+        "uvlock": true
+      }
+    }
+  ]
+}

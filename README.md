@@ -22,7 +22,7 @@
         </tbody>
     </table>
 <p>&nbsp;</p>
-<p><img style="aspect-ratio:1920/7778;" src="https://imgur.com/ekjrmxh.png" width="1920" height="7778"></p>
+<p><img style="aspect-ratio:1920/7778;" src="https://imgur.com/WUWycEQ.png" width="1920" height="10038"></p>
     <table>
         <tbody>
             <tr>

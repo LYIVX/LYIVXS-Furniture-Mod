@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/wardrobes/wardrobe_bottom_open",
+  "textures": {
+    "particle": "#Main",
+    "Handle": "ls_furniture:block/handles/handle_bamboo",
+    "Secondary": "block/bamboo_block",
+    "Main": "block/stripped_bamboo_block",
+    "Handle Big": "ls_furniture:block/handles/handle_bamboo"
+  }
+}

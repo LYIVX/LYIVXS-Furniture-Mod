@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/bushes/bush_post_2",
+  "textures": {
+    "texture": "block/dark_oak_leaves",
+    "particle": "block/dark_oak_leaves"
+  },
+  "render_type": "cutout"
+}
