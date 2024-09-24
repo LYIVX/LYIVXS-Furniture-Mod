@@ -65,7 +65,8 @@ public class ModBedBlock extends BedBlock implements EntityBlock {
         return part == BedPart.FOOT ? direction : direction.getOpposite();
     }
 
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    @Override
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide && player.isCreative()) {
             BedPart bedPart = (BedPart)state.getValue(PART);
             if (bedPart == BedPart.FOOT) {
@@ -77,8 +78,7 @@ public class ModBedBlock extends BedBlock implements EntityBlock {
                 }
             }
         }
-
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {

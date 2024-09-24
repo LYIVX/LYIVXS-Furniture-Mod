@@ -72,14 +72,14 @@ public class SeatEntity extends Entity {
     protected void addAdditionalSaveData(CompoundTag compound) {}
 
     @Override
-    public double getPassengersRidingOffset() {
+    protected float ridingOffset(Entity entity) {
         List<Entity> passengers = this.getPassengers();
-        if (passengers.isEmpty()) return 0.0;
+        if (passengers.isEmpty()) return 0.0F;
         double seatHeight = 0.0;
         BlockState state = level().getBlockState(this.blockPosition());
         if (state.getBlock() instanceof SeatBlock seatBlock) seatHeight = seatBlock.seatHeight(state);
 
-        return seatHeight + getEntitySeatOffset(passengers.get(0));
+        return (float) (seatHeight + getEntitySeatOffset(passengers.get(0)));
     }
 
     public static double getEntitySeatOffset(Entity entity) {

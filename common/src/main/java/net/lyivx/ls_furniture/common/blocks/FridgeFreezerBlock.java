@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.FridgeBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.FreezerBlockEntity;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
@@ -35,6 +36,7 @@ import java.util.Locale;
 import java.util.stream.Stream;
 
 public class FridgeFreezerBlock extends BaseEntityBlock {
+    public static final MapCodec<FridgeFreezerBlock> CODEC = simpleCodec(FridgeFreezerBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static final EnumProperty<FridgeModelType> MODEL_TYPE = EnumProperty.create("model", FridgeModelType.class);
@@ -46,6 +48,11 @@ public class FridgeFreezerBlock extends BaseEntityBlock {
                 .setValue(FACING, Direction.NORTH)
                 .setValue(MODEL_TYPE, FridgeModelType.BOTTOM)
                 .setValue(OPEN, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -98,7 +105,7 @@ public class FridgeFreezerBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
             FridgeModelType modelType = state.getValue(MODEL_TYPE);
             BlockPos otherPos = pos.relative(getNeighbourDirection(modelType));
@@ -123,7 +130,7 @@ public class FridgeFreezerBlock extends BaseEntityBlock {
             }
         }
 
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
 

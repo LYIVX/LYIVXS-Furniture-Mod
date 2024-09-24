@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.menus.WorkstationMenu;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
 import net.minecraft.core.BlockPos;
@@ -35,6 +36,7 @@ import java.util.Locale;
 import java.util.stream.Stream;
 
 public class WorkstationBlock extends HorizontalDirectionalBlock {
+    public static final MapCodec<WorkstationBlock> CODEC = simpleCodec(WorkstationBlock::new);
     private static final Component CONTAINER_TITLE = Component.translatable("container.ls_furniture.workstation");
     public static final EnumProperty<WorkstationModelType> MODEL_TYPE = EnumProperty.create("model", WorkstationModelType.class);
 
@@ -43,6 +45,11 @@ public class WorkstationBlock extends HorizontalDirectionalBlock {
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(MODEL_TYPE, WorkstationModelType.MAIN));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -86,10 +93,10 @@ public class WorkstationBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (level.isClientSide) {
             super.playerWillDestroy(level, pos, state, player);
-            return;
+            return state;
         }
         WorkstationModelType workstationModel = state.getValue(MODEL_TYPE);
         if (workstationModel == WorkstationModelType.MAIN) {
@@ -140,7 +147,7 @@ public class WorkstationBlock extends HorizontalDirectionalBlock {
                 level.levelEvent(player, LevelEvent.PARTICLES_DESTROY_BLOCK, belowpos, Block.getId(otherstate));
             }
         }
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
     @Override

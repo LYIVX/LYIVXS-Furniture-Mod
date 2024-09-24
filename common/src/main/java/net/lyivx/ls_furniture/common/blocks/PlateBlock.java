@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.PlateBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
@@ -21,6 +22,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -41,6 +43,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
+    public static final MapCodec<PlateBlock> CODEC = simpleCodec(PlateBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -52,6 +55,11 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
         );
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -83,7 +91,7 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof PlateBlockEntity plateBE) {
             // Get the first non-empty item from the plate

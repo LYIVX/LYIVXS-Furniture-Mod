@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.TooltipHelper;
@@ -20,6 +21,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -34,12 +36,12 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CrateBlock extends BaseEntityBlock implements WrenchItem.WrenchableBlock {
+    public static final MapCodec<CrateBlock> CODEC = simpleCodec(CrateBlock::new);
     public static ArrayList<CrateBlock> ALL_CRATES = new ArrayList<>();
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
@@ -50,6 +52,11 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
                 .setValue(FACING, Direction.NORTH)
                 .setValue(OPEN, false));
         ALL_CRATES.add(this);
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -103,7 +110,7 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
     }
 
     // copied from ShulkerBoxBlock
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
         if (blockentity instanceof CrateBlockEntity) {
             CrateBlockEntity shulkerboxblockentity = (CrateBlockEntity) blockentity;
@@ -122,7 +129,7 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
             }
         }
 
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
     // copied from ShulkerBoxBlock
@@ -153,9 +160,9 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state) {
-        ItemStack stack = super.getCloneItemStack(world, pos, state);
-        CrateBlockEntity crate = (CrateBlockEntity) world.getBlockEntity(pos);
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+        ItemStack stack = super.getCloneItemStack(level, pos, state);
+        CrateBlockEntity crate = (CrateBlockEntity) level.getBlockEntity(pos);
         CompoundTag tag = crate.saveToTag(new CompoundTag());
         if(!tag.isEmpty()) stack.addTagElement("BlockEntityTag", tag);
         return stack;

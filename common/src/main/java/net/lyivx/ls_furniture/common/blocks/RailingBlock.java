@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.RailingBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
@@ -46,6 +47,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
+    public static final MapCodec<RailingBlock> CODEC = simpleCodec(RailingBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty NORTH_RAILING = ModBlockStateProperties.NORTH_RAILING;
     public static final BooleanProperty EAST_RAILING = ModBlockStateProperties.EAST_RAILING;
@@ -72,6 +74,11 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                 .setValue(SOUTH_RAILING, false)
                 .setValue(WEST_RAILING, false)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

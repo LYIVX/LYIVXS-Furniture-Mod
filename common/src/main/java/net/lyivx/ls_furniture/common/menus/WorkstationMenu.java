@@ -182,7 +182,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
             this.lastSelectedRecipe = selected;
             ItemStack itemStack = selected.recipe().assemble(this.container, this.level.registryAccess());
             if (itemStack.isItemEnabled(this.level.enabledFeatures())) {
-                this.resultContainer.setRecipeUsed(selected.recipe());
+                this.resultContainer.setRecipeUsed(selected.recipeHolder());
                 this.resultSlot.set(itemStack);
             } else {
                 this.resultSlot.set(ItemStack.EMPTY);

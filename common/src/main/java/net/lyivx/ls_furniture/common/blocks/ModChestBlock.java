@@ -34,14 +34,14 @@ public class ModChestBlock extends ChestBlock {
     public final String chestType;
 
     public ModChestBlock(MapColor colour, String chestType) {
-        super(Properties.copy(Blocks.CHEST).mapColor(colour), () -> ModBlockEntitys.MOD_CHEST_ENTITY.get());
+        super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour), () -> ModBlockEntitys.MOD_CHEST_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();
     }
 
     public ModChestBlock(MapColor colour, SoundType sound, String chestType) {
-        super(Properties.copy(Blocks.CHEST).mapColor(colour).sound(sound), () -> ModBlockEntitys.MOD_CHEST_ENTITY.get());
+        super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour).sound(sound), () -> ModBlockEntitys.MOD_CHEST_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();

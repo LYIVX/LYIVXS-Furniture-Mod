@@ -139,7 +139,6 @@ public class LetterScreen extends Screen {
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-        this.renderBackground(guiGraphics);
         this.setFocused((GuiEventListener)null);
         int startX = (this.width - 192) / 2;
         guiGraphics.blit(LETTER_BACKGROUND, startX, 2, 0, 0, 192, 192);

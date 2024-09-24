@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.blocks.properties.StairType;
@@ -45,6 +46,7 @@ import java.util.Locale;
 import java.util.stream.Stream;
 
 public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
+    public static final MapCodec<ModStairBlock> CODEC = simpleCodec(ModStairBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<StairType> TYPE = ModBlockStateProperties.STAIR_TYPE;
@@ -550,6 +552,11 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
                 .setValue(MODEL_TYPE, StairModelType.BOTTOM));
     }
 
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -702,7 +709,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
             StairModelType modelType = state.getValue(MODEL_TYPE);
             BlockPos otherPos = pos.relative(getNeighbourDirection(modelType));
@@ -727,7 +734,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
             }
         }
 
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
     @Override

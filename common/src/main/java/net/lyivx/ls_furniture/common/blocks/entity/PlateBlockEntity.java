@@ -107,6 +107,6 @@ public class PlateBlockEntity extends BlockEntity implements Clearable {
 
     @PlatformOnly(PlatformOnly.FORGE)
     public AABB getRenderBoundingBox() {
-        return new AABB(worldPosition.offset(0, 0, 0), worldPosition.offset(1, 2, 1));
+        return new AABB(worldPosition.offset(0, 0, 0).getCenter(), worldPosition.offset(1, 2, 1).getCenter());
     }
 }

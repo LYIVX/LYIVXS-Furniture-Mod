@@ -38,12 +38,16 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
     private final IDrawable icon;
     private final Component localizedName;
     private final IGuiHelper guiHelper;
+    private final IDrawable arrow;
+
 
     public WorkstationRecipeCategory(IGuiHelper guiHelper) {
         this.guiHelper = guiHelper;
         background = guiHelper.createBlankDrawable(width, height);
-        icon = guiHelper.createDrawableItemLike(ModBlocks.WORKSTATION.get());
+        icon = guiHelper.createDrawableItemStack(ModBlocks.WORKSTATION.get().asItem().getDefaultInstance());
         localizedName = Component.translatable("gui.ls_furniture.jei.workstation");
+        arrow = guiHelper.drawableBuilder(new ResourceLocation("jei", "textures/gui/gui_vanilla.png"), 82, 128, 24, 17)
+                .build();
     }
 
     @Override
@@ -69,11 +73,9 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
     @Override
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull WorkstationRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 1, 9)
-                .setStandardSlotBackground()
                 .addIngredients(recipe.getIngredients().get(0));
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 61, 9)
-                .setOutputSlotBackground()
                 .addItemStack(RecipeUtil.getResultItem(recipe));
     }
 
@@ -83,7 +85,6 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
         guiGraphics.renderItemDecorations(Minecraft.getInstance().font,
                 new ItemStack(ModItems.WORKSTATION.get(), recipe.getInputCount()), 1,9);
 
-        IDrawableStatic recipeArrow = guiHelper.getRecipeArrow();
-        recipeArrow.draw(guiGraphics, 26, 9);
+        arrow.draw(guiGraphics, 26, 9);
     }
 }

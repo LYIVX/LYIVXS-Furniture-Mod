@@ -39,8 +39,8 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
                 this.updateMaxUses();
                 return false;
             }
-            ItemStack output = recipe.get().output();
-            if (recipe.get().copyNbt() && item.hasTag()) {
+            ItemStack output = recipe.get().value().output();
+            if (recipe.get().value().copyNbt() && item.hasTag()) {
                 output.setTag(item.getTag());
             }
             this.item = ItemStack.EMPTY;
@@ -84,7 +84,7 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
             return;
         }
         this.uses = 0;
-        this.maxUses = recipe.get().uses();
+        this.maxUses = recipe.get().value().uses();
     }
 
     public ItemStack getItem() {

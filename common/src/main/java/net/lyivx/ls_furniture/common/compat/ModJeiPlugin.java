@@ -26,7 +26,7 @@ import net.minecraft.world.inventory.SmokerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.*;
-
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SmokingRecipe;
@@ -36,6 +36,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import static net.lyivx.ls_furniture.common.compat.WorkstationRecipeCategory.WORKSTATION_RECIPE_TYPE;
 
@@ -55,22 +56,25 @@ public class ModJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-
         IIngredientManager ingredientManager = registration.getIngredientManager();
         VanillaRecipes vanillaRecipes = new VanillaRecipes(ingredientManager);
 
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
 
-        List<WorkstationRecipe> recipesCraftingWorkstation = rm.getAllRecipesFor(ModRecipes.WORKSTATION_RECIPE.get());
+        List<WorkstationRecipe> recipesCraftingWorkstation = rm.getAllRecipesFor(ModRecipes.WORKSTATION_RECIPE.get())
+                .stream().map(RecipeHolder::value).collect(Collectors.toList());
         registration.addRecipes(WorkstationRecipeCategory.WORKSTATION_RECIPE_TYPE, recipesCraftingWorkstation);
 
-        List<WorldInteractionRecipe> recipesCraftingWorldInteraction = rm.getAllRecipesFor(ModRecipes.WORLD_INTERACTION_RECIPE.get());
+        List<WorldInteractionRecipe> recipesCraftingWorldInteraction = rm.getAllRecipesFor(ModRecipes.WORLD_INTERACTION_RECIPE.get())
+                .stream().map(RecipeHolder::value).collect(Collectors.toList());
         registration.addRecipes(WorldInteractionRecipeCategory.WORLD_INTERACTION_RECIPE_TYPE, recipesCraftingWorldInteraction);
 
-        List<ChoppingBoardRecipe> recipesCraftingChoppingBoard = rm.getAllRecipesFor(ModRecipes.CHOPPING_BOARD_RECIPE.get());
+        List<ChoppingBoardRecipe> recipesCraftingChoppingBoard = rm.getAllRecipesFor(ModRecipes.CHOPPING_BOARD_RECIPE.get())
+                .stream().map(RecipeHolder::value).collect(Collectors.toList());
         registration.addRecipes(ChoppingBoardCategory.CHOPPING_BOARD_RECIPE_TYPE, recipesCraftingChoppingBoard);
 
-        List<CuttingBoardRecipe> recipesCraftingCuttingBoard = rm.getAllRecipesFor(ModRecipes.CUTTING_BOARD_RECIPE.get());
+        List<CuttingBoardRecipe> recipesCraftingCuttingBoard = rm.getAllRecipesFor(ModRecipes.CUTTING_BOARD_RECIPE.get())
+                .stream().map(RecipeHolder::value).collect(Collectors.toList());
         registration.addRecipes(CuttingBoardCategory.CUTTING_BOARD_RECIPE_TYPE, recipesCraftingCuttingBoard);
     }
 

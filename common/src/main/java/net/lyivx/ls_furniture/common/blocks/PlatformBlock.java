@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.HammerItem;
@@ -47,6 +48,7 @@ import java.util.stream.Stream;
 import static net.lyivx.ls_furniture.common.blocks.ModStairBlock.MODEL_TYPE;
 
 public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
+    public static final MapCodec<PlatformBlock> CODEC = simpleCodec(PlatformBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty NORTH_PLATFORM = ModBlockStateProperties.NORTH_PLATFORM;
     public static final BooleanProperty EAST_PLATFORM = ModBlockStateProperties.EAST_PLATFORM;
@@ -92,6 +94,11 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
                 .setValue(SOUTH_PLATFORM, true)
                 .setValue(WEST_PLATFORM, true)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

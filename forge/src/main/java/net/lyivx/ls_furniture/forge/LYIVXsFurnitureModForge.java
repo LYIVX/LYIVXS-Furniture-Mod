@@ -15,7 +15,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class LYIVXsFurnitureModForge {
     public LYIVXsFurnitureModForge() {
         LYIVXsFurnitureMod.init();
-
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         MinecraftForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onPlace);

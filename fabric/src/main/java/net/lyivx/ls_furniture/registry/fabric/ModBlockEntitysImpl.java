@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class ModBlockEntitysImpl {
 
+    @SuppressWarnings("deprecation")
     public static <E extends BlockEntity> BlockEntityType<E> createBlockEntityType(ModBlockEntitys.BlockEntityFactory<E> factory, Block... blocks) {
         return FabricBlockEntityTypeBuilder.create(factory::create, blocks).build();
     }

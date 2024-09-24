@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
@@ -41,6 +42,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock {
+    public static final MapCodec<TombstoneBlock> CODEC = simpleCodec(TombstoneBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty HAS_DIRT = ModBlockStateProperties.HAS_DIRT;
@@ -77,6 +79,11 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
                 .setValue(HAS_DIRT, true));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

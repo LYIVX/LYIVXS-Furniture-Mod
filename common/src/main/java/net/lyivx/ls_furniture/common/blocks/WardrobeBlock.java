@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.WardrobeBottomBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.WardrobeTopBlockEntity;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
@@ -38,6 +39,7 @@ import java.util.Locale;
 import java.util.stream.Stream;
 
 public class WardrobeBlock extends BaseEntityBlock {
+    public static final MapCodec<WardrobeBlock> CODEC = simpleCodec(WardrobeBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static final EnumProperty<WardrobeModelType> MODEL_TYPE = EnumProperty.create("model", WardrobeModelType.class);
@@ -49,6 +51,11 @@ public class WardrobeBlock extends BaseEntityBlock {
                 .setValue(FACING, Direction.NORTH)
                 .setValue(MODEL_TYPE, WardrobeModelType.BOTTOM)
                 .setValue(OPEN, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -101,7 +108,7 @@ public class WardrobeBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
             WardrobeModelType modelType = state.getValue(MODEL_TYPE);
             BlockPos otherPos = pos.relative(getNeighbourDirection(modelType));
@@ -127,7 +134,7 @@ public class WardrobeBlock extends BaseEntityBlock {
             }
         }
 
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
 
     @Override

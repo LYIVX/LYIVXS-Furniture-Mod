@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.SofaBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.ToasterBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
@@ -48,6 +49,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock {
+    public static final MapCodec<ToasterBlock> CODEC = simpleCodec(ToasterBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty TOASTING = BooleanProperty.create("toasting");
@@ -70,6 +72,11 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
                 .setValue(TOASTING, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

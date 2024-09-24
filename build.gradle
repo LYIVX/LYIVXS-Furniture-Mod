@@ -1,6 +1,6 @@
 plugins {
-    id "architectury-plugin" version "3.4.159"
-    id "dev.architectury.loom" version "1.7.413" apply false
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
 }
 
 architectury {
@@ -21,7 +21,7 @@ subprojects {
         // Use mojmap with ParchmentMC
         mappings loom.layered() {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-1.20.1:${rootProject.parchment_version}@zip")
+            parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:${rootProject.parchment_version}@zip")
         }
     }
 }
@@ -81,7 +81,6 @@ allprojects {
         maven {
             url = "https://maven.terraformersmc.com/releases/"
         }
-
     }
 
     tasks.withType(JavaCompile) {

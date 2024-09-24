@@ -31,7 +31,7 @@ dependencies {
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
 
-    modImplementation("curse.maven:selene-499980:5093408")
+    modImplementation("curse.maven:selene-499980:5092529")
 
     modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") { transitive false }
 

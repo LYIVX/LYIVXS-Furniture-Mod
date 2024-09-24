@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.HammerItem;
@@ -35,6 +36,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class TableBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
+    public static final MapCodec<TableBlock> CODEC = simpleCodec(TableBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LEG1 = ModBlockStateProperties.NORTH_TABLE;
     public static final BooleanProperty LEG2 = ModBlockStateProperties.EAST_TABLE;
@@ -76,6 +78,11 @@ public class TableBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
                 .setValue(LEG3, true)
                 .setValue(LEG4, true)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

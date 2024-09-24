@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.properties.LeafType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -9,25 +10,22 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CrossCollisionBlock;
 import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 
-public class BushBlock extends CrossCollisionBlock {
-    private final LeafType type;
+import java.util.function.Function;
 
-    public BushBlock(Properties properties, LeafType type)
+public class BushBlock extends CrossCollisionBlock {
+    public static final MapCodec<BushBlock> CODEC = simpleCodec(BushBlock::new);
+
+    public BushBlock(Properties properties)
     {
         super(3, 3, 16, 16, 24, properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(WATERLOGGED, false));
-        this.type = type;
-    }
-
-    public LeafType getLeafType()
-    {
-        return this.type;
     }
 
     @Override
@@ -57,6 +55,11 @@ public class BushBlock extends CrossCollisionBlock {
         pos = pos.relative(direction);
         BlockState state = level.getBlockState(pos);
         return !isExceptionForConnection(state) && state.isFaceSturdy(level, pos, direction.getOpposite()) || state.getBlock() instanceof BushBlock || state.getBlock() instanceof LeavesBlock;
+    }
+
+    @Override
+    protected MapCodec<? extends CrossCollisionBlock> codec() {
+        return CODEC;
     }
 
     @Override

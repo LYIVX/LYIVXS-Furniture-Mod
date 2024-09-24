@@ -1,28 +1,21 @@
 package net.lyivx.ls_furniture.common.blocks;
 
-import com.google.common.base.Ticker;
-import dev.architectury.event.events.common.TickEvent;
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.MailboxBlockEntity;
-import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocksTags;
-import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
@@ -49,6 +42,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class MailboxBlock extends BaseEntityBlock implements WrenchItem.WrenchableBlock {
+    public static final MapCodec<MailboxBlock> CODEC = simpleCodec(MailboxBlock::new);
     public static ArrayList<MailboxBlock> ALL_MAILBOXES = new ArrayList<>();
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty HAS_MAIL = ModBlockStateProperties.HAS_MAIL;
@@ -109,6 +103,11 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
                 .setValue(FACING, Direction.NORTH)
                 .setValue(HAS_MAIL, false));
         ALL_MAILBOXES.add(this);
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

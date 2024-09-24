@@ -33,14 +33,14 @@ public class WorldInteractionRecipeCategory extends BaseCategory<WorldInteractio
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull WorldInteractionRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 11, 6)
                 .addIngredients(recipe.input())
-                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use", recipe.uses())))
                 .setSlotName("input");
 
         builder.addSlot(RecipeIngredientRole.CATALYST, 47, 6)
                 .addIngredients(recipe.input2())
-                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addRichTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use_on", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use_on", recipe.uses())))
                 .setSlotName("tool");
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 29, 46)

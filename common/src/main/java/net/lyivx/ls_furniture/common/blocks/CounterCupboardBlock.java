@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.CounterCupboardBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
@@ -43,6 +44,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class CounterCupboardBlock extends BaseEntityBlock implements WrenchItem.WrenchableBlock {
+    public static final MapCodec<CounterCupboardBlock> CODEC = simpleCodec(CounterCupboardBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
@@ -112,6 +114,11 @@ public class CounterCupboardBlock extends BaseEntityBlock implements WrenchItem.
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(OPEN, false));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {

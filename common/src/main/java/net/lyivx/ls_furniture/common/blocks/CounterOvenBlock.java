@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.CounterOvenBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
@@ -49,6 +50,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem.WrenchableBlock {
+    public static final MapCodec<CounterOvenBlock> CODEC = simpleCodec(CounterOvenBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
@@ -114,6 +116,11 @@ public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem
                 .setValue(FACING, Direction.NORTH)
                 .setValue(OPEN, false)
                 .setValue(LIT, false));
+    }
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> codec() {
+        return CODEC;
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

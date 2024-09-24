@@ -2,10 +2,12 @@ package net.lyivx.ls_furniture.common.recipes;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.teamresourceful.resourcefullib.common.codecs.recipes.IngredientCodec;
-import com.teamresourceful.resourcefullib.common.codecs.recipes.ItemStackCodec;
+import com.teamresourceful.bytecodecs.base.ByteCodec;
 import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
+import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
+import io.netty.buffer.ByteBuf;
 import net.lyivx.ls_furniture.registry.ModRecipes;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
@@ -22,9 +24,34 @@ public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt,
                 RecordCodecBuilder.point(id),
                 Codec.INT.fieldOf("uses").orElse(5).forGetter(CuttingBoardRecipe::uses),
                 Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(CuttingBoardRecipe::copyNbt),
-                IngredientCodec.CODEC.fieldOf("input").forGetter(CuttingBoardRecipe::input),
-                ItemStackCodec.CODEC.fieldOf("output").forGetter(CuttingBoardRecipe::output)
+                Ingredient.CODEC.fieldOf("input").forGetter(CuttingBoardRecipe::input),
+                ItemStack.CODEC.fieldOf("output").forGetter(CuttingBoardRecipe::output)
         ).apply(instance, CuttingBoardRecipe::new));
+    }
+
+    public static ByteCodec<CuttingBoardRecipe> byteCodec() {
+        return new ByteCodec<>() {
+            @Override
+            public void encode(CuttingBoardRecipe value, ByteBuf buf) {
+                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
+                friendlyBuf.writeResourceLocation(value.id());
+                friendlyBuf.writeVarInt(value.uses());
+                friendlyBuf.writeBoolean(value.copyNbt());
+                value.input().toNetwork(friendlyBuf);
+                friendlyBuf.writeItem(value.output());
+            }
+
+            @Override
+            public CuttingBoardRecipe decode(ByteBuf buf) {
+                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
+                ResourceLocation id = friendlyBuf.readResourceLocation();
+                int uses = friendlyBuf.readVarInt();
+                boolean copyNbt = friendlyBuf.readBoolean();
+                Ingredient input = Ingredient.fromNetwork(friendlyBuf);
+                ItemStack output = friendlyBuf.readItem();
+                return new CuttingBoardRecipe(id, uses, copyNbt, input, output);
+            }
+        };
     }
 
     @Override
@@ -33,12 +60,13 @@ public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt,
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.CUTTING_BOARD_SERIALIZER.get();
-    }
-
-    @Override
     public RecipeType<?> getType() {
         return ModRecipes.CUTTING_BOARD_RECIPE.get();
     }
+
+    @Override
+    public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
+        return ModRecipes.CUTTING_BOARD_SERIALIZER.get();
+    }
+
 }

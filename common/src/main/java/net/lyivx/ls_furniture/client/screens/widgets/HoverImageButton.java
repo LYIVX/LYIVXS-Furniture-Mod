@@ -1,9 +1,10 @@
 package net.lyivx.ls_furniture.client.screens.widgets;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.components.WidgetSprites;
 
 public class HoverImageButton extends ImageButton {
     private final ResourceLocation texture;
@@ -18,7 +19,10 @@ public class HoverImageButton extends ImageButton {
     public HoverImageButton(int x, int y, int width, int height, int xTexStart, int yTexStart, int xDiffTex,
                             ResourceLocation texture, int textureWidth, int textureHeight,
                             int sourceWidth, int sourceHeight, OnPress onPress) {
-        super(x, y, width, height, xTexStart, yTexStart, 0, texture, textureWidth, textureHeight, onPress);
+        super(x, y, width, height,
+                new WidgetSprites(texture, texture),  // Using the same texture for both states
+                onPress,
+                Component.empty());
         this.texture = texture;
         this.xTexStart = xTexStart;
         this.yTexStart = yTexStart;
@@ -36,12 +40,8 @@ public class HoverImageButton extends ImageButton {
             xTex += this.xDiffTex;
         }
 
-        RenderSystem.enableBlend();
-        RenderSystem.defaultBlendFunc();
-        RenderSystem.enableDepthTest();
         guiGraphics.blit(this.texture, this.getX(), this.getY(), this.width, this.height,
                 xTex, this.yTexStart, this.sourceWidth, this.sourceHeight,
                 this.textureWidth, this.textureHeight);
-        RenderSystem.disableDepthTest();
     }
 }

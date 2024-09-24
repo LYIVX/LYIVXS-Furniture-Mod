@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.CounterType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
@@ -34,6 +35,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CounterBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
+    public static final MapCodec<CounterBlock> CODEC = simpleCodec(CounterBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<CounterType> SHAPE = ModBlockStateProperties.COUNTER_TYPE;
@@ -84,7 +86,12 @@ public class CounterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH));
     }
-    
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

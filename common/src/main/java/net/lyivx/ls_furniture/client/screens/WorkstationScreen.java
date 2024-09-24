@@ -92,7 +92,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     @Override
     protected void containerTick() {
         super.containerTick();
-        if (searchBox.visible) this.searchBox.tick();
+        //if (searchBox.visible) this.searchBox.tick();
 
     }
 
@@ -163,7 +163,6 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
 
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
-        this.renderBackground(guiGraphics);
 
         ResourceLocation bgLocation = getBgLocation();
         guiGraphics.blit(bgLocation, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
@@ -321,10 +320,10 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double delta) {
+    public boolean mouseScrolled(double mouseX, double mouseY, double xDelta, double yDelta) {
         if (this.isScrollBarActive()) {
             int offscreenRows = this.getOffscreenRows();
-            float f = (float) delta / offscreenRows;
+            float f = (float) yDelta / offscreenRows;
             this.scrollOffs = Mth.clamp(this.scrollOffs - f, 0.0F, 1.0F);
             this.startIndex = (int) ((this.scrollOffs * offscreenRows) + 0.5) * 5;
         }

@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.DrainerBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.ShelfBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.HorizontalConnectionType;
@@ -46,6 +47,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock {
+    public static final MapCodec<DrainerBlock> CODEC = simpleCodec(DrainerBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -75,6 +77,11 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
         );
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override
