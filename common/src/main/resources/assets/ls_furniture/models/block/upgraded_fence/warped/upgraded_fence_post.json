@@ -7,5 +7,5 @@
     "Stripped": "block/stripped_warped_stem",
     "Log": "block/warped_stem"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

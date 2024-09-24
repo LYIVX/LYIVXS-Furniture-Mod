@@ -27,14 +27,11 @@ dependencies {
 
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 
-
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
 
     modImplementation("curse.maven:selene-499980:5093408")
-
-    modImplementation "curse.maven:jade-324717:5530010"
 
     modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") { transitive false }
 
@@ -54,17 +51,17 @@ shadowJar {
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier.set("dev-shadow") // Set the classifier for the output JAR file
+    archiveClassifier.set("${minecraft_version}-dev-shadow") // Set the classifier for the output JAR file
 }
 
 remapJar {
     input.set(shadowJar.archiveFile)
     dependsOn(shadowJar)
-    archiveClassifier.set("Fabric") // Set the classifier for the output remapped JAR file
+    archiveClassifier.set("${minecraft_version}-Fabric") // Set the classifier for the output remapped JAR file
 }
 
 jar {
-    archiveClassifier.set("dev") // Set the classifier for the output JAR file
+    archiveClassifier.set("${minecraft_version}-dev") // Set the classifier for the output JAR file
 }
 
 sourcesJar {

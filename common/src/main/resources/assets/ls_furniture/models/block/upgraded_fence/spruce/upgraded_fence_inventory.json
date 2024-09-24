@@ -7,5 +7,5 @@
     "Stripped": "block/stripped_spruce_log",
     "Log": "block/spruce_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

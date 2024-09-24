@@ -4,5 +4,5 @@
     "texture": "block/mangrove_log",
     "particle": "block/mangrove_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

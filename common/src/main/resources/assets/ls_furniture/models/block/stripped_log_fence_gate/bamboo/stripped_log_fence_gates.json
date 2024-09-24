@@ -4,5 +4,5 @@
     "texture": "block/stripped_bamboo_block",
     "particle": "block/stripped_bamboo_block"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

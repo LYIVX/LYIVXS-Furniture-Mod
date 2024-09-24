@@ -4,5 +4,5 @@
     "texture": "block/stripped_mangrove_log",
     "particle": "block/stripped_mangrove_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

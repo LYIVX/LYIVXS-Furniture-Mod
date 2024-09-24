@@ -24,25 +24,46 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public class WorkstationRecipeCategory extends BaseCategory<WorkstationRecipe> {
+public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRecipe> {
 
-    private static final ItemStack WORKSTATION = new ItemStack(ModBlocks.WORKSTATION.get());
     public static final ResourceLocation ID = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "workstation");
     public static final RecipeType<WorkstationRecipe> WORKSTATION_RECIPE_TYPE = new RecipeType<>(ID, WorkstationRecipe.class);
-
-    private final IGuiHelper guiHelper;
 
     public static final int width = 82;
     public static final int height = 34;
 
+    private final IDrawable background;
+    private final IDrawable icon;
+    private final Component localizedName;
+    private final IGuiHelper guiHelper;
 
     public WorkstationRecipeCategory(IGuiHelper guiHelper) {
-        super(guiHelper, WORKSTATION_RECIPE_TYPE,
-                Component.translatable("gui.ls_furniture.jei.workstation"),
-                guiHelper.createBlankDrawable(width, height),
-                guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(WORKSTATION.getItem())));
         this.guiHelper = guiHelper;
+        background = guiHelper.createBlankDrawable(width, height);
+        icon = guiHelper.createDrawableItemLike(ModBlocks.WORKSTATION.get());
+        localizedName = Component.translatable("gui.ls_furniture.jei.workstation");
+    }
+
+    @Override
+    public RecipeType<WorkstationRecipe> getRecipeType() {
+        return WORKSTATION_RECIPE_TYPE;
+    }
+
+    @Override
+    public Component getTitle() {
+        return localizedName;
+    }
+
+    @Override
+    public IDrawable getBackground() {
+        return background;
+    }
+
+    @Override
+    public @Nullable IDrawable getIcon() {
+        return icon;
     }
 
     @Override
@@ -52,8 +73,8 @@ public class WorkstationRecipeCategory extends BaseCategory<WorkstationRecipe> {
                 .addIngredients(recipe.getIngredients().get(0));
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 61, 9)
-                .setOutputSlotBackground().
-                addItemStack(RecipeUtil.getResultItem(recipe));
+                .setOutputSlotBackground()
+                .addItemStack(RecipeUtil.getResultItem(recipe));
     }
 
     @Override

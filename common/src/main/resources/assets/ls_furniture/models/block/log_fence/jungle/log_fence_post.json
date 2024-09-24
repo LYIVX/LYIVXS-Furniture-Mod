@@ -4,5 +4,5 @@
     "texture": "block/jungle_log",
     "particle": "block/jungle_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

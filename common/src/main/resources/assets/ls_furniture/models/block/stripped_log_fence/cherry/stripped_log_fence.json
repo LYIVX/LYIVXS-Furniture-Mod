@@ -4,5 +4,5 @@
     "texture": "block/stripped_cherry_log",
     "particle": "block/stripped_cherry_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

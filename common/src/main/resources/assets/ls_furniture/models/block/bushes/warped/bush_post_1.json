@@ -4,5 +4,5 @@
     "texture": "block/warped_wart_block",
     "particle": "block/warped_wart_block"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

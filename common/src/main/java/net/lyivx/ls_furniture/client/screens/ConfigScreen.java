@@ -1,11 +1,11 @@
 package net.lyivx.ls_furniture.client.screens;
 
+import dev.architectury.platform.Platform;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.config.Configs;
 import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
 import net.minecraft.client.gui.screens.Screen;
 import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigType;
-import net.fabricmc.loader.api.FabricLoader;
 
 public class ConfigScreen {
     private static CustomConfigSpec CONFIG_SPEC;
@@ -14,7 +14,7 @@ public class ConfigScreen {
         CONFIG_SPEC = new CustomConfigSpec(
                 LYIVXsFurnitureMod.MOD_ID,
                 "ls_furniture-client.json",
-                FabricLoader.getInstance().getConfigDir(),
+                Platform.getConfigFolder(), // Get config folder
                 ConfigType.CLIENT,
                 false
         );

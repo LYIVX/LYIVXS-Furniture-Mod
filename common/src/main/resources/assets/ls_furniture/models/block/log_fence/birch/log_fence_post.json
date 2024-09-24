@@ -4,5 +4,5 @@
     "texture": "block/birch_log",
     "particle": "block/birch_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

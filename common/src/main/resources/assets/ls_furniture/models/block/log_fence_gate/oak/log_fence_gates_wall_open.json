@@ -4,5 +4,5 @@
     "texture": "block/oak_log",
     "particle": "block/oak_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

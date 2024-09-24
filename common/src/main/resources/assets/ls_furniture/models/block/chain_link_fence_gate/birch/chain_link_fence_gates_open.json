@@ -6,5 +6,5 @@
     "Stripped": "block/chain",
     "Log": "block/birch_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

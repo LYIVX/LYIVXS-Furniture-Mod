@@ -12,7 +12,7 @@ public class LYIVXsFurnitureModClientImpl {
     public static void setRenderType(Block block, RenderType type) {
         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
     }
-
+    @SuppressWarnings("deprecation")
     public static BakedModel getModel(BlockRenderDispatcher dispatcher, ResourceLocation model) {
         return BakedModelManagerHelper.getModel(dispatcher.getBlockModelShaper().getModelManager(), model);
     }

@@ -4,5 +4,5 @@
     "texture": "block/flowering_azalea_leaves",
     "particle": "block/flowering_azalea_leaves"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

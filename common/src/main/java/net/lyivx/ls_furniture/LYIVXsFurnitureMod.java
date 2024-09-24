@@ -37,9 +37,6 @@ public class LYIVXsFurnitureMod {
         NetworkRecipeSync.init();
 
         ConfigScreen.initConfig();
-
-
-
     }
 
     public static ResourceLocation res(String name) {

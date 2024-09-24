@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 
 public class LYIVXsFurnitureModClientImpl {
+    @SuppressWarnings("deprecation")
     public static void setRenderType(Block block, RenderType type) {
         ItemBlockRenderTypes.setRenderLayer(block, type);
     }

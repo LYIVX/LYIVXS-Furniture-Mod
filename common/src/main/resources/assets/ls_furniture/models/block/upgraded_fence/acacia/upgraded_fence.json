@@ -6,5 +6,5 @@
     "Stripped": "block/stripped_acacia_log",
     "Log": "block/acacia_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

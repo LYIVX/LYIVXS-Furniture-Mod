@@ -28,7 +28,6 @@ public class LYIVXsFurnitureModForgeClient {
 
         System.out.println("Registering Workstation Screen");
         MenuScreens.register(ModMenus.WORKSTATION_MENU.get(), WorkstationScreen::new);
-
     }
 
 

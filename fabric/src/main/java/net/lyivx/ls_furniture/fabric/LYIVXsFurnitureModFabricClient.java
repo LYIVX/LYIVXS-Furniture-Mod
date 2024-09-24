@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 public class LYIVXsFurnitureModFabricClient implements ClientModInitializer {
 
     @Override
+    @SuppressWarnings("deprecation")
     public void onInitializeClient() {
         LYIVXsFurnitureModClient.init();
 

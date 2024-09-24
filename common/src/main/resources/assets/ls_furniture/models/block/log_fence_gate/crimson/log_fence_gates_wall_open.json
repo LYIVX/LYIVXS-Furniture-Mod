@@ -4,5 +4,5 @@
     "texture": "block/crimson_stem",
     "particle": "block/crimson_stem"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

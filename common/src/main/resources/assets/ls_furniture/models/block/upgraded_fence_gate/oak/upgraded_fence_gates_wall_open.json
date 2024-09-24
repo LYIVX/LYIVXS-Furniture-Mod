@@ -6,5 +6,5 @@
     "Stripped": "block/stripped_oak_log",
     "Log": "block/oak_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

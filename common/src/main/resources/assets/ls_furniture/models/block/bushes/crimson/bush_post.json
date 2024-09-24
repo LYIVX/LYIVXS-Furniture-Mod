@@ -4,5 +4,5 @@
     "texture": "block/nether_wart_block",
     "particle": "block/nether_wart_block"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

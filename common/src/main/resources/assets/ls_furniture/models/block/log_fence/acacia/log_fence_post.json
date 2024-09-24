@@ -4,5 +4,5 @@
     "texture": "block/acacia_log",
     "particle": "block/acacia_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

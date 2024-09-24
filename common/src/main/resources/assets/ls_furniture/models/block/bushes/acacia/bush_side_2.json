@@ -4,5 +4,5 @@
     "texture": "block/acacia_leaves",
     "particle": "block/acacia_leaves"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

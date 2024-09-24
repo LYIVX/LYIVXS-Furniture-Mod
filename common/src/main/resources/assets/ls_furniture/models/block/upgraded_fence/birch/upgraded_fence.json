@@ -7,5 +7,5 @@
     "Stripped": "block/stripped_birch_log",
     "Log": "block/birch_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

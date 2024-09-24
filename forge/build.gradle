@@ -37,11 +37,6 @@ dependencies {
 
     modImplementation("curse.maven:selene-499980:5093417")
 
-    modImplementation("curse.maven:jade-324717:5640610")
-
-    modImplementation("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
-
-
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
@@ -58,17 +53,17 @@ shadowJar {
     exclude "fabric.mod.json"
 
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier.set("dev-shadow") // Set the classifier for the output JAR file
+    archiveClassifier.set("${minecraft_version}-dev-shadow") // Set the classifier for the output JAR file
 }
 
 remapJar {
     input.set(shadowJar.archiveFile)
     dependsOn(shadowJar)
-    archiveClassifier.set("Forge") // Set the classifier for the output remapped JAR file
+    archiveClassifier.set("${minecraft_version}-Forge") // Set the classifier for the output remapped JAR file
 }
 
 jar {
-    archiveClassifier.set("dev") // Set the classifier for the output JAR file
+    archiveClassifier.set("${minecraft_version}-dev") // Set the classifier for the output JAR file
 }
 
 sourcesJar {

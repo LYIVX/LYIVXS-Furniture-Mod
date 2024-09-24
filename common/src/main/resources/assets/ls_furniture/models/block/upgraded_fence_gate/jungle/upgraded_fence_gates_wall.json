@@ -6,5 +6,5 @@
     "Stripped": "block/stripped_jungle_log",
     "Log": "block/jungle_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

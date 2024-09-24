@@ -4,5 +4,5 @@
     "texture": "block/oak_leaves",
     "particle": "block/oak_leaves"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

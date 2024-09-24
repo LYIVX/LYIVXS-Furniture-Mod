@@ -7,5 +7,5 @@
     "Stripped": "block/stripped_dark_oak_log",
     "Log": "block/dark_oak_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

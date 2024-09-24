@@ -4,5 +4,5 @@
     "texture": "block/warped_stem",
     "particle": "block/warped_stem"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

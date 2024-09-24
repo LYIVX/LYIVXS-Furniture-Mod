@@ -6,5 +6,5 @@
     "Stripped": "block/stripped_cherry_log",
     "Log": "block/cherry_log"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }
