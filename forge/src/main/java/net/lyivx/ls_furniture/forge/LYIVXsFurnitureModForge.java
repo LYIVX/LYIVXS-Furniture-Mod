@@ -1,7 +1,7 @@
-package net.lyivx.ls_furniture.forge;
+package net.lyivx.ls_furniture.neoforge;
 
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
-import net.lyivx.ls_furniture.client.forge.ClientEvents;
+import net.lyivx.ls_furniture.client.neoforge.ClientEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;

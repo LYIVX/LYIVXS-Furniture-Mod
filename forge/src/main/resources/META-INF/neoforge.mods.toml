@@ -47,3 +47,6 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
     versionRange = "[*,)"
     ordering = "NONE"
     side = "BOTH"
+
+[[mixins]]
+    config = "LYIVXsFurnitureMod-common.mixins.json"

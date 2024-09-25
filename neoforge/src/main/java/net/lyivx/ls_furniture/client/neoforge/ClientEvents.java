@@ -1,9 +1,8 @@
 package net.lyivx.ls_furniture.client.neoforge;
 
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
-import net.lyivx.ls_furniture.common.datagen.DataGenerators;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+
 
 public class ClientEvents {
     public static void onRegisterBlockColors(RegisterColorHandlersEvent.Block event)
