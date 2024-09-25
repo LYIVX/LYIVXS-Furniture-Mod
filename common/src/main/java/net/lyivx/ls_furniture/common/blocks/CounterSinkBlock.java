@@ -10,6 +10,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -92,13 +93,7 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
-        Item item = stack.getItem();
-
-        if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 
         BlockPos waterPos = pos.below().below();
         Block water = level.getBlockState(waterPos).getBlock();
@@ -108,6 +103,16 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
         if (water == Blocks.WATER && !hasWater) {
             level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
             return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.SUCCESS;    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item item = stack.getItem();
+        boolean hasWater = state.getValue(HAS_WATER);
+
+        if (item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
         }
 
         if (item == Items.BUCKET && hasWater) {
@@ -137,7 +142,7 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
             level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
         }
 
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     @Override
@@ -168,7 +173,7 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -176,7 +181,7 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

@@ -2,23 +2,23 @@ package net.lyivx.ls_furniture.forge;
 
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.forge.ClientEvents;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 
 @Mod(LYIVXsFurnitureMod.MOD_ID)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class LYIVXsFurnitureModForge {
-    public LYIVXsFurnitureModForge() {
+    public LYIVXsFurnitureModForge(IEventBus bus) {
         LYIVXsFurnitureMod.init();
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        MinecraftForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onPlace);
-        MinecraftForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onServerStart);
+        NeoForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onPlace);
+        NeoForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onServerStart);
 
         bus.addListener(LYIVXsFurnitureModForge::onCommonSetup);
         bus.addListener(LYIVXsFurnitureModForge::onCreativeModeTabs);

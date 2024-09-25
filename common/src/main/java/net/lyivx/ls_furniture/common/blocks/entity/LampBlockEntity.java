@@ -7,6 +7,7 @@ import net.lyivx.ls_furniture.common.blocks.properties.VerticalConnectionType;
 import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -22,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 import static net.lyivx.ls_furniture.common.blocks.LampBlock.COLOR;
 import static net.lyivx.ls_furniture.common.blocks.LampBlock.VERTICAL;
 
@@ -59,16 +61,16 @@ public class LampBlockEntity extends BlockEntity implements ILockable {
 
         if (state.getValue(VERTICAL) == VerticalConnectionType.TOP || state.getValue(VERTICAL) == VerticalConnectionType.SINGLE) {
             // Return the model resource location based on the block's color
-            return new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/" + color.getDyeColor().getName());
+            return createResourceLocation("block/lamp/shade/" + color.getDyeColor().getName());
         } else {
             // Handle other cases or return a default model if necessary
-            return new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/default");
+            return createResourceLocation("block/lamp/shade/default");
         }
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         tag.putBoolean(LOCKED_TAG, locked);
         if (color != null) {
             tag.putInt("color", color.getDyeColor().getId());
@@ -76,8 +78,8 @@ public class LampBlockEntity extends BlockEntity implements ILockable {
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         locked = tag.getBoolean(LOCKED_TAG);
         if (tag.contains("color")) {
             DyeColor dyeColor = DyeColor.byId(tag.getInt("color"));
@@ -88,9 +90,9 @@ public class LampBlockEntity extends BlockEntity implements ILockable {
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        CompoundTag tag = super.getUpdateTag();
-        saveAdditional(tag);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = super.getUpdateTag(registries);
+        saveAdditional(tag, registries);
         return tag;
     }
 

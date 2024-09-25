@@ -1,10 +1,10 @@
 package net.lyivx.ls_furniture.registry;
 
+import com.mojang.serialization.MapCodec;
 import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
 import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeType;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
-import com.teamresourceful.bytecodecs.base.ByteCodec;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.recipes.ChoppingBoardRecipe;
 import net.lyivx.ls_furniture.common.recipes.CuttingBoardRecipe;
@@ -18,7 +18,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 
 import java.util.function.Supplier;
 
-import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.res;
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
 public class ModRecipes {
 
@@ -29,7 +29,7 @@ public class ModRecipes {
     public static final Supplier<CodecRecipeSerializer<ChoppingBoardRecipe>> CHOPPING_BOARD_SERIALIZER = SERIALIZERS.register("chopping_board",
             () -> new CodecRecipeSerializer<>(
                     CHOPPING_BOARD_RECIPE.get(),
-                    ChoppingBoardRecipe.codec(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "chopping_board")),
+                    (MapCodec) ChoppingBoardRecipe.codec(createResourceLocation("chopping_board")),
                     ChoppingBoardRecipe.byteCodec()
             ));
 
@@ -37,7 +37,7 @@ public class ModRecipes {
     public static final Supplier<CodecRecipeSerializer<CuttingBoardRecipe>> CUTTING_BOARD_SERIALIZER = SERIALIZERS.register("cutting_board",
             () -> new CodecRecipeSerializer<>(
                     CUTTING_BOARD_RECIPE.get(),
-                    CuttingBoardRecipe.codec(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "cutting_board")),
+                    (MapCodec) CuttingBoardRecipe.codec(createResourceLocation("cutting_board")),
                     CuttingBoardRecipe.byteCodec()
             ));
 
@@ -45,10 +45,10 @@ public class ModRecipes {
     public static final Supplier<CodecRecipeSerializer<WorldInteractionRecipe>> WORLD_INTERACTION_RECIPE_SERIALIZER = SERIALIZERS.register("world_interaction",
             () -> new CodecRecipeSerializer<>(
                     WORLD_INTERACTION_RECIPE.get(),
-                    WorldInteractionRecipe.codec(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "world_interaction")),
+                    (MapCodec) WorldInteractionRecipe.codec(createResourceLocation("world_interaction")),
                     WorldInteractionRecipe.byteCodec()
             ));
 
-    public static final Supplier<RecipeType<WorkstationRecipe>> WORKSTATION_RECIPE = RegHelper.registerRecipeType(res("workstation"));
-    public static final Supplier<RecipeSerializer<WorkstationRecipe>> WORKSTATION_RECIPE_SERIALIZER = RegHelper.registerRecipeSerializer(res("workstation"), WorkstationRecipe.Serializer::new);
+    public static final Supplier<RecipeType<WorkstationRecipe>> WORKSTATION_RECIPE = RegHelper.registerRecipeType(createResourceLocation("workstation"));
+    public static final Supplier<RecipeSerializer<WorkstationRecipe>> WORKSTATION_RECIPE_SERIALIZER = RegHelper.registerRecipeSerializer(createResourceLocation("workstation"), WorkstationRecipe.Serializer::new);
 }

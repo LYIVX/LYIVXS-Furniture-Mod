@@ -6,6 +6,7 @@ import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModItemTags;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -61,25 +62,27 @@ public class CrateBlockEntity extends RandomizableContainerBlockEntity {
         return !stack.is(ModItemTags.CRATE_BLACKLIST_TAG);
     }
 
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    @Override
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         if (!this.trySaveLootTable(tag)) {
-            ContainerHelper.saveAllItems(tag, this.items);
+            ContainerHelper.saveAllItems(tag, this.items, registries);
         }
     }
 
-    public CompoundTag saveToTag(CompoundTag tag) {
+    public CompoundTag saveToTag(CompoundTag tag, HolderLookup.Provider registries) {
         if(!this.tryLoadLootTable(tag)) {
-            ContainerHelper.saveAllItems(tag, this.items, false);
+            ContainerHelper.saveAllItems(tag, this.items, false, registries);
         }
         return tag;
     }
 
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    @Override
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
         if (!this.tryLoadLootTable(tag) && tag.contains("Items", 9)) {
-            ContainerHelper.loadAllItems(tag, this.items);
+            ContainerHelper.loadAllItems(tag, this.items, registries);
         }
     }
 

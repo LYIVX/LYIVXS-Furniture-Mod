@@ -9,6 +9,7 @@ import net.lyivx.ls_furniture.registry.ModBlocksTags;
 import net.lyivx.ls_furniture.registry.ModItemTags;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -171,25 +172,25 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         tag.putString("Owner", owner == null ? "" : owner);
         tag.putString("OwnerDisplayName", ownerDisplayName == null ? "" : ownerDisplayName);
         if (!this.trySaveLootTable(tag)) {
-            ContainerHelper.saveAllItems(tag, this.items);
+            ContainerHelper.saveAllItems(tag, this.items, registries);
         }
 
 
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         owner = tag.getString("Owner");
         ownerDisplayName = tag.getString("OwnerDisplayName");
         this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
         if (!this.tryLoadLootTable(tag)) {
-            ContainerHelper.loadAllItems(tag, this.items);  // Loading items
+            ContainerHelper.loadAllItems(tag, this.items, registries);  // Loading items
         }
     }
 
@@ -252,8 +253,8 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        return this.saveWithoutMetadata(); // Send the current state of the block entity to the client
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        return this.saveWithoutMetadata(registries); // Send the current state of the block entity to the client
     }
 
     @Override

@@ -1,12 +1,17 @@
 package net.lyivx.ls_furniture.registry;
 
-import com.teamresourceful.resourcefullib.common.item.tabs.ResourcefulCreativeTab;
+import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
+import dev.architectury.injectables.annotations.ExpectPlatform;
+import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.registries.DeferredRegister;
+import dev.architectury.registry.registries.RegistrySupplier;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.items.*;
-import net.mehvahdjukaar.moonlight.api.item.FuelItem;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -14,8 +19,10 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 
+import java.util.Collection;
 import java.util.function.Supplier;
 
 @SuppressWarnings("unused")
@@ -23,6 +30,10 @@ public class ModItems {
 
     public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create
             (BuiltInRegistries.ITEM, LYIVXsFurnitureMod.MOD_ID);
+
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create
+            (LYIVXsFurnitureMod.MOD_ID, Registries.CREATIVE_MODE_TAB);
+
     public static final ResourcefulRegistry<Item> MISC = ResourcefulRegistries.create
             (ITEMS);
     public static final ResourcefulRegistry<Item> DECO = ResourcefulRegistries.create
@@ -36,10 +47,12 @@ public class ModItems {
 
     ////////////////////////////////////// CREATIVE TAB ////////////////////////////////////
 
-    public static final Supplier<CreativeModeTab> ITEM_GROUP = new ResourcefulCreativeTab(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "tab"))
-            .setItemIcon(ModBlocks.WORKSTATION)
-            .addRegistry(ITEMS)
-            .build();
+    // TODO: Replace ResourcefulCreativeTab with appropriate creative tab implementation
+
+    public static final RegistrySupplier<CreativeModeTab> CREATIVE_TAB = CREATIVE_TABS.register("ls_furniture",
+            () -> CreativeTabRegistry.create(Component.translatable("itemGroup.ls_furniture.tab"),
+                    () -> new ItemStack(ModItems.WORKSTATION.get())));
+
 
     /////////////////////////////////// INTERACTIVE ////////////////////////////////////
 
@@ -126,76 +139,76 @@ public class ModItems {
     public static final Supplier<Item> TOAST = FOODS.register("toast",
             () -> new Item(normal(ModFoodProperties.TOAST)));
 
-    public static final Supplier<FuelItem> OAK_BARK = INGREDIENTS.register("oak_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> OAK_BARK = INGREDIENTS.register("oak_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> SPRUCE_BARK = INGREDIENTS.register("spruce_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> SPRUCE_BARK = INGREDIENTS.register("spruce_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BIRCH_BARK = INGREDIENTS.register("birch_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> BIRCH_BARK = INGREDIENTS.register("birch_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> JUNGLE_BARK = INGREDIENTS.register("jungle_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> JUNGLE_BARK = INGREDIENTS.register("jungle_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> ACACIA_BARK = INGREDIENTS.register("acacia_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> ACACIA_BARK = INGREDIENTS.register("acacia_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> DARK_OAK_BARK = INGREDIENTS.register("dark_oak_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> DARK_OAK_BARK = INGREDIENTS.register("dark_oak_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> MANGROVE_BARK = INGREDIENTS.register("mangrove_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> MANGROVE_BARK = INGREDIENTS.register("mangrove_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CHERRY_BARK = INGREDIENTS.register("cherry_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> CHERRY_BARK = INGREDIENTS.register("cherry_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BAMBOO_BARK = INGREDIENTS.register("bamboo_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> BAMBOO_BARK = INGREDIENTS.register("bamboo_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CRIMSON_BARK = INGREDIENTS.register("crimson_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> CRIMSON_BARK = INGREDIENTS.register("crimson_bark",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> WARPED_BARK = INGREDIENTS.register("warped_bark",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> WARPED_BARK = INGREDIENTS.register("warped_bark",
+            () -> new Item(new Item.Properties()));
 
     ///////////////////////////////// STICKS / RODS ////////////////////////////////////
     
     public static final Supplier<Item> IRON_ROD = INGREDIENTS.register("iron_rod",
             () -> new Item(new Item.Properties()));
     
-    public static final Supplier<FuelItem> OAK_STICK = INGREDIENTS.register("oak_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> OAK_STICK = INGREDIENTS.register("oak_stick",
+            () -> new Item(new Item.Properties()));
 
     public static final Supplier<Item> SPRUCE_STICK = INGREDIENTS.register("spruce_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BIRCH_STICK = INGREDIENTS.register("birch_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> BIRCH_STICK = INGREDIENTS.register("birch_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> JUNGLE_STICK = INGREDIENTS.register("jungle_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> JUNGLE_STICK = INGREDIENTS.register("jungle_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> ACACIA_STICK = INGREDIENTS.register("acacia_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> ACACIA_STICK = INGREDIENTS.register("acacia_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> DARK_OAK_STICK = INGREDIENTS.register("dark_oak_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> DARK_OAK_STICK = INGREDIENTS.register("dark_oak_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> MANGROVE_STICK = INGREDIENTS.register("mangrove_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> MANGROVE_STICK = INGREDIENTS.register("mangrove_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CHERRY_STICK = INGREDIENTS.register("cherry_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> CHERRY_STICK = INGREDIENTS.register("cherry_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BAMBOO_STICK = INGREDIENTS.register("bamboo_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> BAMBOO_STICK = INGREDIENTS.register("bamboo_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CRIMSON_STICK = INGREDIENTS.register("crimson_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> CRIMSON_STICK = INGREDIENTS.register("crimson_stick",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> WARPED_STICK = INGREDIENTS.register("warped_stick",
-            () -> new FuelItem(new Item.Properties(), () -> 100));
+    public static final Supplier<Item> WARPED_STICK = INGREDIENTS.register("warped_stick",
+            () -> new Item(new Item.Properties()));
 
 
     ///////////////////////////////// FURNITURE PACKS ////////////////////////////////////
@@ -206,38 +219,38 @@ public class ModItems {
     public static final Supplier<Item> CONSTRUCTION_FURNITURE_PACK = INGREDIENTS.register("construction_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> OAK_FURNITURE_PACK = INGREDIENTS.register("oak_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> OAK_FURNITURE_PACK = INGREDIENTS.register("oak_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> SPRUCE_FURNITURE_PACK = INGREDIENTS.register("spruce_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> SPRUCE_FURNITURE_PACK = INGREDIENTS.register("spruce_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BIRCH_FURNITURE_PACK = INGREDIENTS.register("birch_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> BIRCH_FURNITURE_PACK = INGREDIENTS.register("birch_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> JUNGLE_FURNITURE_PACK = INGREDIENTS.register("jungle_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> JUNGLE_FURNITURE_PACK = INGREDIENTS.register("jungle_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> ACACIA_FURNITURE_PACK = INGREDIENTS.register("acacia_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> ACACIA_FURNITURE_PACK = INGREDIENTS.register("acacia_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> DARK_OAK_FURNITURE_PACK = INGREDIENTS.register("dark_oak_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> DARK_OAK_FURNITURE_PACK = INGREDIENTS.register("dark_oak_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> MANGROVE_FURNITURE_PACK = INGREDIENTS.register("mangrove_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> MANGROVE_FURNITURE_PACK = INGREDIENTS.register("mangrove_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CHERRY_FURNITURE_PACK = INGREDIENTS.register("cherry_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> CHERRY_FURNITURE_PACK = INGREDIENTS.register("cherry_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> BAMBOO_FURNITURE_PACK = INGREDIENTS.register("bamboo_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> BAMBOO_FURNITURE_PACK = INGREDIENTS.register("bamboo_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> CRIMSON_FURNITURE_PACK = INGREDIENTS.register("crimson_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> CRIMSON_FURNITURE_PACK = INGREDIENTS.register("crimson_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
-    public static final Supplier<FuelItem> WARPED_FURNITURE_PACK = INGREDIENTS.register("warped_furniture_pack",
-            () -> new FuelItem(new Item.Properties(), () -> 200));
+    public static final Supplier<Item> WARPED_FURNITURE_PACK = INGREDIENTS.register("warped_furniture_pack",
+            () -> new Item(new Item.Properties()));
 
 
     /////////////////////////////////// CHESTS ////////////////////////////////////

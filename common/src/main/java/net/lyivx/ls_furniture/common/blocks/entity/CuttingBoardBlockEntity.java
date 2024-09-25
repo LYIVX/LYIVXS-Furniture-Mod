@@ -4,6 +4,7 @@ import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModRecipes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -92,23 +93,23 @@ public class CuttingBoardBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
+    protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
         if (!item.isEmpty()) {
-            tag.put("Item", item.save(new CompoundTag()));
+            tag.put("Item", item.save(new CompoundTag(registries)));
         }
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) {
+    public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
         item = tag.contains("Item") ? ItemStack.of(tag.getCompound("Item")) : ItemStack.EMPTY;
         updateMaxUses();
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag tag = new CompoundTag();
         if (!item.isEmpty()) {
-            tag.put("Item", item.save(new CompoundTag()));
+            tag.put("Item", item.save(new CompoundTag(registries)));
         }
         return tag;
     }

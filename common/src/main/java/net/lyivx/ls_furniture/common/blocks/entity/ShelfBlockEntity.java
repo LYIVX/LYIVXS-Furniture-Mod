@@ -5,6 +5,7 @@ import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -34,27 +35,27 @@ public class ShelfBlockEntity extends BlockEntity implements Clearable, ILockabl
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         locked = tag.getBoolean(LOCKED_TAG);
         this.items.clear();
-        ContainerHelper.loadAllItems(tag, this.items);
+        ContainerHelper.loadAllItems(tag, this.items, registries);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         tag.putBoolean(LOCKED_TAG, locked);
-        ContainerHelper.saveAllItems(tag, this.items, true);
+        ContainerHelper.saveAllItems(tag, this.items, true, registries);
     }
 
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-    public CompoundTag getUpdateTag() {
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag compoundtag = new CompoundTag();
-        ContainerHelper.saveAllItems(compoundtag, this.items, true);
+        ContainerHelper.saveAllItems(compoundtag, this.items, true, registries);
         return compoundtag;
     }
 

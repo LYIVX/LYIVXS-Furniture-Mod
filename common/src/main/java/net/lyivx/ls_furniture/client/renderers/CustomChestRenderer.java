@@ -159,7 +159,7 @@ public class CustomChestRenderer<T extends BlockEntity & LidBlockEntity> impleme
 
     public static Material getChestPath(String name) {
 
-        return new Material(Sheets.CHEST_SHEET, LYIVXsFurnitureMod.res("entity/chest/" + name));
+        return new Material(Sheets.CHEST_SHEET, LYIVXsFurnitureMod.createResourceLocation("entity/chest/" + name));
     }
 
     private Material getChestMaterial(CustomChestBlockEntity blockEntity, ChestType type) {

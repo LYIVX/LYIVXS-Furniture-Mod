@@ -16,6 +16,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
@@ -753,25 +754,24 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
-        ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
-        if (hit.getDirection() != Direction.UP) {
-            return InteractionResult.PASS;
+        if (hitResult.getDirection() != Direction.UP) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 
         if (!(stack.getItem() instanceof BlockItem blockItem)) {
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 
         Block blockInHand = blockItem.getBlock();
         if (!(blockInHand instanceof PlatformBlock || blockInHand instanceof ModStairBlock)) {
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 
         Direction facing = state.getValue(FACING);
@@ -779,10 +779,11 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
         BlockPos targetPos = getTargetPos(pos, facing, modelType);
 
         if (!canPlaceBlock(level, targetPos, modelType)) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         return placeBlock(level, targetPos, blockInHand, facing, player, stack, modelType);
+
     }
 
     private BlockPos getTargetPos(BlockPos pos, Direction facing, StairModelType modelType) {
@@ -799,7 +800,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
         return state.canBeReplaced() && stateAbove.canBeReplaced();
     }
 
-    private InteractionResult placeBlock(Level level, BlockPos pos, Block blockToPlace, Direction facing, Player player, ItemStack stack, StairModelType modelType) {
+    private ItemInteractionResult placeBlock(Level level, BlockPos pos, Block blockToPlace, Direction facing, Player player, ItemStack stack, StairModelType modelType) {
         boolean isStairBlock = blockToPlace instanceof ModStairBlock;
         BlockState newState = createNewBlockState(blockToPlace, facing, level, pos);
 
@@ -817,7 +818,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
             stack.shrink(1);
         }
         newState.updateNeighbourShapes(level, pos, 3);
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     private BlockState createNewBlockState(Block block, Direction facing, Level level, BlockPos pos) {
@@ -837,7 +838,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     private void playPlaceSound(Level level, BlockPos pos, Block block) {
-        SoundType soundType = block.getSoundType(block.defaultBlockState());
+        SoundType soundType = block.defaultBlockState().getSoundType();
         level.playSound(null, pos, soundType.getPlaceSound(), SoundSource.BLOCKS,
                 (soundType.getVolume() + 1.0F) / 2.0F, soundType.getPitch() * 0.8F);
     }
@@ -896,7 +897,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
@@ -916,7 +917,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -927,7 +928,7 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getHammerableProperties() {

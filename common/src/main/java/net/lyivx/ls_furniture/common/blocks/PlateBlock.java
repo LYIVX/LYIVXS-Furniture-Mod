@@ -15,6 +15,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -40,6 +41,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
+import javax.tools.Tool;
 import java.util.List;
 
 public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
@@ -63,31 +65,35 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-
-        ItemStack stack = player.getItemInHand(hand);
-
-        if (hit.getDirection() != Direction.UP) return InteractionResult.PASS;
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (hitResult.getDirection() != Direction.UP) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (!(blockentity instanceof PlateBlockEntity plateBE)) return InteractionResult.PASS;
+        if (!(blockentity instanceof PlateBlockEntity plateBE)) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
         Direction facing = state.getValue(FACING);
-        int slot = BlockPart.get1D(pos, hit.getLocation(), facing.getClockWise(),1);
+        int slot = BlockPart.get1D(pos, hitResult.getLocation(), facing.getClockWise(),1);
 
         // Place
         if (!stack.isEmpty()) {
             if (!level.isClientSide && plateBE.placeItem(player.getAbilities().instabuild ? stack.copy() : stack, slot)) {
                 level.playSound(null, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
             // Avoids client trying to place actual block on top
-            return InteractionResult.CONSUME;
+            return ItemInteractionResult.CONSUME;
         }
 
-        // Remove
-        if (plateBE.removeItem(slot, player, level)) return InteractionResult.SUCCESS;
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
 
-        return InteractionResult.PASS;
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockEntity blockentity = level.getBlockEntity(pos);
+        if (!(blockentity instanceof PlateBlockEntity plateBE)) return InteractionResult.PASS;
+        Direction facing = state.getValue(FACING);
+        int slot = BlockPart.get1D(pos, hitResult.getLocation(), facing.getClockWise(),1);
+        if (plateBE.removeItem(slot, player, level)) return InteractionResult.SUCCESS;
+        return super.useWithoutItem(state, level, pos, player, hitResult);
     }
 
     @Override
@@ -179,12 +185,12 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -193,6 +199,6 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 }

@@ -72,7 +72,7 @@ public class MailboxRenderer implements BlockEntityRenderer<MailboxBlockEntity> 
                     break;
             }
 
-            poseStack.mulPoseMatrix((new Matrix4f()).rotateYXZ(getRotationYForSide2D(side), 0, 0));
+            poseStack.mulPose((new Matrix4f()).rotateYXZ(getRotationYForSide2D(side), 0, 0));
             poseStack.translate(-0.5f, 0, -0.5f);
 
             // Adjust position to render on the block face

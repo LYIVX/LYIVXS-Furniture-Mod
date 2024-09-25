@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -150,13 +151,17 @@ public class WorkstationMenu extends AbstractContainerMenu  {
 
     }
 
+    private static SingleRecipeInput createRecipeInput(Container container) {
+        return new SingleRecipeInput(container.getItem(0));
+    }
+
     private void setupRecipeList(Container container, ItemStack stack) {
         this.selectedRecipeIndex.set(-1);
 
         this.resultSlot.set(ItemStack.EMPTY);
         if (!stack.isEmpty()) {
             var matching = this.level.getRecipeManager()
-                    .getRecipesFor(ModRecipes.WORKSTATION_RECIPE.get(), container, this.level);
+                    .getRecipesFor(ModRecipes.WORKSTATION_RECIPE.get(), createRecipeInput(container), this.level);
 
             RecipeSorter.sort(matching, this.level);
 
@@ -180,7 +185,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
         if (!this.recipes.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex.get())) {
             FilterableRecipe selected = this.recipes.get(this.selectedRecipeIndex.get());
             this.lastSelectedRecipe = selected;
-            ItemStack itemStack = selected.recipe().assemble(this.container, this.level.registryAccess());
+            ItemStack itemStack = selected.recipe().assemble(createRecipeInput(container), this.level.registryAccess());
             if (itemStack.isItemEnabled(this.level.enabledFeatures())) {
                 this.resultContainer.setRecipeUsed(selected.recipeHolder());
                 this.resultSlot.set(itemStack);
@@ -227,7 +232,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
                 if (!this.moveItemStackTo(itemStack2, 2, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (this.level.getRecipeManager().getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SimpleContainer(itemStack2), this.level).isPresent()) {
+            } else if (this.level.getRecipeManager().getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SingleRecipeInput(itemStack2), this.level).isPresent()) {
                 if (!this.moveItemStackTo(itemStack2, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }

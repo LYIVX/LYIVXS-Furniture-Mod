@@ -3,7 +3,6 @@ package net.lyivx.ls_furniture.fabric;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
-import net.lyivx.ls_furniture.config.ModMenuApiImpl;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -25,12 +24,5 @@ public class LYIVXsFurnitureModFabric implements ModInitializer {
             ResourceKey<CreativeModeTab> key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, loc);
             LYIVXsFurnitureMod.initCreativeTabContents(key, stacks::accept);
         });
-    }
-
-
-    public static ResourceLocation res(String name) {
-        return new ResourceLocation(MOD_ID, name);
-
-
     }
 }

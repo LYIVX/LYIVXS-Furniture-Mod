@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.common.blocks.entity;
 import net.lyivx.ls_furniture.common.utils.block.BlockEntityHelper;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -132,8 +133,8 @@ public class TombstoneBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         tag.putString("Owner", owner == null ? "" : owner);
         for (int i = 0; i < 4; i++) {
             tag.putString("Line" + (i + 1), lines[i]);
@@ -146,8 +147,8 @@ public class TombstoneBlockEntity extends BlockEntity {
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         owner = tag.getString("Owner");
         for (int i = 0; i < 4; i++) {
             lines[i] = tag.getString("Line" + (i + 1));
@@ -160,9 +161,9 @@ public class TombstoneBlockEntity extends BlockEntity {
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        CompoundTag tag = super.getUpdateTag();
-        saveAdditional(tag);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = super.getUpdateTag(registries);
+        saveAdditional(tag, registries);
         return tag;
     }
 

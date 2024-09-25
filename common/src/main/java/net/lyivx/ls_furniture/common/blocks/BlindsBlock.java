@@ -2,7 +2,6 @@ package net.lyivx.ls_furniture.common.blocks;
 
 import net.lyivx.ls_furniture.common.blocks.properties.HorizontalConnectionType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
-import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.registry.ModItemTags;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
@@ -13,6 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -153,16 +153,21 @@ public class BlindsBlock extends Block implements SimpleWaterloggedBlock, Wrench
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (player.getItemInHand(hand).is(ModItemTags.BLINDS) && state.getValue(FACING) == Direction.UP && hit.getDirection() == Direction.UP) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
-        ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
+
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 
         if (state.getValue(WATERLOGGED)) level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 
@@ -258,7 +263,7 @@ public class BlindsBlock extends Block implements SimpleWaterloggedBlock, Wrench
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -266,7 +271,7 @@ public class BlindsBlock extends Block implements SimpleWaterloggedBlock, Wrench
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

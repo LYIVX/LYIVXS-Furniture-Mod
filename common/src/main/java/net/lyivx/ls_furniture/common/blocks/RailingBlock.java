@@ -16,6 +16,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -138,19 +139,17 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                 .setValue(WATERLOGGED, waterlogged);
     }
 
-
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem || item instanceof SawItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof ILockable lockable && lockable.isLocked()) {
             player.displayClientMessage(Component.translatable("msg.ls_furniture.locked"), true);
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         Direction facing = state.getValue(FACING);
@@ -159,8 +158,8 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
             player.getItemInHand(hand).shrink(1);
         }
 
-        Direction hitFace = hit.getDirection();
-        Vec3 hitPosition = hit.getLocation();
+        Direction hitFace = hitResult.getDirection();
+        Vec3 hitPosition = hitResult.getLocation();
         double xOffset = hitPosition.x - pos.getX();
         double zOffset = hitPosition.z - pos.getZ();
 
@@ -171,23 +170,23 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                     if (zOffset < 0.5) {
                         if (xOffset < 0.5) {
                             level.setBlock(pos, state.setValue(WEST_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         } else {
                             level.setBlock(pos, state.setValue(EAST_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         }
                     }
                 }
                 if (hitFace == Direction.WEST) {
                     if (xOffset < 0.5) {
-                        return InteractionResult.SUCCESS;
+                        return ItemInteractionResult.SUCCESS;
                     } else {
                         if (zOffset < 0.5) {
                             level.setBlock(pos, state.setValue(NORTH_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         } else {
                             level.setBlock(pos, state.setValue(SOUTH_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         }
                     }
                 }
@@ -195,32 +194,31 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                     if (xOffset < 0.5) {
                         if (zOffset < 0.5) {
                             level.setBlock(pos, state.setValue(NORTH_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         } else {
                             level.setBlock(pos, state.setValue(SOUTH_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         }
                     } else {
-                        return InteractionResult.SUCCESS;
+                        return ItemInteractionResult.SUCCESS;
                     }
                 }
                 if (hitFace == Direction.NORTH) {
                     if (zOffset < 0.5) {
-                        return InteractionResult.SUCCESS;
+                        return ItemInteractionResult.SUCCESS;
                     } else {
                         if (xOffset < 0.5) {
                             level.setBlock(pos, state.setValue(WEST_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         } else {
                             level.setBlock(pos, state.setValue(EAST_RAILING, true), 3);
-                            return InteractionResult.SUCCESS;
+                            return ItemInteractionResult.SUCCESS;
                         }
                     }
                 }
-            } else return InteractionResult.FAIL;
+            } else return ItemInteractionResult.FAIL;
         }
-        return InteractionResult.SUCCESS;
-    }
+        return ItemInteractionResult.SUCCESS;    }
 
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
@@ -283,12 +281,12 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -299,7 +297,7 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getHammerableProperties() {

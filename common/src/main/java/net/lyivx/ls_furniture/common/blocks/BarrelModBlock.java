@@ -12,6 +12,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -50,7 +51,8 @@ public class BarrelModBlock extends Block implements WrenchItem.WrenchableBlock 
         if (blockEntity instanceof BarrelBlockEntity barrelBlockEntity) barrelBlockEntity.recheckOpen();
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -58,8 +60,7 @@ public class BarrelModBlock extends Block implements WrenchItem.WrenchableBlock 
             player.openMenu(barrelBlockEntity);
             PiglinAi.angerNearbyPiglins(player, true);
         }
-        return InteractionResult.CONSUME;
-    }
+        return InteractionResult.CONSUME;    }
 
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
@@ -82,7 +83,7 @@ public class BarrelModBlock extends Block implements WrenchItem.WrenchableBlock 
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -90,7 +91,7 @@ public class BarrelModBlock extends Block implements WrenchItem.WrenchableBlock 
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

@@ -12,6 +12,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -103,21 +104,13 @@ public class FirePlaceBlock extends Block implements WrenchItem.WrenchableBlock 
     }
 
     @Override
-    public InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult result) {
-
-        ItemStack stack = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
-        if (stack.isEmpty() && state.getValue(ON)) {
-            BlockState offState = state.setValue(ON, false);
-            level.setBlockAndUpdate(pos, offState);
-            level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, offState.getValue(ON) ? 0.6F : 0.5F);
-            return InteractionResult.SUCCESS;
-
-        } else if (stack.is(Items.FLINT_AND_STEEL) && !state.getValue(ON)) {
+        if (stack.is(Items.FLINT_AND_STEEL) && !state.getValue(ON)) {
             BlockState onState = state.setValue(ON, true);
             level.setBlockAndUpdate(pos, onState);
             level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, onState.getValue(ON) ? 0.6F : 0.5F);
@@ -125,14 +118,25 @@ public class FirePlaceBlock extends Block implements WrenchItem.WrenchableBlock 
             if (!player.isCreative()) {
                 stack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
 
         }
-        return InteractionResult.FAIL;
+        return ItemInteractionResult.FAIL;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (state.getValue(ON)) {
+            BlockState offState = state.setValue(ON, false);
+            level.setBlockAndUpdate(pos, offState);
+            level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, offState.getValue(ON) ? 0.6F : 0.5F);
+            return InteractionResult.SUCCESS;
+        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.fire_place"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.fire_place_off"));
@@ -142,7 +146,7 @@ public class FirePlaceBlock extends Block implements WrenchItem.WrenchableBlock 
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

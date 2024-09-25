@@ -67,7 +67,11 @@ public class OvenVentItem extends BlockItem {
         } else {
             InteractionResult interactionResult = this.place(new BlockPlaceContext(context));
 
-            if (!interactionResult.consumesAction() && this.isEdible()) {
+
+
+
+
+            if (!interactionResult.consumesAction()) {
                 InteractionResult interactionResult2 = this.use(context.getLevel(), context.getPlayer(), context.getHand()).getResult();
                 return interactionResult2 == InteractionResult.CONSUME ? InteractionResult.CONSUME_PARTIAL : interactionResult2;
             } else {
@@ -77,7 +81,7 @@ public class OvenVentItem extends BlockItem {
     }
     
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.oven_vent"));
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
@@ -86,6 +90,6 @@ public class OvenVentItem extends BlockItem {
         } else {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltipComponents, flag);
+        super.appendHoverText(stack, context, tooltipComponents, flag);
     }
 }

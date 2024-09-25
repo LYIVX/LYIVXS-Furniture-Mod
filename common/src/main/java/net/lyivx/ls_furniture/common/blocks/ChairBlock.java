@@ -17,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -125,8 +126,21 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+
+        if (TuckableBlock.tryTuck(state, level, pos, player))
+            return InteractionResult.SUCCESS;
+
+        return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item item = stack.getItem();
+        if (item instanceof HammerItem || item instanceof WrenchItem || item instanceof SawItem) {
+            return ItemInteractionResult.FAIL;
+        }
+
         if (level.getBlockEntity(pos) instanceof ChairBlockEntity entity) {
             DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
             if (woolDye != null && !entity.hasColor()) {
@@ -136,7 +150,7 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
                     stack.shrink(1);
                 }
                 level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
             DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
             if (dye != null && entity.hasColor()) {
@@ -146,25 +160,19 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
                     stack.shrink(1);
                 }
                 level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
             if (stack.is(ModItems.SHEARS.get()) && entity.hasColor()) {
                 dropCushion(level, pos);
                 entity.setColor(null);
                 entity.setChanged();
                 level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
         }
 
-        Item item = stack.getItem();
-        if (item instanceof HammerItem || item instanceof WrenchItem || item instanceof SawItem) {
-            return InteractionResult.FAIL;
-        }
 
-        if (TuckableBlock.tryTuck(state, level, pos, player)) return InteractionResult.SUCCESS;
-
-        return super.use(state, level, pos, player, hand, hit);
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
     @Override
@@ -198,7 +206,7 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -210,7 +218,7 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     @Nullable

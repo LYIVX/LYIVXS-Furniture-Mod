@@ -24,11 +24,13 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> {
-    private static final ResourceLocation BACKGROUND = LYIVXsFurnitureMod.res("textures/gui/container/workstation.png");
-    private static final ResourceLocation BACKGROUND_SEARCH = LYIVXsFurnitureMod.res("textures/gui/container/workstation_search.png");
-    private static final ResourceLocation RECIPE_BUTTON_LOCATION = new ResourceLocation("textures/gui/recipe_button.png");
-    private static final ResourceLocation CONFIG_ICON = LYIVXsFurnitureMod.res("textures/gui/workstation_config_button.png");
+    private static final ResourceLocation BACKGROUND = LYIVXsFurnitureMod.createResourceLocation("textures/gui/container/workstation.png");
+    private static final ResourceLocation BACKGROUND_SEARCH = LYIVXsFurnitureMod.createResourceLocation("textures/gui/container/workstation_search.png");
+    private static final ResourceLocation RECIPE_BUTTON_LOCATION = createResourceLocation("textures/gui/recipe_button.png");
+    private static final ResourceLocation CONFIG_ICON = LYIVXsFurnitureMod.createResourceLocation("textures/gui/workstation_config_button.png");
 
     private final RecipeBookComponent recipeBookComponent = new RecipeBookComponent();
 

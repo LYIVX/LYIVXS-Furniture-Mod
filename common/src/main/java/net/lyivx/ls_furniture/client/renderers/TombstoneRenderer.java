@@ -52,7 +52,7 @@ public class TombstoneRenderer implements BlockEntityRenderer<TombstoneBlockEnti
                 break;
         }
 
-        poseStack.mulPoseMatrix((new org.joml.Matrix4f()).rotateY(getRotationYForSide2D(side)));
+        poseStack.mulPose((new org.joml.Matrix4f()).rotateY(getRotationYForSide2D(side)));
 
         // Move slightly in front of the block face
 

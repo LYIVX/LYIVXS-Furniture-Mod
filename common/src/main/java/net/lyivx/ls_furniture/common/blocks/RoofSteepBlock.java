@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -362,7 +363,7 @@ public class RoofSteepBlock extends Block implements SimpleWaterloggedBlock {
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         if (!state.is(state.getBlock())) {
             level.neighborChanged(this.baseState, pos, Blocks.AIR, pos, false);
-            this.base.onPlace(this.baseState, level, pos, oldState, false);
+            this.onPlace(this.baseState, level, pos, oldState, false);
         }
     }
 
@@ -377,27 +378,27 @@ public class RoofSteepBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     public boolean isRandomlyTicking(BlockState state) {
-        return this.base.isRandomlyTicking(state);
+        return this.isRandomlyTicking(state);
     }
 
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        this.base.randomTick(state, level, pos, random);
+        this.randomTick(state, level, pos, random);
     }
 
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        this.base.tick(state, level, pos, random);
+        this.tick(state, level, pos, random);
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
         if (state.getValue(HALF) == Half.BOTTOM) {
-            if (hit.getDirection() != state.getValue(FACING).getOpposite()) {
-                return InteractionResult.FAIL;
+            if (hitResult.getDirection() != state.getValue(FACING).getOpposite()) {
+                return ItemInteractionResult.FAIL;
             }
         } else {
-            if (hit.getDirection() != state.getValue(FACING)) {
-                return InteractionResult.FAIL;
+            if (hitResult.getDirection() != state.getValue(FACING)) {
+                return ItemInteractionResult.FAIL;
             }
         }
 
@@ -408,11 +409,10 @@ public class RoofSteepBlock extends Block implements SimpleWaterloggedBlock {
             if (!player.isCreative()) {
                 stack.shrink(1);
             }
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
-        return this.baseState.use(level, player, hand, hit);
+        return this.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
-
 
     private <T extends Comparable<T>> BlockState copyProperty(BlockState fromState, BlockState toState, Property<T> property) {
         T value = fromState.getValue(property);  // Get the value of the property from the old state

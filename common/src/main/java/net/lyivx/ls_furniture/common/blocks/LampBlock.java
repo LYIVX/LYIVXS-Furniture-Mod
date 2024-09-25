@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -323,6 +324,48 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
         return InteractionResult.SUCCESS;
     }
 
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+
+        Item item = stack.getItem();
+        if (item instanceof HammerItem || item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
+        }
+
+        if (level.getBlockEntity(pos) instanceof LampBlockEntity entity) {
+            DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+
+            if (dye != null) {
+                ColorType newColorType = getColorTypeFromDye(dye);
+
+                dyeConnectedBlocks(level, pos, newColorType);
+                state = state.setValue(COLOR, newColorType);
+
+                if (!player.isCreative()) {
+                    stack.shrink(1);
+                }
+
+                level.setBlock(pos, state, Block.UPDATE_ALL);
+                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+                return ItemInteractionResult.SUCCESS;
+            } else {
+                if (player.getItemInHand(hand).is(ModItemTags.LAMPS) && state.getValue(FACING) == Direction.UP && hitResult.getDirection() == Direction.UP) {
+                    return ItemInteractionResult.FAIL;
+                }
+            }
+        }
+        return ItemInteractionResult.SUCCESS;
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        state = state.cycle(LIT);
+        level.setBlock(pos, state, 3);
+        level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
+        return InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
     private void dyeConnectedBlocks(Level level, BlockPos startPos, ColorType color) {
         BlockState startState = level.getBlockState(startPos);
         if (startState.getBlock() instanceof LampBlock && startState.getValue(COLOR) != color) {
@@ -361,7 +404,7 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
@@ -384,7 +427,7 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -395,7 +438,7 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     @Override

@@ -28,7 +28,7 @@ public class ModEntities {
             true,
             ImmutableSet.of(),
             EntityDimensions.scalable(0.875F, 0.625F),
-            5, 3,
+            5, 3, 1,
             FeatureFlags.DEFAULT_FLAGS
     ));
 }

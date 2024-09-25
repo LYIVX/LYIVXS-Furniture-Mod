@@ -15,6 +15,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -112,16 +113,19 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getItemInHand(hand);
-        Item item = itemStack.getItem();
-        if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
-
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (player.isCrouching()) {
             level.setBlock(pos, state.cycle(HAS_DIRT), 3);
             return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item item = stack.getItem();
+        if (item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
         }
 
         if (level.getBlockEntity(pos) instanceof TombstoneBlockEntity tombstoneBlockEntity) {
@@ -130,19 +134,19 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
                     tombstoneBlockEntity.setColor(((DyeItem) item).getDyeColor());
                     level.sendBlockUpdated(pos, state, state, 3);
                     level.playSound((Player)null, tombstoneBlockEntity.getBlockPos(), SoundEvents.DYE_USE, SoundSource.BLOCKS);
-                    return InteractionResult.sidedSuccess(level.isClientSide);
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide);
 
                 } else if (item == Items.GLOW_INK_SAC && !tombstoneBlockEntity.isGlowing()) {
                     tombstoneBlockEntity.setGlowing(true);
                     level.sendBlockUpdated(pos, state, state, 3);
                     level.playSound((Player)null, tombstoneBlockEntity.getBlockPos(), SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS);
-                    return InteractionResult.sidedSuccess(level.isClientSide);
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide);
 
                 } else if (item == Items.INK_SAC && tombstoneBlockEntity.isGlowing()) {
                     tombstoneBlockEntity.setGlowing(false);
                     level.sendBlockUpdated(pos, state, state, 3);
                     level.playSound((Player)null, tombstoneBlockEntity.getBlockPos(), SoundEvents.INK_SAC_USE, SoundSource.BLOCKS);
-                    return InteractionResult.sidedSuccess(level.isClientSide);
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide);
                 }
 
                 if (!level.isClientSide) {
@@ -151,10 +155,9 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
 
                 }
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
         }
-        return InteractionResult.PASS;
-    }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;    }
 
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity entity, ItemStack stack) {
@@ -173,7 +176,7 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.tombstone"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
@@ -182,7 +185,7 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     @Override

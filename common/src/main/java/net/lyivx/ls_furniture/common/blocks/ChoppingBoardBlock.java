@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
@@ -69,35 +70,34 @@ public class ChoppingBoardBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult result) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
 
         if (blockEntity instanceof ChoppingBoardBlockEntity choppingBoard) {
-            ItemStack stack = player.getItemInHand(hand);
 
             if (stack.getItem() instanceof AxeItem) {
                 if (!choppingBoard.getItem().isEmpty() && choppingBoard.use()) {
                     stack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
                     level.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    return InteractionResult.sidedSuccess(level.isClientSide());
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide());
                 }
             } else if (player.isShiftKeyDown() && stack.isEmpty()) {
                 if (!choppingBoard.getItem().isEmpty()) {
                     player.setItemInHand(hand, choppingBoard.getAndRemoveItem());
                     level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    return InteractionResult.sidedSuccess(level.isClientSide());
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide());
                 }
             } else if (choppingBoard.getItem().isEmpty()) {
                 if ((stack.getItem() instanceof BlockItem)) {
                     player.setItemInHand(hand, choppingBoard.setItem(stack));
                     if (level.isClientSide()) choppingBoard.randomDegree = level.random.nextInt(360);
                     level.playSound(null, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    return InteractionResult.sidedSuccess(level.isClientSide());
+                    return ItemInteractionResult.sidedSuccess(level.isClientSide());
                 }
 
             }
         }
-        return InteractionResult.FAIL;
+        return ItemInteractionResult.FAIL;
     }
 
     @Override

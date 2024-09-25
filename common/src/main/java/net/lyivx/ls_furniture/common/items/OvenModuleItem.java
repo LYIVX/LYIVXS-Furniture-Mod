@@ -66,12 +66,12 @@ public class OvenModuleItem extends Item {
     }
     
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.oven"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltipComponents, flag);
+        super.appendHoverText(stack, context, tooltipComponents, flag);
     }
 }

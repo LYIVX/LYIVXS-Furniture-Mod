@@ -1,7 +1,10 @@
 package net.lyivx.ls_furniture.client.screens;
 
+import dev.architectury.networking.NetworkManager;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.items.LetterItem;
+import net.lyivx.ls_furniture.common.network.ServerboundLetterUpdateMessage;
+import net.lyivx.ls_furniture.registry.ModComponents;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -12,14 +15,20 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.StringUtil;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.Optional;
+
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
 public class LetterScreen extends Screen {
     private static final Component SCREEN_NAME = Component.translatable("item.ls_furniture.letter");
     private static final Component SIGN_LETTER = Component.translatable("book.signButton");
-    private static final ResourceLocation LETTER_BACKGROUND = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "textures/gui/letter.png");
+    private static final ResourceLocation LETTER_BACKGROUND = createResourceLocation("textures/gui/letter.png");
 
     // Max length is 16 lines of 18 characters
     private static final int LETTER_MAX_LENGTH = 288;
@@ -37,8 +46,7 @@ public class LetterScreen extends Screen {
         this.hand = hand;
         this.letter = letter;
         this.playerEntity = playerEntity;
-        CompoundTag tag = letter.getOrCreateTag();
-        letterText = tag.getAllKeys().contains("Text") ? tag.getString("Text") : "";
+        letterText = letter.has(ModComponents.Letter_Text.get()) ? letter.get(ModComponents.Letter_Text.get()) : "";
         editable = LetterItem.canEditLetter(letter);
         if(editable) {
             letterEdit = new TextFieldHelper(this::getText, this::setText, this::getClipboard, this::setClipboard, (s) -> s.length() < LETTER_MAX_LENGTH);
@@ -63,10 +71,9 @@ public class LetterScreen extends Screen {
         letterText = s;
     }
 
-    private void save() {
-        CompoundTag tag = letter.getOrCreateTag();
-        tag.putString("Text", getText());
-        letter.setTag(tag);
+    private void sendUpdate(Optional<String> author) {
+        int slot = this.hand == InteractionHand.MAIN_HAND ? this.playerEntity.getInventory().selected : Inventory.SLOT_OFFHAND;
+        NetworkManager.sendToServer(new ServerboundLetterUpdateMessage(slot, getText(), author));
     }
 
     @Override
@@ -74,12 +81,11 @@ public class LetterScreen extends Screen {
         super.init();
         if(editable) {
             this.addRenderableWidget(Button.builder(SIGN_LETTER, (button) -> {
-                save();
-                LetterItem.signLetter(letter, playerEntity.getGameProfile().getName());
+                sendUpdate(Optional.of(playerEntity.getGameProfile().getName()));
                 this.minecraft.setScreen(null);
             }).bounds(this.width / 2 - 102, 196, 100, 20).build());
             this.addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, (button) -> {
-                save();
+                sendUpdate(Optional.empty());
                 this.minecraft.setScreen(null);
             }).bounds(this.width / 2 + 2, 196, 100, 20).build());
         } else {
@@ -94,7 +100,7 @@ public class LetterScreen extends Screen {
         if(super.charTyped(c, n)) {
             return true;
         }
-        if(editable && SharedConstants.isAllowedChatCharacter(c)) {
+        if(editable && StringUtil.isAllowedChatCharacter(c)) {
             letterEdit.insertText(Character.toString(c));
             return true;
         }

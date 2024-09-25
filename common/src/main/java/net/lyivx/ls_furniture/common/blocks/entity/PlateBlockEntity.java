@@ -4,6 +4,7 @@ import dev.architectury.injectables.annotations.PlatformOnly;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -31,25 +32,25 @@ public class PlateBlockEntity extends BlockEntity implements Clearable {
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         this.items.clear();
-        ContainerHelper.loadAllItems(tag, this.items);
+        ContainerHelper.loadAllItems(tag, this.items, registries);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        ContainerHelper.saveAllItems(tag, this.items, true);
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
+        ContainerHelper.saveAllItems(tag, this.items, true, registries);
     }
 
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-    public CompoundTag getUpdateTag() {
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag compoundtag = new CompoundTag();
-        ContainerHelper.saveAllItems(compoundtag, this.items, true);
+        ContainerHelper.saveAllItems(compoundtag, this.items, true, registries);
         return compoundtag;
     }
 

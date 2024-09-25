@@ -45,7 +45,7 @@ public class SeatBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.mayInteract(player, pos)) return InteractionResult.PASS;
         if (!isSittable(state) || player.isPassenger() || player.isCrouching()) return InteractionResult.PASS;
 
@@ -59,10 +59,9 @@ public class SeatBlock extends Block {
 
         if (level.isClientSide) return InteractionResult.SUCCESS;
         sitDown(level, pos, getLeashed(player).orElse(player));
-        return InteractionResult.SUCCESS;
-    }
+        return InteractionResult.SUCCESS;    }
 
-//    @Override
+    //    @Override
 //    public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
 //        BlockPos pos = entity.blockPosition();
 //        if (reader.getBlockState(pos).getBlock() != this) {
@@ -123,7 +122,7 @@ public class SeatBlock extends Block {
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 

@@ -8,6 +8,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,6 +41,10 @@ public class SeatEntity extends Entity {
         this.sittingPosition = BlockPos.ZERO;
     }
 
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+    }
+
     public SeatEntity(Level level, BlockPos pos) {
         this(level);
         this.setPos(pos.getX() + 0.5, pos.getY() + 0.001, pos.getZ() + 0.5);
@@ -63,24 +69,10 @@ public class SeatEntity extends Entity {
     }
 
     @Override
-    protected void defineSynchedData() {}
-
-    @Override
     protected void readAdditionalSaveData(CompoundTag compound) {}
 
     @Override
     protected void addAdditionalSaveData(CompoundTag compound) {}
-
-    @Override
-    protected float ridingOffset(Entity entity) {
-        List<Entity> passengers = this.getPassengers();
-        if (passengers.isEmpty()) return 0.0F;
-        double seatHeight = 0.0;
-        BlockState state = level().getBlockState(this.blockPosition());
-        if (state.getBlock() instanceof SeatBlock seatBlock) seatHeight = seatBlock.seatHeight(state);
-
-        return (float) (seatHeight + getEntitySeatOffset(passengers.get(0)));
-    }
 
     public static double getEntitySeatOffset(Entity entity) {
         if (entity instanceof Slime) return 1 / 4f;
@@ -99,8 +91,8 @@ public class SeatEntity extends Entity {
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
+    public Packet<ClientGamePacketListener> getAddEntityPacket(ServerEntity entity) {
+        return new ClientboundAddEntityPacket(this, entity);
     }
 
     @Override

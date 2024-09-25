@@ -1,6 +1,5 @@
 package net.lyivx.ls_furniture.common.items;
 
-import net.mehvahdjukaar.moonlight.api.item.FuelItem;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -18,12 +17,12 @@ public class ShearsItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack,TooltipContext context, List<Component> tooltipComponents, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.shears"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltipComponents, flag);
+        super.appendHoverText(stack, context, tooltipComponents, flag);
     }
 }

@@ -6,6 +6,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 public class ModBlocksTags {
 
     public static final TagKey<Block> CHAIRS_TUCKABLE_UNDER = blockTag("chairs_tuckable_under");
@@ -18,7 +20,7 @@ public class ModBlocksTags {
     public static final TagKey<Block> BYPASSES_MAIL_TAG_TAG  = blockTag("bypasses_mail_tag");
 
     private static TagKey<Block> blockTag(String name) {
-        return TagKey.create(Registries.BLOCK, new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, name));
+        return TagKey.create(Registries.BLOCK, createResourceLocation(name));
     }
 
     public static void init() {}

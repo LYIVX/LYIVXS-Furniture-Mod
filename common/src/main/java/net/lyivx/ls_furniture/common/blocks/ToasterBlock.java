@@ -15,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -120,11 +121,10 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
         if (!level.isClientSide() && stack.getItem() == ModItems.SLICED_BREAD.get()) {
 
@@ -140,13 +140,12 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                 ((ToasterBlockEntity) blockEntity).startToasting();
             }
 
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
-        return InteractionResult.SUCCESS;
-    }
+        return ItemInteractionResult.SUCCESS;    }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -154,7 +153,7 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

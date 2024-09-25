@@ -20,6 +20,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -85,38 +86,37 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
-        ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
-        if (hit.getDirection() != Direction.UP) return InteractionResult.PASS;
+        if (hitResult.getDirection() != Direction.UP) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         Direction direction = state.getValue(FACING);
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (!(blockentity instanceof DrainerBlockEntity drainerBlockEntity)) return InteractionResult.PASS;
+        if (!(blockentity instanceof DrainerBlockEntity drainerBlockEntity)) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
         Direction facing = state.getValue(FACING);
-        int slot = BlockPart.get1D(pos, hit.getLocation(), facing,2);
+        int slot = BlockPart.get1D(pos, hitResult.getLocation(), facing,2);
 
         // Place
         if (!stack.isEmpty()) {
             if (stack.is(ModItems.PLATE.get())) {
                 if (!level.isClientSide && drainerBlockEntity.placeItem(player.getAbilities().instabuild ? stack.copy() : stack, slot)) {
                     level.playSound(null, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    return InteractionResult.SUCCESS;
+                    return ItemInteractionResult.SUCCESS;
                 }
             }
             // Avoids client trying to place actual block on top
-            return InteractionResult.CONSUME;
+            return ItemInteractionResult.CONSUME;
         }
 
         // Remove
-        if (drainerBlockEntity.removeItem(slot, player, level)) return InteractionResult.SUCCESS;
+        if (drainerBlockEntity.removeItem(slot, player, level)) return ItemInteractionResult.SUCCESS;
 
-        return InteractionResult.PASS;
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
@@ -188,12 +188,12 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -201,7 +201,7 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

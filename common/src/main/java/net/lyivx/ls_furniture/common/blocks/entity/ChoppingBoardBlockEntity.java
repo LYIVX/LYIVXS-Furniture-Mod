@@ -1,9 +1,11 @@
 package net.lyivx.ls_furniture.common.blocks.entity;
 
+import net.lyivx.ls_furniture.common.recipes.ChoppingBoardRecipe;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModRecipes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -15,6 +17,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 
 public class ChoppingBoardBlockEntity extends BlockEntity {
@@ -34,14 +38,15 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
         if (maxUses == 0) return false;
         uses++;
         if (uses >= maxUses && level != null) {
-            var recipe = level.getRecipeManager().getRecipeFor(ModRecipes.CHOPPING_BOARD_RECIPE.get(), new SimpleContainer(item), level);
-            if (recipe.isEmpty()) {
+            Optional<ChoppingBoardRecipe> optionalRecipe = level.getRecipeManager().getRecipeFor(ModRecipes.CHOPPING_BOARD_RECIPE.get(), new SimpleContainer(item), level);
+            if (optionalRecipe.isEmpty()) {
                 this.updateMaxUses();
                 return false;
             }
-            ItemStack output = recipe.get().value().output();
-            if (recipe.get().value().copyNbt() && item.hasTag()) {
-                output.setTag(item.getTag());
+            ChoppingBoardRecipe recipe = optionalRecipe.get();
+            ItemStack output = recipe.assemble(new SimpleContainer(item), level.registryAccess());
+            if (recipe.copyNbt() && item.getTag() != null) {
+                output.setTag(item.getTag().copy());
             }
             this.item = ItemStack.EMPTY;
             if (level != null) {
@@ -77,14 +82,14 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
             this.maxUses = 0;
             return;
         }
-        var recipe = level.getRecipeManager().getRecipeFor(ModRecipes.CHOPPING_BOARD_RECIPE.get(), new SimpleContainer(item), level);
-        if (recipe.isEmpty()) {
+        Optional<ChoppingBoardRecipe> optionalRecipe = level.getRecipeManager().getRecipeFor(ModRecipes.CHOPPING_BOARD_RECIPE.get(), new SimpleContainer(item), level);
+        if (optionalRecipe.isEmpty()) {
             this.uses = 0;
             this.maxUses = 0;
             return;
         }
         this.uses = 0;
-        this.maxUses = recipe.get().value().uses();
+        this.maxUses = optionalRecipe.get().uses();
     }
 
     public ItemStack getItem() {
@@ -92,24 +97,30 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
+    protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         if (!item.isEmpty()) {
-            tag.put("Item", item.save(new CompoundTag()));
+            CompoundTag itemTag = new CompoundTag();
+            item.save(itemTag);
+            tag.put("Item", itemTag);
         }
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) {
-        item = tag.contains("Item") ? ItemStack.of(tag.getCompound("Item")) : ItemStack.EMPTY;
+    public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
+        if (tag.contains("Item")) {
+            item = ItemStack.of(tag.getCompound("Item"));
+        } else {
+            item = ItemStack.EMPTY;
+        }
         updateMaxUses();
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag tag = new CompoundTag();
-        if (!item.isEmpty()) {
-            tag.put("Item", item.save(new CompoundTag()));
-        }
+        saveAdditional(tag, registries);
         return tag;
     }
 

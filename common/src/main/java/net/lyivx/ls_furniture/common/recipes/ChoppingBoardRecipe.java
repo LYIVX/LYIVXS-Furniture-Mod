@@ -7,6 +7,7 @@ import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
 import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
 import io.netty.buffer.ByteBuf;
 import net.lyivx.ls_furniture.registry.ModRecipes;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
@@ -63,7 +64,7 @@ public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt
     }
 
     @Override
-    public ItemStack assemble(Container container, RegistryAccess registryAccess) {
+    public ItemStack assemble(Container container, HolderLookup.Provider provider) {
         ItemStack result = output.copy();
         if (copyNbt) {
             result.setTag(container.getItem(0).getTag());

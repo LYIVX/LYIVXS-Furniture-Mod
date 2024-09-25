@@ -13,6 +13,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -102,14 +103,7 @@ public class OvenVentBlock extends Block implements WrenchItem.WrenchableBlock {
     }
 
     @Override
-    public InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult result) {
-
-        ItemStack stack = player.getItemInHand(hand);
-        Item item = stack.getItem();
-        if (item instanceof HammerItem || item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
-
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockState newState = state.cycle(ON);
         level.setBlockAndUpdate(pos, newState);
         level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, newState.getValue(ON) ? 0.6F : 0.5F);
@@ -117,7 +111,16 @@ public class OvenVentBlock extends Block implements WrenchItem.WrenchableBlock {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item item = stack.getItem();
+        if (item instanceof HammerItem || item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -125,7 +128,7 @@ public class OvenVentBlock extends Block implements WrenchItem.WrenchableBlock {
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

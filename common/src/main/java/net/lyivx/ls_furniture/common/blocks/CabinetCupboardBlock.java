@@ -11,10 +11,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
@@ -120,21 +117,26 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
         return CODEC;
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
-
-        ItemStack stack = player.getItemInHand(hand);
-        Item item = stack.getItem();
-        if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof CabinetCupboardBlockEntity cabinetCupboardBlockEntity) {
             player.openMenu(cabinetCupboardBlockEntity);
             PiglinAi.angerNearbyPiglins(player, true);
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.CONSUME;    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (level.isClientSide) return ItemInteractionResult.SUCCESS;
+
+        Item item = stack.getItem();
+        if (item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
+        }
+        return ItemInteractionResult.SUCCESS;
     }
 
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
@@ -162,6 +164,7 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
         return RenderShape.MODEL;
     }
 
+    @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (!stack.hasCustomHoverName()) return;
 
@@ -201,7 +204,7 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -209,7 +212,7 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

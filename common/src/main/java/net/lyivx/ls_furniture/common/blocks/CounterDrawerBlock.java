@@ -167,6 +167,7 @@ public class CounterDrawerBlock extends BaseEntityBlock implements WrenchItem.Wr
         return RenderShape.MODEL;
     }
 
+    @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (!stack.hasCustomHoverName()) return;
 
@@ -206,7 +207,7 @@ public class CounterDrawerBlock extends BaseEntityBlock implements WrenchItem.Wr
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -214,7 +215,7 @@ public class CounterDrawerBlock extends BaseEntityBlock implements WrenchItem.Wr
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getWrenchableProperties() {

@@ -35,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 @Environment(EnvType.CLIENT)
 public class LYIVXsFurnitureModClient {
 
@@ -303,20 +305,20 @@ public class LYIVXsFurnitureModClient {
 
     public static void registerModel(Consumer<ResourceLocation> modelLoader) {
         for (DyeColor value : DyeColor.values()) {
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/chair/cushion/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/chair/cushion/tucked/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/tucked/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/inner/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/left/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/middle/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/outer/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/right/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/default"));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/bed/cushion/head/" + value.getName()));
-            modelLoader.accept(new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/bed/cushion/foot/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/chair/cushion/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/chair/cushion/tucked/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/stool/cushion/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/stool/cushion/tucked/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/inner/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/left/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/middle/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/outer/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/sofa/cushion/right/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/lamp/shade/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/lamp/shade/default"));
+            modelLoader.accept(createResourceLocation("block/bed/cushion/head/" + value.getName()));
+            modelLoader.accept(createResourceLocation("block/bed/cushion/foot/" + value.getName()));
         }
     }
 

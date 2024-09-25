@@ -6,6 +6,7 @@ import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -19,6 +20,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
+
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
 public class StoolBlockEntity extends BlockEntity implements ILockable {
     private static final String LOCKED_TAG = "locked";
@@ -53,14 +56,14 @@ public class StoolBlockEntity extends BlockEntity implements ILockable {
         Boolean tucked = this.getBlockState().getValue(TUCKED);
         Objects.requireNonNull(color);
         if (tucked) {
-            return new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/tucked/" + color.getName());
+            return createResourceLocation("block/stool/cushion/tucked/" + color.getName());
         }
-        return new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/" + color.getName());
+        return createResourceLocation("block/stool/cushion/" + color.getName());
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
-        super.saveAdditional(tag);
+    protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         tag.putBoolean(LOCKED_TAG, locked);
         if (color != null) {
             tag.putInt("color", color.getId());
@@ -68,16 +71,16 @@ public class StoolBlockEntity extends BlockEntity implements ILockable {
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         locked = tag.getBoolean(LOCKED_TAG);
         color = tag.contains("color") ? DyeColor.byId(tag.getInt("color")) : null;
     }
 
     @Override
-    public CompoundTag getUpdateTag() {
-        CompoundTag tag = super.getUpdateTag();
-        saveAdditional(tag);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = super.getUpdateTag(registries);
+        saveAdditional(tag, registries);
         return tag;
     }
 

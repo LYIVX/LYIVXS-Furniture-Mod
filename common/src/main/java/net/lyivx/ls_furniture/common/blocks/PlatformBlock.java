@@ -15,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -144,32 +145,31 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
 
         if (item instanceof HammerItem || item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         if (!(item instanceof BlockItem blockItem)) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         Block blockInHand = blockItem.getBlock();
         if (!(blockInHand instanceof PlatformBlock || blockInHand instanceof ModStairBlock)) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
-        if (hit.getDirection() != Direction.UP) {
-            return InteractionResult.FAIL;
+        if (hitResult.getDirection() != Direction.UP) {
+            return ItemInteractionResult.FAIL;
         }
 
         Direction playerFacing = player.getDirection();
         BlockPos targetPos = pos.relative(playerFacing);
 
         if (!canPlaceBlock(level, targetPos)) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
         }
 
         if (blockInHand instanceof ModStairBlock) {
@@ -178,7 +178,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
             return placePlatformBlock(level, targetPos, blockInHand, state.getValue(FACING), player, stack);
         }
 
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     private boolean canPlaceBlock(Level level, BlockPos targetPos) {
@@ -186,7 +186,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
                 level.getBlockState(targetPos.above()).canBeReplaced();
     }
 
-    private InteractionResult placeStairBlock(Level level, BlockPos pos, Block block, Direction playerFacing, Player player, ItemStack stack) {
+    private ItemInteractionResult placeStairBlock(Level level, BlockPos pos, Block block, Direction playerFacing, Player player, ItemStack stack) {
         BlockState newState = block.defaultBlockState()
                 .setValue(FACING, playerFacing.getOpposite())
                 .setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER);
@@ -203,10 +203,10 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
             stack.shrink(1);
         }
         newState.updateNeighbourShapes(level, pos, 3);
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
-    private InteractionResult placePlatformBlock(Level level, BlockPos pos, Block block, Direction blockFacing, Player player, ItemStack stack) {
+    private ItemInteractionResult placePlatformBlock(Level level, BlockPos pos, Block block, Direction blockFacing, Player player, ItemStack stack) {
         BlockState newState = block.defaultBlockState()
                 .setValue(FACING, blockFacing)
                 .setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER);
@@ -217,11 +217,11 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
             stack.shrink(1);
         }
         newState.updateNeighbourShapes(level, pos, 3);
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     private void playPlaceSound(Level level, BlockPos pos, Block block) {
-        SoundType soundType = block.getSoundType(block.defaultBlockState());
+        SoundType soundType = block.defaultBlockState().getSoundType();
         level.playSound(null, pos, soundType.getPlaceSound(), SoundSource.BLOCKS,
                 (soundType.getVolume() + 1.0F) / 2.0F, soundType.getPitch() * 0.8F);
     }
@@ -260,7 +260,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
     }
 
@@ -287,7 +287,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank"));
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.properties"));
@@ -298,7 +298,7 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
         } else {
             tooltip.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
     public List<Property<?>> getHammerableProperties() {

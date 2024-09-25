@@ -6,6 +6,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 
 public class ModItemTags {
 
@@ -31,7 +33,7 @@ public class ModItemTags {
 
 
     private static TagKey<Item> itemTag(String name) {
-        return TagKey.create(Registries.ITEM, new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, name));
+        return TagKey.create(Registries.ITEM, createResourceLocation(name));
     }
 
     public static void init() {}

@@ -75,16 +75,13 @@ public class WorkstationBlock extends HorizontalDirectionalBlock {
         return null;
     }
 
-
-
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand handIn, @NotNull BlockHitResult hit) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
         BlockPos containerPos = state.getValue(MODEL_TYPE) == WorkstationModelType.MAIN ? pos : pos.relative(state.getValue(FACING).getCounterClockWise());
         player.openMenu(state.getMenuProvider(level, pos));
         player.awardStat(Stats.INTERACT_WITH_STONECUTTER);
-        return InteractionResult.CONSUME;
-    }
+        return InteractionResult.CONSUME;    }
 
     @Nullable
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {

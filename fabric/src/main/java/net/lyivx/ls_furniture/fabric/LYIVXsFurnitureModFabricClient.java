@@ -1,7 +1,6 @@
 package net.lyivx.ls_furniture.fabric;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
@@ -32,7 +31,7 @@ public class LYIVXsFurnitureModFabricClient implements ClientModInitializer {
         var register = new FabricClientRegister();
         LYIVXsFurnitureModClient.registerBlockRenderers(register);
         LYIVXsFurnitureModClient.registerEntityRenderers(register);
-        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> LYIVXsFurnitureModClient.registerModel(out));
+        //ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> LYIVXsFurnitureModClient.registerModel(out));
     }
 
 

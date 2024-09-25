@@ -5,6 +5,7 @@ import net.lyivx.ls_furniture.common.menus.ModChestMenu;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -55,18 +56,20 @@ public class CounterCupboardBlockEntity extends RandomizableContainerBlockEntity
         };
     }
 
-    protected void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
+    @Override
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
         if (!this.trySaveLootTable(tag)) {
-            ContainerHelper.saveAllItems(tag, this.items);
+            ContainerHelper.saveAllItems(tag, this.items, registries);
         }
     }
 
-    public void load(CompoundTag tag) {
-        super.load(tag);
+    @Override
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
         this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
         if (!this.tryLoadLootTable(tag)) {
-            ContainerHelper.loadAllItems(tag, this.items);
+            ContainerHelper.loadAllItems(tag, this.items, registries);
         }
     }
 
