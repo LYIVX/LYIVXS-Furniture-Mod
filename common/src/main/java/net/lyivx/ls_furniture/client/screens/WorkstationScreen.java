@@ -190,7 +190,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
 
         // items
         forEachButton((index, buttonX, buttonY) -> {
-            ItemStack item = filteredRecipes.get(index).recipe().getResultItem(this.minecraft.level.registryAccess());
+            ItemStack item = filteredRecipes.get(index).recipe().output().copy();
             guiGraphics.renderFakeItem(item, buttonX, buttonY + 1);
             guiGraphics.renderItemDecorations(font, item, buttonX, buttonY + 1);
         });
@@ -208,7 +208,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
             forEachButton((index, buttonX, buttonY) -> {
                 if (mouseX >= buttonX && mouseX < buttonX + 16 && mouseY >= buttonY && mouseY < buttonY + 18) {
                     guiGraphics.renderTooltip(this.font, (filteredRecipes.get(index)).recipe()
-                            .getResultItem(this.minecraft.level.registryAccess()), mouseX, mouseY);
+                            .output(), mouseX, mouseY);
                 }
             });
         }
@@ -218,7 +218,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
         super.renderLabels(guiGraphics, mouseX, mouseY);
         if (filteredIndex >= 0 && filteredIndex < filteredRecipes.size()) {
-            int input = filteredRecipes.get(filteredIndex).recipe().getInputCount();
+            int input = filteredRecipes.get(filteredIndex).recipe().inputCount();
             if (input != 1) {
                 String multiplier = input + "x";
                 int labelX = this.titleLabelX + (-4);

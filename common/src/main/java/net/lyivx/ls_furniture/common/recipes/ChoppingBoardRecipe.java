@@ -20,13 +20,12 @@ import com.teamresourceful.bytecodecs.utils.ByteBufUtils;
 import net.minecraft.network.FriendlyByteBuf;
 
 
-public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt, Ingredient input, ItemStack output) implements CodecRecipe<Container> {
+public record ChoppingBoardRecipe(ResourceLocation id, int uses, Ingredient input, ItemStack output) implements CodecRecipe<Container> {
 
     public static Codec<ChoppingBoardRecipe> codec(ResourceLocation id) {
         return RecordCodecBuilder.create(instance -> instance.group(
                 RecordCodecBuilder.point(id),
                 Codec.INT.fieldOf("uses").orElse(5).forGetter(ChoppingBoardRecipe::uses),
-                Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(ChoppingBoardRecipe::copyNbt),
                 Ingredient.CODEC.fieldOf("input").forGetter(ChoppingBoardRecipe::input),
                 ItemStack.CODEC.fieldOf("output").forGetter(ChoppingBoardRecipe::output)
         ).apply(instance, ChoppingBoardRecipe::new));
@@ -39,7 +38,6 @@ public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 friendlyBuf.writeResourceLocation(value.id());
                 friendlyBuf.writeVarInt(value.uses());
-                friendlyBuf.writeBoolean(value.copyNbt());
                 value.input().toNetwork(friendlyBuf);
                 friendlyBuf.writeItem(value.output());
             }
@@ -49,10 +47,9 @@ public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 ResourceLocation id = friendlyBuf.readResourceLocation();
                 int uses = friendlyBuf.readVarInt();
-                boolean copyNbt = friendlyBuf.readBoolean();
                 Ingredient input = Ingredient.fromNetwork(friendlyBuf);
                 ItemStack output = friendlyBuf.readItem();
-                return new ChoppingBoardRecipe(id, uses, copyNbt, input, output);
+                return new ChoppingBoardRecipe(id, uses, input, output);
             }
         };
     }
@@ -65,9 +62,8 @@ public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt
     @Override
     public ItemStack assemble(Container container, RegistryAccess registryAccess) {
         ItemStack result = output.copy();
-        if (copyNbt) {
-            result.setTag(container.getItem(0).getTag());
-        }
+        result.setTag(container.getItem(0).getTag());
+
         return result;
     }
 
@@ -78,7 +74,7 @@ public record ChoppingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt
 
     @Override
     public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
-        return ModRecipes.CHOPPING_BOARD_SERIALIZER.get();
+        return (CodecRecipeSerializer<? extends CodecRecipe<Container>>) ModRecipes.CHOPPING_BOARD_SERIALIZER.get();
     }
 
 }

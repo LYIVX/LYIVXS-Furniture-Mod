@@ -17,13 +17,12 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import net.minecraft.network.FriendlyByteBuf;
 
-public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copyNbt, Ingredient input, Ingredient input2, ItemStack output) implements CodecRecipe<Container> {
+public record WorldInteractionRecipe(ResourceLocation id, int uses, Ingredient input, Ingredient input2, ItemStack output) implements CodecRecipe<Container> {
 
     public static Codec<WorldInteractionRecipe> codec(ResourceLocation id) {
         return RecordCodecBuilder.create(instance -> instance.group(
                 RecordCodecBuilder.point(id),
                 Codec.INT.fieldOf("uses").forGetter(WorldInteractionRecipe::uses),
-                Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(WorldInteractionRecipe::copyNbt),
                 Ingredient.CODEC.fieldOf("input").forGetter(WorldInteractionRecipe::input),
                 Ingredient.CODEC.fieldOf("input2").forGetter(WorldInteractionRecipe::input2),
                 ItemStack.CODEC.fieldOf("output").forGetter(WorldInteractionRecipe::output)
@@ -37,7 +36,6 @@ public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copy
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 friendlyBuf.writeResourceLocation(value.id());
                 friendlyBuf.writeVarInt(value.uses());
-                friendlyBuf.writeBoolean(value.copyNbt());
                 value.input().toNetwork(friendlyBuf);
                 value.input2().toNetwork(friendlyBuf);
                 friendlyBuf.writeItem(value.output());
@@ -48,11 +46,10 @@ public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copy
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 ResourceLocation id = friendlyBuf.readResourceLocation();
                 int uses = friendlyBuf.readVarInt();
-                boolean copyNbt = friendlyBuf.readBoolean();
                 Ingredient input = Ingredient.fromNetwork(friendlyBuf);
                 Ingredient input2 = Ingredient.fromNetwork(friendlyBuf);
                 ItemStack output = friendlyBuf.readItem();
-                return new WorldInteractionRecipe(id, uses, copyNbt, input, input2, output);
+                return new WorldInteractionRecipe(id, uses,  input, input2, output);
             }
         };
     }
@@ -69,6 +66,6 @@ public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copy
 
     @Override
     public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
-        return ModRecipes.WORLD_INTERACTION_RECIPE_SERIALIZER.get();
+        return (CodecRecipeSerializer<? extends CodecRecipe<Container>>) ModRecipes.WORLD_INTERACTION_RECIPE_SERIALIZER.get();
     }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:oak_log"
+  },
+  "ingredient_count": 1,
+  "result": {
+    "id": "ls_furniture:chopping_board",
+    "Count": 1
+  }
+}

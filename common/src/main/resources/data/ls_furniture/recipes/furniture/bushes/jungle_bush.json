@@ -5,6 +5,8 @@
     "item": "minecraft:jungle_leaves"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:jungle_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:jungle_bush",
+    "Count": 2
+  }
 }

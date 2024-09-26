@@ -1,4 +1,4 @@
-package net.lyivx.ls_furniture.neoforge;
+package net.lyivx.ls_furniture.forge;
 
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;

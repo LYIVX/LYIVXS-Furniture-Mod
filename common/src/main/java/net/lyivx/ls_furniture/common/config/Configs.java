@@ -1,8 +1,5 @@
 package net.lyivx.ls_furniture.common.config;
 
-import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigBuilder;
-import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigSpec;
-
 public class Configs {
     public static Boolean SORT_RECIPES = true; // Default value
     public static SearchMode SEARCH_MODE = SearchMode.AUTOMATIC; // Default value
@@ -36,13 +33,15 @@ public class Configs {
         };
     }
 
-    public static void setConfigSpec(ConfigSpec spec) {
-        CONFIG_SPEC = (CustomConfigSpec) spec;
+    // Set the configuration handler object
+    public static void setConfigSpec(CustomConfigSpec spec) {
+        CONFIG_SPEC = spec;
     }
 
+    // Save current in-memory settings to the config file via CustomConfigCloth
     public static void saveConfig() {
         if (CONFIG_SPEC != null) {
-            // Update values in CustomConfigSpec based on current settings
+            // Update values in the CustomConfigCloth object based on current settings
             CONFIG_SPEC.setSortRecipes(SORT_RECIPES);
             CONFIG_SPEC.setSearchMode(SEARCH_MODE);
             CONFIG_SPEC.setSearchBarThreshold(SEARCH_BAR_THRESHOLD);

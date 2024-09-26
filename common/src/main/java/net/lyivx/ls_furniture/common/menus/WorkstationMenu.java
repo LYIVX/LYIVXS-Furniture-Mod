@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.common.menus;
 import com.google.common.collect.Lists;
 import net.lyivx.ls_furniture.common.recipes.FilterableRecipe;
 import net.lyivx.ls_furniture.common.recipes.RecipeSorter;
+import net.lyivx.ls_furniture.common.recipes.WorkstationRecipe;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.lyivx.ls_furniture.registry.ModRecipes;
@@ -15,8 +16,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
+import java.util.Collections;
 import java.util.List;
 
 public class WorkstationMenu extends AbstractContainerMenu  {
@@ -69,7 +72,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
                 stack.onCraftedBy(player.level(), player, stack.getCount());
                 resultContainer.awardUsedRecipes(player, this.getRelevantItems());
                 ItemStack itemStack = inputSlot.remove(recipes.get(selectedRecipeIndex.get())
-                        .recipe().getInputCount());
+                        .recipe().inputCount());
                 if (!itemStack.isEmpty()) {
                     setupResultSlot();
                 }
@@ -152,24 +155,25 @@ public class WorkstationMenu extends AbstractContainerMenu  {
 
     private void setupRecipeList(Container container, ItemStack stack) {
         this.selectedRecipeIndex.set(-1);
-
         this.resultSlot.set(ItemStack.EMPTY);
+        this.recipes = List.of();
+
         if (!stack.isEmpty()) {
-            var matching = this.level.getRecipeManager()
+            List<RecipeHolder<WorkstationRecipe>> matching = this.level.getRecipeManager()
                     .getRecipesFor(ModRecipes.WORKSTATION_RECIPE.get(), container, this.level);
 
+            // Sort the recipes using RecipeSorter
             RecipeSorter.sort(matching, this.level);
 
-            recipes = matching.stream().map(FilterableRecipe::of).toList();
-            // at most 256 recipes
-            recipes = recipes.subList(0, Math.min(recipes.size(), 255));
+            this.recipes = matching.stream()
+                    .map(FilterableRecipe::of)
+                    .limit(255)  // Limit to 255 recipes (0 to 254 inclusive)
+                    .toList();
 
-            //preserve last clicked recipe on recipe change
+            // Preserve last clicked recipe on recipe change
             if (lastSelectedRecipe != null) {
-                int newInd = this.recipes.indexOf(lastSelectedRecipe);
-                if (newInd != -1) {
-                    this.selectedRecipeIndex.set(newInd);
-                }
+                int newIndex = this.recipes.indexOf(lastSelectedRecipe);
+                this.selectedRecipeIndex.set(newIndex);  // Will be -1 if not found
             }
         }
 

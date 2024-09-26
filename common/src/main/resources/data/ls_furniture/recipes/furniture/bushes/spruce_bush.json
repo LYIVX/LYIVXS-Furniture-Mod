@@ -5,6 +5,8 @@
     "item": "minecraft:spruce_leaves"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:spruce_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:spruce_bush",
+    "Count": 2
+  }
 }

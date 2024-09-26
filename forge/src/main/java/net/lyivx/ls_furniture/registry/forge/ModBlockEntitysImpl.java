@@ -1,4 +1,4 @@
-package net.lyivx.ls_furniture.registry.neoforge;
+package net.lyivx.ls_furniture.registry.forge;
 
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.minecraft.world.level.block.Block;

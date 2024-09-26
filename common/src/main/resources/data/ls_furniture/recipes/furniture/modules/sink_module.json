@@ -13,8 +13,8 @@
       "item": "minecraft:cauldron"
     }
   },
-  "result": {
+  "result":  {
     "item": "ls_furniture:sink_module",
-    "count": 1
+    "Count": 1
   }
 }

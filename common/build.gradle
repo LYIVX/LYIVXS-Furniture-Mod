@@ -5,13 +5,11 @@ dependencies {
     modImplementation "com.teamresourceful.resourcefullib:resourcefullib-common-$rootProject.resourcefullib_version"
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 
-
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-lib:${jei_version}")
 
-    modImplementation("curse.maven:selene-499980:5092530")
-
+    modImplementation("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
 }
 
 architectury {

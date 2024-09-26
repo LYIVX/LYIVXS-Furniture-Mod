@@ -5,6 +5,8 @@
     "item": "ls_furniture:warped_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:warped_roof_shallow",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:warped_roof_shallow",
+    "Count": 2
+  }
 }

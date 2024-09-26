@@ -5,6 +5,8 @@
     "item": "minecraft:cherry_leaves"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:cherry_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:cherry_bush",
+    "Count": 2
+  }
 }

@@ -29,13 +29,11 @@ public class LYIVXsFurnitureModNeoForge {
     }
 
     @SubscribeEvent
-
     public void onPlace(PlayerInteractEvent.RightClickBlock event) {
 
     }
 
     @SubscribeEvent
-
     public  void onServerStart(ServerAboutToStartEvent event) {
 
     }

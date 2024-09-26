@@ -1,4 +1,4 @@
-package net.lyivx.ls_furniture.mixin.neoforge;
+package net.lyivx.ls_furniture.mixin.forge;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FireBlock;

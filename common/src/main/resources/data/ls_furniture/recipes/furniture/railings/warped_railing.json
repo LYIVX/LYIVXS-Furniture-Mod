@@ -5,6 +5,8 @@
     "item": "ls_furniture:warped_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:warped_railing",
-  "count": 4
+  "result": {
+    "id": "ls_furniture:warped_railing",
+    "Count": 4
+  }
 }

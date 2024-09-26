@@ -1,4 +1,4 @@
-package net.lyivx.ls_furniture.client.neoforge;
+package net.lyivx.ls_furniture.client.forge;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;

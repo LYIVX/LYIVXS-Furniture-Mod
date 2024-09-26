@@ -6,7 +6,6 @@ import net.lyivx.ls_furniture.common.config.Configs;
 import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.mehvahdjukaar.moonlight.api.platform.configs.ConfigType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,35 +26,25 @@ public class ConfigScreen {
         }
 
         try {
-            CONFIG_SPEC = new CustomConfigSpec(
-                    LYIVXsFurnitureMod.MOD_ID,
-                    "ls_furniture-client.json",
-                    configFolder,
-                    ConfigType.CLIENT,
-                    false
-            );
+            // Initialize the CustomConfigCloth instance
+            CONFIG_SPEC = new CustomConfigSpec(configFolder, "ls_furniture-client");
 
-            CONFIG_SPEC.register();
+            // Register and load config
+            CONFIG_SPEC.loadConfig();
             Configs.setConfigSpec(CONFIG_SPEC);
 
-            // Load the config
-            CONFIG_SPEC.loadFromFile();
+            // Sync the in-memory config values with what's stored
             updateConfigValues();
         } catch (Exception e) {
             LOGGER.error("Failed to initialize config", e);
-            // Set default values or handle the error as appropriate for your mod
             setDefaultConfigValues();
         }
     }
 
-    public static Screen createConfigScreen(Screen parent) {
-        return CONFIG_SPEC != null ? CONFIG_SPEC.makeScreen(parent, null) : null;
-    }
 
-    // Method to reload config from file
     public static void reloadConfig() {
         if (CONFIG_SPEC != null) {
-            CONFIG_SPEC.loadFromFile();
+            CONFIG_SPEC.loadConfig();
             updateConfigValues();
         } else {
             LOGGER.warn("Attempted to reload config, but CONFIG_SPEC is null");
@@ -64,6 +53,7 @@ public class ConfigScreen {
 
     private static void updateConfigValues() {
         if (CONFIG_SPEC != null) {
+            // Update in-memory values from the config
             Configs.SORT_RECIPES = CONFIG_SPEC.getSortRecipes();
             Configs.SEARCH_MODE = CONFIG_SPEC.getSearchMode();
             Configs.SEARCH_BAR_THRESHOLD = CONFIG_SPEC.getSearchBarThreshold();
@@ -73,7 +63,7 @@ public class ConfigScreen {
     }
 
     private static void setDefaultConfigValues() {
-        // Set default values for your config
+        // Set default values for your config in case of failure
         Configs.SORT_RECIPES = true;
         Configs.SEARCH_MODE = Configs.SearchMode.AUTOMATIC;
         Configs.SEARCH_BAR_THRESHOLD = 32;

@@ -5,6 +5,8 @@
     "item": "minecraft:green_wool"
   },
   "ingredient_count": 2,
-  "result": "ls_furniture:green_rug",
-  "count": 3
+  "result": {
+    "id": "ls_furniture:green_rug",
+    "Count": 3
+  }
 }

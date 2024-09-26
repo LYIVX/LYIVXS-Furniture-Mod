@@ -124,7 +124,7 @@ public class ModBlocks {
     ////////////////////////////////////// INTERACTIVE //////////////////////////////////////
 
     public static final RegistryEntry<WorkstationBlock> WORKSTATION = BLOCKS.register("workstation",
-            () -> new WorkstationBlock(BlockBehaviour.Properties.of()));
+            () -> new WorkstationBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     public static final RegistryEntry<ChoppingBoardBlock> CHOPPING_BOARD = BLOCKS.register("chopping_board",
             () -> new ChoppingBoardBlock(BlockBehaviour.Properties.of()));

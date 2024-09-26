@@ -5,6 +5,8 @@
     "item": "ls_furniture:construction_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:fire_place",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:fire_place",
+    "Count": 1
+  }
 }

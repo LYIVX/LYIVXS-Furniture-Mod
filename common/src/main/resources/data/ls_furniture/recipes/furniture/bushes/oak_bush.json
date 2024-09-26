@@ -5,6 +5,8 @@
     "item": "minecraft:oak_leaves"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:oak_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:oak_bush",
+    "Count": 2
+  }
 }

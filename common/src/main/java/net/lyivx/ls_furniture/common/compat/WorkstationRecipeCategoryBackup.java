@@ -67,6 +67,6 @@ public class WorkstationRecipeCategoryBackup implements IRecipeCategory<Workstat
         IRecipeCategory.super.draw(recipe, recipeSlotsView, guiGraphics, mouseX, mouseY);
 
         guiGraphics.renderItemDecorations(Minecraft.getInstance().font,
-                new ItemStack(Items.DIRT, recipe.getInputCount()), 1,9);
+                new ItemStack(Items.DIRT, recipe.inputCount()), 1,9);
     }
 }

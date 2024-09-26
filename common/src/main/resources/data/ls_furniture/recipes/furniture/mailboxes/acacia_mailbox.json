@@ -5,6 +5,8 @@
     "item": "ls_furniture:acacia_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:acacia_mailbox",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:acacia_mailbox",
+    "Count": 1
+  }
 }

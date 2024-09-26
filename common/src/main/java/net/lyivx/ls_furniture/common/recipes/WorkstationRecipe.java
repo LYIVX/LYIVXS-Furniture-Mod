@@ -2,82 +2,53 @@ package net.lyivx.ls_furniture.common.recipes;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.lyivx.ls_furniture.registry.ModBlocks;
-import net.lyivx.ls_furniture.registry.ModMenus;
+import com.teamresourceful.bytecodecs.base.ByteCodec;
+import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
+import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
+import io.netty.buffer.ByteBuf;
 import net.lyivx.ls_furniture.registry.ModRecipes;
-import net.mehvahdjukaar.moonlight.api.misc.StrOpt;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.util.ExtraCodecs;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.Container;
-import net.minecraft.core.NonNullList;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
-public class WorkstationRecipe extends SingleItemRecipe {
-    private final int inputCount;
+public record WorkstationRecipe(ResourceLocation id, String group, Ingredient input, ItemStack output, int inputCount) implements CodecRecipe<Container> {
 
-    public WorkstationRecipe(String group, Ingredient ingredient, ItemStack result, int inputCount) {
-        super(ModRecipes.WORKSTATION_RECIPE.get(), ModRecipes.WORKSTATION_RECIPE_SERIALIZER.get(), group, ingredient, result);
-        this.inputCount = inputCount;
-    }
 
-    public int getInputCount() {
-        return inputCount;
+    public static Codec<WorkstationRecipe> codec(ResourceLocation id) {
+        return RecordCodecBuilder.create(instance -> instance.group(
+                RecordCodecBuilder.point(id),
+                Codec.STRING.fieldOf("group").orElse("").forGetter(WorkstationRecipe::group),
+                Ingredient.CODEC.fieldOf("ingredient").forGetter(WorkstationRecipe::input),
+                ItemStack.CODEC.fieldOf("result").forGetter(WorkstationRecipe::output),
+                Codec.INT.optionalFieldOf("ingredient_count", 1).forGetter(WorkstationRecipe::inputCount)
+        ).apply(instance, WorkstationRecipe::new));
     }
 
     @Override
-    public boolean matches(Container container, Level level) {
+    public boolean matches(@NotNull Container container, @NotNull Level level) {
         ItemStack item = container.getItem(0);
-        return this.ingredient.test(item) &&
-                item.getCount() >= inputCount;
+        return this.input.test(item) && item.getCount() >= inputCount;
     }
 
     @Override
-    public ItemStack getToastSymbol() {
-        return new ItemStack(ModBlocks.WORKSTATION.get());
+    public ItemStack assemble(Container container, RegistryAccess registryAccess) {
+        return output.copy();
     }
 
     @Override
-    public boolean isSpecial() {
-        return true;
+    public RecipeType<?> getType() {
+        return ModRecipes.WORKSTATION_RECIPE.get();
     }
 
-    public static class Serializer implements RecipeSerializer<WorkstationRecipe> {
-        private final Codec<WorkstationRecipe> codec;
-
-        public Serializer() {
-            this.codec = RecordCodecBuilder.create((instance) -> instance.group(
-                            ExtraCodecs.strictOptionalField(Codec.STRING, "group", "").forGetter((singleItemRecipe) -> singleItemRecipe.group),
-                            Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter((singleItemRecipe) -> singleItemRecipe.ingredient),
-                            ItemStack.RESULT_CODEC.forGetter((singleItemRecipe) -> singleItemRecipe.result),
-                            StrOpt.of(ExtraCodecs.POSITIVE_INT, "ingredient_count", 1).forGetter(r -> r.inputCount)
-                    )
-                    .apply(instance, WorkstationRecipe::new));
-        }
-
-        @Override
-        public Codec<WorkstationRecipe> codec() {
-            return this.codec; // Fixed: return the codec field instead of calling the method
-        }
-
-        @Override
-        public WorkstationRecipe fromNetwork(FriendlyByteBuf buffer) {
-            String string = buffer.readUtf();
-            Ingredient ingredient = Ingredient.fromNetwork(buffer);
-            ItemStack itemStack = buffer.readItem();
-            int intCount = buffer.readVarInt();
-            return new WorkstationRecipe(string, ingredient, itemStack, intCount);
-        }
-
-        @Override
-        public void toNetwork(FriendlyByteBuf buffer, WorkstationRecipe recipe) {
-            buffer.writeUtf(recipe.group);
-            recipe.ingredient.toNetwork(buffer);
-            buffer.writeItem(recipe.result);
-            buffer.writeVarInt(recipe.inputCount);
-        }
+    @Override
+    public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
+        return (CodecRecipeSerializer<? extends CodecRecipe<Container>>) ModRecipes.WORKSTATION_RECIPE_SERIALIZER.get();
     }
 }

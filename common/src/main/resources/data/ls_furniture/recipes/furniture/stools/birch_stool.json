@@ -5,6 +5,8 @@
     "item": "ls_furniture:birch_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:birch_stool",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:birch_stool",
+    "Count": 2
+  }
 }

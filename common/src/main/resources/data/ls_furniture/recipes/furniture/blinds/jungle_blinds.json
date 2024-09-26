@@ -5,6 +5,8 @@
     "item": "ls_furniture:jungle_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:jungle_blinds",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:jungle_blinds",
+    "Count": 1
+  }
 }

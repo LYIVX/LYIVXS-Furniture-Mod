@@ -9,7 +9,7 @@ import java.util.Locale;
 public record FilterableRecipe(RecipeHolder<WorkstationRecipe> recipeHolder, ItemStack output) {
 
     public static FilterableRecipe of(RecipeHolder<WorkstationRecipe> recipeHolder) {
-        return new FilterableRecipe(recipeHolder, recipeHolder.value().getResultItem(RegistryAccess.EMPTY));
+        return new FilterableRecipe(recipeHolder, recipeHolder.value().output());
     }
 
     public boolean matchFilter(String filter) {

@@ -5,6 +5,8 @@
     "item": "ls_furniture:oak_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:oak_crate",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:oak_crate",
+    "Count": 1
+  }
 }

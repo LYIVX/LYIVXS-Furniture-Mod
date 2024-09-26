@@ -35,7 +35,7 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
     side = "BOTH"
 
 [[dependencies.ls_furniture]]
-    modId = "moonlight"
+    modId = "cloth_config"
     mandatory = true
     versionRange = "[*,)"
     ordering = "NONE"

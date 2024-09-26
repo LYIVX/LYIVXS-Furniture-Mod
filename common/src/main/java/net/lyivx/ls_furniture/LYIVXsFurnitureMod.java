@@ -1,9 +1,12 @@
 package net.lyivx.ls_furniture;
 
 import net.lyivx.ls_furniture.client.screens.ConfigScreen;
+import net.lyivx.ls_furniture.client.screens.ConfigurationScreen;
 import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
-import net.lyivx.ls_furniture.common.network.NetworkRecipeSync;
+import net.lyivx.ls_furniture.common.config.Configs;
+import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
 import net.lyivx.ls_furniture.common.network.UpdateTombstonePacket;
+import net.lyivx.ls_furniture.common.recipes.RecipeSorter;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -19,24 +22,24 @@ public class LYIVXsFurnitureMod {
     public static final String MOD_ID = "ls_furniture";
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-    public static final ResourceLocation UPDATE_TOMBSTONE = new ResourceLocation(MOD_ID, "update_tombstone");
-
     public static void init() {
         ModBlocks.BLOCKS.init();
         ModBlockEntitys.BLOCK_ENTITIES.init();
         ModItems.ITEMS.init();
         ModEntities.ENTITIES.init();
         ModSoundEvents.SOUNDS.init();
-        ModRecipes.RECIPES.init();
+
+        ModRecipes.RECIPE_TYPES.init();
+        ModRecipes.RECIPE_SERIALIZERS.init();
+
         ModMenus.MENUS.init();
 
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
 
-        NetworkRecipeSync.init();
-
         ConfigScreen.initConfig();
+        Configs.saveConfig();
     }
 
     public static ResourceLocation res(String name) {

@@ -5,6 +5,8 @@
     "item": "ls_furniture:mangrove_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:mangrove_stripped_log_fence",
-  "count": 3
+  "result": {
+    "id": "ls_furniture:mangrove_stripped_log_fence",
+    "Count": 3
+  }
 }

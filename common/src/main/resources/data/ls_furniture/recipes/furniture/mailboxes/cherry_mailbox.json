@@ -5,6 +5,8 @@
     "item": "ls_furniture:cherry_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:cherry_mailbox",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:cherry_mailbox",
+    "Count": 1
+  }
 }

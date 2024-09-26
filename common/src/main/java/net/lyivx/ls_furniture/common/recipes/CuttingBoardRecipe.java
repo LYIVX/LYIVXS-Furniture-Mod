@@ -17,13 +17,12 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt, Ingredient input, ItemStack output) implements CodecRecipe<Container> {
+public record CuttingBoardRecipe(ResourceLocation id, int uses, Ingredient input, ItemStack output) implements CodecRecipe<Container> {
 
     public static Codec<CuttingBoardRecipe> codec(ResourceLocation id) {
         return RecordCodecBuilder.create(instance -> instance.group(
                 RecordCodecBuilder.point(id),
                 Codec.INT.fieldOf("uses").orElse(5).forGetter(CuttingBoardRecipe::uses),
-                Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(CuttingBoardRecipe::copyNbt),
                 Ingredient.CODEC.fieldOf("input").forGetter(CuttingBoardRecipe::input),
                 ItemStack.CODEC.fieldOf("output").forGetter(CuttingBoardRecipe::output)
         ).apply(instance, CuttingBoardRecipe::new));
@@ -36,7 +35,6 @@ public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt,
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 friendlyBuf.writeResourceLocation(value.id());
                 friendlyBuf.writeVarInt(value.uses());
-                friendlyBuf.writeBoolean(value.copyNbt());
                 value.input().toNetwork(friendlyBuf);
                 friendlyBuf.writeItem(value.output());
             }
@@ -46,10 +44,9 @@ public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt,
                 FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
                 ResourceLocation id = friendlyBuf.readResourceLocation();
                 int uses = friendlyBuf.readVarInt();
-                boolean copyNbt = friendlyBuf.readBoolean();
                 Ingredient input = Ingredient.fromNetwork(friendlyBuf);
                 ItemStack output = friendlyBuf.readItem();
-                return new CuttingBoardRecipe(id, uses, copyNbt, input, output);
+                return new CuttingBoardRecipe(id, uses, input, output);
             }
         };
     }
@@ -66,7 +63,7 @@ public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt,
 
     @Override
     public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
-        return ModRecipes.CUTTING_BOARD_SERIALIZER.get();
+        return (CodecRecipeSerializer<? extends CodecRecipe<Container>>) ModRecipes.CUTTING_BOARD_SERIALIZER.get();
     }
 
 }

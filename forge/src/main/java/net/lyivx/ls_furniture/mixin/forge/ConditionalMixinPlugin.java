@@ -1,4 +1,4 @@
-package net.lyivx.ls_furniture.mixin.neoforge;
+package net.lyivx.ls_furniture.mixin.forge;
 
 import com.google.common.collect.ImmutableMap;
 import org.objectweb.asm.tree.ClassNode;

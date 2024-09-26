@@ -40,9 +40,6 @@ public class CuttingBoardBlockEntity extends BlockEntity {
                 return false;
             }
             ItemStack output = recipe.get().value().output();
-            if (recipe.get().value().copyNbt() && item.hasTag()) {
-                output.setTag(item.getTag());
-            }
             this.item = ItemStack.EMPTY;
             if (level != null) {
                 level.addFreshEntity(new ItemEntity(level, getBlockPos().getX() + 0.5, getBlockPos().getY(), getBlockPos().getZ() + 0.5, output));
