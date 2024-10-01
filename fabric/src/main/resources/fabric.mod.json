@@ -36,8 +36,7 @@
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": ">=1.20.4",
-    "resourcefullib": "*",
-    "cloth-config": "*"
+    "resourcefullib": "*"
   },
   "recommends": {
     "modmenu": "*"

@@ -3,10 +3,6 @@ plugins {
     id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
 }
 
-ext {
-    architectury_main_class = project.hasProperty('architectury_main_class') ? project.getProperty('architectury_main_class') : 'net.lyivx.ls_furniture.LYIVXsFurnitureMod'
-}
-
 architectury {
     minecraft = rootProject.minecraft_version
 }

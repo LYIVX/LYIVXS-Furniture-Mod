@@ -20,7 +20,6 @@ import org.jetbrains.annotations.NotNull;
 
 public record WorkstationRecipe(ResourceLocation id, String group, Ingredient input, ItemStack output, int inputCount) implements CodecRecipe<Container> {
 
-
     public static Codec<WorkstationRecipe> codec(ResourceLocation id) {
         return RecordCodecBuilder.create(instance -> instance.group(
                 RecordCodecBuilder.point(id),

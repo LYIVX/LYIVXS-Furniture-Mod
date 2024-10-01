@@ -83,7 +83,5 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
 
         guiGraphics.renderItemDecorations(Minecraft.getInstance().font,
                 new ItemStack(ModItems.WORKSTATION.get(), recipe.inputCount()), 6,9);
-
-
     }
 }
