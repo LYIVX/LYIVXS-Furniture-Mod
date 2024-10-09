@@ -41,7 +41,6 @@ public class LYIVXsFurnitureMod {
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
-        ModFuels.init();
 
         CommandRegistrationEvent.EVENT.register((dispatcher, registryAccess, environment) -> {
             ModConfigCommand.register(dispatcher);

@@ -2,14 +2,22 @@ package net.lyivx.ls_furniture.registry;
 
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import dev.architectury.registry.fuel.FuelRegistry;
+import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 public class ModFuels {
 
     public static void init() {
-        for (RegistryEntry<Item> entry : ModItems.INGREDIENTS_BURNABLE_200.getEntries()) {
-            FuelRegistry.register(200, entry.get());
+        LYIVXsFurnitureMod.LOGGER.info("Starting fuel registration");
+
+        if (ModItems.INGREDIENTS_BURNABLE_200 != null && !ModItems.INGREDIENTS_BURNABLE_200.getEntries().isEmpty()) {
+            for (RegistryEntry<Item> entry : ModItems.INGREDIENTS_BURNABLE_200.getEntries()) {
+                LYIVXsFurnitureMod.LOGGER.info("Registering fuel for item: " + entry.getId());
+                FuelRegistry.register(200, entry.get());
+            }
+        } else {
+            LYIVXsFurnitureMod.LOGGER.warn("INGREDIENTS_BURNABLE_200 is null or empty");
         }
         for (RegistryEntry<Item> entry : ModItems.INGREDIENTS_BURNABLE_100.getEntries()) {
             FuelRegistry.register(100, entry.get());

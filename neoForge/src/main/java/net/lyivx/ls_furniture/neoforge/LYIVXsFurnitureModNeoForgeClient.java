@@ -36,41 +36,13 @@ import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createModelResourceLocat
 import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
 @Mod(LYIVXsFurnitureMod.MOD_ID)
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class LYIVXsFurnitureModNeoForgeClient {
 
-    @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event) {
-        LYIVXsFurnitureModClient.init();
-
-        System.out.println("Registering Workstation Screen");
-
-    }
 
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenus.WORKSTATION_MENU.get(), WorkstationScreen::new);
-    }
-
-
-    @SubscribeEvent
-    public static void onModelLoading(ModelEvent.RegisterAdditional event) {
-        for (DyeColor value : DyeColor.values()) {
-            event.register(createModelResourceLocation("block/chair/cushion/" + value.getName()));
-            event.register(createModelResourceLocation("block/chair/cushion/tucked/" + value.getName()));
-            event.register(createModelResourceLocation("block/stool/cushion/" + value.getName()));
-            event.register(createModelResourceLocation("block/stool/cushion/tucked/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/inner/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/left/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/middle/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/outer/" + value.getName()));
-            event.register(createModelResourceLocation("block/sofa/cushion/right/" + value.getName()));
-            event.register(createModelResourceLocation("block/lamp/shade/" + value.getName()));
-            event.register(createModelResourceLocation("block/lamp/shade/default"));
-            event.register(createModelResourceLocation("block/bed/cushion/head/" + value.getName()));
-            event.register(createModelResourceLocation("block/bed/cushion/foot/" + value.getName()));
-        }
     }
 
     @SubscribeEvent
