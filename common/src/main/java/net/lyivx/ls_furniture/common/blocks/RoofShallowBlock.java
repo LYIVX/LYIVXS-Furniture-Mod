@@ -439,18 +439,6 @@ public class RoofShallowBlock extends Block implements SimpleWaterloggedBlock {
         this.base.stepOn(level, pos, state, entity);
     }
 
-    public boolean isRandomlyTicking(BlockState state) {
-        return this.isRandomlyTicking(state);
-    }
-
-    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        this.randomTick(state, level, pos, random);
-    }
-
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        this.tick(state, level, pos, random);
-    }
-
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 

@@ -32,7 +32,7 @@ public class FridgeBlockEntity extends RandomizableContainerBlockEntity {
 
     public FridgeBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.FRIDGE_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(36, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 FridgeBlockEntity.this.playSound(state, ModSoundEvents.DRAWER_OPEN.get());

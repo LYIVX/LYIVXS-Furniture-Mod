@@ -126,6 +126,8 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (level.getBlockEntity(pos) instanceof TombstoneBlockEntity tombstoneBlockEntity) {
@@ -156,6 +158,8 @@ public class TombstoneBlock extends BaseEntityBlock implements SimpleWaterlogged
                 }
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;    }
 

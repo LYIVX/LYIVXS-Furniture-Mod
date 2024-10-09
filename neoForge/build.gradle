@@ -21,14 +21,13 @@ configurations {
 
 dependencies {
     neoForge "net.neoforged:neoforge:${rootProject.neoforge_version}"
+    modImplementation "dev.architectury:architectury-neoforge:${architectury_version}"
 
     include modApi("com.teamresourceful.resourcefullib:resourcefullib-neoforge-$rootProject.resourcefullib_version")
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
-
-    modImplementation("curse.maven:selene-499980:5731217")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }

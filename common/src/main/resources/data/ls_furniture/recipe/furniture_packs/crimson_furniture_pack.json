@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "furniture_pack",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "ls_furniture:crimson_stick"
+    },
+    {
+      "item": "minecraft:crimson_stem"
+    },
+    {
+      "item": "minecraft:stripped_crimson_stem"
+    },
+    {
+      "item": "ls_furniture:crimson_bark"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:crimson_furniture_pack"
+  }
+}

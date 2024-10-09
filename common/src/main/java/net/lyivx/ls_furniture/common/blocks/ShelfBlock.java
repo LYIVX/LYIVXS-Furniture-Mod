@@ -98,6 +98,8 @@ public class ShelfBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
             }
             // Avoids client trying to place actual block on top
             return ItemInteractionResult.CONSUME;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         // Remove

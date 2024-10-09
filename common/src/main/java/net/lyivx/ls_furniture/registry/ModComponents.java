@@ -5,9 +5,11 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
+import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class ModComponents {
     public static final DeferredRegister<DataComponentType<?>> DATA_ATTACHMENTS = DeferredRegister.create(LYIVXsFurnitureMod.MOD_ID, Registries.DATA_COMPONENT_TYPE);

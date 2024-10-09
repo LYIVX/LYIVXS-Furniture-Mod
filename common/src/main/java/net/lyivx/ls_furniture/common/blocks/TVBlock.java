@@ -132,6 +132,8 @@ public class TVBlock extends Block implements SimpleWaterloggedBlock, WrenchItem
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }

@@ -1,52 +1,443 @@
 {
-  "variants": {
-    "vertical=single,facing=up,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp"
+  "multipart": [
+    {
+      "when": { "vertical": "single", "facing": "up", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp" }
     },
-    "vertical=single,facing=up,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_off"
+    {
+      "when": { "vertical": "single", "facing": "up", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_off" }
     },
-    "vertical=bottom,facing=up": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_bottom"
+    {
+      "when": { "vertical": "bottom", "facing": "up"},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_bottom" }
     },
-    "vertical=middle,facing=up": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_middle"
+    {
+      "when": { "vertical": "middle", "facing": "up"},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_middle" }
     },
-    "vertical=top,facing=up,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_top"
+    {
+      "when": { "vertical": "top", "facing": "up", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_top" }
     },
-    "vertical=top,facing=up,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_top_off"
+    {
+      "when": { "vertical": "top", "facing": "up", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_top_off" }
     },
-    "vertical=single,facing=north,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall"
+    {
+      "when": { "vertical": "single", "facing": "north", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall" }
     },
-    "vertical=single,facing=north,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall_off"
+    {
+      "when": { "vertical": "single", "facing": "north", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall_off" }
     },
-    "vertical=single,facing=east,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall",
-      "y": 90
+    {
+      "when": { "vertical": "single", "facing": "east", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall", "y": 90 }
     },
-    "vertical=single,facing=east,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall_off",
-      "y": 90
+    {
+      "when": { "vertical": "single", "facing": "east", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall_off", "y": 90 }
     },
-    "vertical=single,facing=south,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall",
-      "y": 180
+    {
+      "when": { "vertical": "single", "facing": "south", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall", "y": 180 }
     },
-    "vertical=single,facing=south,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall_off",
-      "y": 180
+    {
+      "when": { "vertical": "single", "facing": "south", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall_off", "y": 180 }
     },
-    "vertical=single,facing=west,lit=true": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall",
-      "y": 270
+    {
+      "when": { "vertical": "single", "facing": "west", "lit": true},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall", "y": 270 }
     },
-    "vertical=single,facing=west,lit=false": {
-      "model": "ls_furniture:block/lamp/jungle/lamp_wall_off",
-      "y": 270
+    {
+      "when": { "vertical": "single", "facing": "west", "lit": false},
+      "apply": { "model": "ls_furniture:block/lamp/jungle/lamp_wall_off", "y": 270 }
+    },{
+      "when": { "vertical": "single", "facing": "up", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/white"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/light_gray"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/gray"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/black"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/brown"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/red"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/orange"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/yellow"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/lime"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/green"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/cyan"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/light_blue"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/blue"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/purple"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/magenta"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "up", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/pink"}
+    },
+    {
+      "when": { "vertical": "top", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/white"}
+    },
+    {
+      "when": { "vertical": "top", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/light_gray"}
+    },
+    {
+      "when": { "vertical": "top", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/gray"}
+    },
+    {
+      "when": { "vertical": "top", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/black"}
+    },
+    {
+      "when": { "vertical": "top", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/brown"}
+    },
+    {
+      "when": { "vertical": "top", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/red"}
+    },
+    {
+      "when": { "vertical": "top", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/orange"}
+    },
+    {
+      "when": { "vertical": "top", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/yellow"}
+    },
+    {
+      "when": { "vertical": "top", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/lime"}
+    },
+    {
+      "when": { "vertical": "top", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/green"}
+    },
+    {
+      "when": { "vertical": "top", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/cyan"}
+    },
+    {
+      "when": { "vertical": "top", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/light_blue"}
+    },
+    {
+      "when": { "vertical": "top", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/blue"}
+    },
+    {
+      "when": { "vertical": "top", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/purple"}
+    },
+    {
+      "when": { "vertical": "top", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/magenta"}
+    },
+    {
+      "when": { "vertical": "top", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/pink"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/white"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/white", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/white", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "white" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/white", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_gray"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_gray", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_gray", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_gray", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/gray"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/gray", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/gray", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/gray", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/black"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/black", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/black", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "black" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/black", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/brown"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/brown", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/brown", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/brown", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/red"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/red", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/red", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "red" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/red", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/orange"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/orange", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/orange", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/orange", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/yellow"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/yellow", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/yellow", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/yellow", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/lime"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/lime", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/lime", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/lime", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/green"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/green", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/green", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "green" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/green", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/cyan"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/cyan", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/cyan", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/cyan", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_blue"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_blue", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_blue", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/light_blue", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/blue"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/blue", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/blue", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/blue", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/purple"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/purple", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/purple", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/purple", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/magenta"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/magenta", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/magenta", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/magenta", "y": 270}
+    },
+    {
+      "when": { "vertical": "single", "facing": "north", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/pink"}
+    },
+    {
+      "when": { "vertical": "single", "facing": "east", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/pink", "y": 90}
+    },
+    {
+      "when": { "vertical": "single", "facing": "south", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/pink", "y": 180}
+    },
+    {
+      "when": { "vertical": "single", "facing": "west", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/lamp/shade/offset/pink", "y": 270}
     }
-  }
+  ]
 }

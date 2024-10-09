@@ -91,6 +91,8 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (hitResult.getDirection() != Direction.UP) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
@@ -111,6 +113,8 @@ public class DrainerBlock extends BaseEntityBlock implements SimpleWaterloggedBl
             }
             // Avoids client trying to place actual block on top
             return ItemInteractionResult.CONSUME;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         // Remove

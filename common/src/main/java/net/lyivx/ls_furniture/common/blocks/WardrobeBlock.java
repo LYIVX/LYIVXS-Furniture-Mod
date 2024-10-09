@@ -73,7 +73,8 @@ public class WardrobeBlock extends BaseEntityBlock {
         return null;
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (state.getValue(MODEL_TYPE) == WardrobeModelType.BOTTOM) {
             if (blockEntity instanceof WardrobeBottomBlockEntity drawerBlockEntity) {

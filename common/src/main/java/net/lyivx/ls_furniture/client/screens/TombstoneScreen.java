@@ -119,7 +119,7 @@ public class TombstoneScreen extends Screen {
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-
+        super.render(guiGraphics, mouseX, mouseY, partialTick);
         // Render the block first
         renderBlock(guiGraphics);
 
@@ -138,7 +138,6 @@ public class TombstoneScreen extends Screen {
         // Render cursor
         renderCursor(guiGraphics);
 
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
     }
 
     private void renderBlock(GuiGraphics guiGraphics) {

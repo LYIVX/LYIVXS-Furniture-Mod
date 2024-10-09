@@ -1,6 +1,8 @@
 package net.lyivx.ls_furniture.common.blocks;
 
-import net.lyivx.ls_furniture.common.blocks.entity.StoolBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
+import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
@@ -27,10 +29,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.storage.loot.functions.ToggleTooltips;
@@ -48,6 +47,7 @@ import java.util.stream.Stream;
 public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock, TuckableBlock, EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final EnumProperty<ColorType> COLOR = ModBlockStateProperties.COLOR;
 
     protected static final VoxelShape SHAPE_NORTH = Stream.of(
             Block.box(3, 0, 3, 5, 9, 5),
@@ -88,7 +88,8 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, Wre
         registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
-                .setValue(TUCKED, false));
+                .setValue(TUCKED, false)
+                .setValue(COLOR, ColorType.DEFAULT));
     }
 
     @Override
@@ -144,6 +145,15 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, Wre
         return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
     }
 
+    public static ColorType getColorTypeFromDye(DyeColor dyeColor) {
+        for (ColorType colorType : ColorType.values()) {
+            if (colorType.getDyeColor() == dyeColor) {
+                return colorType;
+            }
+        }
+        return ColorType.WHITE;
+    }
+
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
@@ -151,34 +161,46 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, Wre
             return ItemInteractionResult.FAIL;
         }
 
-        if (level.getBlockEntity(pos) instanceof StoolBlockEntity entity) {
-            DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
-            if (woolDye != null && !entity.hasColor()) {
-                entity.setColor(woolDye);
-                entity.setChanged();
-                if (!(player.isCreative())) {
-                    stack.shrink(1);
-                }
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return ItemInteractionResult.SUCCESS;
+        DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
+        if (woolDye != null && (state.getValue(COLOR) == ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(woolDye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
             }
-            DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
-            if (dye != null && entity.hasColor()) {
-                entity.setColor(dye);
-                entity.setChanged();
-                if (!(player.isCreative())) {
-                    stack.shrink(1);
-                }
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return ItemInteractionResult.SUCCESS;
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+        if (dye != null && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(dye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
             }
-            if (stack.is(ModItems.SHEARS.get()) && entity.hasColor()) {
-                dropCushion(level, pos);
-                entity.setColor(null);
-                entity.setChanged();
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return ItemInteractionResult.SUCCESS;
-            }
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        if (stack.is(ModItems.SHEARS.get()) && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            dropCushion(state, level, pos);
+            state = state.setValue(COLOR, ColorType.DEFAULT);
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
         }
 
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
@@ -192,7 +214,7 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, Wre
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, TUCKED, WATERLOGGED);
+        builder.add(FACING, TUCKED, WATERLOGGED, COLOR);
     }
 
     @Override
@@ -228,23 +250,21 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock, Wre
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new StoolBlockEntity(pos, state);
+        return new LockableBlockEntity(pos, state);
     }
 
     @Override
     public void onRemove(BlockState state, @NotNull Level level, @NotNull BlockPos pos, BlockState newState, boolean moving) {
         if (!state.is(newState.getBlock())) {
-            dropCushion(level, pos);
+            dropCushion(state, level, pos);
         }
         super.onRemove(state, level, pos, newState, moving);
     }
 
-    public void dropCushion(Level level, BlockPos pos) {
-        if (level.getBlockEntity(pos) instanceof StoolBlockEntity entity) {
-            if (entity.hasColor()) {
-                Block block = WoolHelper.getBlock(entity.getColor());
-                Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
-            }
+    public void dropCushion(BlockState state, Level level, BlockPos pos) {
+        if (state.hasProperty(COLOR) && state.getValue(COLOR) != ColorType.DEFAULT) {
+            Block block = WoolHelper.getBlock(state.getValue(COLOR).getDyeColor());
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
         }
     }
 

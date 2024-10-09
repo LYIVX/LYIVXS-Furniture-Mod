@@ -32,7 +32,7 @@ public class FreezerBlockEntity extends RandomizableContainerBlockEntity {
 
     public FreezerBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.FREEZER_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(18, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 FreezerBlockEntity.this.playSound(state, ModSoundEvents.DRAWER_OPEN.get());

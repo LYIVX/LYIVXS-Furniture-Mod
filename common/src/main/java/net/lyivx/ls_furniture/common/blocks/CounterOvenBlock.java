@@ -20,6 +20,7 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -168,15 +169,8 @@ public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem
         }
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
-
-        ItemStack stack = player.getItemInHand(hand);
-        Item item = stack.getItem();
-        if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
-
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof CounterOvenBlockEntity) {
             player.openMenu((MenuProvider)blockEntity);
@@ -184,6 +178,17 @@ public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem
         }
 
         return InteractionResult.CONSUME;
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item item = stack.getItem();
+        if (item instanceof WrenchItem) {
+            return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
     public RenderShape getRenderShape(BlockState state) {

@@ -15,13 +15,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 
 public class ChoppingBoardCategory extends BaseCategory<ChoppingBoardRecipe> {
 
     private static final ItemStack CHOPPING_BOARD = new ItemStack(ModBlocks.CHOPPING_BOARD.get());
-    public static final ResourceLocation ID = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "chopping_board");
+    public static final ResourceLocation ID = createResourceLocation("chopping_board");
     public static final RecipeType<ChoppingBoardRecipe> CHOPPING_BOARD_RECIPE_TYPE = new RecipeType<>(ID, ChoppingBoardRecipe.class);
-    public static final ResourceLocation GUI_BACK = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "textures/gui/container/chopping_board.png");
+    public static final ResourceLocation GUI_BACK = createResourceLocation("textures/gui/container/chopping_board.png");
 
 
     public ChoppingBoardCategory(IGuiHelper guiHelper) {
@@ -32,27 +34,28 @@ public class ChoppingBoardCategory extends BaseCategory<ChoppingBoardRecipe> {
     }
 
     @Override
+    @SuppressWarnings("removal")
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull ChoppingBoardRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 29, 6)
-                .addIngredients(recipe.input())
+                .addIngredients(recipe.ingredient())
                 .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.getUses())))
                 .setSlotName("input");
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 29, 82)
-                .addIngredient(VanillaTypes.ITEM_STACK, recipe.output())
+                .addIngredient(VanillaTypes.ITEM_STACK, recipe.result())
                 .setSlotName("output");
 
         builder.addSlot(RecipeIngredientRole.CATALYST, 56, 42)
                 .addIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Items.DIAMOND_AXE))
                 .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.getUses())))
                 .setSlotName("axe");
 
         builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 29, 42)
-                .addIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.CHOPPING_BOARD.get(), recipe.uses()))
+                .addIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.CHOPPING_BOARD.get(), recipe.getUses()))
                 .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.chopping_board.chops", recipe.getUses())))
                 .setSlotName("chopping_board");
 
     }

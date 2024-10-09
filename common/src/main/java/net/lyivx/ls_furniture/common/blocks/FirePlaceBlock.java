@@ -13,6 +13,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -108,6 +109,8 @@ public class FirePlaceBlock extends Block implements WrenchItem.WrenchableBlock 
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (stack.is(Items.FLINT_AND_STEEL) && !state.getValue(ON)) {
@@ -116,12 +119,18 @@ public class FirePlaceBlock extends Block implements WrenchItem.WrenchableBlock 
             level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, onState.getValue(ON) ? 0.6F : 0.5F);
 
             if (!player.isCreative()) {
-                stack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
+                stack.hurtAndBreak(1, player, (handToEquipmentSlot(hand)));
             }
             return ItemInteractionResult.SUCCESS;
 
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return ItemInteractionResult.FAIL;
+    }
+
+    private static EquipmentSlot handToEquipmentSlot(InteractionHand hand) {
+        return hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
     }
 
     @Override

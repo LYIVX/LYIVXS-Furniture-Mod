@@ -1,6 +1,5 @@
 package net.lyivx.ls_furniture.common.blocks;
 
-import net.lyivx.ls_furniture.common.blocks.entity.LampBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
@@ -115,6 +114,8 @@ public class OvenVentBlock extends Block implements WrenchItem.WrenchableBlock {
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }

@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+
+  "input": [
+    {
+      "item": "minecraft:jungle_log"
+    },
+    {
+      "item": "minecraft:jungle_wood"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:jungle_bark",
+    "count": 4
+  }
+}

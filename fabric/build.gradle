@@ -22,14 +22,13 @@ configurations {
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    modImplementation "dev.architectury:architectury-fabric:${architectury_version}"
 
     include modApi("com.teamresourceful.resourcefullib:resourcefullib-fabric-$rootProject.resourcefullib_version")
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
-
-    modImplementation("curse.maven:selene-499980:5731216")
 
     modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") { transitive false }
 

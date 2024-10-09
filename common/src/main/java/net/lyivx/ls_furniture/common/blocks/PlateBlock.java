@@ -81,6 +81,8 @@ public class PlateBlock extends BaseEntityBlock implements SimpleWaterloggedBloc
             }
             // Avoids client trying to place actual block on top
             return ItemInteractionResult.CONSUME;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);

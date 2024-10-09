@@ -30,7 +30,7 @@ public class BarrelBlockEntity extends RandomizableContainerBlockEntity {
 
     public BarrelBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.BARREL_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(27, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 BarrelBlockEntity.this.playSound(state, SoundEvents.BARREL_OPEN);

@@ -38,6 +38,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 import static net.lyivx.ls_furniture.common.compat.WorkstationRecipeCategory.WORKSTATION_RECIPE_TYPE;
 
 @JeiPlugin
@@ -111,7 +112,7 @@ public class ModJeiPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "jei_mod_plugin");
+        return createResourceLocation("jei_mod_plugin");
     }
 }
 

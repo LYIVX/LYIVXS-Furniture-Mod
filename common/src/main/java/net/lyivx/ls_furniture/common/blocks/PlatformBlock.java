@@ -150,19 +150,27 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
         if (item instanceof HammerItem || item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (!(item instanceof BlockItem blockItem)) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Block blockInHand = blockItem.getBlock();
         if (!(blockInHand instanceof PlatformBlock || blockInHand instanceof ModStairBlock)) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (hitResult.getDirection() != Direction.UP) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Direction playerFacing = player.getDirection();
@@ -170,12 +178,16 @@ public class PlatformBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
         if (!canPlaceBlock(level, targetPos)) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (blockInHand instanceof ModStairBlock) {
             return placeStairBlock(level, targetPos, blockInHand, playerFacing, player, stack);
         } else if (blockInHand instanceof PlatformBlock) {
             return placePlatformBlock(level, targetPos, blockInHand, state.getValue(FACING), player, stack);
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         return ItemInteractionResult.SUCCESS;

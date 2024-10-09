@@ -1,65 +1,86 @@
 package net.lyivx.ls_furniture.common.recipes;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.teamresourceful.bytecodecs.base.ByteCodec;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
-import io.netty.buffer.ByteBuf;
 import net.lyivx.ls_furniture.registry.ModRecipes;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.NotNull;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.level.block.Blocks;
 
-public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copyNbt, Ingredient input, Ingredient input2, ItemStack output) implements CodecRecipe<Container> {
+public class WorldInteractionRecipe implements Recipe<RecipeInput> {
+    private final String group;
+    private final Ingredient ingredient1;
+    private final Ingredient ingredient2;
+    private final ItemStack result;
+    private final int uses;
 
-    public static Codec<WorldInteractionRecipe> codec(ResourceLocation id) {
-        return RecordCodecBuilder.create(instance -> instance.group(
-                RecordCodecBuilder.point(id),
-                Codec.INT.fieldOf("uses").forGetter(WorldInteractionRecipe::uses),
-                Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(WorldInteractionRecipe::copyNbt),
-                Ingredient.CODEC.fieldOf("input").forGetter(WorldInteractionRecipe::input),
-                Ingredient.CODEC.fieldOf("input2").forGetter(WorldInteractionRecipe::input2),
-                ItemStack.CODEC.fieldOf("output").forGetter(WorldInteractionRecipe::output)
-        ).apply(instance, WorldInteractionRecipe::new));
+    public WorldInteractionRecipe(String group, Ingredient ingredient1, Ingredient ingredient2, ItemStack result, int uses) {
+        this.group = group;
+        this.ingredient1 = ingredient1;
+        this.ingredient2 = ingredient2;
+        this.result = result;
+        this.uses = uses;
     }
 
-    public static ByteCodec<WorldInteractionRecipe> byteCodec() {
-        return new ByteCodec<>() {
-            @Override
-            public void encode(WorldInteractionRecipe value, ByteBuf buf) {
-                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
-                friendlyBuf.writeResourceLocation(value.id());
-                friendlyBuf.writeVarInt(value.uses());
-                friendlyBuf.writeBoolean(value.copyNbt());
-                value.input().toNetwork(friendlyBuf);
-                value.input2().toNetwork(friendlyBuf);
-                friendlyBuf.writeItem(value.output());
-            }
-
-            @Override
-            public WorldInteractionRecipe decode(ByteBuf buf) {
-                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
-                ResourceLocation id = friendlyBuf.readResourceLocation();
-                int uses = friendlyBuf.readVarInt();
-                boolean copyNbt = friendlyBuf.readBoolean();
-                Ingredient input = Ingredient.fromNetwork(friendlyBuf);
-                Ingredient input2 = Ingredient.fromNetwork(friendlyBuf);
-                ItemStack output = friendlyBuf.readItem();
-                return new WorldInteractionRecipe(id, uses, copyNbt, input, input2, output);
-            }
-        };
+    public int getUses() {
+        return uses;
     }
 
     @Override
-    public boolean matches(@NotNull Container container, @NotNull Level level) {
-        return input.test(container.getItem(0));
+    public boolean matches(RecipeInput input, Level level) {
+        return this.ingredient1.test(input.getItem(0)) && this.ingredient2.test(input.getItem(1));
+    }
+
+    @Override
+    public ItemStack assemble(RecipeInput input, HolderLookup.Provider registries) {
+        return this.result.copy();
+    }
+
+    @Override
+    public boolean canCraftInDimensions(int width, int height) {
+        return true;
+    }
+
+    @Override
+    public ItemStack getResultItem(HolderLookup.Provider pProvider) {
+        return this.result;
+    }
+
+    public ItemStack result() {
+        return result;
+    }
+
+    @Override
+    public String getGroup() {
+        return this.group;
+    }
+
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(Blocks.GRASS_BLOCK);
+    }
+
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    public Ingredient getIngredient1() {
+        return ingredient1;
+    }
+
+    public Ingredient getIngredient2() {
+        return ingredient2;
     }
 
     @Override
@@ -68,7 +89,43 @@ public record WorldInteractionRecipe(ResourceLocation id, int uses, boolean copy
     }
 
     @Override
-    public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
+    public RecipeSerializer<?> getSerializer() {
         return ModRecipes.WORLD_INTERACTION_RECIPE_SERIALIZER.get();
+    }
+
+    public static class Serializer implements RecipeSerializer<WorldInteractionRecipe> {
+
+        private final MapCodec<WorldInteractionRecipe> mapCodec;
+        private final StreamCodec<RegistryFriendlyByteBuf, WorldInteractionRecipe> streamCodec;
+
+        public Serializer() {
+            this.mapCodec = RecordCodecBuilder.mapCodec(
+                    instance -> instance.group(
+                            Codec.STRING.optionalFieldOf("group", "").forGetter(WorldInteractionRecipe::getGroup),
+                            Ingredient.CODEC_NONEMPTY.fieldOf("input1").forGetter(WorldInteractionRecipe::getIngredient1),
+                            Ingredient.CODEC_NONEMPTY.fieldOf("input2").forGetter(WorldInteractionRecipe::getIngredient2),
+                            ItemStack.CODEC.fieldOf("result").forGetter(recipe -> recipe.result),
+                            ExtraCodecs.POSITIVE_INT.fieldOf("uses").orElse(5).forGetter(WorldInteractionRecipe::getUses)
+                    ).apply(instance, WorldInteractionRecipe::new)
+            );
+            this.streamCodec = StreamCodec.composite(
+                    ByteBufCodecs.STRING_UTF8, arg -> arg.group,
+                    Ingredient.CONTENTS_STREAM_CODEC, arg -> arg.ingredient1,
+                    Ingredient.CONTENTS_STREAM_CODEC, arg -> arg.ingredient2,
+                    ItemStack.STREAM_CODEC, arg -> arg.result,
+                    ByteBufCodecs.VAR_INT, arg -> arg.uses,
+                    WorldInteractionRecipe::new
+            );
+        }
+
+        @Override
+        public MapCodec<WorldInteractionRecipe> codec() {
+            return mapCodec;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, WorldInteractionRecipe> streamCodec() {
+            return streamCodec;
+        }
     }
 }

@@ -9,9 +9,6 @@ dependencies {
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-lib:${jei_version}")
-
-    modImplementation("curse.maven:selene-499980:5731217")
-
 }
 
 architectury {

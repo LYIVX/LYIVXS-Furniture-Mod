@@ -14,12 +14,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 public class WorldInteractionRecipeCategory extends BaseCategory<WorldInteractionRecipe> {
 
     private static final ItemStack WORLD_INTERACTION = new ItemStack(Blocks.GRASS_BLOCK);
-    public static final ResourceLocation ID = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "world_interaction");
+    public static final ResourceLocation ID = createResourceLocation("world_interaction");
     public static final RecipeType<WorldInteractionRecipe> WORLD_INTERACTION_RECIPE_TYPE = new RecipeType<>(ID, WorldInteractionRecipe.class);
-    public static final ResourceLocation GUI_BACK = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "textures/gui/container/world_interaction.png");
+    public static final ResourceLocation GUI_BACK = createResourceLocation("textures/gui/container/world_interaction.png");
 
 
     public WorldInteractionRecipeCategory(IGuiHelper guiHelper) {
@@ -30,21 +32,22 @@ public class WorldInteractionRecipeCategory extends BaseCategory<WorldInteractio
     }
 
     @Override
+    @SuppressWarnings("removal")
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull WorldInteractionRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 11, 6)
-                .addIngredients(recipe.input())
+                .addIngredients(recipe.getIngredient1())
                 .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use", recipe.getUses())))
                 .setSlotName("input");
 
         builder.addSlot(RecipeIngredientRole.CATALYST, 47, 6)
-                .addIngredients(recipe.input2())
+                .addIngredients(recipe.getIngredient2())
                 .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("tooltip.ls_furniture.screen.blank")))
-                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use_on", recipe.uses())))
+                .addTooltipCallback((view, tooltip) -> tooltip.add(Component.translatable("gui.ls_furniture.jei.world_interaction.use_on", recipe.getUses())))
                 .setSlotName("tool");
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 29, 46)
-                .addIngredient(VanillaTypes.ITEM_STACK, recipe.output())
+                .addIngredient(VanillaTypes.ITEM_STACK, recipe.result())
                 .setSlotName("output");
     }
 }

@@ -31,7 +31,6 @@ public class ModItemTags {
     public static final TagKey<Item> CRATE_BLACKLIST_TAG = itemTag("crate_blacklist");
     public static final TagKey<Item> MAIL_TAG = itemTag("mail");
 
-
     private static TagKey<Item> itemTag(String name) {
         return TagKey.create(Registries.ITEM, createResourceLocation(name));
     }

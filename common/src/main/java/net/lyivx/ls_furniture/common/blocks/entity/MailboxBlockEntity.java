@@ -26,6 +26,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -41,7 +42,7 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
 
     public MailboxBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.MAILBOX_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(9, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 MailboxBlockEntity.this.playSound(state, SoundEvents.BARREL_OPEN);
@@ -117,54 +118,52 @@ public class MailboxBlockEntity extends RandomizableContainerBlockEntity {
         return !items.contains(ItemStack.EMPTY);
     }
 
-    public ItemStack addMail(ItemStack stack) {
-        if (!this.getBlockState().is(ModBlocksTags.BYPASSES_MAIL_TAG_TAG) && !stack.is(ModItemTags.MAIL_TAG)) return stack;
-
-        if (stack.getItem() instanceof LetterItem) {
-            LetterItem.signLetter(stack, "Anonymous Player");
-        }
-
-        int slot = getFreeSlot();
-        if (slot < getContainerSize()) {
-            ItemStack currentStack = items.get(slot);
-
-            if (currentStack.isEmpty()) {
-                ItemStack stackToAdd = stack.copy();
-                stackToAdd.setCount(1); // Only add one item
-
+    public ItemStack insertMail(ItemStack mail) {
+        if(getBlockState().is(ModBlocksTags.BYPASSES_MAIL_TAG_TAG) || mail.is(ModItemTags.MAIL_TAG)) {
+            if(mail.getItem() instanceof LetterItem) LetterItem.signLetter(mail, "Anonymous Player");
+            int slot = nextFreeSlot();
+            if(slot < getCapacity()) {
+                ItemStack stackToAdd = mail.copy();
+                stackToAdd.setCount(1);
                 items.set(slot, stackToAdd);
-
-                stack.shrink(1);
-
-                BlockEntityHelper.broadcastUpdate(this, false);
-                updateBlockState(this.getBlockState(), hasMail());
-
-                Player mailboxOwner = level.getPlayerByUUID(getOwner());
-                if (mailboxOwner != null) {
-                    if (hasCustomName()) {
-                        mailboxOwner.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.new_mail_loc", getCustomName()), true);
-                    } else {
-                        mailboxOwner.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.new_mail"), true);
-                    }
-                    if (mailboxOwner instanceof ServerPlayer serverPlayer) {
-                        BlockEntityHelper.playSoundToPlayer(serverPlayer, ModSoundEvents.MAIL_RECEIVED.get(), SoundSource.MASTER, 1.0f, 1.0f);
-                    }
-                }
-
-                return stack;
+                //setItem(slot, mail);
+                mail.shrink(1);
+                mail = ItemStack.EMPTY;
+                updateBlock();
+                notifyOwner();
             }
-
-            return stack;
         }
+        return mail;
+    }
 
-        return stack;
+    private void notifyOwner() {
+        Player mailboxOwner = level.getPlayerByUUID(getOwner());
+        if(mailboxOwner != null) {
+            if(hasCustomName()) {
+                mailboxOwner.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.new_mail_loc", getCustomName()), true);
+            } else {
+                mailboxOwner.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.new_mail"), true);
+            }
+            if(mailboxOwner instanceof ServerPlayer serverPlayer) {
+                BlockEntityHelper.playSoundToPlayer(serverPlayer, ModSoundEvents.MAIL_RECEIVED.get(), SoundSource.MASTER, 10.0f, 0.1f);
+            }
+        }
+    }
+
+    private void updateBlock() {
+        level.setBlock(getBlockPos(), getBlockState().setValue(MailboxBlock.HAS_MAIL, hasMail()), Block.UPDATE_ALL);
+        level.playSound(null, getBlockPos(), ModSoundEvents.MAILBOX_UPDATE.get(), SoundSource.BLOCKS, 1.0f, 1.0f);
     }
 
 
-    private int getFreeSlot() {
+    public int nextFreeSlot() {
         int slot = 0;
-        while(slot < items.size() && !items.get(slot).isEmpty()) slot++;
+        while(slot < getCapacity() && !getItem(slot).isEmpty()) slot++;
         return slot;
+    }
+
+    public int getCapacity() {
+        return items.size();
     }
 
     public Component getOwnerDisplayName() {

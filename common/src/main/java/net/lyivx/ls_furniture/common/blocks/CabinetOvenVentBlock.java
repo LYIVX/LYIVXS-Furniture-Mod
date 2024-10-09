@@ -115,15 +115,19 @@ public class CabinetOvenVentBlock extends Block implements WrenchItem.Wrenchable
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
-        return ItemInteractionResult.SUCCESS;    }
+        return ItemInteractionResult.SUCCESS;
+    }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockState newState = state.cycle(ON);
         level.setBlockAndUpdate(pos, newState);
         level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 0.3F, newState.getValue(ON) ? 0.6F : 0.5F);
-        return InteractionResult.SUCCESS;    }
+        return InteractionResult.SUCCESS;
+    }
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {

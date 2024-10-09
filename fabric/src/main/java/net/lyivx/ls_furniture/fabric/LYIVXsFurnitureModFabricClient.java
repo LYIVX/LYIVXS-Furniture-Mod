@@ -1,8 +1,12 @@
 package net.lyivx.ls_furniture.fabric;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
+import net.fabricmc.fabric.api.event.registry.DynamicRegistrySetupCallback;
+import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClientRegisterers;
 import net.lyivx.ls_furniture.client.screens.WorkstationScreen;
@@ -11,10 +15,16 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createModelResourceLocation;
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
 public class LYIVXsFurnitureModFabricClient implements ClientModInitializer {
 
@@ -31,8 +41,11 @@ public class LYIVXsFurnitureModFabricClient implements ClientModInitializer {
         var register = new FabricClientRegister();
         LYIVXsFurnitureModClient.registerBlockRenderers(register);
         LYIVXsFurnitureModClient.registerEntityRenderers(register);
-        //ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> LYIVXsFurnitureModClient.registerModel(out));
+
     }
+
+
+
 
 
     private static class FabricClientRegister implements LYIVXsFurnitureModClientRegisterers {

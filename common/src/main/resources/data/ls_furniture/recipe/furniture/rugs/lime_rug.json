@@ -1,0 +1,12 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:lime_wool"
+  },
+  "ingredient_count": 2,
+  "result": {
+    "id": "ls_furniture:lime_rug",
+    "count": 3
+  }
+}

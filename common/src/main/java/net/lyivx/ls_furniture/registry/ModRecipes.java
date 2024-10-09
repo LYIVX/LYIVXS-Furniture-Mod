@@ -1,8 +1,7 @@
 package net.lyivx.ls_furniture.registry;
 
 import com.mojang.serialization.MapCodec;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeType;
+import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
@@ -10,45 +9,50 @@ import net.lyivx.ls_furniture.common.recipes.ChoppingBoardRecipe;
 import net.lyivx.ls_furniture.common.recipes.CuttingBoardRecipe;
 import net.lyivx.ls_furniture.common.recipes.WorkstationRecipe;
 import net.lyivx.ls_furniture.common.recipes.WorldInteractionRecipe;
-import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 
-import java.util.function.Supplier;
-
-import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
-
 public class ModRecipes {
 
-    public static final ResourcefulRegistry<RecipeType<?>> RECIPES = ResourcefulRegistries.create(BuiltInRegistries.RECIPE_TYPE, LYIVXsFurnitureMod.MOD_ID);
-    public static final ResourcefulRegistry<RecipeSerializer<?>> SERIALIZERS = ResourcefulRegistries.create(BuiltInRegistries.RECIPE_SERIALIZER, LYIVXsFurnitureMod.MOD_ID);
+    public static final ResourcefulRegistry<RecipeType<?>> RECIPE_TYPES = ResourcefulRegistries.create(BuiltInRegistries.RECIPE_TYPE, LYIVXsFurnitureMod.MOD_ID);
+    public static final ResourcefulRegistry<RecipeSerializer<?>> RECIPE_SERIALIZERS = ResourcefulRegistries.create(BuiltInRegistries.RECIPE_SERIALIZER, LYIVXsFurnitureMod.MOD_ID);
 
-    public static final Supplier<CodecRecipeType<ChoppingBoardRecipe>> CHOPPING_BOARD_RECIPE = RECIPES.register("chopping_board", () -> CodecRecipeType.of("chopping_board"));
-    public static final Supplier<CodecRecipeSerializer<ChoppingBoardRecipe>> CHOPPING_BOARD_SERIALIZER = SERIALIZERS.register("chopping_board",
-            () -> new CodecRecipeSerializer<>(
-                    CHOPPING_BOARD_RECIPE.get(),
-                    (MapCodec) ChoppingBoardRecipe.codec(createResourceLocation("chopping_board")),
-                    ChoppingBoardRecipe.byteCodec()
-            ));
+    public static final RegistryEntry<RecipeType<ChoppingBoardRecipe>> CHOPPING_BOARD_RECIPE = RECIPE_TYPES.register("chopping_board",
+            () -> new RecipeType<ChoppingBoardRecipe>() {
+                public String toString() { return "chopping_board"; }
+            });
+    public static final RegistryEntry<RecipeSerializer<ChoppingBoardRecipe>> CHOPPING_BOARD_SERIALIZER = RECIPE_SERIALIZERS.register("chopping_board",
+            ChoppingBoardRecipe.Serializer::new);
 
-    public static final Supplier<CodecRecipeType<CuttingBoardRecipe>> CUTTING_BOARD_RECIPE = RECIPES.register("cutting_board", () -> CodecRecipeType.of("cutting_board"));
-    public static final Supplier<CodecRecipeSerializer<CuttingBoardRecipe>> CUTTING_BOARD_SERIALIZER = SERIALIZERS.register("cutting_board",
-            () -> new CodecRecipeSerializer<>(
-                    CUTTING_BOARD_RECIPE.get(),
-                    (MapCodec) CuttingBoardRecipe.codec(createResourceLocation("cutting_board")),
-                    CuttingBoardRecipe.byteCodec()
-            ));
 
-    public static final Supplier<CodecRecipeType<WorldInteractionRecipe>> WORLD_INTERACTION_RECIPE = RECIPES.register("world_interaction", () -> CodecRecipeType.of("world_interaction"));
-    public static final Supplier<CodecRecipeSerializer<WorldInteractionRecipe>> WORLD_INTERACTION_RECIPE_SERIALIZER = SERIALIZERS.register("world_interaction",
-            () -> new CodecRecipeSerializer<>(
-                    WORLD_INTERACTION_RECIPE.get(),
-                    (MapCodec) WorldInteractionRecipe.codec(createResourceLocation("world_interaction")),
-                    WorldInteractionRecipe.byteCodec()
-            ));
+    public static final RegistryEntry<RecipeType<CuttingBoardRecipe>> CUTTING_BOARD_RECIPE = RECIPE_TYPES.register("cutting_board",
+            () -> new RecipeType<CuttingBoardRecipe>() {
+                public String toString() { return "cutting_board"; }
+            });
+    public static final RegistryEntry<RecipeSerializer<CuttingBoardRecipe>> CUTTING_BOARD_SERIALIZER = RECIPE_SERIALIZERS.register("cutting_board",
+            CuttingBoardRecipe.Serializer::new);
 
-    public static final Supplier<RecipeType<WorkstationRecipe>> WORKSTATION_RECIPE = RegHelper.registerRecipeType(createResourceLocation("workstation"));
-    public static final Supplier<RecipeSerializer<WorkstationRecipe>> WORKSTATION_RECIPE_SERIALIZER = RegHelper.registerRecipeSerializer(createResourceLocation("workstation"), WorkstationRecipe.Serializer::new);
+
+    public static final RegistryEntry<RecipeType<WorldInteractionRecipe>> WORLD_INTERACTION_RECIPE = RECIPE_TYPES.register("world_interaction",
+            () -> new RecipeType<WorldInteractionRecipe>() {
+                public String toString() { return "world_interaction"; }
+            });
+    public static final RegistryEntry<RecipeSerializer<WorldInteractionRecipe>> WORLD_INTERACTION_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("world_interaction",
+            WorldInteractionRecipe.Serializer::new);
+
+    public static final RegistryEntry<RecipeType<WorkstationRecipe>> WORKSTATION_RECIPE = RECIPE_TYPES.register("workstation",
+            () -> new RecipeType<WorkstationRecipe>() {
+                public String toString() { return "workstation"; }
+            });
+    public static final RegistryEntry<RecipeSerializer<WorkstationRecipe>> WORKSTATION_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("workstation",
+            WorkstationRecipe.Serializer::new);
+
+    public static void Register()  {
+        ModRecipes.RECIPE_TYPES.init();
+        ModRecipes.RECIPE_SERIALIZERS.init();
+    }
 }

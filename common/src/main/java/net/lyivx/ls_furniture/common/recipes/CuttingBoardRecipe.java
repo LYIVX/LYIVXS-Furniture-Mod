@@ -1,72 +1,91 @@
 package net.lyivx.ls_furniture.common.recipes;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.teamresourceful.bytecodecs.base.ByteCodec;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
-import com.teamresourceful.resourcefullib.common.recipe.CodecRecipeSerializer;
-import io.netty.buffer.ByteBuf;
+import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModRecipes;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.Container;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.NotNull;
 
-public record CuttingBoardRecipe(ResourceLocation id, int uses, boolean copyNbt, Ingredient input, ItemStack output) implements CodecRecipe<Container> {
+public class CuttingBoardRecipe extends SingleItemRecipe {
+    private final int uses;
 
-    public static Codec<CuttingBoardRecipe> codec(ResourceLocation id) {
-        return RecordCodecBuilder.create(instance -> instance.group(
-                RecordCodecBuilder.point(id),
-                Codec.INT.fieldOf("uses").orElse(5).forGetter(CuttingBoardRecipe::uses),
-                Codec.BOOL.fieldOf("copyNbt").orElse(false).forGetter(CuttingBoardRecipe::copyNbt),
-                Ingredient.CODEC.fieldOf("input").forGetter(CuttingBoardRecipe::input),
-                ItemStack.CODEC.fieldOf("output").forGetter(CuttingBoardRecipe::output)
-        ).apply(instance, CuttingBoardRecipe::new));
+    public CuttingBoardRecipe(String group, Ingredient ingredient, ItemStack result, int uses) {
+        super(ModRecipes.CUTTING_BOARD_RECIPE.get(), ModRecipes.CUTTING_BOARD_SERIALIZER.get(), group, ingredient, result);
+        this.uses = uses;
     }
 
-    public static ByteCodec<CuttingBoardRecipe> byteCodec() {
-        return new ByteCodec<>() {
-            @Override
-            public void encode(CuttingBoardRecipe value, ByteBuf buf) {
-                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
-                friendlyBuf.writeResourceLocation(value.id());
-                friendlyBuf.writeVarInt(value.uses());
-                friendlyBuf.writeBoolean(value.copyNbt());
-                value.input().toNetwork(friendlyBuf);
-                friendlyBuf.writeItem(value.output());
-            }
-
-            @Override
-            public CuttingBoardRecipe decode(ByteBuf buf) {
-                FriendlyByteBuf friendlyBuf = new FriendlyByteBuf(buf);
-                ResourceLocation id = friendlyBuf.readResourceLocation();
-                int uses = friendlyBuf.readVarInt();
-                boolean copyNbt = friendlyBuf.readBoolean();
-                Ingredient input = Ingredient.fromNetwork(friendlyBuf);
-                ItemStack output = friendlyBuf.readItem();
-                return new CuttingBoardRecipe(id, uses, copyNbt, input, output);
-            }
-        };
+    public int getUses() {
+        return uses;
     }
 
     @Override
-    public boolean matches(@NotNull Container container, @NotNull Level level) {
-        return input.test(container.getItem(0));
+    public boolean matches(SingleRecipeInput input, Level level) {
+        return this.ingredient.test(input.getItem(0));
     }
 
     @Override
-    public RecipeType<?> getType() {
-        return ModRecipes.CUTTING_BOARD_RECIPE.get();
+    public ItemStack assemble(SingleRecipeInput input, HolderLookup.Provider registries) {
+        return result.copy();
     }
 
     @Override
-    public CodecRecipeSerializer<? extends CodecRecipe<Container>> serializer() {
-        return ModRecipes.CUTTING_BOARD_SERIALIZER.get();
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.CHOPPING_BOARD.get());
     }
 
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    public Ingredient ingredient() {
+        return ingredient;
+    }
+
+    public ItemStack result() {
+        return result;
+    }
+
+    public static class Serializer implements RecipeSerializer<CuttingBoardRecipe> {
+
+        private final MapCodec<CuttingBoardRecipe> mapCodec;
+        private final StreamCodec<RegistryFriendlyByteBuf, CuttingBoardRecipe> streamCodec;
+
+        public Serializer() {
+            this.mapCodec = RecordCodecBuilder.mapCodec(
+                    instance -> instance.group(
+                                    Codec.STRING.optionalFieldOf("group", "").forGetter(arg -> arg.group),
+                                    Ingredient.CODEC_NONEMPTY.fieldOf("input").forGetter(arg -> arg.ingredient),
+                                    ItemStack.STRICT_CODEC.fieldOf("result").forGetter(arg -> arg.result),
+                                    ExtraCodecs.POSITIVE_INT.fieldOf("uses").orElse(5).forGetter(arg -> arg.uses)
+                            )
+                            .apply(instance, CuttingBoardRecipe::new)
+            );
+            this.streamCodec = StreamCodec.composite(
+                    ByteBufCodecs.STRING_UTF8, arg -> arg.group,
+                    Ingredient.CONTENTS_STREAM_CODEC, arg -> arg.ingredient,
+                    ItemStack.STREAM_CODEC, arg -> arg.result,
+                    ByteBufCodecs.VAR_INT, arg -> arg.uses,
+                    CuttingBoardRecipe::new
+            );
+        }
+
+        @Override
+        public MapCodec<CuttingBoardRecipe> codec() {
+            return mapCodec;
+        }
+
+        @Override
+        public StreamCodec<RegistryFriendlyByteBuf, CuttingBoardRecipe> streamCodec() {
+            return streamCodec;
+        }
+    }
 }

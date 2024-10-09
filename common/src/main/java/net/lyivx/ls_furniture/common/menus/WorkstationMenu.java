@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.common.menus;
 import com.google.common.collect.Lists;
 import net.lyivx.ls_furniture.common.recipes.FilterableRecipe;
 import net.lyivx.ls_furniture.common.recipes.RecipeSorter;
+import net.lyivx.ls_furniture.common.recipes.WorkstationRecipe;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.lyivx.ls_furniture.registry.ModRecipes;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 
@@ -157,17 +159,20 @@ public class WorkstationMenu extends AbstractContainerMenu  {
 
     private void setupRecipeList(Container container, ItemStack stack) {
         this.selectedRecipeIndex.set(-1);
-
+        this.recipes = List.of();
         this.resultSlot.set(ItemStack.EMPTY);
+
         if (!stack.isEmpty()) {
-            var matching = this.level.getRecipeManager()
+            List<RecipeHolder<WorkstationRecipe>> matching = this.level.getRecipeManager()
                     .getRecipesFor(ModRecipes.WORKSTATION_RECIPE.get(), createRecipeInput(container), this.level);
 
             RecipeSorter.sort(matching, this.level);
 
-            recipes = matching.stream().map(FilterableRecipe::of).toList();
             // at most 256 recipes
-            recipes = recipes.subList(0, Math.min(recipes.size(), 255));
+            this.recipes = matching.stream()
+                    .map(FilterableRecipe::of)
+                    .limit(255)  // Limit to 255 recipes (0 to 254 inclusive)
+                    .toList();
 
             //preserve last clicked recipe on recipe change
             if (lastSelectedRecipe != null) {

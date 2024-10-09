@@ -30,7 +30,7 @@ public class CounterDrawerBlockEntity extends RandomizableContainerBlockEntity {
 
     public CounterDrawerBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.COUNTER_DRAWER_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(27, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 CounterDrawerBlockEntity.this.playSound(state, ModSoundEvents.DRAWER_OPEN.get());

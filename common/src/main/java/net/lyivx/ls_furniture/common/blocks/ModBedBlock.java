@@ -1,6 +1,8 @@
 package net.lyivx.ls_furniture.common.blocks;
 
-import net.lyivx.ls_furniture.common.blocks.entity.BedBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
+import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
 import net.lyivx.ls_furniture.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.registry.ModItems;
@@ -10,6 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.Villager;
@@ -24,6 +27,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
@@ -42,23 +46,29 @@ public class ModBedBlock extends BedBlock implements EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
-
+    public static final EnumProperty<ColorType> COLOR = ModBlockStateProperties.COLOR;
 
     public ModBedBlock(Properties properties) {
         super(DyeColor.WHITE, properties);
         this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any())
                 .setValue(PART, BedPart.FOOT))
-                .setValue(OCCUPIED, false));
+                .setValue(OCCUPIED, false)
+                .setValue(COLOR, ColorType.DEFAULT));
     }
 
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
 
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, COLOR, PART, OCCUPIED);
+    }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BedBlockEntity(pos, state);
+        return new LockableBlockEntity(pos, state);
     }
 
     private static Direction getNeighbourDirection(BedPart part, Direction direction) {
@@ -81,79 +91,62 @@ public class ModBedBlock extends BedBlock implements EntityBlock {
         return super.playerWillDestroy(level, pos, state, player);
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stack = player.getItemInHand(hand);
-        if (level.isClientSide) {
-            return InteractionResult.CONSUME;
-        } else {
-
-            if (level.getBlockEntity(pos) instanceof BedBlockEntity entity) {
-                DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
-                if (woolDye != null && !entity.hasColor()) {
-                    entity.setColor(woolDye);
-                    entity.setChanged();
-                    if (!(player.isCreative())) {
-                        stack.shrink(1);
-                    }
-                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                    return InteractionResult.SUCCESS;
-                }
-                DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
-                if (dye != null && entity.hasColor()) {
-                    entity.setColor(dye);
-                    entity.setChanged();
-                    if (!(player.isCreative())) {
-                        stack.shrink(1);
-                    }
-                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                    return InteractionResult.SUCCESS;
-                }
-                if (stack.is(ModItems.SHEARS.get()) && entity.hasColor()) {
-                    dropCushion(level, pos);
-                    entity.setColor(null);
-                    entity.setChanged();
-                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                    return InteractionResult.SUCCESS;
-                }
-
-                if (state.getValue(PART) != BedPart.HEAD) {
-                    pos = pos.relative((Direction) state.getValue(FACING));
-                    state = level.getBlockState(pos);
-                    if (!state.is(this)) {
-                        return InteractionResult.CONSUME;
-                    }
-                }
-
-                if (!canSetSpawn(level)) {
-                    level.removeBlock(pos, false);
-                    BlockPos blockPos = pos.relative(((Direction) state.getValue(FACING)).getOpposite());
-                    if (level.getBlockState(blockPos).is(this)) {
-                        level.removeBlock(blockPos, false);
-                    }
-
-                    Vec3 vec3 = pos.getCenter();
-                    level.explode((Entity) null, level.damageSources().badRespawnPointExplosion(vec3), (ExplosionDamageCalculator) null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
-                    return InteractionResult.SUCCESS;
-                } else if ((Boolean) state.getValue(OCCUPIED)) {
-                    if (!this.kickVillagerOutOfBed(level, pos)) {
-                        player.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
-                    }
-
-                    return InteractionResult.SUCCESS;
-                } else {
-                    player.startSleepInBed(pos).ifLeft((bedSleepingProblem) -> {
-                        if (bedSleepingProblem.getMessage() != null) {
-                            player.displayClientMessage(bedSleepingProblem.getMessage(), true);
-                        }
-
-                    });
-                    return InteractionResult.SUCCESS;
-                }
+    public static ColorType getColorTypeFromDye(DyeColor dyeColor) {
+        for (ColorType colorType : ColorType.values()) {
+            if (colorType.getDyeColor() == dyeColor) {
+                return colorType;
             }
         }
-        return InteractionResult.SUCCESS;
+        return ColorType.WHITE;
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
+        if (woolDye != null && (state.getValue(COLOR) == ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(woolDye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+        if (dye != null && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(dye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        if (stack.is(ModItems.SHEARS.get()) && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            dropCushion(state, level, pos);
+            state = state.setValue(COLOR, ColorType.DEFAULT);
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return ItemInteractionResult.SUCCESS;
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
 
     }
+
 
     private boolean kickVillagerOutOfBed(Level level, BlockPos pos) {
         List<Villager> list = level.getEntitiesOfClass(Villager.class, new AABB(pos), LivingEntity::isSleeping);
@@ -168,17 +161,15 @@ public class ModBedBlock extends BedBlock implements EntityBlock {
     @Override
     public void onRemove(BlockState state, @NotNull Level level, @NotNull BlockPos pos, BlockState newState, boolean moving) {
         if (!state.is(newState.getBlock())) {
-            dropCushion(level, pos);
+            dropCushion(state, level, pos);
         }
         super.onRemove(state, level, pos, newState, moving);
     }
 
-    public void dropCushion(Level level, BlockPos pos) {
-        if (level.getBlockEntity(pos) instanceof BedBlockEntity entity) {
-            if (entity.hasColor()) {
-                Block block = WoolHelper.getBlock(entity.getColor());
-                Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
-            }
+    public void dropCushion(BlockState state, Level level, BlockPos pos) {
+        if (state.hasProperty(COLOR) && state.getValue(COLOR) != ColorType.DEFAULT) {
+            Block block = WoolHelper.getBlock(state.getValue(COLOR).getDyeColor());
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
         }
     }
 

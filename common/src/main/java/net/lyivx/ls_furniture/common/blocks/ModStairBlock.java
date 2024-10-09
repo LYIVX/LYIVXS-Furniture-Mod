@@ -759,19 +759,27 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (hitResult.getDirection() != Direction.UP) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (!(stack.getItem() instanceof BlockItem blockItem)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Block blockInHand = blockItem.getBlock();
         if (!(blockInHand instanceof PlatformBlock || blockInHand instanceof ModStairBlock)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Direction facing = state.getValue(FACING);
@@ -780,6 +788,8 @@ public class ModStairBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
         if (!canPlaceBlock(level, targetPos, modelType)) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         return placeBlock(level, targetPos, blockInHand, facing, player, stack, modelType);

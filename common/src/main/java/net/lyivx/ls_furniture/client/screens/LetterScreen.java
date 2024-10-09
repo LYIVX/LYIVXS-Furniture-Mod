@@ -145,6 +145,7 @@ public class LetterScreen extends Screen {
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
+        super.render(guiGraphics, mouseX, mouseY, partialTick);
         this.setFocused((GuiEventListener)null);
         int startX = (this.width - 192) / 2;
         guiGraphics.blit(LETTER_BACKGROUND, startX, 2, 0, 0, 192, 192);
@@ -159,8 +160,6 @@ public class LetterScreen extends Screen {
         } else {
             guiGraphics.drawWordWrap(font, Component.literal(letterText), startX + 36, 20, 108, 0);
         }
-
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
     }
 
     @Override

@@ -15,6 +15,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -154,13 +155,16 @@ public class BlindsBlock extends Block implements SimpleWaterloggedBlock, Wrench
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (player.getItemInHand(hand).is(ModItemTags.BLINDS) && state.getValue(FACING) == Direction.UP && hit.getDirection() == Direction.UP) {
+        Item item = stack.getItem();
+
+        if (item instanceof BlockItem blockItem && blockItem.getBlock() instanceof BlindsBlock && hit.getDirection() != Direction.UP) {
             return ItemInteractionResult.FAIL;
         }
 
-        Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hit);
         }
 
         return ItemInteractionResult.sidedSuccess(level.isClientSide);

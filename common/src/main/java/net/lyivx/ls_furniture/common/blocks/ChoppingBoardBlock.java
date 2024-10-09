@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
@@ -77,7 +78,7 @@ public class ChoppingBoardBlock extends Block implements EntityBlock {
 
             if (stack.getItem() instanceof AxeItem) {
                 if (!choppingBoard.getItem().isEmpty() && choppingBoard.use()) {
-                    stack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+                    stack.hurtAndBreak(1, player, (handToEquipmentSlot(hand)));
                     level.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
                     return ItemInteractionResult.sidedSuccess(level.isClientSide());
                 }
@@ -96,8 +97,14 @@ public class ChoppingBoardBlock extends Block implements EntityBlock {
                 }
 
             }
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return ItemInteractionResult.FAIL;
+    }
+
+    private static EquipmentSlot handToEquipmentSlot(InteractionHand hand) {
+        return hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
     }
 
     @Override

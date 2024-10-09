@@ -2,6 +2,7 @@ package net.lyivx.ls_furniture.common.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.CabinetCupboardBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.entity.CounterCupboardBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
@@ -119,8 +120,6 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
-
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof CabinetCupboardBlockEntity cabinetCupboardBlockEntity) {
             player.openMenu(cabinetCupboardBlockEntity);
@@ -130,13 +129,13 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (level.isClientSide) return ItemInteractionResult.SUCCESS;
-
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
-        return ItemInteractionResult.SUCCESS;
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
@@ -164,13 +163,13 @@ public class CabinetCupboardBlock extends BaseEntityBlock implements WrenchItem.
         return RenderShape.MODEL;
     }
 
-    @Override
+    /*@Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (!stack.hasCustomHoverName()) return;
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof CabinetCupboardBlockEntity cabinetCupboardBlockEntity) cabinetCupboardBlockEntity.setCustomName(stack.getHoverName());
-    }
+    }*/
 
     public boolean hasAnalogOutputSignal(BlockState state) {
         return true;

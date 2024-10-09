@@ -1,11 +1,12 @@
 package net.lyivx.ls_furniture;
 
-import dev.architectury.networking.NetworkManager;
-import net.lyivx.ls_furniture.client.screens.ConfigScreen;
-import net.lyivx.ls_furniture.common.network.NetworkRecipeSync;
-import net.lyivx.ls_furniture.common.network.ServerboundLetterUpdateMessage;
+import dev.architectury.event.events.common.CommandRegistrationEvent;
+import dev.architectury.platform.Platform;
+import net.lyivx.ls_furniture.common.commands.ModConfigCommand;
+import net.lyivx.ls_furniture.common.config.Configs;
+import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
 import net.lyivx.ls_furniture.registry.*;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,7 +14,10 @@ import net.minecraft.world.level.ItemLike;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.file.Path;
 import java.util.function.Consumer;
+
+import static net.minecraft.world.item.CreativeModeTabs.*;
 
 public class LYIVXsFurnitureMod {
     public static final String MOD_ID = "ls_furniture";
@@ -23,38 +27,50 @@ public class LYIVXsFurnitureMod {
         ModBlocks.BLOCKS.init();
         ModBlockEntitys.BLOCK_ENTITIES.init();
         ModItems.ITEMS.init();
+        ModCreativeTab.CREATIVE_MODE_TABS.init();
         ModEntities.ENTITIES.init();
         ModSoundEvents.SOUNDS.init();
-        ModRecipes.RECIPES.init();
         ModMenus.MENUS.init();
-        ModComponents.DATA_ATTACHMENTS.register();
-        ModItems.CREATIVE_TABS.register();
 
+        ModRecipes.Register();
+
+        ModComponents.DATA_ATTACHMENTS.register();
+
+        ModNetworks.init();
 
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
+        ModFuels.init();
 
-        NetworkRecipeSync.init();
-        NetworkManager.registerReceiver(NetworkManager.Side.C2S, ServerboundLetterUpdateMessage.TYPE, ServerboundLetterUpdateMessage.STREAM_CODEC, new ServerboundLetterUpdateMessage.Receiver());
+        CommandRegistrationEvent.EVENT.register((dispatcher, registryAccess, environment) -> {
+            ModConfigCommand.register(dispatcher);
+        });
 
-
-        ConfigScreen.initConfig();
+        Path configDir = Platform.getConfigFolder().resolve("ls_furniture");
+        CustomConfigSpec configSpec = new CustomConfigSpec(configDir, "ls_furniture_config");
+        Configs.setConfigSpec(configSpec);
     }
 
     public static ResourceLocation createResourceLocation(String location) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, location);
     }
 
-    public static void initCreativeTabContents(ResourceKey<CreativeModeTab> tab, Consumer<ItemLike> adder) {
-        if (tab.equals(ResourceKey.create(Registries.CREATIVE_MODE_TAB, createResourceLocation("functional_blocks")))) {
-            ModItems.DECO.boundStream().forEach(adder);
-        } else if (tab.equals(ResourceKey.create(Registries.CREATIVE_MODE_TAB, createResourceLocation("ingredients")))) {
-            ModItems.MISC.boundStream().forEach(adder);
-            ModItems.FOODS.boundStream().forEach(adder);
-            ModItems.INGREDIENTS.boundStream().forEach(adder);
-        } else if (tab.equals(ResourceKey.create(Registries.CREATIVE_MODE_TAB, createResourceLocation("tools_and_utilities")))) {
-            ModItems.TOOLS.boundStream().forEach(adder);
+    public static ModelResourceLocation createModelResourceLocation(String location) {
+        return ModelResourceLocation.inventory(ResourceLocation.parse(location));
+    }
+
+    public static void addCreativeTabContents(ResourceKey<CreativeModeTab> tab, Consumer<ItemLike> consumer) {
+        if (tab == FUNCTIONAL_BLOCKS) {
+            ModItems.DECO.boundStream().forEach(consumer);
+        } else if (tab == INGREDIENTS) {
+            ModItems.MISC.boundStream().forEach(consumer);
+            ModItems.FOODS.boundStream().forEach(consumer);
+            ModItems.INGREDIENTS.boundStream().forEach(consumer);
+            ModItems.INGREDIENTS_BURNABLE_100.boundStream().forEach(consumer);
+            ModItems.INGREDIENTS_BURNABLE_200.boundStream().forEach(consumer);
+        } else if (tab == TOOLS_AND_UTILITIES) {
+            ModItems.TOOLS.boundStream().forEach(consumer);
         }
     }
 }

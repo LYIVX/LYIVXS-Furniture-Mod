@@ -17,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -27,6 +28,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -45,6 +48,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, HammerItem.HammerableBlock {
@@ -80,6 +84,26 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
+        return (lvl, pos, blockState, blockEntity) -> {
+            if (lvl.isClientSide()) {
+                return;
+            }
+
+            // Check if all railing blocksets are false
+            if (!blockState.getValue(NORTH_RAILING) &&
+                    !blockState.getValue(EAST_RAILING) &&
+                    !blockState.getValue(SOUTH_RAILING) &&
+                    !blockState.getValue(WEST_RAILING)) {
+
+                // Drop the block
+                lvl.destroyBlock(pos, true);
+            }
+        };
     }
 
     @Override
@@ -144,18 +168,24 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem || item instanceof SawItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof ILockable lockable && lockable.isLocked()) {
             player.displayClientMessage(Component.translatable("msg.ls_furniture.locked"), true);
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Direction facing = state.getValue(FACING);
 
         if (!player.isCreative()) {
             player.getItemInHand(hand).shrink(1);
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         Direction hitFace = hitResult.getDirection();
@@ -217,8 +247,11 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
                     }
                 }
             } else return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
-        return ItemInteractionResult.SUCCESS;    }
+        return ItemInteractionResult.SUCCESS;
+    }
 
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
@@ -309,8 +342,66 @@ public class RailingBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    public BlockState updateAfterCycle(BlockState state, LevelAccessor level, BlockPos pos) {
-        return WrenchItem.WrenchableBlock.super.updateAfterCycle(state, level, pos);
+    public BlockState updateAfterCycle(BlockState newState, LevelAccessor level, BlockPos pos) {
+        if (!level.isClientSide()) {
+            Player player = ((Level) level).getNearestPlayer(pos.getX(), pos.getY(), pos.getZ(), 10, false);
+            if (player != null) {
+                BlockState oldState = level.getBlockState(pos);
+                boolean railingAdded = isRailingAdded(oldState, newState);
+                boolean railingRemoved = isRailingRemoved(oldState, newState);
+
+                if (!player.isCreative()) {
+                    if (railingAdded) {
+                        if (!playerHasRailing(player)) {
+                            player.displayClientMessage(Component.translatable("msg.ls_furniture.no_railing"), true);
+                            return oldState; // Revert the state change
+                        }
+                        removeRailingFromInventory(player);
+                    } else if (railingRemoved) {
+                        giveRailingToPlayer(player, (Level) level, pos);
+                    }
+                }
+            }
+        }
+        return newState;
+    }
+
+    private boolean isRailingAdded(BlockState oldState, BlockState newState) {
+        return (!oldState.getValue(NORTH_RAILING) && newState.getValue(NORTH_RAILING)) ||
+                (!oldState.getValue(EAST_RAILING) && newState.getValue(EAST_RAILING)) ||
+                (!oldState.getValue(SOUTH_RAILING) && newState.getValue(SOUTH_RAILING)) ||
+                (!oldState.getValue(WEST_RAILING) && newState.getValue(WEST_RAILING));
+    }
+
+    private boolean isRailingRemoved(BlockState oldState, BlockState newState) {
+        return (oldState.getValue(NORTH_RAILING) && !newState.getValue(NORTH_RAILING)) ||
+                (oldState.getValue(EAST_RAILING) && !newState.getValue(EAST_RAILING)) ||
+                (oldState.getValue(SOUTH_RAILING) && !newState.getValue(SOUTH_RAILING)) ||
+                (oldState.getValue(WEST_RAILING) && !newState.getValue(WEST_RAILING));
+    }
+
+    private boolean playerHasRailing(Player player) {
+        return player.getInventory().hasAnyOf(Set.of(this.asItem()));
+    }
+
+    private void removeRailingFromInventory(Player player) {
+        player.getInventory().clearOrCountMatchingItems(itemStack -> itemStack.getItem() == this.asItem(), 1, player.inventoryMenu.getCraftSlots());
+    }
+
+    private void giveRailingToPlayer(Player player, Level level, BlockPos pos) {
+        ItemStack railingStack = new ItemStack(this.asItem());
+        boolean addedToInventory = player.getInventory().add(railingStack);
+
+        if (!addedToInventory) {
+            // If the inventory is full, drop the item in the world
+            double x = pos.getX() + 0.5;
+            double y = pos.getY() + 0.5;
+            double z = pos.getZ() + 0.5;
+            level.addFreshEntity(new ItemEntity(level, x, y, z, railingStack));
+
+            // Notify the player that the item was dropped
+            player.displayClientMessage(Component.translatable("msg.ls_furniture.railing_dropped"), true);
+        }
     }
 
     @Nullable

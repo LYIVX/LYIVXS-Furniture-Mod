@@ -1,6 +1,5 @@
 {
 	"credit": "Made by LYIVX",
-	"parent": "drainer",
 	"textures": {
 		"particle": "block/anvil",
 		"Anvil": "block/anvil",

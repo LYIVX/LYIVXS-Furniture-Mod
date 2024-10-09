@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.client;
 
+import dev.architectury.event.events.client.ClientTickEvent;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -8,6 +9,8 @@ import net.lyivx.ls_furniture.client.renderers.*;
 import net.lyivx.ls_furniture.client.screens.LetterScreen;
 import net.lyivx.ls_furniture.client.screens.TombstoneScreen;
 import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
+import net.lyivx.ls_furniture.common.commands.ModConfigCommand;
+import net.lyivx.ls_furniture.common.keybinds.ModConfigKeybind;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModEntities;
@@ -16,7 +19,10 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
+import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
@@ -42,16 +48,14 @@ public class LYIVXsFurnitureModClient {
 
     public static void init() {
         initRenderTypes();
+
+        ModConfigKeybind.registerKeybinding();
+        ClientTickEvent.CLIENT_POST.register(client -> ModConfigKeybind.checkKeybinding());
     }
 
     public static void registerBlockRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
         registerer.registerBlockEntity(ModBlockEntitys.PLATE_ENTITY.get(), PlateRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.SHELF_ENTITY.get(), ShelfRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.CHAIR_ENTITY.get(), ChairCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.STOOL_ENTITY.get(), StoolCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.SOFA_ENTITY.get(), SofaCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.LAMP_ENTITY.get(), LampShadeRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.BED_ENTITY.get(), BedCushionRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CHOPPING_BOARD_ENTITY.get(), ChoppingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CUTTING_BOARD_ENTITY.get(), CuttingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.MOD_CHEST_ENTITY.get(), CustomChestRenderer::new);
@@ -305,20 +309,20 @@ public class LYIVXsFurnitureModClient {
 
     public static void registerModel(Consumer<ResourceLocation> modelLoader) {
         for (DyeColor value : DyeColor.values()) {
-            modelLoader.accept(createResourceLocation("block/chair/cushion/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/chair/cushion/tucked/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/stool/cushion/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/stool/cushion/tucked/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/inner/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/left/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/middle/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/outer/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/sofa/cushion/right/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/lamp/shade/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/lamp/shade/default"));
-            modelLoader.accept(createResourceLocation("block/bed/cushion/head/" + value.getName()));
-            modelLoader.accept(createResourceLocation("block/bed/cushion/foot/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/chair/cushion/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/chair/cushion/tucked/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/stool/cushion/tucked/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/inner/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/left/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/middle/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/outer/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/sofa/cushion/right/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/lamp/shade/default"));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/bed/cushion/head/" + value.getName()));
+            modelLoader.accept(ResourceLocation.fromNamespaceAndPath(LYIVXsFurnitureMod.MOD_ID, "block/bed/cushion/foot/" + value.getName()));
         }
     }
 
@@ -331,9 +335,6 @@ public class LYIVXsFurnitureModClient {
     public static BakedModel getModel(BlockRenderDispatcher dispatcher, @NotNull ResourceLocation model) {
         throw new NotImplementedException();
     }
-
-
-
 
     private static boolean hasManyRecipes = false;
 

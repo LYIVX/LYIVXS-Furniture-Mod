@@ -11,10 +11,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -48,48 +45,12 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty HAS_MAIL = ModBlockStateProperties.HAS_MAIL;
 
-    protected static final VoxelShape SHAPE_NORTH = Stream.of(
-            Block.box(7, 0, 7, 9, 10, 9),
-            Block.box(5, 10, 3.5, 11, 12, 12.5),
-            Block.box(9, 12, 3.5, 11, 13, 12.5),
-            Block.box(5, 12, 3.5, 7, 13, 12.5),
-            Block.box(6, 13, 3.5, 7, 14, 12.5),
-            Block.box(9, 13, 3.5, 10, 14, 12.5),
-            Block.box(7, 14, 3.5, 9, 15, 12.5),
-            Block.box(7, 12, 11.5, 9, 14, 12.5),
-            Block.box(4, 12, 3, 5, 13, 13),
-            Block.box(5, 13, 3, 6, 14, 13),
-            Block.box(6, 14, 3, 7, 15, 13),
-            Block.box(7, 15, 3, 9, 16, 13),
-            Block.box(9, 14, 3, 10, 15, 13),
-            Block.box(10, 13, 3, 11, 14, 13),
-            Block.box(11, 12, 3, 12, 13, 13),
-            Block.box(10.999999999999998, 11, 4, 12.049999999999999, 12, 9),
-            Block.box(10.999999999999998, 10, 8, 12.049999999999999, 11, 9)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    protected static final VoxelShape SHAPE_NORTH = Stream.of(Block.box(7, 0, 7, 9, 10, 9), Block.box(5, 10, 3.5, 11, 12, 12.5), Block.box(9, 12, 3.5, 11, 13, 12.5), Block.box(5, 12, 3.5, 7, 13, 12.5), Block.box(6, 13, 3.5, 7, 14, 12.5), Block.box(9, 13, 3.5, 10, 14, 12.5), Block.box(7, 14, 3.5, 9, 15, 12.5), Block.box(7, 12, 11.5, 9, 14, 12.5), Block.box(4, 12, 3, 5, 13, 13), Block.box(5, 13, 3, 6, 14, 13), Block.box(6, 14, 3, 7, 15, 13), Block.box(7, 15, 3, 9, 16, 13), Block.box(9, 14, 3, 10, 15, 13), Block.box(10, 13, 3, 11, 14, 13), Block.box(11, 12, 3, 12, 13, 13), Block.box(10.999999999999998, 11, 4, 12.049999999999999, 12, 9), Block.box(10.999999999999998, 10, 8, 12.049999999999999, 11, 9)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     protected static final VoxelShape SHAPE_EAST = ShapeUtil.rotateShape(SHAPE_NORTH, Direction.EAST);
     protected static final VoxelShape SHAPE_SOUTH = ShapeUtil.rotateShape(SHAPE_NORTH, Direction.SOUTH);
     protected static final VoxelShape SHAPE_WEST = ShapeUtil.rotateShape(SHAPE_NORTH, Direction.WEST);
 
-    protected static final VoxelShape SHAPE_NORTH_OPEN = Stream.of(
-            Block.box(7, 0, 7, 9, 10, 9),
-            Block.box(5, 10, 3.5, 11, 12, 12.5),
-            Block.box(9, 12, 3.5, 11, 13, 12.5),
-            Block.box(5, 12, 3.5, 7, 13, 12.5),
-            Block.box(6, 13, 3.5, 7, 14, 12.5),
-            Block.box(9, 13, 3.5, 10, 14, 12.5),
-            Block.box(7, 14, 3.5, 9, 15, 12.5),
-            Block.box(7, 12, 11.5, 9, 14, 12.5),
-            Block.box(4, 12, 3, 5, 13, 13),
-            Block.box(5, 13, 3, 6, 14, 13),
-            Block.box(6, 14, 3, 7, 15, 13),
-            Block.box(7, 15, 3, 9, 16, 13),
-            Block.box(9, 14, 3, 10, 15, 13),
-            Block.box(10, 13, 3, 11, 14, 13),
-            Block.box(11, 12, 3, 12, 13, 13),
-            Block.box(10.999999999999998, 11, 4, 12.049999999999999, 16, 5),
-            Block.box(10.999999999999998, 15, 5, 12.049999999999999, 16, 6)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    protected static final VoxelShape SHAPE_NORTH_OPEN = Stream.of(Block.box(7, 0, 7, 9, 10, 9), Block.box(5, 10, 3.5, 11, 12, 12.5), Block.box(9, 12, 3.5, 11, 13, 12.5), Block.box(5, 12, 3.5, 7, 13, 12.5), Block.box(6, 13, 3.5, 7, 14, 12.5), Block.box(9, 13, 3.5, 10, 14, 12.5), Block.box(7, 14, 3.5, 9, 15, 12.5), Block.box(7, 12, 11.5, 9, 14, 12.5), Block.box(4, 12, 3, 5, 13, 13), Block.box(5, 13, 3, 6, 14, 13), Block.box(6, 14, 3, 7, 15, 13), Block.box(7, 15, 3, 9, 16, 13), Block.box(9, 14, 3, 10, 15, 13), Block.box(10, 13, 3, 11, 14, 13), Block.box(11, 12, 3, 12, 13, 13), Block.box(10.999999999999998, 11, 4, 12.049999999999999, 16, 5), Block.box(10.999999999999998, 15, 5, 12.049999999999999, 16, 6)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     protected static final VoxelShape SHAPE_EAST_OPEN = ShapeUtil.rotateShape(SHAPE_NORTH_OPEN, Direction.EAST);
     protected static final VoxelShape SHAPE_SOUTH_OPEN = ShapeUtil.rotateShape(SHAPE_NORTH_OPEN, Direction.SOUTH);
     protected static final VoxelShape SHAPE_WEST_OPEN = ShapeUtil.rotateShape(SHAPE_NORTH_OPEN, Direction.WEST);
@@ -117,52 +78,67 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
         return level.isClientSide ? null : createTickerHelper(type, ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxBlockEntity::tick);
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
-
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        if(!(blockEntity instanceof MailboxBlockEntity)) return InteractionResult.FAIL;
-        MailboxBlockEntity mailbox = (MailboxBlockEntity) blockEntity;
-
-        if(!mailbox.hasOwner()) {
-            mailbox.setOwner(player);
-            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
-            return InteractionResult.sidedSuccess(false);
-        }
-
-        if(mailbox.isOwner(player)) {
-            mailbox.updateDisplayName(player);
-            player.openMenu(mailbox);
-            return InteractionResult.sidedSuccess(false);
-        }
-
-        if(player.getItemInHand(hand).isEmpty()) {
-            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.no_permission"), true);
-            return InteractionResult.FAIL;
-        }
-
-        if(mailbox.isFull()) {
-            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.full"), true);
-            return InteractionResult.FAIL;
-        }
-
-        ItemStack result = mailbox.addMail(player.getItemInHand(hand));
-        player.setItemInHand(hand, result);
-
-        if(result.isEmpty()) {
-            Component ownerName = mailbox.getOwnerDisplayName();
-
-            if (ownerName != null) {
-                player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.mail_delivered_to", ownerName), true);
+    @Override
+    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+        if(level.isClientSide()) return InteractionResult.sidedSuccess(true);
+        else {
+            BlockEntity blockEntity = level.getBlockEntity(blockPos);
+            if(blockEntity instanceof MailboxBlockEntity mailbox) {
+                if(!mailbox.hasOwner()) {
+                    mailbox.setOwner(player);
+                    player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
+                    return InteractionResult.sidedSuccess(false);
+                } else if(mailbox.isOwner(player)) {
+                    player.openMenu(mailbox);
+                    return InteractionResult.sidedSuccess(false);
+                } else {
+                    return InteractionResult.CONSUME;
+                }
             } else {
-                player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.mail_delivered"), true);
+                return InteractionResult.PASS;
             }
-            return InteractionResult.sidedSuccess(false);
         }
+    }
 
-
-        player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.invalid_mail"), true);
-        return InteractionResult.FAIL;
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if(level.isClientSide()) return ItemInteractionResult.sidedSuccess(true);
+        else {
+            BlockEntity blockEntity = level.getBlockEntity(blockPos);
+            if(blockEntity instanceof MailboxBlockEntity mailbox) {
+                if(!mailbox.hasOwner()) {
+                    mailbox.setOwner(player);
+                    player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
+                    return ItemInteractionResult.sidedSuccess(false);
+                } else if (mailbox.isOwner(player)) {
+                    player.openMenu(mailbox);
+                    return ItemInteractionResult.sidedSuccess(false);
+                } else if (itemStack.isEmpty()) {
+                    player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.no_permission"), true);
+                    return ItemInteractionResult.CONSUME;
+                } else if (mailbox.isFull()) {
+                    player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.full"), true);
+                    return ItemInteractionResult.CONSUME;
+                } else {
+                    ItemStack result = mailbox.insertMail(itemStack);
+                    player.setItemInHand(interactionHand, result);
+                    if(result.isEmpty()) {
+                        Component ownerDisplayName = mailbox.getOwnerDisplayName();
+                        if(ownerDisplayName != null) {
+                            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.mail_delivered_to", ownerDisplayName), true);
+                        } else {
+                            player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.mail_delivered"), true);
+                        }
+                        return ItemInteractionResult.sidedSuccess(false);
+                    } else {
+                        player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.invalid_mail"), true);
+                        return ItemInteractionResult.CONSUME;
+                    }
+                }
+            } else {
+                return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            }
+        }
     }
 
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
@@ -209,12 +185,12 @@ public class MailboxBlock extends BaseEntityBlock implements WrenchItem.Wrenchab
             mailbox.setOwner(player);
             player.displayClientMessage(Component.translatable("msg.ls_furniture.mailbox.set_owner"), true);
         }
-        if(stack.hasCustomHoverName()) {
+        /*if(stack.hasCustomHoverName()) {
             BlockEntity tileEntity = level.getBlockEntity(pos);
             if(tileEntity instanceof MailboxBlockEntity) {
                 ((MailboxBlockEntity) tileEntity).setCustomName(stack.getHoverName());
             }
-        }
+        }*/
         mailbox.setChanged();
         level.sendBlockUpdated(pos, state, state, 3);
     }

@@ -117,62 +117,6 @@ public class ModBlockEntitys {
                     ModBlocks.CRIMSON_CABINET_CUPBOARD.get(),
                     ModBlocks.WARPED_CABINET_CUPBOARD.get()));
 
-    public static final Supplier<BlockEntityType<ChairBlockEntity>> CHAIR_ENTITY = BLOCK_ENTITIES.register("chair",
-            () -> createBlockEntityType(ChairBlockEntity::new,
-                    ModBlocks.OAK_CHAIR.get(),
-                    ModBlocks.SPRUCE_CHAIR.get(),
-                    ModBlocks.BIRCH_CHAIR.get(),
-                    ModBlocks.JUNGLE_CHAIR.get(),
-                    ModBlocks.ACACIA_CHAIR.get(),
-                    ModBlocks.DARK_OAK_CHAIR.get(),
-                    ModBlocks.MANGROVE_CHAIR.get(),
-                    ModBlocks.CHERRY_CHAIR.get(),
-                    ModBlocks.BAMBOO_CHAIR.get(),
-                    ModBlocks.CRIMSON_CHAIR.get(),
-                    ModBlocks.WARPED_CHAIR.get()));
-
-    public static final Supplier<BlockEntityType<LampBlockEntity>> LAMP_ENTITY = BLOCK_ENTITIES.register("lamp.json",
-            () -> createBlockEntityType(LampBlockEntity::new,
-                    ModBlocks.OAK_LAMP.get(),
-                    ModBlocks.SPRUCE_LAMP.get(),
-                    ModBlocks.BIRCH_LAMP.get(),
-                    ModBlocks.JUNGLE_LAMP.get(),
-                    ModBlocks.ACACIA_LAMP.get(),
-                    ModBlocks.DARK_OAK_LAMP.get(),
-                    ModBlocks.MANGROVE_LAMP.get(),
-                    ModBlocks.CHERRY_LAMP.get(),
-                    ModBlocks.BAMBOO_LAMP.get(),
-                    ModBlocks.CRIMSON_LAMP.get(),
-                    ModBlocks.WARPED_LAMP.get()));
-
-    public static final Supplier<BlockEntityType<StoolBlockEntity>> STOOL_ENTITY = BLOCK_ENTITIES.register("stool",
-            () -> createBlockEntityType(StoolBlockEntity::new,
-                    ModBlocks.OAK_STOOL.get(),
-                    ModBlocks.SPRUCE_STOOL.get(),
-                    ModBlocks.BIRCH_STOOL.get(),
-                    ModBlocks.JUNGLE_STOOL.get(),
-                    ModBlocks.ACACIA_STOOL.get(),
-                    ModBlocks.DARK_OAK_STOOL.get(),
-                    ModBlocks.MANGROVE_STOOL.get(),
-                    ModBlocks.CHERRY_STOOL.get(),
-                    ModBlocks.BAMBOO_STOOL.get(),
-                    ModBlocks.CRIMSON_STOOL.get(),
-                    ModBlocks.WARPED_STOOL.get()));
-
-    public static final Supplier<BlockEntityType<SofaBlockEntity>> SOFA_ENTITY = BLOCK_ENTITIES.register("sofa",
-            () -> createBlockEntityType(SofaBlockEntity::new,
-                    ModBlocks.OAK_SOFA.get(),
-                    ModBlocks.SPRUCE_SOFA.get(),
-                    ModBlocks.BIRCH_SOFA.get(),
-                    ModBlocks.JUNGLE_SOFA.get(),
-                    ModBlocks.ACACIA_SOFA.get(),
-                    ModBlocks.DARK_OAK_SOFA.get(),
-                    ModBlocks.MANGROVE_SOFA.get(),
-                    ModBlocks.CHERRY_SOFA.get(),
-                    ModBlocks.BAMBOO_SOFA.get(),
-                    ModBlocks.CRIMSON_SOFA.get(),
-                    ModBlocks.WARPED_SOFA.get()));
-
     public static final Supplier<BlockEntityType<MailboxBlockEntity>> MAILBOX_ENTITY = BLOCK_ENTITIES.register("mailbox",
             () -> createBlockEntityType(MailboxBlockEntity::new,
                     ModBlocks.OAK_MAILBOX.get(),
@@ -242,20 +186,6 @@ public class ModBlockEntitys {
                     ModBlocks.BAMBOO_PLATFORM.get(),
                     ModBlocks.CRIMSON_PLATFORM.get(),
                     ModBlocks.WARPED_PLATFORM.get()));
-
-    public static final Supplier<BlockEntityType<BedBlockEntity>> BED_ENTITY = BLOCK_ENTITIES.register("bed",
-            () -> createBlockEntityType(BedBlockEntity::new,
-                    ModBlocks.OAK_BED.get(),
-                    ModBlocks.SPRUCE_BED.get(),
-                    ModBlocks.BIRCH_BED.get(),
-                    ModBlocks.JUNGLE_BED.get(),
-                    ModBlocks.ACACIA_BED.get(),
-                    ModBlocks.DARK_OAK_BED.get(),
-                    ModBlocks.MANGROVE_BED.get(),
-                    ModBlocks.CHERRY_BED.get(),
-                    ModBlocks.BAMBOO_BED.get(),
-                    ModBlocks.CRIMSON_BED.get(),
-                    ModBlocks.WARPED_BED.get()));
 
     public static final Supplier<BlockEntityType<FridgeBlockEntity>> FRIDGE_ENTITY = BLOCK_ENTITIES.register("fridge",
             () -> createBlockEntityType(FridgeBlockEntity::new,

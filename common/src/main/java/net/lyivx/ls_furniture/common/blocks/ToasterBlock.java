@@ -1,7 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
 import com.mojang.serialization.MapCodec;
-import net.lyivx.ls_furniture.common.blocks.entity.SofaBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.ToasterBlockEntity;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
@@ -125,6 +124,8 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         if (!level.isClientSide() && stack.getItem() == ModItems.SLICED_BREAD.get()) {
 
@@ -141,6 +142,8 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
             }
 
             return ItemInteractionResult.SUCCESS;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return ItemInteractionResult.SUCCESS;    }
 

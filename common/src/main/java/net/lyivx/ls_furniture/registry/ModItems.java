@@ -1,28 +1,14 @@
 package net.lyivx.ls_furniture.registry;
 
-import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
-import dev.architectury.injectables.annotations.ExpectPlatform;
-import dev.architectury.registry.CreativeTabRegistry;
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.common.items.*;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 
-import java.util.Collection;
 import java.util.function.Supplier;
 
 @SuppressWarnings("unused")
@@ -30,9 +16,6 @@ public class ModItems {
 
     public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create
             (BuiltInRegistries.ITEM, LYIVXsFurnitureMod.MOD_ID);
-
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create
-            (LYIVXsFurnitureMod.MOD_ID, Registries.CREATIVE_MODE_TAB);
 
     public static final ResourcefulRegistry<Item> MISC = ResourcefulRegistries.create
             (ITEMS);
@@ -42,17 +25,12 @@ public class ModItems {
             (ITEMS);
     public static final ResourcefulRegistry<Item> INGREDIENTS = ResourcefulRegistries.create
             (ITEMS);
+    public static final ResourcefulRegistry<Item> INGREDIENTS_BURNABLE_100 = ResourcefulRegistries.create
+            (ITEMS);
+    public static final ResourcefulRegistry<Item> INGREDIENTS_BURNABLE_200 = ResourcefulRegistries.create
+            (ITEMS);
     public static final ResourcefulRegistry<Item> FOODS = ResourcefulRegistries.create
             (ITEMS);
-
-    ////////////////////////////////////// CREATIVE TAB ////////////////////////////////////
-
-    // TODO: Replace ResourcefulCreativeTab with appropriate creative tab implementation
-
-    public static final RegistrySupplier<CreativeModeTab> CREATIVE_TAB = CREATIVE_TABS.register("ls_furniture",
-            () -> CreativeTabRegistry.create(Component.translatable("itemGroup.ls_furniture.tab"),
-                    () -> new ItemStack(ModItems.WORKSTATION.get())));
-
 
     /////////////////////////////////// INTERACTIVE ////////////////////////////////////
 
@@ -139,37 +117,37 @@ public class ModItems {
     public static final Supplier<Item> TOAST = FOODS.register("toast",
             () -> new Item(normal(ModFoodProperties.TOAST)));
 
-    public static final Supplier<Item> OAK_BARK = INGREDIENTS.register("oak_bark",
+    public static final Supplier<Item> OAK_BARK = INGREDIENTS_BURNABLE_100.register("oak_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> SPRUCE_BARK = INGREDIENTS.register("spruce_bark",
+    public static final Supplier<Item> SPRUCE_BARK = INGREDIENTS_BURNABLE_100.register("spruce_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BIRCH_BARK = INGREDIENTS.register("birch_bark",
+    public static final Supplier<Item> BIRCH_BARK = INGREDIENTS_BURNABLE_100.register("birch_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> JUNGLE_BARK = INGREDIENTS.register("jungle_bark",
+    public static final Supplier<Item> JUNGLE_BARK = INGREDIENTS_BURNABLE_100.register("jungle_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> ACACIA_BARK = INGREDIENTS.register("acacia_bark",
+    public static final Supplier<Item> ACACIA_BARK = INGREDIENTS_BURNABLE_100.register("acacia_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> DARK_OAK_BARK = INGREDIENTS.register("dark_oak_bark",
+    public static final Supplier<Item> DARK_OAK_BARK = INGREDIENTS_BURNABLE_100.register("dark_oak_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> MANGROVE_BARK = INGREDIENTS.register("mangrove_bark",
+    public static final Supplier<Item> MANGROVE_BARK = INGREDIENTS_BURNABLE_100.register("mangrove_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CHERRY_BARK = INGREDIENTS.register("cherry_bark",
+    public static final Supplier<Item> CHERRY_BARK = INGREDIENTS_BURNABLE_100.register("cherry_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BAMBOO_BARK = INGREDIENTS.register("bamboo_bark",
+    public static final Supplier<Item> BAMBOO_BARK = INGREDIENTS_BURNABLE_100.register("bamboo_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CRIMSON_BARK = INGREDIENTS.register("crimson_bark",
+    public static final Supplier<Item> CRIMSON_BARK = INGREDIENTS_BURNABLE_100.register("crimson_bark",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> WARPED_BARK = INGREDIENTS.register("warped_bark",
+    public static final Supplier<Item> WARPED_BARK = INGREDIENTS_BURNABLE_100.register("warped_bark",
             () -> new Item(new Item.Properties()));
 
     ///////////////////////////////// STICKS / RODS ////////////////////////////////////
@@ -177,37 +155,37 @@ public class ModItems {
     public static final Supplier<Item> IRON_ROD = INGREDIENTS.register("iron_rod",
             () -> new Item(new Item.Properties()));
     
-    public static final Supplier<Item> OAK_STICK = INGREDIENTS.register("oak_stick",
+    public static final Supplier<Item> OAK_STICK = INGREDIENTS_BURNABLE_100.register("oak_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> SPRUCE_STICK = INGREDIENTS.register("spruce_stick",
+    public static final Supplier<Item> SPRUCE_STICK = INGREDIENTS_BURNABLE_100.register("spruce_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BIRCH_STICK = INGREDIENTS.register("birch_stick",
+    public static final Supplier<Item> BIRCH_STICK = INGREDIENTS_BURNABLE_100.register("birch_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> JUNGLE_STICK = INGREDIENTS.register("jungle_stick",
+    public static final Supplier<Item> JUNGLE_STICK = INGREDIENTS_BURNABLE_100.register("jungle_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> ACACIA_STICK = INGREDIENTS.register("acacia_stick",
+    public static final Supplier<Item> ACACIA_STICK = INGREDIENTS_BURNABLE_100.register("acacia_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> DARK_OAK_STICK = INGREDIENTS.register("dark_oak_stick",
+    public static final Supplier<Item> DARK_OAK_STICK = INGREDIENTS_BURNABLE_100.register("dark_oak_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> MANGROVE_STICK = INGREDIENTS.register("mangrove_stick",
+    public static final Supplier<Item> MANGROVE_STICK = INGREDIENTS_BURNABLE_100.register("mangrove_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CHERRY_STICK = INGREDIENTS.register("cherry_stick",
+    public static final Supplier<Item> CHERRY_STICK = INGREDIENTS_BURNABLE_100.register("cherry_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BAMBOO_STICK = INGREDIENTS.register("bamboo_stick",
+    public static final Supplier<Item> BAMBOO_STICK = INGREDIENTS_BURNABLE_100.register("bamboo_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CRIMSON_STICK = INGREDIENTS.register("crimson_stick",
+    public static final Supplier<Item> CRIMSON_STICK = INGREDIENTS_BURNABLE_100.register("crimson_stick",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> WARPED_STICK = INGREDIENTS.register("warped_stick",
+    public static final Supplier<Item> WARPED_STICK = INGREDIENTS_BURNABLE_100.register("warped_stick",
             () -> new Item(new Item.Properties()));
 
 
@@ -219,37 +197,37 @@ public class ModItems {
     public static final Supplier<Item> CONSTRUCTION_FURNITURE_PACK = INGREDIENTS.register("construction_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> OAK_FURNITURE_PACK = INGREDIENTS.register("oak_furniture_pack",
+    public static final Supplier<Item> OAK_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("oak_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> SPRUCE_FURNITURE_PACK = INGREDIENTS.register("spruce_furniture_pack",
+    public static final Supplier<Item> SPRUCE_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("spruce_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BIRCH_FURNITURE_PACK = INGREDIENTS.register("birch_furniture_pack",
+    public static final Supplier<Item> BIRCH_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("birch_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> JUNGLE_FURNITURE_PACK = INGREDIENTS.register("jungle_furniture_pack",
+    public static final Supplier<Item> JUNGLE_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("jungle_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> ACACIA_FURNITURE_PACK = INGREDIENTS.register("acacia_furniture_pack",
+    public static final Supplier<Item> ACACIA_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("acacia_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> DARK_OAK_FURNITURE_PACK = INGREDIENTS.register("dark_oak_furniture_pack",
+    public static final Supplier<Item> DARK_OAK_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("dark_oak_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> MANGROVE_FURNITURE_PACK = INGREDIENTS.register("mangrove_furniture_pack",
+    public static final Supplier<Item> MANGROVE_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("mangrove_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CHERRY_FURNITURE_PACK = INGREDIENTS.register("cherry_furniture_pack",
+    public static final Supplier<Item> CHERRY_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("cherry_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> BAMBOO_FURNITURE_PACK = INGREDIENTS.register("bamboo_furniture_pack",
+    public static final Supplier<Item> BAMBOO_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("bamboo_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> CRIMSON_FURNITURE_PACK = INGREDIENTS.register("crimson_furniture_pack",
+    public static final Supplier<Item> CRIMSON_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("crimson_furniture_pack",
             () -> new Item(new Item.Properties()));
 
-    public static final Supplier<Item> WARPED_FURNITURE_PACK = INGREDIENTS.register("warped_furniture_pack",
+    public static final Supplier<Item> WARPED_FURNITURE_PACK = INGREDIENTS_BURNABLE_200.register("warped_furniture_pack",
             () -> new Item(new Item.Properties()));
 
 

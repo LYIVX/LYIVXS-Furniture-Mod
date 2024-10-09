@@ -28,9 +28,10 @@ public class CrateBlockEntity extends RandomizableContainerBlockEntity {
     private NonNullList<ItemStack> items;
     private ContainerOpenersCounter openersCounter;
 
+
     public CrateBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.CRATE_ENTITY.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(9, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 CrateBlockEntity.this.playSound(state, ModSoundEvents.DRAWER_OPEN.get());

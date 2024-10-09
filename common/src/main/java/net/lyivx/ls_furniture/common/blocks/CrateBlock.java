@@ -4,6 +4,8 @@ import com.mojang.serialization.MapCodec;
 import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.TooltipHelper;
+import net.lyivx.ls_furniture.registry.ModBlockEntitys;
+import net.lyivx.ls_furniture.registry.ModComponents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -106,32 +108,30 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
 
     }
 
     // copied from ShulkerBoxBlock
-    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof CrateBlockEntity) {
-            CrateBlockEntity shulkerboxblockentity = (CrateBlockEntity) blockentity;
-            if (!level.isClientSide && player.isCreative() && !shulkerboxblockentity.isEmpty()) {
-                ItemStack itemstack = new ItemStack(this);
-                blockentity.saveToItem(itemstack);
-                if (shulkerboxblockentity.hasCustomName()) {
-                    itemstack.setHoverName(shulkerboxblockentity.getCustomName());
-                }
-
-                ItemEntity itementity = new ItemEntity(level, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, itemstack);
-                itementity.setDefaultPickUpDelay();
-                level.addFreshEntity(itementity);
+    @Override
+    public BlockState playerWillDestroy(Level level, BlockPos blockPos, BlockState blockState, Player player) {
+        BlockEntity blockEntity = level.getBlockEntity(blockPos);
+        if (blockEntity instanceof CrateBlockEntity crateBlockEntity) {
+            if (!level.isClientSide && player.isCreative() && !crateBlockEntity.isEmpty()) {
+                ItemStack itemStack = new ItemStack(this);
+                itemStack.applyComponents(blockEntity.collectComponents());
+                ItemEntity itemEntity = new ItemEntity(level, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.5, (double)blockPos.getZ() + 0.5, itemStack);
+                itemEntity.setDefaultPickUpDelay();
+                level.addFreshEntity(itemEntity);
             } else {
-                shulkerboxblockentity.unpackLootTable(player);
+                crateBlockEntity.unpackLootTable(player);
             }
         }
 
-        return super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, blockPos, blockState, player);
     }
 
     // copied from ShulkerBoxBlock
@@ -151,7 +151,7 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
         return super.getDrops(state, params);
     }
 
-    @Override
+    /*@Override
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
         if(stack.hasCustomHoverName()) {
             BlockEntity tileEntity = world.getBlockEntity(pos);
@@ -159,15 +159,15 @@ public class CrateBlock extends BaseEntityBlock implements WrenchItem.Wrenchable
                 ((CrateBlockEntity) tileEntity).setCustomName(stack.getHoverName());
             }
         }
-    }
+    }*/
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        ItemStack stack = super.getCloneItemStack(level, pos, state);
-        CrateBlockEntity crate = (CrateBlockEntity) level.getBlockEntity(pos);
-        CompoundTag tag = crate.saveToTag(new CompoundTag());
-        if(!tag.isEmpty()) stack.addTagElement("BlockEntityTag", tag);
-        return stack;
+    public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
+        ItemStack itemStack = super.getCloneItemStack(levelReader, blockPos, blockState);
+        levelReader.getBlockEntity(blockPos, ModBlockEntitys.CRATE_ENTITY.get()).ifPresent((crate) -> {
+            crate.saveToItem(itemStack, levelReader.registryAccess());
+        });
+        return itemStack;
     }
 
     public List<Property<?>> getWrenchableProperties() {

@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -28,6 +29,7 @@ import static net.lyivx.ls_furniture.common.blocks.RailingBlock.*;
 public class RailingPreviewRenderer implements BlockEntityRenderer<RailingBlockEntity> {
 
     private final BlockRenderDispatcher blockRenderer;
+    private static final float DEFAULT_REACH_DISTANCE = 5.0F;
 
     public RailingPreviewRenderer(BlockEntityRendererProvider.Context context) {
         this.blockRenderer = context.getBlockRenderDispatcher();
@@ -46,7 +48,11 @@ public class RailingPreviewRenderer implements BlockEntityRenderer<RailingBlockE
         Vec3 viewVector = player.getViewVector(1.0F);
 
         // Raycast from the player's eye position to check if they're looking at the block entity
-        float reachDistance = mc.gameMode.getPickRange();
+        float reachDistance = (float) player.getAttributeValue(Attributes.BLOCK_INTERACTION_RANGE);
+        if (reachDistance <= 0) {
+            reachDistance = DEFAULT_REACH_DISTANCE;
+        }
+
         Vec3 endVec = eyePosition.add(viewVector.scale(reachDistance));
         BlockHitResult hitResult = mc.level.clip(new ClipContext(eyePosition, endVec, ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, player));
 

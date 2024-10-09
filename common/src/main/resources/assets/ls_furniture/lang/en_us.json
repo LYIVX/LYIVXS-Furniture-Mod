@@ -1,4 +1,7 @@
 {
+  "key.ls_furniture.categories.ls_furniture": "LYIVX's Furniture Mod",
+  "key.ls_furniture.openconfig": "Open Config",
+
   "gui.ls_furniture.jei.workstation": "Workstation",
   "gui.ls_furniture.jei.chopping_board": "Chopping Board",
   "gui.ls_furniture.jei.cutting_board": "Cutting Board",
@@ -10,15 +13,20 @@
 
   "config.ls_furniture.title": "LYIVX's Furniture Config",
   "config.ls_furniture.category.general": "General",
+  "config.ls_furniture.category.workstation": "Workstation",
+  "config.ls_furniture.category.misc": "Misc",
 
   "config.ls_furniture.sort_recipes": "Sort Recipes",
-  "config.ls_furniture.sort_recipes.tooltip": "Sort recipes following creative tab order. Could cause issues if creative order differs between server and client.",
+  "config.ls_furniture.sort_recipes.tooltip": "Sort Recipes Following Creative Tab Order.",
 
   "config.ls_furniture.search_bar_mode": "Search Bar Mode",
-  "config.ls_furniture.search_bar_mode.tooltip": "Determines how the search bar behaves in the GUI.",
+  "config.ls_furniture.search_bar_mode.tooltip": "Determines When And How The Search Bar Should Show And Behave",
 
   "config.ls_furniture.search_bar_threshold": "Search Bar Threshold",
-  "config.ls_furniture.search_bar_threshold.tooltip": "At how many recipes the search bar should appear when in AUTOMATIC or DYNAMIC mode.",
+  "config.ls_furniture.search_bar_threshold.tooltip": "At How Many Recipes The Search Bar Should Appear When In §eDYNAMIC§r Mode.",
+
+  "config.ls_furniture.preview": "Preview",
+  "config.ls_furniture.preview.tooltip": "To Show And Hide The Preview Tab.",
 
   "config.ls_furniture.search_mode.off": "Off",
   "config.ls_furniture.search_mode.on": "On",
@@ -27,6 +35,18 @@
 
 
   "container.ls_furniture.workstation": "Workstation",
+  "container.ls_furniture.workstation.config": "Open Workstation Config",
+  "container.ls_furniture.workstation.preview.open": "Open Preview Tab",
+  "container.ls_furniture.workstation.preview.close": "Close Preview Tab",
+  "container.ls_furniture.workstation.preview.title": "Preview",
+  "container.ls_furniture.workstation.no_preview.title": "No Preview Available",
+  "container.ls_furniture.workstation.single_block": "Single Block",
+  "container.ls_furniture.workstation.l_shape_block": "L-Shape Blocks",
+  "container.ls_furniture.workstation.vertical_block": "Vertical Blocks",
+  "container.ls_furniture.workstation.horizontal_block": "Horizontal Blocks",
+  "container.ls_furniture.workstation.two_by_two_block": "Two By Two Blocks",
+
+
   "container.ls_furniture.drawer": "Drawer",
   "container.ls_furniture.mailbox": "Mailbox",
   "container.ls_furniture.counter_cupboard": "Counter Cupboard",

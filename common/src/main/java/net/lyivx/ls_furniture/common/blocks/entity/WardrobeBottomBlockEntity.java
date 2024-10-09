@@ -32,7 +32,7 @@ public class WardrobeBottomBlockEntity extends RandomizableContainerBlockEntity 
 
     public WardrobeBottomBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntitys.WARDROBE_ENTITY_BOTTOM.get(), blockPos, blockState);
-        this.items = NonNullList.withSize(18, ItemStack.EMPTY);
+        this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
                 WardrobeBottomBlockEntity.this.playSound(state, ModSoundEvents.DRAWER_OPEN.get());

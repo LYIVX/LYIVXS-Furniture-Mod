@@ -11,10 +11,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
@@ -102,15 +99,19 @@ public class DrawerBlock extends BaseEntityBlock implements WrenchItem.Wrenchabl
         return CODEC;
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) return InteractionResult.SUCCESS;
-
-        ItemStack stack = player.getItemInHand(hand);
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
         if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
+            return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
 
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof DrawerBlockEntity drawerBlockEntity) {
             player.openMenu(drawerBlockEntity);
@@ -144,12 +145,12 @@ public class DrawerBlock extends BaseEntityBlock implements WrenchItem.Wrenchabl
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+    /*public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         if (!stack.hasCustomHoverName()) return;
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof DrawerBlockEntity drawerBlockEntity) drawerBlockEntity.setCustomName(stack.getHoverName());
-    }
+    }*/
 
     public boolean hasAnalogOutputSignal(BlockState state) {
         return true;

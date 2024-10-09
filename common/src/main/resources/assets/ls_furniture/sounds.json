@@ -128,7 +128,7 @@
     "category": "players",
     "subtitle": "subtitle.ls_furniture.mail_received",
     "sounds": [
-      "ls_furniture:event/mail_received"
+      "minecraft:block.amethyst_block.chime"
     ]
   }
 }

@@ -18,11 +18,10 @@ public class LYIVXsFurnitureModFabric implements ModInitializer {
     public void onInitialize() {
         LYIVXsFurnitureMod.init();
 
-        ItemGroupEvents.MODIFY_ENTRIES_ALL.register((tab, stacks) -> {
-            ResourceLocation loc = BuiltInRegistries.CREATIVE_MODE_TAB.getKey(tab);
-            if (loc == null) return;
-            ResourceKey<CreativeModeTab> key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, loc);
-            LYIVXsFurnitureMod.initCreativeTabContents(key, stacks::accept);
+        ItemGroupEvents.MODIFY_ENTRIES_ALL.register((group, items) -> {
+            ResourceLocation key = BuiltInRegistries.CREATIVE_MODE_TAB.getKey(group);
+            if (key == null) return;
+            LYIVXsFurnitureMod.addCreativeTabContents(ResourceKey.create(Registries.CREATIVE_MODE_TAB, key), items::accept);
         });
     }
 }

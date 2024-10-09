@@ -113,6 +113,8 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
 
         if (item instanceof WrenchItem) {
             return ItemInteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (item == Items.BUCKET && hasWater) {
@@ -126,6 +128,8 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
             }
 
             level.setBlock(pos, state.setValue(HAS_WATER, false), 3);
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         if (item == Items.WATER_BUCKET && !hasWater) {
@@ -140,6 +144,8 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
             }
 
             level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
+        } else {
+            useWithoutItem(state, level, pos, player, hitResult);
         }
 
         return ItemInteractionResult.SUCCESS;
