@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:mangrove_planks"
+    }
+  },
+  "result": {
+    "item": "ls_furniture:mangrove_stick",
+    "count": 4
+  }
+}

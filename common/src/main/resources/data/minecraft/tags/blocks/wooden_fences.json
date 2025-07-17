@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#ls_furniture:upgraded_fences",
+    "#ls_furniture:log_fences",
+    "#ls_furniture:stripped_log_fences",
+    "#ls_furniture:chain_link_fences"
+
+  ]
+}

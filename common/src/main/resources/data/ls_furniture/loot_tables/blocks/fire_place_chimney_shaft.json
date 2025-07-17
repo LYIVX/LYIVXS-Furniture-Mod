@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ls_furniture:fire_place_chimney_shaft",
+          "quality": 1
+        }
+      ]
+    }
+  ]
+}

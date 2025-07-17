@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:jungle_leaves"
+  },
+  "ingredient_count": 1,
+  "result": "ls_furniture:jungle_bush",
+  "count": 2
+}

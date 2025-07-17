@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "ls_furniture:oak_stick",
+    "ls_furniture:spruce_stick",
+    "ls_furniture:birch_stick",
+    "ls_furniture:jungle_stick",
+    "ls_furniture:acacia_stick",
+    "ls_furniture:dark_oak_stick",
+    "ls_furniture:mangrove_stick",
+    "ls_furniture:cherry_stick",
+    "ls_furniture:bamboo_stick",
+    "ls_furniture:crimson_stick",
+    "ls_furniture:warped_stick"
+  ]
+}
