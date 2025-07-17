@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+  "copyNbt": false,
+  "input": [
+    {
+      "item": "ls_furniture:oak_counter"
+    }
+  ],
+  "input2": {
+    "item": "ls_furniture:oven_module"
+  },
+  "output": {
+    "id": "ls_furniture:oak_counter_oven",
+    "count": 1
+  }
+}

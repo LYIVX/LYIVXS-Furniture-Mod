@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "ls_furniture:oak_barrel"
+      },
+      {
+        "item": "ls_furniture:spruce_barrel"
+      },
+      {
+        "item": "ls_furniture:birch_barrel"
+      },
+      {
+        "item": "ls_furniture:jungle_barrel"
+      },
+      {
+        "item": "ls_furniture:acacia_barrel"
+      },
+      {
+        "item": "ls_furniture:dark_oak_barrel"
+      },
+      {
+        "item": "ls_furniture:mangrove_barrel"
+      },
+      {
+        "item": "ls_furniture:cherry_barrel"
+      },
+      {
+        "item": "ls_furniture:bamboo_barrel"
+      },
+      {
+        "item": "ls_furniture:crimson_barrel"
+      },
+      {
+        "item": "ls_furniture:warped_barrel"
+      }
+    ]
+  ],
+  "result": {
+    "item": "minecraft:barrel"
+  },
+  "show_notification": true
+}

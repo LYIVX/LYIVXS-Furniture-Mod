@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ls_furniture:mangrove_blinds",
+          "quality": 1
+        }
+      ]
+    }
+  ]
+}

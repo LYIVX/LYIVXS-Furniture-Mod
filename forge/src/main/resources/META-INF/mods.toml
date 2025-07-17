@@ -1,0 +1,49 @@
+modLoader = "javafml"
+loaderVersion = "[46,)"
+license = "All Rights Reserved"
+issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
+
+
+[[mods]]
+    modId = "ls_furniture"
+    version = "${version}"
+    displayName = "LYIVX's Furniture Mod"
+    authors = "LYIVX"
+    description = "A Vanilla Styled Furniture Mod"
+    displayURL = "https://modrinth.com/mod/lyivxs-furniture"
+
+
+[[dependencies.ls_furniture]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[46,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.ls_furniture]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.20,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.ls_furniture]]
+    modId = "resourcefullib"
+    mandatory = true
+    versionRange = "[1,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.ls_furniture]]
+    modId = "moonlight"
+    mandatory = true
+    versionRange = "[*,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.ls_furniture]]
+    modId = "architectury"
+    mandatory = true
+    versionRange = "[*,)"
+    ordering = "NONE"
+    side = "BOTH"
