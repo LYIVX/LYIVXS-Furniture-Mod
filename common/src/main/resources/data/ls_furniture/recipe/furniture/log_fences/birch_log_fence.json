@@ -1,0 +1,12 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "ls_furniture:birch_furniture_pack"
+  },
+  "ingredient_count": 1,
+  "result": {
+    "id": "ls_furniture:birch_log_fence",
+    "count": 3
+  }
+}

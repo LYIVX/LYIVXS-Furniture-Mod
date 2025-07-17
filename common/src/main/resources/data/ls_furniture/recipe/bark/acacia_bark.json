@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+
+  "input": [
+    {
+      "item": "minecraft:acacia_log"
+    },
+    {
+      "item": "minecraft:acacia_wood"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:acacia_bark",
+    "count": 4
+  }
+}

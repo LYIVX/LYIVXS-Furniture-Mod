@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_inventory",
+
+  "textures": {
+    "all": "block/stripped_mangrove_log",
+    "particle": "block/stripped_mangrove_log",
+    "Stripped": "block/stripped_mangrove_log",
+    "Log": "block/mangrove_log"
+  },
+  "render_type": "cutout"
+}

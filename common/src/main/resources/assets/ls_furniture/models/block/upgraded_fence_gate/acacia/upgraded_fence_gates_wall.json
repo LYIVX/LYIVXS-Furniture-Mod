@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fence_gates/upgraded_fence_gate",
+  "textures": {
+    "all": "block/stripped_acacia_log",
+    "particle": "block/stripped_acacia_log",
+    "Stripped": "block/stripped_acacia_log",
+    "Log": "block/acacia_log"
+  },
+  "render_type": "cutout"
+}

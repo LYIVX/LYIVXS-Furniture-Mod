@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+
+  "input1": [
+    {
+      "item": "minecraft:oak_log"
+    }
+  ],
+  "input2": {
+    "item": "ls_furniture:chisel"
+  },
+  "result": {
+    "id": "ls_furniture:oak_hollow_log",
+    "count": 1
+  }
+}

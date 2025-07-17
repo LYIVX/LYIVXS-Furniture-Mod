@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+
+  "input": [
+    {
+      "item": "minecraft:spruce_log"
+    },
+    {
+      "item": "minecraft:spruce_wood"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:spruce_bark",
+    "count": 4
+  }
+}

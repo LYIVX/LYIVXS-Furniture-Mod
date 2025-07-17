@@ -1,0 +1,20 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+
+  "input1": [
+    {
+      "item": "minecraft:spruce_log"
+    },
+    {
+      "item": "minecraft:spruce_wood"
+    }
+  ],
+  "input2": {
+    "tag": "minecraft:axes"
+  },
+  "result": {
+    "id": "ls_furniture:spruce_bark",
+    "count": 1
+  }
+}

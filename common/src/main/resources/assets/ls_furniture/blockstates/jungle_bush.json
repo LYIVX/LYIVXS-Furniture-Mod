@@ -1,0 +1,90 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_post_1"
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_post_2"
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_post_3"
+        }
+      ]
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": [
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_1"
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_2"
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_3"
+        }
+      ]
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": [
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_1",
+          "y": 180
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_2",
+          "y": 180
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_3",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": [
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_1",
+          "y": 270
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_2",
+          "y": 270
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_3",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": [
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_1",
+          "y": 90
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_2",
+          "y": 90
+        },
+        {
+          "model": "ls_furniture:block/bushes/jungle/bush_side_3",
+          "y": 90
+        }
+      ]
+    }
+  ]
+}

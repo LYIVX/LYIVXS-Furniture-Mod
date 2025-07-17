@@ -1,0 +1,6 @@
+{
+	"parent": "ls_furniture:block/lamp/shade/default",
+	"textures": {
+		"0": "block/magenta_wool"
+	}
+}

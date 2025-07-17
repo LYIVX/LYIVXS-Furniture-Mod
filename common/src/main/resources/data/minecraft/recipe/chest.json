@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "ls_furniture:oak_chest"
+      },
+      {
+        "item": "ls_furniture:spruce_chest"
+      },
+      {
+        "item": "ls_furniture:birch_chest"
+      },
+      {
+        "item": "ls_furniture:jungle_chest"
+      },
+      {
+        "item": "ls_furniture:acacia_chest"
+      },
+      {
+        "item": "ls_furniture:dark_oak_chest"
+      },
+      {
+        "item": "ls_furniture:mangrove_chest"
+      },
+      {
+        "item": "ls_furniture:cherry_chest"
+      },
+      {
+        "item": "ls_furniture:bamboo_chest"
+      },
+      {
+        "item": "ls_furniture:crimson_chest"
+      },
+      {
+        "item": "ls_furniture:warped_chest"
+      }
+    ]
+  ],
+  "result": {
+    "id": "minecraft:chest"
+  },
+  "show_notification": true
+}

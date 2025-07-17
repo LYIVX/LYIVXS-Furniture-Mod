@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/drawers/drawer",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_cherry_log",
+    "Secondary": "block/cherry_log",
+    "Handle": "ls_furniture:block/handles/handle_cherry"
+  }
+}

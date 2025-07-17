@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/lamps/lamp_wall",
+  "textures": {
+    "Log": "block/dark_oak_log",
+    "particle": "block/stripped_dark_oak_log_top",
+    "Stripped": "block/stripped_dark_oak_log",
+    "Torch": "block/dark_oak_log"
+  }
+}

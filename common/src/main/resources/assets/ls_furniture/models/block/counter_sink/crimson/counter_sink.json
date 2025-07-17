@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/counter_sinks/counter_sink",
+  "textures": {
+    "particle": "#Main",
+    "Anvil": "block/anvil",
+    "Main": "block/stripped_crimson_stem",
+    "Secondary": "block/crimson_stem",
+    "Blue": "block/blue_concrete",
+    "Red": "block/red_concrete"
+  }
+}

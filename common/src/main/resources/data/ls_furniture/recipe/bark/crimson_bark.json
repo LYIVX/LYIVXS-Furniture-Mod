@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+
+  "input": [
+    {
+      "item": "minecraft:crimson_stem"
+    },
+    {
+      "item": "minecraft:crimson_hyphae"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:crimson_bark",
+    "count": 4
+  }
+}

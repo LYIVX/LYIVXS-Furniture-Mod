@@ -1,0 +1,8 @@
+{
+	"parent": "ls_furniture:block/template/tombstone/tombstone",
+	"textures": {
+		"Main": "block/stripped_crimson_stem",
+		"Dirt": "ls_furniture/invisible",
+		"particle": "#Main"
+	}
+}

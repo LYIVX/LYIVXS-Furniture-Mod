@@ -1,0 +1,43 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north_railing": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/railing/birch/railing",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "east_railing": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/railing/birch/railing",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "south_railing": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/railing/birch/railing",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "west_railing": "true"
+      },
+      "apply": {
+        "model": "ls_furniture:block/railing/birch/railing",
+        "y": 270,
+        "uvlock": false
+      }
+    }
+  ]
+}

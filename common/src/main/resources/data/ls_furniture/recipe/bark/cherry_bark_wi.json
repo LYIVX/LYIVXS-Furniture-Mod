@@ -1,0 +1,20 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+
+  "input1": [
+    {
+      "item": "minecraft:cherry_log"
+    },
+    {
+      "item": "minecraft:cherry_wood"
+    }
+  ],
+  "input2": {
+    "tag": "minecraft:axes"
+  },
+  "result": {
+    "id": "ls_furniture:cherry_bark",
+    "count": 1
+  }
+}

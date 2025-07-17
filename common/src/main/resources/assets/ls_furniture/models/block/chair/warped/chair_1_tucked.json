@@ -1,0 +1,10 @@
+{
+	"parent": "ls_furniture:block/template/chairs/chair_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Main": "block/stripped_warped_stem",
+		"Secondary": "block/stripped_warped_stem",
+		"Leg": "block/warped_stem",
+		"Pattern": "block/stripped_warped_stem"
+	}
+}

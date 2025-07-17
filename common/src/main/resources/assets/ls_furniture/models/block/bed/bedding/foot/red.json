@@ -1,0 +1,7 @@
+{
+	"credit": "Made by LYIVX",
+	"parent": "ls_furniture:block/bed/bedding/foot/model",
+	"textures": {
+		"Secondary": "block/red_wool"
+	}
+}

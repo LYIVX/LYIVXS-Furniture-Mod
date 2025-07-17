@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/beds/bed_foot",
+  "textures": {
+    "Main": "block/stripped_bamboo_block",
+    "Secondary": "block/bamboo_block",
+    "White": "block/white_wool",
+    "particle": "#Main"
+  }
+}

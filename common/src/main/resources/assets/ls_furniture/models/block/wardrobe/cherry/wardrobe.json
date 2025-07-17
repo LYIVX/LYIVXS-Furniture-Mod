@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/wardrobes/wardrobe",
+  "textures": {
+    "particle": "#Main",
+    "Handle": "ls_furniture:block/handles/handle_cherry",
+    "Secondary": "block/cherry_log",
+    "Main": "block/stripped_cherry_log",
+    "Handle Big": "ls_furniture:block/handles/handle_cherry"
+  }
+}

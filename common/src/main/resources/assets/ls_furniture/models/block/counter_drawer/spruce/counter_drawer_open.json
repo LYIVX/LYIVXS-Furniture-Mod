@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/counter_drawers/counter_drawer_open",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_spruce_log",
+    "Secondary": "block/spruce_log",
+    "Handle": "ls_furniture:block/handles/handle_spruce"
+  }
+}

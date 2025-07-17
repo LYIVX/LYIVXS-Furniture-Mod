@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/hollow_logs/hollow_log",
+  "textures": {
+    "particle": "block/dark_oak_log",
+    "Log": "block/dark_oak_log",
+    "Log Top": "block/dark_oak_log_top",
+    "Stripped Log": "block/stripped_dark_oak_log"
+  }
+}

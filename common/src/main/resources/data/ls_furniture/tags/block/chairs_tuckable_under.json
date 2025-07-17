@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#ls_furniture:tables",
+    {
+      "id": "#twigs:tables",
+      "required": false
+    },
+    {
+      "id": "#another_furniture:tables",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+	"parent": "ls_furniture:block/template/chairs/chair",
+	"textures": {
+		"particle": "#Main",
+		"Main": "block/stripped_bamboo_block",
+		"Secondary": "block/stripped_bamboo_block",
+		"Leg": "block/bamboo_block",
+		"Pattern": "block/bamboo_trapdoor"
+	}
+}

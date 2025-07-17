@@ -1,0 +1,10 @@
+{
+	"parent": "ls_furniture:block/template/chairs/chair_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Main": "block/stripped_oak_log",
+		"Secondary": "block/stripped_oak_log",
+		"Leg": "block/oak_log",
+		"Pattern": "block/oak_trapdoor"
+	}
+}

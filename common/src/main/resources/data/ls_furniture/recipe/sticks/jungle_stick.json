@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  "result": {
+    "id": "ls_furniture:jungle_stick",
+    "count": 4
+  }
+}

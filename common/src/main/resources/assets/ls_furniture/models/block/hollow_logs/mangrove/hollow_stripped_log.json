@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/hollow_logs/hollow_log",
+  "textures": {
+    "particle": "block/stripped_mangrove_log",
+    "Log": "block/stripped_mangrove_log",
+    "Log Top": "block/stripped_mangrove_log_top",
+    "Stripped Log": "block/stripped_mangrove_log"
+  }
+}

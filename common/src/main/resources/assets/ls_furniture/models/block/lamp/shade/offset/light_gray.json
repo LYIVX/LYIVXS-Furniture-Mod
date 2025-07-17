@@ -1,0 +1,6 @@
+{
+	"parent": "ls_furniture:block/lamp/shade/offset/default",
+	"textures": {
+		"0": "block/light_gray_wool"
+	}
+}

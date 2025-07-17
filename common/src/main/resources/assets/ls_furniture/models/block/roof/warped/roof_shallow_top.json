@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/roofs/roof_shallow_top",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_warped_stem",
+    "Secondary": "block/warped_stem"
+  }
+}

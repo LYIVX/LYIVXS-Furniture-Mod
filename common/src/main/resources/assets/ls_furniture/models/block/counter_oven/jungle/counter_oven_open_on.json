@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/counter_ovens/counter_oven_open",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/iron_block",
+    "Secondary": "block/jungle_log",
+    "Coal": "block/magma",
+    "Hob": "block/anvil",
+    "Glass": "block/glass"
+  }
+}

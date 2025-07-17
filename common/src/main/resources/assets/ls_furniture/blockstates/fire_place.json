@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,on=false": {
+            "model": "ls_furniture:block/fire_place/fire_place_off"
+        },
+        "facing=east,on=false": {
+            "model": "ls_furniture:block/fire_place/fire_place_off",
+            "y": 90
+        },
+        "facing=south,on=false": {
+            "model": "ls_furniture:block/fire_place/fire_place_off",
+            "y": 180
+        },
+        "facing=west,on=false": {
+            "model": "ls_furniture:block/fire_place/fire_place_off",
+            "y": 270
+        },
+        "facing=north,on=true": {
+            "model": "ls_furniture:block/fire_place/fire_place"
+        },
+        "facing=east,on=true": {
+            "model": "ls_furniture:block/fire_place/fire_place",
+            "y": 90
+        },
+        "facing=south,on=true": {
+            "model": "ls_furniture:block/fire_place/fire_place",
+            "y": 180
+        },
+        "facing=west,on=true": {
+            "model": "ls_furniture:block/fire_place/fire_place",
+            "y": 270
+        }
+    }
+}

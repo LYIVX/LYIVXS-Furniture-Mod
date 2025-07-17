@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_inventory",
+
+  "textures": {
+    "all": "block/stripped_bamboo_block",
+    "particle": "block/stripped_bamboo_block",
+    "Stripped": "block/stripped_bamboo_block",
+    "Log": "block/bamboo_block"
+  },
+  "render_type": "cutout"
+}

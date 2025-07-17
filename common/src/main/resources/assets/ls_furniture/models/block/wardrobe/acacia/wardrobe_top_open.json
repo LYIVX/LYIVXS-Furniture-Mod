@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/wardrobes/wardrobe_top_open",
+  "textures": {
+    "particle": "#Main",
+    "Handle": "ls_furniture:block/handles/handle_oak",
+    "Secondary": "block/acacia_log",
+    "Main": "block/stripped_acacia_log",
+    "Handle Big": "ls_furniture:block/handles/handle_big_oak"
+  }
+}

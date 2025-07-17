@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "ls_furniture:acacia_stair",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "model": "bottom"
+              }
+            }
+          ],
+          "name": "ls_furniture:acacia_stair"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ls_furniture:blocks/acacia_stair"
+}

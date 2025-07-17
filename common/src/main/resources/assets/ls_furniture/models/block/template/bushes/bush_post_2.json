@@ -1,0 +1,39 @@
+{
+	"credit": "Made by LYIVX",
+	"textures": {
+		"particle": "block/oak_leaves",
+		"texture": "block/oak_leaves"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 16, 11],
+			"faces": {
+				"north": {"uv": [5, 0, 11, 16], "texture": "#texture", "tintindex": 0},
+				"east": {"uv": [5, 0, 11, 16], "texture": "#texture", "tintindex": 0},
+				"south": {"uv": [5, 0, 11, 16], "texture": "#texture", "tintindex": 0},
+				"west": {"uv": [5, 0, 11, 16], "texture": "#texture", "tintindex": 0},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#texture", "cullface": "up", "tintindex": 0},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#texture", "cullface": "down", "tintindex": 0}
+			}
+		},
+		{
+			"from": [3.68198, 0, 8.18198],
+			"to": [12.68198, 17, 8.18198],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8.18198, 8.5, 8.18198]},
+			"faces": {
+				"north": {"uv": [0, 0, 9, 16], "texture": "#texture", "tintindex": 0},
+				"south": {"uv": [7, 0, 16, 16], "texture": "#texture", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8.18198, 0, 3.68198],
+			"to": [8.18198, 17, 12.68198],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8.18198, 8.5, 8.18198]},
+			"faces": {
+				"east": {"uv": [7, 0, 16, 16], "texture": "#texture", "tintindex": 0},
+				"west": {"uv": [0, 0, 9, 16], "texture": "#texture", "tintindex": 0}
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/cabinets/cabinet_inner",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_warped_stem",
+    "Secondary": "block/warped_stem"
+  }
+}

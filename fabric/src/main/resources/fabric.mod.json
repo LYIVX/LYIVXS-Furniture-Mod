@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "ls_furniture",
+  "version": "${version}",
+  "name": "Furnection",
+  "description": "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod",
+  "authors": [
+    "LYIVX"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/lyivxs-furniture",
+    "issues": "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues",
+    "sources": "https://github.com/LYIVX/LYIVXS-Furniture-Mod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.lyivx.ls_furniture.fabric.LYIVXsFurnitureModFabric"
+    ],
+    "client": [
+      "net.lyivx.ls_furniture.fabric.LYIVXsFurnitureModFabricClient"
+    ],
+    "jei_mod_plugin": [
+      "net.lyivx.ls_furniture.common.compat.ModJeiPlugin"
+    ],
+    "modmenu": [
+      "net.lyivx.ls_furniture.config.ModMenuApiImpl"
+    ]
+  },
+  "mixins": [
+    "LYIVXsFurnitureMod.mixins.json",
+    "LYIVXsFurnitureMod-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": ">=1.20.1",
+    "resourcefullib": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/YxXJpZK7nv",
+        "modmenu.modrinth": "https://modrinth.com/mod/lyivxs-furniture",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/lyivxs-furniture"
+      }
+    }
+  }
+}
