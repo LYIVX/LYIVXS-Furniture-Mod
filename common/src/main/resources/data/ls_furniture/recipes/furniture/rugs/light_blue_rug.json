@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "minecraft:light_blue_wool"
+  },
+  "ingredient_count": 2,
+  "result": "ls_furniture:light_blue_rug",
+  "count": 3
+}

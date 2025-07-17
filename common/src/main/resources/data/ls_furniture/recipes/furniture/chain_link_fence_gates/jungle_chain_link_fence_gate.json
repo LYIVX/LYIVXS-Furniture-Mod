@@ -1,0 +1,10 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "ls_furniture:jungle_furniture_pack"
+  },
+  "ingredient_count": 1,
+  "result": "ls_furniture:jungle_chain_link_fence_gate",
+  "count": 3
+}
