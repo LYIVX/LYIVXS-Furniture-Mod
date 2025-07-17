@@ -5,6 +5,8 @@
     "item": "ls_furniture:dark_oak_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:dark_oak_roof",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:dark_oak_roof",
+    "Count": 2
+  }
 }

@@ -30,6 +30,7 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
 
     public static final ResourceLocation ID = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "workstation");
     public static final RecipeType<WorkstationRecipe> WORKSTATION_RECIPE_TYPE = new RecipeType<>(ID, WorkstationRecipe.class);
+    public static final ResourceLocation GUI_BACK = new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, "textures/gui/container/workstation_jei.png");
 
     public static final int width = 82;
     public static final int height = 34;
@@ -38,12 +39,17 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
     private final IDrawable icon;
     private final Component localizedName;
     private final IGuiHelper guiHelper;
+    private final IDrawable components;
 
     public WorkstationRecipeCategory(IGuiHelper guiHelper) {
         this.guiHelper = guiHelper;
         background = guiHelper.createBlankDrawable(width, height);
         icon = guiHelper.createDrawableItemLike(ModBlocks.WORKSTATION.get());
         localizedName = Component.translatable("gui.ls_furniture.jei.workstation");
+
+        components = guiHelper.drawableBuilder(GUI_BACK, 0, 0, width, height)
+                .setTextureSize(width, height)
+                .build();
     }
 
     @Override
@@ -68,22 +74,18 @@ public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRec
 
     @Override
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull WorkstationRecipe recipe, @NotNull IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 9)
-                .setStandardSlotBackground()
-                .addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 6, 9)
+                .addIngredients(recipe.input());
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 61, 9)
-                .setOutputSlotBackground()
-                .addItemStack(RecipeUtil.getResultItem(recipe));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 57, 9)
+                .addItemStack(recipe.output());
     }
 
     @Override
     public void draw(WorkstationRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        components.draw(guiGraphics, 0, 0);
 
         guiGraphics.renderItemDecorations(Minecraft.getInstance().font,
-                new ItemStack(ModItems.WORKSTATION.get(), recipe.getInputCount()), 1,9);
-
-        IDrawableStatic recipeArrow = guiHelper.getRecipeArrow();
-        recipeArrow.draw(guiGraphics, 26, 9);
+                new ItemStack(ModItems.WORKSTATION.get(), recipe.inputCount()), 6,9);
     }
 }

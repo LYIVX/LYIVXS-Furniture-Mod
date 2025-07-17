@@ -124,7 +124,7 @@ public class TVBlock extends Block implements SimpleWaterloggedBlock, WrenchItem
         BlockState onState = state.cycle(VARIANT);
         level.setBlock(pos, onState, 3);
 
-        if (player != null && Screen.hasShiftDown()) {
+        if (player != null && player.isShiftKeyDown()) {
             BlockState standState = state.cycle(STAND);
             level.setBlock(pos, standState, 3);
             return InteractionResult.SUCCESS;

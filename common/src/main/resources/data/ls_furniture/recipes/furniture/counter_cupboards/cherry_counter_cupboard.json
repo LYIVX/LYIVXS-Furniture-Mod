@@ -5,6 +5,8 @@
     "item": "ls_furniture:cherry_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:cherry_counter_cupboard",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:cherry_counter_cupboard",
+    "Count": 1
+  }
 }

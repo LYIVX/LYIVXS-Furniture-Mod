@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.forge;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClientRegisterers;
+import net.lyivx.ls_furniture.client.forge.ClientEvents;
 import net.lyivx.ls_furniture.client.screens.WorkstationScreen;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -15,6 +16,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -53,5 +56,15 @@ public class LYIVXsFurnitureModForgeClient {
         };
         LYIVXsFurnitureModClient.registerEntityRenderers(registerer);
         LYIVXsFurnitureModClient.registerBlockRenderers(registerer);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBlockColors(RegisterColorHandlersEvent.Block event) {
+        ClientEvents.onRegisterBlockColors(event);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterItemColors(RegisterColorHandlersEvent.Item event) {
+        ClientEvents.onRegisterItemColors(event);
     }
 }

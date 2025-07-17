@@ -4,10 +4,8 @@ import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
-import net.lyivx.ls_furniture.common.blocks.*;
 import net.lyivx.ls_furniture.common.blocks.BushBlock;
-import net.lyivx.ls_furniture.common.blocks.ModStairBlock;
-import net.lyivx.ls_furniture.common.blocks.properties.LeafType;
+import net.lyivx.ls_furniture.common.blocks.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -124,7 +122,7 @@ public class ModBlocks {
     ////////////////////////////////////// INTERACTIVE //////////////////////////////////////
 
     public static final RegistryEntry<WorkstationBlock> WORKSTATION = BLOCKS.register("workstation",
-            () -> new WorkstationBlock(BlockBehaviour.Properties.of()));
+            () -> new WorkstationBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     public static final RegistryEntry<ChoppingBoardBlock> CHOPPING_BOARD = BLOCKS.register("chopping_board",
             () -> new ChoppingBoardBlock(BlockBehaviour.Properties.of()));
@@ -202,38 +200,38 @@ public class ModBlocks {
     
     ////////////////////////////////////// BARRELS //////////////////////////////////////
 
-    public static final Supplier<BarrelBlock> OAK_BARREL = BARRELS.register("oak_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final Supplier<BarrelModBlock> OAK_BARREL = BARRELS.register("oak_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
-    public static final Supplier<BarrelBlock> SPRUCE_BARREL = BARRELS.register("spruce_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
+    public static final Supplier<BarrelModBlock> SPRUCE_BARREL = BARRELS.register("spruce_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> BIRCH_BARREL = BARRELS.register("birch_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+    public static final Supplier<BarrelModBlock> BIRCH_BARREL = BARRELS.register("birch_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
 
-    public static final Supplier<BarrelBlock> JUNGLE_BARREL = BARRELS.register("jungle_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
+    public static final Supplier<BarrelModBlock> JUNGLE_BARREL = BARRELS.register("jungle_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> ACACIA_BARREL = BARRELS.register("acacia_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
+    public static final Supplier<BarrelModBlock> ACACIA_BARREL = BARRELS.register("acacia_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
 
-    public static final Supplier<BarrelBlock> DARK_OAK_BARREL = BARRELS.register("dark_oak_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
+    public static final Supplier<BarrelModBlock> DARK_OAK_BARREL = BARRELS.register("dark_oak_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
 
-    public static final Supplier<BarrelBlock> MANGROVE_BARREL = BARRELS.register("mangrove_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
+    public static final Supplier<BarrelModBlock> MANGROVE_BARREL = BARRELS.register("mangrove_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> CHERRY_BARREL = BARRELS.register("cherry_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+    public static final Supplier<BarrelModBlock> CHERRY_BARREL = BARRELS.register("cherry_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
 
-    public static final Supplier<BarrelBlock> BAMBOO_BARREL = BARRELS.register("bamboo_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
+    public static final Supplier<BarrelModBlock> BAMBOO_BARREL = BARRELS.register("bamboo_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
 
-    public static final Supplier<BarrelBlock> CRIMSON_BARREL = BARRELS.register("crimson_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
+    public static final Supplier<BarrelModBlock> CRIMSON_BARREL = BARRELS.register("crimson_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
 
-    public static final Supplier<BarrelBlock> WARPED_BARREL = BARRELS.register("warped_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
+    public static final Supplier<BarrelModBlock> WARPED_BARREL = BARRELS.register("warped_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
 
     ////////////////////////////////////// CRATES //////////////////////////////////////    
 
@@ -1210,7 +1208,7 @@ public class ModBlocks {
 
     ////////////////////////////////////// FENCES + GATES ////////////////////////////////////
 
-    public static final Supplier<FenceBlock> OAK_UPGRADED_FENCE = UPGRADED_FENCES.register("oak_upgraded_fence",
+   public static final Supplier<FenceBlock> OAK_UPGRADED_FENCE = UPGRADED_FENCES.register("oak_upgraded_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
 
     public static final Supplier<FenceGateBlock> OAK_UPGRADED_FENCE_GATE = UPGRADED_FENCE_GATES.register("oak_upgraded_fence_gate",
@@ -1477,40 +1475,40 @@ public class ModBlocks {
     ////////////////////////////////////// BUSHES ////////////////////////////////////////
 
     public static final Supplier<BushBlock> OAK_BUSH = BUSHES.register("oak_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), LeafType.OAK));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final Supplier<BushBlock> SPRUCE_BUSH = BUSHES.register("spruce_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES), LeafType.SPRUCE));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES)));
 
     public static final Supplier<BushBlock> BIRCH_BUSH = BUSHES.register("birch_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES), LeafType.BIRCH));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES)));
 
     public static final Supplier<BushBlock> JUNGLE_BUSH = BUSHES.register("jungle_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_LEAVES), LeafType.JUNGLE));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_LEAVES)));
 
     public static final Supplier<BushBlock> ACACIA_BUSH = BUSHES.register("acacia_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_LEAVES), LeafType.ACACIA));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_LEAVES)));
 
     public static final Supplier<BushBlock> DARK_OAK_BUSH = BUSHES.register("dark_oak_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES), LeafType.DARK_OAK));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LEAVES)));
 
     public static final Supplier<BushBlock> MANGROVE_BUSH = BUSHES.register("mangrove_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_LEAVES), LeafType.MANGROVE));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_LEAVES)));
 
     public static final Supplier<BushBlock> CHERRY_BUSH = BUSHES.register("cherry_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES), LeafType.CHERRY));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES)));
 
     public static final Supplier<BushBlock> CRIMSON_BUSH = BUSHES.register("crimson_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK), LeafType.CRIMSON));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK)));
 
     public static final Supplier<BushBlock> WARPED_BUSH = BUSHES.register("warped_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK), LeafType.WARPED));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK)));
 
     public static final Supplier<BushBlock> AZALEA_BUSH = BUSHES.register("azalea_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES), LeafType.AZALEA));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
 
     public static final Supplier<BushBlock> FLOWERING_AZALEA_BUSH = BUSHES.register("flowering_azalea_bush",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA_LEAVES), LeafType.FLOWERING_AZALEA));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA_LEAVES)));
 
     ////////////////////////////////////// HOLLOW LOGS ////////////////////////////////////
 

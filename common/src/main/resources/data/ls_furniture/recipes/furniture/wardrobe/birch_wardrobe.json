@@ -5,6 +5,8 @@
     "item": "ls_furniture:birch_furniture_pack"
   },
   "ingredient_count": 2,
-  "result": "ls_furniture:birch_wardrobe",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:birch_wardrobe",
+    "Count": 1
+  }
 }

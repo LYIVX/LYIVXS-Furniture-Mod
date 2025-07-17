@@ -5,6 +5,8 @@
     "item": "ls_furniture:birch_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:birch_railing",
-  "count": 4
+  "result": {
+    "id": "ls_furniture:birch_railing",
+    "Count": 4
+  }
 }

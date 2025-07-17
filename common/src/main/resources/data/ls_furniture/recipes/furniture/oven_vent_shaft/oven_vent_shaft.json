@@ -5,6 +5,8 @@
     "item": "ls_furniture:electrical_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:oven_vent_shaft",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:oven_vent_shaft",
+    "Count": 1
+  }
 }

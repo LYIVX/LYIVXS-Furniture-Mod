@@ -15,19 +15,21 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.profiling.InactiveProfiler;
+import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.TickRateManager;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -38,34 +40,79 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.chunk.ChunkSource;
+import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.entity.EntityTypeTest;
 import net.minecraft.world.level.entity.LevelEntityGetter;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.saveddata.maps.MapId;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
+import net.minecraft.world.level.storage.WritableLevelData;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.scores.Scoreboard;
 import net.minecraft.world.ticks.LevelTickAccess;
+import net.minecraft.world.ticks.LevelTicks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
+import java.util.function.BiPredicate;
+import java.util.function.Function;
+import java.util.function.LongPredicate;
+import java.util.function.Supplier;
+
+import static net.minecraft.world.level.block.Block.isExceptionForConnection;
 
 public class FakeLevel extends Level {
     private final Map<BlockPos, BlockState> blocks = new HashMap<>();
 
     public FakeLevel() {
-        super(new ClientLevel.ClientLevelData(Difficulty.NORMAL, false, false),
+        super(
+                (WritableLevelData) new ClientLevel.ClientLevelData(Difficulty.NORMAL, false, false),
                 Level.OVERWORLD,
-                Minecraft.getInstance().level != null ? Minecraft.getInstance().level.registryAccess() : null, // RegistryAccess
-                Minecraft.getInstance().level != null ? Minecraft.getInstance().level.dimensionTypeRegistration() : null, // Holder<DimensionType>
-                () -> null, // No profiler needed
-                true, // is client
+                Minecraft.getInstance().level != null ? Minecraft.getInstance().level.registryAccess() : null,
+                Minecraft.getInstance().level != null ? Minecraft.getInstance().level.dimensionTypeRegistration() : null,
+                () -> null,
+                true,
                 false,
-                0L, // No seed needed
-                0); // No max chunk size
+                0L,
+                0
+        );
+    }
 
+    @Override
+    public RecipeManager getRecipeManager() {
+        return null;
+    }
+
+    @Override
+    public int getHeight() {
+        return 256;
+    }
+
+    @Override
+    public int getMinBuildHeight() {
+        return 0;
+    }
+
+    @Override
+    public int getMaxBuildHeight() {
+        return getHeight() + getMinBuildHeight();
+    }
+
+    @Override
+    public int getSkyDarken() {
+        return 0;
+    }
+
+    @Override
+    public boolean isUnobstructed(BlockState state, BlockPos pos, CollisionContext context) {
+        return true;
+    }
+
+    @Override
+    public float getPathfindingCostFromLightLevels(BlockPos pos) {
+        return 0;
     }
 
     @Override
@@ -93,6 +140,16 @@ public class FakeLevel extends Level {
     }
 
     @Override
+    public void playSeededSound(@Nullable Player player, double x, double y, double z, Holder<SoundEvent> sound, SoundSource source, float volume, float pitch, long seed) {
+
+    }
+
+    @Override
+    public void playSeededSound(@Nullable Player player, Entity entity, Holder<SoundEvent> sound, SoundSource category, float volume, float pitch, long seed) {
+
+    }
+
+    @Override
     public boolean setBlock(BlockPos pos, BlockState state, int flags, int recursionLeft) {
         if (recursionLeft <= 0) return false;
 
@@ -105,7 +162,7 @@ public class FakeLevel extends Level {
             for (Direction direction : Direction.values()) {
                 BlockPos neighborPos = pos.relative(direction);
                 BlockState neighborState = getBlockState(neighborPos);
-                neighborState.handleNeighborChanged(this, neighborPos, oldState.getBlock(), pos, false);
+                neighborState.neighborChanged(this, neighborPos, oldState.getBlock(), pos, false);
             }
         }
 
@@ -356,6 +413,7 @@ public class FakeLevel extends Level {
         }
     }
 
+
     private BlockState updatePlatformState(BlockPos pos, BlockState platformState) {
         boolean north = validPlatformConnection(getBlockState(pos.north()));
         boolean east = validPlatformConnection(getBlockState(pos.east()));
@@ -387,6 +445,7 @@ public class FakeLevel extends Level {
             default -> throw new IllegalArgumentException("Invalid horizontal direction: " + direction);
         };
     }
+
 
     private enum PlatformConfiguration {
         SINGLE(EnumSet.noneOf(Direction.class)),
@@ -481,6 +540,24 @@ public class FakeLevel extends Level {
         }
     }
 
+    private void updateBlockStateWithConnections(BlockPos pos) {
+        BlockState currentState = getBlockState(pos);
+        BlockState newState = currentState;
+
+        Block block = currentState.getBlock();
+        if (block instanceof FenceBlock) {
+            newState = updateFenceState(pos, currentState);
+        } else if (block instanceof TableBlock) {
+            newState = updateTableState(pos, currentState);
+        } else if (block instanceof PlatformBlock) {
+            newState = updatePlatformState(pos, currentState);
+        }
+
+        if (newState != currentState) {
+            setBlock(pos, newState, 3);
+        }
+    }
+
     private boolean canFenceConnectTo(BlockState fenceState, BlockState neighborState, Direction direction) {
         Block neighborBlock = neighborState.getBlock();
         boolean isSameFence = isSameFence(neighborState);
@@ -494,30 +571,21 @@ public class FakeLevel extends Level {
         return state.is(BlockTags.FENCES) && state.is(BlockTags.WOODEN_FENCES) == this.getBlockState(BlockPos.ZERO).is(BlockTags.WOODEN_FENCES);
     }
 
-    private boolean isExceptionForConnection(BlockState state) {
-        return state.is(BlockTags.UNSTABLE_BOTTOM_CENTER);
+    private boolean checkTableConnection(BlockPos pos) {
+        return getBlockState(pos).getBlock() instanceof TableBlock;
     }
 
+    private boolean checkPlatformConnection(BlockPos pos) {
+        return getBlockState(pos).getBlock() instanceof PlatformBlock;
+    }
 
     public void clear() {
         blocks.clear();
     }
 
     // Required Level overrides
-
-
     @Override
-    public void playSound(@Nullable Player player, BlockPos pos, SoundEvent sound, SoundSource source, float volume, float pitch) {
-    }
-
-    @Override
-    public void playSeededSound(@Nullable Player player, double x, double y, double z, Holder<SoundEvent> sound, SoundSource category, float volume, float pitch, long seed) {
-
-    }
-
-    @Override
-    public void playSeededSound(@Nullable Player player, Entity entity, Holder<SoundEvent> sound, SoundSource category, float volume, float pitch, long seed) {
-
+    public void playSound(@Nullable Player player, double x, double y, double z, SoundEvent sound, SoundSource source, float volume, float pitch) {
     }
 
     @Override
@@ -529,7 +597,7 @@ public class FakeLevel extends Level {
     }
 
     @Override
-    public void gameEvent(Holder<GameEvent> gameEvent, Vec3 pos, GameEvent.Context context) {
+    public void gameEvent(GameEvent event, Vec3 position, GameEvent.Context context) {
 
     }
 
@@ -555,8 +623,12 @@ public class FakeLevel extends Level {
     }
 
     @Override
+    public ChunkSource getChunkSource() {
+        return Minecraft.getInstance().level.getChunkSource();
+    }
+
+    @Override
     public void sendBlockUpdated(BlockPos pos, BlockState oldState, BlockState newState, int flags) {
-        // Handle block update visuals here if needed
     }
 
     @Override
@@ -564,15 +636,13 @@ public class FakeLevel extends Level {
         return null;
     }
 
-    @Override
-    public ChunkSource getChunkSource() {
-        return Minecraft.getInstance().level.getChunkSource();
-    }
-
     public EntityTypeTest<Entity, ?> getTypeTest() {
         return EntityTypeTest.forClass(Entity.class);
     }
 
+    @Override
+    public void gameEvent(@Nullable Entity entity, GameEvent event, Vec3 pos) {
+    }
 
     @Override
     public RegistryAccess registryAccess() {
@@ -587,27 +657,6 @@ public class FakeLevel extends Level {
     }
 
     @Override
-    public PotionBrewing potionBrewing() {
-        return null;
-    }
-
-    // Add this method to properly handle lighting for the preview
-    @Override
-    public int getBrightness(LightLayer type, BlockPos pos) {
-        return 15; // Full brightness for preview
-    }
-
-    @Override
-    public int getRawBrightness(BlockPos pos, int ambientDark) {
-        return 15; // Full brightness for preview
-    }
-
-    @Override
-    public long dayTime() {
-        return 6000; // Noon
-    }
-
-    @Override
     public LevelTickAccess<Block> getBlockTicks() {
         return new NoOpTickAccess<>();  // Prevent block ticks from being scheduled
     }
@@ -617,19 +666,8 @@ public class FakeLevel extends Level {
         return new NoOpTickAccess<>();  // Prevent block ticks from being scheduled
     }
 
-    @Override
-    public int getMoonPhase() {
-        return 0;
-    }
-
-    @Override
-    public float getMoonBrightness() {
-        return 1.0F;
-    }
-
-    @Override
-    public float getTimeOfDay(float partialTick) {
-        return 0.5F; // Noon
+    private boolean isPositionTicking(BlockPos pos) {
+        return true; // Simplified for the fake level
     }
 
     @Override
@@ -648,25 +686,20 @@ public class FakeLevel extends Level {
         return null;
     }
 
-    @Override
-    public TickRateManager tickRateManager() {
-        return null;
-    }
-
     @Nullable
     @Override
-    public MapItemSavedData getMapData(MapId mapId) {
+    public MapItemSavedData getMapData(String mapName) {
         return null;
     }
 
     @Override
-    public void setMapData(MapId mapId, MapItemSavedData mapData) {
+    public void setMapData(String mapName, MapItemSavedData data) {
 
     }
 
     @Override
-    public MapId getFreeMapId() {
-        return null;
+    public int getFreeMapId() {
+        return 0;
     }
 
     @Override
@@ -675,37 +708,42 @@ public class FakeLevel extends Level {
     }
 
     @Override
+    public int getMoonPhase() {
+        return 0;
+    }
+
+    @Override
+    public float getMoonBrightness() {
+        return 1.0F;
+    }
+
+    @Override
+    public float getTimeOfDay(float partialTick) {
+        return 0.5F;
+    }
+
+    @Override
+    public int getBrightness(LightLayer type, BlockPos pos) {
+        return 15;
+    }
+
+    @Override
+    protected LevelEntityGetter<Entity> getEntities() {
+        return null;
+    }
+
+    @Override
     public Scoreboard getScoreboard() {
         return null;
     }
 
     @Override
-    public int getMaxBuildHeight() {
-        return 256;
-    }
-
-    @Override
-    public int getMinBuildHeight() {
-        return 0;
-    }
-
-    @Override
-    public int getSkyDarken() {
-        return 0;
+    public Holder<Biome> getBiome(BlockPos pos) {
+        return null;
     }
 
     @Override
     public Holder<Biome> getUncachedNoiseBiome(int x, int y, int z) {
-        return null;
-    }
-
-    @Override
-    public RecipeManager getRecipeManager() {
-        return null;
-    }
-
-    @Override
-    protected LevelEntityGetter<Entity> getEntities() {
         return null;
     }
 }

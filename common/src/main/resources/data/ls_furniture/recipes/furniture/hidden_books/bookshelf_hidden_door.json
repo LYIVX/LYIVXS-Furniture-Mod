@@ -5,6 +5,8 @@
     "item": "minecraft:bookshelf"
   },
   "ingredient_count": 2,
-  "result": "ls_furniture:bookshelf_hidden_door",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:bookshelf_hidden_door",
+    "Count": 2
+  }
 }

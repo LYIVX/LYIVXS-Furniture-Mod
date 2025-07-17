@@ -6,6 +6,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
+
 
 public class ModItemTags {
 
@@ -29,9 +31,8 @@ public class ModItemTags {
     public static final TagKey<Item> CRATE_BLACKLIST_TAG = itemTag("crate_blacklist");
     public static final TagKey<Item> MAIL_TAG = itemTag("mail");
 
-
     private static TagKey<Item> itemTag(String name) {
-        return TagKey.create(Registries.ITEM, new ResourceLocation(LYIVXsFurnitureMod.MOD_ID, name));
+        return TagKey.create(Registries.ITEM, createResourceLocation(name));
     }
 
     public static void init() {}

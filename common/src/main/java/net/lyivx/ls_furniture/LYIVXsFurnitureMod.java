@@ -1,9 +1,6 @@
 package net.lyivx.ls_furniture;
 
-import net.lyivx.ls_furniture.client.screens.ConfigScreen;
-import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
-import net.lyivx.ls_furniture.common.network.NetworkRecipeSync;
-import net.lyivx.ls_furniture.common.network.UpdateTombstonePacket;
+import net.lyivx.ls_core.LYIVXsCore;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -27,21 +24,25 @@ public class LYIVXsFurnitureMod {
         ModItems.ITEMS.init();
         ModEntities.ENTITIES.init();
         ModSoundEvents.SOUNDS.init();
-        ModRecipes.RECIPES.init();
+
+        ModRecipes.RECIPE_TYPES.init();
+        ModRecipes.RECIPE_SERIALIZERS.init();
+
         ModMenus.MENUS.init();
 
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
+    }
 
-        NetworkRecipeSync.init();
-
-        ConfigScreen.initConfig();
+    public static ResourceLocation createResourceLocation(String location) {
+        return new ResourceLocation(MOD_ID, location);
     }
 
     public static ResourceLocation res(String name) {
         return new ResourceLocation(MOD_ID, name);
     }
+
 
     public static void initCreativeTabContents(ResourceKey<CreativeModeTab> tab, Consumer<ItemLike> adder) {
         if (tab.equals(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("functional_blocks")))) {

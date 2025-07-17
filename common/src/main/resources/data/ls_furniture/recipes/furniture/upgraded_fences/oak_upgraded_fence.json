@@ -5,6 +5,8 @@
     "item": "ls_furniture:oak_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:oak_upgraded_fence",
-  "count": 3
+  "result": {
+    "id": "ls_furniture:oak_upgraded_fence",
+    "Count": 3
+  }
 }

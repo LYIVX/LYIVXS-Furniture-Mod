@@ -5,6 +5,8 @@
     "item": "ls_furniture:crimson_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:crimson_counter",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:crimson_counter",
+    "Count": 1
+  }
 }

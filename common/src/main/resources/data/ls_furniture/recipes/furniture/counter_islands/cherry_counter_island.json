@@ -5,6 +5,8 @@
     "item": "ls_furniture:cherry_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:cherry_counter_island",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:cherry_counter_island",
+    "Count": 1
+  }
 }

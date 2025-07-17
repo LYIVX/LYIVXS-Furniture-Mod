@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.client;
 
+import dev.architectury.event.events.client.ClientTickEvent;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -45,11 +46,6 @@ public class LYIVXsFurnitureModClient {
     public static void registerBlockRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
         registerer.registerBlockEntity(ModBlockEntitys.PLATE_ENTITY.get(), PlateRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.SHELF_ENTITY.get(), ShelfRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.CHAIR_ENTITY.get(), ChairCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.STOOL_ENTITY.get(), StoolCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.SOFA_ENTITY.get(), SofaCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.LAMP_ENTITY.get(), LampShadeRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.BED_ENTITY.get(), BedCushionRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CHOPPING_BOARD_ENTITY.get(), ChoppingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CUTTING_BOARD_ENTITY.get(), CuttingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.MOD_CHEST_ENTITY.get(), CustomChestRenderer::new);
@@ -58,6 +54,7 @@ public class LYIVXsFurnitureModClient {
         registerer.registerBlockEntity(ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.RAILING_ENTITY.get(), RailingPreviewRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.TOMBSTONE_ENTITY.get(), TombstoneRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.COUNTER_SINK_ENTITY.get(), SinkRenderer::new);
     }
 
     public static void registerEntityRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
@@ -67,27 +64,27 @@ public class LYIVXsFurnitureModClient {
     public static void registerBlockColors(BlockColorsRegister register)
     {
         register.apply((state, reader, pos, index) -> {
-            return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();},
+                    return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();},
                 ModBlocks.OAK_BUSH.get(),
                 ModBlocks.JUNGLE_BUSH.get(),
                 ModBlocks.ACACIA_BUSH.get(),
                 ModBlocks.DARK_OAK_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getEvergreenColor();},
+                    return FoliageColor.getEvergreenColor();},
                 ModBlocks.SPRUCE_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getBirchColor();},
+                    return FoliageColor.getBirchColor();},
                 ModBlocks.BIRCH_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return FoliageColor.getMangroveColor();},
+                    return FoliageColor.getMangroveColor();},
                 ModBlocks.MANGROVE_BUSH.get());
 
         register.apply((state, reader, pos, i) -> {
-            return BiomeColors.getAverageWaterColor(reader, pos);
-        },
+                    return BiomeColors.getAverageWaterColor(reader, pos);
+                },
                 ModBlocks.OAK_COUNTER_SINK.get(),
                 ModBlocks.SPRUCE_COUNTER_SINK.get(),
                 ModBlocks.BIRCH_COUNTER_SINK.get(),
@@ -156,7 +153,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.BAMBOO_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_DRAWER.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_COUNTER_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_COUNTER_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_COUNTER_CUPBOARD.get(), RenderType.cutout());
@@ -168,7 +165,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.BAMBOO_COUNTER_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_COUNTER_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_COUNTER_CUPBOARD.get(), RenderType.cutout());
-                
+
         setRenderType(ModBlocks.OAK_COUNTER_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_COUNTER_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_COUNTER_DRAWER.get(), RenderType.cutout());
@@ -180,7 +177,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.BAMBOO_COUNTER_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_COUNTER_DRAWER.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_COUNTER_DRAWER.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_CABINET_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_CABINET_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_CABINET_CUPBOARD.get(), RenderType.cutout());
@@ -192,7 +189,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.BAMBOO_CABINET_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_CABINET_CUPBOARD.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_CABINET_CUPBOARD.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_COUNTER_OVEN.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_COUNTER_OVEN.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_COUNTER_OVEN.get(), RenderType.cutout());
@@ -216,7 +213,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.BAMBOO_CHAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_CHAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_CHAIR.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_WARDROBE.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_WARDROBE.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_WARDROBE.get(), RenderType.cutout());
@@ -227,8 +224,8 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.CHERRY_WARDROBE.get(), RenderType.cutout());
         setRenderType(ModBlocks.BAMBOO_WARDROBE.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_WARDROBE.get(), RenderType.cutout());
-        setRenderType(ModBlocks.WARPED_WARDROBE.get(), RenderType.cutout());    
-        
+        setRenderType(ModBlocks.WARPED_WARDROBE.get(), RenderType.cutout());
+
         setRenderType(ModBlocks.OAK_BUSH.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_BUSH.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_BUSH.get(), RenderType.cutout());
@@ -240,8 +237,8 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.CRIMSON_BUSH.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_BUSH.get(), RenderType.cutout());
         setRenderType(ModBlocks.AZALEA_BUSH.get(), RenderType.cutout());
-        setRenderType(ModBlocks.FLOWERING_AZALEA_BUSH.get(), RenderType.cutout());   
-        
+        setRenderType(ModBlocks.FLOWERING_AZALEA_BUSH.get(), RenderType.cutout());
+
         setRenderType(ModBlocks.OAK_PLATFORM.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_PLATFORM.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_PLATFORM.get(), RenderType.cutout());
@@ -252,7 +249,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.CHERRY_PLATFORM.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_PLATFORM.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_PLATFORM.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_STAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_STAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_STAIR.get(), RenderType.cutout());
@@ -263,7 +260,7 @@ public class LYIVXsFurnitureModClient {
         setRenderType(ModBlocks.CHERRY_STAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.CRIMSON_STAIR.get(), RenderType.cutout());
         setRenderType(ModBlocks.WARPED_STAIR.get(), RenderType.cutout());
-        
+
         setRenderType(ModBlocks.OAK_CHAIN_LINK_FENCE.get(), RenderType.cutout());
         setRenderType(ModBlocks.SPRUCE_CHAIN_LINK_FENCE.get(), RenderType.cutout());
         setRenderType(ModBlocks.BIRCH_CHAIN_LINK_FENCE.get(), RenderType.cutout());

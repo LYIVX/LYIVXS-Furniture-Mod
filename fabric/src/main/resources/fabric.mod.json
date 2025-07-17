@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "ls_furniture",
   "version": "${version}",
-  "name": "LYIVX's Furniture Mod",
-  "description": "A Vanilla Styled Furniture Mod",
+  "name": "Furnection",
+  "description": "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod",
   "authors": [
     "LYIVX"
   ],
@@ -36,8 +36,7 @@
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": ">=1.20.1",
-    "resourcefullib": "*",
-    "moonlight": "*"
+    "resourcefullib": "*"
   },
   "recommends": {
     "modmenu": "*"

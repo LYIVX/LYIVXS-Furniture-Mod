@@ -5,6 +5,8 @@
     "item": "ls_furniture:mangrove_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:mangrove_roof_steep",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:mangrove_roof_steep",
+    "Count": 2
+  }
 }

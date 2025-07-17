@@ -5,6 +5,8 @@
     "item": "minecraft:flowering_azalea_leaves"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:flowering_azalea_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:flowering_azalea_bush",
+    "Count": 2
+  }
 }

@@ -5,6 +5,8 @@
     "item": "ls_furniture:acacia_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:acacia_platform",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:acacia_platform",
+    "Count": 2
+  }
 }

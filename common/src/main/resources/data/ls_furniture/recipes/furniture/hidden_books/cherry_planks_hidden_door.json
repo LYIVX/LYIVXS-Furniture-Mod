@@ -5,6 +5,8 @@
     "item": "ls_furniture:cherry_furniture_pack"
   },
   "ingredient_count": 2,
-  "result": "ls_furniture:cherry_planks_hidden_door",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:cherry_planks_hidden_door",
+    "Count": 2
+  }
 }

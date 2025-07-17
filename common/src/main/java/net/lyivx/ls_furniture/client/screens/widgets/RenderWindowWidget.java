@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import static net.lyivx.ls_furniture.client.screens.widgets.FakeLevel.getFenceProperty;
 
 public class RenderWindowWidget extends AbstractWidget {
     private final Supplier<FakeLevel> fakeLevelSupplier;
@@ -193,13 +192,13 @@ public class RenderWindowWidget extends AbstractWidget {
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollY) {
         if (isMouseOver(mouseX, mouseY)) {
             scale += (float) (scrollY * SCROLL_SENSITIVITY);
             scale = Mth.clamp(scale, MIN_SCALE, MAX_SCALE);
             return true;
         }
-        return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
+        return super.mouseScrolled(mouseX, mouseY, scrollY);
     }
 
     private void cycleBlockState() {
@@ -281,9 +280,7 @@ public class RenderWindowWidget extends AbstractWidget {
         }
 
         public BlockState applyToBlockState(BlockState state) {
-            for (Direction direction : Direction.Plane.HORIZONTAL) {
-                state = state.setValue(getFenceProperty(direction), connections.contains(direction));
-            }
+
             return state;
         }
     }

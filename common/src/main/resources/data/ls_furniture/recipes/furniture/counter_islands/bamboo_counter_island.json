@@ -5,6 +5,8 @@
     "item": "ls_furniture:bamboo_furniture_pack"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:bamboo_counter_island",
-  "count": 1
+  "result": {
+    "id": "ls_furniture:bamboo_counter_island",
+    "Count": 1
+  }
 }

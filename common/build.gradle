@@ -5,21 +5,15 @@ dependencies {
     modImplementation "com.teamresourceful.resourcefullib:resourcefullib-common-$rootProject.resourcefullib_version"
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 
+    modImplementation "curse.maven:lyivxs-core-1200581:6771596"
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-lib:${jei_version}")
-
-    modImplementation("curse.maven:selene-499980:5093417")
-
 }
 
 architectury {
     common(rootProject.enabled_platforms.split(","))
-}
-
-loom {
-    accessWidenerPath = file("src/main/resources/LYIVXsFurnitureMod.accesswidener")
 }
 
 publishing {

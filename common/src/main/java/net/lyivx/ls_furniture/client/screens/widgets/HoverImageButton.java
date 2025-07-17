@@ -2,9 +2,8 @@ package net.lyivx.ls_furniture.client.screens.widgets;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.components.WidgetSprites;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +24,7 @@ public class HoverImageButton extends ImageButton {
     public HoverImageButton(int x, int y, int width, int height, int xTexStart, int yTexStart, int xDiffTex,
                             ResourceLocation texture, int textureWidth, int textureHeight,
                             int sourceWidth, int sourceHeight, OnPress onPress, boolean stayClicked, boolean stayClickedHover) {
-        super(x, y, width, height,
-                new WidgetSprites(texture, texture),  // Using the same texture for both states
-                onPress,
-                Component.empty());
+        super(x, y, width, height, xTexStart, yTexStart, sourceWidth, texture, onPress);
         this.texture = texture;
         this.xTexStart = xTexStart;
         this.yTexStart = yTexStart;

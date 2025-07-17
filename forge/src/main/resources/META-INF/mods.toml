@@ -7,9 +7,9 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
 [[mods]]
     modId = "ls_furniture"
     version = "${version}"
-    displayName = "LYIVX's Furniture Mod"
+    displayName = "Furnection"
     authors = "LYIVX"
-    description = "A Vanilla Styled Furniture Mod"
+    description = "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod"
     displayURL = "https://modrinth.com/mod/lyivxs-furniture"
 
 
@@ -35,15 +35,15 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
     side = "BOTH"
 
 [[dependencies.ls_furniture]]
-    modId = "moonlight"
+    modId = "architectury"
     mandatory = true
     versionRange = "[*,)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.ls_furniture]]
-    modId = "architectury"
+    modId = "ls_core"
     mandatory = true
-    versionRange = "[*,)"
+    versionRange = "[1.0,)"
     ordering = "NONE"
     side = "BOTH"

@@ -8,11 +8,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-
     forge {
-        convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
         mixinConfig  "LYIVXsFurnitureMod-common.mixins.json"
     }
@@ -28,14 +24,15 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
+    modImplementation "dev.architectury:architectury-forge:${architectury_version}"
 
     include modApi("com.teamresourceful.resourcefullib:resourcefullib-forge-$rootProject.resourcefullib_version")
+
+    modImplementation "curse.maven:lyivxs-core-1200581:6771601"
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-
-    modImplementation("curse.maven:selene-499980:5093417")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
@@ -59,7 +56,7 @@ shadowJar {
 remapJar {
     input.set(shadowJar.archiveFile)
     dependsOn(shadowJar)
-    archiveClassifier.set("${minecraft_version}-Forge") // Set the classifier for the output remapped JAR file
+    archiveClassifier.set("Forge-${minecraft_version}") // Set the classifier for the output remapped JAR file
 }
 
 jar {

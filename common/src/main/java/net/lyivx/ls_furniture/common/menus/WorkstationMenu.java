@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.common.menus;
 import com.google.common.collect.Lists;
 import net.lyivx.ls_furniture.common.recipes.FilterableRecipe;
 import net.lyivx.ls_furniture.common.recipes.RecipeSorter;
+import net.lyivx.ls_furniture.common.recipes.WorkstationRecipe;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.lyivx.ls_furniture.registry.ModRecipes;
@@ -17,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import java.util.Collections;
 import java.util.List;
 
 public class WorkstationMenu extends AbstractContainerMenu  {
@@ -69,7 +71,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
                 stack.onCraftedBy(player.level(), player, stack.getCount());
                 resultContainer.awardUsedRecipes(player, this.getRelevantItems());
                 ItemStack itemStack = inputSlot.remove(recipes.get(selectedRecipeIndex.get())
-                        .recipe().getInputCount());
+                        .recipe().inputCount());
                 if (!itemStack.isEmpty()) {
                     setupResultSlot();
                 }
@@ -182,7 +184,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
             this.lastSelectedRecipe = selected;
             ItemStack itemStack = selected.recipe().assemble(this.container, this.level.registryAccess());
             if (itemStack.isItemEnabled(this.level.enabledFeatures())) {
-                this.resultContainer.setRecipeUsed(selected.recipe());
+                this.resultContainer.setRecipeUsed(selected.recipeHolder());
                 this.resultSlot.set(itemStack);
             } else {
                 this.resultSlot.set(ItemStack.EMPTY);

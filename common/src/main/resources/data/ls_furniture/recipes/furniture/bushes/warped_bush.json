@@ -5,6 +5,8 @@
     "item": "minecraft:warped_wart_block"
   },
   "ingredient_count": 1,
-  "result": "ls_furniture:warped_bush",
-  "count": 2
+  "result": {
+    "id": "ls_furniture:warped_bush",
+    "Count": 2
+  }
 }
