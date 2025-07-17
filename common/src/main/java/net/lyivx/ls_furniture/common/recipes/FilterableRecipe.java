@@ -1,9 +1,8 @@
 package net.lyivx.ls_furniture.common.recipes;
 
-import net.minecraft.core.HolderLookup;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.SingleRecipeInput;
 
 import java.util.Locale;
 
