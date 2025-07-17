@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "block/dark_oak_log",
+    "particle": "block/dark_oak_log"
+  },
+  "render_type": "cutout"
+}

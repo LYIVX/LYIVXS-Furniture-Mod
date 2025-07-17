@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "def"
+  ],
+  "key": {
+    "a": {
+      "item": "ls_furniture:hammer"
+    },
+    "b": {
+      "item": "minecraft:crafting_table"
+    },
+    "c": {
+      "item": "ls_furniture:wrench"
+    },
+    "d": {
+      "item": "ls_furniture:shears"
+    },
+    "e": {
+      "item": "ls_furniture:chisel"
+    },
+    "f": {
+      "item": "ls_furniture:saw"
+    }
+  },
+  "result": {
+    "id": "ls_furniture:workstation",
+    "count": 1
+  }
+}

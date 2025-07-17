@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_middle",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_birch_log",
+    "Secondary": "block/white_wool",
+    "Leg": "block/birch_log"
+  }
+}

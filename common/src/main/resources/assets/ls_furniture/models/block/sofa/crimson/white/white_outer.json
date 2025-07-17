@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_outer",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_crimson_stem",
+    "Secondary": "block/white_wool",
+    "Leg": "block/crimson_stem"
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/stools/stool_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Leg": "block/bamboo_block",
+		"Main": "block/stripped_bamboo_block",
+		"Secondary": "block/stripped_bamboo_block"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/stools/stool_tucked",
+	"textures": {
+		"particle": "#Main",
+		"Leg": "block/warped_stem",
+		"Main": "block/stripped_warped_stem",
+		"Secondary": "block/stripped_warped_stem"
+	}
+}

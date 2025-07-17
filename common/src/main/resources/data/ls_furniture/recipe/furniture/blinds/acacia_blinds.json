@@ -1,0 +1,11 @@
+{
+  "type": "ls_furniture:workstation",
+  "ingredient": {
+    "item": "ls_furniture:acacia_furniture_pack"
+  },
+  "ingredient_count": 1,
+  "result":  {
+    "id":  "ls_furniture:acacia_blinds",
+    "count": 1
+  }
+}

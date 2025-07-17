@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "furniture_pack",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "ls_furniture:birch_stick"
+    },
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "minecraft:stripped_birch_log"
+    },
+    {
+      "item": "ls_furniture:birch_bark"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:birch_furniture_pack"
+  }
+}

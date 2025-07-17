@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,has_water=false": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink"
+        },
+        "facing=east,has_water=false": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink",
+            "y": 90
+        },
+        "facing=south,has_water=false": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink",
+            "y": 180
+        },
+        "facing=west,has_water=false": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink",
+            "y": 270
+        },
+        "facing=north,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink_full"
+        },
+        "facing=east,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink_full",
+            "y": 90
+        },
+        "facing=south,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink_full",
+            "y": 180
+        },
+        "facing=west,has_water=true": {
+            "model": "ls_furniture:block/counter_sink/spruce/counter_sink_full",
+            "y": 270
+        }
+    }
+}

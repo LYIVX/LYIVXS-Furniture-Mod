@@ -1,0 +1,134 @@
+{
+  "block.workstation.ui.select_recipe": {
+    "sounds": [
+      "random/click"
+    ]
+  },
+  "block.workstation.ui.take_result": {
+    "sounds": [
+      "ls_furniture:workstation1",
+      {
+        "name": "ls_furniture:workstation1",
+        "pitch": 0.92
+      },
+      "ls_furniture:workstation2",
+      {
+        "name": "ls_furniture:workstation2",
+        "pitch": 0.92
+      },
+      "ls_furniture:workstation3",
+      {
+        "name": "ls_furniture:workstation3",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.workstation.ui.take_result"
+  },
+  "item.tool.use": {
+    "sounds": [
+      "ls_furniture:workstation1",
+      {
+        "name": "ls_furniture:workstation1",
+        "pitch": 0.92
+      },
+      "ls_furniture:workstation2",
+      {
+        "name": "ls_furniture:workstation2",
+        "pitch": 0.92
+      },
+      "ls_furniture:workstation3",
+      {
+        "name": "ls_furniture:workstation3",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.item.tool.use"
+  },
+  "block.drawer.open": {
+    "sounds": [
+      "minecraft:block/barrel/open1",
+      "minecraft:block/barrel/open2",
+      {
+        "name": "ls_furniture:drawer_open",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.drawer.open"
+  },
+  "block.drawer.close": {
+    "sounds": [
+      "minecraft:block/barrel/close",
+      {
+        "name": "ls_furniture:drawer_open",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.drawer.close"
+  },
+  "block.chair-stool.tuck": {
+    "sounds": [
+      "ls_furniture:chair_tuck",
+      {
+        "name": "ls_furniture:chair_tuck",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.chair-stool.tuck"
+  },
+  "block.chair-stool.untuck": {
+    "sounds": [
+      "ls_furniture:chair_untuck",
+      {
+        "name": "ls_furniture:chair_untuck",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.chair-stool.untuck"
+  },
+  "block.blinds.use": {
+    "sounds": [
+      "ls_furniture:workstation1",
+      {
+        "name": "ls_furniture:workstation1",
+        "pitch": 0.92
+      }
+    ],
+    "subtitle": "subtitles.block.blinds.use"
+  },
+  "item.letter.add_attachment": {
+    "category": "players",
+    "subtitle": "subtitle.ls_furniture.attach_to_letter",
+    "sounds": [
+      "minecraft:item/armor/equip_leather1",
+      "minecraft:item/armor/equip_leather2",
+      "minecraft:item/armor/equip_leather3",
+      "minecraft:item/armor/equip_leather4",
+      "minecraft:item/armor/equip_leather5",
+      "minecraft:item/armor/equip_leather6"
+    ]
+  },
+  "item.letter.remove_attachment": {
+    "category": "players",
+    "subtitle": "subtitle.ls_furniture.detach_from_letter",
+    "sounds": [
+      "minecraft:entity/itemframe/remove_item1",
+      "minecraft:entity/itemframe/remove_item2",
+      "minecraft:entity/itemframe/remove_item3",
+      "minecraft:entity/itemframe/remove_item4"
+    ]
+  },
+  "block.mailbox.update": {
+    "category": "blocks",
+    "subtitle": "subtitle.ls_furniture.mailbox_update",
+    "sounds": [
+      "minecraft:random/wood_click"
+    ]
+  },
+  "event.mail_received": {
+    "category": "players",
+    "subtitle": "subtitle.ls_furniture.mail_received",
+    "sounds": [
+      "minecraft:block.amethyst_block.chime"
+    ]
+  }
+}

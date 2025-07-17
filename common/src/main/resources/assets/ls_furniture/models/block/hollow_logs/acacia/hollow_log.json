@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/hollow_logs/hollow_log",
+  "textures": {
+    "particle": "block/acacia_log",
+    "Log": "block/acacia_log",
+    "Log Top": "block/acacia_log_top",
+    "Stripped Log": "block/stripped_acacia_log"
+  }
+}

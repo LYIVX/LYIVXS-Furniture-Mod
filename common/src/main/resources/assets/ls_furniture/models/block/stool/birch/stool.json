@@ -1,0 +1,9 @@
+{
+	"parent": "ls_furniture:block/template/stools/stool",
+	"textures": {
+		"particle": "#Main",
+		"Leg": "block/birch_log",
+		"Main": "block/stripped_birch_log",
+		"Secondary": "block/stripped_birch_log"
+	}
+}

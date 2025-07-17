@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/drawers/drawer_open",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_acacia_log",
+    "Secondary": "block/acacia_log",
+    "Handle": "ls_furniture:block/handles/handle_big_oak"
+  }
+}

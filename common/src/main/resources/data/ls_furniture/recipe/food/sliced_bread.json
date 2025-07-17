@@ -1,0 +1,14 @@
+{
+  "type": "ls_furniture:cutting_board",
+  "uses": 3,
+
+  "input": [
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:sliced_bread",
+    "count": 3
+  }
+}

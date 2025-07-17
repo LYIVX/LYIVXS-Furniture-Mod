@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/blinds/blinds_middle_top_open",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_birch_log",
+    "Secondary": "block/birch_log",
+    "Pole": "block/white_concrete"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/stairs/stair_right",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_jungle_log",
+    "Secondary": "block/jungle_log"
+  }
+}

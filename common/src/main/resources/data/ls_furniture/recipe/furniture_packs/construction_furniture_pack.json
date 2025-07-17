@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "furniture_pack",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "ls_furniture:iron_rod"
+    },
+    {
+      "item": "minecraft:bricks"
+    },
+    {
+      "item": "minecraft:stone_bricks"
+    },
+    {
+      "item": "minecraft:brick"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:electrical_furniture_pack"
+  }
+}

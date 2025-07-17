@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/tables/table_top",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_bamboo_block",
+    "Secondary": "block/bamboo_block"
+  }
+}

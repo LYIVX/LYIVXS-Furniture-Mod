@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/chain_link_fence_side",
+
+  "textures": {
+    "all": "block/chain",
+    "particle": "block/chain",
+    "Chain": "block/chain",
+    "Log": "block/warped_stem"
+  },
+  "render_type": "cutout"
+}

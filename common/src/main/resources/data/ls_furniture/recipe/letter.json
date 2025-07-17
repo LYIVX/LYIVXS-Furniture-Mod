@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "paper",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    }
+  ],
+  "result": {
+    "id": "ls_furniture:letter"
+  }
+}

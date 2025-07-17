@@ -1,0 +1,8 @@
+{
+  "parent": "ls_furniture:block/template/bushes/bush_post_3",
+  "textures": {
+    "texture": "block/flowering_azalea_leaves",
+    "particle": "block/flowering_azalea_leaves"
+  },
+  "render_type": "cutout"
+}

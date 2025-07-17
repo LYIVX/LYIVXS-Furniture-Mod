@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/blinds/blinds_middle_bottom",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_warped_stem",
+    "Secondary": "block/warped_stem",
+    "Pole": "block/white_concrete"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "values": [
+    { "required": false, "id": "#ls_furniture:counter_ovens" },
+    { "required": false, "id": "ls_furniture:plate" },
+    { "required": false, "id": "ls_furniture:fridge_freezer" },
+    { "required": false, "id": "ls_furniture:microwave" },
+    { "required": false, "id": "ls_furniture:kettle" }
+
+
+  ]
+}

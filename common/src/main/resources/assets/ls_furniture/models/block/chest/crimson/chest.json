@@ -1,0 +1,7 @@
+{
+  "parent": "ls_furniture:block/template/chests/chest_base",
+  "textures": {
+    "wood_type": "ls_furniture:entity/chest/crimson",
+    "particle": "minecraft:block/crimson_planks"
+  }
+}

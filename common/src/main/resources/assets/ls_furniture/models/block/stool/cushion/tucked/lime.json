@@ -1,0 +1,7 @@
+{
+	"parent": "ls_furniture:block/stool/cushion/tucked/model",
+	"textures": {
+		"0": "block/lime_wool",
+		"particle": "block/lime_wool"
+	}
+}

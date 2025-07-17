@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "plugin": "net.lyivx.ls_furniture.mixin.neoforge.ConditionalMixinPlugin",
+  "package": "net.lyivx.ls_furniture.mixin.neoforge",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "FireBlockAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

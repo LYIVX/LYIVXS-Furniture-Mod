@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_outer",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_jungle_log",
+    "Secondary": "block/jungle_log",
+    "Leg": "block/jungle_log"
+  }
+}

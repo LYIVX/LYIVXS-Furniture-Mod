@@ -1,0 +1,10 @@
+{
+  "parent": "ls_furniture:block/template/blinds/blinds_single_top_open",
+  "textures": {
+    "particle": "block/stripped_mangrove_log",
+    "Main": "block/stripped_mangrove_log",
+    "Secondary": "block/mangrove_log",
+    "Pole": "block/white_concrete",
+    "Pole2": "block/light_gray_concrete"
+  }
+}

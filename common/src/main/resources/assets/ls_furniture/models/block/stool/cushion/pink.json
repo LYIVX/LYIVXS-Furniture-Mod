@@ -1,0 +1,7 @@
+{
+	"parent": "ls_furniture:block/stool/cushion/model",
+	"textures": {
+		"0": "block/pink_wool",
+		"particle": "block/pink_wool"
+	}
+}

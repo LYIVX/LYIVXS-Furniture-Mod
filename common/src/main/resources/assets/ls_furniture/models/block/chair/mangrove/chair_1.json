@@ -1,0 +1,10 @@
+{
+	"parent": "ls_furniture:block/template/chairs/chair",
+	"textures": {
+		"particle": "#Main",
+		"Main": "block/stripped_mangrove_log",
+		"Secondary": "block/stripped_mangrove_log",
+		"Leg": "block/mangrove_log",
+		"Pattern": "block/stripped_mangrove_log"
+	}
+}

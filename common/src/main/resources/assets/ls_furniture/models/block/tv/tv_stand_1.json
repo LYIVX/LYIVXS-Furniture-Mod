@@ -1,0 +1,8 @@
+{
+	"parent": "ls_furniture:block/template/tv/tv_stand",
+	"textures": {
+		"Frame": "block/anvil",
+		"Screen": "block/black_wool",
+		"particle": "#Frame"
+	}
+}

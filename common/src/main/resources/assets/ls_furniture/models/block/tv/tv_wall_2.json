@@ -1,0 +1,8 @@
+{
+	"parent": "ls_furniture:block/template/tv/tv_wall",
+	"textures": {
+		"Frame": "block/anvil",
+		"Screen": "ls_furniture:block/computer_static",
+		"particle": "#Frame"
+	}
+}

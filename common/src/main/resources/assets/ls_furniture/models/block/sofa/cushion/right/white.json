@@ -1,0 +1,7 @@
+{
+	"parent": "ls_furniture:block/sofa/cushion/right/model",
+	"textures": {
+		"0": "block/white_wool",
+		"particle": "block/white_wool"
+	}
+}

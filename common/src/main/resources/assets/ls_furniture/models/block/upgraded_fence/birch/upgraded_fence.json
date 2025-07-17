@@ -1,0 +1,11 @@
+{
+  "parent": "ls_furniture:block/template/upgraded_fences/upgraded_fence_side",
+
+  "textures": {
+    "all": "block/stripped_birch_log",
+    "particle": "block/stripped_birch_log",
+    "Stripped": "block/stripped_birch_log",
+    "Log": "block/birch_log"
+  },
+  "render_type": "cutout"
+}

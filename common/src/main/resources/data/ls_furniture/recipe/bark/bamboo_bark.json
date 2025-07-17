@@ -1,0 +1,12 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+
+  "input": {
+    "item": "minecraft:bamboo_block"
+  },
+  "result": {
+    "id": "ls_furniture:bamboo_bark",
+    "count": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/crates/crate",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_acacia_log",
+    "Secondary": "block/acacia_log",
+    "Handle": "block/anvil"
+  }
+}

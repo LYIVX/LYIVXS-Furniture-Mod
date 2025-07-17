@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/sofas/sofa_inner",
+  "textures": {
+    "particle": "#Main",
+    "Main": "block/stripped_cherry_log",
+    "Secondary": "block/cherry_log",
+    "Leg": "block/cherry_log"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ls_furniture:block/template/lamps/lamp",
+  "textures": {
+    "Log": "block/crimson_stem",
+    "particle": "block/stripped_crimson_stem_top",
+    "Stripped": "block/stripped_crimson_stem",
+    "Torch": "block/crimson_stem"
+  }
+}
