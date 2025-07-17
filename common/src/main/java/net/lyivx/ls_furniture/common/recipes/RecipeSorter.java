@@ -2,7 +2,7 @@ package net.lyivx.ls_furniture.common.recipes;
 
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
-import net.lyivx.ls_furniture.common.config.Configs;
+import net.lyivx.ls_furniture.config.ConfigProvider;
 import net.lyivx.ls_furniture.registry.ModItems;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -37,7 +37,7 @@ public class RecipeSorter {
     public static void sort(List<RecipeHolder<WorkstationRecipe>> recipes, Level level) {
         initializeIfNeeded();
 
-        if (Configs.SORT_RECIPES) {
+        if (ConfigProvider.shouldSortRecipes()) {
             recipes.sort(Comparator.comparingInt(recipe -> {
                 Item resultItem = recipe.value().result().getItem();
                 int index = REGISTRATION_ORDER.indexOf(resultItem);

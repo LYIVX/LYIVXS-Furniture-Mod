@@ -1,7 +1,4 @@
 {
-  "key.ls_furniture.categories.ls_furniture": "LYIVX's Furniture Mod",
-  "key.ls_furniture.openconfig": "Open Config",
-
   "gui.ls_furniture.jei.workstation": "Workstation",
   "gui.ls_furniture.jei.chopping_board": "Chopping Board",
   "gui.ls_furniture.jei.cutting_board": "Cutting Board",
@@ -11,30 +8,35 @@
   "gui.ls_furniture.jei.world_interaction.use_on": "Right Click On Block",
 
 
-  "config.ls_furniture.title": "LYIVX's Furniture Config",
-  "config.ls_furniture.category.general": "General",
-  "config.ls_furniture.category.workstation": "Workstation",
-  "config.ls_furniture.category.misc": "Misc",
+  "config.ls_furniture.category": "Furnection",
+
+  "config.ls_furniture.group.workstation": "Workstation Settings",
 
   "config.ls_furniture.sort_recipes": "Sort Recipes",
-  "config.ls_furniture.sort_recipes.tooltip": "Sort Recipes Following Creative Tab Order.",
+  "config.ls_furniture.sort_recipes.tooltip": "Sort recipes following creative tab order.",
 
   "config.ls_furniture.search_bar_mode": "Search Bar Mode",
-  "config.ls_furniture.search_bar_mode.tooltip": "Determines When And How The Search Bar Should Show And Behave",
+  "config.ls_furniture.search_bar_mode.tooltip": "Determines when and how the search bar should show and behave",
 
   "config.ls_furniture.search_bar_threshold": "Search Bar Threshold",
-  "config.ls_furniture.search_bar_threshold.tooltip": "At How Many Recipes The Search Bar Should Appear When In §eDYNAMIC§r Mode.",
+  "config.ls_furniture.search_bar_threshold.tooltip": "At how many recipes the search bar should appear when in §eDYNAMIC§r Mode.",
 
-  "config.ls_furniture.preview": "Preview",
-  "config.ls_furniture.preview.tooltip": "To Show And Hide The Preview Tab.",
+  "config.ls_furniture.show_preview": "Preview",
+  "config.ls_furniture.show_preview.tooltip": "To show and hide the preview tab.",
 
   "config.ls_furniture.search_mode.off": "Off",
   "config.ls_furniture.search_mode.on": "On",
   "config.ls_furniture.search_mode.automatic": "Automatic",
   "config.ls_furniture.search_mode.dynamic": "Dynamic",
 
+  "config.ls_furniture.group.sink": "Sink Settings",
 
-  "container.ls_furniture.workstation": "Workstation",
+  "config.ls_furniture.sink_allow_all_liquids": "Allow All Liquids",
+  "config.ls_furniture.sink_allow_all_liquids.tooltip": "If enabled, the sink can hold any fluid. If disabled, it only accepts water.",
+
+  "config.ls_furniture.sink_capacity_buckets": "Capacity (Buckets)",
+  "config.ls_furniture.sink_capacity_buckets.tooltip": "Sets the maximum number of buckets the sink can hold. Needs A game restart",
+
   "container.ls_furniture.workstation.config": "Open Workstation Config",
   "container.ls_furniture.workstation.preview.open": "Open Preview Tab",
   "container.ls_furniture.workstation.preview.close": "Close Preview Tab",
@@ -46,7 +48,7 @@
   "container.ls_furniture.workstation.horizontal_block": "Horizontal Blocks",
   "container.ls_furniture.workstation.two_by_two_block": "Two By Two Blocks",
 
-
+  "container.ls_furniture.workstation": "Workstation",
   "container.ls_furniture.drawer": "Drawer",
   "container.ls_furniture.mailbox": "Mailbox",
   "container.ls_furniture.counter_cupboard": "Counter Cupboard",
@@ -58,6 +60,7 @@
   "container.ls_furniture.freezer": "Freezer",
   "container.ls_furniture.crate": "Crate",
   "container.ls_furniture.tombstone.edit": "Edit Tombstone Message",
+  "container.ls_furniture.barrel": "Barrel",
 
   "container.ls_furniture.oak_chest": "Oak Chest",
   "container.ls_furniture.oak_chestDouble": "Large Oak Chest",
@@ -106,8 +109,8 @@
   "tooltip.ls_furniture.saw": "§eRight Click §rTo Change Texture Variant",
   "tooltip.ls_furniture.hammer": "§eRight Click §rTo Change Furniture Model",
   "tooltip.ls_furniture.hammer.shift": "§eShift-Right Click §rTo Cycle Through Furniture Properties",
-  "tooltip.ls_furniture.hammer.control": "§eCRTL-Right Click §rTo Lock Furniture Properties",
   "tooltip.ls_furniture.wrench": "§eRight Click §rTo Rotate Block",
+  "tooltip.ls_furniture.wrench.shift": "§eShift-Right Click §rTo Lock Furniture Properties",
   "tooltip.ls_furniture.shears": "§eRight Click §rTo Remove Cushion/Wool",
   "tooltip.ls_furniture.sink": "§eRight Click §rOn A Counter",
   "tooltip.ls_furniture.oven": "§eRight Click §rOn A Counter",
@@ -149,9 +152,9 @@
 
   "msg.ls_furniture.locked": "This Block Is Locked",
   "msg.ls_furniture.tool.selected": "Selected: ",
-  "msg.ls_furniture.hammer.no_lock": " Can Not Be Locked at ",
-  "msg.ls_furniture.hammer.locked": "Locked",
-  "msg.ls_furniture.hammer.unlocked": "Unlocked",
+  "msg.ls_furniture.wrench.no_lock": " Can Not Be Locked at ",
+  "msg.ls_furniture.wrench.locked": "Locked",
+  "msg.ls_furniture.wrench.unlocked": "Unlocked",
 
 
   "subtitle.ls_furniture.mailbox_update": "Mailbox toggles",

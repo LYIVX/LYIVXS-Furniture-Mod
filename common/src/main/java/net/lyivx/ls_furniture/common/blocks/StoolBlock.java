@@ -1,12 +1,12 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import net.lyivx.ls_core.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
-import net.lyivx.ls_furniture.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.common.utils.block.TuckableBlock;
 import net.lyivx.ls_furniture.registry.ModItems;

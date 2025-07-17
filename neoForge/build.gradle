@@ -1,14 +1,11 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
+    id "dev.architectury.loom"
 }
 
 architectury {
     platformSetupLoomIde()
     neoForge()
-}
-
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
@@ -24,6 +21,8 @@ dependencies {
     modImplementation "dev.architectury:architectury-neoforge:${architectury_version}"
 
     include modApi("com.teamresourceful.resourcefullib:resourcefullib-neoforge-$rootProject.resourcefullib_version")
+
+    modImplementation "curse.maven:lyivxs-core-1200581:6771622"
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")

@@ -1,9 +1,9 @@
 package net.lyivx.ls_furniture.common.blocks.entity;
 
+import net.lyivx.ls_furniture.common.blocks.BarrelModBlock;
 import net.lyivx.ls_furniture.common.blocks.CounterCupboardBlock;
 import net.lyivx.ls_furniture.common.menus.ModChestMenu;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
-import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -24,22 +24,22 @@ import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BarrelBlockEntity extends RandomizableContainerBlockEntity {
+public class BarrelModBlockEntity extends RandomizableContainerBlockEntity {
     private NonNullList<ItemStack> items;
     private ContainerOpenersCounter openersCounter;
 
-    public BarrelBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(ModBlockEntitys.BARREL_ENTITY.get(), blockPos, blockState);
+    public BarrelModBlockEntity(BlockPos blockPos, BlockState blockState) {
+        super(ModBlockEntitys.MOD_BARREL_ENTITY.get(), blockPos, blockState);
         this.items = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
         this.openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level level, BlockPos pos, BlockState state) {
-                BarrelBlockEntity.this.playSound(state, SoundEvents.BARREL_OPEN);
-                BarrelBlockEntity.this.updateBlockState(state, true);
+                BarrelModBlockEntity.this.playSound(state, SoundEvents.BARREL_OPEN);
+                BarrelModBlockEntity.this.updateBlockState(state, true);
             }
 
             protected void onClose(Level level, BlockPos pos, BlockState state) {
-                BarrelBlockEntity.this.playSound(state, SoundEvents.BARREL_CLOSE);
-                BarrelBlockEntity.this.updateBlockState(state, false);
+                BarrelModBlockEntity.this.playSound(state, SoundEvents.BARREL_CLOSE);
+                BarrelModBlockEntity.this.updateBlockState(state, false);
             }
 
             protected void openerCountChanged(Level level, BlockPos pos, BlockState state, int count, int openCount) {
@@ -48,7 +48,7 @@ public class BarrelBlockEntity extends RandomizableContainerBlockEntity {
             protected boolean isOwnContainer(Player player) {
                 if (player.containerMenu instanceof ModChestMenu) {
                     Container container = ((ModChestMenu)player.containerMenu).getContainer();
-                    return container == BarrelBlockEntity.this;
+                    return container == BarrelModBlockEntity.this;
                 } else {
                     return false;
                 }
@@ -110,11 +110,11 @@ public class BarrelBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     void updateBlockState(BlockState state, boolean open) {
-        this.level.setBlock(this.getBlockPos(), state.setValue(CounterCupboardBlock.OPEN, open), 3);
+        this.level.setBlock(this.getBlockPos(), state.setValue(BarrelModBlock.OPEN, open), 3);
     }
 
     void playSound(BlockState state, SoundEvent sound) {
-        Vec3i vec3i = (state.getValue(CounterCupboardBlock.FACING)).getNormal();
+        Vec3i vec3i = (state.getValue(BarrelModBlock.FACING)).getNormal();
         double d = (double)this.worldPosition.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)this.worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)this.worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

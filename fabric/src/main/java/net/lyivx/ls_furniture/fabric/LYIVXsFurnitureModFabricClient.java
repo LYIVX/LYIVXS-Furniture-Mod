@@ -41,12 +41,7 @@ public class LYIVXsFurnitureModFabricClient implements ClientModInitializer {
         var register = new FabricClientRegister();
         LYIVXsFurnitureModClient.registerBlockRenderers(register);
         LYIVXsFurnitureModClient.registerEntityRenderers(register);
-
     }
-
-
-
-
 
     private static class FabricClientRegister implements LYIVXsFurnitureModClientRegisterers {
 

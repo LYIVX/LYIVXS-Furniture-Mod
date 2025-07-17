@@ -2,6 +2,7 @@ package net.lyivx.ls_furniture.common.items;
 
 import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -33,22 +34,20 @@ import java.util.stream.Collectors;
 public class HammerItem extends Item {
 
     private double selectedPropertyIndex = 0;
-    private static final String LOCKED_TAG = "locked";
 
     public HammerItem(Properties properties) {
         super(properties);
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.hammer"));
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.hammer.shift"));
-            tooltipComponents.add(Component.translatable("tooltip.ls_furniture.hammer.control"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.ls_furniture.screen.shift"));
         }
-        super.appendHoverText(stack, context, tooltipComponents, flag);
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 
     @Override
@@ -58,10 +57,6 @@ public class HammerItem extends Item {
         Player player = context.getPlayer();
         InteractionHand hand = context.getHand();
         BlockState state = level.getBlockState(pos);
-
-        if (player != null && Screen.hasControlDown()) {
-            return handleLockToggle(level, pos, player);
-        }
 
         if (state.getBlock() instanceof HammerItem.HammerableBlock hammerBlock) {
             List<Property<?>> hammerProperties = hammerBlock.getHammerableProperties();
@@ -83,45 +78,6 @@ public class HammerItem extends Item {
         }
 
         return InteractionResult.PASS;
-    }
-
-    private InteractionResult handleLockToggle(Level level, BlockPos pos, Player player) {
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        BlockState blockState = level.getBlockState(pos);
-        Block block = blockState.getBlock();
-        String blockName = block.getName().getString();  // Get the block's name
-        String posString = String.format("(%d, %d, %d)", pos.getX(), pos.getY(), pos.getZ());
-
-
-        if (blockEntity instanceof ILockable lockable) {
-            boolean newLockState = !lockable.isLocked();
-            lockable.setLocked(newLockState);
-
-            Component lockStatus = newLockState
-                    ? Component.translatable("msg.ls_furniture.hammer.locked")
-                    : Component.translatable("msg.ls_furniture.hammer.unlocked");
-
-            Component lockedMessage = ((MutableComponent) lockStatus)
-                    .append(" ")
-                    .append(blockName)
-                    .append(" at ")
-                    .append(posString);
-
-            player.displayClientMessage(lockedMessage, true);
-            level.playSound(null, pos, getUseSound(), SoundSource.BLOCKS, 1.0f, 1.0f);
-            return InteractionResult.SUCCESS;
-        } else {
-            Component noLock = Component.translatable("msg.ls_furniture.hammer.no_lock");
-            Component blockNameComponent = Component.literal(blockName);
-            Component posStringComponent = Component.literal(posString);
-
-            Component noLockMessage = ((MutableComponent) blockNameComponent)
-                    .append(noLock)
-                    .append(posStringComponent);
-
-            player.displayClientMessage(noLockMessage, true);
-            return InteractionResult.FAIL;
-        }
     }
 
     private String formatString(String input) {
@@ -223,13 +179,5 @@ public class HammerItem extends Item {
         default BlockState updateAfterCycle(BlockState state, LevelAccessor level, BlockPos pos) {
             return state;
         }
-    }
-
-    public static boolean isBlockLocked(Level level, BlockPos pos) {
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof ILockable lockable) {
-            return lockable.isLocked();
-        }
-        return false;
     }
 }

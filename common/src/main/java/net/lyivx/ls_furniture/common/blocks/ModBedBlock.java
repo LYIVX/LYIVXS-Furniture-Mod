@@ -1,10 +1,10 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import net.lyivx.ls_core.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
-import net.lyivx.ls_furniture.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

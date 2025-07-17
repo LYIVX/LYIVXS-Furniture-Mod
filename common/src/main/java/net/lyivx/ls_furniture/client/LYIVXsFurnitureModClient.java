@@ -9,8 +9,6 @@ import net.lyivx.ls_furniture.client.renderers.*;
 import net.lyivx.ls_furniture.client.screens.LetterScreen;
 import net.lyivx.ls_furniture.client.screens.TombstoneScreen;
 import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
-import net.lyivx.ls_furniture.common.commands.ModConfigCommand;
-import net.lyivx.ls_furniture.common.keybinds.ModConfigKeybind;
 import net.lyivx.ls_furniture.registry.ModBlockEntitys;
 import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModEntities;
@@ -49,8 +47,6 @@ public class LYIVXsFurnitureModClient {
     public static void init() {
         initRenderTypes();
 
-        ModConfigKeybind.registerKeybinding();
-        ClientTickEvent.CLIENT_POST.register(client -> ModConfigKeybind.checkKeybinding());
     }
 
     public static void registerBlockRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
@@ -64,6 +60,7 @@ public class LYIVXsFurnitureModClient {
         registerer.registerBlockEntity(ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.RAILING_ENTITY.get(), RailingPreviewRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.TOMBSTONE_ENTITY.get(), TombstoneRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.COUNTER_SINK_ENTITY.get(), SinkRenderer::new);
     }
 
     public static void registerEntityRenderers(LYIVXsFurnitureModClientRegisterers registerer) {

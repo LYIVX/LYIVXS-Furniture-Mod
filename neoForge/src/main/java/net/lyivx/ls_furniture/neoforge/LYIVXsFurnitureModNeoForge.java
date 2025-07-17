@@ -1,5 +1,7 @@
 package net.lyivx.ls_furniture.neoforge;
 
+import dev.architectury.event.events.common.LifecycleEvent;
+import net.lyivx.ls_core.LYIVXsCore;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.client.neoforge.ClientEvents;
@@ -23,14 +25,13 @@ public class LYIVXsFurnitureModNeoForge {
     public LYIVXsFurnitureModNeoForge(IEventBus bus) {
         LYIVXsFurnitureMod.init();
 
+        LifecycleEvent.SETUP.register(LYIVXsCore::setup);
+
         bus.addListener(this::onCommonSetup);
         bus.addListener(this::onCreativeModeTabs);
         bus.addListener(this::onClientSetup);
-        bus.addListener(ClientEvents::onRegisterBlockColors);
-        bus.addListener(ClientEvents::onRegisterItemColors);
 
         NeoForge.EVENT_BUS.register(this);
-
     }
 
     private void onClientSetup(FMLClientSetupEvent event) {
@@ -41,7 +42,7 @@ public class LYIVXsFurnitureModNeoForge {
         event.enqueueWork(() -> {
             ModFuels.init();
             // Any other setup code
-        });   
+        });
     }
 
 

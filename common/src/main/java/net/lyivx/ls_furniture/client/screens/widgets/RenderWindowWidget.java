@@ -5,7 +5,6 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.lyivx.ls_furniture.client.screens.WorkstationScreen;
-import net.lyivx.ls_furniture.common.blocks.WardrobeBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -14,10 +13,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.util.Mth;
-import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.joml.Quaternionf;
 
 import java.util.EnumSet;
@@ -26,7 +23,6 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import static net.lyivx.ls_furniture.client.screens.widgets.FakeLevel.getFenceProperty;
-import static net.minecraft.util.CommonColors.*;
 
 public class RenderWindowWidget extends AbstractWidget {
     private final Supplier<FakeLevel> fakeLevelSupplier;

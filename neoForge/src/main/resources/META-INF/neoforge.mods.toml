@@ -5,10 +5,10 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
 
 [[mods]]
 modId = "ls_furniture"
-version = "1.0.4-SNAPSHOT"
-displayName = "LYIVX's Furniture Mod"
+version = "1.0.7"
+displayName = "Furnection"
 authors = "LYIVX"
-description = "A Vanilla Styled Furniture Mod"
+description = "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod"
 displayURL = "https://modrinth.com/mod/lyivxs-furniture"
 
 
@@ -23,6 +23,13 @@ side = "BOTH"
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ls_furniture]]
+modId = "ls_core"
+type = "required"
+versionRange = "[1.0.2,)"
 ordering = "NONE"
 side = "BOTH"
 

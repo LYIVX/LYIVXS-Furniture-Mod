@@ -1,29 +1,37 @@
 {
-    "gui.ls_furniture.jei.workstation": "工作站",
-    "gui.ls_furniture.jei.chopping_board": "切碎板",
-    "gui.ls_furniture.jei.cutting_board": "切割板",
-    "gui.ls_furniture.jei.chopping_board.chops": "需要 %s 碎片",
-    "gui.ls_furniture.jei.world_interaction": "世界交互",
-    "gui.ls_furniture.jei.world_interaction.use": "右键物品与方块",
-    "gui.ls_furniture.jei.world_interaction.use_on": "右键方块",
+  "gui.ls_furniture.jei.workstation": "工作站",
+  "gui.ls_furniture.jei.chopping_board": "切碎板",
+  "gui.ls_furniture.jei.cutting_board": "切割板",
+  "gui.ls_furniture.jei.chopping_board.chops": "需要 %s 碎片",
+  "gui.ls_furniture.jei.world_interaction": "世界交互",
+  "gui.ls_furniture.jei.world_interaction.use": "右键物品与方块",
+  "gui.ls_furniture.jei.world_interaction.use_on": "右键方块",
 
 
-    "config.ls_furniture.title": "LYIVX 的家具配置",
-    "config.ls_furniture.category.general": "普通设置",
+  "config.ls_furniture.title": "LYIVX 的家具配置",
+  "config.ls_furniture.category.general": "普通设置",
 
-    "config.ls_furniture.sort_recipes": "合成表排序",
-    "config.ls_furniture.sort_recipes.tooltip": "按照创建选项卡顺序排列合成表。如果服务器和客户端的创建顺序不同，可能会造成问题",
+  "config.ls_furniture.sort_recipes": "合成表排序",
+  "config.ls_furniture.sort_recipes.tooltip": "按照创建选项卡顺序排列合成表。如果服务器和客户端的创建顺序不同，可能会造成问题",
 
-    "config.ls_furniture.search_bar_mode": "搜索栏模式",
-    "config.ls_furniture.search_bar_mode.tooltip": "决定搜索栏在图形用户界面中的行为方式",
+  "config.ls_furniture.search_bar_mode": "搜索栏模式",
+  "config.ls_furniture.search_bar_mode.tooltip": "决定搜索栏在图形用户界面中的行为方式",
 
-    "config.ls_furniture.search_bar_threshold": "搜索栏阈值",
-    "config.ls_furniture.search_bar_threshold.tooltip": "在自动或动态模式下，搜索栏应显示多少合成表",
+  "config.ls_furniture.search_bar_threshold": "搜索栏阈值",
+  "config.ls_furniture.search_bar_threshold.tooltip": "在自动或动态模式下，搜索栏应显示多少合成表",
 
-    "config.ls_furniture.search_mode.off": "关闭",
-    "config.ls_furniture.search_mode.on": "开启",
-    "config.ls_furniture.search_mode.automatic": "自动",
-    "config.ls_furniture.search_mode.dynamic": "动态",
+  "config.ls_furniture.search_mode.off": "关闭",
+  "config.ls_furniture.search_mode.on": "开启",
+  "config.ls_furniture.search_mode.automatic": "自动",
+  "config.ls_furniture.search_mode.dynamic": "动态",
+
+  "config.ls_furniture.group.sink": "[Sink Settings CN]",
+
+  "config.ls_furniture.sink_allow_all_liquids": "[Allow All Liquids CN]",
+  "config.ls_furniture.sink_allow_all_liquids.tooltip": "[If enabled, the sink can hold any fluid. If disabled, it only accepts water. CN]",
+
+  "config.ls_furniture.sink_capacity_buckets": "[Capacity (Buckets) CN]",
+  "config.ls_furniture.sink_capacity_buckets.tooltip": "[Sets the maximum number of buckets the sink can hold. CN]",
 
 
   "container.ls_furniture.workstation": "工作站",

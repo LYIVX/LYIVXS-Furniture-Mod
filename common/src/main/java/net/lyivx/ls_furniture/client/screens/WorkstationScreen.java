@@ -1,16 +1,16 @@
 package net.lyivx.ls_furniture.client.screens;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
+
+import net.lyivx.ls_core.client.screens.ModConfigScreen;
 import net.lyivx.ls_furniture.client.screens.widgets.FakeLevel;
 import net.lyivx.ls_furniture.client.screens.widgets.HoverImageButton;
 import net.lyivx.ls_furniture.client.screens.widgets.RenderWindowWidget;
 import net.lyivx.ls_furniture.common.blocks.ModBedBlock;
-import net.lyivx.ls_furniture.common.blocks.SofaBlock;
 import net.lyivx.ls_furniture.common.blocks.WardrobeBlock;
-import net.lyivx.ls_furniture.common.config.Configs;
 import net.lyivx.ls_furniture.common.menus.WorkstationMenu;
 import net.lyivx.ls_furniture.common.recipes.FilterableRecipe;
+import net.lyivx.ls_furniture.config.ConfigProvider;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -23,7 +23,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
@@ -39,7 +38,6 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
-import static net.minecraft.util.CommonColors.BLACK;
 import static net.minecraft.util.CommonColors.WHITE;
 
 public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> {
@@ -73,7 +71,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     private boolean scrolling;
     private int startIndex;
     private boolean displayRecipes;
-    private boolean showPreview = true;
+    private boolean showPreview;
 
     private EditBox searchBox;
 
@@ -89,6 +87,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     private HoverImageButton twoByTwoBlockButton;
 
     public static RenderWindowWidget.Mode currentMode = RenderWindowWidget.Mode.SINGLE_BLOCK;
+    public static boolean showPreviewStatic = true; // Add this new static field
     private RenderWindowWidget renderWindowWidget;
     private final FakeLevel fakeLevel = new FakeLevel();
 
@@ -96,6 +95,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
         super(workstationMenu, inventory, component);
         workstationMenu.registerUpdateListener(this::containerChanged);
         --this.titleLabelY;
+        this.showPreview = showPreviewStatic; // Initialize instance variable from static
     }
 
     @Override
@@ -123,14 +123,14 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 12, 10,
                 button -> {
                     // Open configuration screen
-                    this.minecraft.setScreen(new ModConfigScreen(this, this.minecraft.options, ModConfigScreen.CategoryType.WORKSTATION));
+                    this.minecraft.setScreen(new ModConfigScreen(this, this.minecraft.options, ConfigProvider.PROVIDER_ID));
                 },
                 false,
                 false
         ));
         this.gearButton.setTooltip(Tooltip.create(CONFIG_TEXT));
 
-        if (Configs.PREVIEW) {
+        if (ConfigProvider.shouldShowPreview()) {
             int buttonWidth = 20;
             int buttonHeight = 21;
             int textureWidth = 80;
@@ -142,6 +142,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                     buttonWidth, buttonHeight,
                     button -> {
                         this.showPreview = !this.showPreview;  // Toggle the state
+                        showPreviewStatic = this.showPreview;  // Update the static state
                         this.previewButton.setStayClicked(this.showPreview);  // Update button state
                         updatePreviewVisibility();  // Update UI based on new state
                         assert this.minecraft != null;
@@ -205,6 +206,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 button -> {
                     setMode(RenderWindowWidget.Mode.SINGLE_BLOCK);
                     updateBlockPreview();
+                    this.rebuildWidgets();
                 },
                 currentMode == RenderWindowWidget.Mode.SINGLE_BLOCK,
                 false
@@ -222,6 +224,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 button -> {
                     setMode(RenderWindowWidget.Mode.L_SHAPE_BLOCK);
                     updateBlockPreview();
+                    this.rebuildWidgets();
                 },
                 currentMode == RenderWindowWidget.Mode.L_SHAPE_BLOCK,
                 false
@@ -239,6 +242,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 button -> {
                     setMode(RenderWindowWidget.Mode.VERTICAL_BLOCK);
                     updateBlockPreview();
+                    this.rebuildWidgets();
                 },
                 currentMode == RenderWindowWidget.Mode.VERTICAL_BLOCK,
                 false
@@ -256,6 +260,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 button -> {
                     setMode(RenderWindowWidget.Mode.HORIZONTAL_BLOCK);
                     updateBlockPreview();
+                    this.rebuildWidgets();
                 },
                 currentMode == RenderWindowWidget.Mode.HORIZONTAL_BLOCK,
                 false
@@ -273,6 +278,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 button -> {
                     setMode(RenderWindowWidget.Mode.TWO_BY_TWO_BLOCK);
                     updateBlockPreview();
+                    this.rebuildWidgets();
                 },
                 currentMode == RenderWindowWidget.Mode.TWO_BY_TWO_BLOCK,
                 false
@@ -364,8 +370,6 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     private void setMode(RenderWindowWidget.Mode newMode) {
         if (currentMode != newMode) {
             currentMode = newMode;
-            updateRenderWindowWidget();
-            updateBlockPreview();
         }
     }
 
@@ -403,7 +407,6 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                 renderWindowWidget.setCurrentState(null);
             }
         }
-        updateRenderWindowWidget();
     }
 
     private List<BlockPos> getPositionsForMode(RenderWindowWidget.Mode mode) {
@@ -433,7 +436,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
     }
 
     private void updateSearchBarVisibility() {
-        boolean hasSearch = Configs.hasSearchBar(menu.getRecipes().size());
+        boolean hasSearch = ConfigProvider.hasSearchBar(menu.getRecipes().size());
         this.searchBox.visible = hasSearch;
         this.searchBox.active = hasSearch;
     }
@@ -515,16 +518,25 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
             ItemStack resultItem = recipe.output();
             Block block = Block.byItem(resultItem.getItem());
 
-            if (block instanceof WardrobeBlock || block instanceof ModBedBlock || block instanceof DoorBlock) {
-                renderSmallerText(guiGraphics, NO_PREVIEW_TITLE_TEXT, (this.width / 2) - 180, this.topPos + 45, WHITE, 0.75F);
-                this.removeWidget(renderWindowWidget);
-                this.removeWidget(singleBlockButton);
-                this.removeWidget(lShapeBlockButton);
-                this.removeWidget(verticalBlockButton);
-                this.removeWidget(horizontalBlockButton);
-                this.removeWidget(twoByTwoBlockButton);
-            } else {
-                this.rebuildWidgets();
+            if (ConfigProvider.shouldShowPreview()) {
+                if (showPreviewStatic) {
+                    if (block instanceof WardrobeBlock || block instanceof ModBedBlock || block instanceof DoorBlock) {
+                        renderSmallerText(guiGraphics, NO_PREVIEW_TITLE_TEXT, (this.width / 2) - 180, this.topPos + 45, WHITE, 0.75F);
+                        this.removeWidget(renderWindowWidget);
+                        this.removeWidget(singleBlockButton);
+                        this.removeWidget(lShapeBlockButton);
+                        this.removeWidget(verticalBlockButton);
+                        this.removeWidget(horizontalBlockButton);
+                        this.removeWidget(twoByTwoBlockButton);
+                    } else {
+                        this.addRenderableWidget(renderWindowWidget);
+                        this.addRenderableWidget(singleBlockButton);
+                        this.addRenderableWidget(lShapeBlockButton);
+                        this.addRenderableWidget(verticalBlockButton);
+                        this.addRenderableWidget(horizontalBlockButton);
+                        this.addRenderableWidget(twoByTwoBlockButton);
+                    }
+                }
             }
         }
     }
@@ -552,7 +564,7 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
 
         guiGraphics.blit(bgLocation, minScrollX(), scrollY + barPos, 176 + (this.isScrollBarActive() ? 0 : 12), 0, 12, barH);
 
-        if (Configs.PREVIEW) {
+        if (ConfigProvider.shouldShowPreview()) {
             if (this.showPreview) {
                 renderPreviewTab(guiGraphics);
             }
@@ -683,7 +695,9 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
                         Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(ModSoundEvents.WORKSTATION_SELECT.get(), 1.0F));
                         this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, actualIndex);
                         updateSelectedIndex();
-                        updateBlockPreview();
+                        if (ConfigProvider.shouldShowPreview()) {
+                            updateBlockPreview();
+                        }
                     }
                     success.set(true);
                 }
@@ -777,7 +791,6 @@ public class WorkstationScreen extends AbstractContainerScreen<WorkstationMenu> 
 
         //recipes could have changed here so we need to refresh
         this.refreshSearchResults();
-        updateBlockPreview();
     }
 
     private interface ButtonConsumer {

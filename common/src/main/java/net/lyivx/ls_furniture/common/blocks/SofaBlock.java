@@ -1,5 +1,6 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import net.lyivx.ls_core.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.client.screens.widgets.FakeLevel;
 import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
@@ -8,7 +9,6 @@ import net.lyivx.ls_furniture.common.blocks.properties.SofaType;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
-import net.lyivx.ls_furniture.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.registry.ModItems;
 import net.minecraft.client.gui.screens.Screen;
@@ -17,7 +17,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -386,6 +385,7 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock, Wren
             Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
         }
     }
+
     public List<Property<?>> getHammerableProperties() {
         return List.of(SHAPE);
     }

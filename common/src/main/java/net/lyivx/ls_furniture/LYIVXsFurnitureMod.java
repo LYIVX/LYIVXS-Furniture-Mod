@@ -2,9 +2,8 @@ package net.lyivx.ls_furniture;
 
 import dev.architectury.event.events.common.CommandRegistrationEvent;
 import dev.architectury.platform.Platform;
-import net.lyivx.ls_furniture.common.commands.ModConfigCommand;
-import net.lyivx.ls_furniture.common.config.Configs;
-import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
+
+import net.lyivx.ls_core.LYIVXsCore;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -41,14 +40,6 @@ public class LYIVXsFurnitureMod {
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
-
-        CommandRegistrationEvent.EVENT.register((dispatcher, registryAccess, environment) -> {
-            ModConfigCommand.register(dispatcher);
-        });
-
-        Path configDir = Platform.getConfigFolder().resolve("ls_furniture");
-        CustomConfigSpec configSpec = new CustomConfigSpec(configDir, "ls_furniture_config");
-        Configs.setConfigSpec(configSpec);
     }
 
     public static ResourceLocation createResourceLocation(String location) {

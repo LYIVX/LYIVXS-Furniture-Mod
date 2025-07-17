@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClientRegisterers;
+import net.lyivx.ls_furniture.client.neoforge.ClientEvents;
 import net.lyivx.ls_furniture.client.screens.WorkstationScreen;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -22,13 +23,16 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.common.NeoForge;
 
 import java.util.Map;
 
@@ -38,7 +42,19 @@ import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 @Mod(LYIVXsFurnitureMod.MOD_ID)
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class LYIVXsFurnitureModNeoForgeClient {
+    private static IEventBus modEventBus;
 
+    public LYIVXsFurnitureModNeoForgeClient(IEventBus bus) {
+        modEventBus = bus;
+        modEventBus.addListener(LYIVXsFurnitureModNeoForgeClient::onClientSetup);
+    }
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            LYIVXsFurnitureModClient.init();
+        });
+    }
 
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
@@ -48,7 +64,6 @@ public class LYIVXsFurnitureModNeoForgeClient {
     @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         var registerer = new LYIVXsFurnitureModClientRegisterers() {
-
             @Override
             public <T extends BlockEntity> void registerBlockEntity(BlockEntityType<? extends T> blockEntityType, BlockEntityRendererProvider<T> blockEntityRendererProvider) {
                 event.registerBlockEntityRenderer(blockEntityType, blockEntityRendererProvider);
@@ -61,5 +76,15 @@ public class LYIVXsFurnitureModNeoForgeClient {
         };
         LYIVXsFurnitureModClient.registerEntityRenderers(registerer);
         LYIVXsFurnitureModClient.registerBlockRenderers(registerer);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBlockColors(RegisterColorHandlersEvent.Block event) {
+        ClientEvents.onRegisterBlockColors(event);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterItemColors(RegisterColorHandlersEvent.Item event) {
+        ClientEvents.onRegisterItemColors(event);
     }
 }
