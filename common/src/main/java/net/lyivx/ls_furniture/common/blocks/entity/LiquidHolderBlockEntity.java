@@ -1,6 +1,7 @@
 package net.lyivx.ls_furniture.common.blocks.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -103,14 +104,20 @@ public abstract class LiquidHolderBlockEntity extends BlockEntity {
                 this.fluid = Fluids.EMPTY;
                 this.storedAmount = 0;
             } else {
-                this.fluid = BuiltInRegistries.FLUID.get(ResourceLocation.parse(fluidName));
-                // Load amount, default to capacity if Amount tag is missing (for backwards compatibility?)
-                this.storedAmount = tag.getInt("Amount");
-                if (this.storedAmount <= 0) { // Ensure consistency if loaded amount is invalid
+                var optionalHolder = BuiltInRegistries.FLUID.get(ResourceLocation.parse(fluidName));
+                if (optionalHolder.isPresent()) {
+                    this.fluid = optionalHolder.get().value();
+                    // Load amount, default to capacity if Amount tag is missing (for backwards compatibility?)
+                    this.storedAmount = tag.getInt("Amount");
+                    if (this.storedAmount <= 0) { // Ensure consistency if loaded amount is invalid
+                        this.fluid = Fluids.EMPTY;
+                        this.storedAmount = 0;
+                    } else {
+                        this.storedAmount = Math.min(this.storedAmount, this.capacity); // Clamp to capacity
+                    }
+                } else {
                     this.fluid = Fluids.EMPTY;
                     this.storedAmount = 0;
-                } else {
-                     this.storedAmount = Math.min(this.storedAmount, this.capacity); // Clamp to capacity
                 }
             }
         } else {
