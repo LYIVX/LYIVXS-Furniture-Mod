@@ -1,0 +1,12 @@
+{
+  "type": "ls_furniture:workstation",
+  "group": "workstation",
+  "ingredient": {
+    "item": "ls_furniture:construction_furniture_pack"
+  },
+  "ingredient_count": 1,
+  "result": {
+    "id": "ls_furniture:fire_place_chimney_shaft",
+    "Count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ls_furniture:bamboo_chain_link_fence"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ls_furniture:dark_oak_roof_shallow"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "ls_furniture:dark_oak_roof_shallow",
+          "properties": {
+            "is_double": "false"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ls_furniture:dark_oak_roof_shallow"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "ls_furniture:dark_oak_roof_shallow",
+          "properties": {
+            "is_double": "true"
+          }
+        }
+      ]
+    }
+  ]
+}

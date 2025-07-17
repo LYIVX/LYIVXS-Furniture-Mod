@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:chopping_board",
+  "uses": 2,
+  "copyNbt": false,
+  "input": [
+    {
+      "item": "minecraft:mangrove_log"
+    },
+    {
+      "item": "minecraft:mangrove_wood"
+    }
+  ],
+  "output": {
+    "id": "ls_furniture:mangrove_bark",
+    "Count": 4
+  }
+}

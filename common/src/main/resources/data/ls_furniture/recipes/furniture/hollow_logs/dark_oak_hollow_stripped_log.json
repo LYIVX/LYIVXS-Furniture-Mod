@@ -1,0 +1,17 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+  "copyNbt": false,
+  "input": [
+    {
+      "item": "minecraft:stripped_dark_oak_log"
+    }
+  ],
+  "input2": {
+    "item": "ls_furniture:chisel"
+  },
+  "output": {
+    "id": "ls_furniture:dark_oak_hollow_stripped_log",
+    "Count": 1
+  }
+}

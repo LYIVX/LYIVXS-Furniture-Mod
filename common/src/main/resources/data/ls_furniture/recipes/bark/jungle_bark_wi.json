@@ -1,0 +1,20 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+  "copyNbt": false,
+  "input": [
+    {
+      "item": "minecraft:jungle_log"
+    },
+    {
+      "item": "minecraft:jungle_wood"
+    }
+  ],
+  "input2": {
+    "tag": "minecraft:axes"
+  },
+  "output": {
+    "id": "ls_furniture:jungle_bark",
+    "Count": 1
+  }
+}

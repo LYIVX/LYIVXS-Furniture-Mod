@@ -1,0 +1,52 @@
+package net.lyivx.ls_furniture.forge;
+
+import dev.architectury.event.events.common.LifecycleEvent;
+import net.lyivx.ls_core.LYIVXsCore;
+import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
+import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.server.ServerAboutToStartEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+@Mod(LYIVXsFurnitureMod.MOD_ID)
+public class LYIVXsFurnitureModForge {
+
+    public LYIVXsFurnitureModForge() {
+        LYIVXsFurnitureMod.init();
+
+        LifecycleEvent.SETUP.register(LYIVXsCore::setup);
+
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        MinecraftForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onPlace);
+        MinecraftForge.EVENT_BUS.addListener(LYIVXsFurnitureModForge::onServerStart);
+
+        bus.addListener(LYIVXsFurnitureModForge::onClientSetup);
+        bus.addListener(LYIVXsFurnitureModForge::onCommonSetup);
+        bus.addListener(LYIVXsFurnitureModForge::onCreativeModeTabs);
+    }
+
+    private static void onClientSetup(FMLClientSetupEvent event) {
+        LYIVXsFurnitureModClient.init();
+    }
+
+    private static void onCommonSetup(FMLCommonSetupEvent event) {
+    }
+
+    public static void onPlace(PlayerInteractEvent.RightClickBlock event) {
+    }
+
+    public static void onServerStart(ServerAboutToStartEvent event) {
+    }
+
+    private static void onCreativeModeTabs(BuildCreativeModeTabContentsEvent event) {
+        LYIVXsFurnitureMod.initCreativeTabContents(event.getTabKey(), event::accept);
+    }
+
+}

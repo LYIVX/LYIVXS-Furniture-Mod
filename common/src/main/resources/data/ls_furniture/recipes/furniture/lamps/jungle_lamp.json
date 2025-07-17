@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "tag": "minecraft:wool"
+    },
+    "b": {
+      "item": "ls_furniture:jungle_furniture_pack"
+    }
+  },
+  "result":  {
+    "item": "ls_furniture:jungle_lamp"
+  }
+}

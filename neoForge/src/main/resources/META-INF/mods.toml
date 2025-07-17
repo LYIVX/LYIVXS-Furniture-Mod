@@ -1,0 +1,51 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+license = "All Rights Reserved"
+issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
+
+[[mods]]
+modId = "ls_furniture"
+version = "1.0.7"
+displayName = "Furnection"
+authors = "LYIVX"
+description = "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod"
+displayURL = "https://modrinth.com/mod/lyivxs-furniture"
+
+
+[[dependencies.ls_furniture]]
+modId = "neoforge"
+type = "required"
+versionRange = "[20.4,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ls_furniture]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.20,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ls_furniture]]
+modId = "resourcefullib"
+type = "required"
+versionRange = "[1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ls_furniture]]
+modId = "architectury"
+type = "required"
+versionRange = "[*,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ls_furniture]]
+modId = "ls_core"
+type = "required"
+versionRange = "[*,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "LYIVXsFurnitureMod-common.mixins.json"

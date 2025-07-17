@@ -1,0 +1,13 @@
+{
+	"credit": "Made by LYIVX",
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [0, 0, 0],
+			"faces": {
+				"north": {"uv": [3, 9.75, 13, 10], "texture": "#0"},
+				"up": {"uv": [3, 0.25, 13, 13], "texture": "#0"}
+			}
+		}
+	]
+}
