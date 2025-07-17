@@ -388,6 +388,7 @@ public class RoofSteepBlock extends Block implements SimpleWaterloggedBlock {
         this.base.tick(state, level, pos, random);
     }
 
+    @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stack = player.getItemInHand(hand);
 

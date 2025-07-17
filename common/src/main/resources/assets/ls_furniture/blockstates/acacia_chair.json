@@ -1,64 +1,584 @@
 {
-  "variants": {
-    "facing=north,tucked=false,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1"
+  "multipart": [
+    {
+      "when": { "facing": "north", "tucked": false, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1" }
     },
-    "facing=east,tucked=false,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1",
-      "y": 90
+    {
+      "when": { "facing": "east", "tucked": false, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1", "y": 90 }
     },
-    "facing=south,tucked=false,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1",
-      "y": 180
+    {
+      "when": { "facing": "south", "tucked": false, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1", "y": 180 }
     },
-    "facing=west,tucked=false,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1",
-      "y": 270
+    {
+      "when": { "facing": "west", "tucked": false, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1", "y": 270 }
     },
-    "facing=north,tucked=true,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1_tucked"
+    {
+      "when": { "facing": "north", "tucked": true, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1_tucked" }
     },
-    "facing=east,tucked=true,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1_tucked",
-      "y": 90
+    {
+      "when": { "facing": "east", "tucked": true, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1_tucked", "y": 90 }
     },
-    "facing=south,tucked=true,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1_tucked",
-      "y": 180
+    {
+      "when": { "facing": "south", "tucked": true, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1_tucked", "y": 180 }
     },
-    "facing=west,tucked=true,variant=1": {
-      "model": "ls_furniture:block/chair/acacia/chair_1_tucked",
-      "y": 270
+    {
+      "when": { "facing": "west", "tucked": true, "variant": 1 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_1_tucked", "y": 270 }
     },
-    "facing=north,tucked=false,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2"
+    {
+      "when": { "facing": "north", "tucked": false, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2" }
     },
-    "facing=east,tucked=false,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2",
-      "y": 90
+    {
+      "when": { "facing": "east", "tucked": false, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2", "y": 90 }
     },
-    "facing=south,tucked=false,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2",
-      "y": 180
+    {
+      "when": { "facing": "south", "tucked": false, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2", "y": 180 }
     },
-    "facing=west,tucked=false,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2",
-      "y": 270
+    {
+      "when": { "facing": "west", "tucked": false, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2", "y": 270 }
     },
-    "facing=north,tucked=true,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2_tucked"
+    {
+      "when": { "facing": "north", "tucked": true, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2_tucked" }
     },
-    "facing=east,tucked=true,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2_tucked",
-      "y": 90
+    {
+      "when": { "facing": "east", "tucked": true, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2_tucked", "y": 90 }
     },
-    "facing=south,tucked=true,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2_tucked",
-      "y": 180
+    {
+      "when": { "facing": "south", "tucked": true, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2_tucked", "y": 180 }
     },
-    "facing=west,tucked=true,variant=2": {
-      "model": "ls_furniture:block/chair/acacia/chair_2_tucked",
-      "y": 270
+    {
+      "when": { "facing": "west", "tucked": true, "variant": 2 },
+      "apply": { "model": "ls_furniture:block/chair/acacia/chair_2_tucked", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/white" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/white" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "white" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/gray" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/gray" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "gray" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/black" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/black" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "black" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/brown" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/brown" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "brown" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/red" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/red" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "red" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/orange" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/orange" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "orange" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/yellow" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/yellow" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/lime" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/lime" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "lime" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/green" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/green" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "green" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/cyan" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/cyan" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/blue" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/blue" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "blue" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/magenta" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/magenta" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/purple" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/purple" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "purple" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": false, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/pink" }
+    },
+    {
+      "when": { "facing": "east", "tucked": false, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": false, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": false, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "tucked": true, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/pink" }
+    },
+    {
+      "when": { "facing": "east", "tucked": true, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "tucked": true, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "tucked": true, "color": "pink" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/tucked/pink", "y": 270 }
+    },
+    {
+      "when": { "color": "default" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/default" }
     }
-  }
+  ]
 }

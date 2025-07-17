@@ -1,6 +1,5 @@
 {
 	"credit": "Made by LYIVX",
-	"parent": "cupboard",
 	"textures": {
 		"Main": "block/stripped_oak_log",
 		"Handle": "ls_furniture:block/handle_oak",

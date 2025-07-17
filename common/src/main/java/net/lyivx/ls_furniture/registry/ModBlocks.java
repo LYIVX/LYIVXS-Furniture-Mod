@@ -202,38 +202,38 @@ public class ModBlocks {
     
     ////////////////////////////////////// BARRELS //////////////////////////////////////
 
-    public static final Supplier<BarrelBlock> OAK_BARREL = BARRELS.register("oak_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final Supplier<BarrelModBlock> OAK_BARREL = BARRELS.register("oak_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
-    public static final Supplier<BarrelBlock> SPRUCE_BARREL = BARRELS.register("spruce_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+    public static final Supplier<BarrelModBlock> SPRUCE_BARREL = BARRELS.register("spruce_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> BIRCH_BARREL = BARRELS.register("birch_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+    public static final Supplier<BarrelModBlock> BIRCH_BARREL = BARRELS.register("birch_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
 
-    public static final Supplier<BarrelBlock> JUNGLE_BARREL = BARRELS.register("jungle_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
+    public static final Supplier<BarrelModBlock> JUNGLE_BARREL = BARRELS.register("jungle_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> ACACIA_BARREL = BARRELS.register("acacia_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
+    public static final Supplier<BarrelModBlock> ACACIA_BARREL = BARRELS.register("acacia_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
 
-    public static final Supplier<BarrelBlock> DARK_OAK_BARREL = BARRELS.register("dark_oak_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
+    public static final Supplier<BarrelModBlock> DARK_OAK_BARREL = BARRELS.register("dark_oak_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
 
-    public static final Supplier<BarrelBlock> MANGROVE_BARREL = BARRELS.register("mangrove_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
+    public static final Supplier<BarrelModBlock> MANGROVE_BARREL = BARRELS.register("mangrove_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
 
-    public static final Supplier<BarrelBlock> CHERRY_BARREL = BARRELS.register("cherry_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
+    public static final Supplier<BarrelModBlock> CHERRY_BARREL = BARRELS.register("cherry_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
 
-    public static final Supplier<BarrelBlock> BAMBOO_BARREL = BARRELS.register("bamboo_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
+    public static final Supplier<BarrelModBlock> BAMBOO_BARREL = BARRELS.register("bamboo_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
 
-    public static final Supplier<BarrelBlock> CRIMSON_BARREL = BARRELS.register("crimson_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+    public static final Supplier<BarrelModBlock> CRIMSON_BARREL = BARRELS.register("crimson_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 
-    public static final Supplier<BarrelBlock> WARPED_BARREL = BARRELS.register("warped_barrel",
-            () -> new BarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
+    public static final Supplier<BarrelModBlock> WARPED_BARREL = BARRELS.register("warped_barrel",
+            () -> new BarrelModBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
 
     ////////////////////////////////////// CRATES //////////////////////////////////////    
 

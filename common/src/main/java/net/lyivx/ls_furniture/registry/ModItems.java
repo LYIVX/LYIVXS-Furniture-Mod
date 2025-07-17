@@ -21,8 +21,6 @@ import java.util.function.Supplier;
 @SuppressWarnings("unused")
 public class ModItems {
 
-    // TODO: New Way Of Making Bark, Sticks And Furniture Packs Burnable
-
     public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create
             (BuiltInRegistries.ITEM, LYIVXsFurnitureMod.MOD_ID);
 

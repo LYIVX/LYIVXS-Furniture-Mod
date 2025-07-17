@@ -1,7 +1,7 @@
 package net.lyivx.ls_furniture.common.blocks;
 
 import com.mojang.serialization.MapCodec;
-import net.lyivx.ls_furniture.common.blocks.entity.LampBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.blocks.properties.VerticalConnectionType;
@@ -109,6 +109,7 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
+
 
     private static final VoxelShape[] WALL = new VoxelShape[4];
 
@@ -267,12 +268,10 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
     }
 
     private void updateBlockEntityColor(Level level, BlockPos pos, BlockState state) {
-        if (level.getBlockEntity(pos) instanceof LampBlockEntity entity) {
-            ColorType color = state.getValue(COLOR);
-            entity.setColor(color);
-            entity.setChanged();
-            level.sendBlockUpdated(pos, state, state, 3);
-        }
+        ColorType color = state.getValue(COLOR);
+        state.setValue(COLOR, color);
+        level.sendBlockUpdated(pos, state, state, 3);
+
     }
 
     public static ColorType getColorTypeFromDye(DyeColor dyeColor) {
@@ -286,41 +285,42 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem) {
             return InteractionResult.FAIL;
+        } else {
+            useWithoutItem(state, level, pos, player, hit);
         }
 
-        if (level.getBlockEntity(pos) instanceof LampBlockEntity entity) {
-            DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+        DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+        if (dye != null) {
+            ColorType newColorType = getColorTypeFromDye(dye);
 
-            if (dye != null) {
-                ColorType newColorType = getColorTypeFromDye(dye);
+            dyeConnectedBlocks(level, pos, newColorType);
+            state = state.setValue(COLOR, newColorType);
 
-                dyeConnectedBlocks(level, pos, newColorType);
-                state = state.setValue(COLOR, newColorType);
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
 
-                if (!player.isCreative()) {
-                    stack.shrink(1);
-                }
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
 
-                level.setBlock(pos, state, Block.UPDATE_ALL);
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-
-                return InteractionResult.SUCCESS;
-            } else {
-                if (player.getItemInHand(hand).is(ModItemTags.LAMPS) && state.getValue(FACING) == Direction.UP && hit.getDirection() == Direction.UP) {
-                    return InteractionResult.FAIL;
-                }
-                state = state.cycle(LIT);
-                level.setBlock(pos, state, 3);
-                level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
-                return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
+        } else {
+            if (player.getItemInHand(hand).is(ModItemTags.LAMPS) && state.getValue(FACING) == Direction.UP && hit.getDirection() == Direction.UP) {
+                return InteractionResult.FAIL;
             }
         }
         return InteractionResult.SUCCESS;
+    }
+
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        state = state.cycle(LIT);
+        level.setBlock(pos, state, 3);
+        level.playSound(null, pos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
+        return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
     private void dyeConnectedBlocks(Level level, BlockPos startPos, ColorType color) {
@@ -377,10 +377,7 @@ public class LampBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        if ((state.getValue(VERTICAL) == VerticalConnectionType.TOP) || (state.getValue(VERTICAL) == VerticalConnectionType.SINGLE)) {
-            return new LampBlockEntity(pos, state);
-        }
-        return null;
+        return new LockableBlockEntity(pos, state);
     }
 
     @Override

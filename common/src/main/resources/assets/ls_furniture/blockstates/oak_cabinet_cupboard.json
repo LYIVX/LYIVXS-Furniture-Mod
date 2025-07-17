@@ -16,7 +16,7 @@
             "y": 270
         },
         "facing=north,open=true": {
-            "model": "ls_furniture:block/cabinet_cupboard/oak/cabinet_cupboaerd_open"
+            "model": "ls_furniture:block/cabinet_cupboard/oak/cabinet_cupboard_open"
         },
         "facing=east,open=true": {
             "model": "ls_furniture:block/cabinet_cupboard/oak/cabinet_cupboard_open",

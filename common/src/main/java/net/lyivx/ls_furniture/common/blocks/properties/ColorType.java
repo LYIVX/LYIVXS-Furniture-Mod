@@ -21,7 +21,9 @@ public enum ColorType implements StringRepresentable {
     BLUE(DyeColor.BLUE),
     MAGENTA(DyeColor.MAGENTA),
     PURPLE(DyeColor.PURPLE),
-    PINK(DyeColor.PINK);
+    PINK(DyeColor.PINK),
+    DEFAULT(null);
+
 
     private final DyeColor dyeColor;
 
@@ -35,29 +37,38 @@ public enum ColorType implements StringRepresentable {
 
     @Override
     public String getSerializedName() {
-        return dyeColor.getName();
+        return this == DEFAULT ? "default" : dyeColor.getName();
     }
 
     public static ColorType fromDyeColor(DyeColor dyeColor) {
+        if (dyeColor == null) {
+            return DEFAULT;
+        }
         for (ColorType colorType : values()) {
             if (colorType.getDyeColor() == dyeColor) {
                 return colorType;
             }
         }
-        return WHITE; // Default or fallback value
+        throw new IllegalArgumentException("No ColorType found for DyeColor: " + dyeColor);
     }
 
     // This method is used to convert from an integer id to ColorType
     public static ColorType fromId(int id) {
+        if (id == -1) {
+            return DEFAULT;
+        }
         for (ColorType colorType : values()) {
-            if (colorType.getDyeColor().getId() == id) {
+            if (colorType != DEFAULT && colorType.getDyeColor().getId() == id) {
                 return colorType;
             }
         }
-        return WHITE; // Default or fallback value
+        throw new IllegalArgumentException("No ColorType found for id: " + id);
     }
 
     public ItemStack getDyeItemStack() {
+        if (this == DEFAULT) {
+            return ItemStack.EMPTY;
+        }
         switch (dyeColor) {
             case WHITE: return new ItemStack(Items.WHITE_DYE);
             case ORANGE: return new ItemStack(Items.ORANGE_DYE);
@@ -75,7 +86,7 @@ public enum ColorType implements StringRepresentable {
             case GREEN: return new ItemStack(Items.GREEN_DYE);
             case RED: return new ItemStack(Items.RED_DYE);
             case BLACK: return new ItemStack(Items.BLACK_DYE);
-            default: return ItemStack.EMPTY;
+            default: throw new IllegalStateException("Unexpected DyeColor: " + dyeColor);
         }
     }
 }

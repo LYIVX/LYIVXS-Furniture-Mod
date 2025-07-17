@@ -7,10 +7,6 @@ architectury {
     neoForge()
 }
 
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-}
-
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
@@ -24,6 +20,8 @@ dependencies {
 
     include modApi("com.teamresourceful.resourcefullib:resourcefullib-neoforge-$rootProject.resourcefullib_version")
     modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_version"
+
+    implementation "curse.maven:lyivxs-core-1200581:6772186"
 
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
