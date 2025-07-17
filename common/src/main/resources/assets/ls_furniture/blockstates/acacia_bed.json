@@ -1,34 +1,552 @@
 {
-  "variants": {
-    "facing=north,part=head": {
-      "model": "ls_furniture:block/bed/acacia/bed_head"
+  "multipart": [
+    {
+      "when": { "facing": "north", "part": "head" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_head" }
     },
-    "facing=east,part=head": {
-      "model": "ls_furniture:block/bed/acacia/bed_head",
-      "y": 90
+    {
+      "when": { "facing": "east", "part": "head" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_head", "y": 90 }
     },
-    "facing=south,part=head": {
-      "model": "ls_furniture:block/bed/acacia/bed_head",
-      "y": 180
+    {
+      "when": { "facing": "south", "part": "head" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_head", "y": 180 }
     },
-    "facing=west,part=head": {
-      "model": "ls_furniture:block/bed/acacia/bed_head",
-      "y": 270
+    {
+      "when": { "facing": "west", "part": "head" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_head", "y": 270 }
     },
-    "facing=north,part=foot": {
-      "model": "ls_furniture:block/bed/acacia/bed_foot"
+    {
+      "when": { "facing": "north", "part": "foot" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_foot" }
     },
-    "facing=east,part=foot": {
-      "model": "ls_furniture:block/bed/acacia/bed_foot",
-      "y": 90
+    {
+      "when": { "facing": "east", "part": "foot" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_foot", "y": 90 }
     },
-    "facing=south,part=foot": {
-      "model": "ls_furniture:block/bed/acacia/bed_foot",
-      "y": 180
+    {
+      "when": { "facing": "south", "part": "foot" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_foot", "y": 180 }
     },
-    "facing=west,part=foot": {
-      "model": "ls_furniture:block/bed/acacia/bed_foot",
-      "y": 270
+    {
+      "when": { "facing": "west", "part": "foot" },
+      "apply": { "model": "ls_furniture:block/bed/acacia/bed_foot", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/white" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/white" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "white" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/gray" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/gray" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/black" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/black" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "black" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/brown" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/brown" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/red" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/red" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "red" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/orange" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/orange" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/yellow" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/yellow" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/lime" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/lime" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/green" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/green" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "green" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/cyan" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/cyan" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/blue" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/blue" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/magenta" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/magenta" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/purple" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/purple" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "head", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/pink" }
+    },
+    {
+      "when": { "facing": "east", "part": "head", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "head", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "head", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/head/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "part": "foot", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/pink" }
+    },
+    {
+      "when": { "facing": "east", "part": "foot", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "part": "foot", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "part": "foot", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/bed/bedding/foot/pink", "y": 270 }
+    },
+    {
+      "when": { "color": "default" },
+      "apply": { "model": "ls_furniture:block/chair/cushion/default" }
     }
-  }
+  ]
 }

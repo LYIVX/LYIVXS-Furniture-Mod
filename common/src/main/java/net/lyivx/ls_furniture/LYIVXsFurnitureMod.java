@@ -1,12 +1,7 @@
 package net.lyivx.ls_furniture;
 
-import net.lyivx.ls_furniture.client.screens.ConfigScreen;
-import net.lyivx.ls_furniture.client.screens.ConfigurationScreen;
-import net.lyivx.ls_furniture.common.blocks.entity.TombstoneBlockEntity;
-import net.lyivx.ls_furniture.common.config.Configs;
-import net.lyivx.ls_furniture.common.config.CustomConfigSpec;
-import net.lyivx.ls_furniture.common.network.UpdateTombstonePacket;
-import net.lyivx.ls_furniture.common.recipes.RecipeSorter;
+import net.lyivx.ls_core.LYIVXsCore;
+import net.lyivx.ls_furniture.config.ConfigProvider;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -37,9 +32,10 @@ public class LYIVXsFurnitureMod {
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
+    }
 
-        ConfigScreen.initConfig();
-        Configs.saveConfig();
+    public static ResourceLocation createResourceLocation(String location) {
+        return new ResourceLocation(MOD_ID, location);
     }
 
     public static ResourceLocation res(String name) {

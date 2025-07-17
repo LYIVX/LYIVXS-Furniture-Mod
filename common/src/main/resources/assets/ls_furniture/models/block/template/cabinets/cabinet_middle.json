@@ -1,6 +1,5 @@
 {
 	"credit": "Made by LYIVX",
-	"parent": "counter_cupboard",
 	"textures": {
 		"Main": "block/stripped_oak_log",
 		"particle": "block/oak_log",

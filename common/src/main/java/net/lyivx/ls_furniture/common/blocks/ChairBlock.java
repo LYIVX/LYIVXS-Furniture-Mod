@@ -1,12 +1,13 @@
 package net.lyivx.ls_furniture.common.blocks;
 
-import net.lyivx.ls_furniture.common.blocks.entity.ChairBlockEntity;
+import net.lyivx.ls_core.common.utils.WoolHelper;
+import net.lyivx.ls_furniture.common.blocks.entity.LockableBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.properties.ColorType;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.HammerItem;
 import net.lyivx.ls_furniture.common.items.SawItem;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
-import net.lyivx.ls_furniture.common.utils.WoolHelper;
 import net.lyivx.ls_furniture.common.utils.block.ILockable;
 import net.lyivx.ls_furniture.common.utils.block.TuckableBlock;
 import net.lyivx.ls_furniture.registry.ModItems;
@@ -46,6 +47,7 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty VARIANT = ModBlockStateProperties.VARIANT;
+    public static final EnumProperty<ColorType> COLOR = ModBlockStateProperties.COLOR;
 
 
     protected static final VoxelShape SHAPE_NORTH = Stream.of(Block.box(2.999, 10, 11, 5.001, 17, 13.001), Block.box(3, 8, 3, 13, 10, 13), Block.box(5, 16.9, 12, 11, 18.65, 13), Block.box(3, 0, 3, 5, 9, 5), Block.box(2.9990000000000006, 17, 11.5, 5.001000000000001, 18.75, 13.501), Block.box(10.999, 17, 11.5, 13.001000000000001, 18.75, 13.501), Block.box(2.9990000000000006, 18.75, 12.25, 5.001000000000001, 20.5, 14.251), Block.box(5, 18.65, 12.75, 11, 20.4, 13.75), Block.box(10.999, 18.75, 12.25, 13.001000000000001, 20.5, 14.251), Block.box(2.9990000000000006, 20.5, 13, 5.001000000000001, 22.25, 15.001), Block.box(5, 20.4, 13.5, 11, 22.15, 14.5), Block.box(10.999, 20.5, 13, 13.001000000000001, 22.25, 15.001), Block.box(11, 0, 3, 13, 9, 5), Block.box(11, 0, 11, 13, 9, 13), Block.box(3, 0, 11, 5, 9, 13), Block.box(3, 9, 3, 13, 10, 13), Block.box(5, 10.5, 11.5, 11, 16.9, 12.5), Block.box(10.999, 10, 11, 13.001, 17, 13.001)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
@@ -68,7 +70,8 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
                 .setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
                 .setValue(TUCKED, false)
-                .setValue(VARIANT, defaultBackVariant));
+                .setValue(VARIANT, defaultBackVariant)
+                .setValue(COLOR, ColorType.DEFAULT));
     }
 
     @Override
@@ -124,42 +127,63 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
         return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
     }
 
+    public static ColorType getColorTypeFromDye(DyeColor dyeColor) {
+        for (ColorType colorType : ColorType.values()) {
+            if (colorType.getDyeColor() == dyeColor) {
+                return colorType;
+            }
+        }
+        return ColorType.WHITE;
+    }
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stack = player.getItemInHand(hand);
-        if (level.getBlockEntity(pos) instanceof ChairBlockEntity entity) {
-            DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
-            if (woolDye != null && !entity.hasColor()) {
-                entity.setColor(woolDye);
-                entity.setChanged();
-                if (!(player.isCreative())) {
-                    stack.shrink(1);
-                }
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
-            }
-            DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
-            if (dye != null && entity.hasColor()) {
-                entity.setColor(dye);
-                entity.setChanged();
-                if (!(player.isCreative())) {
-                    stack.shrink(1);
-                }
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
-            }
-            if (stack.is(ModItems.SHEARS.get()) && entity.hasColor()) {
-                dropCushion(level, pos);
-                entity.setColor(null);
-                entity.setChanged();
-                level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-                return InteractionResult.SUCCESS;
-            }
-        }
-
         Item item = stack.getItem();
         if (item instanceof HammerItem || item instanceof WrenchItem || item instanceof SawItem) {
             return InteractionResult.FAIL;
+        }
+
+        DyeColor woolDye = WoolHelper.getDyeColor(stack.getItem());
+        if (woolDye != null && (state.getValue(COLOR) == ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(woolDye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return InteractionResult.SUCCESS;
+        }
+
+        DyeColor dye = stack.getItem() instanceof DyeItem dyeItem ? dyeItem.getDyeColor() : null;
+        if (dye != null && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            ColorType newColorType = getColorTypeFromDye(dye);
+
+            state = state.setValue(COLOR, newColorType);
+
+            if (!player.isCreative()) {
+                stack.shrink(1);
+            }
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return InteractionResult.SUCCESS;
+        }
+
+        if (stack.is(ModItems.SHEARS.get()) && (state.getValue(COLOR) != ColorType.DEFAULT)) {
+            dropCushion(state, level, pos);
+            state = state.setValue(COLOR, ColorType.DEFAULT);
+
+            level.setBlock(pos, state, Block.UPDATE_ALL);
+            level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+            return InteractionResult.SUCCESS;
         }
 
         if (TuckableBlock.tryTuck(state, level, pos, player)) return InteractionResult.SUCCESS;
@@ -169,7 +193,7 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, TUCKED, VARIANT, WATERLOGGED);
+        builder.add(FACING, TUCKED, VARIANT, WATERLOGGED, COLOR);
     }
 
     @Override
@@ -197,6 +221,12 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
         return SawItem.SawableBlock.super.updateAfterCycle(state, level, pos);
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
+        return new LockableBlockEntity(pos, state);
+    }
+
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
@@ -213,26 +243,18 @@ public class ChairBlock extends SeatBlock implements SimpleWaterloggedBlock, Saw
         super.appendHoverText(stack, level, tooltip, flag);
     }
 
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new ChairBlockEntity(pos, state);
-    }
-
     @Override
     public void onRemove(BlockState state, @NotNull Level level, @NotNull BlockPos pos, BlockState newState, boolean moving) {
         if (!state.is(newState.getBlock())) {
-            dropCushion(level, pos);
+            dropCushion(state, level, pos);
         }
         super.onRemove(state, level, pos, newState, moving);
     }
 
-    public void dropCushion(Level level, BlockPos pos) {
-        if (level.getBlockEntity(pos) instanceof ChairBlockEntity entity) {
-            if (entity.hasColor()) {
-                Block block = WoolHelper.getBlock(entity.getColor());
-                Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
-            }
+    public void dropCushion(BlockState state, Level level, BlockPos pos) {
+        if (state.hasProperty(COLOR) && state.getValue(COLOR) != ColorType.DEFAULT) {
+            Block block = WoolHelper.getBlock(state.getValue(COLOR).getDyeColor());
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(block != null ? block : Blocks.WHITE_WOOL));
         }
     }
 

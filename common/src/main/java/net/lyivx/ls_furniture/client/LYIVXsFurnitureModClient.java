@@ -45,11 +45,7 @@ public class LYIVXsFurnitureModClient {
     public static void registerBlockRenderers(LYIVXsFurnitureModClientRegisterers registerer) {
         registerer.registerBlockEntity(ModBlockEntitys.PLATE_ENTITY.get(), PlateRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.SHELF_ENTITY.get(), ShelfRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.CHAIR_ENTITY.get(), ChairCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.STOOL_ENTITY.get(), StoolCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.SOFA_ENTITY.get(), SofaCushionRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.LAMP_ENTITY.get(), LampShadeRenderer::new);
-        registerer.registerBlockEntity(ModBlockEntitys.BED_ENTITY.get(), BedCushionRenderer::new);
+
         registerer.registerBlockEntity(ModBlockEntitys.CHOPPING_BOARD_ENTITY.get(), ChoppingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.CUTTING_BOARD_ENTITY.get(), CuttingBoardRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.MOD_CHEST_ENTITY.get(), CustomChestRenderer::new);
@@ -58,6 +54,7 @@ public class LYIVXsFurnitureModClient {
         registerer.registerBlockEntity(ModBlockEntitys.MAILBOX_ENTITY.get(), MailboxRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.RAILING_ENTITY.get(), RailingPreviewRenderer::new);
         registerer.registerBlockEntity(ModBlockEntitys.TOMBSTONE_ENTITY.get(), TombstoneRenderer::new);
+        registerer.registerBlockEntity(ModBlockEntitys.COUNTER_SINK_ENTITY.get(), SinkRenderer::new);
     }
 
     public static void registerEntityRenderers(LYIVXsFurnitureModClientRegisterers registerer) {

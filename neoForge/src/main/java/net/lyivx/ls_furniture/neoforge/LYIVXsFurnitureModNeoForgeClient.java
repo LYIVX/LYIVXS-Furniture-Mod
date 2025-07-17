@@ -3,6 +3,7 @@ package net.lyivx.ls_furniture.neoforge;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClient;
 import net.lyivx.ls_furniture.client.LYIVXsFurnitureModClientRegisterers;
+import net.lyivx.ls_furniture.client.neoforge.ClientEvents;
 import net.lyivx.ls_furniture.client.screens.WorkstationScreen;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -18,6 +19,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = LYIVXsFurnitureMod.MOD_ID, value = Dist.CLIENT)
@@ -30,8 +32,6 @@ public class LYIVXsFurnitureModNeoForgeClient {
         System.out.println("Registering Workstation Screen");
         MenuScreens.register(ModMenus.WORKSTATION_MENU.get(), WorkstationScreen::new);
     }
-
-
 
     @SubscribeEvent
     public static void onModelLoading(ModelEvent.RegisterAdditional event) {
@@ -54,5 +54,16 @@ public class LYIVXsFurnitureModNeoForgeClient {
         };
         LYIVXsFurnitureModClient.registerEntityRenderers(registerer);
         LYIVXsFurnitureModClient.registerBlockRenderers(registerer);
+    }
+
+
+    @SubscribeEvent
+    public static void onRegisterBlockColors(RegisterColorHandlersEvent.Block event) {
+        ClientEvents.onRegisterBlockColors(event);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterItemColors(RegisterColorHandlersEvent.Item event) {
+        ClientEvents.onRegisterItemColors(event);
     }
 }
