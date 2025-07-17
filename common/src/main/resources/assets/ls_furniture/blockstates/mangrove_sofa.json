@@ -1,124 +1,2388 @@
 {
-  "variants": {
-    "facing=north,type=single": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove"
+  "multipart": [
+    {
+      "when": { "facing": "north", "type": "single" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove" }
     },
-    "facing=east,type=single": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "single" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove", "y": 90 }
     },
-    "facing=south,type=single": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "single" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove", "y": 180 }
     },
-    "facing=west,type=single": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "single" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove", "y": 270 }
     },
-    "facing=north,type=left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_left"
+    {
+      "when": { "facing": "north", "type": "left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_left" }
     },
-    "facing=east,type=left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_left",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_left", "y": 90 }
     },
-    "facing=south,type=left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_left",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_left", "y": 180 }
     },
-    "facing=west,type=left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_left",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_left", "y": 270 }
     },
-    "facing=north,type=right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_right"
+    {
+      "when": { "facing": "north", "type": "right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_right" }
     },
-    "facing=east,type=right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_right",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_right", "y": 90 }
     },
-    "facing=south,type=right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_right",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_right", "y": 180 }
     },
-    "facing=west,type=right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_right",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_right", "y": 270 }
     },
-    "facing=north,type=middle": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_middle"
+    {
+      "when": { "facing": "north", "type": "middle" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_middle" }
     },
-    "facing=east,type=middle": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_middle",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "middle" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_middle", "y": 90 }
     },
-    "facing=south,type=middle": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_middle",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "middle" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_middle", "y": 180 }
     },
-    "facing=west,type=middle": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_middle",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "middle" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_middle", "y": 270 }
     },
-    "facing=north,type=inner_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner"
+    {
+      "when": { "facing": "north", "type": "inner_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner" }
     },
-    "facing=east,type=inner_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "inner_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 90 }
     },
-    "facing=south,type=inner_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "inner_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 180 }
     },
-    "facing=west,type=inner_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "inner_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 270 }
     },
-    "facing=north,type=inner_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 90
+    {
+      "when": { "facing": "north", "type": "inner_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 90 }
     },
-    "facing=east,type=inner_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 180
+    {
+      "when": { "facing": "east", "type": "inner_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 180 }
     },
-    "facing=south,type=inner_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner",
-      "y": 270
+    {
+      "when": { "facing": "south", "type": "inner_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner", "y": 270 }
     },
-    "facing=west,type=inner_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_inner"
+    {
+      "when": { "facing": "west", "type": "inner_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_inner" }
     },
-    "facing=north,type=outer_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer"
+    {
+      "when": { "facing": "north", "type": "outer_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer" }
     },
-    "facing=east,type=outer_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 90
+    {
+      "when": { "facing": "east", "type": "outer_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 90 }
     },
-    "facing=south,type=outer_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 180
+    {
+      "when": { "facing": "south", "type": "outer_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 180 }
     },
-    "facing=west,type=outer_left": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 270
+    {
+      "when": { "facing": "west", "type": "outer_left" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 270 }
     },
-    "facing=north,type=outer_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 90
+    {
+      "when": { "facing": "north", "type": "outer_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 90 }
     },
-    "facing=east,type=outer_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 180
+    {
+      "when": { "facing": "east", "type": "outer_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 180 }
     },
-    "facing=south,type=outer_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer",
-      "y": 270
+    {
+      "when": { "facing": "south", "type": "outer_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer", "y": 270 }
     },
-    "facing=west,type=outer_right": {
-      "model": "ls_furniture:block/sofa/mangrove/mangrove_outer"
+    {
+      "when": { "facing": "west", "type": "outer_right" },
+      "apply": { "model": "ls_furniture:block/sofa/mangrove/mangrove_outer" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/white", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/white", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/white" }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray" }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "light_gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_gray" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/gray" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/gray" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/gray", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/gray", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/gray", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "gray" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "white" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/white" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/black", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/black", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/black", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/black" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "black" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/black" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/brown", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/brown", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/brown", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/brown" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "brown" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/brown" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/red", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/red", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/red", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/red" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "red" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/red" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/orange", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/orange", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/orange", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/orange" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "orange" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/orange" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/yellow", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/yellow", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/yellow", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/yellow" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "yellow" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/yellow" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/lime", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/lime", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/lime", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/lime" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "lime" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/lime" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/green", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/green", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/green", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/green" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "green" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/green" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/cyan", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/cyan", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/cyan", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/cyan" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "cyan" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/cyan" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/light_blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/light_blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/light_blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/light_blue" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "light_blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/light_blue" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/blue", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "blue" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/blue" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/magenta", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/magenta", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/magenta", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/magenta" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "magenta" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/magenta" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/purple", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/purple", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/purple", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/purple" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "purple" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/purple" }
+    },
+    {
+      "when": { "facing": "north", "type": "single", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "single", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "single", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "single", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/left/pink", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/right/pink", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "middle", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "middle", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "middle", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "middle", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/middle/pink", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 270 }
+    },
+
+    {
+      "when": { "facing": "north", "type": "inner_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "east", "type": "inner_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "inner_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "inner_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/inner/pink" }
+    },
+
+    {
+      "when": { "facing": "north", "type": "outer_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink" }
+    },
+    {
+      "when": { "facing": "east", "type": "outer_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 90 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_left", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "north", "type": "outer_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 90}
+    },
+    {
+      "when": { "facing": "east", "type": "outer_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 180 }
+    },
+    {
+      "when": { "facing": "south", "type": "outer_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink", "y": 270 }
+    },
+    {
+      "when": { "facing": "west", "type": "outer_right", "color": "pink" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/outer/pink" }
+    },
+    {
+      "when": { "color": "default" },
+      "apply": { "model": "ls_furniture:block/sofa/cushion/default" }
     }
-  }
+  ]
 }

@@ -1,13 +1,20 @@
 package net.lyivx.ls_furniture.common.blocks;
 
+import net.lyivx.ls_furniture.common.blocks.entity.CounterSinkBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.entity.CrateBlockEntity;
+import net.lyivx.ls_furniture.common.blocks.entity.LiquidHolderBlockEntity;
 import net.lyivx.ls_furniture.common.blocks.properties.ModBlockStateProperties;
 import net.lyivx.ls_furniture.common.items.WrenchItem;
+import net.lyivx.ls_furniture.common.utils.FluidInteractionUtil;
 import net.lyivx.ls_furniture.common.utils.ShapeUtil;
+import net.lyivx.ls_furniture.config.ConfigProvider;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
@@ -27,6 +34,9 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -37,7 +47,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock {
+public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, WrenchItem.WrenchableBlock, EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty HAS_WATER = ModBlockStateProperties.HAS_WATER;
@@ -91,53 +101,122 @@ public class CounterSinkBlock extends Block implements SimpleWaterloggedBlock, W
                 .setValue(HAS_WATER, false));
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new CounterSinkBlockEntity(pos, state);
+    }
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
 
-        if (item instanceof WrenchItem) {
-            return InteractionResult.FAIL;
-        }
-
-        BlockPos waterPos = pos.below().below();
-        Block water = level.getBlockState(waterPos).getBlock();
-        boolean hasWater = state.getValue(HAS_WATER);
-
-
-        if (water == Blocks.WATER && !hasWater) {
-            level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
+        if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
 
-        if (item == Items.BUCKET && hasWater) {
-            stack.shrink(1);
-
-            ItemStack waterBucket = Items.WATER_BUCKET.getDefaultInstance();
-            if (!(player.getInventory().getFreeSlot() < 1)) {
-                player.addItem(waterBucket);
-            } else {
-                popResource(level, pos.above(), waterBucket);
-            }
-
-            level.setBlock(pos, state.setValue(HAS_WATER, false), 3);
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!(blockEntity instanceof CounterSinkBlockEntity sinkBE)) {
+            return InteractionResult.FAIL;
         }
 
-        if (item == Items.WATER_BUCKET && !hasWater) {
-            stack.shrink(1);
+        // --- Handle Empty Hand Interaction (Fill from below) ---
+        if (stack.isEmpty()) {
+            BlockPos sourcePos = pos.below(2);
+            FluidState fluidStateBelow = level.getFluidState(sourcePos);
 
-            ItemStack emptyBucket = Items.BUCKET.getDefaultInstance();
-            if (!(player.getInventory().getFreeSlot() < 1)) {
-                player.addItem(emptyBucket);
+            if (fluidStateBelow.isSource() && !fluidStateBelow.isEmpty()) {
+                Fluid fluidBelow = fluidStateBelow.getType();
+                if (!ConfigProvider.isSinkUniversal() && fluidBelow != Fluids.WATER) {
+                    return InteractionResult.FAIL;
+                }
 
+                int currentAmount = sinkBE.getStoredAmount();
+                int capacity = sinkBE.getCapacity();
+                int amountToAdd = LiquidHolderBlockEntity.BUCKET_VOLUME;
+
+                if ((sinkBE.isEmpty() || sinkBE.getFluid() == fluidBelow) && currentAmount + amountToAdd <= capacity) {
+                    sinkBE.setFluidAndAmount(fluidBelow, currentAmount + amountToAdd);
+                    level.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    return InteractionResult.SUCCESS;
+                } else {
+                    return InteractionResult.FAIL;
+                }
             } else {
-                popResource(level, pos.above(), emptyBucket);
+                return InteractionResult.PASS;
             }
-
-            level.setBlock(pos, state.setValue(HAS_WATER, true), 3);
+        }
+        if (item instanceof WrenchItem) {
+            return InteractionResult.PASS;
         }
 
-        return InteractionResult.SUCCESS;
+        // --- Handle Filling with Fluid Container ---
+        Fluid fluidToFill = FluidInteractionUtil.getFluidFromItemStack(stack);
+        if (fluidToFill != Fluids.EMPTY && item != Items.BUCKET) {
+            if (!ConfigProvider.isSinkUniversal() && fluidToFill != Fluids.WATER) {
+                return InteractionResult.FAIL;
+            }
+
+            int currentAmount = sinkBE.getStoredAmount();
+            int capacity = sinkBE.getCapacity();
+            int amountToAdd = LiquidHolderBlockEntity.BUCKET_VOLUME;
+
+            if ((sinkBE.isEmpty() || sinkBE.getFluid() == fluidToFill) && currentAmount + amountToAdd <= capacity) {
+                sinkBE.setFluidAndAmount(fluidToFill, currentAmount + amountToAdd);
+                if (!player.isCreative()) {
+                    player.setItemInHand(hand, Items.BUCKET.getDefaultInstance());
+                }
+                SoundEvent fillSound = null;
+                if (fluidToFill == Fluids.WATER) fillSound = SoundEvents.BUCKET_EMPTY;
+                else if (fluidToFill == Fluids.LAVA) fillSound = SoundEvents.BUCKET_EMPTY_LAVA;
+
+                if (fillSound != null) {
+                    level.playSound(null, pos, fillSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+                }
+                return InteractionResult.SUCCESS;
+            } else {
+                return InteractionResult.FAIL;
+            }
+        }
+
+        // --- Handle Emptying with an Empty Bucket ---
+        if (item == Items.BUCKET) {
+            int currentAmount = sinkBE.getStoredAmount();
+            int amountToRemove = LiquidHolderBlockEntity.BUCKET_VOLUME;
+            Fluid fluidInSink = sinkBE.getFluid();
+
+            if (!sinkBE.isEmpty() && currentAmount >= amountToRemove) {
+                Item filledBucketItem = fluidInSink.getBucket();
+                if (filledBucketItem != Items.AIR) {
+                    sinkBE.setFluidAndAmount(fluidInSink, currentAmount - amountToRemove);
+                    if (!player.isCreative()) {
+                        ItemStack filledBucketStack = filledBucketItem.getDefaultInstance();
+                        stack.shrink(1);
+                        if (stack.isEmpty()) {
+                            player.setItemInHand(hand, filledBucketStack);
+                        } else if (!player.getInventory().add(filledBucketStack)) {
+                            player.drop(filledBucketStack, false);
+                        }
+                    }
+                    SoundEvent emptySound = null;
+                    if (fluidInSink == Fluids.WATER) emptySound = SoundEvents.BUCKET_FILL;
+                    else if (fluidInSink == Fluids.LAVA) emptySound = SoundEvents.BUCKET_FILL_LAVA;
+
+                    if (emptySound != null) {
+                        level.playSound(null, pos, emptySound, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    }
+                    return InteractionResult.SUCCESS;
+                } else {
+                    return InteractionResult.FAIL;
+                }
+            } else {
+                return InteractionResult.FAIL;
+            }
+        }
+
+        // Default case if item interaction wasn't handled
+        return InteractionResult.CONSUME;
     }
 
     @Override

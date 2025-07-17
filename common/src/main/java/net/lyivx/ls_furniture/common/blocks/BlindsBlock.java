@@ -140,6 +140,7 @@ public class BlindsBlock extends Block implements SimpleWaterloggedBlock, Wrench
         return state.setValue(HORIZONTAL_CONNECTION_TYPE, type);
     }
 
+    @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
         super.neighborChanged(state, level, pos, neighborBlock, fromPos, moving);
 

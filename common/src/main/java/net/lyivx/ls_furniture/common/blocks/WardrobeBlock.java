@@ -66,6 +66,7 @@ public class WardrobeBlock extends BaseEntityBlock {
         return null;
     }
 
+    @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (state.getValue(MODEL_TYPE) == WardrobeModelType.BOTTOM) {

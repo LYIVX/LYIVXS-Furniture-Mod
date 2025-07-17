@@ -1,0 +1,7 @@
+{
+	"credit": "Made by LYIVX",
+	"parent": "ls_furniture:block/bed/bedding/head/model",
+	"textures": {
+		"Secondary": "block/green_wool"
+	}
+}

@@ -1,7 +1,7 @@
 {
     "variants": {
         "facing=down,open=false": {
-            "model": "ls_furniture:block/barrel/spruce/barrel/spruce/barrel",
+            "model": "ls_furniture:block/barrel/spruce/barrel",
             "x": 180
         },
         "facing=down,open=true": {

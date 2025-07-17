@@ -116,10 +116,12 @@ public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem
                 .setValue(LIT, false));
     }
 
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new CounterOvenBlockEntity(pos, state);
     }
 
+    @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof CounterOvenBlockEntity counterOvenBE) counterOvenBE.recheckOpen();
@@ -161,6 +163,7 @@ public class CounterOvenBlock extends AbstractFurnaceBlock implements WrenchItem
         }
     }
 
+    @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
 
