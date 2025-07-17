@@ -8,6 +8,8 @@ import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.lyivx.ls_furniture.registry.ModRecipes;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -19,7 +21,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.RecipeManager;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +28,7 @@ import java.util.Optional;
 public class WorkstationMenu extends AbstractContainerMenu  {
     private final ContainerLevelAccess access;
     private final DataSlot selectedRecipeIndex;
-    private final Level level;
+    private final ServerLevel level;
     public final Container container;
     private final Slot inputSlot;
     private final Slot resultSlot;
@@ -61,7 +62,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
         };
         this.resultContainer = new ResultContainer();
         this.access = containerLevelAccess;
-        this.level = inventory.player.level();
+        this.level = (ServerLevel) inventory.player.level();
         this.inputSlot = this.addSlot(new Slot(this.container, 0, 17, 33));
         this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 146, 33) {
             @Override
@@ -165,8 +166,10 @@ public class WorkstationMenu extends AbstractContainerMenu  {
         this.resultSlot.set(ItemStack.EMPTY);
 
         if (!stack.isEmpty()) {
-            Optional<RecipeHolder<WorkstationRecipe>> matching = this.level.getServer().getRecipeManager()
+            Optional<RecipeHolder<WorkstationRecipe>> optionalRecipe = this.level.getServer().getRecipeManager()
                     .getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), createRecipeInput(container), this.level);
+
+            List<RecipeHolder<WorkstationRecipe>> matching = optionalRecipe.map(List::of).orElseGet(List::of);
 
             RecipeSorter.sort(matching, this.level);
 
@@ -239,7 +242,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
                 if (!this.moveItemStackTo(itemStack2, 2, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.level.getServer().getRecipeManager().getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SingleRecipeInput(itemStack2), this.level).isEmpty()) {
+            } else if (this.level.getServer().getRecipeManager().getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SingleRecipeInput(itemStack2), this.level).isPresent()) {
                 if (!this.moveItemStackTo(itemStack2, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }
