@@ -2,15 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "a",
-    "a"
+    "b"
   ],
   "key": {
     "a": {
       "item": "minecraft:spruce_planks"
+    },
+    "b": {
+      "tag": "ls_furniture:stick"
     }
   },
   "result": {
     "item": "ls_furniture:spruce_stick",
-    "Count": 4
+    "count": 4
   }
 }
