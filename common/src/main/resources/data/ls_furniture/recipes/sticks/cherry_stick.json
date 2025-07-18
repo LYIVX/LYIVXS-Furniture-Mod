@@ -2,15 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "a",
-    "a"
+    "b"
   ],
   "key": {
     "a": {
       "item": "minecraft:cherry_planks"
+    },
+    "b": {
+      "tag": "ls_furniture:stick"
     }
   },
   "result": {
-    "item": "ls_furniture:cherry_stick",
-    "Count": 4
+    "id": "ls_furniture:cherry_stick",
+    "count": 4
   }
 }
