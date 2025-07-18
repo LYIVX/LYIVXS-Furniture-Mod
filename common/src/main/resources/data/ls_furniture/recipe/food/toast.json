@@ -1,0 +1,18 @@
+{
+  "type": "ls_furniture:world_interaction",
+  "uses": 1,
+
+  "input1": [
+    {
+    "item": "ls_furniture:toaster"
+    }
+  ],
+  "input2": {
+    "item": "ls_furniture:sliced_bread"
+  },
+
+  "result": {
+    "id": "ls_furniture:toast",
+    "count": 1
+  }
+}
