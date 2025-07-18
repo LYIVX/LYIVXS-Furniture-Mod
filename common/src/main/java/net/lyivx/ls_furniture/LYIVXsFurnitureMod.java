@@ -2,6 +2,7 @@ package net.lyivx.ls_furniture;
 
 import net.lyivx.ls_core.LYIVXsCore;
 import net.lyivx.ls_furniture.config.ConfigProvider;
+import net.lyivx.ls_furniture.config.ConfigRegistry;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -32,6 +33,9 @@ public class LYIVXsFurnitureMod {
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
+
+        // Initialize configs
+        ConfigRegistry.init();
     }
 
     public static ResourceLocation createResourceLocation(String location) {
