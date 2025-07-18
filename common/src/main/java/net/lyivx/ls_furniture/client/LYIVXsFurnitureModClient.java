@@ -47,6 +47,8 @@ public class LYIVXsFurnitureModClient {
     public static void init() {
         initRenderTypes();
 
+        // Initialize client-specific config components
+        ClientInit.init();
     }
 
     public static void registerBlockRenderers(LYIVXsFurnitureModClientRegisterers registerer) {

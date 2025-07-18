@@ -4,6 +4,7 @@ import dev.architectury.event.events.common.CommandRegistrationEvent;
 import dev.architectury.platform.Platform;
 
 import net.lyivx.ls_core.LYIVXsCore;
+import net.lyivx.ls_furniture.config.ConfigRegistry;
 import net.lyivx.ls_furniture.registry.*;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -40,6 +41,9 @@ public class LYIVXsFurnitureMod {
         ModBlocksTags.init();
         ModEntitiesTypeTags.init();
         ModItemTags.init();
+
+        // Initialize configs
+        ConfigRegistry.init();
     }
 
     public static ResourceLocation createResourceLocation(String location) {
