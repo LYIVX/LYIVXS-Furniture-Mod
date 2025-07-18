@@ -4,11 +4,16 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
+import mezz.jei.api.gui.ingredient.IRecipeSlotDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.gui.placement.HorizontalAlignment;
+import mezz.jei.api.gui.placement.VerticalAlignment;
+import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import mezz.jei.library.util.RecipeUtil;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
@@ -21,66 +26,106 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.MOD_ID;
 import static net.lyivx.ls_furniture.LYIVXsFurnitureMod.createResourceLocation;
 
-public class WorkstationRecipeCategory implements IRecipeCategory<WorkstationRecipe> {
+public class WorkstationRecipeCategory extends AbstractRecipeCategory<List<WorkstationRecipe>> {
 
     public static final ResourceLocation ID = createResourceLocation("workstation");
-    public static final RecipeType<WorkstationRecipe> WORKSTATION_RECIPE_TYPE = new RecipeType<>(ID, WorkstationRecipe.class);
-    public static final ResourceLocation GUI_BACK = createResourceLocation("textures/gui/container/workstation_jei.png");
+    public static final RecipeType<List<WorkstationRecipe>> WORKSTATION_RECIPE_TYPE = new RecipeType<>(ID, (Class<List<WorkstationRecipe>>) (Class<?>) List.class);
 
-    public static final int width = 82;
-    public static final int height = 34;
-
-    private final IDrawable icon;
-    private final Component localizedName;
-    private final IGuiHelper guiHelper;
-    private final IDrawable components;
-
+    public static final int width = 106;
+    public static final int height = 74;
 
     public WorkstationRecipeCategory(IGuiHelper guiHelper) {
-        this.guiHelper = guiHelper;
-        icon = guiHelper.createDrawableItemStack(ModBlocks.WORKSTATION.get().asItem().getDefaultInstance());
-        localizedName = Component.translatable("gui.ls_furniture.jei.workstation");
-        components = guiHelper.drawableBuilder(GUI_BACK, 0, 0, width, height)
-                .setTextureSize(width, height)
-                .build();
+        super(
+                WORKSTATION_RECIPE_TYPE,
+                Component.translatable("gui.ls_furniture.jei.workstation"),
+                guiHelper.createDrawableItemLike(ModItems.WORKSTATION.get()),
+                width,
+                height
+        );
     }
 
     @Override
-    public RecipeType<WorkstationRecipe> getRecipeType() {
-        return WORKSTATION_RECIPE_TYPE;
+    public void setRecipe(IRecipeLayoutBuilder builder, List<WorkstationRecipe> recipes, IFocusGroup focuses) {
+        if (recipes.isEmpty()) {
+            return;
+        }
+
+        // Use the first recipe for the input slot
+        WorkstationRecipe firstRecipe = recipes.get(0);
+
+        // Add the input ingredient in the middle of the top area
+        builder.addInputSlot(0, 0)
+                .setStandardSlotBackground()
+                .setPosition(0,1, getWidth(), getHeight(), HorizontalAlignment.CENTER, VerticalAlignment.TOP)
+                .addIngredients(firstRecipe.ingredient())
+                .setSlotName("input");
+
+        // Add all possible outputs in a grid
+        List<ItemStack> results = recipes.stream()
+                .map(WorkstationRecipe::result)
+                .collect(Collectors.toList());
+
+        for (ItemStack result : results) {
+            builder.addOutputSlot()
+                    .setStandardSlotBackground()
+                    .addItemStack(result)
+                    .setSlotName("outputs");
+        }
     }
 
     @Override
-    public Component getTitle() {
-        return localizedName;
-    }
+    public void createRecipeExtras(IRecipeExtrasBuilder builder, List<WorkstationRecipe> recipes, IFocusGroup focuses) {
+        if (recipes.isEmpty()) {
+            return;
+        }
 
-    @Override
-    public @Nullable IDrawable getIcon() {
-        return icon;
-    }
+        // Get the first recipe to display input count if needed
+        WorkstationRecipe firstRecipe = recipes.get(0);
 
-    @Override
-    public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull WorkstationRecipe recipe, @NotNull IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 6, 9)
-                .addIngredients(recipe.ingredient());
+        // Add text showing input count if more than 1, to the right of the input
+        if (firstRecipe.getInputCount() > 1) {
+            builder.addDrawable(new IDrawable() {
+                @Override
+                public int getWidth() {
+                    return 30;
+                }
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 57, 9)
-                .addItemStack(recipe.result());
-    }
+                @Override
+                public int getHeight() {
+                    return 20;
+                }
 
-    @Override
-    public void draw(WorkstationRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        components.draw(guiGraphics, 0, 0);
+                @Override
+                public void draw(GuiGraphics guiGraphics, int xOffset, int yOffset) {
+                    String countText = "x" + firstRecipe.getInputCount();
+                    guiGraphics.drawString(
+                            Minecraft.getInstance().font,
+                            countText,
+                            xOffset,
+                            yOffset + 5,
+                            0xFF404040,
+                            false
+                    );
+                }
+            }, getWidth() / 2 + 10, 0);
+        }
 
-        guiGraphics.renderItemDecorations(Minecraft.getInstance().font,
-                new ItemStack(ModItems.WORKSTATION.get(), recipe.getInputCount()), 6,9);
+        // Get all output slots and add them to a grid below the input
+        List<IRecipeSlotDrawable> outputs = builder.getRecipeSlots().getSlots(RecipeIngredientRole.OUTPUT);
+
+        builder.addScrollGridWidget(outputs, 5, 3)
+                .setPosition(0, 0, getWidth(), getHeight(), HorizontalAlignment.CENTER, VerticalAlignment.BOTTOM);
     }
 }

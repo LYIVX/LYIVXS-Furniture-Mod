@@ -2,10 +2,11 @@
   "gui.ls_furniture.jei.workstation": "Workstation",
   "gui.ls_furniture.jei.chopping_board": "Chopping Board",
   "gui.ls_furniture.jei.cutting_board": "Cutting Board",
-  "gui.ls_furniture.jei.chopping_board.chops": "Requires %s chops.",
+  "gui.ls_furniture.jei.chopping_board.chops": "Requires %s Chops",
   "gui.ls_furniture.jei.world_interaction": "World Interaction",
   "gui.ls_furniture.jei.world_interaction.use": "Right Click With Item / Block",
-  "gui.ls_furniture.jei.world_interaction.use_on": "Right Click On Block",
+  "gui.ls_furniture.jei.world_interaction.use_on": "Right Click On The %s With The %s",
+  "gui.ls_furniture.jei.world_interaction.use_on_strip": "Strip The %s With The %s",
 
 
   "config.ls_furniture.category": "Furnection",
