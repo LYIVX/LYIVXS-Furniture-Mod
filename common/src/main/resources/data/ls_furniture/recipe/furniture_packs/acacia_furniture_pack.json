@@ -3,21 +3,11 @@
   "category": "misc",
   "group": "furniture_pack",
   "ingredients": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "ls_furniture:acacia_stick"
-    },
-    {
-      "item": "minecraft:acacia_log"
-    },
-    {
-      "item": "minecraft:stripped_acacia_log"
-    },
-    {
-      "item": "ls_furniture:acacia_bark"
-    }
+    "minecraft:iron_nugget",
+    "ls_furniture:acacia_stick",
+    "minecraft:acacia_log",
+    "minecraft:stripped_acacia_log",
+    "ls_furniture:acacia_bark"
   ],
   "result": {
     "id": "ls_furniture:acacia_furniture_pack"

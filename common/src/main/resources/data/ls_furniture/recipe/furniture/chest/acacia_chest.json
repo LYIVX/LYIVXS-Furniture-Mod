@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    }
+    "#": "minecraft:acacia_planks"
   },
   "pattern": [
     "###",
@@ -12,6 +10,7 @@
     "###"
   ],
   "result": {
+    "count": 1,
     "id": "ls_furniture:acacia_chest"
   }
 }

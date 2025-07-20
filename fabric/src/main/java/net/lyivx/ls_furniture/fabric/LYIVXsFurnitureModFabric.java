@@ -1,7 +1,9 @@
 package net.lyivx.ls_furniture.fabric;
 
+import dev.architectury.event.events.common.LifecycleEvent;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.lyivx.ls_core.LYIVXsCore;
 import net.lyivx.ls_furniture.LYIVXsFurnitureMod;
 import net.lyivx.ls_furniture.registry.ModFuels;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -19,6 +21,8 @@ public class LYIVXsFurnitureModFabric implements ModInitializer {
     public void onInitialize() {
         LYIVXsFurnitureMod.init();
         ModFuels.init();
+
+        LifecycleEvent.SETUP.register(LYIVXsCore::setup);
 
         ItemGroupEvents.MODIFY_ENTRIES_ALL.register((group, items) -> {
             ResourceLocation key = BuiltInRegistries.CREATIVE_MODE_TAB.getKey(group);

@@ -8,8 +8,6 @@ import net.lyivx.ls_furniture.registry.ModBlocks;
 import net.lyivx.ls_furniture.registry.ModMenus;
 import net.lyivx.ls_furniture.registry.ModRecipes;
 import net.lyivx.ls_furniture.registry.ModSoundEvents;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -19,16 +17,18 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 
+import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class WorkstationMenu extends AbstractContainerMenu  {
     private final ContainerLevelAccess access;
     private final DataSlot selectedRecipeIndex;
-    private final ServerLevel level;
+    private final Level level;
     public final Container container;
     private final Slot inputSlot;
     private final Slot resultSlot;
@@ -62,7 +62,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
         };
         this.resultContainer = new ResultContainer();
         this.access = containerLevelAccess;
-        this.level = (ServerLevel) inventory.player.level();
+        this.level = inventory.player.level();
         this.inputSlot = this.addSlot(new Slot(this.container, 0, 17, 33));
         this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 146, 33) {
             @Override
@@ -166,24 +166,28 @@ public class WorkstationMenu extends AbstractContainerMenu  {
         this.resultSlot.set(ItemStack.EMPTY);
 
         if (!stack.isEmpty()) {
-            Optional<RecipeHolder<WorkstationRecipe>> optionalRecipe = this.level.getServer().getRecipeManager()
-                    .getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), createRecipeInput(container), this.level);
+            if (this.level.recipeAccess() instanceof RecipeManager recipeManager) {
+                List<RecipeHolder<WorkstationRecipe>> matching = recipeManager
+                        .getRecipes().stream()
+                        .filter(r -> r.value().getType() == ModRecipes.WORKSTATION_RECIPE.get())
+                        .map(r -> (RecipeHolder<WorkstationRecipe>) r)
+                        .filter(r -> r.value().matches(createRecipeInput(container), this.level))
+                        .collect(Collectors.toList());
 
-            List<RecipeHolder<WorkstationRecipe>> matching = optionalRecipe.map(List::of).orElseGet(List::of);
+                RecipeSorter.sort(matching, this.level);
 
-            RecipeSorter.sort(matching, this.level);
+                // at most 256 recipes
+                this.recipes = matching.stream()
+                        .map(FilterableRecipe::of)
+                        .limit(255)  // Limit to 255 recipes (0 to 254 inclusive)
+                        .toList();
 
-            // at most 256 recipes
-            this.recipes = matching.stream()
-                    .map(FilterableRecipe::of)
-                    .limit(255)  // Limit to 255 recipes (0 to 254 inclusive)
-                    .toList();
-
-            //preserve last clicked recipe on recipe change
-            if (lastSelectedRecipe != null) {
-                int newInd = this.recipes.indexOf(lastSelectedRecipe);
-                if (newInd != -1) {
-                    this.selectedRecipeIndex.set(newInd);
+                //preserve last clicked recipe on recipe change
+                if (lastSelectedRecipe != null) {
+                    int newInd = this.recipes.indexOf(lastSelectedRecipe);
+                    if (newInd != -1) {
+                        this.selectedRecipeIndex.set(newInd);
+                    }
                 }
             }
         }
@@ -242,7 +246,7 @@ public class WorkstationMenu extends AbstractContainerMenu  {
                 if (!this.moveItemStackTo(itemStack2, 2, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (this.level.getServer().getRecipeManager().getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SingleRecipeInput(itemStack2), this.level).isPresent()) {
+            } else if (this.level.recipeAccess() instanceof RecipeManager recipeManager && recipeManager.getRecipeFor(ModRecipes.WORKSTATION_RECIPE.get(), new SingleRecipeInput(itemStack2), this.level).isPresent()) {
                 if (!this.moveItemStackTo(itemStack2, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }
