@@ -2,11 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "a",
-    "a"
+    "b"
   ],
   "key": {
     "a": {
       "item": "minecraft:warped_planks"
+    },
+    "b": {
+      "tag": "ls_furniture:stick"
     }
   },
   "result": {

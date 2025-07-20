@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/LYIVX/LYIVXS-Furniture-Mod/issues"
 
 [[mods]]
 modId = "ls_furniture"
-version = "1.0.7-1"
+version = "1.0.8"
 displayName = "Furnection"
 authors = "LYIVX"
 description = "Where Furniture Meets Perfection! - A Vanilla Styled Furniture Mod"
